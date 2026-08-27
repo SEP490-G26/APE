@@ -1,0 +1,90 @@
+﻿{
+    "snapshot_id":  "GATEKEEPER_CORE:v1:20260716065908000:8dc50556493a",
+    "artifact_type":  "groundtruth",
+    "stable_id":  "GATEKEEPER_CORE",
+    "version":  "v1",
+    "function_name":  "Gatekeeper",
+    "subject_code":  "",
+    "question_type":  "",
+    "language":  "mixed",
+    "description":  "Core regression cases for whitelist classification of supported academic documents.",
+    "is_active":  true,
+    "source":  "git_backfill",
+    "source_commit":  "511aa50726eca82952abff8f8b29642d20a4d019",
+    "captured_from":  "src-dotnet/Ape.AiModule.Api/App_Data/ai-groundtruth/GATEKEEPER_CORE.json",
+    "captured_at":  "2026-07-16T06:59:08.0000000Z",
+    "content_hash":  "8dc50556493aca8ed06b042b3f1aeaa9d7b44987fc3ad52672affec4679bb33a",
+    "change_reason":  "Add AI module prototype, operator UI, and docs",
+    "change_summary":  "Initial snapshot imported from git history.",
+    "content":  {
+                    "dataset_id":  "GATEKEEPER_CORE",
+                    "dataset_name":  "Gatekeeper Core Regression Set",
+                    "function_name":  "Gatekeeper",
+                    "version":  "v1",
+                    "language":  "mixed",
+                    "description":  "Core regression cases for whitelist classification of supported academic documents.",
+                    "evaluation_cases":  [
+                                             {
+                                                 "case_id":  "GK_CORE_01",
+                                                 "scenario_group":  "supported",
+                                                 "expected_verdict":  "supported",
+                                                 "expected_subjects":  [
+                                                                           "C"
+                                                                       ],
+                                                 "expected_rejection_reason_code":  null,
+                                                 "notes":  "Clear introductory C programming material."
+                                             },
+                                             {
+                                                 "case_id":  "GK_CORE_02",
+                                                 "scenario_group":  "supported",
+                                                 "expected_verdict":  "supported",
+                                                 "expected_subjects":  [
+                                                                           "JAVA_OOP"
+                                                                       ],
+                                                 "expected_rejection_reason_code":  null,
+                                                 "notes":  "Clear Java OOP material with class/object terminology."
+                                             },
+                                             {
+                                                 "case_id":  "GK_CORE_03",
+                                                 "scenario_group":  "supported",
+                                                 "expected_verdict":  "supported",
+                                                 "expected_subjects":  [
+                                                                           "DSA_JAVA"
+                                                                       ],
+                                                 "expected_rejection_reason_code":  null,
+                                                 "notes":  "Clear data structures and algorithms material."
+                                             },
+                                             {
+                                                 "case_id":  "GK_CORE_04",
+                                                 "scenario_group":  "unsupported",
+                                                 "expected_verdict":  "unsupported",
+                                                 "expected_subjects":  [
+
+                                                                       ],
+                                                 "expected_rejection_reason_code":  "out_of_whitelist_scope",
+                                                 "notes":  "Humanities or non-programming educational material."
+                                             },
+                                             {
+                                                 "case_id":  "GK_CORE_05",
+                                                 "scenario_group":  "ambiguous",
+                                                 "expected_verdict":  "ambiguous",
+                                                 "expected_subjects":  [
+
+                                                                       ],
+                                                 "expected_rejection_reason_code":  "insufficient_content",
+                                                 "notes":  "Text too short to classify confidently."
+                                             },
+                                             {
+                                                 "case_id":  "GK_CORE_06",
+                                                 "scenario_group":  "ambiguous",
+                                                 "expected_verdict":  "ambiguous",
+                                                 "expected_subjects":  [
+                                                                           "JAVA_OOP",
+                                                                           "DSA_JAVA"
+                                                                       ],
+                                                 "expected_rejection_reason_code":  "mixed_supported_signals",
+                                                 "notes":  "Material strongly mixes OOP and DSA signals without a clear primary subject."
+                                             }
+                                         ]
+                }
+}

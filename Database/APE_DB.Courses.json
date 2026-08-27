@@ -1,0 +1,158 @@
+[{
+  "_id": {
+    "$oid": "64b100000000000000000011"
+  },
+  "Name": "Programming Fundamentals",
+  "Code": "PRF192",
+  "Description": "C programming basics",
+  "SyllabusPath": null,
+  "ExamMatrix": [],
+  "Status": "Active",
+  "CreatedBy": {
+    "$oid": "64b100000000000000000001"
+  },
+  "CreatedAt": {
+    "$date": "2026-07-30T00:00:00.000Z"
+  },
+  "LastModifiedBy": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "LastModifiedAt": {
+    "$date": "2026-08-05T15:54:33.925Z"
+  },
+  "DeletedBy": null,
+  "DeletedAt": null
+},
+{
+  "_id": {
+    "$oid": "64b100000000000000000012"
+  },
+  "Name": "Object Oriented Programming",
+  "Code": "PRO192",
+  "Description": "Java OOP",
+  "SyllabusPath": null,
+  "ExamMatrix": [],
+  "Status": "Active",
+  "CreatedBy": {
+    "$oid": "64b100000000000000000001"
+  },
+  "CreatedAt": {
+    "$date": "2026-07-30T00:00:00.000Z"
+  },
+  "LastModifiedBy": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "LastModifiedAt": {
+    "$date": "2026-08-05T15:55:37.916Z"
+  },
+  "DeletedBy": null,
+  "DeletedAt": null
+},
+{
+  "_id": {
+    "$oid": "6a6c5b039e56179d5bee8cf0"
+  },
+  "Name": "Data Structures and Algorithm",
+  "Code": "CSD201",
+  "Description": "DSA_JAVA",
+  "SyllabusPath": null,
+  "ExamMatrix": null,
+  "Status": "Active",
+  "CreatedBy": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "CreatedAt": {
+    "$date": "2026-07-31T08:21:23.132Z"
+  },
+  "LastModifiedBy": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "LastModifiedAt": {
+    "$date": "2026-07-31T08:21:27.880Z"
+  },
+  "DeletedBy": null,
+  "DeletedAt": null
+},
+{
+  "_id": {
+    "$oid": "6a7b02690c1685a5a03dbf28"
+  },
+  "Name": "Integration Test Course 2026 Updated",
+  "Code": "PRM393",
+  "Description": "(Mobile Programming), thường mang mã hiệu PRM392 hoặc PRM393, thuộc ngành Công nghệ thông tin. Sinh viên học cách xây dựng ứng dụng trên thiết bị di động (như Android hoặc nền tảng đa nền tảng), kết nối cơ sở dữ liệu và gọi RESTful API.",
+  "SyllabusPath": null,
+  "ExamMatrix": null,
+  "Status": "Deleted",
+  "CreatedBy": {
+    "$oid": "6a7ac9170c1685a5a03db407"
+  },
+  "CreatedAt": {
+    "$date": "2026-08-11T11:07:21.919Z"
+  },
+  "LastModifiedBy": {
+    "$oid": "6a7ac9170c1685a5a03db407"
+  },
+  "LastModifiedAt": {
+    "$date": "2026-08-11T11:54:09.643Z"
+  },
+  "DeletedBy": {
+    "$oid": "6a7ac9170c1685a5a03db407"
+  },
+  "DeletedAt": {
+    "$date": "2026-08-11T11:54:13.447Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7c53d90a7a2e6ee5c856ea"
+  },
+  "Name": "TU TUONG HO CHI MINH",
+  "Code": "HCM201",
+  "Description": "HO CHI MINH",
+  "SyllabusPath": null,
+  "ExamMatrix": null,
+  "Status": "Deleted",
+  "CreatedBy": {
+    "$oid": "6a6dadffdd78b01c99cd494d"
+  },
+  "CreatedAt": {
+    "$date": "2026-08-12T11:07:05.953Z"
+  },
+  "LastModifiedBy": {
+    "$oid": "6a6dadffdd78b01c99cd494d"
+  },
+  "LastModifiedAt": {
+    "$date": "2026-08-12T11:07:20.598Z"
+  },
+  "DeletedBy": {
+    "$oid": "6a6dadffdd78b01c99cd494d"
+  },
+  "DeletedAt": {
+    "$date": "2026-08-12T12:28:53.437Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a889fbbe35a490c9efe0e03"
+  },
+  "Name": "aaa",
+  "Code": "AAAA",
+  "Description": "aa",
+  "SyllabusPath": null,
+  "ExamMatrix": null,
+  "Status": "Deleted",
+  "CreatedBy": {
+    "$oid": "6a6dadffdd78b01c99cd494d"
+  },
+  "CreatedAt": {
+    "$date": "2026-08-21T18:58:03.235Z"
+  },
+  "LastModifiedBy": null,
+  "LastModifiedAt": null,
+  "DeletedBy": {
+    "$oid": "6a6dadffdd78b01c99cd494d"
+  },
+  "DeletedAt": {
+    "$date": "2026-08-21T18:58:07.534Z"
+  }
+}]

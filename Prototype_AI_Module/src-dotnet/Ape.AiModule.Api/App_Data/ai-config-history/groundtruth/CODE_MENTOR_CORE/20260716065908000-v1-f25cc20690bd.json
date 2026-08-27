@@ -1,0 +1,70 @@
+﻿{
+    "snapshot_id":  "CODE_MENTOR_CORE:v1:20260716065908000:f25cc20690bd",
+    "artifact_type":  "groundtruth",
+    "stable_id":  "CODE_MENTOR_CORE",
+    "version":  "v1",
+    "function_name":  "CodeMentor",
+    "subject_code":  "",
+    "question_type":  "",
+    "language":  "mixed",
+    "description":  "Core mentor regression cases covering representative student mistakes in C and Java.",
+    "is_active":  true,
+    "source":  "git_backfill",
+    "source_commit":  "511aa50726eca82952abff8f8b29642d20a4d019",
+    "captured_from":  "src-dotnet/Ape.AiModule.Api/App_Data/ai-groundtruth/CODE_MENTOR_CORE.json",
+    "captured_at":  "2026-07-16T06:59:08.0000000Z",
+    "content_hash":  "f25cc20690bd07a4d4b909ef73c1075ab4a9d5808ed12712e32cf1105579a7ea",
+    "change_reason":  "Add AI module prototype, operator UI, and docs",
+    "change_summary":  "Initial snapshot imported from git history.",
+    "content":  {
+                    "dataset_id":  "CODE_MENTOR_CORE",
+                    "dataset_name":  "Code Mentor Core Regression Set",
+                    "function_name":  "CodeMentor",
+                    "version":  "v1",
+                    "language":  "mixed",
+                    "description":  "Core mentor regression cases covering representative student mistakes in C and Java.",
+                    "evaluation_cases":  [
+                                             {
+                                                 "case_id":  "CM_CORE_01",
+                                                 "scenario_group":  "syntax_error",
+                                                 "language":  "java",
+                                                 "expected_verdict":  "needs_fix",
+                                                 "expected_issue_categories":  [
+                                                                                   "syntax"
+                                                                               ],
+                                                 "notes":  "Missing semicolon or malformed declaration."
+                                             },
+                                             {
+                                                 "case_id":  "CM_CORE_02",
+                                                 "scenario_group":  "logic_error",
+                                                 "language":  "c",
+                                                 "expected_verdict":  "needs_fix",
+                                                 "expected_issue_categories":  [
+                                                                                   "logic"
+                                                                               ],
+                                                 "notes":  "Wrong initialization or wrong condition causes incorrect result."
+                                             },
+                                             {
+                                                 "case_id":  "CM_CORE_03",
+                                                 "scenario_group":  "edge_case",
+                                                 "language":  "java",
+                                                 "expected_verdict":  "needs_fix",
+                                                 "expected_issue_categories":  [
+                                                                                   "edge_case",
+                                                                                   "runtime_risk"
+                                                                               ],
+                                                 "notes":  "Null array or empty input not handled."
+                                             },
+                                             {
+                                                 "case_id":  "CM_CORE_04",
+                                                 "scenario_group":  "complexity_issue",
+                                                 "language":  "java",
+                                                 "expected_verdict":  "acceptable_with_minor_notes",
+                                                 "expected_issue_categories":  [
+                                                                                   "complexity"
+                                                                               ],
+                                                 "notes":  "Functionally plausible but unnecessarily inefficient."
+                                             }
+                                         ]
+                }
+}

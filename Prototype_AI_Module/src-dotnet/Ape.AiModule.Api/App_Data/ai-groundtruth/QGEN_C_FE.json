@@ -1,0 +1,28 @@
+{
+  "dataset_id": "QGEN_C_FE",
+  "version": "v1",
+  "language": "en",
+  "function_name": "QuestionGenerationReview",
+  "subject_code": "C",
+  "question_type": "FE",
+  "institution_context": {
+    "target_students": "FPT University foundational programming students",
+    "course_hint": "PRF-style introductory C/pseudocode foundations"
+  },
+  "evaluation_cases": [
+    {
+      "case_id": "c_fe_easy_array_basics",
+      "difficulty": "Easy",
+      "expected_topic_tags": ["array", "loop"],
+      "expected_question_shape": "single-concept multiple choice",
+      "acceptance_focus": ["groundedness", "simple reasoning", "clear distractors"]
+    },
+    {
+      "case_id": "c_fe_medium_pointer_trace",
+      "difficulty": "Medium",
+      "expected_topic_tags": ["pointer", "function"],
+      "expected_question_shape": "short code tracing multiple choice",
+      "acceptance_focus": ["trace accuracy", "no excessive trickery", "difficulty alignment"]
+    }
+  ]
+}

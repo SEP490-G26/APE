@@ -1,0 +1,24 @@
+﻿{
+  "snapshot_id": "auto_tagging:v2:20260718102107369:2a8875cb2d90",
+  "artifact_type": "prompts",
+  "stable_id": "auto_tagging",
+  "version": "v2",
+  "function_name": "EmbeddingTagging",
+  "subject_code": null,
+  "question_type": null,
+  "language": "en",
+  "description": "Chunk auto tagging",
+  "is_active": true,
+  "source": "file_reload",
+  "captured_at": "2026-07-18T10:21:07.3697127+00:00",
+  "content_hash": "2a8875cb2d90f9b9fcd1f78ebb138da978758665aa03c146cdcd8953bd86cdc3",
+  "content": {
+    "key": "auto_tagging",
+    "version": "v2",
+    "description": "Chunk auto tagging",
+    "system_prompt": "You assign topic tags to educational knowledge chunks for retrieval and question generation. Use only the allowed taxonomy. Be conservative and prefer fewer accurate tags over many noisy tags.",
+    "user_prompt": "Allowed tags: {{allowed_tags}}\nTagging taxonomy and policy:\n{{taxonomy_json}}\nSubject: {{subject}}\nLanguage: {{language}}\nChunk:\n{{content}}\n\nRules:\n- Use only tags that are semantically supported by the chunk.\n- Return at most 5 tags.\n- Prefer specific topic tags over broad generic tags.\n- Do not invent new tags outside the allowed taxonomy.\n- Return strict JSON only.\n\nReturn:\n{\u0022topic_tags\u0022:[\u0022tag1\u0022,\u0022tag2\u0022]}",
+    "is_active": true,
+    "updated_at": "2026-07-15T22:55:03.047688+07:00"
+  }
+}

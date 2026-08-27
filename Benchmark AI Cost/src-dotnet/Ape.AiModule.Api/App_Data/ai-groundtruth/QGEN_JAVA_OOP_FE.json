@@ -1,0 +1,28 @@
+{
+  "dataset_id": "QGEN_JAVA_OOP_FE",
+  "version": "v1",
+  "language": "en",
+  "function_name": "QuestionGenerationReview",
+  "subject_code": "JAVA_OOP",
+  "question_type": "FE",
+  "institution_context": {
+    "target_students": "FPT University Java OOP students",
+    "course_hint": "PRO-style object-oriented Java learning outcomes"
+  },
+  "evaluation_cases": [
+    {
+      "case_id": "java_fe_easy_constructor",
+      "difficulty": "Easy",
+      "expected_topic_tags": ["constructor", "class", "object"],
+      "expected_question_shape": "direct OOP concept check",
+      "acceptance_focus": ["correct terminology", "groundedness", "clear explanation"]
+    },
+    {
+      "case_id": "java_fe_medium_inheritance_trace",
+      "difficulty": "Medium",
+      "expected_topic_tags": ["inheritance", "method"],
+      "expected_question_shape": "code-tracing multiple choice",
+      "acceptance_focus": ["behavior reasoning", "difficulty alignment", "non-trivial distractors"]
+    }
+  ]
+}

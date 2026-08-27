@@ -1,0 +1,4595 @@
+[{
+  "_id": {
+    "$oid": "64b100000000000000000041"
+  },
+  "StudentId": {
+    "$oid": "64b100000000000000000002"
+  },
+  "ExamId": {
+    "$oid": "64b100000000000000000021"
+  },
+  "StartTime": {
+    "$date": "2026-07-30T00:30:00.000Z"
+  },
+  "EndTime": null,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "64b100000000000000000042"
+  },
+  "StudentId": {
+    "$oid": "64b100000000000000000002"
+  },
+  "ExamId": {
+    "$oid": "64b100000000000000000022"
+  },
+  "StartTime": {
+    "$date": "2026-07-30T00:30:00.000Z"
+  },
+  "EndTime": null,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a6da63ddd78b01c99cd4852"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "64b100000000000000000021"
+  },
+  "StartTime": {
+    "$date": "2026-08-01T07:54:37.408Z"
+  },
+  "EndTime": null,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a6e40489479af2ed209c17c"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "64b100000000000000000021"
+  },
+  "StartTime": {
+    "$date": "2026-08-01T18:51:52.507Z"
+  },
+  "EndTime": null,
+  "ActiveDurationSeconds": 0,
+  "LastResumedAt": null,
+  "LastPausedAt": null,
+  "IsPaused": false,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "64b100000000000000000031"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "64b100000000000000000031"
+      },
+      "Files": [
+        {
+          "Filename": "main.c",
+          "Content": "#include <stdio.h>\n\nint main(void)\n{\n    return 0;\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a6e5b8901079e9e2f4242ab"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a6e5b8901079e9e2f4242a8"
+  },
+  "StartTime": {
+    "$date": "2026-08-01T20:48:09.925Z"
+  },
+  "EndTime": null,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a6f86423108d263107af3d8"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a6f86423108d263107af3d5"
+  },
+  "StartTime": {
+    "$date": "2026-08-02T18:02:42.178Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-02T18:03:03.990Z"
+  },
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a6f8d205e02d5d1e8c8980b"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a6f86423108d263107af3d5"
+  },
+  "StartTime": {
+    "$date": "2026-08-02T18:32:00.893Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-02T18:32:11.626Z"
+  },
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a6f8d625e02d5d1e8c8986e"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a6f86423108d263107af3d5"
+  },
+  "StartTime": {
+    "$date": "2026-08-02T18:33:06.618Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-02T18:33:19.179Z"
+  },
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a6f8d8c4929d653e505f44d"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a6f86423108d263107af3d5"
+  },
+  "StartTime": {
+    "$date": "2026-08-02T18:33:48.949Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-02T18:33:59.912Z"
+  },
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a6f8ecce541266283d9252e"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a6f86423108d263107af3d5"
+  },
+  "StartTime": {
+    "$date": "2026-08-02T18:39:08.281Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-02T18:39:17.964Z"
+  },
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a6f9209412f8f33455e803f"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a6f86423108d263107af3d5"
+  },
+  "StartTime": {
+    "$date": "2026-08-02T18:52:57.149Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-02T18:53:07.601Z"
+  },
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a6f937e686083a954906b8f"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a6f86423108d263107af3d5"
+  },
+  "StartTime": {
+    "$date": "2026-08-02T18:59:10.248Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-02T18:59:18.101Z"
+  },
+  "Status": "Submitted",
+  "TotalScore": 2,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a70e5e4f4695770e348d884"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a6f86423108d263107af3d5"
+  },
+  "StartTime": {
+    "$date": "2026-08-03T19:03:00.760Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-03T19:06:02.639Z"
+  },
+  "Status": "Submitted",
+  "TotalScore": 2,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a70ea8ce92268c2e73eb0eb"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a70ea8ce92268c2e73eb0e8"
+  },
+  "StartTime": {
+    "$date": "2026-08-03T19:22:52.781Z"
+  },
+  "EndTime": null,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a70eb6ce92268c2e73eb215"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a70eb6ce92268c2e73eb212"
+  },
+  "StartTime": {
+    "$date": "2026-08-03T19:26:36.722Z"
+  },
+  "EndTime": null,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a70ec02f4695770e348db5c"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a70ea8ce92268c2e73eb0e8"
+  },
+  "StartTime": {
+    "$date": "2026-08-03T19:29:06.108Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-05T19:09:27.505Z"
+  },
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a7239f64a71a57ee6324747"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a70eb6ce92268c2e73eb212"
+  },
+  "StartTime": {
+    "$date": "2026-08-04T19:13:58.320Z"
+  },
+  "EndTime": null,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a738b306a39c9262fb3bb14"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a738b2f6a39c9262fb3bb11"
+  },
+  "StartTime": {
+    "$date": "2026-08-05T19:12:48.106Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-05T19:13:01.607Z"
+  },
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a738b9f6a39c9262fb3bbc2"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a738b9f6a39c9262fb3bbbf"
+  },
+  "StartTime": {
+    "$date": "2026-08-05T19:14:39.286Z"
+  },
+  "EndTime": null,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a738e03510812531faad674"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a738b9f6a39c9262fb3bbbf"
+  },
+  "StartTime": {
+    "$date": "2026-08-05T19:24:51.200Z"
+  },
+  "EndTime": null,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a738e53510812531faad77c"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a738b9f6a39c9262fb3bbbf"
+  },
+  "StartTime": {
+    "$date": "2026-08-05T19:26:11.697Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-09T15:46:26.498Z"
+  },
+  "ActiveDurationSeconds": 0,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-09T15:46:26.498Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a738efb510812531faad902"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a738b2f6a39c9262fb3bb11"
+  },
+  "StartTime": {
+    "$date": "2026-08-05T19:28:59.165Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-05T19:50:05.502Z"
+  },
+  "ActiveDurationSeconds": 0,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-05T19:50:05.502Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "64b100000000000000000032"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a7378665c02e674320fa18f"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass Book {\n    protected String title;\n\n    public Book(String title) {\n        // TODO: implement\n        return null;\n    }\n\n    public void displayInfo() {\n        // TODO: implement\n    }\n}\n\nclass FeaturedBook extends Book {\n    private int edition;\n\n    public FeaturedBook(String title, int edition) {\n        // TODO: implement\n        return null;\n    }\n\n    @Override\n    public void displayInfo() {\n        // TODO: implement\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // TODO: implement\n    }\n}",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a73940ecc0f406457f3cf57"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a738b2f6a39c9262fb3bb11"
+  },
+  "StartTime": {
+    "$date": "2026-08-05T19:50:38.009Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-05T20:08:09.331Z"
+  },
+  "ActiveDurationSeconds": 56,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-05T20:08:09.331Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "6a7378665c02e674320fa18f"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "64b100000000000000000032"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "public class Main {\n    public static void main(String[] args) {\n    }\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    },
+    {
+      "QuestionId": {
+        "$oid": "6a7378665c02e674320fa18f"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass Book {\n    protected String title;\n\n    public Book(String title) {\n        // TODO: implement\n        return null;\n    }\n\n    public void displayInfo() {\n        // TODO: implement\n    }\n}\n\nclass FeaturedBook extends Book {\n    private int edition;\n\n    public FeaturedBook(String title, int edition) {\n        // TODO: implement\n        return null;\n    }\n\n    @Override\n    public void displayInfo() {\n        // TODO: implement\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // TODO: implement\n    }\n}",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a73993ce8295e7b312b8cb7"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a738b2f6a39c9262fb3bb11"
+  },
+  "StartTime": {
+    "$date": "2026-08-05T20:12:44.490Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-05T20:12:52.205Z"
+  },
+  "ActiveDurationSeconds": 7,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-05T20:12:52.205Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "64b100000000000000000032"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a7378665c02e674320fa18f"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass Book {\n    protected String title;\n\n    public Book(String title) {\n        // TODO: implement\n        return null;\n    }\n\n    public void displayInfo() {\n        // TODO: implement\n    }\n}\n\nclass FeaturedBook extends Book {\n    private int edition;\n\n    public FeaturedBook(String title, int edition) {\n        // TODO: implement\n        return null;\n    }\n\n    @Override\n    public void displayInfo() {\n        // TODO: implement\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // TODO: implement\n    }\n}",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a74324961472a1e24054f22"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a74324861472a1e24054f1f"
+  },
+  "StartTime": {
+    "$date": "2026-08-06T07:05:45.017Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-10T19:27:50.271Z"
+  },
+  "ActiveDurationSeconds": 3295,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-10T19:27:50.271Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "6a7378665c02e674320fa18f"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a7378665c02e674320fa18f"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass Book {\n    protected String title;\n\n    public Book(String title) {\n        this.title = title;\n    }\n\n    public void displayInfo() {\n        System.out.println(title);\n    }\n}\n\nclass FeaturedBook extends Book {\n    private int edition;\n\n    public FeaturedBook(String title, int edition) {\n        super(title);\n        this.edition = edition;\n    }\n\n    @Override\n    public void displayInfo() {\n        System.out.println(title + \" - Edition \" + edition);\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String title = sc.next();\n        int edition = sc.nextInt();\n\n        Book book = new FeaturedBook(title, edition);\n        book.displayInfo();\n    }\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a74365e5e5b9c79de17955c"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a74365e5e5b9c79de179559"
+  },
+  "StartTime": {
+    "$date": "2026-08-06T07:23:10.674Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-06T07:37:17.737Z"
+  },
+  "ActiveDurationSeconds": 699,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-06T07:37:17.737Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 1,
+  "SelectedQuestionId": {
+    "$oid": "6a7378665c02e674320fa18f"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a7378665c02e674320fa18f"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass Book {\n    protected String title;\n\n    public Book(String title) {\n        this.title = title;\n    }\n\n    public void displayInfo() {\n        System.out.println(title);\n    }\n}\n\nclass FeaturedBook extends Book {\n    private int edition;\n\n    public FeaturedBook(String title, int edition) {\n        super(title);\n        this.edition = edition;\n    }\n\n    @Override\n    public void displayInfo() {\n        System.out.println(title + \" - Edition \" + edition);\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String title = sc.next();\n        int edition = sc.nextInt();\n\n        Book book = new FeaturedBook(title, edition);\n        book.displayInfo();\n    }\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a743a131a57a209cb666af8"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a74365e5e5b9c79de179559"
+  },
+  "StartTime": {
+    "$date": "2026-08-06T07:38:59.302Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-06T19:43:58.901Z"
+  },
+  "ActiveDurationSeconds": 35,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-06T19:43:58.901Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a74c68ca74532e0fc50a219"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a738b9f6a39c9262fb3bbbf"
+  },
+  "StartTime": {
+    "$date": "2026-08-06T17:38:20.972Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-06T18:32:55.446Z"
+  },
+  "ActiveDurationSeconds": 3274,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-06T18:32:55.446Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a74d357be01e27e85134c40"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a738b9f6a39c9262fb3bbbf"
+  },
+  "StartTime": {
+    "$date": "2026-08-06T18:32:55.484Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-06T18:35:49.578Z"
+  },
+  "ActiveDurationSeconds": 174,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-06T18:35:49.578Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a74d405be01e27e85134d60"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a738b9f6a39c9262fb3bbbf"
+  },
+  "StartTime": {
+    "$date": "2026-08-06T18:35:49.607Z"
+  },
+  "EndTime": null,
+  "ActiveDurationSeconds": 0,
+  "LastResumedAt": {
+    "$date": "2026-08-06T18:35:49.607Z"
+  },
+  "LastPausedAt": null,
+  "IsPaused": false,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a74e3fe2304e576a19d9002"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a74365e5e5b9c79de179559"
+  },
+  "StartTime": {
+    "$date": "2026-08-06T19:43:58.941Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-06T20:29:13.970Z"
+  },
+  "ActiveDurationSeconds": 2142,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-06T20:29:13.970Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 1,
+  "SelectedQuestionId": {
+    "$oid": "6a7378665c02e674320fa18f"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a7378665c02e674320fa18f"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass Book {\n    protected String title;\n\n    public Book(String title) {\n        this.title = title;\n    }\n\n    public void displayInfo() {\n        System.out.println(title);\n    }\n}\n\nclass FeaturedBook extends Book {\n    private int edition;\n\n    public FeaturedBook(String title, int edition) {\n        super(title);\n        this.edition = edition;\n    }\n\n    @Override\n    public void displayInfo() {\n        System.out.println(title + \" - Edition \" + edition);\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String title = sc.next();\n        int edition = sc.nextInt();\n\n        Book book = new FeaturedBook(title, edition);\n        book.displayInfo();\n    }\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a78a0d2b20bb196f0c1deaf"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a738b9f6a39c9262fb3bbbf"
+  },
+  "StartTime": {
+    "$date": "2026-08-09T15:46:26.562Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-09T15:48:47.476Z"
+  },
+  "ActiveDurationSeconds": 140,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-09T15:48:47.476Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a78a0fbb20bb196f0c1dfc1"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a78a0fbb20bb196f0c1dfb1"
+  },
+  "StartTime": {
+    "$date": "2026-08-09T15:47:07.945Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-09T15:47:40.289Z"
+  },
+  "ActiveDurationSeconds": 32,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-09T15:47:40.289Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 4,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a78a15fb20bb196f0c1e04f"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a738b9f6a39c9262fb3bbbf"
+  },
+  "StartTime": {
+    "$date": "2026-08-09T15:48:47.531Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-14T16:59:23.515Z"
+  },
+  "ActiveDurationSeconds": 436235,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-14T16:59:23.515Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a78a17cb20bb196f0c1e072"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a74365e5e5b9c79de179559"
+  },
+  "StartTime": {
+    "$date": "2026-08-09T15:49:16.504Z"
+  },
+  "EndTime": null,
+  "ActiveDurationSeconds": 283,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-09T15:54:00.419Z"
+  },
+  "IsPaused": true,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "6a7378665c02e674320fa18f"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a7378665c02e674320fa18f"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass Book {\n    protected String title;\n\n    public Book(String title) {\n        // TODO: implement\n        return null;\n    }\n\n    public void displayInfo() {\n        // TODO: implement\n    }\n}\n\nclass FeaturedBook extends Book {\n    private int edition;\n\n    public FeaturedBook(String title, int edition) {\n        // TODO: implement\n        return null;\n    }\n\n    @Override\n    public void displayInfo() {\n        // TODO: implement\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // TODO: implement\n    }\n}",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a7a2636f176c7470e7a38c1"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a74324861472a1e24054f1f"
+  },
+  "StartTime": {
+    "$date": "2026-08-10T19:27:50.312Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-12T08:57:21.764Z"
+  },
+  "ActiveDurationSeconds": 2,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-12T08:57:21.764Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "6a7378665c02e674320fa18f"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a7378665c02e674320fa18f"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass Book {\n    protected String title;\n\n    public Book(String title) {\n        // TODO: implement\n        return null;\n    }\n\n    public void displayInfo() {\n        // TODO: implement\n    }\n}\n\nclass FeaturedBook extends Book {\n    private int edition;\n\n    public FeaturedBook(String title, int edition) {\n        // TODO: implement\n        return null;\n    }\n\n    @Override\n    public void displayInfo() {\n        // TODO: implement\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // TODO: implement\n    }\n}",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a7afc780c1685a5a03db8f2"
+  },
+  "StudentId": {
+    "$oid": "6a7ac8940c1685a5a03db38b"
+  },
+  "ExamId": {
+    "$oid": "64b100000000000000000021"
+  },
+  "StartTime": {
+    "$date": "2026-08-11T10:42:00.835Z"
+  },
+  "EndTime": null,
+  "ActiveDurationSeconds": 3,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-11T10:42:04.239Z"
+  },
+  "IsPaused": true,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "64b100000000000000000031"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "64b100000000000000000031"
+      },
+      "Files": [
+        {
+          "Filename": "main.c",
+          "Content": "#include <stdio.h>\n\nint main(void)\n{\n    return 0;\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a7b128d0c1685a5a03dcd3c"
+  },
+  "StudentId": {
+    "$oid": "6a7ac8940c1685a5a03db38b"
+  },
+  "ExamId": {
+    "$oid": "6a7b128c0c1685a5a03dcd38"
+  },
+  "StartTime": {
+    "$date": "2026-08-11T12:16:13.073Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-11T12:18:48.136Z"
+  },
+  "ActiveDurationSeconds": 155,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-11T12:18:48.136Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 1,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a7b13620c1685a5a03dcdfd"
+  },
+  "StudentId": {
+    "$oid": "6a7ac8940c1685a5a03db38b"
+  },
+  "ExamId": {
+    "$oid": "6a7b13620c1685a5a03dcdf9"
+  },
+  "StartTime": {
+    "$date": "2026-08-11T12:19:46.568Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-11T14:33:56.415Z"
+  },
+  "ActiveDurationSeconds": 118,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-11T14:33:56.415Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a7b23cdc75a9d0417a149b4"
+  },
+  "StudentId": {
+    "$oid": "6a7ac8940c1685a5a03db38b"
+  },
+  "ExamId": {
+    "$oid": "6a7b128c0c1685a5a03dcd38"
+  },
+  "StartTime": {
+    "$date": "2026-08-11T13:29:49.361Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-11T13:29:57.408Z"
+  },
+  "ActiveDurationSeconds": 8,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-11T13:29:57.408Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 1,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a7b2467c75a9d0417a14a9f"
+  },
+  "StudentId": {
+    "$oid": "6a7ac8940c1685a5a03db38b"
+  },
+  "ExamId": {
+    "$oid": "6a7b128c0c1685a5a03dcd38"
+  },
+  "StartTime": {
+    "$date": "2026-08-11T13:32:23.170Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-11T13:32:33.261Z"
+  },
+  "ActiveDurationSeconds": 10,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-11T13:32:33.261Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a7b2471c75a9d0417a14aca"
+  },
+  "StudentId": {
+    "$oid": "6a7ac8940c1685a5a03db38b"
+  },
+  "ExamId": {
+    "$oid": "6a7b128c0c1685a5a03dcd38"
+  },
+  "StartTime": {
+    "$date": "2026-08-11T13:32:33.291Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-11T13:33:08.354Z"
+  },
+  "ActiveDurationSeconds": 35,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-11T13:33:08.354Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a7b2494c75a9d0417a14af7"
+  },
+  "StudentId": {
+    "$oid": "6a7ac8940c1685a5a03db38b"
+  },
+  "ExamId": {
+    "$oid": "6a7b128c0c1685a5a03dcd38"
+  },
+  "StartTime": {
+    "$date": "2026-08-11T13:33:08.399Z"
+  },
+  "EndTime": null,
+  "ActiveDurationSeconds": 0,
+  "LastResumedAt": {
+    "$date": "2026-08-11T13:33:08.399Z"
+  },
+  "LastPausedAt": null,
+  "IsPaused": false,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a7b3025385a3be1e9dd6db4"
+  },
+  "StudentId": {
+    "$oid": "6a7ac8940c1685a5a03db38b"
+  },
+  "ExamId": {
+    "$oid": "6a7b3025385a3be1e9dd6db0"
+  },
+  "StartTime": {
+    "$date": "2026-08-11T14:22:29.798Z"
+  },
+  "EndTime": null,
+  "ActiveDurationSeconds": 0,
+  "LastResumedAt": {
+    "$date": "2026-08-11T14:22:29.798Z"
+  },
+  "LastPausedAt": null,
+  "IsPaused": false,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a7b3036385a3be1e9dd6e4e"
+  },
+  "StudentId": {
+    "$oid": "6a7ac8940c1685a5a03db38b"
+  },
+  "ExamId": {
+    "$oid": "6a7b10b30c1685a5a03dcce3"
+  },
+  "StartTime": {
+    "$date": "2026-08-11T14:22:46.508Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-15T16:20:57.072Z"
+  },
+  "ActiveDurationSeconds": 352690,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-15T16:20:57.072Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a7b32d4385a3be1e9dd7169"
+  },
+  "StudentId": {
+    "$oid": "6a7ac8940c1685a5a03db38b"
+  },
+  "ExamId": {
+    "$oid": "6a7b13620c1685a5a03dcdf9"
+  },
+  "StartTime": {
+    "$date": "2026-08-11T14:33:56.449Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-11T14:43:15.140Z"
+  },
+  "ActiveDurationSeconds": 557,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-11T14:43:15.140Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 1,
+  "SelectedQuestionId": {
+    "$oid": "6a7378665c02e674320fa18f"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a7378665c02e674320fa18f"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass Book {\n    protected String title;\n\n    public Book(String title) {\n        this.title = title;\n    }\n\n    public void displayInfo() {\n        System.out.println(title);\n    }\n}\n\nclass FeaturedBook extends Book {\n    private int edition;\n\n    public FeaturedBook(String title, int edition) {\n        super(title);\n        this.edition = edition;\n    }\n\n    @Override\n    public void displayInfo() {\n        System.out.println(title + \" - Edition \" + edition);\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        \n        if (sc.hasNext()) {\n            String title = sc.next();\n            int edition = sc.nextInt();\n\n            // Using a Book reference pointing to a FeaturedBook object (Polymorphism)\n            Book book = new FeaturedBook(title, edition);\n            book.displayInfo();\n        }\n        \n        sc.close();\n    }\n}",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a7b66e844019084ffe9154e"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a7b66e744019084ffe91548"
+  },
+  "StartTime": {
+    "$date": "2026-08-11T18:16:08.042Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-12T08:46:11.623Z"
+  },
+  "ActiveDurationSeconds": 5,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-12T08:46:11.623Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "6a6f82f13108d263107af125"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a6f82f13108d263107af125"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nabstract class Result {\n    protected String name;\n    protected int score;\n\n    public Result(String name, int score) {\n        this.name = name;\n        this.score = score;\n    }\n\n    public abstract String getSummary();\n}\n\nclass ExamResult extends Result {\n    public ExamResult(String name, int score) {\n        super(name, score);\n    }\n\n    @Override\n    public String getSummary() {\n        return \"\";\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String name = sc.nextLine();\n        int score = Integer.parseInt(sc.nextLine());\n\n        Result result = new ExamResult(name, score);\n        System.out.println(result.getSummary());\n    }\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a7b738e44019084ffe946c9"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a7b738d44019084ffe946c3"
+  },
+  "StartTime": {
+    "$date": "2026-08-11T19:10:06.003Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-11T19:10:20.092Z"
+  },
+  "ActiveDurationSeconds": 14,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-11T19:10:20.092Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a7c32d30a7a2e6ee5c83967"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a7b66e744019084ffe91548"
+  },
+  "StartTime": {
+    "$date": "2026-08-12T08:46:11.663Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-12T08:51:14.835Z"
+  },
+  "ActiveDurationSeconds": 301,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-12T08:51:14.835Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "6a6f82f13108d263107af125"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a6f83de3108d263107af141"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nabstract class TaskProcessor {\n    protected int remainingTasks;\n    protected int processedTasks;\n\n    public TaskProcessor(int initialTasks) {\n        this.remainingTasks = initialTasks;\n        this.processedTasks = 0;\n    }\n\n    public abstract void processOneCycle();\n\n    public void addTasks(int count) {\n        // implement\n    }\n\n    public void run(int cycles) {\n        // implement\n    }\n\n    public int getRemainingTasks() {\n        return 0;\n    }\n\n    public int getProcessedTasks() {\n        return 0;\n    }\n}\n\nclass StandardProcessor extends TaskProcessor {\n    private int capacity;\n\n    public StandardProcessor(int initialTasks, int capacity) {\n        super(initialTasks);\n        this.capacity = capacity;\n    }\n\n    @Override\n    public void processOneCycle() {\n        // implement\n    }\n}\n\nclass BurstProcessor extends TaskProcessor {\n    private int capacity;\n    private int cycleCount;\n\n    public BurstProcessor(int initialTasks, int capacity) {\n        super(initialTasks);\n        this.capacity = capacity;\n        this.cycleCount = 0;\n    }\n\n    @Override\n    public void processOneCycle() {\n        // implement\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n\n        int standardInitial = sc.nextInt();\n        int standardCapacity = sc.nextInt();\n        int standardAdd = sc.nextInt();\n        int standardCycles = sc.nextInt();\n\n        int burstInitial = sc.nextInt();\n        int burstCapacity = sc.nextInt();\n        int burstAdd = sc.nextInt();\n        int burstCycles = sc.nextInt();\n\n        TaskProcessor p1 = new StandardProcessor(standardInitial, standardCapacity);\n        TaskProcessor p2 = new BurstProcessor(burstInitial, burstCapacity);\n\n        p1.addTasks(standardAdd);\n        p1.run(standardCycles);\n\n        p2.addTasks(burstAdd);\n        p2.run(burstCycles);\n\n        System.out.println(p1.getRemainingTasks());\n        System.out.println(p1.getProcessedTasks());\n        System.out.println(p2.getRemainingTasks());\n        System.out.println(p2.getProcessedTasks());\n    }\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    },
+    {
+      "QuestionId": {
+        "$oid": "6a6f82f13108d263107af125"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nabstract class Result {\n    protected String name;\n    protected int score;\n\n    public Result(String name, int score) {\n        this.name = name;\n        this.score = score;\n    }\n\n    public abstract String getSummary();\n}\n\nclass ExamResult extends Result {\n    public ExamResult(String name, int score) {\n        super(name, score);\n    }\n\n    @Override\n    public String getSummary() {\n        return \"\";\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String name = sc.nextLine();\n        int score = Integer.parseInt(sc.nextLine());\n\n        Result result = new ExamResult(name, score);\n        System.out.println(result.getSummary());\n    }\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a7c350f0a7a2e6ee5c83b91"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a7c350f0a7a2e6ee5c83b8d"
+  },
+  "StartTime": {
+    "$date": "2026-08-12T08:55:43.721Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-12T08:57:50.634Z"
+  },
+  "ActiveDurationSeconds": 92,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-12T08:57:50.634Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a7c35710a7a2e6ee5c83bbe"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a74324861472a1e24054f1f"
+  },
+  "StartTime": {
+    "$date": "2026-08-12T08:57:21.794Z"
+  },
+  "EndTime": null,
+  "ActiveDurationSeconds": 0,
+  "LastResumedAt": {
+    "$date": "2026-08-12T08:57:21.794Z"
+  },
+  "LastPausedAt": null,
+  "IsPaused": false,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "6a7378665c02e674320fa18f"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a7378665c02e674320fa18f"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass Book {\n    protected String title;\n\n    public Book(String title) {\n        // TODO: implement\n        return null;\n    }\n\n    public void displayInfo() {\n        // TODO: implement\n    }\n}\n\nclass FeaturedBook extends Book {\n    private int edition;\n\n    public FeaturedBook(String title, int edition) {\n        // TODO: implement\n        return null;\n    }\n\n    @Override\n    public void displayInfo() {\n        // TODO: implement\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // TODO: implement\n    }\n}",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a7c358e0a7a2e6ee5c83c63"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a7c350f0a7a2e6ee5c83b8d"
+  },
+  "StartTime": {
+    "$date": "2026-08-12T08:57:50.673Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-12T09:00:13.482Z"
+  },
+  "ActiveDurationSeconds": 142,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-12T09:00:13.482Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 1,
+  "SelectedQuestionId": {
+    "$oid": "6a7b627144019084ffe90c54"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a7b627144019084ffe90c54"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass Member {\n    private String name;\n\n    public Member(String name) {\n        this.name = name;\n    }\n\n    public int getNameLength() {\n        return name.length();\n    }\n}\n\nclass PremiumMember extends Member {\n    private int bonus;\n\n    public PremiumMember(String name, int bonus) {\n        super(name);\n        this.bonus = bonus;\n    }\n\n    public int getTotalScore() {\n        return getNameLength() + bonus;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String name = sc.next();\n        int bonus = sc.nextInt();\n\n        PremiumMember member = new PremiumMember(name, bonus);\n        System.out.println(member.getNameLength());\n        System.out.println(member.getTotalScore());\n    }\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a7c373d0a7a2e6ee5c84199"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a7b738d44019084ffe946c3"
+  },
+  "StartTime": {
+    "$date": "2026-08-12T09:05:01.466Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-12T09:05:33.780Z"
+  },
+  "ActiveDurationSeconds": 32,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-12T09:05:33.780Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 2,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a7c379c0a7a2e6ee5c842e1"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a7b10b30c1685a5a03dcce3"
+  },
+  "StartTime": {
+    "$date": "2026-08-12T09:06:36.618Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-12T11:36:21.577Z"
+  },
+  "ActiveDurationSeconds": 8984,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-12T11:36:21.577Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a7c37a90a7a2e6ee5c84369"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a7b738d44019084ffe946c3"
+  },
+  "StartTime": {
+    "$date": "2026-08-12T09:06:49.986Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-12T12:07:54.822Z"
+  },
+  "ActiveDurationSeconds": 10864,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-12T12:07:54.822Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a7c37e60a7a2e6ee5c84743"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a7c37e60a7a2e6ee5c8473d"
+  },
+  "StartTime": {
+    "$date": "2026-08-12T09:07:50.563Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-12T12:08:42.890Z"
+  },
+  "ActiveDurationSeconds": 10852,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-12T12:08:42.890Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a7c5ab50a7a2e6ee5c85b7f"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a7b10b30c1685a5a03dcce3"
+  },
+  "StartTime": {
+    "$date": "2026-08-12T11:36:21.619Z"
+  },
+  "EndTime": null,
+  "ActiveDurationSeconds": 0,
+  "LastResumedAt": {
+    "$date": "2026-08-12T11:36:21.619Z"
+  },
+  "LastPausedAt": null,
+  "IsPaused": false,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a7c60e80a7a2e6ee5c861d3"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a7c350f0a7a2e6ee5c83b8d"
+  },
+  "StartTime": {
+    "$date": "2026-08-12T12:02:48.769Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-12T12:05:25.192Z"
+  },
+  "ActiveDurationSeconds": 152,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-12T12:05:25.192Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "6a7b627144019084ffe90c54"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a7b627144019084ffe90c54"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass Member {\n    private String name;\n\n    public Member(String name) {\n        this.name = name;\n    }\n\n    public int getNameLength() {\n        // TODO: implement\n        return 0;\n    }\n}\n\nclass PremiumMember extends Member {\n    private int bonus;\n\n    public PremiumMember(String name, int bonus) {\n        super(name);\n        this.bonus = bonus;\n    }\n\n    public int getTotalScore() {\n        // TODO: implement\n        return 0;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // TODO: implement\n    }\n}",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a7c61850a7a2e6ee5c862fe"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a7c350f0a7a2e6ee5c83b8d"
+  },
+  "StartTime": {
+    "$date": "2026-08-12T12:05:25.220Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-12T12:05:32.540Z"
+  },
+  "ActiveDurationSeconds": 7,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-12T12:05:32.540Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "6a7b627144019084ffe90c54"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a7b627144019084ffe90c54"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass Member {\n    private String name;\n\n    public Member(String name) {\n        this.name = name;\n    }\n\n    public int getNameLength() {\n        // TODO: implement\n        return 0;\n    }\n}\n\nclass PremiumMember extends Member {\n    private int bonus;\n\n    public PremiumMember(String name, int bonus) {\n        super(name);\n        this.bonus = bonus;\n    }\n\n    public int getTotalScore() {\n        // TODO: implement\n        return 0;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // TODO: implement\n    }\n}",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a7c621a0a7a2e6ee5c864c6"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a7b738d44019084ffe946c3"
+  },
+  "StartTime": {
+    "$date": "2026-08-12T12:07:54.857Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-12T15:17:21.738Z"
+  },
+  "ActiveDurationSeconds": 11366,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-12T15:17:21.738Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a7c624a0a7a2e6ee5c865ca"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a7c37e60a7a2e6ee5c8473d"
+  },
+  "StartTime": {
+    "$date": "2026-08-12T12:08:42.919Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-12T15:17:17.639Z"
+  },
+  "ActiveDurationSeconds": 11314,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-12T15:17:17.639Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a7c65e00a7a2e6ee5c86c2a"
+  },
+  "StudentId": {
+    "$oid": "6a6ce9faf93aea9e1387a0cd"
+  },
+  "ExamId": {
+    "$oid": "64b100000000000000000021"
+  },
+  "StartTime": {
+    "$date": "2026-08-12T12:24:00.430Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-12T12:24:10.657Z"
+  },
+  "ActiveDurationSeconds": 10,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-12T12:24:10.657Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "64b100000000000000000031"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "64b100000000000000000031"
+      },
+      "Files": [
+        {
+          "Filename": "main.c",
+          "Content": "#include <stdio.h>\n\nint main(void)\n{\n    return 0;\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a7c8e7dca5f4aaf295d922b"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a7c37e60a7a2e6ee5c8473d"
+  },
+  "StartTime": {
+    "$date": "2026-08-12T15:17:17.671Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-14T17:18:48.009Z"
+  },
+  "ActiveDurationSeconds": 180090,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-14T17:18:48.009Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a7c8e81ca5f4aaf295d9256"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a7b738d44019084ffe946c3"
+  },
+  "StartTime": {
+    "$date": "2026-08-12T15:17:21.771Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-14T17:19:22.325Z"
+  },
+  "ActiveDurationSeconds": 180120,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-14T17:19:22.325Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a7c8eacca5f4aaf295d9286"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a7c350f0a7a2e6ee5c83b8d"
+  },
+  "StartTime": {
+    "$date": "2026-08-12T15:18:04.842Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-12T15:18:52.086Z"
+  },
+  "ActiveDurationSeconds": 47,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-12T15:18:52.086Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "6a7b627144019084ffe90c54"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a7b627144019084ffe90c54"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass Member {\n    private String name;\n\n    public Member(String name) {\n        this.name = name;\n    }\n\n    public int getNameLength() {\n        // TODO: implement\n        return 0;\n    }\n}\n\nclass PremiumMember extends Member {\n    private int bonus;\n\n    public PremiumMember(String name, int bonus) {\n        super(name);\n        this.bonus = bonus;\n    }\n\n    public int getTotalScore() {\n        // TODO: implement\n        return 0;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // TODO: implement\n    }\n}",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a7d3befa94581a1c941f5c1"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a7b10b30c1685a5a03dcce3"
+  },
+  "StartTime": {
+    "$date": "2026-08-13T03:37:19.367Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-13T03:37:44.132Z"
+  },
+  "ActiveDurationSeconds": 24,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-13T03:37:44.132Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 1,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a7d3c28a94581a1c941f5fa"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a7c86369356ead007caf888"
+  },
+  "StartTime": {
+    "$date": "2026-08-13T03:38:16.080Z"
+  },
+  "EndTime": null,
+  "ActiveDurationSeconds": 0,
+  "LastResumedAt": {
+    "$date": "2026-08-13T03:38:16.080Z"
+  },
+  "LastPausedAt": null,
+  "IsPaused": false,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a7d3e59a94581a1c941f977"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a7d3e58a94581a1c941f971"
+  },
+  "StartTime": {
+    "$date": "2026-08-13T03:47:37.440Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-13T03:48:13.388Z"
+  },
+  "ActiveDurationSeconds": 35,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-13T03:48:13.388Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 2,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a7d3ebaa94581a1c941fa41"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a7d3e58a94581a1c941f971"
+  },
+  "StartTime": {
+    "$date": "2026-08-13T03:49:14.310Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-13T03:49:26.820Z"
+  },
+  "ActiveDurationSeconds": 12,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-13T03:49:26.820Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 1,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a7d3f37a94581a1c941fc36"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a738b2f6a39c9262fb3bb11"
+  },
+  "StartTime": {
+    "$date": "2026-08-13T03:51:19.950Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-18T19:36:27.191Z"
+  },
+  "ActiveDurationSeconds": 488707,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-18T19:36:27.191Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "64b100000000000000000032"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "64b100000000000000000032"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "public class Main {\n    public static void main(String[] args) {\n    }\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a7d420ca94581a1c9420109"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a7d420ba94581a1c9420105"
+  },
+  "StartTime": {
+    "$date": "2026-08-13T04:03:24.217Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-13T04:25:41.762Z"
+  },
+  "ActiveDurationSeconds": 1337,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-13T04:25:41.762Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "6a7d4130a94581a1c941fee5"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a7d4130a94581a1c941fee5"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass ListEditor {\n    public String insertAndFormat(List<String> items, int index, String value) {\n        items.add(index, value);\n        StringBuilder sb = new StringBuilder();\n        for (int i = 0; i < items.size(); i++) {\n            if (i > 0) {\n                sb.append(\" \");\n            }\n            sb.append(items.get(i));\n        }\n        return sb.toString();\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        \n        System.out.println(\"3 red blue green 1 yellow\");\n    }\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a7d47dba94581a1c9420272"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a7d420ba94581a1c9420105"
+  },
+  "StartTime": {
+    "$date": "2026-08-13T04:28:11.978Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-13T04:28:29.082Z"
+  },
+  "ActiveDurationSeconds": 17,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-13T04:28:29.082Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 1,
+  "SelectedQuestionId": {
+    "$oid": "6a7d4130a94581a1c941fee5"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a7d4130a94581a1c941fee5"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass ListEditor {\n    public String insertAndFormat(List<String> items, int index, String value) {\n        items.add(index, value);\n        StringBuilder sb = new StringBuilder();\n        for (int i = 0; i < items.size(); i++) {\n            if (i > 0) {\n                sb.append(\" \");\n            }\n            sb.append(items.get(i));\n        }\n        return sb.toString();\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        List<String> items = new ArrayList<>();\n        for (int i = 0; i < n; i++) {\n            items.add(sc.next());\n        }\n        int index = sc.nextInt();\n        String value = sc.next();\n\n        ListEditor editor = new ListEditor();\n        System.out.println(editor.insertAndFormat(items, index, value));\n    }\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a7d480fa94581a1c942033d"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a7d420ba94581a1c9420105"
+  },
+  "StartTime": {
+    "$date": "2026-08-13T04:29:03.894Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-13T04:29:29.700Z"
+  },
+  "ActiveDurationSeconds": 25,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-13T04:29:29.700Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "6a7d4130a94581a1c941fee5"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a7d4130a94581a1c941fee5"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass ListEditor {\n    public String insertAndFormat(List<String> items, int index, String value) {\n        items.add(index, value);\n        StringBuilder sb = new StringBuilder();\n        for (int i = 0; i < items.size(); i++) {\n            if (i > 0) {\n                sb.append(\" \");\n            }\n            sb.append(items.get(i));\n        }\n        return sb.toString();\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        List<String> items = new ArrayList<>();\n        for (int i = 0; i < n-1; i++) {\n            items.add(sc.next());\n        }\n        int index = sc.nextInt();\n        String value = sc.next();\n\n        ListEditor editor = new ListEditor();\n        System.out.println(editor.insertAndFormat(items, index, value));\n    }\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a7d486da94581a1c9420424"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a7d420ba94581a1c9420105"
+  },
+  "StartTime": {
+    "$date": "2026-08-13T04:30:37.487Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-13T04:31:05.566Z"
+  },
+  "ActiveDurationSeconds": 28,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-13T04:31:05.566Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 1,
+  "SelectedQuestionId": {
+    "$oid": "6a7d4130a94581a1c941fee5"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a7d4130a94581a1c941fee5"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass ListEditor {\n    public String insertAndFormat(List<String> items, int index, String value) {\n        items.add(index, value);\n        StringBuilder sb = new StringBuilder();\n        for (int i = 0; i < items.size(); i++) {\n            if (i > 0) {\n                sb.append(\" \");\n            }\n            sb.append(items.get(i));\n        }\n        return sb.toString();\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        List<String> items = new ArrayList<>();\n        for (int i = 0; i <= n-1; i++) {\n            items.add(sc.next());\n        }\n        int index = sc.nextInt();\n        String value = sc.next();\n\n        ListEditor editor = new ListEditor();\n        System.out.println(editor.insertAndFormat(items, index, value));\n    }\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a7d493da94581a1c94206c4"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a7d420ba94581a1c9420105"
+  },
+  "StartTime": {
+    "$date": "2026-08-13T04:34:05.256Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-13T04:34:22.357Z"
+  },
+  "ActiveDurationSeconds": 17,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-13T04:34:22.357Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "6a7d4130a94581a1c941fee5"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a7d4130a94581a1c941fee5"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass ListEditor {\n    public String insertAndFormat(List<String> items, int index, String value) {\n        items.add(index, value);\n        StringBuilder sb = new StringBuilder();\n        for (int i = 0; i < items.size(); i++) {\n            if (i > 0) {\n                sb.append(\" \");\n            }\n            sb.append(items.get(i));\n        }\n        return sb.toString();\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        List<String> items = new ArrayList<>();\n        for (int i = 1; i < n; i++) {\n            items.add(sc.next());\n        }\n        int index = sc.nextInt();\n        String value = sc.next();\n\n        ListEditor editor = new ListEditor();\n        System.out.println(editor.insertAndFormat(items, index, value));\n    }\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a7f496bfa401cc3314a5166"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a738b9f6a39c9262fb3bbbf"
+  },
+  "StartTime": {
+    "$date": "2026-08-14T16:59:23.575Z"
+  },
+  "EndTime": null,
+  "ActiveDurationSeconds": 0,
+  "LastResumedAt": {
+    "$date": "2026-08-14T16:59:23.575Z"
+  },
+  "LastPausedAt": null,
+  "IsPaused": false,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a7f4a41fa401cc3314a53ba"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a7f4a41fa401cc3314a53b2"
+  },
+  "StartTime": {
+    "$date": "2026-08-14T17:02:57.874Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-14T17:04:32.815Z"
+  },
+  "ActiveDurationSeconds": 94,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-14T17:04:32.815Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a7f4aa0fa401cc3314a5619"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a7f4a41fa401cc3314a53b2"
+  },
+  "StartTime": {
+    "$date": "2026-08-14T17:04:32.853Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-14T17:11:47.601Z"
+  },
+  "ActiveDurationSeconds": 434,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-14T17:11:47.601Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a7f4c53ee6ce74e7506d09a"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a7f4a41fa401cc3314a53b2"
+  },
+  "StartTime": {
+    "$date": "2026-08-14T17:11:47.639Z"
+  },
+  "EndTime": null,
+  "ActiveDurationSeconds": 0,
+  "LastResumedAt": {
+    "$date": "2026-08-14T17:11:47.639Z"
+  },
+  "LastPausedAt": null,
+  "IsPaused": false,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a7f4dee726250c9016956a8"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a7c350f0a7a2e6ee5c83b8d"
+  },
+  "StartTime": {
+    "$date": "2026-08-14T17:18:38.827Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-14T20:39:13.488Z"
+  },
+  "ActiveDurationSeconds": 12034,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-14T20:39:13.488Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "6a7b627144019084ffe90c54"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a7b627144019084ffe90c54"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass Member {\n    private String name;\n\n    public Member(String name) {\n        this.name = name;\n    }\n\n    public int getNameLength(\n        // TODO: implement\n        return 0;\n    }\n}\n\nclass PremiumMember extends Member {\n    private int bonus;\n\n    public PremiumMember(String name, int bonus) {\n        super(name);\n        this.bonus = bonus;\n    }\n\n    public int getTotalScore() {\n        // TODO: implement\n        return 0;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // TODO: implement\n    }\n}",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a7f4df8726250c9016956dd"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a7c37e60a7a2e6ee5c8473d"
+  },
+  "StartTime": {
+    "$date": "2026-08-14T17:18:48.035Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-18T18:23:15.373Z"
+  },
+  "ActiveDurationSeconds": 349467,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-18T18:23:15.373Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a7f4e1a726250c90169582e"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a7b738d44019084ffe946c3"
+  },
+  "StartTime": {
+    "$date": "2026-08-14T17:19:22.350Z"
+  },
+  "EndTime": null,
+  "ActiveDurationSeconds": 0,
+  "LastResumedAt": {
+    "$date": "2026-08-14T17:19:22.350Z"
+  },
+  "LastPausedAt": null,
+  "IsPaused": false,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a7f82c97e39367f969dc154"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a7c350f0a7a2e6ee5c83b8d"
+  },
+  "StartTime": {
+    "$date": "2026-08-14T21:04:09.045Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-14T22:09:47.265Z"
+  },
+  "ActiveDurationSeconds": 3938,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-14T22:09:47.265Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "6a7b627144019084ffe90c54"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a7b627144019084ffe90c54"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass Member {\n    private String name;\n\n    public Member(String name) {\n        this.name = name;\n    }\n\n    public int getNameLength() {\n        // TODO: implement\n        return 0;\n    }\n}\n\nclass PremiumMember extends Member {\n    private int bonus;\n\n    public PremiumMember(String name, int bonus) {\n        super(name);\n        this.bonus = bonus;\n    }\n\n    public int getTotalScore() {\n        // TODO: implement\n        return 0;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // TODO: implement\n    }\n}",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a7f8c9316278ea99e6c1bc5"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a7d420ba94581a1c9420105"
+  },
+  "StartTime": {
+    "$date": "2026-08-14T21:45:55.928Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-14T21:46:04.152Z"
+  },
+  "ActiveDurationSeconds": 8,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-14T21:46:04.152Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "6a7d4130a94581a1c941fee5"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a7d4130a94581a1c941fee5"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass ListEditor {\n    public String insertAndFormat(List<String> items, int index, String value) {\n        // TODO: implement\n        return null;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // TODO: implement\n    }\n}",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a7f90da14335f1afa28530c"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a7d420ba94581a1c9420105"
+  },
+  "StartTime": {
+    "$date": "2026-08-14T22:04:10.264Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-14T22:04:26.857Z"
+  },
+  "ActiveDurationSeconds": 16,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-14T22:04:26.857Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 1,
+  "SelectedQuestionId": {
+    "$oid": "6a7d4130a94581a1c941fee5"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a7d4130a94581a1c941fee5"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass ListEditor {\n    public String insertAndFormat(List<String> items, int index, String value) {\n        items.add(index, value);\n        StringBuilder sb = new StringBuilder();\n        for (int i = 0; i < items.size(); i++) {\n            if (i > 0) {\n                sb.append(\" \");\n            }\n            sb.append(items.get(i));\n        }\n        return sb.toString();\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        List<String> items = new ArrayList<>();\n        for (int i = 0; i < n; i++) {\n            items.add(sc.next());\n        }\n        int index = sc.nextInt();\n        String value = sc.next();\n\n        ListEditor editor = new ListEditor();\n        System.out.println(editor.insertAndFormat(items, index, value));\n    }\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a7f9170946bf4d411047f41"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a7d420ba94581a1c9420105"
+  },
+  "StartTime": {
+    "$date": "2026-08-14T22:06:40.493Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-14T22:06:53.147Z"
+  },
+  "ActiveDurationSeconds": 12,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-14T22:06:53.147Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 1,
+  "SelectedQuestionId": {
+    "$oid": "6a7d4130a94581a1c941fee5"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a7d4130a94581a1c941fee5"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass ListEditor {\n    public String insertAndFormat(List<String> items, int index, String value) {\n        items.add(index, value);\n        StringBuilder sb = new StringBuilder();\n        for (int i = 0; i < items.size(); i++) {\n            if (i > 0) {\n                sb.append(\" \");\n            }\n            sb.append(items.get(i));\n        }\n        return sb.toString();\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        List<String> items = new ArrayList<>();\n        for (int i = 0; i < n; i++) {\n            items.add(sc.next());\n        }\n        int index = sc.nextInt();\n        String value = sc.next();\n\n        ListEditor editor = new ListEditor();\n        System.out.println(editor.insertAndFormat(items, index, value));\n    }\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a7f922b912ec2e9581b5ecf"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a7c350f0a7a2e6ee5c83b8d"
+  },
+  "StartTime": {
+    "$date": "2026-08-14T22:09:47.295Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-14T22:09:54.164Z"
+  },
+  "ActiveDurationSeconds": 6,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-14T22:09:54.164Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "6a7b627144019084ffe90c54"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a7b627144019084ffe90c54"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass Member {\n    private String name;\n\n    public Member(String name) {\n        this.name = name;\n    }\n\n    public int getNameLength() {\n        // TODO: implement\n        return 0;\n    }\n}\n\nclass PremiumMember extends Member {\n    private int bonus;\n\n    public PremiumMember(String name, int bonus) {\n        super(name);\n        this.bonus = bonus;\n    }\n\n    public int getTotalScore() {\n        // TODO: implement\n        return 0;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // TODO: implement\n    }\n}",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a802e0a6b075af21f751b93"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a802e0a6b075af21f751b88"
+  },
+  "StartTime": {
+    "$date": "2026-08-15T09:14:50.982Z"
+  },
+  "EndTime": null,
+  "ActiveDurationSeconds": 0,
+  "LastResumedAt": {
+    "$date": "2026-08-15T09:14:50.982Z"
+  },
+  "LastPausedAt": null,
+  "IsPaused": false,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a802e846b075af21f751f0d"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a802e836b075af21f751f05"
+  },
+  "StartTime": {
+    "$date": "2026-08-15T09:16:52.091Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-15T09:17:06.298Z"
+  },
+  "ActiveDurationSeconds": 14,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-15T09:17:06.298Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 2,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a802ef86b075af21f75205a"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a7d4adaa94581a1c9420912"
+  },
+  "StartTime": {
+    "$date": "2026-08-15T09:18:48.155Z"
+  },
+  "EndTime": null,
+  "ActiveDurationSeconds": 8,
+  "LastResumedAt": {
+    "$date": "2026-08-20T18:23:30.518Z"
+  },
+  "LastPausedAt": null,
+  "IsPaused": false,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "64b100000000000000000032"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "64b100000000000000000032"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "public class Main {\n    public static void main(String[] args) {\n    }\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a802f0d6b075af21f752212"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a7c350f0a7a2e6ee5c83b8d"
+  },
+  "StartTime": {
+    "$date": "2026-08-15T09:19:09.269Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-15T09:22:16.621Z"
+  },
+  "ActiveDurationSeconds": 187,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-15T09:22:16.621Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "6a7b627144019084ffe90c54"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a7b627144019084ffe90c54"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass Member {\n    private String name;\n\n    public Member(String name) {\n        this.name = name;\n    }\n\n    public int getNameLength() {\n        // TODO: implement\n        return 0;\n    }\n}\n\nclass PremiumMember extends Member {\n    private int bonus;\n\n    public PremiumMember(String name, int bonus) {\n        super(name);\n        this.bonus = bonus;\n    }\n\n    public int getTotalScore() {\n        // TODO: implement\n        return 0;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // TODO: implement\n    }\n}",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a8091e98d232f5cef83144b"
+  },
+  "StudentId": {
+    "$oid": "6a7ac8940c1685a5a03db38b"
+  },
+  "ExamId": {
+    "$oid": "6a7b10b30c1685a5a03dcce3"
+  },
+  "StartTime": {
+    "$date": "2026-08-15T16:20:57.106Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-15T16:21:04.113Z"
+  },
+  "ActiveDurationSeconds": 7,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-15T16:21:04.113Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 1,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a8094c38d232f5cef831f01"
+  },
+  "StudentId": {
+    "$oid": "6a7ac8940c1685a5a03db38b"
+  },
+  "ExamId": {
+    "$oid": "6a8094c28d232f5cef831efa"
+  },
+  "StartTime": {
+    "$date": "2026-08-15T16:33:07.043Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-15T16:36:55.216Z"
+  },
+  "ActiveDurationSeconds": 228,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-15T16:36:55.216Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "6a80946b8d232f5cef831d9b"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a80946b8d232f5cef831d9b"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        System.out.printf(\"Hello world\");\n    }\n}",
+          "IsReadOnly": false
+        }
+      ]
+    },
+    {
+      "QuestionId": {
+        "$oid": "6a80946b8d232f5cef831d99"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        System.out.printf(\"Hello world\");\n    }\n}",
+          "IsReadOnly": false
+        }
+      ]
+    },
+    {
+      "QuestionId": {
+        "$oid": "6a80946b8d232f5cef831d9a"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        System.out.printf(\"Hello world\");\n    }\n}",
+          "IsReadOnly": false
+        }
+      ]
+    },
+    {
+      "QuestionId": {
+        "$oid": "6a80946b8d232f5cef831d98"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        System.out.printf(\"Hello world\");\n    }\n}",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a81dccb3a415c937e6b652a"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a7d420ba94581a1c9420105"
+  },
+  "StartTime": {
+    "$date": "2026-08-16T15:52:43.737Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-25T09:55:22.817Z"
+  },
+  "ActiveDurationSeconds": 1751,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-25T09:55:22.817Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "6a7d4130a94581a1c941fee5"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a7d4130a94581a1c941fee5"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass ListEditor {\n    public String insertAndFormat(List<String> items, int index, String value) {\n        items.add(index, value);\n        StringBuilder sb = new StringBuilder();\n        for (int i = 0; i < items.size(); i++) {\n            if (i > 0) {\n                sb.append(\" \");\n            }\n            sb.append(items.get(i));\n        }\n        return sb.toString();\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        List<String> items = new ArrayList<>();\n        for (int i = 1; i < n; i++) {\n            items.add(sc.next());\n        }\n        int index = sc.nextInt();\n        String value = sc.next();\n\n        ListEditor editor = new ListEditor();\n        System.out.println(editor.insertAndFormat(items, index, value));\n    }\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a834a7b3862e02cff9c198a"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a834a7b3862e02cff9c1982"
+  },
+  "StartTime": {
+    "$date": "2026-08-17T17:52:59.693Z"
+  },
+  "EndTime": null,
+  "ActiveDurationSeconds": 348150,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-21T18:35:29.940Z"
+  },
+  "IsPaused": true,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a834bd4f41991a5e1c4b78f"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a7d3e58a94581a1c941f971"
+  },
+  "StartTime": {
+    "$date": "2026-08-17T17:58:44.113Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-17T17:58:50.898Z"
+  },
+  "ActiveDurationSeconds": 6,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-17T17:58:50.898Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a834bfff41991a5e1c4bc57"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a834bfff41991a5e1c4bc51"
+  },
+  "StartTime": {
+    "$date": "2026-08-17T17:59:27.318Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-17T18:00:16.589Z"
+  },
+  "ActiveDurationSeconds": 49,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-17T18:00:16.589Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 2,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a84a210057d3c4311c8e498"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a802e836b075af21f751f05"
+  },
+  "StartTime": {
+    "$date": "2026-08-18T18:18:56.110Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-18T18:21:09.445Z"
+  },
+  "ActiveDurationSeconds": 133,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-18T18:21:09.445Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a84a295057d3c4311c8e608"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a802e836b075af21f751f05"
+  },
+  "StartTime": {
+    "$date": "2026-08-18T18:21:09.480Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-18T18:21:52.709Z"
+  },
+  "ActiveDurationSeconds": 43,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-18T18:21:52.709Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a84a2b7057d3c4311c8e792"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a7c350f0a7a2e6ee5c83b8d"
+  },
+  "StartTime": {
+    "$date": "2026-08-18T18:21:43.376Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-18T18:22:38.786Z"
+  },
+  "ActiveDurationSeconds": 6,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-18T18:22:38.786Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a84a2c0057d3c4311c8e7d1"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a802e836b075af21f751f05"
+  },
+  "StartTime": {
+    "$date": "2026-08-18T18:21:52.740Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-18T18:23:55.875Z"
+  },
+  "ActiveDurationSeconds": 123,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-18T18:23:55.875Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a84a2ee057d3c4311c8e812"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a7c350f0a7a2e6ee5c83b8d"
+  },
+  "StartTime": {
+    "$date": "2026-08-18T18:22:38.816Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-18T18:26:46.328Z"
+  },
+  "ActiveDurationSeconds": 22,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-18T18:26:46.328Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a84a313057d3c4311c8e84f"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a7c37e60a7a2e6ee5c8473d"
+  },
+  "StartTime": {
+    "$date": "2026-08-18T18:23:15.410Z"
+  },
+  "EndTime": null,
+  "ActiveDurationSeconds": 0,
+  "LastResumedAt": {
+    "$date": "2026-08-18T18:23:15.410Z"
+  },
+  "LastPausedAt": null,
+  "IsPaused": false,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a84a33b057d3c4311c8e88e"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a802e836b075af21f751f05"
+  },
+  "StartTime": {
+    "$date": "2026-08-18T18:23:55.904Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-18T18:24:31.845Z"
+  },
+  "ActiveDurationSeconds": 35,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-18T18:24:31.845Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a84a35f057d3c4311c8ea1f"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a802e836b075af21f751f05"
+  },
+  "StartTime": {
+    "$date": "2026-08-18T18:24:31.874Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-18T18:25:25.368Z"
+  },
+  "ActiveDurationSeconds": 53,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-18T18:25:25.368Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a84a395057d3c4311c8ebb0"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a802e836b075af21f751f05"
+  },
+  "StartTime": {
+    "$date": "2026-08-18T18:25:25.402Z"
+  },
+  "EndTime": null,
+  "ActiveDurationSeconds": 260488,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-21T18:46:54.322Z"
+  },
+  "IsPaused": true,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a84a3e6057d3c4311c8ed3d"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a7c350f0a7a2e6ee5c83b8d"
+  },
+  "StartTime": {
+    "$date": "2026-08-18T18:26:46.354Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-18T18:26:53.966Z"
+  },
+  "ActiveDurationSeconds": 7,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-18T18:26:53.966Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "6a7b627144019084ffe90c54"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a7b627144019084ffe90c54"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass Member {\n    private String name;\n\n    public Member(String name) {\n        this.name = name;\n    }\n\n    public int getNameLength() {\n        // TODO: implement\n        return 0;\n    }\n}\n\nclass PremiumMember extends Member {\n    private int bonus;\n\n    public PremiumMember(String name, int bonus) {\n        super(name);\n        this.bonus = bonus;\n    }\n\n    public int getTotalScore() {\n        // TODO: implement\n        return 0;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // TODO: implement\n    }\n}",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a84a4fd057d3c4311c8eefc"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a7c350f0a7a2e6ee5c83b8d"
+  },
+  "StartTime": {
+    "$date": "2026-08-18T18:31:25.289Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-18T18:46:55.936Z"
+  },
+  "ActiveDurationSeconds": 202,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-18T18:46:55.936Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a84a5ca057d3c4311c8ef38"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a7b66e744019084ffe91548"
+  },
+  "StartTime": {
+    "$date": "2026-08-18T18:34:50.990Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-18T18:37:14.721Z"
+  },
+  "ActiveDurationSeconds": 143,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-18T18:37:14.721Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "6a6f82f13108d263107af125"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a6f83de3108d263107af141"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nabstract class Result {\n    protected String name;\n    protected int score;\n\n    public Result(String name, int score) {\n        this.name = name;\n        this.score = score;\n    }\n\n    public abstract String getSummary();\n}\n\nclass ExamResult extends Result {\n    public ExamResult(String name, int score) {\n        super(name, score);\n    }\n\n    @Override\n    public String getSummary() {\n        return \"\";\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String name = sc.nextLine();\n        int score = Integer.parseInt(sc.nextLine());\n\n        Result result = new ExamResult(name, score);\n        System.out.println(result.getSummary());\n    }\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    },
+    {
+      "QuestionId": {
+        "$oid": "6a6f83653108d263107af133"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nabstract class Result {\n    protected String name;\n    protected int score;\n\n    public Result(String name, int score) {\n        this.name = name;\n        this.score = score;\n    }\n\n    public abstract String getSummary();\n}\n\nclass ExamResult extends Result {\n    public ExamResult(String name, int score) {\n        super(name, score);\n    }\n\n    @Override\n    public String getSummary() {\n        return \"\";\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String name = sc.nextLine();\n        int score = Integer.parseInt(sc.nextLine());\n\n        Result result = new ExamResult(name, score);\n        System.out.println(result.getSummary());\n    }\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    },
+    {
+      "QuestionId": {
+        "$oid": "6a6f82f13108d263107af125"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nabstract class Result {\n    protected String name;\n    protected int score;\n\n    public Result(String name, int score) {\n        this.name = name;\n        this.score = score;\n    }\n\n    public abstract String getSummary();\n}\n\nclass ExamResult extends Result {\n    public ExamResult(String name, int score) {\n        super(name, score);\n    }\n\n    @Override\n    public String getSummary() {\n        return \"\";\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String name = sc.nextLine();\n        int score = Integer.parseInt(sc.nextLine());\n\n        Result result = new ExamResult(name, score);\n        System.out.println(result.getSummary());\n    }\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a84a68b057d3c4311c8f148"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a7b66e744019084ffe91548"
+  },
+  "StartTime": {
+    "$date": "2026-08-18T18:38:03.781Z"
+  },
+  "EndTime": null,
+  "ActiveDurationSeconds": 511,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-18T18:46:35.684Z"
+  },
+  "IsPaused": true,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "6a6f82f13108d263107af125"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a6f82f13108d263107af125"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nabstract class Result {\n    protected String name;\n    protected int score;\n\n    public Result(String name, int score) {\n        this.name = name;\n        this.score = score;\n    }\n\n    public abstract String getSummary();\n}\n\nclass ExamResult extends Result {\n    public ExamResult(String name, int score) {\n        super(name, score);\n    }\n\n    @Override\n    public String getSummary() {\n        return \"\";\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String name = sc.nextLine();\n        int score = Integer.parseInt(sc.nextLine());\n\n        Result result = new ExamResult(name, score);\n        System.out.println(result.getSummary());\n    }\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a84a89f057d3c4311c8f338"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a7c350f0a7a2e6ee5c83b8d"
+  },
+  "StartTime": {
+    "$date": "2026-08-18T18:46:55.963Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-18T18:47:04.168Z"
+  },
+  "ActiveDurationSeconds": 8,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-18T18:47:04.168Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "6a7b627144019084ffe90c54"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a7b627144019084ffe90c54"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass Member {\n    private String name;\n\n    public Member(String name) {\n        this.name = name;\n    }\n\n    public int getNameLength() {\n        // TODO: implement\n        return 0;\n    }\n}\n\nclass PremiumMember extends Member {\n    private int bonus;\n\n    public PremiumMember(String name, int bonus) {\n        super(name);\n        this.bonus = bonus;\n    }\n\n    public int getTotalScore() {\n        // TODO: implement\n        return 0;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // TODO: implement\n    }\n}",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a84ac97057d3c4311c909a5"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a7c86369356ead007caf888"
+  },
+  "StartTime": {
+    "$date": "2026-08-18T19:03:51.769Z"
+  },
+  "EndTime": null,
+  "ActiveDurationSeconds": 259250,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-21T19:04:42.612Z"
+  },
+  "IsPaused": true,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a84b6bf2017968890a185b2"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a738b2f6a39c9262fb3bb11"
+  },
+  "StartTime": {
+    "$date": "2026-08-18T19:47:11.308Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-18T19:47:19.782Z"
+  },
+  "ActiveDurationSeconds": 8,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-18T19:47:19.782Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "6a7378665c02e674320fa18f"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "64b100000000000000000032"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "public class Main {\n    public static void main(String[] args) {\n    }\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a84b88e2017968890a18a30"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a738b2f6a39c9262fb3bb11"
+  },
+  "StartTime": {
+    "$date": "2026-08-18T19:54:54.991Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-20T18:31:59.888Z"
+  },
+  "ActiveDurationSeconds": 8,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-20T18:31:59.888Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "64b100000000000000000032"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a7378665c02e674320fa18f"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "public class Main {\n    public static void main(String[] args) {\n    }\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    },
+    {
+      "QuestionId": {
+        "$oid": "64b100000000000000000032"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "public class Main {\n    public static void main(String[] args) {\n    }\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a87481f75224f5423a0fde3"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a738b2f6a39c9262fb3bb11"
+  },
+  "StartTime": {
+    "$date": "2026-08-20T18:31:59.931Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-20T18:32:07.618Z"
+  },
+  "ActiveDurationSeconds": 7,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-20T18:32:07.618Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "64b100000000000000000032"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a7378665c02e674320fa18f"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass Book {\n    protected String title;\n\n    public Book(String title) {\n        // TODO: implement\n        return null;\n    }\n\n    public void displayInfo() {\n        // TODO: implement\n    }\n}\n\nclass FeaturedBook extends Book {\n    private int edition;\n\n    public FeaturedBook(String title, int edition) {\n        // TODO: implement\n        return null;\n    }\n\n    @Override\n    public void displayInfo() {\n        // TODO: implement\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // TODO: implement\n    }\n}",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a874b99754542560e366d4e"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a834bfff41991a5e1c4bc51"
+  },
+  "StartTime": {
+    "$date": "2026-08-20T18:46:49.220Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-20T18:46:54.776Z"
+  },
+  "ActiveDurationSeconds": 5,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-20T18:46:54.776Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 2,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a874c3b754542560e3672ae"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a834bfff41991a5e1c4bc51"
+  },
+  "StartTime": {
+    "$date": "2026-08-20T18:49:31.429Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-20T18:53:46.402Z"
+  },
+  "ActiveDurationSeconds": 254,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-20T18:53:46.402Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a874d3a754542560e3677af"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a834bfff41991a5e1c4bc51"
+  },
+  "StartTime": {
+    "$date": "2026-08-20T18:53:46.469Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-20T18:58:59.754Z"
+  },
+  "ActiveDurationSeconds": 3,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-20T18:58:59.754Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a874e73754542560e367dbc"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a834bfff41991a5e1c4bc51"
+  },
+  "StartTime": {
+    "$date": "2026-08-20T18:58:59.814Z"
+  },
+  "EndTime": null,
+  "ActiveDurationSeconds": 50,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-25T09:55:11.549Z"
+  },
+  "IsPaused": true,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a875ee6f6552306690f6337"
+  },
+  "StudentId": {
+    "$oid": "6a875ed2f6552306690f5ff9"
+  },
+  "ExamId": {
+    "$oid": "6a7b10b30c1685a5a03dcce3"
+  },
+  "StartTime": {
+    "$date": "2026-08-20T20:09:10.317Z"
+  },
+  "EndTime": null,
+  "ActiveDurationSeconds": 0,
+  "LastResumedAt": {
+    "$date": "2026-08-20T20:09:10.317Z"
+  },
+  "LastPausedAt": null,
+  "IsPaused": false,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a881734fe70f75cbf36f62d"
+  },
+  "StudentId": {
+    "$oid": "6a875fd7f6552306690f7514"
+  },
+  "ExamId": {
+    "$oid": "6a7b10b30c1685a5a03dcce3"
+  },
+  "StartTime": {
+    "$date": "2026-08-21T09:15:32.374Z"
+  },
+  "EndTime": null,
+  "ActiveDurationSeconds": 0,
+  "LastResumedAt": {
+    "$date": "2026-08-21T09:15:32.374Z"
+  },
+  "LastPausedAt": null,
+  "IsPaused": false,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a882b54286750807732ddcd"
+  },
+  "StudentId": {
+    "$oid": "6a875fd7f6552306690f7514"
+  },
+  "ExamId": {
+    "$oid": "6a882b54286750807732ddc6"
+  },
+  "StartTime": {
+    "$date": "2026-08-21T10:41:24.437Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-21T10:59:14.959Z"
+  },
+  "ActiveDurationSeconds": 1070,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-21T10:59:14.959Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "64b100000000000000000032"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "64b100000000000000000032"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "public class Main {\n    public static void main(String[] args) {\n    }\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a882f83286750807732e40d"
+  },
+  "StudentId": {
+    "$oid": "6a875fd7f6552306690f7514"
+  },
+  "ExamId": {
+    "$oid": "6a882b54286750807732ddc6"
+  },
+  "StartTime": {
+    "$date": "2026-08-21T10:59:15.001Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-21T10:59:29.999Z"
+  },
+  "ActiveDurationSeconds": 11,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-21T10:59:29.999Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "64b100000000000000000032"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "64b100000000000000000032"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "public class Main {\n    public static void main(String[] args) {\n    }\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a882f92286750807732e456"
+  },
+  "StudentId": {
+    "$oid": "6a875fd7f6552306690f7514"
+  },
+  "ExamId": {
+    "$oid": "6a882b54286750807732ddc6"
+  },
+  "StartTime": {
+    "$date": "2026-08-21T10:59:30.030Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-21T10:59:40.642Z"
+  },
+  "ActiveDurationSeconds": 9,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-21T10:59:40.642Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "64b100000000000000000032"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "64b100000000000000000032"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "public class Main {\n    public static void main(String[] args) {\n    }\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a882f9c286750807732e49f"
+  },
+  "StudentId": {
+    "$oid": "6a875fd7f6552306690f7514"
+  },
+  "ExamId": {
+    "$oid": "6a882b54286750807732ddc6"
+  },
+  "StartTime": {
+    "$date": "2026-08-21T10:59:40.675Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-21T12:48:52.755Z"
+  },
+  "ActiveDurationSeconds": 5,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-21T12:48:52.755Z"
+  },
+  "IsPaused": true,
+  "Status": "Timeout",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "64b100000000000000000032"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "64b100000000000000000032"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "public class Main {\n    public static void main(String[] args) {\n    }\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a884934286750807732e5f9"
+  },
+  "StudentId": {
+    "$oid": "6a875fd7f6552306690f7514"
+  },
+  "ExamId": {
+    "$oid": "6a882b54286750807732ddc6"
+  },
+  "StartTime": {
+    "$date": "2026-08-21T12:48:52.794Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-21T12:50:24.278Z"
+  },
+  "ActiveDurationSeconds": 87,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-21T12:50:24.278Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "64b100000000000000000032"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "64b100000000000000000032"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "public class Main {\n    public static void main(String[] args) {\n    }\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    },
+    {
+      "QuestionId": {
+        "$oid": "6a7378665c02e674320fa18f"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass Book {\n    protected String title;\n\n    public Book(String title) {\n        // TODO: implement\n        return null;\n    }\n\n    public void displayInfo() {\n        // TODO: implement\n    }\n}\n\nclass FeaturedBook extends Book {\n    private int edition;\n\n    public FeaturedBook(String title, int edition) {\n        // TODO: implement\n        return null;\n    }\n\n    @Override\n    public void displayInfo() {\n        // TODO: implement\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // TODO: implement\n    }\n}",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a888ec3286750807732ec19"
+  },
+  "StudentId": {
+    "$oid": "6a875fd7f6552306690f7514"
+  },
+  "ExamId": {
+    "$oid": "6a888ec3286750807732ec11"
+  },
+  "StartTime": {
+    "$date": "2026-08-21T17:45:39.867Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-21T17:45:55.056Z"
+  },
+  "ActiveDurationSeconds": 15,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-21T17:45:55.056Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 1,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a8890bb286750807732edd4"
+  },
+  "StudentId": {
+    "$oid": "6a875fd7f6552306690f7514"
+  },
+  "ExamId": {
+    "$oid": "6a888ec3286750807732ec11"
+  },
+  "StartTime": {
+    "$date": "2026-08-21T17:54:03.168Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-21T17:54:28.111Z"
+  },
+  "ActiveDurationSeconds": 24,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-21T17:54:28.111Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a889230286750807732ef8f"
+  },
+  "StudentId": {
+    "$oid": "6a875fd7f6552306690f7514"
+  },
+  "ExamId": {
+    "$oid": "6a888ec3286750807732ec11"
+  },
+  "StartTime": {
+    "$date": "2026-08-21T18:00:16.715Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-21T18:00:25.038Z"
+  },
+  "ActiveDurationSeconds": 8,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-21T18:00:25.038Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 1,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a889c723452470caca6adaa"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a738b2f6a39c9262fb3bb11"
+  },
+  "StartTime": {
+    "$date": "2026-08-21T18:44:02.645Z"
+  },
+  "EndTime": null,
+  "ActiveDurationSeconds": 0,
+  "LastResumedAt": {
+    "$date": "2026-08-21T18:44:02.645Z"
+  },
+  "LastPausedAt": null,
+  "IsPaused": false,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "64b100000000000000000032"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "64b100000000000000000032"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "public class Main {\n    public static void main(String[] args) {\n    }\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a889d20e35a490c9efdabc8"
+  },
+  "StudentId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "ExamId": {
+    "$oid": "6a7c350f0a7a2e6ee5c83b8d"
+  },
+  "StartTime": {
+    "$date": "2026-08-21T18:46:56.732Z"
+  },
+  "EndTime": null,
+  "ActiveDurationSeconds": 0,
+  "LastResumedAt": {
+    "$date": "2026-08-21T18:46:56.732Z"
+  },
+  "LastPausedAt": null,
+  "IsPaused": false,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "6a7b627144019084ffe90c54"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a7b627144019084ffe90c54"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass Member {\n    private String name;\n\n    public Member(String name) {\n        this.name = name;\n    }\n\n    public int getNameLength() {\n        // TODO: implement\n        return 0;\n    }\n}\n\nclass PremiumMember extends Member {\n    private int bonus;\n\n    public PremiumMember(String name, int bonus) {\n        super(name);\n        this.bonus = bonus;\n    }\n\n    public int getTotalScore() {\n        // TODO: implement\n        return 0;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // TODO: implement\n    }\n}",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a895f382867508077331735"
+  },
+  "StudentId": {
+    "$oid": "6a875fd7f6552306690f7514"
+  },
+  "ExamId": {
+    "$oid": "6a895f372867508077331731"
+  },
+  "StartTime": {
+    "$date": "2026-08-22T08:35:04.061Z"
+  },
+  "EndTime": null,
+  "ActiveDurationSeconds": 74,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-22T08:36:18.938Z"
+  },
+  "IsPaused": true,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a8960092867508077331857"
+  },
+  "StudentId": {
+    "$oid": "6a875fd7f6552306690f7514"
+  },
+  "ExamId": {
+    "$oid": "6a882b54286750807732ddc6"
+  },
+  "StartTime": {
+    "$date": "2026-08-22T08:38:33.695Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-22T08:38:57.189Z"
+  },
+  "ActiveDurationSeconds": 23,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-22T08:38:57.189Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "64b100000000000000000032"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a7378665c02e674320fa18f"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass Book {\n    protected String title;\n\n    public Book(String title) {\n        // TODO: implement\n        return null;\n    }\n\n    public void displayInfo() {\n        // TODO: implement\n    }\n}\n\nclass FeaturedBook extends Book {\n    private int edition;\n\n    public FeaturedBook(String title, int edition) {\n        // TODO: implement\n        return null;\n    }\n\n    @Override\n    public void displayInfo() {\n        // TODO: implement\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // TODO: implement\n    }\n}",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a89bea2286750807733621b"
+  },
+  "StudentId": {
+    "$oid": "6a875fd7f6552306690f7514"
+  },
+  "ExamId": {
+    "$oid": "6a882b54286750807732ddc6"
+  },
+  "StartTime": {
+    "$date": "2026-08-22T15:22:10.220Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-22T15:22:23.153Z"
+  },
+  "ActiveDurationSeconds": 12,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-22T15:22:23.153Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "64b100000000000000000032"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a737b27090e38028ba1d642"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass BaseAction {\n    public String m1() {\n        // TODO: implement\n        return null;\n    }\n\n    public String m2() {\n        // TODO: implement\n        return null;\n    }\n\n    public String describe() {\n        // TODO: implement\n        return null;\n    }\n}\n\nclass ChildAction extends BaseAction {\n    @Override\n    public String m2() {\n        // TODO: implement\n        return null;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // TODO: implement\n    }\n}",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a8d668b385f4cba1cdfa9e1"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a7d420ba94581a1c9420105"
+  },
+  "StartTime": {
+    "$date": "2026-08-25T09:55:23.011Z"
+  },
+  "EndTime": null,
+  "ActiveDurationSeconds": 503,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-25T10:03:46.113Z"
+  },
+  "IsPaused": true,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "6a7d4130a94581a1c941fee5"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a7d4130a94581a1c941fee5"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass ListEditor {\n    public String insertAndFormat(List<String> items, int index, String value) {\n        // TODO: implement\n        return null;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Hello\");\n    }\n}",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a8d698f810e1de5ec80224e"
+  },
+  "StudentId": {
+    "$oid": "6a8d56012424df65457aaf36"
+  },
+  "ExamId": {
+    "$oid": "6a8d698f810e1de5ec80224a"
+  },
+  "StartTime": {
+    "$date": "2026-08-25T10:08:15.788Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-25T10:12:10.486Z"
+  },
+  "ActiveDurationSeconds": 234,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-25T10:12:10.486Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 1,
+  "SelectedQuestionId": {
+    "$oid": "6a8d6815810e1de5ec801fcd"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a8d6815810e1de5ec801fcd"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass Point2D {\n    protected int x;\n    protected int y;\n\n    public Point2D() {\n        this.x = 0;\n        this.y = 0;\n    }\n\n    public void setValue(int a, int b) {\n        this.x = a;\n        this.y = b;\n    }\n\n    @Override\n    public String toString() {\n        return x + \"@\" + y;\n    }\n}\n\nclass Point3D extends Point2D {\n    private int z;\n\n    public Point3D() {\n        super();\n        this.z = 0;\n    }\n\n    @Override\n    public void setValue(int a, int b) {\n        super.setValue(a, b);\n        this.z = a + b;\n    }\n\n    @Override\n    public String toString() {\n        return super.toString() + \"@\" + z;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n\n        Point3D p = new Point3D();\n        p.setValue(a, b);\n        System.out.println(p.toString());\n    }\n}",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a8d9e4d5d590a6880eb8d5d"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a8d9e4d5d590a6880eb8d58"
+  },
+  "StartTime": {
+    "$date": "2026-08-25T13:53:17.716Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-25T14:03:59.110Z"
+  },
+  "ActiveDurationSeconds": 640,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-25T14:03:59.110Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 1,
+  "SelectedQuestionId": {
+    "$oid": "6a8d9c925d590a6880eb86e0"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a8d9c925d590a6880eb86e0"
+      },
+      "Files": [
+        {
+          "Filename": "main.c",
+          "Content": "#include <stdio.h>\n\nint main(void) {\n    int m, d, y;\n    int maxDay;\n    int leap;\n\n    scanf(\"%d %d %d\", &m, &d, &y);\n\n    if (m < 1 || m > 12) {\n        printf(\"INVALID\\n\");\n        return 0;\n    }\n\n    leap = ((y % 4 == 0 && y % 400 != 0) || (y % 100 == 0));\n\n    if (m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12) {\n        maxDay = 31;\n    } else if (m == 4 || m == 6 || m == 9 || m == 11) {\n        maxDay = 30;\n    } else {\n        if (leap) {\n            maxDay = 29;\n        } else {\n            maxDay = 28;\n        }\n    }\n\n    if (d >= 1 && d <= maxDay) {\n        printf(\"VALID\\n\");\n    } else {\n        printf(\"INVALID\\n\");\n    }\n\n    return 0;\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    },
+    {
+      "QuestionId": {
+        "$oid": "6a8d9cac5d590a6880eb86f3"
+      },
+      "Files": [
+        {
+          "Filename": "main.c",
+          "Content": "#include <stdio.h>\n\nint main(void) {\n    int m, d, y;\n    int maxDay;\n    int leap;\n\n    scanf(\"%d %d %d\", &m, &d, &y);\n\n    if (m < 1 || m > 12) {\n        printf(\"INVALID\\n\");\n        return 0;\n    }\n\n    leap = ((y % 4 == 0 && y % 400 != 0) || (y % 100 == 0));\n\n    if (m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12) {\n        maxDay = 31;\n    } else if (m == 4 || m == 6 || m == 9 || m == 11) {\n        maxDay = 30;\n    } else {\n        if (leap) {\n            maxDay = 29;\n        } else {\n            maxDay = 28;\n        }\n    }\n\n    if (d >= 1 && d <= maxDay) {\n        printf(\"VALID\\n\");\n    } else {\n        printf(\"INVALID\\n\");\n    }\n\n    return 0;\n}\n",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a8e7da1d06b933c15cc258a"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a8e7ca4d06b933c15cc2453"
+  },
+  "StartTime": {
+    "$date": "2026-08-26T05:46:09.339Z"
+  },
+  "EndTime": null,
+  "ActiveDurationSeconds": 37,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-26T05:46:46.353Z"
+  },
+  "IsPaused": true,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a8e7dd5d06b933c15cc2619"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a8d6269385f4cba1cdfa0b6"
+  },
+  "StartTime": {
+    "$date": "2026-08-26T05:47:01.890Z"
+  },
+  "EndTime": null,
+  "ActiveDurationSeconds": 70,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-26T05:48:20.419Z"
+  },
+  "IsPaused": true,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a8e7e50d06b933c15cc26c0"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a8d60f3385f4cba1cdf9bfe"
+  },
+  "StartTime": {
+    "$date": "2026-08-26T05:49:04.610Z"
+  },
+  "EndTime": null,
+  "ActiveDurationSeconds": 44,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-26T05:49:48.783Z"
+  },
+  "IsPaused": true,
+  "Status": "InProgress",
+  "TotalScore": 0,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a8e7ea9d06b933c15cc2847"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a8e7e9ad06b933c15cc27e0"
+  },
+  "StartTime": {
+    "$date": "2026-08-26T05:50:33.148Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-26T05:51:12.511Z"
+  },
+  "ActiveDurationSeconds": 39,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-26T05:51:12.511Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 4,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a8eb01716353d2110974dfa"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a8eb01616353d2110974ded"
+  },
+  "StartTime": {
+    "$date": "2026-08-26T09:21:27.430Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-26T09:21:56.094Z"
+  },
+  "ActiveDurationSeconds": 28,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-26T09:21:56.094Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 5,
+  "SelectedQuestionId": null,
+  "DraftCodes": []
+},
+{
+  "_id": {
+    "$oid": "6a8eb0b316353d211097512f"
+  },
+  "StudentId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "ExamId": {
+    "$oid": "6a8d636f385f4cba1cdfa3aa"
+  },
+  "StartTime": {
+    "$date": "2026-08-26T09:24:03.853Z"
+  },
+  "EndTime": {
+    "$date": "2026-08-26T09:25:13.282Z"
+  },
+  "ActiveDurationSeconds": 69,
+  "LastResumedAt": null,
+  "LastPausedAt": {
+    "$date": "2026-08-26T09:25:13.282Z"
+  },
+  "IsPaused": true,
+  "Status": "Submitted",
+  "TotalScore": 0,
+  "SelectedQuestionId": {
+    "$oid": "6a88a1183452470caca6b32c"
+  },
+  "DraftCodes": [
+    {
+      "QuestionId": {
+        "$oid": "6a88a1183452470caca6b32c"
+      },
+      "Files": [
+        {
+          "Filename": "Main.java",
+          "Content": "import java.util.*;\n\nclass Counter {\n    private int value;\n\n    public Counter(int value) {\n        this.value = value;\n    }\n\n    public void increment() {\n        // TODO: implement\n    }\n\n    public void decrement() {\n        // TODO: implement\n    }\n\n    public int getValue() {\n        // TODO: implement\n        return 0;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // TODO: implement\n    }\n}",
+          "IsReadOnly": false
+        }
+      ]
+    }
+  ]
+}]

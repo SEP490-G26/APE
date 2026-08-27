@@ -1,0 +1,183 @@
+<section id="extracted-tab" class="tab-panel">
+  <section class="panel" style="margin-bottom: 20px;">
+    <div class="panel-head">
+      <div>
+        <p class="panel-kicker">Pipeline 2-3</p>
+        <h3>Document Extraction -> Human Review -> Embedding + Auto Tagging</h3>
+      </div>
+    </div>
+    <div class="kv-block">
+      <p><strong>Step A:</strong> Upload file, run extracted content, inspect draft and segment output.</p>
+      <p><strong>Step B:</strong> Approve the extraction draft after human review.</p>
+      <p><strong>Step C:</strong> Run embedding from the approved draft instead of embedding raw file text directly.</p>
+    </div>
+  </section>
+
+  <div class="function-layout">
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Step A</p>
+          <h3>AI Extracted Content</h3>
+        </div>
+      </div>
+      <form id="extracted-form" class="stack-form">
+        <div class="grid grid--3">
+          <label>User ID
+            <input name="userId" value="prototype-user">
+          </label>
+          <label>Subject
+            <select name="subject">
+              <option value="C">C</option>
+              <option value="JAVA_OOP">JAVA_OOP</option>
+              <option value="DSA_JAVA">DSA_JAVA</option>
+            </select>
+          </label>
+          <label>Language
+            <select name="language">
+              <option value="vi">vi</option>
+              <option value="en">en</option>
+            </select>
+          </label>
+          <label>Mode
+            <select name="mode">
+              <option value="TextOnly">TextOnly</option>
+              <option value="FullMultimodalPage">FullMultimodalPage</option>
+            </select>
+          </label>
+          <label>Provider
+            <select name="provider" data-provider-select data-model-target="extracted-model"></select>
+          </label>
+          <label>Vision model
+            <select id="extracted-model" name="visionModel"></select>
+          </label>
+          <label>File name
+            <input name="fileName" value="input.txt">
+          </label>
+        </div>
+        <input type="hidden" name="courseId" value="">
+        <input type="hidden" name="ownershipType" value="byos">
+        <input type="hidden" name="sourceStoragePath" value="">
+        <input type="hidden" name="sourceSizeBytes" value="">
+        <label>Upload file
+          <input id="extracted-upload" type="file" accept=".txt,.md,.json,.pdf,.docx,.pptx,.png,.jpg,.jpeg,.webp">
+        </label>
+        <label>Raw content
+          <textarea name="rawContent" rows="14"></textarea>
+        </label>
+        <div class="action-row">
+          <button type="submit">Run Extracted Content</button>
+          <button type="button" class="secondary" data-run-debug="extracted">Run Debug</button>
+          <button type="button" class="secondary" data-copy-parsed="extracted">Copy Parsed</button>
+          <button type="button" class="secondary" data-copy-json="extracted">Copy JSON</button>
+          <button type="button" class="secondary" data-export-json="extracted">Export JSON</button>
+          <button type="button" class="secondary" id="extracted-approve-draft">Approve Draft</button>
+          <button type="button" class="secondary" id="extracted-load-to-embedding">Approve If Needed + Load To Embedding</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel panel--output">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Output</p>
+          <h3>Parsed result</h3>
+        </div>
+      </div>
+      <div id="extracted-result" class="result-card"></div>
+      <details class="details-block">
+        <summary>Raw JSON</summary>
+        <pre id="extracted-json" class="json-view"></pre>
+      </details>
+    </section>
+  </div>
+
+  <div class="function-layout" style="margin-top: 20px;">
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Step C</p>
+          <h3>AI Embedding + Auto Tagging</h3>
+        </div>
+      </div>
+      <form id="embedding-form" class="stack-form">
+        <div class="grid grid--3">
+          <label>User ID
+            <input name="userId" value="prototype-user">
+          </label>
+          <label>Subject
+            <select name="subject">
+              <option value="C">C</option>
+              <option value="JAVA_OOP">JAVA_OOP</option>
+              <option value="DSA_JAVA">DSA_JAVA</option>
+            </select>
+          </label>
+          <label>Language
+            <select name="language">
+              <option value="vi">vi</option>
+              <option value="en">en</option>
+            </select>
+          </label>
+          <label>Mode
+            <select name="mode">
+              <option value="TextOnly">TextOnly</option>
+              <option value="FullMultimodalPage">FullMultimodalPage</option>
+            </select>
+          </label>
+          <label>Embedding provider
+            <select name="embeddingProvider" data-provider-select data-model-target="embedding-model"></select>
+          </label>
+          <label>Embedding model
+            <select id="embedding-model" name="embeddingModel"></select>
+          </label>
+          <label>Tagging provider
+            <select name="taggingProvider" data-provider-select data-model-target="tagging-model"></select>
+          </label>
+          <label>Tagging model
+            <select id="tagging-model" name="taggingModel"></select>
+          </label>
+          <label>File name
+            <input name="fileName" value="input.txt">
+          </label>
+          <label>Extraction draft ID
+            <input name="extractionDraftId" placeholder="draft-...">
+          </label>
+        </div>
+        <label>Upload file
+          <input id="embedding-upload" type="file" accept=".txt,.md,.json,.pdf,.docx,.pptx,.png,.jpg,.jpeg,.webp">
+        </label>
+        <div class="action-row">
+          <button type="button" class="secondary" id="embedding-use-last-draft">Use Last Draft + Auto-Approve</button>
+        </div>
+        <label>Allowed tags (comma separated)
+          <textarea name="allowedTags" rows="3">array, pointer, loop, condition, class, object, inheritance, recursion, sorting, tree, linked-list, stack, queue</textarea>
+        </label>
+        <label>Content
+          <textarea name="content" rows="16"></textarea>
+        </label>
+        <div class="action-row">
+          <button type="submit">Run Embedding + Tagging</button>
+          <button type="button" class="secondary" data-run-debug="embedding">Run Debug</button>
+          <button type="button" class="secondary" data-copy-parsed="embedding">Copy Parsed</button>
+          <button type="button" class="secondary" data-copy-json="embedding">Copy JSON</button>
+          <button type="button" class="secondary" data-export-json="embedding">Export JSON</button>
+          <button type="button" class="secondary" id="embedding-export-chunks">Export Chunks JSON</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel panel--output">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Output</p>
+          <h3>Embedding result</h3>
+        </div>
+      </div>
+      <div id="embedding-result" class="result-card"></div>
+      <details class="details-block">
+        <summary>Raw JSON</summary>
+        <pre id="embedding-json" class="json-view"></pre>
+      </details>
+    </section>
+  </div>
+</section>

@@ -1,0 +1,62 @@
+{
+  "dataset_id": "JAVA_OOP_INTRO_CH01_CHUNKED",
+  "description": "Chunked knowledge data for Java OOP introductory chapter",
+  "domain": "Java_OOP",
+  "language": "vi",
+  "source": {
+    "title": "Java OOP - Chương mở đầu",
+    "chapter": "Chapter 1 - Introduction to Java and OOP"
+  },
+  "chunks": [
+    {
+      "chunk_id": "java_oop_ch01_001",
+      "topic_tags": ["java_basics", "oop_overview", "class_object"],
+      "content_text": "Java là ngôn ngữ lập trình hướng đối tượng phổ biến, chạy trên JVM theo nguyên lý write once run anywhere. Trong OOP, chương trình được tổ chức quanh class và object. Class là bản thiết kế (blueprint), object là thể hiện cụ thể của class trong bộ nhớ."
+    },
+    {
+      "chunk_id": "java_oop_ch01_002",
+      "topic_tags": ["jvm", "jre", "jdk", "compile_run"],
+      "content_text": "Quy trình chạy Java: mã nguồn .java được javac biên dịch thành bytecode .class. JVM thực thi bytecode trên từng hệ điều hành. JDK là bộ công cụ phát triển gồm javac, java và thư viện chuẩn; JRE là môi trường chạy ứng dụng Java."
+    },
+    {
+      "chunk_id": "java_oop_ch01_003",
+      "topic_tags": ["encapsulation", "access_modifier", "getter_setter"],
+      "content_text": "Tính đóng gói (encapsulation) giúp bảo vệ dữ liệu bằng cách khai báo thuộc tính private và cung cấp phương thức public để truy cập có kiểm soát. Access modifier chính gồm private, default, protected, public."
+    },
+    {
+      "chunk_id": "java_oop_ch01_004",
+      "topic_tags": ["inheritance", "super", "reuse"],
+      "content_text": "Kế thừa (inheritance) cho phép lớp con mở rộng lớp cha bằng từ khóa extends. Lớp con kế thừa thuộc tính và phương thức của lớp cha, hỗ trợ tái sử dụng mã nguồn và tổ chức mô hình đối tượng theo quan hệ is-a."
+    },
+    {
+      "chunk_id": "java_oop_ch01_005",
+      "topic_tags": ["polymorphism", "override", "dynamic_dispatch"],
+      "content_text": "Đa hình (polymorphism) cho phép cùng một lời gọi phương thức có thể thực thi hành vi khác nhau tùy đối tượng thực tế. Trong Java, đa hình thường thể hiện qua method overriding và cơ chế dynamic dispatch khi gọi method qua reference lớp cha."
+    },
+    {
+      "chunk_id": "java_oop_ch01_006",
+      "topic_tags": ["abstraction", "interface", "abstract_class"],
+      "content_text": "Trừu tượng (abstraction) tập trung vào hành vi cốt lõi, ẩn chi tiết cài đặt. Java hỗ trợ abstraction qua abstract class và interface. Interface mô tả hợp đồng hành vi; lớp triển khai interface phải cài đặt các phương thức bắt buộc."
+    },
+    {
+      "chunk_id": "java_oop_ch01_007",
+      "topic_tags": ["constructor", "this", "object_lifecycle"],
+      "content_text": "Constructor là phương thức đặc biệt được gọi khi tạo object bằng new. Constructor giúp khởi tạo trạng thái ban đầu. Từ khóa this dùng để tham chiếu object hiện tại, phân biệt biến instance với biến tham số."
+    },
+    {
+      "chunk_id": "java_oop_ch01_008",
+      "topic_tags": ["string", "array", "collection_intro"],
+      "content_text": "Trong giai đoạn nhập môn, sinh viên thường thao tác với String và mảng để làm quen dữ liệu. Array có kích thước cố định, truy cập O(1) theo index. Khi cần cấu trúc linh hoạt hơn có thể dùng các collection như ArrayList."
+    },
+    {
+      "chunk_id": "java_oop_ch01_009",
+      "topic_tags": ["exception_intro", "try_catch", "robustness"],
+      "content_text": "Exception là cơ chế xử lý lỗi runtime. Cấu trúc try-catch giúp chương trình không dừng đột ngột và cho phép xử lý lỗi có kiểm soát. Việc bắt đúng loại exception và thông báo rõ ràng giúp tăng độ ổn định ứng dụng."
+    },
+    {
+      "chunk_id": "java_oop_ch01_010",
+      "topic_tags": ["oop_principles_summary", "real_world_modeling"],
+      "content_text": "Bốn nguyên lý OOP gồm encapsulation, inheritance, polymorphism và abstraction. Áp dụng đúng các nguyên lý này giúp mô hình hóa bài toán thực tế tốt hơn, tăng khả năng bảo trì, mở rộng và tái sử dụng mã nguồn."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "dataset_id": "CODE_MENTOR_CORE",
+  "dataset_name": "Code Mentor Core Regression Set",
+  "function_name": "CodeMentor",
+  "version": "v1",
+  "language": "mixed",
+  "description": "Core mentor regression cases covering representative student mistakes in C and Java.",
+  "evaluation_cases": [
+    {
+      "case_id": "CM_CORE_01",
+      "scenario_group": "syntax_error",
+      "language": "java",
+      "expected_verdict": "needs_fix",
+      "expected_issue_categories": ["syntax"],
+      "notes": "Missing semicolon or malformed declaration."
+    },
+    {
+      "case_id": "CM_CORE_02",
+      "scenario_group": "logic_error",
+      "language": "c",
+      "expected_verdict": "needs_fix",
+      "expected_issue_categories": ["logic"],
+      "notes": "Wrong initialization or wrong condition causes incorrect result."
+    },
+    {
+      "case_id": "CM_CORE_03",
+      "scenario_group": "edge_case",
+      "language": "java",
+      "expected_verdict": "needs_fix",
+      "expected_issue_categories": ["edge_case", "runtime_risk"],
+      "notes": "Null array or empty input not handled."
+    },
+    {
+      "case_id": "CM_CORE_04",
+      "scenario_group": "complexity_issue",
+      "language": "java",
+      "expected_verdict": "acceptable_with_minor_notes",
+      "expected_issue_categories": ["complexity"],
+      "notes": "Functionally plausible but unnecessarily inefficient."
+    }
+  ]
+}

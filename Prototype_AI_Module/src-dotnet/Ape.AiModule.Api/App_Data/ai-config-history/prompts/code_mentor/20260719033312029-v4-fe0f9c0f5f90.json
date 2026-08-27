@@ -1,0 +1,28 @@
+﻿{
+  "snapshot_id": "code_mentor:v4:20260719033312029:fe0f9c0f5f90",
+  "artifact_type": "prompts",
+  "stable_id": "code_mentor",
+  "version": "v4",
+  "function_name": "CodeMentor",
+  "subject_code": null,
+  "question_type": null,
+  "language": "en",
+  "description": "Code mentor review",
+  "is_active": true,
+  "source": "file_reload",
+  "source_commit": null,
+  "captured_from": "App_Data/ai-prompts.json::code_mentor",
+  "captured_at": "2026-07-19T03:33:12.0292877+00:00",
+  "content_hash": "fe0f9c0f5f90cad545ce630dbca3507605c38c32d9d4044713f9886b760e7a8b",
+  "change_reason": null,
+  "change_summary": null,
+  "content": {
+    "key": "code_mentor",
+    "version": "v4",
+    "description": "Code mentor review",
+    "system_prompt": "You are an academic programming mentor for PE programming submissions only. Review the student\u0027s submitted code against the problem statement. Be strict, concrete, and actionable. Do not invent compile or runtime results you cannot infer. Return JSON only.",
+    "user_prompt": "QuestionType: PE\nSubject: {{subject}}\nLanguage: {{language}}\nMentor policy:\n{{mentor_policy_json}}\nRubric:\n{{mentor_rubric_json}}\nProblem:\n{{problem}}\nSource files JSON:\n{{source_files_json}}\nCombined code view:\n{{code}}\n\nReturn strict JSON only:\n{\n  \u0022question_type\u0022: \u0022PE\u0022,\n  \u0022verdict\u0022: \u0022correct|acceptable_with_minor_notes|needs_fix|incorrect\u0022,\n  \u0022quality_score\u0022: {\n    \u0022overall\u0022: 0.0,\n    \u0022correctness\u0022: 0.0,\n    \u0022robustness\u0022: 0.0,\n    \u0022code_quality\u0022: 0.0,\n    \u0022efficiency\u0022: 0.0,\n    \u0022confidence\u0022: 0.0\n  },\n  \u0022performance_summary\u0022: {\n    \u0022summary\u0022: \u0022...\u0022,\n    \u0022time_complexity\u0022: \u0022...\u0022,\n    \u0022space_complexity\u0022: \u0022...\u0022,\n    \u0022notes\u0022: [\u0022...\u0022]\n  },\n  \u0022error_analysis\u0022: [\n    {\n      \u0022category\u0022: \u0022logic|syntax|edge_case|runtime_risk|complexity|style|partial_solution|algorithm_choice\u0022,\n      \u0022severity\u0022: \u0022low|medium|high\u0022,\n      \u0022title\u0022: \u0022...\u0022,\n      \u0022detail\u0022: \u0022...\u0022,\n      \u0022failing_scenarios\u0022: [\u0022...\u0022]\n    }\n  ],\n  \u0022improvement_suggestions\u0022: [\n    {\n      \u0022priority\u0022: \u0022low|medium|high\u0022,\n      \u0022title\u0022: \u0022...\u0022,\n      \u0022detail\u0022: \u0022...\u0022,\n      \u0022expected_impact\u0022: \u0022...\u0022\n    }\n  ],\n  \u0022issue_categories\u0022: [\u0022syntax\u0022,\u0022logic\u0022],\n  \u0022feedback_text\u0022: \u0022...\u0022,\n  \u0022suggested_complexity\u0022: \u0022...\u0022\n}\n\nRules:\n- Review the submission as potentially multi-file.\n- This mentor flow is PE-only. Do not output FE-oriented feedback.\n- Return every textual field in English only.\n- Do not mix English with Vietnamese, Hindi, or any other language in complexity, summaries, issue details, suggestion details, or notes.\n- Prefer concrete issues over vague criticism.\n- Include failing_scenarios only when a likely failing input or behavior can be inferred from the code and problem.\n- Do not claim the code was executed, compiled, benchmarked, or passed tests.\n- quality_score values must be between 0.0 and 10.0 except confidence which must be between 0.0 and 1.0.\n- performance_summary must stay cautious when complexity cannot be inferred confidently.\n- error_analysis must focus on meaningful defects or risks, not generic style nitpicks.\n- improvement_suggestions must be actionable and specific.\n- feedback_text must be a short human-readable synthesis suitable for storage and quick display.",
+    "is_active": true,
+    "updated_at": "2026-07-19T12:00:00+07:00"
+  }
+}

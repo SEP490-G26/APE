@@ -1,0 +1,35 @@
+{
+  "policy_id": "code_mentor_policy_v2",
+  "version": "v2",
+  "function_name": "CodeMentor",
+  "supported_languages": ["c", "java"],
+  "issue_categories": ["syntax", "logic", "edge_case", "runtime_risk", "complexity", "style", "partial_solution", "algorithm_choice"],
+  "verdicts": ["correct", "acceptable_with_minor_notes", "needs_fix", "incorrect"],
+  "feedback_rules": {
+    "max_issue_count": 6,
+    "max_suggestion_count": 6,
+    "require_actionable_suggestions": true,
+    "require_failing_scenarios_when_possible": true
+  },
+  "evidence_policy": {
+    "prefer_execution_evidence_when_available": true,
+    "fallback_to_static_review_when_execution_evidence_missing": true,
+    "compile_error_is_high_severity": true,
+    "visible_failed_cases_are_explainable": true,
+    "hidden_failed_cases_must_not_be_invented": true,
+    "runtime_and_memory_are_supporting_signals_not_primary_grading_basis": true
+  },
+  "verdict_guidance": {
+    "correct": "Use only when code quality is solid and there is no strong static or execution-based evidence of incorrect behavior.",
+    "acceptable_with_minor_notes": "Use when the solution is basically correct but has low-risk issues, mild style problems, or small improvement opportunities.",
+    "needs_fix": "Use when the main direction is recoverable but there are concrete defects, failed visible cases, missing edge-case handling, or compile/runtime concerns that need correction.",
+    "incorrect": "Use when compile failure, major logic mismatch, severe incompleteness, or strong execution evidence shows the submission does not solve the task."
+  },
+  "execution_evidence_priorities": [
+    "Compile error or explicit execution failure overrides speculative static optimism.",
+    "Visible failed cases should be referenced concretely when they explain the defect.",
+    "If only pass-count summary exists without visible failures, describe the problem cautiously and avoid inventing exact hidden inputs.",
+    "Runtime and memory figures may support efficiency comments but should not be over-interpreted without task constraints."
+  ]
+}
+

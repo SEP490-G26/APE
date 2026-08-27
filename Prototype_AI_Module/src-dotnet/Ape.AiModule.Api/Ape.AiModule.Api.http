@@ -1,0 +1,6 @@
+@Ape.AiModule.Api_HostAddress = http://localhost:5138
+
+GET {{Ape.AiModule.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

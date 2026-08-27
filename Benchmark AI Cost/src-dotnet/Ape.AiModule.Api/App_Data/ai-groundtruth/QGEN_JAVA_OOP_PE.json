@@ -1,0 +1,28 @@
+{
+  "dataset_id": "QGEN_JAVA_OOP_PE",
+  "version": "v1",
+  "language": "en",
+  "function_name": "QuestionGenerationReview",
+  "subject_code": "JAVA_OOP",
+  "question_type": "PE",
+  "institution_context": {
+    "target_students": "FPT University Java OOP students",
+    "course_hint": "PRO-style practical object behavior exercises"
+  },
+  "evaluation_cases": [
+    {
+      "case_id": "java_pe_easy_class_design",
+      "difficulty": "Easy",
+      "expected_topic_tags": ["class", "method"],
+      "expected_question_shape": "single-class implementation",
+      "acceptance_focus": ["valid Java skeleton", "clear statement", "basic visible tests"]
+    },
+    {
+      "case_id": "java_pe_medium_object_state",
+      "difficulty": "Medium",
+      "expected_topic_tags": ["encapsulation", "constructor", "method"],
+      "expected_question_shape": "stateful object exercise",
+      "acceptance_focus": ["state consistency", "behavior tests", "difficulty alignment"]
+    }
+  ]
+}

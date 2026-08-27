@@ -1,0 +1,123 @@
+{
+  "Summary": {
+    "RunId": "gatekeeper-20260716033003761-2e1917739d59401895989d42c541058",
+    "FunctionName": "gatekeeper",
+    "RouteKey": "gatekeeper",
+    "RecordedAt": "2026-07-16T03:30:03.76125+00:00",
+    "RequestType": "GatekeeperRequest",
+    "ResponseType": "GatekeeperResult",
+    "Status": null,
+    "ModelSummary": "Model=gpt-4o",
+    "Totals": {
+      "InputTokens": 25,
+      "OutputTokens": 40,
+      "InputCostUsd": 0.000004,
+      "OutputCostUsd": 0.000024,
+      "TotalCostUsd": 0.000028,
+      "LatencyMs": 120
+    },
+    "FileName": "gatekeeper-20260716033003761-2e1917739d59401895989d42c541058.json"
+  },
+  "Request": {
+    "UserId": "user-demo",
+    "FileName": "intro-c-arrays.txt",
+    "Subject": "C",
+    "Language": "en",
+    "RawContent": "Arrays in C store multiple values of the same type. Index starts at zero and loops traverse arrays.",
+    "Model": "gpt-4o"
+  },
+  "Response": {
+    "Verdict": {
+      "IsSupported": true,
+      "Verdict": "supported",
+      "PrimaryDomain": "C",
+      "MatchedSubjects": [
+        "C"
+      ],
+      "Confidence": 0.98,
+      "Reason": "The document discusses arrays in C, focusing on storing values, indexing, and loops\u2014topics explicitly listed in the \u0027Programming Fundamentals using C\u0027 subject.",
+      "RejectionReasonCode": null,
+      "DetectedTopics": [
+        "arrays",
+        "loops"
+      ],
+      "ModelName": "gpt-4o"
+    },
+    "StageLogs": [
+      {
+        "StageName": "gatekeeper",
+        "Status": "Completed",
+        "Cost": {
+          "InputTokens": 25,
+          "OutputTokens": 40,
+          "InputCostUsd": 0.000004,
+          "OutputCostUsd": 0.000024,
+          "TotalCostUsd": 0.000028,
+          "LatencyMs": 120
+        },
+        "Metadata": {
+          "supported": "True",
+          "verdict": "supported",
+          "domain": "C"
+        }
+      }
+    ],
+    "UsageLogs": [
+      {
+        "UsageLogId": "usage-00b12ee227b24f978850",
+        "TriggeredBy": "user-demo",
+        "AgentId": "AI_Gatekeeper",
+        "PipelineRunId": "gatekeeper-20260716033003-43a284af4a3640",
+        "StageName": "gatekeeper",
+        "AttemptIndex": 1,
+        "Provider": "openai",
+        "ModelName": "gpt-4o",
+        "CreditsDeducted": 0.0280,
+        "InputTokens": 25,
+        "OutputTokens": 40,
+        "TokensUsed": 65,
+        "InputCostUsd": 0.000004,
+        "OutputCostUsd": 0.000024,
+        "CostUsd": 0.000028,
+        "Status": "supported",
+        "CreatedAt": "2026-07-16T03:30:03.7590445+00:00",
+        "PayloadData": {
+          "PipelineType": "gatekeeper",
+          "Subject": "C",
+          "QuestionType": null,
+          "Difficulty": null,
+          "Result": "supported",
+          "Input": {
+            "FileName": "intro-c-arrays.txt",
+            "Language": "en",
+            "RawContent": "Arrays in C store multiple values of the same type. Index starts at zero and loops traverse arrays."
+          },
+          "Output": {
+            "IsSupported": true,
+            "Verdict": "supported",
+            "PrimaryDomain": "C",
+            "MatchedSubjects": [
+              "C"
+            ],
+            "Confidence": 0.98,
+            "Reason": "The document discusses arrays in C, focusing on storing values, indexing, and loops\u2014topics explicitly listed in the \u0027Programming Fundamentals using C\u0027 subject.",
+            "RejectionReasonCode": null,
+            "DetectedTopics": [
+              "arrays",
+              "loops"
+            ],
+            "ModelName": "gpt-4o"
+          }
+        }
+      }
+    ],
+    "Totals": {
+      "InputTokens": 25,
+      "OutputTokens": 40,
+      "InputCostUsd": 0.000004,
+      "OutputCostUsd": 0.000024,
+      "TotalCostUsd": 0.000028,
+      "LatencyMs": 120
+    }
+  }
+}

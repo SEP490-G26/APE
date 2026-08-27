@@ -1,0 +1,1002 @@
+[
+  {
+    "no": 1,
+    "module": "Authentication & Account",
+    "method": "AuthService.GoogleLoginAsync",
+    "sheet": "F01",
+    "desc": "Verify Google OAuth token verification, account retrieval/creation, status validation (Active/Disabled/Banned), token generation, and expired token cleanup.",
+    "pre": "Google ID Token Signature Valid"
+  },
+  {
+    "no": 2,
+    "module": "Authentication & Account",
+    "method": "AuthService.RefreshTokenAsync",
+    "sheet": "F02",
+    "desc": "Verify token rotation mechanism, revoking old refresh tokens, validating token expiration/revocation, and enforcing user account status.",
+    "pre": "User Exists & Status = \"Active\""
+  },
+  {
+    "no": 3,
+    "module": "Authentication & Account",
+    "method": "AuthService.RevokeTokenAsync",
+    "sheet": "F03",
+    "desc": "Verify user logout token invalidation, ensuring target token is marked revoked and multi-token isolation is preserved.",
+    "pre": "User Exists with 1 Active Token"
+  },
+  {
+    "no": 4,
+    "module": "Authentication & Account",
+    "method": "UserService.GetProfileAsync",
+    "sheet": "F04",
+    "desc": "Verify fetching user profile information by MongoDB ID, checking role permissions, status mapping, and handling missing IDs.",
+    "pre": "User Exists in DB (Role = Student)"
+  },
+  {
+    "no": 5,
+    "module": "Authentication & Account",
+    "method": "UserController.GetUsers",
+    "sheet": "F05",
+    "desc": "Verify administrative user listing endpoint, keyword search filtering, role/status filtering, and pagination boundary normalization.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 6,
+    "module": "Authentication & Account",
+    "method": "UserController.GetUserById",
+    "sheet": "F06",
+    "desc": "Verify administrative single user detail endpoint, role response payload structure, 404 for missing IDs, and 400 for malformed parameters.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 7,
+    "module": "Authentication & Account",
+    "method": "UserController.UpdateUserStatus",
+    "sheet": "F07",
+    "desc": "Verify moderating user account status (Active/Disabled), revoking all refresh tokens upon banning, preventing self-ban, and input casing normalization.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 8,
+    "module": "AI Wallet & Payment",
+    "method": "WalletTopupService.GetConstraints",
+    "sheet": "F08",
+    "desc": "Verify retrieval of top-up constraint parameters (MinAmount, MaxAmount, StepAmount, Currency, supported payment providers) and fallback resilience.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 9,
+    "module": "AI Wallet & Payment",
+    "method": "WalletTopupService.GetPackagesAsync",
+    "sheet": "F09",
+    "desc": "Verify active top-up package listing, ascending sort order by amount, bonus credit calculation, inactive tier filtering, and empty catalog handling.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 10,
+    "module": "AI Wallet & Payment",
+    "method": "WalletTopupService.CreateTopupAsync",
+    "sheet": "F10",
+    "desc": "Verify student top-up order creation, custom amount vs package ID handling, constraint boundary validation (Min/Max/Step), and PayOS gateway URL generation.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 11,
+    "module": "AI Wallet & Payment",
+    "method": "WalletTopupService.GetHistoryAsync",
+    "sheet": "F11",
+    "desc": "Verify student top-up payment history retrieval, status filtering (PENDING/PAID/CANCELLED/FAILED), pagination, and descending order by creation date.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 12,
+    "module": "AI Wallet & Payment",
+    "method": "WalletTopupService.GetByIdAsync",
+    "sheet": "F12",
+    "desc": "Verify student top-up order detail query by orderCode / paymentId, enforcing ownership check and handling non-existent orders.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 13,
+    "module": "AI Wallet & Payment",
+    "method": "WalletTopupService.CancelTopupAsync",
+    "sheet": "F13",
+    "desc": "Verify student payment cancellation flow, ensuring only PENDING orders can be cancelled, updating status to CANCELLED, and notifying PayOS.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 14,
+    "module": "AI Wallet & Payment",
+    "method": "WalletTopupService.HandlePayOSWebhookAsync",
+    "sheet": "F14",
+    "desc": "Verify processing of PayOS IPN webhook, webhook signature verification, wallet balance increment upon payment success, and idempotency.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 15,
+    "module": "AI Wallet & Payment",
+    "method": "PaymentWebhookController.ReceiveWebhook",
+    "sheet": "F15",
+    "desc": "Verify webhook endpoint receiving PayOS HTTP POST callbacks, returning 200 OK for valid IPN and 400 Bad Request for malformed payloads.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 16,
+    "module": "AI Wallet & Payment",
+    "method": "StudentWalletController.GetHistory",
+    "sheet": "F16",
+    "desc": "Verify student top-up transaction history HTTP endpoint, claim extraction, query validation, and pagination.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 17,
+    "module": "AI Wallet & Payment",
+    "method": "StudentWalletController.GetDetail",
+    "sheet": "F17",
+    "desc": "Verify student top-up transaction detail HTTP endpoint by orderCode / paymentId, and authorization checks.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 18,
+    "module": "AI Wallet & Payment",
+    "method": "StudentWalletController.Cancel",
+    "sheet": "F18",
+    "desc": "Verify student top-up order cancellation HTTP POST endpoint, validation of cancel reasons, and error mapping.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 19,
+    "module": "AI Wallet & Payment",
+    "method": "StudentWalletController.GetAiTransactions",
+    "sheet": "F19",
+    "desc": "Verify student AI consumption billing transaction history endpoint, feature filter (CodeMentor/QGen), and date range filtering.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 20,
+    "module": "Knowledge Base & Document",
+    "method": "DocumentService.UploadDocumentAsync",
+    "sheet": "F20",
+    "desc": "Verify student/teacher syllabus and document upload, file format validation (PDF, DOCX, TXT), size limit enforcement (max 20MB), and text extraction initiation.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 21,
+    "module": "Knowledge Base & Document",
+    "method": "DocumentService.GetExtractionDraftAsync",
+    "sheet": "F21",
+    "desc": "Verify retrieval of document text extraction draft, checking processing status (PENDING/COMPLETED/FAILED), and ownership validation.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 22,
+    "module": "Knowledge Base & Document",
+    "method": "DocumentService.ListByUserAsync",
+    "sheet": "F22",
+    "desc": "Verify student/teacher uploaded documents listing, courseId filtering, pagination, and descending sort order by creation date.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 23,
+    "module": "Knowledge Base & Document",
+    "method": "DocumentController.Download",
+    "sheet": "F23",
+    "desc": "Verify document binary stream download endpoint, content type determination, file existence, and ownership check.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 24,
+    "module": "Knowledge Base & Document",
+    "method": "DocumentController.GetExtractionDraft",
+    "sheet": "F24",
+    "desc": "Verify HTTP GET endpoint for extracted document draft text, claim validation, 404 for missing docs, and 403 for unauthorized users.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 25,
+    "module": "Knowledge Base & Document",
+    "method": "FileExtractionService.ExtractTextAsync",
+    "sheet": "F25",
+    "desc": "Verify text extraction parsing engine for PDF, DOCX, and TXT files, chunking, character cleanup, and corrupted file handling.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 26,
+    "module": "Course & Syllabus Management",
+    "method": "CourseService.CreateCourseAsync",
+    "sheet": "F26",
+    "desc": "Verify course creation, course code uniqueness validation, required field checking (Code, Name, Subject), and trimming.",
+    "pre": "Course Code Does Not Exist in DB"
+  },
+  {
+    "no": 27,
+    "module": "Course & Syllabus Management",
+    "method": "CourseService.UpdateCourseAsync",
+    "sheet": "F27",
+    "desc": "Verify course update flow, modifying name/description/subject, preventing duplicate code conflict with other courses, and missing course check.",
+    "pre": "Target Course Exists in DB"
+  },
+  {
+    "no": 28,
+    "module": "Course & Syllabus Management",
+    "method": "CourseService.DeleteCourseAsync",
+    "sheet": "F28",
+    "desc": "Verify course deletion, preventing deletion if questions/exams are attached to the course, and handling non-existent course ID.",
+    "pre": "Course Exists with 0 Questions/Exams"
+  },
+  {
+    "no": 29,
+    "module": "Course & Syllabus Management",
+    "method": "CourseService.GetPagedAsync",
+    "sheet": "F29",
+    "desc": "Verify course catalog pagination, search filter by code or name, semester filter, and boundary page index handling.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 30,
+    "module": "Course & Syllabus Management",
+    "method": "CourseController.GetList",
+    "sheet": "F30",
+    "desc": "Verify HTTP GET course listing endpoint, query parameter binding, 200 OK response format, and error handling.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 31,
+    "module": "Course Administration",
+    "method": "CourseController.Create",
+    "sheet": "F31",
+    "desc": "Verify administrative course creation endpoint, DTO forwarding, actor ID extraction, conflict error mapping, and Admin role authorization.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 32,
+    "module": "Course Administration",
+    "method": "CourseController.Update",
+    "sheet": "F32",
+    "desc": "Verify administrative course update endpoint, ID & DTO forwarding, 404 for non-existent courses, 400 for business rule failures, and Admin role enforcement.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 33,
+    "module": "Course Administration",
+    "method": "CourseController.Delete",
+    "sheet": "F33",
+    "desc": "Verify administrative course deletion endpoint, 204 NoContent upon success, 404 for missing courses, null actor handling, and Admin role enforcement.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 34,
+    "module": "Student Course Catalog",
+    "method": "StudentCourseController.List",
+    "sheet": "F34",
+    "desc": "Verify student-facing course catalog listing endpoint, filtering only Active status courses, pagination normalization (0,0 -> 1,20), and safe DTO field mapping.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 35,
+    "module": "Student Document",
+    "method": "StudentDocumentController.List",
+    "sheet": "F35",
+    "desc": "Verify student uploaded documents listing endpoint, claim extraction, 401 for unauthenticated calls, query pagination forwarding, and error handling.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 36,
+    "module": "Student Document",
+    "method": "StudentDocumentController.GetExtractionDraft",
+    "sheet": "F36",
+    "desc": "Verify student extraction draft detail endpoint, claim extraction, ownership security check (401 for non-owners), and 404 for missing drafts.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 37,
+    "module": "MCQ & Practice Session",
+    "method": "PracticeService.StartSessionAsync & GetSessionAsync",
+    "sheet": "F37",
+    "desc": "Verify student practice session lifecycle, resuming active in-progress sessions, creating new MCQ/PE coding sessions, ownership authorization, and draft code restoration.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 38,
+    "module": "MCQ & Practice Session",
+    "method": "PracticeController.Start & GetSession",
+    "sheet": "F38",
+    "desc": "Verify student practice session HTTP endpoints, start session forwarding, session detail retrieval, 404 for foreign sessions, and routing attributes.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 39,
+    "module": "MCQ & Practice Session",
+    "method": "FESubmissionService.CreateAndEvaluateAsync",
+    "sheet": "F39",
+    "desc": "Verify multiple-choice answer evaluation engine, case-insensitive and whitespace trimming, multi-select answer comparison, ownership check, and submitted session rejection.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 40,
+    "module": "MCQ & Practice Session",
+    "method": "SubmissionController.SubmitFE & GetSessionSubmissions",
+    "sheet": "F40",
+    "desc": "Verify student answer submission HTTP POST and session submission review HTTP GET endpoints, claim extraction, 401 for unauthenticated calls, combined FE & PE submission aggregations, and routing.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 41,
+    "module": "Exam Setup",
+    "method": "ExamService.CreatePracticeExamAsync",
+    "sheet": "F41",
+    "desc": "Verify practice exam creation, validating question list presence, exam mode assignment (Practice), and course association.",
+    "pre": "Course Exists in DB (\"CSD201\")"
+  },
+  {
+    "no": 42,
+    "module": "Exam Setup",
+    "method": "ExamService.GetExamDetailAsync",
+    "sheet": "F42",
+    "desc": "Verify exam detail retrieval, question hydration, point total calculations, and 404 handling for non-existent exams.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 43,
+    "module": "Exam Setup",
+    "method": "ExamController.CreatePracticeExam",
+    "sheet": "F43",
+    "desc": "Verify teacher/student exam generation HTTP POST endpoint, payload validation, and role authorization.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 44,
+    "module": "Exam Setup",
+    "method": "ExamController.GetDetail",
+    "sheet": "F44",
+    "desc": "Verify HTTP GET exam detail endpoint, response mapping, 404 for non-existent exams, and 401 for unauthorized calls.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 45,
+    "module": "Coding Practice & Submissions",
+    "method": "PESubmissionService.SubmitCodingAsync",
+    "sheet": "F45",
+    "desc": "Verify student PE coding solution submission, sandbox compilation & test execution, scoring calculation, hidden test evaluation, and attempt incrementation.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 46,
+    "module": "Code Execution",
+    "method": "PECodeRunService.ExecuteDryRunAsync",
+    "sheet": "F46",
+    "desc": "Verify student dry run execution with custom test cases or sample test cases without persisting permanent submission records or deducting quota.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 47,
+    "module": "Coding Practice & Submissions",
+    "method": "SubmissionController.SubmitPE",
+    "sheet": "F47",
+    "desc": "Verify student PE submission HTTP POST endpoint, claim extraction, 401 for unauthenticated calls, payload validation, and service delegating.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 48,
+    "module": "Code Execution",
+    "method": "SubmissionController.RunCode",
+    "sheet": "F48",
+    "desc": "Verify student dry run execution HTTP POST endpoint, validation of code snippets, execution result return, and error mapping.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 49,
+    "module": "Code Execution & Diagnostics",
+    "method": "ExecutionFeedbackDiagnosticParser.Parse",
+    "sheet": "F49",
+    "desc": "Verify diagnostic parsing of Java/C++ compiler and runtime errors, extracting error line numbers, error types (Syntax, NPE, OutOfBounds), and cleaning raw compiler logs.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 50,
+    "module": "AI Code Mentor",
+    "method": "CodeMentorService.GetHintAsync",
+    "sheet": "F50",
+    "desc": "Verify AI Code Mentor hint generation, Socratic hint level progression (Level 1: General, Level 2: Specific, Level 3: Code direction), balance deduction check, and rate limiting.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 51,
+    "module": "AI Code Mentor",
+    "method": "SubmissionController.GetMentorHint",
+    "sheet": "F51",
+    "desc": "Verify student AI Code Mentor HTTP POST endpoint, claim extraction, 401 for unauthenticated calls, 402 for payment/balance failure, and hint response delivery.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 52,
+    "module": "Gamification & Analytics",
+    "method": "GamificationService.RecordPracticeActivityAsync",
+    "sheet": "F52",
+    "desc": "Verify student daily practice streak tracking, consecutive day incrementation, streak reset on skipped days, same-day idempotency, and EXP point rewards.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 53,
+    "module": "Gamification & Analytics",
+    "method": "GamificationService.GetStudentStatsAsync",
+    "sheet": "F53",
+    "desc": "Verify student analytics overview query, total submissions count, accuracy rate, current streak, badge achievements, and non-existent student fallback.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 54,
+    "module": "Gamification & Analytics",
+    "method": "StudentAnalyticsGamificationController.GetStats",
+    "sheet": "F54",
+    "desc": "Verify student analytics & stats HTTP GET endpoint, claim extraction, 401 for unauthenticated calls, and DTO payload delivery.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 55,
+    "module": "Gamification & Analytics",
+    "method": "StudentAnalyticsGamificationController.GetLeaderboard",
+    "sheet": "F55",
+    "desc": "Verify student leaderboard ranking HTTP GET endpoint, pagination parameters, sorting by points/streak descending, and 401 handling.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 56,
+    "module": "Question Bank Management",
+    "method": "QuestionService.ListQuestionsAsync",
+    "sheet": "F56",
+    "desc": "Verify teacher/admin question bank query, filtering by CourseId, Type (MCQ/Coding), Difficulty, Tags, and Pagination.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 57,
+    "module": "Question Bank Management",
+    "method": "QuestionController.ListQuestions",
+    "sheet": "F57",
+    "desc": "Verify teacher/admin question bank listing HTTP GET endpoint, query param binding, role authorization, and response formatting.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 58,
+    "module": "Question Bank Management",
+    "method": "QuestionController.CreateQuestion",
+    "sheet": "F58",
+    "desc": "Verify teacher question creation HTTP POST endpoint, payload validation (title, options, correct answer, test cases), and Teacher/Admin authorization.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 59,
+    "module": "AI Question Generation",
+    "method": "QuestionGenerationReviewService.GenerateQuestionsAsync",
+    "sheet": "F59",
+    "desc": "Verify AI syllabus-to-question generator, Bloom taxonomy distribution, difficulty balance, draft creation, and teacher review workflow states.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 60,
+    "module": "AI Question Generation",
+    "method": "AIQuestionGenerationController.GenerateDraft",
+    "sheet": "F60",
+    "desc": "Verify teacher AI question generation initiation HTTP POST endpoint, document ID validation, generation prompt forwarding, and Teacher authorization.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 61,
+    "module": "AI RAG Retrieval",
+    "method": "AIRetrievalController.SearchDocuments",
+    "sheet": "F61",
+    "desc": "Verify AI RAG semantic search endpoint, query forwarding, topK result limits, threshold filtering, and Teacher/Admin authorization.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 62,
+    "module": "AI RAG Retrieval",
+    "method": "AIRetrievalController.GetSystemDocuments",
+    "sheet": "F62",
+    "desc": "Verify retrieval of curated system documents and global knowledge base chunks used for default RAG context.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 63,
+    "module": "AI RAG Retrieval",
+    "method": "RetrievalPlannerService.SearchAsync",
+    "sheet": "F63",
+    "desc": "Verify semantic embedding search, cosine similarity ranking, threshold filtering (>= 0.7), and chunk assembling.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 64,
+    "module": "AI RAG Retrieval",
+    "method": "RetrievalPlannerService.GetSystemDocumentsAsync",
+    "sheet": "F64",
+    "desc": "Verify system documents query by courseId, active status filtering, and fallback to global documents if course has none.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 65,
+    "module": "AI RAG Retrieval",
+    "method": "RetrievalPlannerService.GetCachedContextAsync",
+    "sheet": "F65",
+    "desc": "Verify in-memory/Redis caching of RAG context vectors, cache hit retrieval, cache miss calculation, and TTL expiration.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 66,
+    "module": "Knowledge Base & Document",
+    "method": "StudentDocumentController.BrowsePublicDocuments",
+    "sheet": "F66",
+    "desc": "Verify student public syllabus document browsing endpoint, course filtering, pagination, and claim validation.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 67,
+    "module": "Knowledge Base & Document",
+    "method": "StudentDocumentController.Search",
+    "sheet": "F67",
+    "desc": "Verify student keyword/title document search endpoint, course scoping, and 401 unauthorized handling.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 68,
+    "module": "AI Billing (VND)",
+    "method": "AIVndBillingService.GetRatesAsync",
+    "sheet": "F68",
+    "desc": "Verify conversion rates retrieval for AI prompt and completion tokens to VND per model, and fallback default pricing.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 69,
+    "module": "AI Billing (VND)",
+    "method": "AIVndBillingService.EnsureMinimumBalanceAsync",
+    "sheet": "F69",
+    "desc": "Verify student wallet pre-flight check before initiating AI generation or mentor hints, requiring minimum balance threshold (e.g. 500 VND).",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 70,
+    "module": "AI Billing (VND)",
+    "method": "AIVndBillingService.ChargeTokensAsync",
+    "sheet": "F70",
+    "desc": "Verify token-to-VND conversion calculation, wallet balance deduction, transaction logging with feature tagging (QGen/CodeMentor), and atomicity.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 71,
+    "module": "AI Gateway & Routing",
+    "method": "AIFeatureRoutingAndPromptService.ResolveRouteAsync",
+    "sheet": "F71",
+    "desc": "Verify AI model resolution by feature (QGen vs CodeMentor), primary model selection, fallback model fallback when primary is unavailable, and temperature/token configurations.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 72,
+    "module": "AI Gateway & Rate Limiting",
+    "method": "AIGatekeeperService.CheckAccessAndThrottleAsync",
+    "sheet": "F72",
+    "desc": "Verify rate limiting per student (RPM/TPM limits), sliding window enforcement, circuit breaker trip on error rate spikes, and quota replenishment.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 73,
+    "module": "AI Provider Catalog",
+    "method": "AIProviderModelCatalogService.GetActiveModelsAsync",
+    "sheet": "F73",
+    "desc": "Verify multi-provider model catalog query (OpenAI, Anthropic, DeepSeek, Local LLM), health state checking, and enabled model filtering.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 74,
+    "module": "Admin AI Governance",
+    "method": "AdminAIController.GetCatalog",
+    "sheet": "F74",
+    "desc": "Verify administrative AI model catalog management endpoint, listing providers, model versions, and Admin authorization.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 75,
+    "module": "Admin AI Governance",
+    "method": "AdminAIController.UpdateModelConfig",
+    "sheet": "F75",
+    "desc": "Verify administrative model configuration updates (Enable/Disable, MaxTokens, Temperature, ApiKey reference), payload validation, and Admin authorization.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 76,
+    "module": "Admin AI Governance",
+    "method": "AdminAIController.GetPricing",
+    "sheet": "F76",
+    "desc": "Verify administrative token pricing rates endpoint, model pricing table query, and Admin role authorization.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 77,
+    "module": "Admin AI Governance",
+    "method": "AdminAIController.UpdatePricing",
+    "sheet": "F77",
+    "desc": "Verify administrative token price adjustment HTTP PUT endpoint, rates validation (positive values), and Admin role authorization.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 78,
+    "module": "Admin AI Governance",
+    "method": "AdminAIController.GetUsageStats",
+    "sheet": "F78",
+    "desc": "Verify administrative AI consumption statistics endpoint, date range filtering, breakdown by feature/model/student, and total VND cost calculations.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 79,
+    "module": "Admin AI Governance",
+    "method": "AdminAIController.GetRoutingRules",
+    "sheet": "F79",
+    "desc": "Verify administrative AI routing rules query endpoint, mapping feature keys to primary & fallback models.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 80,
+    "module": "Admin AI Governance",
+    "method": "AdminAIController.UpdateRoutingRules",
+    "sheet": "F80",
+    "desc": "Verify administrative AI routing rules modification HTTP PUT endpoint, primary/fallback model validation, and Admin authorization.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 81,
+    "module": "Sandbox Code Execution",
+    "method": "Judge0ClientAdapter.SubmitAsync",
+    "sheet": "F81",
+    "desc": "Verify HTTP POST code execution submission to Judge0 CE/Extra CE sandbox API, base64 encoding/decoding, token extraction, and network retry.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 82,
+    "module": "Sandbox Code Execution",
+    "method": "Judge0ClientAdapter.GetSubmissionResultAsync",
+    "sheet": "F82",
+    "desc": "Verify polling of Judge0 submission status (1: In Queue, 2: Processing, 3: Accepted, 4: Wrong Answer, 5: TLE, 6: Compilation Error), and stdout/stderr decoding.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 83,
+    "module": "Sandbox Code Execution",
+    "method": "Judge0ClientAdapter.MapLanguageId",
+    "sheet": "F83",
+    "desc": "Verify language name/alias mapping to standard Judge0 Language IDs (Java, C, C++, C#, Python), casing tolerance, and unsupported language rejection.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 84,
+    "module": "Sandbox Code Execution",
+    "method": "Judge0Options.Validate",
+    "sheet": "F84",
+    "desc": "Verify Judge0 options validation (BaseUrl, ApiKey, CpuTimeLimitSec, MemoryLimitKb, MaxConcurrentGraders), and boundary enforcement.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 85,
+    "module": "Submission Reliability",
+    "method": "SubmissionGradingReliability.ExecuteWithRetryAsync",
+    "sheet": "F85",
+    "desc": "Verify resilient retry policy on transient network failures, exponential backoff with jitter, non-retryable error handling, and max retry ceiling.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 86,
+    "module": "Submission Reliability",
+    "method": "SubmissionGradingReliability.RecoverZombieSubmissionsAsync",
+    "sheet": "F86",
+    "desc": "Verify background worker detection and recovery of stuck/orphaned grading jobs whose heartbeat lease has expired (> 5 minutes).",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 87,
+    "module": "Submission Reliability",
+    "method": "SubmissionGradingReliability.HandleTimeoutAsync",
+    "sheet": "F87",
+    "desc": "Verify graceful timeout termination for hung grading processes, updating submission status to TIMED_OUT, and releasing execution locks.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 88,
+    "module": "Aggregate Scoring",
+    "method": "PESubmissionAggregate.CalculateTotalScore",
+    "sheet": "F88",
+    "desc": "Verify calculation of total weighted submission score across all test cases (visible and hidden), point rounding, and zero-point handling.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 89,
+    "module": "Aggregate Scoring",
+    "method": "PESubmissionAggregate.MaskHiddenTestCaseResults",
+    "sheet": "F89",
+    "desc": "Verify student response sanitization, masking expected/actual outputs for hidden test cases while preserving pass/fail boolean status.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 90,
+    "module": "Aggregate Scoring",
+    "method": "PESubmissionAggregate.EvaluatePassedStatus",
+    "sheet": "F90",
+    "desc": "Verify final submission status determination (Accepted, WrongAnswer, CompilationError, RuntimeError, TimeLimitExceeded).",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 91,
+    "module": "Grading Worker Lease",
+    "method": "SubmissionGradingLeaseFlow.AcquireLeaseAsync",
+    "sheet": "F91",
+    "desc": "Verify distributed grading worker lease acquisition, preventing dual worker collisions on the same submission, TTL timestamp setting, and worker ID tagging.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 92,
+    "module": "Grading Worker Lease",
+    "method": "SubmissionGradingLeaseFlow.RenewLeaseHeartbeatAsync",
+    "sheet": "F92",
+    "desc": "Verify heartbeat renewal by the owning worker, extending lease expiration timestamp while execution is actively running.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 93,
+    "module": "Grading Worker Lease",
+    "method": "SubmissionGradingLeaseFlow.ReleaseLeaseAsync",
+    "sheet": "F93",
+    "desc": "Verify lease release upon grading completion or error, clearing worker lock and final status transition.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 94,
+    "module": "CAS Concurrency",
+    "method": "PESubmissionRepository.CompareAndSwapStatusAsync",
+    "sheet": "F94",
+    "desc": "Verify atomic Compare-And-Swap state transitions in MongoDB to prevent double-grading race conditions under high concurrency.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 95,
+    "module": "CAS Concurrency",
+    "method": "PESubmissionRepository.AllocateAttemptIndexAsync",
+    "sheet": "F95",
+    "desc": "Verify atomic incrementation and unique attempt index allocation per student-question pair, preventing duplicate index numbers.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 96,
+    "module": "Security & Authentication",
+    "method": "GoogleAuthService.ValidateIdTokenAsync",
+    "sheet": "F96",
+    "desc": "Verify Google OpenID Connect ID token signature verification, audience validation, issuer check, email verification, and clock skew allowance.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 97,
+    "module": "Token Generation",
+    "method": "JwtTokenGenerator.GenerateAccessToken",
+    "sheet": "F97",
+    "desc": "Verify JWT access token cryptographic generation (HMAC-SHA256), claim embedding (Sub, Email, Role, Name), expiration time calculation, and secret key validation.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 98,
+    "module": "Token Generation",
+    "method": "JwtTokenGenerator.GenerateRefreshToken",
+    "sheet": "F98",
+    "desc": "Verify cryptographically secure pseudo-random refresh token generation (RNGCryptoServiceProvider), 64-byte entropy, uniqueness, and expiration date calculation.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 99,
+    "module": "Security & Audit Logging",
+    "method": "SecurityLogger.LogAuthenticationEvent",
+    "sheet": "F99",
+    "desc": "Verify structured security event logging for auth events (Login, Logout, TokenRefresh, Ban), sanitizing secrets/tokens, and IP recording.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 100,
+    "module": "Database Bootstrapping",
+    "method": "DevDatabaseBootstrap.SeedInitialDataAsync",
+    "sheet": "F100",
+    "desc": "Verify initial database seed execution (Admin users, default courses, packages, indexes, AI models), idempotency on duplicate runs, and index creation.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 101,
+    "module": "Authentication & Account",
+    "method": "AuthController.GoogleLogin",
+    "sheet": "F101",
+    "desc": "Verify Google Login HTTP POST endpoint, payload validation, cookie injection for refresh token, JWT token response, and error status mapping.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 102,
+    "module": "Authentication & Account",
+    "method": "AuthController.RefreshToken",
+    "sheet": "F102",
+    "desc": "Verify token refresh HTTP POST endpoint, cookie extraction, refresh token rotation, and 401 handling for revoked/expired tokens.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 103,
+    "module": "Authentication & Account",
+    "method": "AuthController.Logout",
+    "sheet": "F103",
+    "desc": "Verify user logout HTTP POST endpoint, cookie clearance, token revocation in database, and 200 OK response.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 104,
+    "module": "Authentication & Account",
+    "method": "AuthController.Me",
+    "sheet": "F104",
+    "desc": "Verify current authenticated user profile retrieval (`GET /api/auth/me`), extracting claims, querying user data, and returning profile DTO.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 105,
+    "module": "Authentication & Account",
+    "method": "AuthService.LogoutAsync",
+    "sheet": "F105",
+    "desc": "Verify business logic for invalidating user refresh tokens, revoking specific token vs all active tokens for user, and updating revocation timestamps.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 106,
+    "module": "Authentication & Account",
+    "method": "AuthService.ValidateOrCreateGoogleUserAsync",
+    "sheet": "F106",
+    "desc": "Verify Google payload verification, matching existing user by GoogleId/Email, automatic student account provisioning, and role assignment.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 107,
+    "module": "Authentication & Account",
+    "method": "AuthService.RotateRefreshTokenAsync",
+    "sheet": "F107",
+    "desc": "Verify cryptographic token rotation, invalidating incoming token, generating replacement token, detecting token reuse, and revoking all family tokens on breach.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 108,
+    "module": "Authentication & Account",
+    "method": "UserController.GetProfile",
+    "sheet": "F108",
+    "desc": "Verify user profile query HTTP GET endpoint, claim extraction, 401 for unauthorized calls, and payload mapping.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 109,
+    "module": "Authentication & Account",
+    "method": "UserService.GetUserByIdAsync",
+    "sheet": "F109",
+    "desc": "Verify user entity query by MongoDB ObjectId string, status evaluation, and null handling for non-existent IDs.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 110,
+    "module": "Authentication & Account",
+    "method": "UserService.GetUserByEmailAsync",
+    "sheet": "F110",
+    "desc": "Verify user entity query by email, case-insensitive normalization (lowercase), trimming, and non-existent email handling.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 111,
+    "module": "AI Wallet & Payment",
+    "method": "StudentWalletController.GetConstraints",
+    "sheet": "F111",
+    "desc": "Verify student topup constraints HTTP GET endpoint, returning min/max/step amounts, currency, and payment channels.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 112,
+    "module": "AI Wallet & Payment",
+    "method": "StudentWalletController.CreateTopup",
+    "sheet": "F112",
+    "desc": "Verify student topup order creation HTTP POST endpoint, payload validation, claim extraction, 401 for unauthorized, and PayOS checkout URL return.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 113,
+    "module": "AI Wallet & Payment",
+    "method": "WalletTopupService.ValidateTopupAmountAsync",
+    "sheet": "F113",
+    "desc": "Verify business rule validation for topup amounts: MinAmount (10k), MaxAmount (10M), StepAmount (10k multiple), and package ID resolution.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 114,
+    "module": "AI Wallet & Payment",
+    "method": "WalletTopupService.ProcessSuccessfulPaymentAsync",
+    "sheet": "F114",
+    "desc": "Verify atomic wallet balance increment upon payment webhook confirmation, order state transition from PENDING to PAID, idempotency on duplicate IPN, and audit logging.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 115,
+    "module": "AI Wallet & Payment",
+    "method": "WalletTopupService.CancelPendingOrderAsync",
+    "sheet": "F115",
+    "desc": "Verify student cancellation of pending topup orders, checking ownership, notifying PayOS cancellation endpoint, and updating order status.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 116,
+    "module": "AI Wallet & Payment",
+    "method": "WalletTopupService.GetByOrderCodeAsync",
+    "sheet": "F116",
+    "desc": "Verify topup order query by numeric orderCode / paymentId, enforcing student ownership, and handling missing orders.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 117,
+    "module": "AI Wallet & Payment",
+    "method": "WalletTopupService.GetPagedTransactionsAsync",
+    "sheet": "F117",
+    "desc": "Verify student topup transaction history query, status filtering (PENDING/PAID/CANCELLED), pagination, and descending date sorting.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 118,
+    "module": "AI Wallet & Payment",
+    "method": "PaymentWebhookController.ValidateSignature",
+    "sheet": "F118",
+    "desc": "Verify PayOS HMAC-SHA256 signature verification on incoming webhook payloads, preventing tampered payment notifications.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 119,
+    "module": "Code Execution Contract",
+    "method": "CodeExecutionEngine.ValidateContract",
+    "sheet": "F119",
+    "desc": "Verify code execution contracts across C#, Java, C++, verifying input/output constraints, wrapper code generation, and test assertion wrappers.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 120,
+    "module": "AI Code Mentor",
+    "method": "CodeMentorService.EvaluatePromptQualityAsync",
+    "sheet": "F120",
+    "desc": "Verify student question clarity evaluation, detecting off-topic or direct solution queries, and enforcing pedagogical Socratic guidance.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 121,
+    "module": "AI Question Generation",
+    "method": "AIQuestionGenerationController.ReviewDraft",
+    "sheet": "F121",
+    "desc": "Verify teacher review HTTP PUT endpoint for AI generated draft questions, modifying question text, options, and Bloom levels.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 122,
+    "module": "AI Question Generation",
+    "method": "AIQuestionGenerationController.ApproveDraft",
+    "sheet": "F122",
+    "desc": "Verify teacher approval HTTP POST endpoint, publishing AI draft into permanent Question Bank, and status transition to APPROVED.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 123,
+    "module": "AI Question Generation",
+    "method": "QuestionGenerationReviewService.ValidateBloomDistribution",
+    "sheet": "F123",
+    "desc": "Verify Bloom taxonomy cognitive level distribution validation across generated questions (Remember, Understand, Apply, Analyze, Evaluate, Create).",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 124,
+    "module": "Coding Practice & Submissions",
+    "method": "SubmissionController.GetCodingDetail",
+    "sheet": "F124",
+    "desc": "Verify student PE coding submission detail query endpoint, claim extraction, 401 for unauthenticated calls, ownership verification, and hidden test result masking.",
+    "pre": "Valid system state & active credentials"
+  },
+  {
+    "no": 125,
+    "module": "MCQ & Practice Session",
+    "method": "SubmissionController.GetMcqDetail",
+    "sheet": "F125",
+    "desc": "Verify student MCQ answer submission detail query endpoint, evaluating selected options, correct answer comparison, and ownership security.",
+    "pre": "Valid system state & active credentials"
+  }
+]

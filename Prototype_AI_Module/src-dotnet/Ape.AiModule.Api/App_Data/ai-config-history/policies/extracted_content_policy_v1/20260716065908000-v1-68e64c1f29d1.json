@@ -1,0 +1,43 @@
+﻿{
+    "snapshot_id":  "extracted_content_policy_v1:v1:20260716065908000:68e64c1f29d1",
+    "artifact_type":  "policies",
+    "stable_id":  "extracted_content_policy_v1",
+    "version":  "v1",
+    "function_name":  "ExtractedContent",
+    "subject_code":  "",
+    "question_type":  "",
+    "language":  "",
+    "description":  "extracted_content_policy_v1",
+    "is_active":  true,
+    "source":  "git_backfill",
+    "source_commit":  "511aa50726eca82952abff8f8b29642d20a4d019",
+    "captured_from":  "src-dotnet/Ape.AiModule.Api/App_Data/extracted-content-policy.json",
+    "captured_at":  "2026-07-16T06:59:08.0000000Z",
+    "content_hash":  "68e64c1f29d17594e88353fc690067baa532b98260c6ea5032d10accdaa54864",
+    "change_reason":  "Add AI module prototype, operator UI, and docs",
+    "change_summary":  "Initial snapshot imported from git history.",
+    "content":  {
+                    "policy_id":  "extracted_content_policy_v1",
+                    "version":  "v1",
+                    "function_name":  "ExtractedContent",
+                    "supported_modes":  [
+                                            "TextOnly",
+                                            "FullMultimodalPage"
+                                        ],
+                    "image_markers":  [
+                                          "image",
+                                          "img",
+                                          "figure"
+                                      ],
+                    "normalization_rules":  {
+                                                "collapse_spaces":  true,
+                                                "collapse_blank_lines":  true,
+                                                "prepend_markdown_header":  true
+                                            },
+                    "warning_rules":  {
+                                          "warn_if_empty_content":  true,
+                                          "warn_if_images_present_without_vision_model":  true,
+                                          "warn_if_no_text_after_normalization":  true
+                                      }
+                }
+}

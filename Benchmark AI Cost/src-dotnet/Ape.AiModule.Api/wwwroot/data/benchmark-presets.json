@@ -1,0 +1,161 @@
+{
+  "gatekeeper": [
+    {
+      "id": "gk-c-array-supported",
+      "label": "C - array supported",
+      "fileName": "gk-c-array.txt",
+      "subject": "C",
+      "language": "en",
+      "rawContent": "Arrays in C store values of the same type in contiguous memory. Students use loops, indexing, and pointers to traverse or update array elements."
+    },
+    {
+      "id": "gk-ambiguous-short",
+      "label": "Ambiguous short note",
+      "fileName": "gk-ambiguous.txt",
+      "subject": "JAVA_OOP",
+      "language": "en",
+      "rawContent": "Algorithm notes and class diagrams."
+    }
+  ],
+  "extracted": [
+    {
+      "id": "ex-java-text-image",
+      "label": "Java OOP mixed text + image marker",
+      "fileName": "java-oop-slide.txt",
+      "subject": "JAVA_OOP",
+      "language": "en",
+      "mode": "FullMultimodalPage",
+      "rawContent": "# Java OOP intro\nClass = blueprint for objects.\nObject = runtime instance.\nEncapsulation groups state and behavior.\n[image:sample-slide-image.png]"
+    },
+    {
+      "id": "ex-c-textonly",
+      "label": "C fundamentals text only",
+      "fileName": "c-fundamentals.txt",
+      "subject": "C",
+      "language": "en",
+      "mode": "TextOnly",
+      "rawContent": "# Variables and arrays\nA variable stores one value. An array stores multiple values in contiguous memory locations. A for loop can process each element."
+    }
+  ],
+  "embedding": [
+    {
+      "id": "emb-java-intro",
+      "label": "Java OOP intro chunks",
+      "fileName": "java-oop-ch01.md",
+      "subject": "JAVA_OOP",
+      "language": "en",
+      "mode": "TextOnly",
+      "allowedTags": "class,object,constructor,encapsulation,array,loop,method",
+      "content": "## Objects and classes\nA class defines fields and methods. Each object keeps its own state. Constructors initialize a new object.\n\n## Arrays\nAn array stores values in ordered positions. Index starts at 0 and loops are commonly used to read every element."
+    },
+    {
+      "id": "emb-dsa-arraylist",
+      "label": "DSA Java - array list basics",
+      "fileName": "dsa-arraylist.md",
+      "subject": "DSA_JAVA",
+      "language": "en",
+      "mode": "TextOnly",
+      "allowedTags": "array,list,index,time-complexity,insert,delete",
+      "content": "## Dynamic arrays\nAn array list supports random access by index. Insertions at the end are efficient, while insertions in the middle may require shifting later elements."
+    }
+  ],
+  "generation": [
+    {
+      "id": "gen-java-fe-medium",
+      "label": "JAVA_OOP FE medium",
+      "courseId": "course-java-oop",
+      "documentId": "doc-java-oop-001",
+      "subject": "JAVA_OOP",
+      "difficulty": "Medium",
+      "questionType": "FE",
+      "count": 2,
+      "mode": "ReviewAndReviseOnce",
+      "maxAttempts": 2,
+      "isPublic": "false",
+      "chunks": [
+        {
+          "chunkId": "chunk-java-001",
+          "contentText": "A class defines the structure and behavior of objects. Encapsulation means bundling state and methods together and restricting direct access where appropriate.",
+          "topicTags": ["class", "object", "encapsulation"],
+          "sectionTitle": "Classes and encapsulation",
+          "language": "en"
+        },
+        {
+          "chunkId": "chunk-java-002",
+          "contentText": "An array stores multiple values of the same type. The first element is at index 0 and loops are commonly used to traverse the array.",
+          "topicTags": ["array", "loop", "index"],
+          "sectionTitle": "Arrays",
+          "language": "en"
+        }
+      ]
+    },
+    {
+      "id": "gen-c-pe-easy",
+      "label": "C PE easy",
+      "courseId": "course-c-basic",
+      "documentId": "doc-c-basic-001",
+      "subject": "C",
+      "difficulty": "Easy",
+      "questionType": "PE",
+      "count": 1,
+      "mode": "ReviewAndReviseOnce",
+      "maxAttempts": 2,
+      "isPublic": "false",
+      "chunks": [
+        {
+          "chunkId": "chunk-c-001",
+          "contentText": "A for loop repeats a block of code for a known number of iterations. Arrays in C use zero-based indexing and store values in contiguous memory.",
+          "topicTags": ["for-loop", "array", "index"],
+          "sectionTitle": "Loops and arrays",
+          "language": "en"
+        }
+      ]
+    }
+  ],
+  "mentor": [
+    {
+      "id": "mentor-java-max-array",
+      "label": "Java - max in array bug",
+      "submissionId": "sub-java-001",
+      "subject": "JAVA_OOP",
+      "language": "java",
+      "problem": "Write a Java program that reads n integers into an array and prints the largest value.",
+      "code": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        int[] a = new int[n];\n        int max = 0;\n        for (int i = 0; i < n; i++) {\n            a[i] = sc.nextInt();\n            if (a[i] > max) {\n                max = a[i];\n            }\n        }\n        System.out.println(max);\n    }\n}",
+      "sourceFiles": [
+        {
+          "fileName": "Main.java",
+          "content": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        int[] a = new int[n];\n        int max = 0;\n        for (int i = 0; i < n; i++) {\n            a[i] = sc.nextInt();\n            if (a[i] > max) {\n                max = a[i];\n            }\n        }\n        System.out.println(max);\n    }\n}",
+          "isReadonly": false
+        }
+      ]
+    },
+    {
+      "id": "mentor-c-array-sum",
+      "label": "C - array sum off-by-one",
+      "submissionId": "sub-c-001",
+      "subject": "C",
+      "language": "c",
+      "problem": "Read n integers and print their sum.",
+      "code": "#include <stdio.h>\n\nint main() {\n    int n;\n    scanf(\"%d\", &n);\n    int a[100];\n    int sum = 0;\n    for (int i = 0; i <= n; i++) {\n        scanf(\"%d\", &a[i]);\n        sum += a[i];\n    }\n    printf(\"%d\", sum);\n    return 0;\n}",
+      "sourceFiles": [
+        {
+          "fileName": "main.c",
+          "content": "#include <stdio.h>\n\nint main() {\n    int n;\n    scanf(\"%d\", &n);\n    int a[100];\n    int sum = 0;\n    for (int i = 0; i <= n; i++) {\n        scanf(\"%d\", &a[i]);\n        sum += a[i];\n    }\n    printf(\"%d\", sum);\n    return 0;\n}",
+          "isReadonly": false
+        }
+      ]
+    }
+  ],
+  "ingestion": [
+    {
+      "id": "ing-java-oop-overview",
+      "label": "Ingestion - Java OOP overview",
+      "fileName": "java-oop-overview.txt",
+      "subject": "JAVA_OOP",
+      "language": "en",
+      "mode": "TextOnly",
+      "allowedTags": "class,object,constructor,array,loop,method,encapsulation",
+      "rawContent": "# Java OOP overview\nClass and object are central to object oriented programming. Arrays store sequences of values and loops are used to traverse them."
+    }
+  ]
+}

@@ -1,0 +1,2404 @@
+[{
+  "_id": {
+    "$oid": "6a6f82864929d653e505f40f"
+  },
+  "AgentId": {
+    "$oid": "687b1a010000000000000007"
+  },
+  "SubmissionId": {
+    "$oid": "6a6e5fdc2f37800a04f2cf17"
+  },
+  "Date": {
+    "$date": "2026-08-02T17:46:46.458Z"
+  },
+  "QuestionType": "PE",
+  "Verdict": "correct",
+  "QualityScore": {
+    "Overall": 9.6,
+    "Correctness": 9.9,
+    "Robustness": 9.2,
+    "CodeQuality": 9.3,
+    "Efficiency": 10,
+    "Confidence": 0.98
+  },
+  "PerformanceSummary": {
+    "Summary": "The solution matches the problem requirements: it reads one type name and prints the correct category for all four allowed inputs.",
+    "TimeComplexity": "O(1)",
+    "SpaceComplexity": "O(1)",
+    "Notes": [
+      "Only a fixed number of string comparisons are performed.",
+      "The input buffer is safely bounded with %19s."
+    ]
+  },
+  "ErrorAnalysis": [],
+  "ImprovementSuggestions": [
+    {
+      "Priority": "low",
+      "Title": "Optionally handle unexpected input explicitly",
+      "Detail": "If you want the program to be more defensive, add a final else branch for invalid type names. This is not required here because the problem guarantees one of four valid inputs.",
+      "ExpectedImpact": "Improves robustness outside the stated input constraints."
+    }
+  ],
+  "IssueCategories": [],
+  "FeedbackText": "Correct and efficient solution. It uses safe input reading and correctly classifies all valid type names required by the problem.",
+  "SuggestedComplexity": "O(1) time and O(1) space",
+  "ModelName": "gpt-5.4",
+  "CreatedAt": {
+    "$date": "2026-08-02T17:46:46.458Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-02T17:46:46.458Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a70eabee92268c2e73eb0fc"
+  },
+  "AgentId": {
+    "$oid": "687b1a010000000000000007"
+  },
+  "SubmissionId": {
+    "$oid": "6a70ea9ce92268c2e73eb0f1"
+  },
+  "Date": {
+    "$date": "2026-08-03T19:23:42.325Z"
+  },
+  "QuestionType": "PE",
+  "Verdict": "incorrect",
+  "QualityScore": {
+    "Overall": 2,
+    "Correctness": 1,
+    "Robustness": 2,
+    "CodeQuality": 4,
+    "Efficiency": 5,
+    "Confidence": 0.99
+  },
+  "PerformanceSummary": {
+    "Summary": "The class structure and input/output flow are set up correctly, but the required behavior is not implemented. Because core methods still return placeholders or contain no logic, the program does not satisfy the problem requirements.",
+    "TimeComplexity": "Intended complexity appears to be O(cycles) for each run(...) call, but the current submission is incomplete.",
+    "SpaceComplexity": "O(1) auxiliary space based on the shown design.",
+    "Notes": [
+      "Main method reads inputs in the required order and prints four values on separate lines.",
+      "The abstract base class and subclass declarations are present.",
+      "Core processing methods are missing, so the observable behavior is incorrect."
+    ]
+  },
+  "ErrorAnalysis": [
+    {
+      "Category": "partial_solution",
+      "Severity": "high",
+      "Title": "Multiple required methods are left unimplemented",
+      "Detail": "The methods addTasks, run, StandardProcessor.processOneCycle, and BurstProcessor.processOneCycle contain only comments. These are the core behaviors required by the task, so the submission is incomplete.",
+      "FailingScenarios": [
+        "Any input will fail to produce the required task-processing behavior because no tasks are ever added or processed."
+      ]
+    },
+    {
+      "Category": "logic",
+      "Severity": "high",
+      "Title": "Getter methods always return 0",
+      "Detail": "getRemainingTasks() and getProcessedTasks() both return 0 instead of returning the fields remainingTasks and processedTasks. This makes the printed output incorrect even if processing logic were added later.",
+      "FailingScenarios": [
+        "Input: 5 2 3 1 4 1 0 1. Expected values should reflect current state after processing, but this code will print 0 for all four lines."
+      ]
+    },
+    {
+      "Category": "logic",
+      "Severity": "high",
+      "Title": "StandardProcessor processing rule is not implemented",
+      "Detail": "The problem requires StandardProcessor to process up to capacity tasks per cycle, without exceeding remaining tasks, and to do nothing when capacity is not positive. None of this logic is present.",
+      "FailingScenarios": [
+        "Input where standardInitial=10, standardCapacity=3, standardAdd=0, standardCycles=2 should process 6 tasks total, but the current code does not change state."
+      ]
+    },
+    {
+      "Category": "logic",
+      "Severity": "high",
+      "Title": "BurstProcessor alternating capacity behavior is not implemented",
+      "Detail": "BurstProcessor must alternate between processing up to capacity on odd-numbered processed cycles and up to capacity + 1 on even-numbered processed cycles, using its internal cycle counter. That behavior is completely missing.",
+      "FailingScenarios": [
+        "Input where burstInitial=10, burstCapacity=2, burstAdd=0, burstCycles=3 should process 2, then 3, then 2 tasks across the cycles, but the current code performs none of this."
+      ]
+    },
+    {
+      "Category": "edge_case",
+      "Severity": "medium",
+      "Title": "Required checks for non-positive add/count/capacity are missing",
+      "Detail": "The specification requires addTasks to ignore non-positive counts, run to ignore non-positive cycles, and processors with non-positive capacity to process nothing. Since these methods are not implemented, all required edge-case handling is absent.",
+      "FailingScenarios": [
+        "If count is 0 or negative, addTasks should do nothing.",
+        "If cycles is 0 or negative, run should not call processOneCycle.",
+        "If capacity is 0 or negative, a processor must never process tasks."
+      ]
+    }
+  ],
+  "ImprovementSuggestions": [
+    {
+      "Priority": "high",
+      "Title": "Implement the base class methods using the stored fields",
+      "Detail": "Write addTasks(int count) so it adds to remainingTasks only when count > 0. Write run(int cycles) so it calls processOneCycle() exactly cycles times only when cycles > 0. Return remainingTasks and processedTasks from the getter methods.",
+      "ExpectedImpact": "This completes the shared required behavior and fixes the always-zero output bug."
+    },
+    {
+      "Priority": "high",
+      "Title": "Implement StandardProcessor.processOneCycle correctly",
+      "Detail": "If capacity <= 0, do nothing. Otherwise compute processed = Math.min(capacity, remainingTasks), subtract it from remainingTasks, and add it to processedTasks.",
+      "ExpectedImpact": "This satisfies the standard processor rule and prevents processing more tasks than remain."
+    },
+    {
+      "Priority": "high",
+      "Title": "Implement BurstProcessor.processOneCycle with alternating capacity",
+      "Detail": "Increment or update cycleCount consistently per processed cycle call. For cycle 1, 3, 5, ... use capacity; for cycle 2, 4, 6, ... use capacity + 1. Also guard with capacity <= 0 so no tasks are processed in any cycle in that case. As with StandardProcessor, use Math.min(allowed, remainingTasks).",
+      "ExpectedImpact": "This adds the required alternating burst behavior and handles the specified edge cases."
+    },
+    {
+      "Priority": "medium",
+      "Title": "Be careful about cycle numbering in BurstProcessor",
+      "Detail": "Since cycleCount starts at 0, make sure the first call corresponds to the 1st processed cycle. A common pattern is to increment cycleCount at the start of processOneCycle() and then check whether cycleCount is odd or even.",
+      "ExpectedImpact": "This avoids off-by-one errors in the burst cycle pattern."
+    }
+  ],
+  "IssueCategories": [
+    "partial_solution",
+    "logic",
+    "edge_case"
+  ],
+  "FeedbackText": "The program skeleton is present, but the required processing logic is not implemented. Several core methods are empty, and both getters always return 0, so the output is incorrect for any meaningful input.",
+  "SuggestedComplexity": "A correct solution should use O(cycles) time for each run(...) invocation and O(1) extra space.",
+  "ModelName": "gpt-5.4",
+  "CreatedAt": {
+    "$date": "2026-08-03T19:23:42.325Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-03T19:23:42.325Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a70ec57f4695770e348dbac"
+  },
+  "AgentId": {
+    "$oid": "687b1a010000000000000007"
+  },
+  "SubmissionId": {
+    "$oid": "6a70ec07f4695770e348db66"
+  },
+  "Date": {
+    "$date": "2026-08-03T19:30:31.276Z"
+  },
+  "QuestionType": "PE",
+  "Verdict": "incorrect",
+  "QualityScore": {
+    "Overall": 1.5,
+    "Correctness": 0.5,
+    "Robustness": 1.5,
+    "CodeQuality": 3,
+    "Efficiency": 5,
+    "Confidence": 0.98
+  },
+  "PerformanceSummary": {
+    "Summary": "The class structure and input/output flow are set up correctly, but the required behavior is not implemented, so the program does not solve the task yet.",
+    "TimeComplexity": "If implemented as intended, run(cycles) should be O(cycles), with O(1) work per cycle.",
+    "SpaceComplexity": "O(1) auxiliary space.",
+    "Notes": [
+      "Complexity is inferred from the required design, not from completed logic in the current submission.",
+      "No expensive data structures are used."
+    ]
+  },
+  "ErrorAnalysis": [
+    {
+      "Category": "partial_solution",
+      "Severity": "high",
+      "Title": "Core methods in TaskProcessor are not implemented",
+      "Detail": "addTasks(int count), run(int cycles), getRemainingTasks(), and getProcessedTasks() are all left incomplete. The getters currently always return 0, and addTasks/run do nothing. This prevents the base class from meeting the specification.",
+      "FailingScenarios": [
+        "Input: 5 2 3 1 4 2 0 1 -> getRemainingTasks() and getProcessedTasks() will still print 0 values instead of reflecting added and processed tasks."
+      ]
+    },
+    {
+      "Category": "partial_solution",
+      "Severity": "high",
+      "Title": "StandardProcessor does not process any tasks",
+      "Detail": "processOneCycle() in StandardProcessor is empty. It should process up to capacity tasks, but never more than remainingTasks. It also must do nothing when capacity is not positive.",
+      "FailingScenarios": [
+        "Input: 10 3 0 2 0 1 0 0 -> StandardProcessor should process 6 tasks over 2 cycles, but the current code cannot do that."
+      ]
+    },
+    {
+      "Category": "partial_solution",
+      "Severity": "high",
+      "Title": "BurstProcessor alternating cycle behavior is not implemented",
+      "Detail": "processOneCycle() in BurstProcessor is empty. The required alternating behavior based on processed cycle number (capacity on 1st/3rd/5th..., capacity+1 on 2nd/4th/6th...) is missing, and cycleCount is never used.",
+      "FailingScenarios": [
+        "Input: 0 1 0 0 10 2 0 3 -> BurstProcessor should process 2, then 3, then 2 tasks across 3 cycles, capped by remaining tasks. The current code does not change anything."
+      ]
+    },
+    {
+      "Category": "logic",
+      "Severity": "medium",
+      "Title": "Required edge-case rules are currently unmet",
+      "Detail": "The specification requires addTasks to ignore non-positive additions, run to ignore non-positive cycles, and both processors to process nothing when capacity is non-positive. Since the methods are unimplemented, these rules are not enforced.",
+      "FailingScenarios": [
+        "Input with negative add value should leave remainingTasks unchanged.",
+        "Input with cycles = 0 should not call processOneCycle at all.",
+        "Input with capacity <= 0 should never reduce remainingTasks."
+      ]
+    }
+  ],
+  "ImprovementSuggestions": [
+    {
+      "Priority": "high",
+      "Title": "Implement the TaskProcessor base methods fully",
+      "Detail": "Write addTasks so it adds only when count > 0. Write run so it loops exactly cycles times only when cycles > 0. Return the actual fields in getRemainingTasks() and getProcessedTasks() instead of 0.",
+      "ExpectedImpact": "This will make the abstract base class satisfy the shared requirements and enable correct output."
+    },
+    {
+      "Priority": "high",
+      "Title": "Implement StandardProcessor.processOneCycle() with proper capping",
+      "Detail": "If capacity <= 0, return immediately. Otherwise compute processed = Math.min(capacity, remainingTasks), then subtract it from remainingTasks and add it to processedTasks.",
+      "ExpectedImpact": "This will make standard processing behavior match the problem statement exactly."
+    },
+    {
+      "Priority": "high",
+      "Title": "Implement BurstProcessor.processOneCycle() using cycleCount",
+      "Detail": "Increment or use cycleCount to determine whether the current processed cycle is odd or even. On odd cycles use capacity, on even cycles use capacity + 1. Still cap the actual processed amount by remainingTasks, and do nothing if capacity <= 0.",
+      "ExpectedImpact": "This will satisfy the alternating burst behavior required for the second subclass."
+    },
+    {
+      "Priority": "medium",
+      "Title": "Be careful about the cycle numbering in BurstProcessor",
+      "Detail": "The problem says the internal cycle counter starts at 0, but the 1st processed cycle uses capacity. A simple approach is to increment cycleCount at the start of processOneCycle(), then check whether cycleCount is odd or even.",
+      "ExpectedImpact": "This avoids off-by-one mistakes in the burst logic."
+    },
+    {
+      "Priority": "medium",
+      "Title": "Preserve the rule that a cycle never processes more than remaining tasks",
+      "Detail": "In both subclasses, always compute the actual processed amount with Math.min(plannedAmount, remainingTasks). Do not subtract capacity directly.",
+      "ExpectedImpact": "This prevents negative remainingTasks and keeps the state valid."
+    }
+  ],
+  "IssueCategories": [
+    "partial_solution",
+    "logic",
+    "edge_case"
+  ],
+  "FeedbackText": "The submission has the correct class skeleton, but the required behavior is largely missing. Several core methods are still unimplemented, so the processors never update task counts and the printed results are incorrect.",
+  "SuggestedComplexity": "O(cycles) time for each run call and O(1) extra space.",
+  "ModelName": "gpt-5.4",
+  "CreatedAt": {
+    "$date": "2026-08-03T19:30:31.276Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-03T19:30:31.276Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7222c84a71a57ee63241d6"
+  },
+  "AgentId": {
+    "$oid": "687b1a010000000000000007"
+  },
+  "SubmissionId": {
+    "$oid": "6a70ec8bf4695770e348dbce"
+  },
+  "Date": {
+    "$date": "2026-08-04T17:35:04.592Z"
+  },
+  "QuestionType": "PE",
+  "Verdict": "needs_fix",
+  "QualityScore": {
+    "Overall": 4.6,
+    "Correctness": 3.5,
+    "Robustness": 6,
+    "CodeQuality": 6.5,
+    "Efficiency": 9,
+    "Confidence": 0.97
+  },
+  "PerformanceSummary": {
+    "Summary": "The program reads the input safely and correctly prints \"integral\" for \"char\" and \"int\", but it does not implement the required output for floating-point types.",
+    "TimeComplexity": "O(1)",
+    "SpaceComplexity": "O(1)",
+    "Notes": [
+      "A constant number of string comparisons is used.",
+      "The input buffer size and scanf width limit reduce overflow risk."
+    ]
+  },
+  "ErrorAnalysis": [
+    {
+      "Category": "partial_solution",
+      "Severity": "high",
+      "Title": "Missing handling for float and double",
+      "Detail": "The problem requires printing \"floating-point\" when the input is \"float\" or \"double\". Your code only checks for \"char\" and \"int\", so it leaves the required floating-point cases unhandled.",
+      "FailingScenarios": [
+        "Input: float -> expected: floating-point, but your program prints nothing",
+        "Input: double -> expected: floating-point, but your program prints nothing"
+      ]
+    },
+    {
+      "Category": "logic",
+      "Severity": "medium",
+      "Title": "No output for valid non-integral inputs",
+      "Detail": "For valid inputs that are not matched by the current if condition, the program exits without printing any line. The statement requires exactly one classification output for each valid input word.",
+      "FailingScenarios": [
+        "Input: float",
+        "Input: double"
+      ]
+    }
+  ],
+  "ImprovementSuggestions": [
+    {
+      "Priority": "high",
+      "Title": "Add a branch for floating-point types",
+      "Detail": "After checking for \"char\" and \"int\", add an else-if condition to check whether the input is \"float\" or \"double\" and print \"floating-point\".",
+      "ExpectedImpact": "This will make the program satisfy all required input cases."
+    },
+    {
+      "Priority": "medium",
+      "Title": "Ensure every valid input produces exactly one output line",
+      "Detail": "Structure the conditions as if / else if so the program always prints one category for each allowed input from the problem statement.",
+      "ExpectedImpact": "This aligns the control flow with the problem requirement and avoids silent no-output cases."
+    }
+  ],
+  "IssueCategories": [
+    "partial_solution",
+    "logic"
+  ],
+  "FeedbackText": "Your program correctly classifies \"char\" and \"int\" as integral, but it is incomplete because it does not handle \"float\" and \"double\". Add an else-if branch to print \"floating-point\" for those inputs.",
+  "SuggestedComplexity": "O(1) time, O(1) space",
+  "ModelName": "gpt-5.4",
+  "CreatedAt": {
+    "$date": "2026-08-04T17:35:04.592Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-04T17:35:04.592Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a738a7c6a39c9262fb3b9e0"
+  },
+  "AgentId": {
+    "$oid": "687b1a010000000000000007"
+  },
+  "SubmissionId": {
+    "$oid": "6a738a656a39c9262fb3b9d3"
+  },
+  "Date": {
+    "$date": "2026-08-05T19:09:48.387Z"
+  },
+  "QuestionType": "PE",
+  "Verdict": "incorrect",
+  "QualityScore": {
+    "Overall": 1.4,
+    "Correctness": 0.5,
+    "Robustness": 1,
+    "CodeQuality": 3,
+    "Efficiency": 5,
+    "Confidence": 0.99
+  },
+  "PerformanceSummary": {
+    "Summary": "The class structure and main-method flow are set up correctly, but the core required behavior is not implemented, so the program does not satisfy the problem.",
+    "TimeComplexity": "Cannot be meaningfully assessed for the intended solution because the processing methods are not implemented. Based on the required design, run(cycles) should be O(cycles).",
+    "SpaceComplexity": "O(1) auxiliary space for the intended design.",
+    "Notes": [
+      "The abstract class and subclass declarations are present.",
+      "Main correctly uses TaskProcessor references for both concrete subclasses.",
+      "The missing method bodies prevent the required task-processing logic from existing."
+    ]
+  },
+  "ErrorAnalysis": [
+    {
+      "Category": "partial_solution",
+      "Severity": "high",
+      "Title": "Core methods are left unimplemented",
+      "Detail": "addTasks, run, StandardProcessor.processOneCycle, and BurstProcessor.processOneCycle are empty. The required task updates never happen.",
+      "FailingScenarios": [
+        "Input: 5 2 3 2 4 1 0 1 -> expected processors to change remaining/processed task counts, but the current code performs no processing at all."
+      ]
+    },
+    {
+      "Category": "logic",
+      "Severity": "high",
+      "Title": "Getter methods always return 0",
+      "Detail": "getRemainingTasks() and getProcessedTasks() both return 0 instead of the stored fields. Even if processing logic were added later, the printed output would still be wrong.",
+      "FailingScenarios": [
+        "Input: 5 2 0 0 7 3 0 0 -> expected remaining tasks to be 5 and 7 respectively, but the current getters would print 0 for all four lines."
+      ]
+    },
+    {
+      "Category": "logic",
+      "Severity": "high",
+      "Title": "StandardProcessor does not implement its per-cycle processing rule",
+      "Detail": "The subclass must process up to capacity tasks each cycle, limited by remainingTasks, and must do nothing when capacity is not positive. None of this is implemented.",
+      "FailingScenarios": [
+        "Input: 10 3 0 2 0 1 0 0 -> StandardProcessor should end with remaining 4 and processed 6, but no such logic exists."
+      ]
+    },
+    {
+      "Category": "logic",
+      "Severity": "high",
+      "Title": "BurstProcessor alternating cycle behavior is missing",
+      "Detail": "BurstProcessor must track processed cycle count and alternate between processing up to capacity and up to capacity + 1 on successive cycles. The cycle counter exists but is never used.",
+      "FailingScenarios": [
+        "Input: 0 1 0 0 10 2 0 3 -> BurstProcessor should process 2, then 3, then 2 tasks across the three cycles, but the current method is empty."
+      ]
+    },
+    {
+      "Category": "edge_case",
+      "Severity": "medium",
+      "Title": "Required checks for non-positive add and run inputs are not implemented",
+      "Detail": "The specification says addTasks should only add when count is positive, and run should only execute cycles when cycles is positive. Because the methods are empty, these required conditions are not handled at all.",
+      "FailingScenarios": [
+        "Input: 5 2 -3 4 5 2 1 -2 -> the program should ignore the negative add and ignore the negative run count where applicable, but the behavior is currently undefined because the methods are empty."
+      ]
+    }
+  ],
+  "ImprovementSuggestions": [
+    {
+      "Priority": "high",
+      "Title": "Return the actual stored values in the getters",
+      "Detail": "Change getRemainingTasks() to return remainingTasks and getProcessedTasks() to return processedTasks.",
+      "ExpectedImpact": "This fixes the printed output so it reflects the processor state."
+    },
+    {
+      "Priority": "high",
+      "Title": "Implement addTasks and run in TaskProcessor",
+      "Detail": "In addTasks(int count), add count to remainingTasks only when count > 0. In run(int cycles), call processOneCycle() exactly cycles times only when cycles > 0, typically using a for loop.",
+      "ExpectedImpact": "This provides the shared behavior required by both subclasses."
+    },
+    {
+      "Priority": "high",
+      "Title": "Implement StandardProcessor.processOneCycle correctly",
+      "Detail": "If capacity <= 0, do nothing. Otherwise compute processedThisCycle = Math.min(remainingTasks, capacity), subtract it from remainingTasks, and add it to processedTasks.",
+      "ExpectedImpact": "This satisfies the standard processor's per-cycle processing rule and the 'never process more than remain' constraint."
+    },
+    {
+      "Priority": "high",
+      "Title": "Implement BurstProcessor.processOneCycle with alternating capacity",
+      "Detail": "Increment or use cycleCount to determine whether the current processed cycle is odd or even. On odd-numbered cycles process up to capacity, on even-numbered cycles process up to capacity + 1. Always cap by remainingTasks, and if capacity <= 0 then process nothing in every cycle.",
+      "ExpectedImpact": "This satisfies the burst processor's alternating behavior and edge-case requirement."
+    },
+    {
+      "Priority": "medium",
+      "Title": "Be careful about when cycleCount changes",
+      "Detail": "The problem defines alternating behavior by processed cycle number, starting from the 1st cycle. A simple approach is to increment cycleCount at the start of processOneCycle(), then use cycleCount % 2 to decide the limit.",
+      "ExpectedImpact": "This avoids off-by-one mistakes in BurstProcessor."
+    }
+  ],
+  "IssueCategories": [
+    "partial_solution",
+    "logic",
+    "edge_case"
+  ],
+  "FeedbackText": "The overall class design is started correctly, but the submission is incomplete: the key processing methods are empty, and both getters always return 0. As written, it cannot produce the required task counts for either processor.",
+  "SuggestedComplexity": "Intended solution: O(cycles) time for each run call and O(1) extra space.",
+  "ModelName": "gpt-5.4",
+  "CreatedAt": {
+    "$date": "2026-08-05T19:09:48.387Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-05T19:09:48.387Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a743a511a57a209cb666bcb"
+  },
+  "AgentId": {
+    "$oid": "687b1a010000000000000007"
+  },
+  "SubmissionId": {
+    "$oid": "6a7439a81a57a209cb666a9b"
+  },
+  "Date": {
+    "$date": "2026-08-06T07:40:01.841Z"
+  },
+  "QuestionType": "PE",
+  "Verdict": "acceptable_with_minor_notes",
+  "QualityScore": {
+    "Overall": 9.2,
+    "Correctness": 9.5,
+    "Robustness": 8.4,
+    "CodeQuality": 9.3,
+    "Efficiency": 10,
+    "Confidence": 0.94
+  },
+  "PerformanceSummary": {
+    "Summary": "The inheritance and method overriding are implemented correctly, and the polymorphic call through a Book reference is used as required.",
+    "TimeComplexity": "O(1)",
+    "SpaceComplexity": "O(1)",
+    "Notes": [
+      "The constructor and display operation are constant-time.",
+      "No unnecessary data structures or loops are used."
+    ]
+  },
+  "ErrorAnalysis": [
+    {
+      "Category": "edge_case",
+      "Severity": "low",
+      "Title": "Title input handling is limited to a single token",
+      "Detail": "The program reads the title using Scanner.next(), which stops at whitespace. If the intended title can contain spaces, only the first word will be stored and printed.",
+      "FailingScenarios": [
+        "Input like: The Hobbit 3 -> title becomes \"The\" instead of \"The Hobbit\""
+      ]
+    }
+  ],
+  "ImprovementSuggestions": [
+    {
+      "Priority": "medium",
+      "Title": "Use full-line input if titles may contain spaces",
+      "Detail": "Replace sc.next() with line-based input handling, such as reading the full title with nextLine() and then reading the edition separately, if the problem format allows multi-word titles.",
+      "ExpectedImpact": "Makes the program robust for book titles containing spaces."
+    }
+  ],
+  "IssueCategories": [
+    "edge_case"
+  ],
+  "FeedbackText": "Your inheritance, constructor chaining, overriding, and polymorphic method call are correct. The only minor concern is input handling: using Scanner.next() reads only one word for the title, which can be a problem if titles contain spaces.",
+  "SuggestedComplexity": "O(1) time, O(1) space",
+  "ModelName": "gpt-5.4",
+  "CreatedAt": {
+    "$date": "2026-08-06T07:40:01.841Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-06T07:40:01.841Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a78a3e9b20bb196f0c1e173"
+  },
+  "AgentId": {
+    "$oid": "687b1a010000000000000007"
+  },
+  "SubmissionId": {
+    "$oid": "6a74ee96be5ded8776afe68b"
+  },
+  "Date": {
+    "$date": "2026-08-09T15:59:37.470Z"
+  },
+  "QuestionType": "PE",
+  "Verdict": "acceptable_with_minor_notes",
+  "QualityScore": {
+    "Overall": 9.2,
+    "Correctness": 9.5,
+    "Robustness": 8.4,
+    "CodeQuality": 9.4,
+    "Efficiency": 10,
+    "Confidence": 0.96
+  },
+  "PerformanceSummary": {
+    "Summary": "The inheritance and method overriding are implemented correctly, and the polymorphic call through a Book reference is used as required.",
+    "TimeComplexity": "O(1)",
+    "SpaceComplexity": "O(1)",
+    "Notes": [
+      "The program performs a constant amount of work.",
+      "Complexity is inferred from the visible code only.",
+      "Input handling may be too narrow if titles are allowed to contain spaces."
+    ]
+  },
+  "ErrorAnalysis": [
+    {
+      "Category": "edge_case",
+      "Severity": "low",
+      "Title": "Title input only reads a single token",
+      "Detail": "The code uses Scanner.next() for the title, which stops at whitespace. If the title can contain spaces, only the first word will be stored and printed.",
+      "FailingScenarios": [
+        "Input: The Hobbit 3 -> title becomes \"The\" and the remaining input causes incorrect parsing for the edition."
+      ]
+    }
+  ],
+  "ImprovementSuggestions": [
+    {
+      "Priority": "medium",
+      "Title": "Use full-line input if titles may contain spaces",
+      "Detail": "Replace Scanner.next() with a line-based approach, such as reading the full title using nextLine() and then reading or parsing the edition separately.",
+      "ExpectedImpact": "Makes the program robust for multi-word book titles."
+    },
+    {
+      "Priority": "low",
+      "Title": "Close the Scanner when finished",
+      "Detail": "After reading input and printing the result, call sc.close().",
+      "ExpectedImpact": "Improves resource management and code cleanliness."
+    }
+  ],
+  "IssueCategories": [
+    "edge_case"
+  ],
+  "FeedbackText": "Your class design and overriding are correct, and the polymorphic call works as expected. The only notable concern is input handling: using next() for the title will fail for multi-word titles.",
+  "SuggestedComplexity": "O(1) time, O(1) space",
+  "ModelName": "gpt-5.4",
+  "CreatedAt": {
+    "$date": "2026-08-09T15:59:37.470Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-09T15:59:37.470Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7b355c385a3be1e9dd71cf"
+  },
+  "AgentId": {
+    "$oid": "687b1a010000000000000007"
+  },
+  "SubmissionId": {
+    "$oid": "6a7b34fc385a3be1e9dd71ba"
+  },
+  "Date": {
+    "$date": "2026-08-11T14:44:44.085Z"
+  },
+  "QuestionType": "PE",
+  "Verdict": "acceptable_with_minor_notes",
+  "QualityScore": {
+    "Overall": 8.8,
+    "Correctness": 9.2,
+    "Robustness": 7.8,
+    "CodeQuality": 9,
+    "Efficiency": 10,
+    "Confidence": 0.91
+  },
+  "PerformanceSummary": {
+    "Summary": "The inheritance and method overriding are implemented correctly, and polymorphic dispatch is used as required.",
+    "TimeComplexity": "O(1)",
+    "SpaceComplexity": "O(1)",
+    "Notes": [
+      "The program performs a constant amount of work for a single input instance.",
+      "Complexity is inferred from the visible code only."
+    ]
+  },
+  "ErrorAnalysis": [
+    {
+      "Category": "edge_case",
+      "Severity": "medium",
+      "Title": "Title input only reads one token",
+      "Detail": "The code uses Scanner.next() for the title, which stops at whitespace. If the title contains spaces, only the first word will be stored, and the remaining word(s) may interfere with reading the edition.",
+      "FailingScenarios": [
+        "Input: The Hobbit 3 -> title becomes \"The\", and reading edition with nextInt() will likely fail when encountering \"Hobbit\"."
+      ]
+    }
+  ],
+  "ImprovementSuggestions": [
+    {
+      "Priority": "medium",
+      "Title": "Read full-line titles if spaces are allowed",
+      "Detail": "If the title may contain spaces, replace next() with line-based input handling. For example, read the full title using nextLine() and parse the edition separately according to the expected input format.",
+      "ExpectedImpact": "Prevents incorrect parsing for multi-word book titles."
+    },
+    {
+      "Priority": "low",
+      "Title": "Guard edition input more explicitly",
+      "Detail": "Before calling nextInt(), check hasNextInt() if the platform input may be malformed. This is not required for well-formed judge input, but it improves safety.",
+      "ExpectedImpact": "Reduces input-related runtime risk outside strict judge conditions."
+    }
+  ],
+  "IssueCategories": [
+    "edge_case"
+  ],
+  "FeedbackText": "Your class design and override are correct, and the polymorphic call works as intended. The only notable concern is input handling: using next() for the title will break if the title contains spaces.",
+  "SuggestedComplexity": "O(1) time, O(1) space",
+  "ModelName": "gpt-5.4",
+  "CreatedAt": {
+    "$date": "2026-08-11T14:44:44.085Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-11T14:44:44.085Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7c65500a7a2e6ee5c86b6b"
+  },
+  "AgentId": {
+    "$oid": "687b1a010000000000000007"
+  },
+  "SubmissionId": {
+    "$oid": "6a7c61870a7a2e6ee5c8630d"
+  },
+  "Date": {
+    "$date": "2026-08-12T12:21:36.057Z"
+  },
+  "QuestionType": "PE",
+  "Verdict": "incorrect",
+  "QualityScore": {
+    "Overall": 2,
+    "Correctness": 1,
+    "Robustness": 2,
+    "CodeQuality": 3,
+    "Efficiency": 6,
+    "Confidence": 0.98
+  },
+  "PerformanceSummary": {
+    "Summary": "The required class structure is started correctly, and the superclass constructor is reused properly in PremiumMember. However, the core required methods and main program logic are still unimplemented, so the solution does not satisfy the problem.",
+    "TimeComplexity": "Intended solution would be O(n) overall due to reading the name length, where n is the length of the input name.",
+    "SpaceComplexity": "O(1) auxiliary space, excluding input storage.",
+    "Notes": [
+      "The constructor use of super(name) is correct and placed as the first statement.",
+      "Complexity is based on the expected completed implementation, not on the current placeholder returns."
+    ]
+  },
+  "ErrorAnalysis": [
+    {
+      "Category": "partial_solution",
+      "Severity": "high",
+      "Title": "Member.getNameLength() is not implemented",
+      "Detail": "The method always returns 0 instead of returning the length of the member name. This breaks a core requirement of the problem.",
+      "FailingScenarios": [
+        "Input: Alice 5 -> expected first line 5, but this method would produce 0."
+      ]
+    },
+    {
+      "Category": "logic",
+      "Severity": "high",
+      "Title": "PremiumMember.getTotalScore() is not implemented",
+      "Detail": "The method always returns 0, but it must return getNameLength() + bonus. Even if the constructor stores bonus correctly, the required behavior is missing.",
+      "FailingScenarios": [
+        "Input: Alice 5 -> expected second line 10, but this method would produce 0."
+      ]
+    },
+    {
+      "Category": "partial_solution",
+      "Severity": "high",
+      "Title": "main() does not read input or print output",
+      "Detail": "The main method is empty, so the program does not create a PremiumMember object or print the two required lines.",
+      "FailingScenarios": [
+        "For any valid input, the program would not produce the required output because no input handling or printing is implemented."
+      ]
+    }
+  ],
+  "ImprovementSuggestions": [
+    {
+      "Priority": "high",
+      "Title": "Return the actual name length in Member",
+      "Detail": "Implement getNameLength() as return name.length(); so the superclass provides the required reusable behavior.",
+      "ExpectedImpact": "Fixes the first required output and enables correct total score calculation."
+    },
+    {
+      "Priority": "high",
+      "Title": "Compute total score using inherited behavior",
+      "Detail": "Implement getTotalScore() as return getNameLength() + bonus; to follow the requirement and reuse the superclass method.",
+      "ExpectedImpact": "Fixes the second required output and matches the object-oriented design expected by the problem."
+    },
+    {
+      "Priority": "high",
+      "Title": "Complete the main method",
+      "Detail": "Use Scanner to read the name and bonus, create a PremiumMember, then print member.getNameLength() and member.getTotalScore() on separate lines.",
+      "ExpectedImpact": "Makes the program produce the required output format for valid input."
+    },
+    {
+      "Priority": "medium",
+      "Title": "Keep using super(name) exactly as you already did",
+      "Detail": "Your constructor setup in PremiumMember is correct. Preserve this pattern and avoid trying to assign the inherited private field directly.",
+      "ExpectedImpact": "Maintains correct inheritance usage and satisfies the superclass constructor requirement."
+    }
+  ],
+  "IssueCategories": [
+    "logic",
+    "partial_solution"
+  ],
+  "FeedbackText": "The inheritance setup is started correctly, especially the use of super(name), but the solution is incomplete. The required methods still return 0, and main() is empty, so the program cannot produce the expected output.",
+  "SuggestedComplexity": "O(n) time and O(1) auxiliary space for a complete solution, where n is the length of the input name.",
+  "ModelName": "gpt-5.4",
+  "CreatedAt": {
+    "$date": "2026-08-12T12:21:36.057Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-12T12:21:36.057Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7c8ee9ca5f4aaf295d92a7"
+  },
+  "AgentId": {
+    "$oid": "687b1a010000000000000007"
+  },
+  "SubmissionId": {
+    "$oid": "6a7c8ed5ca5f4aaf295d9295"
+  },
+  "Date": {
+    "$date": "2026-08-12T15:19:05.110Z"
+  },
+  "QuestionType": "PE",
+  "Verdict": "incorrect",
+  "QualityScore": {
+    "Overall": 2.1,
+    "Correctness": 1,
+    "Robustness": 2,
+    "CodeQuality": 4,
+    "Efficiency": 6,
+    "Confidence": 0.98
+  },
+  "PerformanceSummary": {
+    "Summary": "The required class structure is started correctly, and the superclass constructor is reused properly in PremiumMember. However, the core methods and main program logic are still unimplemented, so the program does not satisfy the problem requirements.",
+    "TimeComplexity": "Intended solution would be O(n) overall, where n is the length of the input name, due to computing name.length().",
+    "SpaceComplexity": "Intended solution would be O(1) auxiliary space.",
+    "Notes": [
+      "The constructor use of super(name) is correct and matches the requirement.",
+      "Complexity is based on the expected completed implementation, not on executed behavior."
+    ]
+  },
+  "ErrorAnalysis": [
+    {
+      "Category": "partial_solution",
+      "Severity": "high",
+      "Title": "Member.getNameLength() is not implemented",
+      "Detail": "The method currently always returns 0, but it must return the length of the stored member name.",
+      "FailingScenarios": [
+        "Input: Alice 5 -> expected first line 5, but this method would produce 0."
+      ]
+    },
+    {
+      "Category": "logic",
+      "Severity": "high",
+      "Title": "PremiumMember.getTotalScore() is not implemented",
+      "Detail": "The method currently always returns 0, but it must return getNameLength() + bonus.",
+      "FailingScenarios": [
+        "Input: Alice 5 -> expected total score 10, but this method would produce 0."
+      ]
+    },
+    {
+      "Category": "partial_solution",
+      "Severity": "high",
+      "Title": "main method does not read input or print output",
+      "Detail": "The program must read a name and bonus value, create a PremiumMember object, then print the name length and total score on separate lines. None of this is implemented.",
+      "FailingScenarios": [
+        "For any valid input, the program would not produce the required two output lines."
+      ]
+    }
+  ],
+  "ImprovementSuggestions": [
+    {
+      "Priority": "high",
+      "Title": "Implement getNameLength() using the stored name",
+      "Detail": "Replace the placeholder return value with `return name.length();` inside Member.getNameLength().",
+      "ExpectedImpact": "This fixes the first required output and enables total score calculation."
+    },
+    {
+      "Priority": "high",
+      "Title": "Implement getTotalScore() by reusing inherited behavior",
+      "Detail": "Return `getNameLength() + bonus;` in PremiumMember.getTotalScore() so the subclass uses the superclass method as intended.",
+      "ExpectedImpact": "This satisfies the PremiumMember scoring requirement."
+    },
+    {
+      "Priority": "high",
+      "Title": "Complete the main method with input, object creation, and output",
+      "Detail": "Use a Scanner to read the name and bonus, create `PremiumMember member = new PremiumMember(name, bonus);`, then print `member.getNameLength()` and `member.getTotalScore()` on separate lines.",
+      "ExpectedImpact": "This makes the program match the required input/output behavior."
+    }
+  ],
+  "IssueCategories": [
+    "partial_solution",
+    "logic"
+  ],
+  "FeedbackText": "The inheritance setup and use of `super(name)` are correct, but the solution is still incomplete. `getNameLength()`, `getTotalScore()`, and `main()` must be implemented for the program to meet the problem requirements.",
+  "SuggestedComplexity": "O(n) time, O(1) auxiliary space, where n is the length of the input name.",
+  "ModelName": "gpt-5.4",
+  "CreatedAt": {
+    "$date": "2026-08-12T15:19:05.110Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-12T15:19:05.110Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7d4839a94581a1c9420378"
+  },
+  "AgentId": {
+    "$oid": "687b1a010000000000000007"
+  },
+  "SubmissionId": {
+    "$oid": "6a7d4823a94581a1c9420366"
+  },
+  "Date": {
+    "$date": "2026-08-13T04:29:45.788Z"
+  },
+  "QuestionType": "PE",
+  "Verdict": "incorrect",
+  "QualityScore": {
+    "Overall": 3.2,
+    "Correctness": 2,
+    "Robustness": 3,
+    "CodeQuality": 6.5,
+    "Efficiency": 8,
+    "Confidence": 0.98
+  },
+  "PerformanceSummary": {
+    "Summary": "The core insertion and formatting method is implemented efficiently, but the program reads the input incorrectly, so it will not reliably solve the stated problem.",
+    "TimeComplexity": "O(n)",
+    "SpaceComplexity": "O(n)",
+    "Notes": [
+      "Insertion into an ArrayList at a specific index is O(n) in the worst case due to element shifting.",
+      "Building the output string visits each list element once.",
+      "The reported complexity assumes valid input and focuses on the intended algorithm."
+    ]
+  },
+  "ErrorAnalysis": [
+    {
+      "Category": "logic",
+      "Severity": "high",
+      "Title": "Reads only n-1 initial list elements instead of n",
+      "Detail": "The main method uses `for (int i = 0; i < n-1; i++)`, but the problem states that it should read exactly `n` strings for the initial list. This causes one intended list item to be consumed later as `index`, breaking the input parsing.",
+      "FailingScenarios": [
+        "Input: `3 a b c 1 x` -> the code reads only `a b` into the list, then tries to read `c` as an integer index, which does not match the expected input format."
+      ]
+    },
+    {
+      "Category": "runtime_risk",
+      "Severity": "high",
+      "Title": "Input mismatch can occur because of shifted token reading",
+      "Detail": "Because one list element is skipped during input collection, the next unread string may be passed to `nextInt()`. If that token is not numeric, the program can fail while reading the index.",
+      "FailingScenarios": [
+        "Input: `2 hello world 1 test` -> after reading only `hello`, the code attempts `nextInt()` on `world`."
+      ]
+    }
+  ],
+  "ImprovementSuggestions": [
+    {
+      "Priority": "high",
+      "Title": "Read exactly n strings into the list",
+      "Detail": "Change the loop in `main` from `for (int i = 0; i < n-1; i++)` to `for (int i = 0; i < n; i++)` so the input matches the problem statement.",
+      "ExpectedImpact": "Fixes the main correctness issue and aligns parsing with the required input format."
+    },
+    {
+      "Priority": "medium",
+      "Title": "Optionally guard against invalid index values",
+      "Detail": "If defensive coding is allowed, check whether `index` is between `0` and `items.size()` before calling `items.add(index, value)`. This is not strictly required if the platform guarantees valid input, but it improves robustness.",
+      "ExpectedImpact": "Prevents index-related runtime failures on unexpected input."
+    }
+  ],
+  "IssueCategories": [
+    "logic",
+    "runtime_risk"
+  ],
+  "FeedbackText": "Your `insertAndFormat` method is fine, but the overall solution is incorrect because `main` reads only `n-1` list items instead of `n`. That shifts the remaining input and can make index parsing fail.",
+  "SuggestedComplexity": "O(n) time, O(n) space",
+  "ModelName": "gpt-5.4",
+  "CreatedAt": {
+    "$date": "2026-08-13T04:29:45.788Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-13T04:29:45.788Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7d4899a94581a1c942045c"
+  },
+  "AgentId": {
+    "$oid": "687b1a010000000000000007"
+  },
+  "SubmissionId": {
+    "$oid": "6a7d4881a94581a1c942044c"
+  },
+  "Date": {
+    "$date": "2026-08-13T04:31:21.008Z"
+  },
+  "QuestionType": "PE",
+  "Verdict": "correct",
+  "QualityScore": {
+    "Overall": 9.5,
+    "Correctness": 9.8,
+    "Robustness": 8.8,
+    "CodeQuality": 9.2,
+    "Efficiency": 9,
+    "Confidence": 0.98
+  },
+  "PerformanceSummary": {
+    "Summary": "The solution correctly inserts the value at the requested index and formats the updated list as a space-separated string.",
+    "TimeComplexity": "O(n)",
+    "SpaceComplexity": "O(n)",
+    "Notes": [
+      "Insertion into an ArrayList at a specific index may shift later elements, which is linear in the list size.",
+      "Building the output string visits each element once.",
+      "The extra output buffer from StringBuilder contributes linear auxiliary space for the returned string."
+    ]
+  },
+  "ErrorAnalysis": [],
+  "ImprovementSuggestions": [
+    {
+      "Priority": "low",
+      "Title": "Use a clearer loop condition when reading input",
+      "Detail": "Replace `for (int i = 0; i <= n - 1; i++)` with `for (int i = 0; i < n; i++)` for readability and to avoid unnecessary arithmetic in the condition.",
+      "ExpectedImpact": "Improves code clarity without changing behavior."
+    },
+    {
+      "Priority": "low",
+      "Title": "Optionally guard against invalid indices",
+      "Detail": "If defensive programming is desired, check that `index` is between 0 and `items.size()` before calling `items.add(index, value)`.",
+      "ExpectedImpact": "Makes the method safer if unexpected input is provided."
+    }
+  ],
+  "IssueCategories": [],
+  "FeedbackText": "Your solution is correct for the stated task. It inserts the value at the given index, preserves order, allows duplicates, and returns the list as a properly space-separated string.",
+  "SuggestedComplexity": "O(n) time, O(n) space",
+  "ModelName": "gpt-5.4",
+  "CreatedAt": {
+    "$date": "2026-08-13T04:31:21.008Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-13T04:31:21.008Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7d48e9a94581a1c942055e"
+  },
+  "AgentId": {
+    "$oid": "687b1a010000000000000007"
+  },
+  "SubmissionId": {
+    "$oid": "6a7d473da94581a1c94201a8"
+  },
+  "Date": {
+    "$date": "2026-08-13T04:32:41.392Z"
+  },
+  "QuestionType": "PE",
+  "Verdict": "incorrect",
+  "QualityScore": {
+    "Overall": 3.2,
+    "Correctness": 2,
+    "Robustness": 3,
+    "CodeQuality": 5.5,
+    "Efficiency": 7.5,
+    "Confidence": 0.96
+  },
+  "PerformanceSummary": {
+    "Summary": "The insertAndFormat method uses a reasonable approach: insert into the list, then build the output string with spaces between elements. However, the program is not a complete solution because main does not read input or call the method as required.",
+    "TimeComplexity": "O(n)",
+    "SpaceComplexity": "O(n)",
+    "Notes": [
+      "Inserting into a list at a specific index is typically O(n) for an ArrayList due to element shifting.",
+      "Building the formatted output scans the list once.",
+      "The reported complexity applies to the implemented insertAndFormat method, not to the overall program behavior required by the problem."
+    ]
+  },
+  "ErrorAnalysis": [
+    {
+      "Category": "partial_solution",
+      "Severity": "high",
+      "Title": "Main method does not implement the required input/output flow",
+      "Detail": "The problem requires reading n, then n strings, then index, then value, and printing the result of insertAndFormat(...). Your main method ignores all input and prints a fixed string instead.",
+      "FailingScenarios": [
+        "For input: 3 red blue green 1 yellow, the expected output is red yellow blue green, but the program prints the literal text 3 red blue green 1 yellow.",
+        "Any input different from the hardcoded string will still produce the same incorrect output."
+      ]
+    },
+    {
+      "Category": "logic",
+      "Severity": "high",
+      "Title": "Output format is wrong because a hardcoded sample is printed",
+      "Detail": "The required output is the updated list elements separated by single spaces. The current output includes the input count and index/value layout as one fixed string, which does not match the required result format.",
+      "FailingScenarios": [
+        "If the list is [a, b], index = 1, value = x, the expected output is a x b, but the program still prints 3 red blue green 1 yellow."
+      ]
+    },
+    {
+      "Category": "runtime_risk",
+      "Severity": "medium",
+      "Title": "No validation or handling for invalid index in insertAndFormat",
+      "Detail": "items.add(index, value) will throw an exception if index is less than 0 or greater than items.size(). If the problem guarantees valid input, this may be acceptable, but the method currently assumes that guarantee.",
+      "FailingScenarios": [
+        "If items has size 3 and index = 5, items.add(index, value) will fail."
+      ]
+    }
+  ],
+  "ImprovementSuggestions": [
+    {
+      "Priority": "high",
+      "Title": "Implement the required input parsing in main",
+      "Detail": "Use a Scanner to read n, then read n strings into a List<String>, then read index and value. Create a ListEditor object, call insertAndFormat(items, index, value), and print the returned string.",
+      "ExpectedImpact": "This makes the program match the problem statement and handle general test inputs instead of one hardcoded case."
+    },
+    {
+      "Priority": "high",
+      "Title": "Remove the hardcoded println statement",
+      "Detail": "Delete System.out.println(\"3 red blue green 1 yellow\"); and replace it with printing the actual method result based on the provided input.",
+      "ExpectedImpact": "This fixes the incorrect fixed output and allows the solution to respond correctly to different inputs."
+    },
+    {
+      "Priority": "medium",
+      "Title": "Keep the current insertAndFormat logic, but connect it to main",
+      "Detail": "Your StringBuilder formatting logic is appropriate. Reuse it by ensuring main actually calls insertAndFormat after building the input list.",
+      "ExpectedImpact": "This preserves the correct core method while making the overall solution complete."
+    },
+    {
+      "Priority": "low",
+      "Title": "Optionally guard against invalid index if not guaranteed by the platform",
+      "Detail": "If you want extra safety, check that index is between 0 and items.size() before calling add(index, value).",
+      "ExpectedImpact": "This reduces the risk of runtime exceptions on malformed input."
+    }
+  ],
+  "IssueCategories": [
+    "partial_solution",
+    "logic",
+    "runtime_risk"
+  ],
+  "FeedbackText": "The core insertAndFormat method is mostly fine, but the submission is not a complete solution because main does not read input or call the method. The program currently prints a fixed string, so it will not produce the required output for general test cases.",
+  "SuggestedComplexity": "O(n) time and O(n) extra space for inserting and formatting the list output.",
+  "ModelName": "gpt-5.4",
+  "CreatedAt": {
+    "$date": "2026-08-13T04:32:41.392Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-13T04:32:41.392Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7d495da94581a1c94206ee"
+  },
+  "AgentId": {
+    "$oid": "687b1a010000000000000007"
+  },
+  "SubmissionId": {
+    "$oid": "6a7d4947a94581a1c94206df"
+  },
+  "Date": {
+    "$date": "2026-08-13T04:34:37.102Z"
+  },
+  "QuestionType": "PE",
+  "Verdict": "needs_fix",
+  "QualityScore": {
+    "Overall": 5,
+    "Correctness": 3.5,
+    "Robustness": 5,
+    "CodeQuality": 7,
+    "Efficiency": 8.5,
+    "Confidence": 0.98
+  },
+  "PerformanceSummary": {
+    "Summary": "The core insertAndFormat method is efficient and appropriate for the task, but the program reads the initial list incorrectly in main, which can cause wrong output or input parsing failure.",
+    "TimeComplexity": "O(n)",
+    "SpaceComplexity": "O(n)",
+    "Notes": [
+      "Inserting into an ArrayList at a specific index is O(n) in the worst case due to shifting elements.",
+      "Building the output string visits each element once.",
+      "The main correctness issue is input handling, not algorithm choice."
+    ]
+  },
+  "ErrorAnalysis": [
+    {
+      "Category": "logic",
+      "Severity": "high",
+      "Title": "Initial list input loop skips the first element",
+      "Detail": "The loop in main uses `for (int i = 1; i < n; i++)`, so it reads only `n - 1` strings instead of `n`. This means the initial list is incomplete, and the remaining input values are shifted into the wrong variables.",
+      "FailingScenarios": [
+        "Input: `3 a b c 1 x` -> only `a` and `b` are added to the list, `c` is read as the index, causing input parsing to fail because `c` is not an integer.",
+        "Input: `1 hello 0 x` -> no initial list element is read, then `hello` is read where an integer index is expected."
+      ]
+    }
+  ],
+  "ImprovementSuggestions": [
+    {
+      "Priority": "high",
+      "Title": "Read all n list elements",
+      "Detail": "Change the loop to start from 0: `for (int i = 0; i < n; i++) { items.add(sc.next()); }`. This matches the problem statement, which says the program reads `n` strings for the initial list.",
+      "ExpectedImpact": "Fixes the main correctness bug and ensures the list contents and later inputs are parsed properly."
+    },
+    {
+      "Priority": "medium",
+      "Title": "Keep input handling aligned with the stated format",
+      "Detail": "After fixing the loop, the next tokens will correctly map to `index` and `value`. This avoids accidental token shifting and makes the program behave as intended for all valid inputs.",
+      "ExpectedImpact": "Improves reliability and prevents malformed reads from otherwise valid input."
+    }
+  ],
+  "IssueCategories": [
+    "logic"
+  ],
+  "FeedbackText": "Your insertAndFormat method is fine, but the program has a major input-reading bug in main: it reads only n-1 initial strings. Because of that, valid inputs can produce wrong behavior or fail while parsing the index.",
+  "SuggestedComplexity": "O(n) time and O(n) space",
+  "ModelName": "gpt-5.4",
+  "CreatedAt": {
+    "$date": "2026-08-13T04:34:37.102Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-13T04:34:37.102Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7f4d7e4a42fdca7d55c7a9"
+  },
+  "AgentId": {
+    "$oid": "687b1a010000000000000007"
+  },
+  "SubmissionId": {
+    "$oid": "6a7e13708d7482fd0b763c71"
+  },
+  "Date": {
+    "$date": "2026-08-14T17:16:46.518Z"
+  },
+  "QuestionType": "PE",
+  "Verdict": "incorrect",
+  "QualityScore": {
+    "Overall": 2,
+    "Correctness": 1,
+    "Robustness": 1,
+    "CodeQuality": 4,
+    "Efficiency": 8,
+    "Confidence": 0.99
+  },
+  "PerformanceSummary": {
+    "Summary": "The program is very small and efficient, but it does not implement the required behavior of reading an integer and printing its square.",
+    "TimeComplexity": "O(1)",
+    "SpaceComplexity": "O(1)",
+    "Notes": [
+      "The code only prints a fixed value.",
+      "Efficiency is not the main issue here; correctness is."
+    ]
+  },
+  "ErrorAnalysis": [
+    {
+      "Category": "logic",
+      "Severity": "high",
+      "Title": "Does not compute the square of the input",
+      "Detail": "The program always prints \"4\" instead of reading an integer and calculating its square. This does not satisfy the problem requirement.",
+      "FailingScenarios": [
+        "Input: 3 -> expected output: 9, but the program prints 4",
+        "Input: 0 -> expected output: 0, but the program prints 4",
+        "Input: -5 -> expected output: 25, but the program prints 4"
+      ]
+    },
+    {
+      "Category": "partial_solution",
+      "Severity": "high",
+      "Title": "Input handling is missing",
+      "Detail": "The problem explicitly requires reading one integer. The submitted code does not read from standard input at all.",
+      "FailingScenarios": [
+        "Any valid input value is ignored because the program never reads it"
+      ]
+    }
+  ],
+  "ImprovementSuggestions": [
+    {
+      "Priority": "high",
+      "Title": "Read the integer from standard input",
+      "Detail": "Use a Scanner or BufferedReader to read one integer from the user input before processing it.",
+      "ExpectedImpact": "This will make the program follow the input requirement of the problem."
+    },
+    {
+      "Priority": "high",
+      "Title": "Compute and print the square of the number",
+      "Detail": "After reading the integer n, print n * n instead of a hardcoded value.",
+      "ExpectedImpact": "This will make the output correct for all valid integer inputs."
+    }
+  ],
+  "IssueCategories": [
+    "logic",
+    "partial_solution"
+  ],
+  "FeedbackText": "Your program is incorrect because it prints a fixed value instead of reading an integer and printing its square. Add input handling and compute n * n.",
+  "SuggestedComplexity": "O(1) time, O(1) space",
+  "ModelName": "gpt-5.4",
+  "CreatedAt": {
+    "$date": "2026-08-14T17:16:46.518Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-14T17:16:46.518Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7f8e4314335f1afa284c27"
+  },
+  "AgentId": {
+    "$oid": "687b1a010000000000000007"
+  },
+  "SubmissionId": {
+    "$oid": "6a7f8c9716278ea99e6c1bd4"
+  },
+  "Date": {
+    "$date": "2026-08-14T21:53:07.190Z"
+  },
+  "QuestionType": "PE",
+  "Verdict": "incorrect",
+  "QualityScore": {
+    "Overall": 1,
+    "Correctness": 0,
+    "Robustness": 1,
+    "CodeQuality": 2,
+    "Efficiency": 1,
+    "Confidence": 0.99
+  },
+  "PerformanceSummary": {
+    "Summary": "The required functionality is not implemented, so the program does not currently solve the problem.",
+    "TimeComplexity": "Not meaningfully applicable because the main logic is missing.",
+    "SpaceComplexity": "Not meaningfully applicable because the main logic is missing.",
+    "Notes": [
+      "insertAndFormat currently returns null.",
+      "main is empty and does not read input or print output."
+    ]
+  },
+  "ErrorAnalysis": [
+    {
+      "Category": "partial_solution",
+      "Severity": "high",
+      "Title": "Core method is not implemented",
+      "Detail": "The insertAndFormat(List<String> items, int index, String value) method is required to insert the value at the given index and return the formatted string. It currently returns null, so it does not meet the problem requirements.",
+      "FailingScenarios": [
+        "For input: n=3, items=[a, b, c], index=1, value=x, the expected output would be \"a x b c\", but the current method returns null."
+      ]
+    },
+    {
+      "Category": "partial_solution",
+      "Severity": "high",
+      "Title": "main method is not implemented",
+      "Detail": "The problem states that main must read n, then n strings, then index, then value, and print the returned result. The current main method does nothing, so the program does not perform any input handling or output.",
+      "FailingScenarios": [
+        "For any valid input, the program will not produce the required formatted list output because no input is read and nothing is printed."
+      ]
+    },
+    {
+      "Category": "logic",
+      "Severity": "medium",
+      "Title": "Required list insertion behavior is missing",
+      "Detail": "The solution must preserve element order by inserting at the specified index, not replacing an existing element. No insertion logic is present yet.",
+      "FailingScenarios": [
+        "If the list is [red, blue] and index=1 with value=green, the expected result is \"red green blue\". The current code has no logic to produce this."
+      ]
+    },
+    {
+      "Category": "logic",
+      "Severity": "medium",
+      "Title": "Required output formatting is missing",
+      "Detail": "The method must return one string where list elements are separated by a single space. There is currently no formatting logic such as String.join(\" \", items).",
+      "FailingScenarios": [
+        "For items [cat, dog, bird], the required return value is \"cat dog bird\", but the current implementation does not build any string."
+      ]
+    }
+  ],
+  "ImprovementSuggestions": [
+    {
+      "Priority": "high",
+      "Title": "Implement insertion in insertAndFormat",
+      "Detail": "Use items.add(index, value) to insert the new value at the requested position. Then return the updated list as a single string using String.join(\" \", items).",
+      "ExpectedImpact": "This will satisfy the core functional requirement of updating the list and formatting the result."
+    },
+    {
+      "Priority": "high",
+      "Title": "Implement input reading in main",
+      "Detail": "Create a Scanner, read the integer n, read n strings into a List<String>, then read index and value. After that, call insertAndFormat and print the returned string.",
+      "ExpectedImpact": "This will make the full program interact with the input/output format required by the problem."
+    },
+    {
+      "Priority": "medium",
+      "Title": "Use an ArrayList for the editable list",
+      "Detail": "Initialize the list with ArrayList<String> because the problem requires insertion at an index, and ArrayList supports add(index, value) directly.",
+      "ExpectedImpact": "This gives a clear and appropriate mutable list implementation for the task."
+    },
+    {
+      "Priority": "medium",
+      "Title": "Avoid returning null from the method",
+      "Detail": "Return the actual formatted string after insertion. Returning null does not match the required output and can lead to incorrect printed output.",
+      "ExpectedImpact": "This ensures the method produces meaningful output instead of an invalid placeholder."
+    }
+  ],
+  "IssueCategories": [
+    "partial_solution",
+    "logic"
+  ],
+  "FeedbackText": "The submission is incomplete. The required insertAndFormat method still returns null, and main does not read input or print output. Implement the list insertion and formatting logic, then wire it up in main to match the problem statement.",
+  "SuggestedComplexity": "A straightforward solution should run in O(n) time overall for insertion plus formatting, with O(n) space for the output string.",
+  "ModelName": "gpt-5.4",
+  "CreatedAt": {
+    "$date": "2026-08-14T21:53:07.190Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-14T21:53:07.190Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a8030376b075af21f75223a"
+  },
+  "AgentId": {
+    "$oid": "687b1a010000000000000007"
+  },
+  "SubmissionId": {
+    "$oid": "6a802fc26b075af21f752223"
+  },
+  "Date": {
+    "$date": "2026-08-15T09:24:07.568Z"
+  },
+  "QuestionType": "PE",
+  "Verdict": "incorrect",
+  "QualityScore": {
+    "Overall": 2.1,
+    "Correctness": 1,
+    "Robustness": 3,
+    "CodeQuality": 4,
+    "Efficiency": 5,
+    "Confidence": 0.98
+  },
+  "PerformanceSummary": {
+    "Summary": "The required class structure is partially set up correctly, including inheritance and use of super(...), but the core methods and main program are not implemented, so the solution does not satisfy the problem requirements.",
+    "TimeComplexity": "If completed as intended, each method would be O(1) except reading input, which is O(n) in the input size.",
+    "SpaceComplexity": "If completed as intended, O(1) auxiliary space.",
+    "Notes": [
+      "The constructor chaining in PremiumMember is correctly started with super(name).",
+      "Complexity is simple and not a concern for this task.",
+      "The main issue is incomplete functionality, not performance."
+    ]
+  },
+  "ErrorAnalysis": [
+    {
+      "Category": "partial_solution",
+      "Severity": "high",
+      "Title": "getNameLength() is not implemented",
+      "Detail": "Member.getNameLength() always returns 0 instead of returning the length of the stored member name. This breaks both the direct output and the total score calculation.",
+      "FailingScenarios": [
+        "Input: Alice 5 -> expected first line 5, but this method would produce 0."
+      ]
+    },
+    {
+      "Category": "logic",
+      "Severity": "high",
+      "Title": "getTotalScore() is not implemented",
+      "Detail": "PremiumMember.getTotalScore() always returns 0, but it should return getNameLength() + bonus.",
+      "FailingScenarios": [
+        "Input: Alice 5 -> expected second line 10, but this method would produce 0."
+      ]
+    },
+    {
+      "Category": "partial_solution",
+      "Severity": "high",
+      "Title": "main() is missing required input, object creation, and output",
+      "Detail": "The main method is empty. The problem requires reading a name and bonus, creating a PremiumMember object, then printing the name length and total score on separate lines.",
+      "FailingScenarios": [
+        "For any valid input, the program would not produce the required two-line output."
+      ]
+    }
+  ],
+  "ImprovementSuggestions": [
+    {
+      "Priority": "high",
+      "Title": "Return the actual name length in Member",
+      "Detail": "Implement getNameLength() as `return name.length();` so the superclass provides the required shared behavior.",
+      "ExpectedImpact": "Fixes the first required output and supports correct score calculation."
+    },
+    {
+      "Priority": "high",
+      "Title": "Compute total score using inherited behavior",
+      "Detail": "Implement getTotalScore() as `return getNameLength() + bonus;` to match the specification and reuse the superclass method.",
+      "ExpectedImpact": "Fixes the second required output and demonstrates proper inheritance usage."
+    },
+    {
+      "Priority": "high",
+      "Title": "Complete the main method",
+      "Detail": "Use a Scanner to read the name and bonus, create `PremiumMember member = new PremiumMember(name, bonus);`, then print `member.getNameLength()` and `member.getTotalScore()` on separate lines.",
+      "ExpectedImpact": "Makes the program actually solve the full input/output task."
+    }
+  ],
+  "IssueCategories": [
+    "partial_solution",
+    "logic"
+  ],
+  "FeedbackText": "The inheritance setup and use of `super(name)` are correct, but the solution is still incomplete. Both required methods return 0, and `main()` does not read input or print results, so the program does not meet the problem requirements.",
+  "SuggestedComplexity": "O(1) time per method, O(1) extra space; overall input handling is linear in the size of the read input.",
+  "ModelName": "gpt-5.4",
+  "CreatedAt": {
+    "$date": "2026-08-15T09:24:07.568Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-15T09:24:07.568Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a8095d08d232f5cef831fa9"
+  },
+  "AgentId": {
+    "$oid": "687b1a010000000000000007"
+  },
+  "SubmissionId": {
+    "$oid": "6a80958f8d232f5cef831f41"
+  },
+  "Date": {
+    "$date": "2026-08-15T16:37:36.072Z"
+  },
+  "QuestionType": "PE",
+  "Verdict": "incorrect",
+  "QualityScore": {
+    "Overall": 1,
+    "Correctness": 0,
+    "Robustness": 1,
+    "CodeQuality": 2,
+    "Efficiency": 1,
+    "Confidence": 0.99
+  },
+  "PerformanceSummary": {
+    "Summary": "The submitted program does not implement the required queue operations. It only prints a fixed string and does not read input or produce the expected result.",
+    "TimeComplexity": "O(1) for the submitted code, but this is not meaningful because the required algorithm is not implemented.",
+    "SpaceComplexity": "O(1) for the submitted code.",
+    "Notes": [
+      "No queue is created or used.",
+      "No input parsing is present.",
+      "No operation handling for ADD or REMOVE is implemented."
+    ]
+  },
+  "ErrorAnalysis": [
+    {
+      "Category": "partial_solution",
+      "Severity": "high",
+      "Title": "Required functionality is missing",
+      "Detail": "The program does not solve the stated problem. It only prints \"Hello world\" and ignores all required steps: reading n, reading queue elements, processing m operations, and printing the final rear element or EMPTY.",
+      "FailingScenarios": [
+        "Input: 3 1 2 3 0 -> expected output: 3, but the program prints Hello world",
+        "Input: 0 2 ADD 5 REMOVE -> expected output: EMPTY, but the program prints Hello world"
+      ]
+    },
+    {
+      "Category": "logic",
+      "Severity": "high",
+      "Title": "No queue logic is implemented",
+      "Detail": "The problem requires maintaining a queue from front to rear and updating it using ADD and REMOVE operations. The submitted code has no data structure or logic for these operations.",
+      "FailingScenarios": [
+        "Any test containing ADD 10 should place 10 at the rear, but the current code does nothing with the input",
+        "Any test containing REMOVE should delete the front element when present, but the current code never stores elements"
+      ]
+    },
+    {
+      "Category": "edge_case",
+      "Severity": "medium",
+      "Title": "Empty queue handling is absent",
+      "Detail": "The problem explicitly requires printing EMPTY when the queue has no elements after all operations. The submission does not check or handle this case.",
+      "FailingScenarios": [
+        "Input: 1 7 1 REMOVE -> expected output: EMPTY, but the program prints Hello world"
+      ]
+    }
+  ],
+  "ImprovementSuggestions": [
+    {
+      "Priority": "high",
+      "Title": "Read the full input using Scanner or BufferedReader",
+      "Detail": "Parse the integer n, then read n integers into a queue. After that, read m and process the next m operations line by line.",
+      "ExpectedImpact": "Makes the program interact with the problem input instead of printing a fixed string."
+    },
+    {
+      "Priority": "high",
+      "Title": "Use a queue implementation such as ArrayDeque<Integer>",
+      "Detail": "Store the elements in a Queue<Integer> or ArrayDeque<Integer>. For ADD x, use offer/addLast. For REMOVE, remove the front only if the queue is not empty.",
+      "ExpectedImpact": "Implements the required data structure and operation behavior correctly."
+    },
+    {
+      "Priority": "high",
+      "Title": "Print the final rear element correctly",
+      "Detail": "After processing all operations, check whether the queue is empty. If it is empty, print EMPTY; otherwise, print the rear element using peekLast on an ArrayDeque.",
+      "ExpectedImpact": "Produces the required final output format."
+    },
+    {
+      "Priority": "medium",
+      "Title": "Handle REMOVE safely on an empty queue",
+      "Detail": "Before removing, check !queue.isEmpty() to avoid invalid removal attempts and to match the problem statement.",
+      "ExpectedImpact": "Prevents incorrect behavior on edge cases involving empty queues."
+    }
+  ],
+  "IssueCategories": [
+    "partial_solution",
+    "logic",
+    "edge_case"
+  ],
+  "FeedbackText": "The submission is incorrect because it does not implement the queue problem at all. Replace the placeholder output with input parsing, queue operations for ADD and REMOVE, and final rear-element printing or EMPTY.",
+  "SuggestedComplexity": "A correct solution should run in O(n + m) time and use O(n) space.",
+  "ModelName": "gpt-5.4",
+  "CreatedAt": {
+    "$date": "2026-08-15T16:37:36.072Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-15T16:37:36.072Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a84a8ec057d3c4311c8f362"
+  },
+  "AgentId": {
+    "$oid": "687b1a010000000000000007"
+  },
+  "SubmissionId": {
+    "$oid": "6a84a8a1057d3c4311c8f347"
+  },
+  "Date": {
+    "$date": "2026-08-18T18:48:12.556Z"
+  },
+  "QuestionType": "PE",
+  "Verdict": "incorrect",
+  "QualityScore": {
+    "Overall": 2.1,
+    "Correctness": 1.5,
+    "Robustness": 2,
+    "CodeQuality": 4,
+    "Efficiency": 6,
+    "Confidence": 0.98
+  },
+  "PerformanceSummary": {
+    "Summary": "The required class structure is started correctly, and the superclass constructor is used properly in PremiumMember. However, the core methods and main program logic are still unimplemented, so the submission does not satisfy the problem requirements.",
+    "TimeComplexity": "Intended O(n) overall, where n is the length of the input name, mainly due to computing name.length().",
+    "SpaceComplexity": "Intended O(1) auxiliary space, excluding input storage.",
+    "Notes": [
+      "The constructor chaining with super(name) is correctly placed as the first statement.",
+      "Complexity is based on the intended final implementation, since the current program is incomplete."
+    ]
+  },
+  "ErrorAnalysis": [
+    {
+      "Category": "partial_solution",
+      "Severity": "high",
+      "Title": "Member.getNameLength() is not implemented",
+      "Detail": "The method currently always returns 0, but it should return the length of the member name stored in the Member class.",
+      "FailingScenarios": [
+        "Input: Alice 5 -> expected first line 5, but the current method would produce 0."
+      ]
+    },
+    {
+      "Category": "logic",
+      "Severity": "high",
+      "Title": "PremiumMember.getTotalScore() is not implemented",
+      "Detail": "The method currently always returns 0, but it should return getNameLength() + bonus as required.",
+      "FailingScenarios": [
+        "Input: Alice 5 -> expected total score 10, but the current method would produce 0."
+      ]
+    },
+    {
+      "Category": "partial_solution",
+      "Severity": "high",
+      "Title": "main method is missing all required input/output logic",
+      "Detail": "The program does not read the name and bonus, does not create a PremiumMember object, and does not print the two required lines.",
+      "FailingScenarios": [
+        "For any valid input, the program currently produces no output."
+      ]
+    }
+  ],
+  "ImprovementSuggestions": [
+    {
+      "Priority": "high",
+      "Title": "Implement getNameLength() using the stored name",
+      "Detail": "Replace return 0; with return name.length(); inside Member.getNameLength().",
+      "ExpectedImpact": "This will make the first required output correct."
+    },
+    {
+      "Priority": "high",
+      "Title": "Implement getTotalScore() using inherited behavior",
+      "Detail": "Replace return 0; with return getNameLength() + bonus; inside PremiumMember.getTotalScore().",
+      "ExpectedImpact": "This will make the total score calculation match the specification."
+    },
+    {
+      "Priority": "high",
+      "Title": "Complete the main method",
+      "Detail": "Use a Scanner to read the name and bonus, create a PremiumMember object, then print member.getNameLength() and member.getTotalScore() on separate lines.",
+      "ExpectedImpact": "This will make the program perform the required input-processing-output flow."
+    },
+    {
+      "Priority": "medium",
+      "Title": "Use the existing superclass constructor as you already started",
+      "Detail": "Keep super(name); as the first line of the PremiumMember constructor. This part is already correct and should not be changed.",
+      "ExpectedImpact": "This preserves the required inheritance design."
+    }
+  ],
+  "IssueCategories": [
+    "partial_solution",
+    "logic"
+  ],
+  "FeedbackText": "The inheritance setup is mostly correct, especially the use of super(name), but the solution is still incomplete. Both required methods return 0, and main does not read input or print results, so the program does not meet the problem requirements yet.",
+  "SuggestedComplexity": "O(n) time and O(1) auxiliary space, where n is the length of the input name.",
+  "ModelName": "gpt-5.4",
+  "CreatedAt": {
+    "$date": "2026-08-18T18:48:12.556Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-18T18:48:12.556Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a87485275224f5423a0fe3e"
+  },
+  "AgentId": {
+    "$oid": "687b1a010000000000000007"
+  },
+  "SubmissionId": {
+    "$oid": "6a87482275224f5423a0fe16"
+  },
+  "Date": {
+    "$date": "2026-08-20T18:32:50.536Z"
+  },
+  "QuestionType": "PE",
+  "Verdict": "incorrect",
+  "QualityScore": {
+    "Overall": 1,
+    "Correctness": 0,
+    "Robustness": 1,
+    "CodeQuality": 3,
+    "Efficiency": 1,
+    "Confidence": 0.99
+  },
+  "PerformanceSummary": {
+    "Summary": "The submitted program contains an empty main method, so it does not perform the required input reading or square calculation.",
+    "TimeComplexity": "Not meaningfully applicable because the required algorithm is not implemented.",
+    "SpaceComplexity": "Not meaningfully applicable because the required algorithm is not implemented.",
+    "Notes": [
+      "The task only requires reading one integer and printing its square.",
+      "A complete solution would typically run in constant time and constant extra space."
+    ]
+  },
+  "ErrorAnalysis": [
+    {
+      "Category": "partial_solution",
+      "Severity": "high",
+      "Title": "No problem logic implemented",
+      "Detail": "The main method is empty. The program does not read an integer, compute its square, or print any output.",
+      "FailingScenarios": [
+        "For input: 5, the expected output is 25, but this code produces no output.",
+        "For input: 0, the expected output is 0, but this code produces no output."
+      ]
+    },
+    {
+      "Category": "logic",
+      "Severity": "high",
+      "Title": "Required input/output behavior is missing",
+      "Detail": "The problem statement explicitly requires reading one integer and printing its square. Both steps are absent, so the solution does not satisfy the specification.",
+      "FailingScenarios": [
+        "Any valid single-integer input will fail because nothing is read or printed."
+      ]
+    }
+  ],
+  "ImprovementSuggestions": [
+    {
+      "Priority": "high",
+      "Title": "Read the integer input",
+      "Detail": "Use a Scanner or BufferedReader to read one integer from standard input inside main.",
+      "ExpectedImpact": "Makes the program interact with input as required by the problem."
+    },
+    {
+      "Priority": "high",
+      "Title": "Compute and print the square",
+      "Detail": "After reading the integer n, compute n * n and print the result with System.out.println(...).",
+      "ExpectedImpact": "Implements the core logic required to solve the task."
+    },
+    {
+      "Priority": "medium",
+      "Title": "Use an appropriate numeric type if needed",
+      "Detail": "If the input range might be large, consider storing the value in long before squaring to reduce overflow risk.",
+      "ExpectedImpact": "Improves robustness for larger integer inputs."
+    }
+  ],
+  "IssueCategories": [
+    "partial_solution",
+    "logic"
+  ],
+  "FeedbackText": "The submission is incomplete: main is empty, so the program does not read the integer or print its square. Add input handling and output the squared value.",
+  "SuggestedComplexity": "A correct solution should use O(1) time and O(1) extra space.",
+  "ModelName": "gpt-5.4",
+  "CreatedAt": {
+    "$date": "2026-08-20T18:32:50.536Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-20T18:32:50.536Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a884a56286750807732e69f"
+  },
+  "AgentId": {
+    "$oid": "687b1a010000000000000007"
+  },
+  "SubmissionId": {
+    "$oid": "6a88497f286750807732e640"
+  },
+  "Date": {
+    "$date": "2026-08-21T12:53:42.360Z"
+  },
+  "QuestionType": "PE",
+  "Verdict": "incorrect",
+  "QualityScore": {
+    "Overall": 1.2,
+    "Correctness": 0.5,
+    "Robustness": 1,
+    "CodeQuality": 1.5,
+    "Efficiency": 5,
+    "Confidence": 0.99
+  },
+  "PerformanceSummary": {
+    "Summary": "The required OOP structure is present, but the implementation is unfinished and contains constructor statements that are invalid in Java.",
+    "TimeComplexity": "O(1) for object creation and display operations",
+    "SpaceComplexity": "O(1) auxiliary space",
+    "Notes": [
+      "Complexity is trivial and not the main issue here.",
+      "The primary problems are incomplete implementation and invalid constructor code."
+    ]
+  },
+  "ErrorAnalysis": [
+    {
+      "Category": "syntax",
+      "Severity": "high",
+      "Title": "Constructors incorrectly return a value",
+      "Detail": "Both constructors contain `return null;`. In Java, constructors cannot return any value, and using `return null;` inside a constructor is invalid.",
+      "FailingScenarios": [
+        "The program will not compile because `Book(String title)` contains `return null;`.",
+        "The program will not compile because `FeaturedBook(String title, int edition)` contains `return null;`."
+      ]
+    },
+    {
+      "Category": "partial_solution",
+      "Severity": "high",
+      "Title": "Core methods are not implemented",
+      "Detail": "The `Book` constructor, `Book.displayInfo()`, `FeaturedBook` constructor, `FeaturedBook.displayInfo()`, and `main()` are all left as TODOs. This means the required behavior from the prompt is missing.",
+      "FailingScenarios": [
+        "Even after fixing constructor syntax, no title or edition would be stored or printed because the methods are empty."
+      ]
+    },
+    {
+      "Category": "logic",
+      "Severity": "high",
+      "Title": "Inheritance initialization is missing",
+      "Detail": "The `FeaturedBook` constructor should initialize the inherited `title` field by calling `super(title)`, but that logic is missing.",
+      "FailingScenarios": [
+        "If a `FeaturedBook` is created, the inherited title would not be initialized as required by the problem."
+      ]
+    },
+    {
+      "Category": "logic",
+      "Severity": "medium",
+      "Title": "Overridden output format is not implemented",
+      "Detail": "The problem requires `FeaturedBook.displayInfo()` to print `<title> - Edition <edition>`. That method is currently empty, so polymorphic behavior through a `Book` reference is not demonstrated.",
+      "FailingScenarios": [
+        "For input like title=`Dune` and edition=`3`, the expected output is `Dune - Edition 3`, but no such output is implemented."
+      ]
+    },
+    {
+      "Category": "partial_solution",
+      "Severity": "medium",
+      "Title": "Input handling and object creation are missing in main",
+      "Detail": "The `main()` method should read the title and edition, create a `FeaturedBook` object using a `Book` reference, and call `displayInfo()`. None of these steps are implemented.",
+      "FailingScenarios": [
+        "Given any valid input, the program currently has no code to read it or print the required result."
+      ]
+    }
+  ],
+  "ImprovementSuggestions": [
+    {
+      "Priority": "high",
+      "Title": "Remove invalid constructor returns",
+      "Detail": "Delete `return null;` from both constructors. Constructors should only initialize fields and must not return a value.",
+      "ExpectedImpact": "Fixes a compile-time error and makes the class definitions valid Java."
+    },
+    {
+      "Priority": "high",
+      "Title": "Initialize the title in Book",
+      "Detail": "Implement the `Book` constructor as `this.title = title;` so the class stores the provided title.",
+      "ExpectedImpact": "Ensures the base class correctly holds the book title."
+    },
+    {
+      "Priority": "high",
+      "Title": "Call the parent constructor from FeaturedBook",
+      "Detail": "In `FeaturedBook(String title, int edition)`, call `super(title);` and then assign `this.edition = edition;`.",
+      "ExpectedImpact": "Properly initializes both inherited and subclass-specific fields."
+    },
+    {
+      "Priority": "high",
+      "Title": "Implement both displayInfo methods",
+      "Detail": "In `Book.displayInfo()`, print only `title`. In `FeaturedBook.displayInfo()`, print `title + \" - Edition \" + edition`.",
+      "ExpectedImpact": "Meets the required output format and demonstrates method overriding."
+    },
+    {
+      "Priority": "high",
+      "Title": "Complete main with input, polymorphic object creation, and method call",
+      "Detail": "Use `Scanner` to read the title and edition, create the object as `Book book = new FeaturedBook(title, edition);`, then call `book.displayInfo();`.",
+      "ExpectedImpact": "Completes the required program flow from input to output."
+    }
+  ],
+  "IssueCategories": [
+    "syntax",
+    "partial_solution",
+    "logic"
+  ],
+  "FeedbackText": "The submission is incomplete and currently invalid Java because both constructors use `return null;`. You still need to initialize fields, override `displayInfo()` with the exact required format, and finish `main()` to read input and call the overridden method through a `Book` reference.",
+  "SuggestedComplexity": "O(1) time and O(1) auxiliary space",
+  "ModelName": "gpt-5.4",
+  "CreatedAt": {
+    "$date": "2026-08-21T12:53:42.360Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-21T12:53:42.360Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a889bbf3452470caca6ac98"
+  },
+  "AgentId": {
+    "$oid": "687b1a010000000000000007"
+  },
+  "SubmissionId": {
+    "$oid": "6a87482275224f5423a0fe1a"
+  },
+  "Date": {
+    "$date": "2026-08-21T18:41:03.214Z"
+  },
+  "QuestionType": "PE",
+  "Verdict": "incorrect",
+  "QualityScore": {
+    "Overall": 1,
+    "Correctness": 0.5,
+    "Robustness": 1,
+    "CodeQuality": 1.5,
+    "Efficiency": 2,
+    "Confidence": 0.99
+  },
+  "PerformanceSummary": {
+    "Summary": "The required OOP behavior is not implemented, so the program does not currently solve the problem.",
+    "TimeComplexity": "Cannot be meaningfully evaluated from the unfinished implementation; the intended solution would be O(1).",
+    "SpaceComplexity": "Cannot be meaningfully evaluated from the unfinished implementation; the intended solution would be O(1).",
+    "Notes": [
+      "The code is largely a template with TODO markers still present.",
+      "The intended task only needs constant-time constructor calls, object creation, and one print operation."
+    ]
+  },
+  "ErrorAnalysis": [
+    {
+      "Category": "syntax",
+      "Severity": "high",
+      "Title": "Constructors incorrectly return a value",
+      "Detail": "Both constructors contain `return null;`, which is invalid in Java. Constructors do not return values and cannot use `return <value>`.",
+      "FailingScenarios": [
+        "The code will fail to compile because `Book(String title)` and `FeaturedBook(String title, int edition)` use `return null;`."
+      ]
+    },
+    {
+      "Category": "partial_solution",
+      "Severity": "high",
+      "Title": "Core methods are not implemented",
+      "Detail": "The `Book` constructor, `Book.displayInfo()`, `FeaturedBook` constructor, `FeaturedBook.displayInfo()`, and `main` are all still unfinished. The required inheritance and overriding behavior is missing.",
+      "FailingScenarios": [
+        "Even for a simple input like title=`Java Basics`, edition=`3`, the program has no implemented logic to create the object and print `Java Basics - Edition 3`."
+      ]
+    },
+    {
+      "Category": "logic",
+      "Severity": "high",
+      "Title": "Superclass initialization is missing in FeaturedBook",
+      "Detail": "The `FeaturedBook` constructor must pass the title to the `Book` constructor using `super(title)` and store the edition in its own field. Without this, the inherited `title` field will not be initialized correctly.",
+      "FailingScenarios": [
+        "If `displayInfo()` were later implemented without calling `super(title)` in the constructor, the title could remain unset and output would be wrong."
+      ]
+    },
+    {
+      "Category": "logic",
+      "Severity": "high",
+      "Title": "Required overridden output format is not implemented",
+      "Detail": "The problem requires `FeaturedBook.displayInfo()` to print exactly `<title> - Edition <edition>`. That overriding behavior is currently absent.",
+      "FailingScenarios": [
+        "For input `Clean Code` and `2`, the expected output is `Clean Code - Edition 2`, but there is no implementation to produce it."
+      ]
+    },
+    {
+      "Category": "logic",
+      "Severity": "medium",
+      "Title": "Polymorphic object creation in main is missing",
+      "Detail": "The instructions specifically require creating a `FeaturedBook` object using a `Book` reference, then calling `displayInfo()`. `main` should read the title and edition, assign `Book b = new FeaturedBook(title, edition);`, and call `b.displayInfo();`.",
+      "FailingScenarios": [
+        "Without object creation and method invocation in `main`, no output can be produced for any valid input."
+      ]
+    }
+  ],
+  "ImprovementSuggestions": [
+    {
+      "Priority": "high",
+      "Title": "Fix both constructors",
+      "Detail": "Replace `return null;` with proper constructor bodies. In `Book`, assign `this.title = title;`. In `FeaturedBook`, call `super(title);` and assign `this.edition = edition;`.",
+      "ExpectedImpact": "Resolves the compile-time constructor errors and correctly initializes object state."
+    },
+    {
+      "Priority": "high",
+      "Title": "Implement Book.displayInfo()",
+      "Detail": "Print only the title in the `Book` class: `System.out.println(title);`.",
+      "ExpectedImpact": "Completes the base-class behavior required by the problem."
+    },
+    {
+      "Priority": "high",
+      "Title": "Override FeaturedBook.displayInfo() with the exact required format",
+      "Detail": "Implement `System.out.println(title + \" - Edition \" + edition);` in `FeaturedBook`.",
+      "ExpectedImpact": "Produces the exact output expected for the subclass."
+    },
+    {
+      "Priority": "high",
+      "Title": "Complete main using polymorphism",
+      "Detail": "Use `Scanner` to read the full title line and then the edition number. Create the object as `Book book = new FeaturedBook(title, edition);` and call `book.displayInfo();`.",
+      "ExpectedImpact": "Meets the problem requirement to use a `Book` reference for a `FeaturedBook` object."
+    },
+    {
+      "Priority": "medium",
+      "Title": "Be careful when reading mixed input types",
+      "Detail": "If the title can contain spaces, read it with `nextLine()`. Then read the edition with `nextInt()`. Avoid using `next()` for multi-word titles.",
+      "ExpectedImpact": "Prevents incorrect title parsing for inputs such as `The Hobbit`."
+    }
+  ],
+  "IssueCategories": [
+    "syntax",
+    "partial_solution",
+    "logic"
+  ],
+  "FeedbackText": "The submission is still mostly an unfinished template. The biggest problem is that both constructors use `return null;`, which is invalid Java syntax. You also still need to implement the constructors, override `displayInfo()` in `FeaturedBook`, and complete `main` to create a `FeaturedBook` through a `Book` reference and print the required format.",
+  "SuggestedComplexity": "O(1) time and O(1) extra space for the intended solution.",
+  "ModelName": "gpt-5.4",
+  "CreatedAt": {
+    "$date": "2026-08-21T18:41:03.214Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-21T18:41:03.214Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a89615228675080773318c8"
+  },
+  "AgentId": {
+    "$oid": "687b1a010000000000000007"
+  },
+  "SubmissionId": {
+    "$oid": "6a896013286750807733187e"
+  },
+  "Date": {
+    "$date": "2026-08-22T08:44:02.505Z"
+  },
+  "QuestionType": "PE",
+  "Verdict": "incorrect",
+  "QualityScore": {
+    "Overall": 1,
+    "Correctness": 0.5,
+    "Robustness": 1,
+    "CodeQuality": 2,
+    "Efficiency": 3,
+    "Confidence": 0.99
+  },
+  "PerformanceSummary": {
+    "Summary": "The submission is an incomplete skeleton and does not implement the required behavior.",
+    "TimeComplexity": "Not meaningfully applicable until the missing logic is implemented; the intended solution would be O(1).",
+    "SpaceComplexity": "Not meaningfully applicable until the missing logic is implemented; the intended solution would be O(1).",
+    "Notes": [
+      "All required methods currently return null.",
+      "main() is empty, so no input is read and no output is produced."
+    ]
+  },
+  "ErrorAnalysis": [
+    {
+      "Category": "partial_solution",
+      "Severity": "high",
+      "Title": "Core methods are not implemented",
+      "Detail": "BaseAction.m1(), BaseAction.m2(), BaseAction.describe(), and ChildAction.m2() all return null instead of the required strings. This does not satisfy the problem statement.",
+      "FailingScenarios": [
+        "If describe() is called on either BaseAction or ChildAction, it currently returns null instead of \"m1-m2\" or \"m1-m2-overridden\"."
+      ]
+    },
+    {
+      "Category": "logic",
+      "Severity": "high",
+      "Title": "describe() does not combine m1() and m2()",
+      "Detail": "The task specifically requires describe() to return m1() + \"-\" + m2(). That logic is missing, so the inherited method cannot demonstrate dynamic dispatch through the overridden m2().",
+      "FailingScenarios": [
+        "For n = 1, expected output is \"m1-m2\", but the current code does not produce it.",
+        "For n = 2, expected output is \"m1-m2-overridden\", but the current code does not produce it."
+      ]
+    },
+    {
+      "Category": "partial_solution",
+      "Severity": "high",
+      "Title": "main() is missing all required input/output behavior",
+      "Detail": "The program must read one integer, choose BaseAction or ChildAction accordingly, store it in a BaseAction reference, and print describe(). None of this is implemented.",
+      "FailingScenarios": [
+        "For any input such as 1 or 2, the program currently prints nothing."
+      ]
+    },
+    {
+      "Category": "logic",
+      "Severity": "medium",
+      "Title": "Overriding behavior is not demonstrated",
+      "Detail": "The problem is about calling an overridden method through an inherited method. Because ChildAction.m2() returns null and main() never constructs the objects, the intended polymorphic behavior is absent.",
+      "FailingScenarios": [
+        "When n is not 1, a ChildAction object should be used so that describe() resolves m2() to the overridden version."
+      ]
+    }
+  ],
+  "ImprovementSuggestions": [
+    {
+      "Priority": "high",
+      "Title": "Implement BaseAction methods with the required return values",
+      "Detail": "Change m1() to return \"m1\" and m2() to return \"m2\".",
+      "ExpectedImpact": "Provides the correct base behavior needed by describe()."
+    },
+    {
+      "Priority": "high",
+      "Title": "Implement describe() using method calls",
+      "Detail": "Return m1() + \"-\" + m2() inside BaseAction.describe(). Do not hardcode both final outputs, because the task is testing overridden method resolution.",
+      "ExpectedImpact": "Ensures describe() uses polymorphism correctly when called on a ChildAction object."
+    },
+    {
+      "Priority": "high",
+      "Title": "Override ChildAction.m2() correctly",
+      "Detail": "Return \"m2-overridden\" in ChildAction.m2(). Keep the @Override annotation.",
+      "ExpectedImpact": "Enables the required different output for ChildAction."
+    },
+    {
+      "Priority": "high",
+      "Title": "Complete main() with input, object selection, and output",
+      "Detail": "Use Scanner to read n. Declare BaseAction action; if n == 1 assign new BaseAction(), otherwise assign new ChildAction(). Then print action.describe().",
+      "ExpectedImpact": "Makes the program meet the exact input/output requirements."
+    }
+  ],
+  "IssueCategories": [
+    "partial_solution",
+    "logic"
+  ],
+  "FeedbackText": "The submission is still an incomplete template. The required methods return null, describe() is not implemented, and main() does not read input or print output, so the overriding behavior is not demonstrated.",
+  "SuggestedComplexity": "O(1) time and O(1) space for the intended solution.",
+  "ModelName": "gpt-5.4",
+  "CreatedAt": {
+    "$date": "2026-08-22T08:44:02.505Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-22T08:44:02.505Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a8d6a82810e1de5ec802277"
+  },
+  "AgentId": {
+    "$oid": "687b1a010000000000000007"
+  },
+  "SubmissionId": {
+    "$oid": "6a8d6a74810e1de5ec80225f"
+  },
+  "Date": {
+    "$date": "2026-08-25T10:12:18.622Z"
+  },
+  "QuestionType": "PE",
+  "Verdict": "correct",
+  "QualityScore": {
+    "Overall": 9.7,
+    "Correctness": 10,
+    "Robustness": 9.5,
+    "CodeQuality": 9.6,
+    "Efficiency": 10,
+    "Confidence": 0.94
+  },
+  "PerformanceSummary": {
+    "Summary": "The solution matches the required OOP behavior: Point3D extends Point2D, overrides setValue(int a, int b), reuses the parent implementation, sets z to a + b, and prints in x@y@z format.",
+    "TimeComplexity": "O(1)",
+    "SpaceComplexity": "O(1)",
+    "Notes": [
+      "No execution evidence was provided, so this review is based on static code inspection.",
+      "The use of super.setValue(a, b) correctly preserves inherited behavior as requested."
+    ]
+  },
+  "ErrorAnalysis": [],
+  "ImprovementSuggestions": [
+    {
+      "Priority": "low",
+      "Title": "Print the object directly",
+      "Detail": "You can replace System.out.println(p.toString()); with System.out.println(p); because println automatically calls toString().",
+      "ExpectedImpact": "Slightly cleaner and more idiomatic Java output code."
+    }
+  ],
+  "IssueCategories": [],
+  "FeedbackText": "Your solution is correct. It properly overrides setValue in Point3D, reuses the parent method with super, sets z = a + b, and formats output as x@y@z.",
+  "SuggestedComplexity": "O(1) time and O(1) space",
+  "ModelName": "gpt-5.4-2026-03-05",
+  "CreatedAt": {
+    "$date": "2026-08-25T10:12:18.622Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-25T10:12:18.622Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a8da0ed5d590a6880eb8db5"
+  },
+  "AgentId": {
+    "$oid": "687b1a010000000000000007"
+  },
+  "SubmissionId": {
+    "$oid": "6a8da0c85d590a6880eb8d91"
+  },
+  "Date": {
+    "$date": "2026-08-25T14:04:29.144Z"
+  },
+  "QuestionType": "PE",
+  "Verdict": "incorrect",
+  "QualityScore": {
+    "Overall": 3,
+    "Correctness": 2,
+    "Robustness": 3,
+    "CodeQuality": 5,
+    "Efficiency": 8,
+    "Confidence": 0.98
+  },
+  "PerformanceSummary": {
+    "Summary": "The date-checking logic for a single date is mostly structured clearly, but the program does not satisfy the required input/output format because it processes only one date instead of three.",
+    "TimeComplexity": "O(1)",
+    "SpaceComplexity": "O(1)",
+    "Notes": [
+      "The program uses constant-time checks based on month and leap-year rules.",
+      "Complexity is not the problem here; the main issue is incomplete handling of the required three dates."
+    ]
+  },
+  "ErrorAnalysis": [
+    {
+      "Category": "partial_solution",
+      "Severity": "high",
+      "Title": "Only one date is read and validated",
+      "Detail": "The problem requires reading nine integers representing three dates and printing three results. Your code reads only three integers and prints only one line, so it does not solve the full task.",
+      "FailingScenarios": [
+        "Input: 1 31 2024 2 29 2024 4 31 2024 -> expected 3 output lines, but this program handles only the first date."
+      ]
+    },
+    {
+      "Category": "logic",
+      "Severity": "medium",
+      "Title": "Early return stops processing remaining dates",
+      "Detail": "If the first month is invalid, the program prints INVALID and exits immediately. In this problem, each of the three dates must be classified independently, so one bad date must not prevent checking the others.",
+      "FailingScenarios": [
+        "Input: 13 1 2024 1 1 2024 2 29 2024 -> expected 3 lines, but this program would stop after the first INVALID."
+      ]
+    }
+  ],
+  "ImprovementSuggestions": [
+    {
+      "Priority": "high",
+      "Title": "Process all three dates",
+      "Detail": "Read all nine integers or loop three times reading m, d, y, then run the same validation logic for each date and print one result per date.",
+      "ExpectedImpact": "Makes the program match the required input and output format."
+    },
+    {
+      "Priority": "high",
+      "Title": "Remove the early program exit for invalid month",
+      "Detail": "Instead of returning from main when a month is invalid, print INVALID for that date and continue to the next date.",
+      "ExpectedImpact": "Ensures every date is classified, even if an earlier one is invalid."
+    },
+    {
+      "Priority": "medium",
+      "Title": "Extract validation into a helper function",
+      "Detail": "Create a function such as int isValidDate(int m, int d, int y) that returns 1 for valid and 0 for invalid. Then call it three times.",
+      "ExpectedImpact": "Reduces duplication and makes the program easier to test and maintain."
+    }
+  ],
+  "IssueCategories": [
+    "partial_solution",
+    "logic"
+  ],
+  "FeedbackText": "Your single-date validation logic is reasonable, but the submission is incomplete for this problem. You must read and classify three dates, and you should not exit after the first invalid one.",
+  "SuggestedComplexity": "O(1) time and O(1) space",
+  "ModelName": "gpt-5.4-2026-03-05",
+  "CreatedAt": {
+    "$date": "2026-08-25T14:04:29.144Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-25T14:04:29.144Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a8eb12a16353d211097515b"
+  },
+  "AgentId": {
+    "$oid": "687b1a010000000000000007"
+  },
+  "SubmissionId": {
+    "$oid": "6a8eb0f016353d2110975140"
+  },
+  "Date": {
+    "$date": "2026-08-26T09:26:02.086Z"
+  },
+  "QuestionType": "PE",
+  "Verdict": "incorrect",
+  "QualityScore": {
+    "Overall": 1.2,
+    "Correctness": 0.5,
+    "Robustness": 1,
+    "CodeQuality": 2,
+    "Efficiency": 2,
+    "Confidence": 0.99
+  },
+  "PerformanceSummary": {
+    "Summary": "The required behaviors are not implemented, so the program does not currently solve the problem.",
+    "TimeComplexity": "Not meaningfully applicable in the current incomplete state. A correct loop-based solution would typically be O(inc + dec).",
+    "SpaceComplexity": "Not meaningfully applicable in the current incomplete state. A correct solution would typically use O(1) extra space.",
+    "Notes": [
+      "The constructor is implemented correctly.",
+      "increment(), decrement(), getValue(), and main() are still unfinished."
+    ]
+  },
+  "ErrorAnalysis": [
+    {
+      "Category": "partial_solution",
+      "Severity": "high",
+      "Title": "Core Counter methods are not implemented",
+      "Detail": "The increment() and decrement() methods do nothing, and getValue() always returns 0 instead of the current field value. This means the Counter object state never changes as required.",
+      "FailingScenarios": [
+        "If the initial value is 5, increment is called 2 times, and decrement is called 1 time, the expected final value is 6, but the current class cannot produce that behavior."
+      ]
+    },
+    {
+      "Category": "partial_solution",
+      "Severity": "high",
+      "Title": "main() does not read input or print output",
+      "Detail": "The main method is empty, so the program does not create a Counter, does not perform the required number of method calls, and does not print the final value.",
+      "FailingScenarios": [
+        "For any valid input such as 10 3 4, the program currently produces no result."
+      ]
+    },
+    {
+      "Category": "logic",
+      "Severity": "high",
+      "Title": "getValue() returns the wrong value",
+      "Detail": "Returning 0 unconditionally ignores the actual state stored in the value field. The method must return value.",
+      "FailingScenarios": [
+        "If a Counter is created with value 7, getValue() should return 7 before any updates, but the current code returns 0."
+      ]
+    }
+  ],
+  "ImprovementSuggestions": [
+    {
+      "Priority": "high",
+      "Title": "Implement state updates in increment() and decrement()",
+      "Detail": "Change increment() to do value++; and decrement() to do value--; so the object state changes correctly.",
+      "ExpectedImpact": "This fixes the main object behavior required by the problem."
+    },
+    {
+      "Priority": "high",
+      "Title": "Return the field in getValue()",
+      "Detail": "Replace return 0; with return value; so callers can read the current counter state.",
+      "ExpectedImpact": "This makes the getter reflect the actual stored value."
+    },
+    {
+      "Priority": "high",
+      "Title": "Complete main() to follow the input/output specification",
+      "Detail": "Use Scanner to read three integers: initial value, increment count, and decrement count. Create one Counter object, call increment() in a loop the required number of times, call decrement() in another loop, then print counter.getValue().",
+      "ExpectedImpact": "This makes the full program match the required behavior."
+    },
+    {
+      "Priority": "medium",
+      "Title": "Keep the solution simple and aligned with the OOP requirement",
+      "Detail": "Do not compute the final answer directly in main without using the Counter methods. The task specifically asks you to update one object's state through its behaviors.",
+      "ExpectedImpact": "This ensures the submission satisfies both the functional and object-oriented intent of the exercise."
+    }
+  ],
+  "IssueCategories": [
+    "partial_solution",
+    "logic"
+  ],
+  "FeedbackText": "The class skeleton is started, but the required behaviors are still missing. Implement increment(), decrement(), and getValue(), then complete main() to read input, update one Counter object, and print the final value.",
+  "SuggestedComplexity": "A straightforward correct solution uses O(inc + dec) time and O(1) extra space.",
+  "ModelName": "gpt-5.4-2026-03-05",
+  "CreatedAt": {
+    "$date": "2026-08-26T09:26:02.086Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-26T09:26:02.086Z"
+  }
+}]

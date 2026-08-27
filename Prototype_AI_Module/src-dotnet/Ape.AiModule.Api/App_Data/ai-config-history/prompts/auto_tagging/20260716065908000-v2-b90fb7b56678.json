@@ -1,0 +1,28 @@
+﻿{
+    "snapshot_id":  "auto_tagging:v2:20260716065908000:b90fb7b56678",
+    "artifact_type":  "prompts",
+    "stable_id":  "auto_tagging",
+    "version":  "v2",
+    "function_name":  "EmbeddingTagging",
+    "subject_code":  "",
+    "question_type":  "",
+    "language":  "en",
+    "description":  "Chunk auto tagging",
+    "is_active":  true,
+    "source":  "git_backfill",
+    "source_commit":  "511aa50726eca82952abff8f8b29642d20a4d019",
+    "captured_from":  "src-dotnet/Ape.AiModule.Api/App_Data/ai-prompts.json",
+    "captured_at":  "2026-07-16T06:59:08.0000000Z",
+    "content_hash":  "b90fb7b5667855b4aa672b35a0c696fb2f2e125bdc0e5b0f7ef192ab49c8f2b4",
+    "change_reason":  "Add AI module prototype, operator UI, and docs",
+    "change_summary":  "Initial snapshot imported from git history.",
+    "content":  {
+                    "description":  "Chunk auto tagging",
+                    "is_active":  true,
+                    "key":  "auto_tagging",
+                    "system_prompt":  "You assign topic tags to educational knowledge chunks for retrieval and question generation. Use only the allowed taxonomy. Be conservative and prefer fewer accurate tags over many noisy tags.",
+                    "updated_at":  "2026-07-15T15:55:03.047688+00:00",
+                    "user_prompt":  "Allowed tags: {{allowed_tags}}\nTagging taxonomy and policy:\n{{taxonomy_json}}\nSubject: {{subject}}\nLanguage: {{language}}\nChunk:\n{{content}}\n\nRules:\n- Use only tags that are semantically supported by the chunk.\n- Return at most 5 tags.\n- Prefer specific topic tags over broad generic tags.\n- Do not invent new tags outside the allowed taxonomy.\n- Return strict JSON only.\n\nReturn:\n{\"topic_tags\":[\"tag1\",\"tag2\"]}",
+                    "version":  "v2"
+                }
+}

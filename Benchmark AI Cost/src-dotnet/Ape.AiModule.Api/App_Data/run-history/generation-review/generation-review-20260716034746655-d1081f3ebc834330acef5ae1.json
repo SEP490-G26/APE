@@ -1,0 +1,662 @@
+{
+  "Summary": {
+    "RunId": "generation-review-20260716034746655-d1081f3ebc834330acef5ae1",
+    "FunctionName": "generation-review",
+    "RouteKey": "generation-review",
+    "RecordedAt": "2026-07-16T03:47:46.655671+00:00",
+    "RequestType": "GenerationReviewRequest",
+    "ResponseType": "GenerationReviewResult",
+    "Status": "needs_revision",
+    "ModelSummary": "GeneratorModel=gpt-4o; ReviewerModel=gpt-4o",
+    "Totals": {
+      "InputTokens": 472,
+      "OutputTokens": 574,
+      "InputCostUsd": 0.000070,
+      "OutputCostUsd": 0.000344,
+      "TotalCostUsd": 0.000414,
+      "LatencyMs": 1882.8
+    },
+    "FileName": "generation-review-20260716034746655-d1081f3ebc834330acef5ae1.json"
+  },
+  "Request": {
+    "UserId": "user-demo",
+    "CourseId": "course-java-oop",
+    "DocumentId": "doc-java-oop-001",
+    "IsPublic": false,
+    "Subject": "JAVA_OOP",
+    "Difficulty": "Medium",
+    "QuestionType": "FE",
+    "Count": 1,
+    "Mode": "DualAgent",
+    "GeneratorModel": "gpt-4o",
+    "ReviewerModel": "gpt-4o",
+    "MaxAttempts": 2,
+    "Chunks": [
+      {
+        "ChunkId": "chunk-java-001",
+        "ContentText": "A class defines fields and methods. Constructors initialize object state.",
+        "TopicTags": [
+          "class",
+          "constructor"
+        ],
+        "SectionTitle": "Classes",
+        "Language": "en"
+      },
+      {
+        "ChunkId": "chunk-java-002",
+        "ContentText": "Arrays store multiple elements of the same type and are indexed from 0.",
+        "TopicTags": [
+          "array"
+        ],
+        "SectionTitle": "Arrays",
+        "Language": "en"
+      }
+    ]
+  },
+  "Response": {
+    "Subject": "JAVA_OOP",
+    "Questions": [
+      {
+        "Type": "FE",
+        "TopicTags": [
+          "class",
+          "constructor",
+          "array"
+        ],
+        "Difficulty": "Medium",
+        "Title": "Behavior of Constructors and Arrays",
+        "Description": "Which of the following statements about constructors and arrays is correct?",
+        "SourceChunkIds": [
+          "chunk-java-001",
+          "chunk-java-002"
+        ],
+        "SkeletonCode": null,
+        "SolutionCode": null,
+        "TestCases": null,
+        "Options": [
+          "A. Constructors in a class can initialize arrays as part of an object\u0027s state.",
+          "B. Arrays in Java can only store primitive data types.",
+          "C. A class cannot use constructors to define fields that refer to arrays.",
+          "D. Arrays in Java are not indexed, unlike lists."
+        ],
+        "CorrectAnswer": [
+          "A"
+        ],
+        "Explanation": "Constructors in Java can be designed to initialize arrays as part of an object\u0027s state. Arrays are indexed from 0 and can store both primitive and reference data types, making options B, C, and D incorrect."
+      }
+    ],
+    "SchemaMapping": {
+      "Subject": "JAVA_OOP",
+      "QuestionType": "FE",
+      "IsValid": true,
+      "InputQuestionCount": 1,
+      "ValidQuestionCount": 1,
+      "Issues": [],
+      "FeQuestions": [
+        {
+          "Type": "FE",
+          "Subject": "JAVA_OOP",
+          "Difficulty": "Medium",
+          "TopicTags": [
+            "class",
+            "constructor",
+            "array"
+          ],
+          "Title": "Behavior of Constructors and Arrays",
+          "Description": "Which of the following statements about constructors and arrays is correct?",
+          "SourceChunkIds": [
+            "chunk-java-001",
+            "chunk-java-002"
+          ],
+          "Options": [
+            "A. Constructors in a class can initialize arrays as part of an object\u0027s state.",
+            "B. Arrays in Java can only store primitive data types.",
+            "C. A class cannot use constructors to define fields that refer to arrays.",
+            "D. Arrays in Java are not indexed, unlike lists."
+          ],
+          "CorrectAnswer": [
+            "A"
+          ],
+          "Explanation": "Constructors in Java can be designed to initialize arrays as part of an object\u0027s state. Arrays are indexed from 0 and can store both primitive and reference data types, making options B, C, and D incorrect."
+        }
+      ],
+      "PeQuestions": []
+    },
+    "DifficultyAlignment": {
+      "RequestedDifficulty": "Medium",
+      "EstimatedDifficulty": "Easy",
+      "IsAligned": false,
+      "Signals": [
+        "FE explanation suggests deeper reasoning demand."
+      ],
+      "Confidence": 0.65
+    },
+    "MappedFeQuestions": [
+      {
+        "Id": "feq-85a979d2a1b94279a66a433",
+        "CourseId": "course-java-oop",
+        "SourceChunkIds": [
+          "chunk-java-001",
+          "chunk-java-002"
+        ],
+        "TopicTags": [
+          "class",
+          "constructor",
+          "array"
+        ],
+        "Difficulty": "Medium",
+        "Title": "Behavior of Constructors and Arrays",
+        "Description": "Which of the following statements about constructors and arrays is correct?",
+        "Options": [
+          "A. Constructors in a class can initialize arrays as part of an object\u0027s state.",
+          "B. Arrays in Java can only store primitive data types.",
+          "C. A class cannot use constructors to define fields that refer to arrays.",
+          "D. Arrays in Java are not indexed, unlike lists."
+        ],
+        "CorrectAnswer": [
+          "A"
+        ],
+        "Explanation": "Constructors in Java can be designed to initialize arrays as part of an object\u0027s state. Arrays are indexed from 0 and can store both primitive and reference data types, making options B, C, and D incorrect.",
+        "CreatedBy": "user-demo",
+        "IsPublic": false,
+        "ReviewStatus": "needs_revision",
+        "PipelineRunId": "genrev-20260716034735-c3df70b8f62b44b198",
+        "CreatedAt": "2026-07-16T03:47:46.6453794+00:00",
+        "UpdatedAt": "2026-07-16T03:47:46.6453794+00:00"
+      }
+    ],
+    "MappedPeQuestions": [],
+    "Review": {
+      "ReviewStatus": "needs_revision",
+      "Issues": [
+        "Difficulty alignment mismatch: requested \u0027Medium\u0027 but estimated \u0027Easy\u0027."
+      ],
+      "Suggestions": [
+        "Adjust the generated question so that the reasoning load matches the requested difficulty."
+      ],
+      "Score": 0.55,
+      "SchemaValid": true,
+      "ContentGrounded": true,
+      "NeedsRevision": true,
+      "ReviewerModel": "gpt-4o"
+    },
+    "AttemptsUsed": 2,
+    "StageLogs": [
+      {
+        "StageName": "question-generation-attempt-1",
+        "Status": "Completed",
+        "Cost": {
+          "InputTokens": 36,
+          "OutputTokens": 184,
+          "InputCostUsd": 0.000005,
+          "OutputCostUsd": 0.000110,
+          "TotalCostUsd": 0.000115,
+          "LatencyMs": 396.0
+        },
+        "Metadata": {
+          "question_type": "FE",
+          "difficulty": "Medium",
+          "count": "1",
+          "schema_valid": "True",
+          "schema_issue_count": "0",
+          "difficulty_aligned": "False",
+          "estimated_difficulty": "Easy",
+          "duplicate_issue_count": "0"
+        }
+      },
+      {
+        "StageName": "question-review-attempt-1",
+        "Status": "Completed",
+        "Cost": {
+          "InputTokens": 184,
+          "OutputTokens": 87,
+          "InputCostUsd": 0.000028,
+          "OutputCostUsd": 0.000052,
+          "TotalCostUsd": 0.000080,
+          "LatencyMs": 487.8
+        },
+        "Metadata": {
+          "review_status": "needs_revision",
+          "issues_count": "1",
+          "score": "0.55",
+          "schema_valid": "True",
+          "content_grounded": "True"
+        }
+      },
+      {
+        "StageName": "question-generation-attempt-2",
+        "Status": "Completed",
+        "Cost": {
+          "InputTokens": 36,
+          "OutputTokens": 216,
+          "InputCostUsd": 0.000005,
+          "OutputCostUsd": 0.000130,
+          "TotalCostUsd": 0.000135,
+          "LatencyMs": 453.6
+        },
+        "Metadata": {
+          "question_type": "FE",
+          "difficulty": "Medium",
+          "count": "1",
+          "schema_valid": "True",
+          "schema_issue_count": "0",
+          "difficulty_aligned": "False",
+          "estimated_difficulty": "Easy",
+          "duplicate_issue_count": "0"
+        }
+      },
+      {
+        "StageName": "question-review-attempt-2",
+        "Status": "Completed",
+        "Cost": {
+          "InputTokens": 216,
+          "OutputTokens": 87,
+          "InputCostUsd": 0.000032,
+          "OutputCostUsd": 0.000052,
+          "TotalCostUsd": 0.000084,
+          "LatencyMs": 545.4
+        },
+        "Metadata": {
+          "review_status": "needs_revision",
+          "issues_count": "1",
+          "score": "0.55",
+          "schema_valid": "True",
+          "content_grounded": "True"
+        }
+      }
+    ],
+    "UsageLogs": [
+      {
+        "UsageLogId": "usage-56d8798742fd45d0a7f3",
+        "TriggeredBy": "user-demo",
+        "AgentId": "AI_Generator",
+        "PipelineRunId": "genrev-20260716034735-c3df70b8f62b44b198",
+        "StageName": "question_generation",
+        "AttemptIndex": 1,
+        "Provider": "openai",
+        "ModelName": "gpt-4o",
+        "CreditsDeducted": 0.1150,
+        "InputTokens": 36,
+        "OutputTokens": 184,
+        "TokensUsed": 220,
+        "InputCostUsd": 0.000005,
+        "OutputCostUsd": 0.000110,
+        "CostUsd": 0.000115,
+        "Status": "generated",
+        "CreatedAt": "2026-07-16T03:47:40.5439921+00:00",
+        "PayloadData": {
+          "PipelineType": "generation_review",
+          "Subject": "JAVA_OOP",
+          "QuestionType": "FE",
+          "Difficulty": "Medium",
+          "Result": "generated",
+          "Input": {
+            "Mode": "DualAgent",
+            "Count": 1,
+            "Chunks": [
+              {
+                "ChunkId": "chunk-java-001",
+                "ContentText": "A class defines fields and methods. Constructors initialize object state.",
+                "TopicTags": [
+                  "class",
+                  "constructor"
+                ],
+                "SectionTitle": "Classes",
+                "Language": "en"
+              },
+              {
+                "ChunkId": "chunk-java-002",
+                "ContentText": "Arrays store multiple elements of the same type and are indexed from 0.",
+                "TopicTags": [
+                  "array"
+                ],
+                "SectionTitle": "Arrays",
+                "Language": "en"
+              }
+            ],
+            "revisionFeedback": null,
+            "previousQuestions": null
+          },
+          "Output": [
+            {
+              "Type": "FE",
+              "TopicTags": [
+                "class",
+                "constructor",
+                "array"
+              ],
+              "Difficulty": "Medium",
+              "Title": "Understanding Constructors in Classes",
+              "Description": "In Java, which of the following statements is true about constructors in a class?",
+              "SourceChunkIds": [
+                "chunk-java-001",
+                "chunk-java-002"
+              ],
+              "SkeletonCode": null,
+              "SolutionCode": null,
+              "TestCases": null,
+              "Options": [
+                "A. Constructors are used to initialize the state of an object.",
+                "B. A class can only have one constructor.",
+                "C. Constructors can have a return type.",
+                "D. Constructors cannot be overloaded."
+              ],
+              "CorrectAnswer": [
+                "A"
+              ],
+              "Explanation": "Constructors in Java are special methods used to initialize the state of an object when it is created. They do not have a return type and can be overloaded."
+            }
+          ]
+        }
+      },
+      {
+        "UsageLogId": "usage-69220b5668194f62ab00",
+        "TriggeredBy": "user-demo",
+        "AgentId": "AI_Reviewer",
+        "PipelineRunId": "genrev-20260716034735-c3df70b8f62b44b198",
+        "StageName": "question_review",
+        "AttemptIndex": 1,
+        "Provider": "openai",
+        "ModelName": "gpt-4o",
+        "CreditsDeducted": 0.0800,
+        "InputTokens": 184,
+        "OutputTokens": 87,
+        "TokensUsed": 271,
+        "InputCostUsd": 0.000028,
+        "OutputCostUsd": 0.000052,
+        "CostUsd": 0.000080,
+        "Status": "needs_revision",
+        "CreatedAt": "2026-07-16T03:47:42.2653133+00:00",
+        "PayloadData": {
+          "PipelineType": "generation_review",
+          "Subject": "JAVA_OOP",
+          "QuestionType": "FE",
+          "Difficulty": "Medium",
+          "Result": "needs_revision",
+          "Input": {
+            "Mode": "DualAgent",
+            "Chunks": [
+              {
+                "ChunkId": "chunk-java-001",
+                "ContentText": "A class defines fields and methods. Constructors initialize object state.",
+                "TopicTags": [
+                  "class",
+                  "constructor"
+                ],
+                "SectionTitle": "Classes",
+                "Language": "en"
+              },
+              {
+                "ChunkId": "chunk-java-002",
+                "ContentText": "Arrays store multiple elements of the same type and are indexed from 0.",
+                "TopicTags": [
+                  "array"
+                ],
+                "SectionTitle": "Arrays",
+                "Language": "en"
+              }
+            ],
+            "questions": [
+              {
+                "Type": "FE",
+                "TopicTags": [
+                  "class",
+                  "constructor",
+                  "array"
+                ],
+                "Difficulty": "Medium",
+                "Title": "Understanding Constructors in Classes",
+                "Description": "In Java, which of the following statements is true about constructors in a class?",
+                "SourceChunkIds": [
+                  "chunk-java-001",
+                  "chunk-java-002"
+                ],
+                "SkeletonCode": null,
+                "SolutionCode": null,
+                "TestCases": null,
+                "Options": [
+                  "A. Constructors are used to initialize the state of an object.",
+                  "B. A class can only have one constructor.",
+                  "C. Constructors can have a return type.",
+                  "D. Constructors cannot be overloaded."
+                ],
+                "CorrectAnswer": [
+                  "A"
+                ],
+                "Explanation": "Constructors in Java are special methods used to initialize the state of an object when it is created. They do not have a return type and can be overloaded."
+              }
+            ]
+          },
+          "Output": {
+            "ReviewStatus": "needs_revision",
+            "Issues": [
+              "Difficulty alignment mismatch: requested \u0027Medium\u0027 but estimated \u0027Easy\u0027."
+            ],
+            "Suggestions": [
+              "Adjust the generated question so that the reasoning load matches the requested difficulty."
+            ],
+            "Score": 0.55,
+            "SchemaValid": true,
+            "ContentGrounded": true,
+            "NeedsRevision": true,
+            "ReviewerModel": "gpt-4o"
+          }
+        }
+      },
+      {
+        "UsageLogId": "usage-9671c36cabff43a48b03",
+        "TriggeredBy": "user-demo",
+        "AgentId": "AI_Generator",
+        "PipelineRunId": "genrev-20260716034735-c3df70b8f62b44b198",
+        "StageName": "question_generation",
+        "AttemptIndex": 2,
+        "Provider": "openai",
+        "ModelName": "gpt-4o",
+        "CreditsDeducted": 0.1350,
+        "InputTokens": 36,
+        "OutputTokens": 216,
+        "TokensUsed": 252,
+        "InputCostUsd": 0.000005,
+        "OutputCostUsd": 0.000130,
+        "CostUsd": 0.000135,
+        "Status": "generated",
+        "CreatedAt": "2026-07-16T03:47:44.8094222+00:00",
+        "PayloadData": {
+          "PipelineType": "generation_review",
+          "Subject": "JAVA_OOP",
+          "QuestionType": "FE",
+          "Difficulty": "Medium",
+          "Result": "generated",
+          "Input": {
+            "Mode": "DualAgent",
+            "Count": 1,
+            "Chunks": [
+              {
+                "ChunkId": "chunk-java-001",
+                "ContentText": "A class defines fields and methods. Constructors initialize object state.",
+                "TopicTags": [
+                  "class",
+                  "constructor"
+                ],
+                "SectionTitle": "Classes",
+                "Language": "en"
+              },
+              {
+                "ChunkId": "chunk-java-002",
+                "ContentText": "Arrays store multiple elements of the same type and are indexed from 0.",
+                "TopicTags": [
+                  "array"
+                ],
+                "SectionTitle": "Arrays",
+                "Language": "en"
+              }
+            ],
+            "revisionFeedback": "Difficulty alignment mismatch: requested \u0027Medium\u0027 but estimated \u0027Easy\u0027.\nAdjust the generated question so that the reasoning load matches the requested difficulty.",
+            "previousQuestions": [
+              {
+                "Type": "FE",
+                "TopicTags": [
+                  "class",
+                  "constructor",
+                  "array"
+                ],
+                "Difficulty": "Medium",
+                "Title": "Understanding Constructors in Classes",
+                "Description": "In Java, which of the following statements is true about constructors in a class?",
+                "SourceChunkIds": [
+                  "chunk-java-001",
+                  "chunk-java-002"
+                ],
+                "SkeletonCode": null,
+                "SolutionCode": null,
+                "TestCases": null,
+                "Options": [
+                  "A. Constructors are used to initialize the state of an object.",
+                  "B. A class can only have one constructor.",
+                  "C. Constructors can have a return type.",
+                  "D. Constructors cannot be overloaded."
+                ],
+                "CorrectAnswer": [
+                  "A"
+                ],
+                "Explanation": "Constructors in Java are special methods used to initialize the state of an object when it is created. They do not have a return type and can be overloaded."
+              }
+            ]
+          },
+          "Output": [
+            {
+              "Type": "FE",
+              "TopicTags": [
+                "class",
+                "constructor",
+                "array"
+              ],
+              "Difficulty": "Medium",
+              "Title": "Behavior of Constructors and Arrays",
+              "Description": "Which of the following statements about constructors and arrays is correct?",
+              "SourceChunkIds": [
+                "chunk-java-001",
+                "chunk-java-002"
+              ],
+              "SkeletonCode": null,
+              "SolutionCode": null,
+              "TestCases": null,
+              "Options": [
+                "A. Constructors in a class can initialize arrays as part of an object\u0027s state.",
+                "B. Arrays in Java can only store primitive data types.",
+                "C. A class cannot use constructors to define fields that refer to arrays.",
+                "D. Arrays in Java are not indexed, unlike lists."
+              ],
+              "CorrectAnswer": [
+                "A"
+              ],
+              "Explanation": "Constructors in Java can be designed to initialize arrays as part of an object\u0027s state. Arrays are indexed from 0 and can store both primitive and reference data types, making options B, C, and D incorrect."
+            }
+          ]
+        }
+      },
+      {
+        "UsageLogId": "usage-4e395a7a8960458d8d50",
+        "TriggeredBy": "user-demo",
+        "AgentId": "AI_Reviewer",
+        "PipelineRunId": "genrev-20260716034735-c3df70b8f62b44b198",
+        "StageName": "question_review",
+        "AttemptIndex": 2,
+        "Provider": "openai",
+        "ModelName": "gpt-4o",
+        "CreditsDeducted": 0.0840,
+        "InputTokens": 216,
+        "OutputTokens": 87,
+        "TokensUsed": 303,
+        "InputCostUsd": 0.000032,
+        "OutputCostUsd": 0.000052,
+        "CostUsd": 0.000084,
+        "Status": "needs_revision",
+        "CreatedAt": "2026-07-16T03:47:46.6427003+00:00",
+        "PayloadData": {
+          "PipelineType": "generation_review",
+          "Subject": "JAVA_OOP",
+          "QuestionType": "FE",
+          "Difficulty": "Medium",
+          "Result": "needs_revision",
+          "Input": {
+            "Mode": "DualAgent",
+            "Chunks": [
+              {
+                "ChunkId": "chunk-java-001",
+                "ContentText": "A class defines fields and methods. Constructors initialize object state.",
+                "TopicTags": [
+                  "class",
+                  "constructor"
+                ],
+                "SectionTitle": "Classes",
+                "Language": "en"
+              },
+              {
+                "ChunkId": "chunk-java-002",
+                "ContentText": "Arrays store multiple elements of the same type and are indexed from 0.",
+                "TopicTags": [
+                  "array"
+                ],
+                "SectionTitle": "Arrays",
+                "Language": "en"
+              }
+            ],
+            "questions": [
+              {
+                "Type": "FE",
+                "TopicTags": [
+                  "class",
+                  "constructor",
+                  "array"
+                ],
+                "Difficulty": "Medium",
+                "Title": "Behavior of Constructors and Arrays",
+                "Description": "Which of the following statements about constructors and arrays is correct?",
+                "SourceChunkIds": [
+                  "chunk-java-001",
+                  "chunk-java-002"
+                ],
+                "SkeletonCode": null,
+                "SolutionCode": null,
+                "TestCases": null,
+                "Options": [
+                  "A. Constructors in a class can initialize arrays as part of an object\u0027s state.",
+                  "B. Arrays in Java can only store primitive data types.",
+                  "C. A class cannot use constructors to define fields that refer to arrays.",
+                  "D. Arrays in Java are not indexed, unlike lists."
+                ],
+                "CorrectAnswer": [
+                  "A"
+                ],
+                "Explanation": "Constructors in Java can be designed to initialize arrays as part of an object\u0027s state. Arrays are indexed from 0 and can store both primitive and reference data types, making options B, C, and D incorrect."
+              }
+            ]
+          },
+          "Output": {
+            "ReviewStatus": "needs_revision",
+            "Issues": [
+              "Difficulty alignment mismatch: requested \u0027Medium\u0027 but estimated \u0027Easy\u0027."
+            ],
+            "Suggestions": [
+              "Adjust the generated question so that the reasoning load matches the requested difficulty."
+            ],
+            "Score": 0.55,
+            "SchemaValid": true,
+            "ContentGrounded": true,
+            "NeedsRevision": true,
+            "ReviewerModel": "gpt-4o"
+          }
+        }
+      }
+    ],
+    "Totals": {
+      "InputTokens": 472,
+      "OutputTokens": 574,
+      "InputCostUsd": 0.000070,
+      "OutputCostUsd": 0.000344,
+      "TotalCostUsd": 0.000414,
+      "LatencyMs": 1882.8
+    }
+  }
+}

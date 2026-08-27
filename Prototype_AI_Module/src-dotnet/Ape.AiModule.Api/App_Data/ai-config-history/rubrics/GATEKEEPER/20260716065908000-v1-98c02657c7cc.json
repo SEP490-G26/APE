@@ -1,0 +1,42 @@
+﻿{
+    "snapshot_id":  "GATEKEEPER:v1:20260716065908000:98c02657c7cc",
+    "artifact_type":  "rubrics",
+    "stable_id":  "GATEKEEPER",
+    "version":  "v1",
+    "function_name":  "Gatekeeper",
+    "subject_code":  "",
+    "question_type":  "",
+    "language":  "en",
+    "description":  "Lightweight rubric for classifying whether a document belongs to the supported subject whitelist.",
+    "is_active":  true,
+    "source":  "git_backfill",
+    "source_commit":  "511aa50726eca82952abff8f8b29642d20a4d019",
+    "captured_from":  "src-dotnet/Ape.AiModule.Api/App_Data/ai-rubrics/GATEKEEPER.json",
+    "captured_at":  "2026-07-16T06:59:08.0000000Z",
+    "content_hash":  "98c02657c7cc7f979d1f01b97c817a2e78732c6d0e081809efc96ce72a26b292",
+    "change_reason":  "Add AI module prototype, operator UI, and docs",
+    "change_summary":  "Initial snapshot imported from git history.",
+    "content":  {
+                    "rubric_id":  "GATEKEEPER",
+                    "rubric_name":  "Gatekeeper Whitelist Classification",
+                    "function_name":  "Gatekeeper",
+                    "version":  "v1",
+                    "language":  "en",
+                    "description":  "Lightweight rubric for classifying whether a document belongs to the supported subject whitelist.",
+                    "classification_checks":  [
+                                                  "Use only the visible extracted content.",
+                                                  "Check whether the material belongs to exactly one supported subject area.",
+                                                  "Reject content that is clearly outside the whitelist.",
+                                                  "Return ambiguous when the content is too short, too noisy, or mixes multiple supported subject areas.",
+                                                  "Do not infer from filename alone if topic evidence is weak."
+                                              ],
+                    "supported_subjects":  [
+                                               "C",
+                                               "JAVA_OOP",
+                                               "DSA_JAVA"
+                                           ],
+                    "acceptance_rule":  "Return supported only when there is clear evidence for exactly one supported subject.",
+                    "ambiguity_rule":  "Return ambiguous when evidence is insufficient or mixed.",
+                    "rejection_rule":  "Return unsupported when the content is outside the supported subject whitelist."
+                }
+}

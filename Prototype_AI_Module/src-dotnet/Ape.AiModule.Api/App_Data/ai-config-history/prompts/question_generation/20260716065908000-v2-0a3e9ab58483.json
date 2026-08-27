@@ -1,0 +1,28 @@
+﻿{
+    "snapshot_id":  "question_generation:v2:20260716065908000:0a3e9ab58483",
+    "artifact_type":  "prompts",
+    "stable_id":  "question_generation",
+    "version":  "v2",
+    "function_name":  "QuestionGeneration",
+    "subject_code":  "",
+    "question_type":  "",
+    "language":  "en",
+    "description":  "Question generation for FE/PE",
+    "is_active":  true,
+    "source":  "git_backfill",
+    "source_commit":  "511aa50726eca82952abff8f8b29642d20a4d019",
+    "captured_from":  "src-dotnet/Ape.AiModule.Api/App_Data/ai-prompts.json",
+    "captured_at":  "2026-07-16T06:59:08.0000000Z",
+    "content_hash":  "0a3e9ab58483ea540039bf9da3974f9c879181c738fb053ad00f2affac786d97",
+    "change_reason":  "Add AI module prototype, operator UI, and docs",
+    "change_summary":  "Initial snapshot imported from git history.",
+    "content":  {
+                    "description":  "Question generation for FE/PE",
+                    "is_active":  true,
+                    "key":  "question_generation",
+                    "system_prompt":  "You generate programming questions in strict JSON only. Never return markdown fences, prose, comments, or explanations outside JSON. Every field required by the requested schema must be present. Ground every question in the provided chunks.",
+                    "updated_at":  "2026-07-15T15:55:03.0476881+00:00",
+                    "user_prompt":  "Subject: {{subject}}\nDifficulty: {{difficulty}}\nQuestionType: {{question_type}}\nCount: {{count}}\nContext chunks:\n{{chunks_json}}\nRevision feedback: {{revision_feedback}}\nPrevious questions: {{previous_questions_json}}\n\nReturn ONLY a JSON array.\n\nIf QuestionType = FE, each object must be:\n{\n  \"type\": \"FE\",\n  \"topic_tags\": [\"...\"],\n  \"difficulty\": \"Easy|Medium|Hard\",\n  \"title\": \"...\",\n  \"description\": \"...\",\n  \"source_chunk_ids\": [\"chunk-...\"],\n  \"skeleton_code\": null,\n  \"solution_code\": null,\n  \"test_cases\": null,\n  \"options\": [\"A. ...\", \"B. ...\", \"C. ...\", \"D. ...\"],\n  \"correct_answer\": [\"A\"],\n  \"explanation\": \"...\"\n}\n\nIf QuestionType = PE, each object must be:\n{\n  \"type\": \"PE\",\n  \"topic_tags\": [\"...\"],\n  \"difficulty\": \"Easy|Medium|Hard\",\n  \"title\": \"...\",\n  \"description\": \"...\",\n  \"source_chunk_ids\": [\"chunk-...\"],\n  \"skeleton_code\": [\n    {\n      \"filename\": \"Main.java or main.c\",\n      \"content\": \"...\",\n      \"is_readonly\": false\n    }\n  ],\n  \"solution_code\": [\n    {\n      \"filename\": \"Main.java or main.c\",\n      \"content\": \"...\"\n    }\n  ],\n  \"test_cases\": [\n    {\n      \"input\": \"...\",\n      \"expected_output\": \"...\",\n      \"is_hidden\": false\n    }\n  ],\n  \"options\": null,\n  \"correct_answer\": null,\n  \"explanation\": null\n}\n\nRules:\n- Use only information grounded in the provided chunks.\n- source_chunk_ids must reference chunk ids that exist in the input.\n- For FE, correct_answer must contain option labels such as [\"A\"] or [\"B\"].\n- For PE, test_cases must include at least 1 visible case and preferably 1 hidden case.\n- Do not omit fields.\n- Do not return placeholder nulls for required fields.",
+                    "version":  "v2"
+                }
+}

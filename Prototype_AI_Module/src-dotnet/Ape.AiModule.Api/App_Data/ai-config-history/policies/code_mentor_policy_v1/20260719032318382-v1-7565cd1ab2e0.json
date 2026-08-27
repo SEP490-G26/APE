@@ -1,0 +1,50 @@
+﻿{
+  "snapshot_id": "code_mentor_policy_v1:v1:20260719032318382:7565cd1ab2e0",
+  "artifact_type": "policies",
+  "stable_id": "code_mentor_policy_v1",
+  "version": "v1",
+  "function_name": "CodeMentor",
+  "subject_code": null,
+  "question_type": null,
+  "language": null,
+  "description": "Code mentor runtime policy",
+  "is_active": true,
+  "source": "D:\\1_Tailieuhoctap REAL Reborn\\Ky9  - Final\\Prototype_AI_Module_repo\\src-dotnet\\Ape.AiModule.Api\\App_Data\\code-mentor-policy.json",
+  "source_commit": null,
+  "captured_from": null,
+  "captured_at": "2026-07-19T03:23:18.3828989+00:00",
+  "content_hash": "7565cd1ab2e0250bdd3856bf188f7b679ddefacfc95d2a058f76ff81e7df3755",
+  "change_reason": null,
+  "change_summary": null,
+  "content": {
+    "policy_id": "code_mentor_policy_v1",
+    "version": "v1",
+    "function_name": "CodeMentor",
+    "supported_languages": [
+      "c",
+      "java"
+    ],
+    "issue_categories": [
+      "syntax",
+      "logic",
+      "edge_case",
+      "runtime_risk",
+      "complexity",
+      "style",
+      "partial_solution",
+      "algorithm_choice"
+    ],
+    "verdicts": [
+      "correct",
+      "acceptable_with_minor_notes",
+      "needs_fix",
+      "incorrect"
+    ],
+    "feedback_rules": {
+      "max_issue_count": 6,
+      "max_suggestion_count": 6,
+      "require_actionable_suggestions": true,
+      "require_failing_scenarios_when_possible": true
+    }
+  }
+}

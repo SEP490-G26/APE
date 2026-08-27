@@ -1,0 +1,36 @@
+﻿{
+    "snapshot_id":  "EMBEDDING_TAGGING:v1:20260716065908000:dc7a2f4accbb",
+    "artifact_type":  "rubrics",
+    "stable_id":  "EMBEDDING_TAGGING",
+    "version":  "v1",
+    "function_name":  "EmbeddingTagging",
+    "subject_code":  "",
+    "question_type":  "",
+    "language":  "en",
+    "description":  "Lightweight rubric for checking whether chunk records are structurally useful and whether topic tags are aligned with the chunk content.",
+    "is_active":  true,
+    "source":  "git_backfill",
+    "source_commit":  "511aa50726eca82952abff8f8b29642d20a4d019",
+    "captured_from":  "src-dotnet/Ape.AiModule.Api/App_Data/ai-rubrics/EMBEDDING_TAGGING.json",
+    "captured_at":  "2026-07-16T06:59:08.0000000Z",
+    "content_hash":  "dc7a2f4accbbcd1b59c46fbe7d5c668bea18e125586e0aa8eda3f00f3f18c6f0",
+    "change_reason":  "Add AI module prototype, operator UI, and docs",
+    "change_summary":  "Initial snapshot imported from git history.",
+    "content":  {
+                    "rubric_id":  "EMBEDDING_TAGGING",
+                    "rubric_name":  "Embedding and Auto Tagging Core Checks",
+                    "function_name":  "EmbeddingTagging",
+                    "version":  "v1",
+                    "language":  "en",
+                    "description":  "Lightweight rubric for checking whether chunk records are structurally useful and whether topic tags are aligned with the chunk content.",
+                    "quality_checks":  [
+                                           "Each chunk should include enough metadata to trace back to the document source.",
+                                           "The normalized text should be suitable for embedding and retrieval.",
+                                           "The markdown text should preserve useful structural cues for debugging.",
+                                           "Topic tags should come from the allowed taxonomy and should match the chunk semantics.",
+                                           "The embedding metadata should clearly record provider, model, and vector dimension."
+                                       ],
+                    "acceptance_rule":  "Accept when the chunk record is DB-ready and topic tags are semantically grounded in the chunk.",
+                    "warning_rule":  "Warn when tags are too generic, too many, or not aligned with the subject taxonomy."
+                }
+}

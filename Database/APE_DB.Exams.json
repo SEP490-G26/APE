@@ -1,0 +1,1930 @@
+[{
+  "_id": {
+    "$oid": "64b100000000000000000021"
+  },
+  "Title": "APE_WORKER_E2E_V1 C Exam",
+  "CourseId": {
+    "$oid": "64b100000000000000000011"
+  },
+  "ExamType": "PE",
+  "Mode": "Practice",
+  "TimeLimit": 60,
+  "CreatedBy": {
+    "$oid": "64b100000000000000000001"
+  },
+  "Visibility": "Public",
+  "FeExamQuestions": [],
+  "PeExamQuestions": [
+    {
+      "PeQuestionId": {
+        "$oid": "64b100000000000000000031"
+      },
+      "AssignedPoints": 10
+    }
+  ],
+  "CreatedAt": {
+    "$date": "2026-07-30T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64b100000000000000000022"
+  },
+  "Title": "APE_WORKER_E2E_V1 Java Exam",
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "ExamType": "Mixed",
+  "Mode": "Practice",
+  "TimeLimit": 60,
+  "CreatedBy": {
+    "$oid": "64b100000000000000000001"
+  },
+  "Visibility": "Public",
+  "FeExamQuestions": [],
+  "PeExamQuestions": [
+    {
+      "PeQuestionId": {
+        "$oid": "64b100000000000000000032"
+      },
+      "AssignedPoints": 10
+    }
+  ],
+  "CreatedAt": {
+    "$date": "2026-07-30T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6e5b8901079e9e2f4242a8"
+  },
+  "Title": "PRF192 PE Exam",
+  "CourseId": {
+    "$oid": "64b100000000000000000011"
+  },
+  "ExamType": "PE",
+  "Mode": "Practice",
+  "TimeLimit": 60,
+  "CreatedBy": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "Visibility": "Private",
+  "FeExamQuestions": [],
+  "PeExamQuestions": [
+    {
+      "PeQuestionId": {
+        "$oid": "6a6e5967ea07f68a65a41d12"
+      },
+      "AssignedPoints": 1
+    }
+  ],
+  "CreatedAt": {
+    "$date": "2026-08-01T20:48:09.763Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6f86423108d263107af3d5"
+  },
+  "Title": "PRO192 FE Exam",
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "ExamType": "FE",
+  "Mode": "Practice",
+  "TimeLimit": 3,
+  "CreatedBy": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "Visibility": "Private",
+  "FeExamQuestions": [
+    {
+      "$oid": "6a6f853e3108d263107af26b"
+    },
+    {
+      "$oid": "6a6f85493108d263107af275"
+    },
+    {
+      "$oid": "6a6f855e3108d263107af281"
+    }
+  ],
+  "PeExamQuestions": [],
+  "CreatedAt": {
+    "$date": "2026-08-02T18:02:42.061Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a70ea8ce92268c2e73eb0e8"
+  },
+  "Title": "PRO192 PE Exam",
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "ExamType": "PE",
+  "Mode": "Practice",
+  "TimeLimit": 60,
+  "CreatedBy": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "Visibility": "Private",
+  "FeExamQuestions": [],
+  "PeExamQuestions": [
+    {
+      "PeQuestionId": {
+        "$oid": "6a6f83de3108d263107af141"
+      },
+      "AssignedPoints": 1
+    }
+  ],
+  "CreatedAt": {
+    "$date": "2026-08-03T19:22:52.677Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a70eb6ce92268c2e73eb212"
+  },
+  "Title": "PRO192 PE Exam",
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "ExamType": "PE",
+  "Mode": "Practice",
+  "TimeLimit": 60,
+  "CreatedBy": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "Visibility": "Private",
+  "FeExamQuestions": [],
+  "PeExamQuestions": [
+    {
+      "PeQuestionId": {
+        "$oid": "6a6f83653108d263107af133"
+      },
+      "AssignedPoints": 1
+    },
+    {
+      "PeQuestionId": {
+        "$oid": "6a6f82f13108d263107af125"
+      },
+      "AssignedPoints": 1
+    }
+  ],
+  "CreatedAt": {
+    "$date": "2026-08-03T19:26:36.630Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a738b2f6a39c9262fb3bb11"
+  },
+  "Title": "PRO192 PE Exam",
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "ExamType": "PE",
+  "Mode": "Practice",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "Visibility": "Private",
+  "FeExamQuestions": [],
+  "PeExamQuestions": [
+    {
+      "PeQuestionId": {
+        "$oid": "6a7378665c02e674320fa18f"
+      },
+      "AssignedPoints": 1
+    },
+    {
+      "PeQuestionId": {
+        "$oid": "64b100000000000000000032"
+      },
+      "AssignedPoints": 1
+    }
+  ],
+  "CreatedAt": {
+    "$date": "2026-08-05T19:12:47.987Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a738b9f6a39c9262fb3bbbf"
+  },
+  "Title": "PRO192 FE Exam",
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "ExamType": "FE",
+  "Mode": "Flashcard",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "Visibility": "Private",
+  "FeExamQuestions": [
+    {
+      "$oid": "6a732def1d249756aa383496"
+    },
+    {
+      "$oid": "6a732def1d249756aa383499"
+    },
+    {
+      "$oid": "6a732def1d249756aa383493"
+    },
+    {
+      "$oid": "6a732df01d249756aa38349b"
+    },
+    {
+      "$oid": "6a732df01d249756aa38349a"
+    },
+    {
+      "$oid": "6a732def1d249756aa383494"
+    },
+    {
+      "$oid": "6a732def1d249756aa383497"
+    },
+    {
+      "$oid": "6a732def1d249756aa383495"
+    },
+    {
+      "$oid": "6a732def1d249756aa383498"
+    },
+    {
+      "$oid": "6a732def1d249756aa383492"
+    }
+  ],
+  "PeExamQuestions": [],
+  "CreatedAt": {
+    "$date": "2026-08-05T19:14:39.142Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a74324861472a1e24054f1f"
+  },
+  "Title": "PRO192 PE Exam",
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "ExamType": "PE",
+  "Mode": "Practice",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "Visibility": "Private",
+  "FeExamQuestions": [],
+  "PeExamQuestions": [
+    {
+      "PeQuestionId": {
+        "$oid": "6a7378665c02e674320fa18f"
+      },
+      "AssignedPoints": 1
+    }
+  ],
+  "CreatedAt": {
+    "$date": "2026-08-06T07:05:44.735Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a74365e5e5b9c79de179559"
+  },
+  "Title": "PRO192 PE Exam",
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "ExamType": "PE",
+  "Mode": "Practice",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "Visibility": "Private",
+  "FeExamQuestions": [],
+  "PeExamQuestions": [
+    {
+      "PeQuestionId": {
+        "$oid": "6a7378665c02e674320fa18f"
+      },
+      "AssignedPoints": 1
+    }
+  ],
+  "CreatedAt": {
+    "$date": "2026-08-06T07:23:10.269Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a78a0fbb20bb196f0c1dfb1"
+  },
+  "Title": "PRO192 FE Exam",
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "ExamType": "FE",
+  "Mode": "Practice",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "Visibility": "Private",
+  "PresetScope": "Course",
+  "FeExamQuestions": [
+    {
+      "$oid": "6a732def1d249756aa383495"
+    },
+    {
+      "$oid": "6a732def1d249756aa383493"
+    },
+    {
+      "$oid": "6a743cf61a57a209cb666d41"
+    },
+    {
+      "$oid": "6a732def1d249756aa383494"
+    },
+    {
+      "$oid": "6a732df01d249756aa38349a"
+    },
+    {
+      "$oid": "6a743bef1a57a209cb666d26"
+    },
+    {
+      "$oid": "6a732def1d249756aa383492"
+    },
+    {
+      "$oid": "6a743cf61a57a209cb666d44"
+    },
+    {
+      "$oid": "6a732def1d249756aa383499"
+    },
+    {
+      "$oid": "6a743cf61a57a209cb666d40"
+    },
+    {
+      "$oid": "6a743bee1a57a209cb666d23"
+    },
+    {
+      "$oid": "6a732df01d249756aa38349b"
+    },
+    {
+      "$oid": "6a732def1d249756aa383496"
+    }
+  ],
+  "PeExamQuestions": [],
+  "CreatedAt": {
+    "$date": "2026-08-09T15:47:07.723Z"
+  },
+  "UpdatedBy": null,
+  "UpdatedAt": null
+},
+{
+  "_id": {
+    "$oid": "6a7b10b30c1685a5a03dcce3"
+  },
+  "Title": "R52 FE Practice R1",
+  "CourseId": {
+    "$oid": "6a6c5b039e56179d5bee8cf0"
+  },
+  "ExamType": "FE",
+  "Mode": "Practice",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a7ac9170c1685a5a03db407"
+  },
+  "Visibility": "Public",
+  "PresetScope": "Course",
+  "FeExamQuestions": [
+    {
+      "$oid": "6a7b0fd90c1685a5a03dccb7"
+    }
+  ],
+  "PeExamQuestions": [],
+  "CreatedAt": {
+    "$date": "2026-08-11T12:08:19.675Z"
+  },
+  "UpdatedBy": {
+    "$oid": "6a7613048f3e66d09abba5e2"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-26T05:42:14.097Z"
+  },
+  "IsDeleted": true,
+  "DeletedBy": {
+    "$oid": "6a7613048f3e66d09abba5e2"
+  },
+  "DeletedAt": {
+    "$date": "2026-08-26T05:42:14.097Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7b128c0c1685a5a03dcd38"
+  },
+  "Title": "CSD201 FE Exam",
+  "CourseId": {
+    "$oid": "6a6c5b039e56179d5bee8cf0"
+  },
+  "ExamType": "FE",
+  "Mode": "Practice",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a7ac8940c1685a5a03db38b"
+  },
+  "Visibility": "Private",
+  "PresetScope": "Course",
+  "FeExamQuestions": [
+    {
+      "$oid": "6a7b0fd90c1685a5a03dccb7"
+    }
+  ],
+  "PeExamQuestions": [],
+  "CreatedAt": {
+    "$date": "2026-08-11T12:16:12.948Z"
+  },
+  "UpdatedBy": null,
+  "UpdatedAt": null
+},
+{
+  "_id": {
+    "$oid": "6a7b13620c1685a5a03dcdf9"
+  },
+  "Title": "PRO192 PE Exam",
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "ExamType": "PE",
+  "Mode": "Practice",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a7ac8940c1685a5a03db38b"
+  },
+  "Visibility": "Private",
+  "PresetScope": "Course",
+  "FeExamQuestions": [],
+  "PeExamQuestions": [
+    {
+      "PeQuestionId": {
+        "$oid": "6a7378665c02e674320fa18f"
+      },
+      "AssignedPoints": 1
+    }
+  ],
+  "CreatedAt": {
+    "$date": "2026-08-11T12:19:46.459Z"
+  },
+  "UpdatedBy": null,
+  "UpdatedAt": null
+},
+{
+  "_id": {
+    "$oid": "6a7b3025385a3be1e9dd6db0"
+  },
+  "Title": "CSD201 FE Exam",
+  "CourseId": {
+    "$oid": "6a6c5b039e56179d5bee8cf0"
+  },
+  "ExamType": "FE",
+  "Mode": "Practice",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a7ac8940c1685a5a03db38b"
+  },
+  "Visibility": "Private",
+  "PresetScope": "Course",
+  "FeExamQuestions": [
+    {
+      "$oid": "6a7b0fd90c1685a5a03dccb7"
+    }
+  ],
+  "PeExamQuestions": [],
+  "CreatedAt": {
+    "$date": "2026-08-11T14:22:29.655Z"
+  },
+  "UpdatedBy": null,
+  "UpdatedAt": null
+},
+{
+  "_id": {
+    "$oid": "6a7b66e744019084ffe91548"
+  },
+  "Title": "PRO192 PE Exam",
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "ExamType": "PE",
+  "Mode": "Practice",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "Visibility": "Private",
+  "PresetScope": "Course",
+  "FeExamQuestions": [],
+  "PeExamQuestions": [
+    {
+      "PeQuestionId": {
+        "$oid": "6a6f83de3108d263107af141"
+      },
+      "AssignedPoints": 1
+    },
+    {
+      "PeQuestionId": {
+        "$oid": "6a6f83653108d263107af133"
+      },
+      "AssignedPoints": 1
+    },
+    {
+      "PeQuestionId": {
+        "$oid": "6a6f82f13108d263107af125"
+      },
+      "AssignedPoints": 1
+    }
+  ],
+  "CreatedAt": {
+    "$date": "2026-08-11T18:16:07.887Z"
+  },
+  "UpdatedBy": null,
+  "UpdatedAt": null
+},
+{
+  "_id": {
+    "$oid": "6a7b738d44019084ffe946c3"
+  },
+  "Title": "PRO192 FE Exam",
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "ExamType": "FE",
+  "Mode": "Practice",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "Visibility": "Private",
+  "PresetScope": "Course",
+  "FeExamQuestions": [
+    {
+      "$oid": "6a6f85493108d263107af275"
+    },
+    {
+      "$oid": "6a6f853e3108d263107af26b"
+    },
+    {
+      "$oid": "6a6f855e3108d263107af281"
+    }
+  ],
+  "PeExamQuestions": [],
+  "CreatedAt": {
+    "$date": "2026-08-11T19:10:05.875Z"
+  },
+  "UpdatedBy": null,
+  "UpdatedAt": null
+},
+{
+  "_id": {
+    "$oid": "6a7c350f0a7a2e6ee5c83b8d"
+  },
+  "Title": "PRO192 PE Exam",
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "ExamType": "PE",
+  "Mode": "Practice",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "Visibility": "Private",
+  "PresetScope": "Course",
+  "FeExamQuestions": [],
+  "PeExamQuestions": [
+    {
+      "PeQuestionId": {
+        "$oid": "6a7b627144019084ffe90c54"
+      },
+      "AssignedPoints": 1
+    }
+  ],
+  "CreatedAt": {
+    "$date": "2026-08-12T08:55:43.539Z"
+  },
+  "UpdatedBy": null,
+  "UpdatedAt": null
+},
+{
+  "_id": {
+    "$oid": "6a7c37e60a7a2e6ee5c8473d"
+  },
+  "Title": "PRO192 FE Exam",
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "ExamType": "FE",
+  "Mode": "Flashcard",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "Visibility": "Private",
+  "PresetScope": "Course",
+  "FeExamQuestions": [
+    {
+      "$oid": "6a6f853e3108d263107af26b"
+    },
+    {
+      "$oid": "6a6f855e3108d263107af281"
+    },
+    {
+      "$oid": "6a6f85493108d263107af275"
+    }
+  ],
+  "PeExamQuestions": [],
+  "CreatedAt": {
+    "$date": "2026-08-12T09:07:50.423Z"
+  },
+  "UpdatedBy": null,
+  "UpdatedAt": null
+},
+{
+  "_id": {
+    "$oid": "6a7c86369356ead007caf888"
+  },
+  "Title": "Test",
+  "CourseId": {
+    "$oid": "6a6c5b039e56179d5bee8cf0"
+  },
+  "ExamType": "FE",
+  "Mode": "Practice",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a7613048f3e66d09abba5e2"
+  },
+  "Visibility": "Public",
+  "PresetScope": "Course",
+  "FeExamQuestions": [
+    {
+      "$oid": "6a7c85999356ead007caf789"
+    },
+    {
+      "$oid": "6a7c859a9356ead007caf78a"
+    },
+    {
+      "$oid": "6a7c859a9356ead007caf78f"
+    },
+    {
+      "$oid": "6a7c859a9356ead007caf78e"
+    }
+  ],
+  "PeExamQuestions": [],
+  "CreatedAt": {
+    "$date": "2026-08-12T14:41:58.147Z"
+  },
+  "UpdatedBy": null,
+  "UpdatedAt": null
+},
+{
+  "_id": {
+    "$oid": "6a7d3e58a94581a1c941f971"
+  },
+  "Title": "PRO192 FE Exam",
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "ExamType": "FE",
+  "Mode": "Practice",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "Visibility": "Private",
+  "PresetScope": "Course",
+  "FeExamQuestions": [
+    {
+      "$oid": "6a7d3d77a94581a1c941f836"
+    },
+    {
+      "$oid": "6a7d3d77a94581a1c941f835"
+    },
+    {
+      "$oid": "6a7d3d76a94581a1c941f833"
+    }
+  ],
+  "PeExamQuestions": [],
+  "CreatedAt": {
+    "$date": "2026-08-13T03:47:36.822Z"
+  },
+  "UpdatedBy": null,
+  "UpdatedAt": null
+},
+{
+  "_id": {
+    "$oid": "6a7d420ba94581a1c9420105"
+  },
+  "Title": "PRO192 PE Exam",
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "ExamType": "PE",
+  "Mode": "Practice",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "Visibility": "Private",
+  "PresetScope": "Course",
+  "FeExamQuestions": [],
+  "PeExamQuestions": [
+    {
+      "PeQuestionId": {
+        "$oid": "6a7d4130a94581a1c941fee5"
+      },
+      "AssignedPoints": 1
+    }
+  ],
+  "CreatedAt": {
+    "$date": "2026-08-13T04:03:23.322Z"
+  },
+  "UpdatedBy": null,
+  "UpdatedAt": null
+},
+{
+  "_id": {
+    "$oid": "6a7d4adaa94581a1c9420912"
+  },
+  "Title": "test1",
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "ExamType": "PE",
+  "Mode": "Practice",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a7613048f3e66d09abba5e2"
+  },
+  "Visibility": "Public",
+  "PresetScope": "Course",
+  "FeExamQuestions": [],
+  "PeExamQuestions": [
+    {
+      "PeQuestionId": {
+        "$oid": "64b100000000000000000032"
+      },
+      "AssignedPoints": 1
+    }
+  ],
+  "CreatedAt": {
+    "$date": "2026-08-13T04:40:58.861Z"
+  },
+  "UpdatedBy": null,
+  "UpdatedAt": null
+},
+{
+  "_id": {
+    "$oid": "6a7f4a41fa401cc3314a53b2"
+  },
+  "Title": "PRO192 FE Exam",
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "ExamType": "FE",
+  "Mode": "Flashcard",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "Visibility": "Private",
+  "PresetScope": "Course",
+  "FeExamQuestions": [
+    {
+      "$oid": "6a7d3d76a94581a1c941f833"
+    },
+    {
+      "$oid": "6a7d3d77a94581a1c941f835"
+    },
+    {
+      "$oid": "6a7d3d76a94581a1c941f834"
+    },
+    {
+      "$oid": "6a7d3d77a94581a1c941f836"
+    },
+    {
+      "$oid": "6a7d3d77a94581a1c941f837"
+    }
+  ],
+  "PeExamQuestions": [],
+  "CreatedAt": {
+    "$date": "2026-08-14T17:02:57.632Z"
+  },
+  "UpdatedBy": null,
+  "UpdatedAt": null
+},
+{
+  "_id": {
+    "$oid": "6a802e0a6b075af21f751b88"
+  },
+  "Title": "PRO192 FE Exam",
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "ExamType": "FE",
+  "Mode": "Practice",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "Visibility": "Private",
+  "PresetScope": "Course",
+  "FeExamQuestions": [
+    {
+      "$oid": "6a802cff6b075af21f7518dc"
+    },
+    {
+      "$oid": "6a802cff6b075af21f7518db"
+    },
+    {
+      "$oid": "6a802cff6b075af21f7518dd"
+    },
+    {
+      "$oid": "6a802d226b075af21f7518fa"
+    },
+    {
+      "$oid": "6a802d216b075af21f7518f8"
+    },
+    {
+      "$oid": "6a802d226b075af21f7518f9"
+    },
+    {
+      "$oid": "6a802d006b075af21f7518df"
+    },
+    {
+      "$oid": "6a802d006b075af21f7518de"
+    }
+  ],
+  "PeExamQuestions": [],
+  "CreatedAt": {
+    "$date": "2026-08-15T09:14:50.500Z"
+  },
+  "UpdatedBy": null,
+  "UpdatedAt": null
+},
+{
+  "_id": {
+    "$oid": "6a802e836b075af21f751f05"
+  },
+  "Title": "PRO192 FE Exam",
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "ExamType": "FE",
+  "Mode": "Practice",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "Visibility": "Private",
+  "PresetScope": "Course",
+  "FeExamQuestions": [
+    {
+      "$oid": "6a802d006b075af21f7518de"
+    },
+    {
+      "$oid": "6a802cff6b075af21f7518dd"
+    },
+    {
+      "$oid": "6a802d006b075af21f7518df"
+    },
+    {
+      "$oid": "6a802cff6b075af21f7518db"
+    },
+    {
+      "$oid": "6a802cff6b075af21f7518dc"
+    }
+  ],
+  "PeExamQuestions": [],
+  "CreatedAt": {
+    "$date": "2026-08-15T09:16:51.610Z"
+  },
+  "UpdatedBy": null,
+  "UpdatedAt": null
+},
+{
+  "_id": {
+    "$oid": "6a8094c28d232f5cef831efa"
+  },
+  "Title": "CSD201 PE Exam",
+  "CourseId": {
+    "$oid": "6a6c5b039e56179d5bee8cf0"
+  },
+  "ExamType": "PE",
+  "Mode": "Practice",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a7ac8940c1685a5a03db38b"
+  },
+  "Visibility": "Private",
+  "PresetScope": "Course",
+  "FeExamQuestions": [],
+  "PeExamQuestions": [
+    {
+      "PeQuestionId": {
+        "$oid": "6a80946b8d232f5cef831d9b"
+      },
+      "AssignedPoints": 1
+    },
+    {
+      "PeQuestionId": {
+        "$oid": "6a80946b8d232f5cef831d99"
+      },
+      "AssignedPoints": 1
+    },
+    {
+      "PeQuestionId": {
+        "$oid": "6a80946b8d232f5cef831d9a"
+      },
+      "AssignedPoints": 1
+    },
+    {
+      "PeQuestionId": {
+        "$oid": "6a80946b8d232f5cef831d98"
+      },
+      "AssignedPoints": 1
+    }
+  ],
+  "CreatedAt": {
+    "$date": "2026-08-15T16:33:06.909Z"
+  },
+  "UpdatedBy": null,
+  "UpdatedAt": null
+},
+{
+  "_id": {
+    "$oid": "6a834a7b3862e02cff9c1982"
+  },
+  "Title": "PRO192 FE Exam",
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "ExamType": "FE",
+  "Mode": "Flashcard",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "Visibility": "Private",
+  "PresetScope": "Course",
+  "FeExamQuestions": [
+    {
+      "$oid": "6a743cf61a57a209cb666d41"
+    },
+    {
+      "$oid": "6a732df01d249756aa38349a"
+    },
+    {
+      "$oid": "6a732df01d249756aa38349b"
+    },
+    {
+      "$oid": "6a732def1d249756aa383498"
+    },
+    {
+      "$oid": "6a743bee1a57a209cb666d23"
+    }
+  ],
+  "PeExamQuestions": [],
+  "CreatedAt": {
+    "$date": "2026-08-17T17:52:59.496Z"
+  },
+  "UpdatedBy": null,
+  "UpdatedAt": null
+},
+{
+  "_id": {
+    "$oid": "6a834bfff41991a5e1c4bc51"
+  },
+  "Title": "PRO192 FE Exam",
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "ExamType": "FE",
+  "Mode": "Practice",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "Visibility": "Private",
+  "PresetScope": "Course",
+  "FeExamQuestions": [
+    {
+      "$oid": "6a732def1d249756aa383496"
+    },
+    {
+      "$oid": "6a743cf61a57a209cb666d44"
+    },
+    {
+      "$oid": "6a732def1d249756aa383492"
+    }
+  ],
+  "PeExamQuestions": [],
+  "CreatedAt": {
+    "$date": "2026-08-17T17:59:27.159Z"
+  },
+  "UpdatedBy": null,
+  "UpdatedAt": null
+},
+{
+  "_id": {
+    "$oid": "6a882b54286750807732ddc6"
+  },
+  "Title": "PRO192 PE Exam",
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "ExamType": "PE",
+  "Mode": "Practice",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a875fd7f6552306690f7514"
+  },
+  "Visibility": "Private",
+  "PresetScope": "Course",
+  "FeExamQuestions": [],
+  "PeExamQuestions": [
+    {
+      "PeQuestionId": {
+        "$oid": "6a737b27090e38028ba1d642"
+      },
+      "AssignedPoints": 1
+    },
+    {
+      "PeQuestionId": {
+        "$oid": "6a7370209b16a0524b73f2a0"
+      },
+      "AssignedPoints": 1
+    },
+    {
+      "PeQuestionId": {
+        "$oid": "64b100000000000000000032"
+      },
+      "AssignedPoints": 1
+    },
+    {
+      "PeQuestionId": {
+        "$oid": "6a7378665c02e674320fa18f"
+      },
+      "AssignedPoints": 1
+    }
+  ],
+  "CreatedAt": {
+    "$date": "2026-08-21T10:41:24.274Z"
+  },
+  "UpdatedBy": null,
+  "UpdatedAt": null,
+  "IsDeleted": false,
+  "DeletedBy": null,
+  "DeletedAt": null
+},
+{
+  "_id": {
+    "$oid": "6a888ec3286750807732ec11"
+  },
+  "Title": "PRO192 FE Exam",
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "ExamType": "FE",
+  "Mode": "Practice",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a875fd7f6552306690f7514"
+  },
+  "Visibility": "Private",
+  "PresetScope": "Course",
+  "FeExamQuestions": [
+    {
+      "$oid": "6a8888a9286750807732e8e1"
+    },
+    {
+      "$oid": "6a8888aa286750807732e8e5"
+    },
+    {
+      "$oid": "6a8888a9286750807732e8df"
+    },
+    {
+      "$oid": "6a8888a9286750807732e8e3"
+    },
+    {
+      "$oid": "6a8888a9286750807732e8dd"
+    }
+  ],
+  "PeExamQuestions": [],
+  "CreatedAt": {
+    "$date": "2026-08-21T17:45:39.604Z"
+  },
+  "UpdatedBy": null,
+  "UpdatedAt": null,
+  "IsDeleted": false,
+  "DeletedBy": null,
+  "DeletedAt": null
+},
+{
+  "_id": {
+    "$oid": "6a895f372867508077331731"
+  },
+  "Title": "PRO192 FE Exam",
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "ExamType": "FE",
+  "Mode": "Flashcard",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a875fd7f6552306690f7514"
+  },
+  "Visibility": "Private",
+  "PresetScope": "Course",
+  "FeExamQuestions": [
+    {
+      "$oid": "6a8888aa286750807732e8e5"
+    }
+  ],
+  "PeExamQuestions": [],
+  "CreatedAt": {
+    "$date": "2026-08-22T08:35:03.667Z"
+  },
+  "UpdatedBy": null,
+  "UpdatedAt": null,
+  "IsDeleted": false,
+  "DeletedBy": null,
+  "DeletedAt": null
+},
+{
+  "_id": {
+    "$oid": "6a8d60f3385f4cba1cdf9bfe"
+  },
+  "Title": "CSD201 - Data Structures and Algorithm_Array",
+  "CourseId": {
+    "$oid": "6a6c5b039e56179d5bee8cf0"
+  },
+  "ExamType": "FE",
+  "Mode": "Practice",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a7613048f3e66d09abba5e2"
+  },
+  "Visibility": "Public",
+  "PresetScope": "Course",
+  "FeExamQuestions": [
+    {
+      "$oid": "6a7b448c385a3be1e9dd7587"
+    },
+    {
+      "$oid": "6a7c85999356ead007caf789"
+    },
+    {
+      "$oid": "6a7c859a9356ead007caf78a"
+    },
+    {
+      "$oid": "6a7b448d385a3be1e9dd7590"
+    },
+    {
+      "$oid": "6a7b448c385a3be1e9dd7585"
+    },
+    {
+      "$oid": "6a7c859a9356ead007caf78f"
+    },
+    {
+      "$oid": "6a7b448d385a3be1e9dd758a"
+    },
+    {
+      "$oid": "6a7c859a9356ead007caf78e"
+    },
+    {
+      "$oid": "6a7b448c385a3be1e9dd7586"
+    }
+  ],
+  "PeExamQuestions": [],
+  "CreatedAt": {
+    "$date": "2026-08-25T09:31:31.912Z"
+  },
+  "UpdatedBy": null,
+  "UpdatedAt": null,
+  "IsDeleted": false,
+  "DeletedBy": null,
+  "DeletedAt": null
+},
+{
+  "_id": {
+    "$oid": "6a8d615f385f4cba1cdf9c4e"
+  },
+  "Title": "CSD201 - Data Structures and Algorithm_stacks",
+  "CourseId": {
+    "$oid": "6a6c5b039e56179d5bee8cf0"
+  },
+  "ExamType": "FE",
+  "Mode": "Flashcard",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a7613048f3e66d09abba5e2"
+  },
+  "Visibility": "Public",
+  "PresetScope": "Course",
+  "FeExamQuestions": [
+    {
+      "$oid": "6a7b448d385a3be1e9dd7592"
+    },
+    {
+      "$oid": "6a7b448c385a3be1e9dd7587"
+    },
+    {
+      "$oid": "6a7c85999356ead007caf789"
+    },
+    {
+      "$oid": "6a7b448c385a3be1e9dd7588"
+    },
+    {
+      "$oid": "6a7c859a9356ead007caf78d"
+    },
+    {
+      "$oid": "6a7c859a9356ead007caf78a"
+    },
+    {
+      "$oid": "6a7c859a9356ead007caf791"
+    },
+    {
+      "$oid": "6a7b448d385a3be1e9dd758c"
+    },
+    {
+      "$oid": "6a7b448d385a3be1e9dd7590"
+    },
+    {
+      "$oid": "6a7b448d385a3be1e9dd758b"
+    },
+    {
+      "$oid": "6a7b448c385a3be1e9dd7585"
+    },
+    {
+      "$oid": "6a7c859a9356ead007caf78f"
+    },
+    {
+      "$oid": "6a7c859a9356ead007caf792"
+    },
+    {
+      "$oid": "6a7b448c385a3be1e9dd7589"
+    },
+    {
+      "$oid": "6a7b448d385a3be1e9dd758a"
+    }
+  ],
+  "PeExamQuestions": [],
+  "CreatedAt": {
+    "$date": "2026-08-25T09:33:19.622Z"
+  },
+  "UpdatedBy": null,
+  "UpdatedAt": null,
+  "IsDeleted": false,
+  "DeletedBy": null,
+  "DeletedAt": null
+},
+{
+  "_id": {
+    "$oid": "6a8d6269385f4cba1cdfa0b6"
+  },
+  "Title": "PRO192 - Object Oriented Programming_FE_01",
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "ExamType": "FE",
+  "Mode": "Practice",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a7613048f3e66d09abba5e2"
+  },
+  "Visibility": "Public",
+  "PresetScope": "Course",
+  "FeExamQuestions": [
+    {
+      "$oid": "6a89ceacd6426bded299376a"
+    },
+    {
+      "$oid": "6a89ceacd6426bded2993764"
+    },
+    {
+      "$oid": "6a89ceacd6426bded2993765"
+    },
+    {
+      "$oid": "6a89ceacd6426bded299376b"
+    },
+    {
+      "$oid": "6a89ceacd6426bded2993762"
+    },
+    {
+      "$oid": "6a89ceacd6426bded2993768"
+    },
+    {
+      "$oid": "6a89ceacd6426bded2993763"
+    },
+    {
+      "$oid": "6a89ceacd6426bded2993766"
+    },
+    {
+      "$oid": "6a89ceacd6426bded2993767"
+    },
+    {
+      "$oid": "6a89ceacd6426bded2993769"
+    }
+  ],
+  "PeExamQuestions": [],
+  "CreatedAt": {
+    "$date": "2026-08-25T09:37:45.640Z"
+  },
+  "UpdatedBy": null,
+  "UpdatedAt": null,
+  "IsDeleted": false,
+  "DeletedBy": null,
+  "DeletedAt": null
+},
+{
+  "_id": {
+    "$oid": "6a8d630a385f4cba1cdfa179"
+  },
+  "Title": "PRF192 - Programming Fundamentals_FE_01",
+  "CourseId": {
+    "$oid": "64b100000000000000000011"
+  },
+  "ExamType": "FE",
+  "Mode": "Practice",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a7613048f3e66d09abba5e2"
+  },
+  "Visibility": "Public",
+  "PresetScope": "Course",
+  "FeExamQuestions": [
+    {
+      "$oid": "6a7f5b03322d629a3f214345"
+    },
+    {
+      "$oid": "6a7f5b02322d629a3f21433f"
+    },
+    {
+      "$oid": "6a7f63fa322d629a3f214d35"
+    },
+    {
+      "$oid": "6a7f63fa322d629a3f214d36"
+    },
+    {
+      "$oid": "6a7f63fa322d629a3f214d3c"
+    },
+    {
+      "$oid": "6a7f5b03322d629a3f214343"
+    },
+    {
+      "$oid": "6a7f5b03322d629a3f214341"
+    },
+    {
+      "$oid": "6a7f5b03322d629a3f214342"
+    },
+    {
+      "$oid": "6a7f5b02322d629a3f21433c"
+    },
+    {
+      "$oid": "6a7f63fa322d629a3f214d37"
+    },
+    {
+      "$oid": "6a7f63fa322d629a3f214d3b"
+    },
+    {
+      "$oid": "6a7f5b02322d629a3f21433d"
+    },
+    {
+      "$oid": "6a7f5b02322d629a3f214340"
+    },
+    {
+      "$oid": "6a7f63fa322d629a3f214d34"
+    },
+    {
+      "$oid": "6a7f63fa322d629a3f214d3d"
+    },
+    {
+      "$oid": "6a7f63fa322d629a3f214d39"
+    },
+    {
+      "$oid": "6a7f63fa322d629a3f214d3a"
+    },
+    {
+      "$oid": "6a7f5b03322d629a3f214344"
+    },
+    {
+      "$oid": "6a7f63fa322d629a3f214d38"
+    },
+    {
+      "$oid": "6a7f5ace322d629a3f214325"
+    },
+    {
+      "$oid": "6a7f63bb322d629a3f214cfe"
+    },
+    {
+      "$oid": "6a7f5acd322d629a3f21431f"
+    },
+    {
+      "$oid": "6a7f682755020127b6c41dac"
+    },
+    {
+      "$oid": "6a7f5ace322d629a3f214323"
+    },
+    {
+      "$oid": "6a7f63ba322d629a3f214cfd"
+    },
+    {
+      "$oid": "6a7f5acd322d629a3f21431e"
+    },
+    {
+      "$oid": "6a7f63ba322d629a3f214cf7"
+    },
+    {
+      "$oid": "6a7f5acd322d629a3f21431d"
+    },
+    {
+      "$oid": "6a7f63ba322d629a3f214cfa"
+    },
+    {
+      "$oid": "6a7f6443322d629a3f214d5e"
+    },
+    {
+      "$oid": "6a7f6443322d629a3f214d5d"
+    },
+    {
+      "$oid": "6a7f5b9a322d629a3f214357"
+    },
+    {
+      "$oid": "6a7f5b9a322d629a3f214356"
+    },
+    {
+      "$oid": "6a7f6443322d629a3f214d59"
+    },
+    {
+      "$oid": "6a7f5b9a322d629a3f214359"
+    },
+    {
+      "$oid": "6a7f5b9a322d629a3f214358"
+    },
+    {
+      "$oid": "6a7f6443322d629a3f214d5c"
+    },
+    {
+      "$oid": "6a7f5b9b322d629a3f21435b"
+    },
+    {
+      "$oid": "6a7f5b9b322d629a3f21435c"
+    },
+    {
+      "$oid": "6a7f5b9a322d629a3f21435a"
+    },
+    {
+      "$oid": "6a7f6443322d629a3f214d5a"
+    },
+    {
+      "$oid": "6a7f6443322d629a3f214d58"
+    }
+  ],
+  "PeExamQuestions": [],
+  "CreatedAt": {
+    "$date": "2026-08-25T09:40:26.096Z"
+  },
+  "UpdatedBy": null,
+  "UpdatedAt": null,
+  "IsDeleted": false,
+  "DeletedBy": null,
+  "DeletedAt": null
+},
+{
+  "_id": {
+    "$oid": "6a8d632b385f4cba1cdfa1cf"
+  },
+  "Title": "PRF192 - Programming Fundamentals_PE01",
+  "CourseId": {
+    "$oid": "64b100000000000000000011"
+  },
+  "ExamType": "PE",
+  "Mode": "Practice",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a7613048f3e66d09abba5e2"
+  },
+  "Visibility": "Public",
+  "PresetScope": "Course",
+  "FeExamQuestions": [],
+  "PeExamQuestions": [
+    {
+      "PeQuestionId": {
+        "$oid": "6a7f5d58322d629a3f214630"
+      },
+      "AssignedPoints": 1
+    },
+    {
+      "PeQuestionId": {
+        "$oid": "6a7f5d3a322d629a3f214625"
+      },
+      "AssignedPoints": 1
+    },
+    {
+      "PeQuestionId": {
+        "$oid": "6a7f5d1f322d629a3f214618"
+      },
+      "AssignedPoints": 1
+    }
+  ],
+  "CreatedAt": {
+    "$date": "2026-08-25T09:40:59.587Z"
+  },
+  "UpdatedBy": null,
+  "UpdatedAt": null,
+  "IsDeleted": false,
+  "DeletedBy": null,
+  "DeletedAt": null
+},
+{
+  "_id": {
+    "$oid": "6a8d6341385f4cba1cdfa23f"
+  },
+  "Title": "PRF192 - Programming Fundamentals_PE02",
+  "CourseId": {
+    "$oid": "64b100000000000000000011"
+  },
+  "ExamType": "PE",
+  "Mode": "Practice",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a7613048f3e66d09abba5e2"
+  },
+  "Visibility": "Public",
+  "PresetScope": "Course",
+  "FeExamQuestions": [],
+  "PeExamQuestions": [
+    {
+      "PeQuestionId": {
+        "$oid": "6a7f671055020127b6c41a9f"
+      },
+      "AssignedPoints": 1
+    },
+    {
+      "PeQuestionId": {
+        "$oid": "64b100000000000000000031"
+      },
+      "AssignedPoints": 1
+    }
+  ],
+  "CreatedAt": {
+    "$date": "2026-08-25T09:41:21.896Z"
+  },
+  "UpdatedBy": null,
+  "UpdatedAt": null,
+  "IsDeleted": false,
+  "DeletedBy": null,
+  "DeletedAt": null
+},
+{
+  "_id": {
+    "$oid": "6a8d636f385f4cba1cdfa3aa"
+  },
+  "Title": "PRF192 - Programming Fundamentals_PE03",
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "ExamType": "PE",
+  "Mode": "Practice",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a7613048f3e66d09abba5e2"
+  },
+  "Visibility": "Public",
+  "PresetScope": "Course",
+  "FeExamQuestions": [],
+  "PeExamQuestions": [
+    {
+      "PeQuestionId": {
+        "$oid": "6a88a1183452470caca6b32c"
+      },
+      "AssignedPoints": 1
+    }
+  ],
+  "CreatedAt": {
+    "$date": "2026-08-25T09:42:07.563Z"
+  },
+  "UpdatedBy": null,
+  "UpdatedAt": null,
+  "IsDeleted": false,
+  "DeletedBy": null,
+  "DeletedAt": null
+},
+{
+  "_id": {
+    "$oid": "6a8d698f810e1de5ec80224a"
+  },
+  "Title": "PRO192 PE Exam",
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "ExamType": "PE",
+  "Mode": "Practice",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a8d56012424df65457aaf36"
+  },
+  "Visibility": "Private",
+  "PresetScope": "Course",
+  "FeExamQuestions": [],
+  "PeExamQuestions": [
+    {
+      "PeQuestionId": {
+        "$oid": "6a8d6815810e1de5ec801fcd"
+      },
+      "AssignedPoints": 1
+    }
+  ],
+  "CreatedAt": {
+    "$date": "2026-08-25T10:08:15.268Z"
+  },
+  "UpdatedBy": null,
+  "UpdatedAt": null,
+  "IsDeleted": false,
+  "DeletedBy": null,
+  "DeletedAt": null
+},
+{
+  "_id": {
+    "$oid": "6a8d9e4d5d590a6880eb8d58"
+  },
+  "Title": "PRF192 PE Exam",
+  "CourseId": {
+    "$oid": "64b100000000000000000011"
+  },
+  "ExamType": "PE",
+  "Mode": "Practice",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "Visibility": "Private",
+  "PresetScope": "Course",
+  "FeExamQuestions": [],
+  "PeExamQuestions": [
+    {
+      "PeQuestionId": {
+        "$oid": "6a8d9cac5d590a6880eb86f3"
+      },
+      "AssignedPoints": 1
+    },
+    {
+      "PeQuestionId": {
+        "$oid": "6a8d9c925d590a6880eb86e0"
+      },
+      "AssignedPoints": 1
+    }
+  ],
+  "CreatedAt": {
+    "$date": "2026-08-25T13:53:17.237Z"
+  },
+  "UpdatedBy": null,
+  "UpdatedAt": null,
+  "IsDeleted": false,
+  "DeletedBy": null,
+  "DeletedAt": null
+},
+{
+  "_id": {
+    "$oid": "6a8e7ca4d06b933c15cc2453"
+  },
+  "Title": "PRF192 - Programming Fundamentals_FE02",
+  "CourseId": {
+    "$oid": "64b100000000000000000011"
+  },
+  "ExamType": "FE",
+  "Mode": "Flashcard",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a7613048f3e66d09abba5e2"
+  },
+  "Visibility": "Public",
+  "PresetScope": "Course",
+  "FeExamQuestions": [
+    {
+      "$oid": "6a7f5b03322d629a3f214345"
+    },
+    {
+      "$oid": "6a7f5b02322d629a3f21433f"
+    },
+    {
+      "$oid": "6a7f63fa322d629a3f214d35"
+    },
+    {
+      "$oid": "6a7f63fa322d629a3f214d36"
+    },
+    {
+      "$oid": "6a7f63fa322d629a3f214d3c"
+    },
+    {
+      "$oid": "6a7f5b03322d629a3f214343"
+    },
+    {
+      "$oid": "6a7f5b03322d629a3f214341"
+    },
+    {
+      "$oid": "6a7f5b03322d629a3f214342"
+    },
+    {
+      "$oid": "6a7f5b02322d629a3f21433e"
+    },
+    {
+      "$oid": "6a7f5b02322d629a3f21433c"
+    },
+    {
+      "$oid": "6a7f5ace322d629a3f214325"
+    },
+    {
+      "$oid": "6a7f63bb322d629a3f214cfe"
+    },
+    {
+      "$oid": "6a7f5acd322d629a3f21431f"
+    },
+    {
+      "$oid": "6a7f682755020127b6c41dac"
+    },
+    {
+      "$oid": "6a7f5ace322d629a3f214323"
+    },
+    {
+      "$oid": "6a7f63ba322d629a3f214cfd"
+    },
+    {
+      "$oid": "6a7f5acd322d629a3f21431e"
+    },
+    {
+      "$oid": "6a7f63ba322d629a3f214cf7"
+    },
+    {
+      "$oid": "6a7f5acd322d629a3f21431d"
+    },
+    {
+      "$oid": "6a7f63ba322d629a3f214cfa"
+    },
+    {
+      "$oid": "6a7f6443322d629a3f214d5e"
+    },
+    {
+      "$oid": "6a7f6443322d629a3f214d5d"
+    },
+    {
+      "$oid": "6a7f5b9a322d629a3f214357"
+    },
+    {
+      "$oid": "6a7f5b9a322d629a3f214356"
+    },
+    {
+      "$oid": "6a7f6443322d629a3f214d59"
+    },
+    {
+      "$oid": "6a7f5b9a322d629a3f214359"
+    },
+    {
+      "$oid": "6a7f5b9a322d629a3f214358"
+    },
+    {
+      "$oid": "6a7f6443322d629a3f214d5c"
+    },
+    {
+      "$oid": "6a7f5b9b322d629a3f21435b"
+    },
+    {
+      "$oid": "6a7f5b9b322d629a3f21435c"
+    }
+  ],
+  "PeExamQuestions": [],
+  "CreatedAt": {
+    "$date": "2026-08-26T05:41:56.093Z"
+  },
+  "UpdatedBy": null,
+  "UpdatedAt": null,
+  "IsDeleted": false,
+  "DeletedBy": null,
+  "DeletedAt": null
+},
+{
+  "_id": {
+    "$oid": "6a8e7e9ad06b933c15cc27e0"
+  },
+  "Title": "PRF192 - Programming Fundamentals_FE03",
+  "CourseId": {
+    "$oid": "64b100000000000000000011"
+  },
+  "ExamType": "FE",
+  "Mode": "Practice",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a7613048f3e66d09abba5e2"
+  },
+  "Visibility": "Public",
+  "PresetScope": "Course",
+  "FeExamQuestions": [
+    {
+      "$oid": "6a7f5b03322d629a3f214345"
+    },
+    {
+      "$oid": "6a7f5b02322d629a3f21433f"
+    },
+    {
+      "$oid": "6a7f63fa322d629a3f214d35"
+    },
+    {
+      "$oid": "6a7f5ace322d629a3f214325"
+    },
+    {
+      "$oid": "6a7f63bb322d629a3f214cfe"
+    },
+    {
+      "$oid": "6a7f5acd322d629a3f21431f"
+    },
+    {
+      "$oid": "6a7f682755020127b6c41dac"
+    },
+    {
+      "$oid": "6a7f5ace322d629a3f214323"
+    },
+    {
+      "$oid": "6a7f6443322d629a3f214d5e"
+    },
+    {
+      "$oid": "6a7f6443322d629a3f214d5d"
+    }
+  ],
+  "PeExamQuestions": [],
+  "CreatedAt": {
+    "$date": "2026-08-26T05:50:18.171Z"
+  },
+  "UpdatedBy": null,
+  "UpdatedAt": null,
+  "IsDeleted": false,
+  "DeletedBy": null,
+  "DeletedAt": null
+},
+{
+  "_id": {
+    "$oid": "6a8eb01616353d2110974ded"
+  },
+  "Title": "PRF192 FE Exam",
+  "CourseId": {
+    "$oid": "64b100000000000000000011"
+  },
+  "ExamType": "FE",
+  "Mode": "Practice",
+  "TimeLimit": null,
+  "CreatedBy": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "Visibility": "Private",
+  "PresetScope": "Course",
+  "FeExamQuestions": [
+    {
+      "$oid": "6a8eac5016353d211097476f"
+    },
+    {
+      "$oid": "6a8eac5316353d2110974777"
+    },
+    {
+      "$oid": "6a8eac5316353d2110974776"
+    },
+    {
+      "$oid": "6a8eac5216353d2110974773"
+    },
+    {
+      "$oid": "6a8eac5216353d2110974774"
+    },
+    {
+      "$oid": "6a8eac5116353d2110974771"
+    },
+    {
+      "$oid": "6a8eac5316353d2110974775"
+    },
+    {
+      "$oid": "6a8eac5016353d211097476e"
+    },
+    {
+      "$oid": "6a8eac5016353d2110974770"
+    },
+    {
+      "$oid": "6a8eac5116353d2110974772"
+    }
+  ],
+  "PeExamQuestions": [],
+  "CreatedAt": {
+    "$date": "2026-08-26T09:21:26.473Z"
+  },
+  "UpdatedBy": null,
+  "UpdatedAt": null,
+  "IsDeleted": false,
+  "DeletedBy": null,
+  "DeletedAt": null
+}]

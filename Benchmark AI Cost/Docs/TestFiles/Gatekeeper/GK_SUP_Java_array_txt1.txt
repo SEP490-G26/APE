@@ -1,0 +1,18 @@
+Java Arrays - Quick Notes
+
+Trong Java, array là cấu trúc dữ liệu lưu nhiều phần tử cùng kiểu dữ liệu.
+- Khai báo: int[] a;
+- Khởi tạo: a = new int[5];
+- Truy cập phần tử: a[i]
+- Chỉ số bắt đầu từ 0
+
+Các thao tác cơ bản:
+1) Duyệt mảng bằng for/for-each
+2) Tính tổng, tìm min/max
+3) Tìm kiếm tuyến tính và nhị phân (khi mảng đã sắp xếp)
+
+Độ phức tạp:
+- Truy cập theo chỉ số: O(1)
+- Tìm kiếm tuyến tính: O(n)
+
+Đây là tài liệu nhập môn Java OOP/DSA, tập trung vào chủ đề array.

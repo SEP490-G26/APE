@@ -1,0 +1,39 @@
+{
+  "dataset_id": "dataset_embedding_seed_expanded",
+  "description": "Expanded retrieval benchmark queries",
+  "cases": [
+    { "case_id": "EMB_001", "domain": "C", "difficulty": "easy", "query": "What does scanf do in C?", "gold_chunk_ids": ["C_CH_001"] },
+    { "case_id": "EMB_002", "domain": "C", "difficulty": "easy", "query": "Difference between while and do-while", "gold_chunk_ids": ["C_CH_002"] },
+    { "case_id": "EMB_003", "domain": "C", "difficulty": "medium", "query": "How to avoid buffer overflow in C strings", "gold_chunk_ids": ["C_CH_010", "C_CH_011"] },
+    { "case_id": "EMB_004", "domain": "C", "difficulty": "medium", "query": "Common causes of segmentation fault with pointers", "gold_chunk_ids": ["C_CH_020"] },
+    { "case_id": "EMB_005", "domain": "C", "difficulty": "hard", "query": "Amortized complexity of dynamic array resizing in C", "gold_chunk_ids": ["C_CH_030"] },
+    { "case_id": "EMB_006", "domain": "C", "difficulty": "hard", "query": "Compare pass-by-value and pointer-based mutation in C", "gold_chunk_ids": ["C_CH_032"] },
+
+    { "case_id": "EMB_007", "domain": "Java_OOP", "difficulty": "easy", "query": "What is encapsulation in Java", "gold_chunk_ids": ["J_CH_001"] },
+    { "case_id": "EMB_008", "domain": "Java_OOP", "difficulty": "easy", "query": "Purpose of constructor in Java class", "gold_chunk_ids": ["J_CH_002"] },
+    { "case_id": "EMB_009", "domain": "Java_OOP", "difficulty": "medium", "query": "Difference between interface and abstract class", "gold_chunk_ids": ["J_CH_010", "J_CH_011"] },
+    { "case_id": "EMB_010", "domain": "Java_OOP", "difficulty": "medium", "query": "How method overriding enables polymorphism", "gold_chunk_ids": ["J_CH_015"] },
+    { "case_id": "EMB_011", "domain": "Java_OOP", "difficulty": "hard", "query": "Liskov substitution principle in practical Java hierarchy", "gold_chunk_ids": ["J_CH_020"] },
+    { "case_id": "EMB_012", "domain": "Java_OOP", "difficulty": "hard", "query": "Design tradeoff composition vs inheritance", "gold_chunk_ids": ["J_CH_022"] },
+
+    { "case_id": "EMB_013", "domain": "DSA_OOP", "difficulty": "easy", "query": "Time complexity of stack push/pop", "gold_chunk_ids": ["D_CH_001"] },
+    { "case_id": "EMB_014", "domain": "DSA_OOP", "difficulty": "easy", "query": "Binary search precondition", "gold_chunk_ids": ["D_CH_003"] },
+    { "case_id": "EMB_015", "domain": "DSA_OOP", "difficulty": "medium", "query": "Complexity of BFS adjacency list", "gold_chunk_ids": ["D_CH_010"] },
+    { "case_id": "EMB_016", "domain": "DSA_OOP", "difficulty": "medium", "query": "Difference DFS recursive vs iterative", "gold_chunk_ids": ["D_CH_012"] },
+    { "case_id": "EMB_017", "domain": "DSA_OOP", "difficulty": "hard", "query": "When to prefer heap over balanced BST", "gold_chunk_ids": ["D_CH_020"] },
+    { "case_id": "EMB_018", "domain": "DSA_OOP", "difficulty": "hard", "query": "Analyze union-find amortized complexity", "gold_chunk_ids": ["D_CH_024"] },
+
+    { "case_id": "EMB_019", "domain": "C", "difficulty": "medium", "query": "Pointer arithmetic with arrays example", "gold_chunk_ids": ["C_CH_015"] },
+    { "case_id": "EMB_020", "domain": "C", "difficulty": "hard", "query": "Detect memory leak patterns in linked list C code", "gold_chunk_ids": ["C_CH_035"] },
+    { "case_id": "EMB_021", "domain": "Java_OOP", "difficulty": "medium", "query": "Explain equals and hashCode contract", "gold_chunk_ids": ["J_CH_017"] },
+    { "case_id": "EMB_022", "domain": "Java_OOP", "difficulty": "hard", "query": "Thread safety concerns in mutable class design", "gold_chunk_ids": ["J_CH_026"] },
+    { "case_id": "EMB_023", "domain": "DSA_OOP", "difficulty": "medium", "query": "How to implement queue with two stacks", "gold_chunk_ids": ["D_CH_014"] },
+    { "case_id": "EMB_024", "domain": "DSA_OOP", "difficulty": "hard", "query": "Compare Dijkstra and BFS applicability", "gold_chunk_ids": ["D_CH_030"] },
+    { "case_id": "EMB_025", "domain": "C", "difficulty": "easy", "query": "for loop syntax example", "gold_chunk_ids": ["C_CH_004"] },
+    { "case_id": "EMB_026", "domain": "Java_OOP", "difficulty": "easy", "query": "What is object instantiation", "gold_chunk_ids": ["J_CH_004"] },
+    { "case_id": "EMB_027", "domain": "DSA_OOP", "difficulty": "easy", "query": "What is linked list", "gold_chunk_ids": ["D_CH_002"] },
+    { "case_id": "EMB_028", "domain": "C", "difficulty": "medium", "query": "switch-case fallthrough behavior", "gold_chunk_ids": ["C_CH_012"] },
+    { "case_id": "EMB_029", "domain": "Java_OOP", "difficulty": "medium", "query": "Access modifiers in Java", "gold_chunk_ids": ["J_CH_008"] },
+    { "case_id": "EMB_030", "domain": "DSA_OOP", "difficulty": "hard", "query": "Big-O for merge sort and quick sort", "gold_chunk_ids": ["D_CH_028"] }
+  ]
+}

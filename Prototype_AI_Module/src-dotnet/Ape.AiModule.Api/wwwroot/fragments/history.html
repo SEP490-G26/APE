@@ -1,0 +1,85 @@
+<section id="history-tab" class="tab-panel">
+  <div class="panel-grid panel-grid--overview">
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">History browser</p>
+          <h3>Run list</h3>
+        </div>
+        <div class="action-row">
+          <button id="history-load-list" type="button">Load</button>
+          <button id="history-export-list-json" type="button" class="secondary">Export List JSON</button>
+          <button id="history-copy-tsv-list" type="button" class="secondary">Copy TSV</button>
+        </div>
+      </div>
+      <div class="grid grid--3">
+        <label>Function
+          <select id="history-function">
+            <option value="gatekeeper">gatekeeper</option>
+            <option value="extracted-content">extracted-content</option>
+            <option value="extraction-drafts">extraction-drafts</option>
+            <option value="embedding-tagging">embedding-tagging</option>
+            <option value="retrieval">retrieval</option>
+            <option value="context-packs">context-packs</option>
+            <option value="question-generation">question-generation</option>
+            <option value="generation-review">generation-review</option>
+            <option value="code-mentor">code-mentor</option>
+          </select>
+        </label>
+        <label>Take
+          <input id="history-take" type="number" min="1" max="200" value="30">
+        </label>
+        <label>Search
+          <input id="history-search" type="text" placeholder="run id, file, model">
+        </label>
+        <label>Status
+          <select id="history-status-filter">
+            <option value="">all</option>
+            <option value="Completed">Completed</option>
+            <option value="Failed">Failed</option>
+            <option value="Pending">Pending</option>
+          </select>
+        </label>
+        <label>Model contains
+          <input id="history-model-filter" type="text" placeholder="gpt-4o">
+        </label>
+        <label>Date from
+          <input id="history-date-from" type="date">
+        </label>
+        <label>Date to
+          <input id="history-date-to" type="date">
+        </label>
+      </div>
+      <div class="action-row">
+        <button id="history-apply-filters" type="button" class="secondary">Apply Filters</button>
+        <button id="history-clear-filters" type="button" class="secondary">Clear Filters</button>
+      </div>
+      <div id="history-summary" class="summary-grid"></div>
+      <div id="history-list-parsed" class="card-stack"></div>
+      <details class="details-block">
+        <summary>History list JSON</summary>
+        <pre id="history-list-json" class="json-view"></pre>
+      </details>
+    </section>
+
+    <section class="panel panel--output">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Run detail</p>
+          <h3>Parsed result</h3>
+        </div>
+        <div class="action-row">
+          <button id="history-copy-parsed" type="button" class="secondary">Copy Parsed</button>
+          <button id="history-copy-json" type="button" class="secondary">Copy JSON</button>
+          <button id="history-copy-tsv" type="button" class="secondary">Copy TSV Row</button>
+          <button id="history-export-json" type="button" class="secondary">Export JSON</button>
+        </div>
+      </div>
+      <div id="history-detail-result" class="result-card"></div>
+      <details class="details-block">
+        <summary>Run detail JSON</summary>
+        <pre id="history-detail-json" class="json-view"></pre>
+      </details>
+    </section>
+  </div>
+</section>

@@ -1,0 +1,97 @@
+## .NET / C#
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+[Dd]ebug/
+[Rr]elease/
+*.dbmdl
+*.jfm
+*.sln.ide
+
+## NuGet
+packages/
+*.nupkg
+# Không bỏ qua packages.config, chỉ bỏ qua thư mục packages
+!**/packages.config
+!**/packages/*.ps1
+
+## Visual Studio
+.vs/
+*.sln.cache
+*.lock.json
+_ReSharper*/
+*.resharper
+[Tt]est[Rr]esult*/
+[Bb]uild/
+
+## CodeRush / VS extensions
+*.crunchsolution
+*.crunchproject
+
+## ASP.NET Core / Web
+wwwroot/lib/
+appsettings.*.json
+!appsettings.json
+!appsettings.Development.json
+
+## Bảo mật – không commit connection string chứa mật khẩu thật
+# Dùng User Secrets hoặc biến môi trường
+secrets.json
+*.secret
+*.secrets
+appsettings.Production.json
+.env
+## Environment files
+.env
+.env*
+.env.*
+!.env.example
+
+## Docker
+docker-compose.override.yml
+.dockerignore
+
+## MongoDB (nếu dump dữ liệu test)
+dump/
+
+## OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+## IDE
+.idea/
+*.swp
+*.swo
+*~
+
+## Logs
+*.log
+logs/
+Probe_output/
+!Probe_output/.gitkeep
+
+## Local AI probe / seed / test assets
+AIArtifactSeedRunner/
+AIProbeRunner/
+AI Rule Config/
+_tmp_probe_exact/
+.codex_tmp/
+BE_UnitTests/
+BE_UnitTests/FileTest/
+
+## Certificate files
+*.pfx
+*.pem
+*.key
+# Local Excel report workspace
+workbooks/

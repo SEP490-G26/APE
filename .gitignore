@@ -1,0 +1,60 @@
+# ==============================================================================
+# Master .gitignore for APE Monorepo
+# ==============================================================================
+
+# Environment & Secrets (NEVER COMMIT .env)
+*.env
+.env
+.env.*
+!.env.example
+
+# .NET Build artifacts & Temporary files
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+[Aa]rtifacts/
+x64/
+x86/
+[Aa]pp_Data/run-history/
+[Aa]pp_Data/uploads/
+
+# Node.js & Frontend dependencies
+node_modules/
+dist/
+.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Visual Studio & VS Code IDE files
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.DotSettings.user
+
+# Test outputs & Code Coverage
+[Tt]est[Rr]esult*/
+coverage/
+*.trx
+
+# Logs, Dumps & Temp files
+*.log
+*.tmp
+_tmp*/
+.codex_tmp/
+scratch/
+
+# Operating System files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes

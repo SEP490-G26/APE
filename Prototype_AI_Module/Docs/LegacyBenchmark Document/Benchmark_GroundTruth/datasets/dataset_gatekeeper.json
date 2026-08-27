@@ -1,0 +1,132 @@
+{
+  "dataset_id": "dataset_gatekeeper",
+  "description": "Gatekeeper dataset for supported-domain classification",
+  "output_schema": {
+    "is_supported": "boolean",
+    "primary_domain": "C|Java_OOP|DSA_OOP|None",
+    "confidence": "number_0_to_1",
+    "reason": "string"
+  },
+  "cases": [
+    {
+      "case_id": "GK_001",
+      "difficulty": "easy",
+      "input": {
+        "file_type": "docx",
+        "content_stub": "Introduction to C programming: variables, loops, scanf/printf",
+        "context_note": "clean educational content"
+      },
+      "expected": {
+        "is_supported": true,
+        "primary_domain": "C",
+        "reason_anchor": ["C fundamentals", "intro programming"]
+      },
+      "tags": ["positive", "c_intro", "docx"]
+    },
+    {
+      "case_id": "GK_002",
+      "difficulty": "medium",
+      "input": {
+        "file_type": "pdf",
+        "content_stub": "Java OOP: encapsulation, inheritance, polymorphism examples",
+        "context_note": "course handout"
+      },
+      "expected": {
+        "is_supported": true,
+        "primary_domain": "Java_OOP",
+        "reason_anchor": ["oop concepts", "java"]
+      },
+      "tags": ["positive", "java_oop", "pdf"]
+    },
+    {
+      "case_id": "GK_003",
+      "difficulty": "hard",
+      "input": {
+        "file_type": "pptx",
+        "content_stub": "DFS/BFS and adjacency list class design in Java",
+        "context_note": "algorithm lecture slides"
+      },
+      "expected": {
+        "is_supported": true,
+        "primary_domain": "DSA_OOP",
+        "reason_anchor": ["algorithm", "data structure", "oop implementation"]
+      },
+      "tags": ["positive", "dsa_oop", "pptx"]
+    },
+    {
+      "case_id": "GK_004",
+      "difficulty": "easy",
+      "input": {
+        "file_type": "txt",
+        "content_stub": "Political philosophy and social theory notes",
+        "context_note": "non-IT subject"
+      },
+      "expected": {
+        "is_supported": false,
+        "primary_domain": "None",
+        "reason_anchor": ["out of supported technical scope"]
+      },
+      "tags": ["negative", "unsupported_subject", "txt"]
+    },
+    {
+      "case_id": "GK_005",
+      "difficulty": "hard",
+      "input": {
+        "file_type": "jpg",
+        "content_stub": "Image contains sensitive/unsafe content and no educational coding context",
+        "context_note": "vision moderation + domain reject"
+      },
+      "expected": {
+        "is_supported": false,
+        "primary_domain": "None",
+        "reason_anchor": ["sensitive content", "not educational coding material"]
+      },
+      "tags": ["negative", "sensitive", "image"]
+    },
+    {
+      "case_id": "GK_006",
+      "difficulty": "medium",
+      "input": {
+        "file_type": "xlsx",
+        "content_stub": "Spreadsheet with rows describing Java class diagrams and method contracts",
+        "context_note": "structured but still OOP learning content"
+      },
+      "expected": {
+        "is_supported": true,
+        "primary_domain": "Java_OOP",
+        "reason_anchor": ["class design", "method contract", "java"]
+      },
+      "tags": ["positive", "java_oop", "xlsx"]
+    },
+    {
+      "case_id": "GK_007",
+      "difficulty": "hard",
+      "input": {
+        "file_type": "pdf",
+        "content_stub": "Mixed material: 45% Java OOP, 55% software project management",
+        "context_note": "borderline relevance"
+      },
+      "expected": {
+        "is_supported": true,
+        "primary_domain": "Java_OOP",
+        "reason_anchor": ["mixed content", "dominant or substantial supported technical section"]
+      },
+      "tags": ["borderline", "mixed"]
+    },
+    {
+      "case_id": "GK_008",
+      "difficulty": "hard",
+      "input": {
+        "file_type": "md",
+        "content_stub": "Mixed material: 20% C syntax, 80% business marketing",
+        "context_note": "below relevance threshold"
+      },
+      "expected": {
+        "is_supported": false,
+        "primary_domain": "None",
+        "reason_anchor": ["insufficient supported technical content"]
+      },
+      "tags": ["borderline", "negative", "mixed"]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "version": "v1",
+  "language": "en",
+  "description": "Starter ground truth catalog for question generation and review, aligned to FPT University foundational programming context.",
+  "datasets": [
+    { "dataset_id": "QGEN_C_FE", "subject_code": "C", "question_type": "FE", "file": "QGEN_C_FE.json" },
+    { "dataset_id": "QGEN_C_PE", "subject_code": "C", "question_type": "PE", "file": "QGEN_C_PE.json" },
+    { "dataset_id": "QGEN_JAVA_OOP_FE", "subject_code": "JAVA_OOP", "question_type": "FE", "file": "QGEN_JAVA_OOP_FE.json" },
+    { "dataset_id": "QGEN_JAVA_OOP_PE", "subject_code": "JAVA_OOP", "question_type": "PE", "file": "QGEN_JAVA_OOP_PE.json" },
+    { "dataset_id": "QGEN_DSA_JAVA_FE", "subject_code": "DSA_JAVA", "question_type": "FE", "file": "QGEN_DSA_JAVA_FE.json" },
+    { "dataset_id": "QGEN_DSA_JAVA_PE", "subject_code": "DSA_JAVA", "question_type": "PE", "file": "QGEN_DSA_JAVA_PE.json" }
+  ]
+}

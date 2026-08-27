@@ -1,0 +1,17 @@
+{
+  "rubric_id": "EXTRACTED_CONTENT",
+  "rubric_name": "Extracted Content Core Quality Checks",
+  "function_name": "ExtractedContent",
+  "version": "v1",
+  "language": "en",
+  "description": "Lightweight rubric for evaluating whether document extraction output is structurally useful for downstream chunking and embedding.",
+  "quality_checks": [
+    "The output should preserve visible text content in readable markdown.",
+    "The output should include image-derived content only when a vision model is used.",
+    "The output should avoid markdown fences and unnecessary wrapper noise.",
+    "The output should expose uncertainty when the image or page is unreadable.",
+    "The normalized result should be usable for downstream chunking."
+  ],
+  "acceptance_rule": "Accept when the extracted markdown is readable, structurally useful, and grounded in the visible source content.",
+  "warning_rule": "Warn when image markers exist without vision expansion or when the content is too weak after normalization."
+}

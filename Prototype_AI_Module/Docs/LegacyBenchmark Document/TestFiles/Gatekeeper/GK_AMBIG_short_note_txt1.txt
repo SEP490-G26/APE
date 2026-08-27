@@ -1,0 +1,40 @@
+Ghi chú ngắn (mơ hồ):
+
+Mảng có thể dùng để lưu dữ liệu nhanh, nhưng bài này cũng nói về kỹ năng thuyết trình nhóm, cách chuẩn bị slide và phân chia vai trò.
+
+Có nhắc nhẹ đến từ khóa "array" và "class", nhưng không rõ đây là tài liệu lập trình hay tài liệu kỹ năng mềm.
+Một số đoạn còn thiếu ngữ cảnh, không có ví dụ code cụ thể.
+
+(Mục tiêu: test ambiguous_content)
+
+1. Kỹ năng Phân tích và Tài liệu hóa (Phần lõi của IT BA)
+Đây là kỹ năng "kiếm cơm" nếu bạn muốn theo con đường phi lập trình. Bạn phải là người phiên dịch ngôn ngữ kinh doanh thành ngôn ngữ kỹ thuật.
+
+Viết tài liệu đặc tả hệ thống: Nắm thật vững cách viết tài liệu SRS (Software Requirements Specification) và SDS (Software Design Specification). Viết sao cho một Dev đọc vào là hiểu ngay cần phải code cái gì.
+
+Thành thạo các biểu đồ UML: Đừng chỉ học vẹt để qua môn. Hãy tập vẽ thật chuyên nghiệp các biểu đồ Context, Class, Sequence và State diagram. Khi có ý tưởng về một tính năng, bạn phải phác thảo ngay được luồng đi của dữ liệu.
+
+Viết User Story & Acceptance Criteria: Học cách chia nhỏ một tính năng lớn thành các User Story (Ví dụ: "Là một người dùng, tôi muốn... để...") và định nghĩa các tiêu chí nghiệm thu rõ ràng.
+
+2. Tư duy Kiến trúc và Cơ sở dữ liệu (Vũ khí chống lại Dev "bắt nạt")
+Làm BA/PO mà không hiểu kỹ thuật thì rất dễ bị đội Dev qua mặt. Bạn không cần tự code, nhưng bạn phải biết hệ thống hoạt động ra sao.
+
+Thiết kế Database Schema: Luyện tập cách thiết kế cấu trúc dữ liệu cho các dự án thực tế. Biết khi nào dùng cơ sở dữ liệu phi quan hệ (như MongoDB hay Firebase), cách liên kết các bảng dữ liệu sao cho tối ưu.
+
+Hiểu về API: Hiểu rõ cách thiết kế một RESTful API chuẩn. Nắm được luồng request/response, các status code cơ bản và cách dữ liệu truyền tải giữa Frontend và Backend.
+
+Nắm vững tư duy OOP và kiến trúc: Hiểu sâu về Lập trình hướng đối tượng (OOP) và các mô hình kiến trúc như MVC. Điều này giúp bạn hiểu giới hạn của hệ thống để không đưa ra những yêu cầu "trên trời" cho đội Dev.
+
+3. Quản trị Dự án và Sản phẩm (Tư duy của Product Owner)
+Các công ty hiện nay cực kỳ chuộng những sinh viên có tư duy bao quát dự án từ đầu đến cuối.
+
+Agile/Scrum Framework: Học và hiểu thật sâu quy trình làm việc Scrum (Sprint planning, Daily meeting, Retrospective). Đa số các công ty công nghệ đều chạy theo mô hình này.
+
+Quản lý tiến độ: Ôn lại và áp dụng kỹ năng lập Project Charter (Hiến chương dự án) và chia nhỏ các cột mốc (Milestones) hoạt động.
+
+Nghiên cứu UX/UI cơ bản: Bạn không cần làm Designer, nhưng phải có mắt thẩm mỹ và hiểu trải nghiệm người dùng để biết cách bố trí các luồng thao tác trên Mobile app hay Web sao cho hợp lý.
+
+4. Kỹ năng Mềm và "Prompt Engineering" (Điểm khác biệt của bạn)
+Kỹ năng thuyết trình (Pitching): Khả năng làm slide và thuyết trình mạch lạc để bảo vệ ý tưởng sản phẩm hoặc báo cáo tiến độ trước khách hàng/sếp là cực kỳ quan trọng.
+
+Kiểm soát AI (AI Orchestration): Hãy nâng cấp kỹ năng dùng AI của bạn. Thay vì bảo AI "code cho tao cái app", hãy học cách viết prompt để AI sinh ra tài liệu SRS, tạo cấu trúc dữ liệu, hoặc review lỗi logic. Đặc biệt, rèn luyện tư duy ép AI tuân thủ nghiêm ngặt kiến trúc (model) ban đầu và chỉ chỉnh sửa những thành phần (như text hiển thị) theo đúng ý đồ của bạn, tuyệt đối không để AI phá hỏng luồng logic.

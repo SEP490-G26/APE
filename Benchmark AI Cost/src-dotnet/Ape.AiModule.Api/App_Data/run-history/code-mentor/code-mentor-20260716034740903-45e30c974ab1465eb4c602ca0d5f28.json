@@ -1,0 +1,147 @@
+{
+  "Summary": {
+    "RunId": "code-mentor-20260716034740903-45e30c974ab1465eb4c602ca0d5f28",
+    "FunctionName": "code-mentor",
+    "RouteKey": "code-mentor",
+    "RecordedAt": "2026-07-16T03:47:40.9038247+00:00",
+    "RequestType": "CodeMentorRequest",
+    "ResponseType": "CodeMentorResult",
+    "Status": "acceptable_with_minor_notes",
+    "ModelSummary": "MentorModel=gpt-4o",
+    "Totals": {
+      "InputTokens": 126,
+      "OutputTokens": 92,
+      "InputCostUsd": 0.000019,
+      "OutputCostUsd": 0.000055,
+      "TotalCostUsd": 0.000074,
+      "LatencyMs": 392.4
+    },
+    "FileName": "code-mentor-20260716034740903-45e30c974ab1465eb4c602ca0d5f28.json"
+  },
+  "Request": {
+    "SubmissionId": "sub-demo-002",
+    "UserId": "user-demo",
+    "Subject": "JAVA_OOP",
+    "Language": "java",
+    "Problem": "Write a Java program that prints the maximum element of an integer array.",
+    "Code": "",
+    "SourceFiles": [
+      {
+        "FileName": "Main.java",
+        "Content": "import java.util.*; public class Main { public static void main(String[] args){ Scanner sc = new Scanner(System.in); int n=sc.nextInt(); int[] a=new int[n]; int max=0; for(int i=0;i\u003Cn;i\u002B\u002B){ a[i]=sc.nextInt(); if(a[i]\u003Emax){ max=a[i]; } } System.out.println(max); } }",
+        "IsReadonly": false
+      },
+      {
+        "FileName": "ArrayUtils.java",
+        "Content": "public class ArrayUtils { public static int max(int[] a){ int m = a[0]; for(int x : a){ if(x \u003E m) m = x; } return m; } }",
+        "IsReadonly": false
+      }
+    ],
+    "MentorModel": "gpt-4o"
+  },
+  "Response": {
+    "SubmissionId": "sub-demo-002",
+    "Feedback": {
+      "Verdict": "acceptable_with_minor_notes",
+      "IssueCategories": [
+        "complexity"
+      ],
+      "Issues": [],
+      "Suggestions": [
+        "Looping constructs were detected; verify boundary conditions and off-by-one handling.",
+        "Compare the current logic against the problem statement and validate the sample cases."
+      ],
+      "FailingScenarios": [],
+      "Confidence": 0.83,
+      "Complexity": "Likely O(n)",
+      "ModelName": "gpt-4o"
+    },
+    "StageLogs": [
+      {
+        "StageName": "code-mentor",
+        "Status": "Completed",
+        "Cost": {
+          "InputTokens": 126,
+          "OutputTokens": 92,
+          "InputCostUsd": 0.000019,
+          "OutputCostUsd": 0.000055,
+          "TotalCostUsd": 0.000074,
+          "LatencyMs": 392.4
+        },
+        "Metadata": {
+          "verdict": "acceptable_with_minor_notes",
+          "issues_count": "0",
+          "source_files_count": "2"
+        }
+      }
+    ],
+    "UsageLogs": [
+      {
+        "UsageLogId": "usage-45d451165feb4a80a37a",
+        "TriggeredBy": "user-demo",
+        "AgentId": "AI_CodeMentor",
+        "PipelineRunId": "mentor-20260716034740-31ca6cb5374b4a29b2",
+        "StageName": "code_mentor",
+        "AttemptIndex": 1,
+        "Provider": "openai",
+        "ModelName": "gpt-4o",
+        "CreditsDeducted": 0.0740,
+        "InputTokens": 126,
+        "OutputTokens": 92,
+        "TokensUsed": 218,
+        "InputCostUsd": 0.000019,
+        "OutputCostUsd": 0.000055,
+        "CostUsd": 0.000074,
+        "Status": "acceptable_with_minor_notes",
+        "CreatedAt": "2026-07-16T03:47:40.8993295+00:00",
+        "PayloadData": {
+          "PipelineType": "code_mentor",
+          "Subject": "JAVA_OOP",
+          "QuestionType": null,
+          "Difficulty": null,
+          "Result": "acceptable_with_minor_notes",
+          "Input": {
+            "Problem": "Write a Java program that prints the maximum element of an integer array.",
+            "Code": "// FILE: Main.java\nimport java.util.*; public class Main { public static void main(String[] args){ Scanner sc = new Scanner(System.in); int n=sc.nextInt(); int[] a=new int[n]; int max=0; for(int i=0;i\u003Cn;i\u002B\u002B){ a[i]=sc.nextInt(); if(a[i]\u003Emax){ max=a[i]; } } System.out.println(max); } }\n\n// FILE: ArrayUtils.java\npublic class ArrayUtils { public static int max(int[] a){ int m = a[0]; for(int x : a){ if(x \u003E m) m = x; } return m; } }",
+            "SourceFiles": [
+              {
+                "FileName": "Main.java",
+                "Content": "import java.util.*; public class Main { public static void main(String[] args){ Scanner sc = new Scanner(System.in); int n=sc.nextInt(); int[] a=new int[n]; int max=0; for(int i=0;i\u003Cn;i\u002B\u002B){ a[i]=sc.nextInt(); if(a[i]\u003Emax){ max=a[i]; } } System.out.println(max); } }",
+                "IsReadonly": false
+              },
+              {
+                "FileName": "ArrayUtils.java",
+                "Content": "public class ArrayUtils { public static int max(int[] a){ int m = a[0]; for(int x : a){ if(x \u003E m) m = x; } return m; } }",
+                "IsReadonly": false
+              }
+            ],
+            "Language": "java"
+          },
+          "Output": {
+            "Verdict": "acceptable_with_minor_notes",
+            "IssueCategories": [
+              "complexity"
+            ],
+            "Issues": [],
+            "Suggestions": [
+              "Looping constructs were detected; verify boundary conditions and off-by-one handling.",
+              "Compare the current logic against the problem statement and validate the sample cases."
+            ],
+            "FailingScenarios": [],
+            "Confidence": 0.83,
+            "Complexity": "Likely O(n)",
+            "ModelName": "gpt-4o"
+          }
+        }
+      }
+    ],
+    "Totals": {
+      "InputTokens": 126,
+      "OutputTokens": 92,
+      "InputCostUsd": 0.000019,
+      "OutputCostUsd": 0.000055,
+      "TotalCostUsd": 0.000074,
+      "LatencyMs": 392.4
+    }
+  }
+}

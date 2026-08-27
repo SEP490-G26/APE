@@ -1,0 +1,21 @@
+{
+  "policy_id": "embedding_tagging_policy_v1",
+  "version": "v1",
+  "function_name": "EmbeddingTagging",
+  "chunk_defaults": {
+    "chunking_strategy_text_only": "logical_block",
+    "chunking_strategy_multimodal": "page_block",
+    "retrieval_enabled": true,
+    "default_status": "active"
+  },
+  "tagging_rules": {
+    "max_tags_per_chunk": 5,
+    "fallback_chunk_type": "paragraph",
+    "fallback_section_title": "Untitled Section"
+  },
+  "subject_taxonomy": {
+    "C_BASIC": ["variables", "conditions", "loops", "arrays", "functions", "pointers", "stdio"],
+    "JAVA_OOP": ["class", "object", "constructor", "encapsulation", "inheritance", "polymorphism", "interface", "method"],
+    "DSA_OOP": ["array", "linked_list", "stack", "queue", "tree", "graph", "sorting", "searching", "complexity"]
+  }
+}

@@ -1,0 +1,1252 @@
+[{
+  "_id": {
+    "$oid": "6a6b861f9f08fc1059092d6a"
+  },
+  "UserId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "Provider": "PayOS",
+  "OrderCode": {
+    "$numberLong": "1785431583200782"
+  },
+  "AmountVnd": {
+    "$numberLong": "10000"
+  },
+  "BalanceBeforeVnd": {
+    "$numberLong": "50000"
+  },
+  "BalanceAfterVnd": {
+    "$numberLong": "50000"
+  },
+  "Description": "Nap vi APE 10.000",
+  "CheckoutUrl": "https://pay.payos.vn/web/f1ebee441f2944acb0b6287917a70bd2",
+  "PaymentLinkId": "f1ebee441f2944acb0b6287917a70bd2",
+  "QrCode": "00020101021238570010A000000727012700069704480113CAS09769114580208QRIBFTTA53037045405100005802VN62320828CSSERN6NLM2 Nap vi APE 100006304E9DE",
+  "ProviderTransactionId": null,
+  "WebhookPayload": null,
+  "FailureReason": "Giao dich het han sau 5 phut va chua duoc PayOS xac nhan.",
+  "IsWalletCredited": false,
+  "ExpiresAt": {
+    "$date": "2026-07-30T17:18:03.000Z"
+  },
+  "PaidAt": null,
+  "ProcessedAt": {
+    "$date": "2026-07-30T19:04:12.241Z"
+  },
+  "LastStatusCheckedAt": {
+    "$date": "2026-07-30T19:04:12.241Z"
+  },
+  "Status": "Failed",
+  "CreatedAt": {
+    "$date": "2026-07-30T17:13:03.200Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-07-30T19:04:12.241Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6b86219f08fc1059092d6c"
+  },
+  "UserId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "Provider": "PayOS",
+  "OrderCode": {
+    "$numberLong": "1785431584575961"
+  },
+  "AmountVnd": {
+    "$numberLong": "10000"
+  },
+  "BalanceBeforeVnd": {
+    "$numberLong": "50000"
+  },
+  "BalanceAfterVnd": {
+    "$numberLong": "50000"
+  },
+  "Description": "Nap vi APE 10.000",
+  "CheckoutUrl": "https://pay.payos.vn/web/efdcea73b23d40beab6f0033d7374a5d",
+  "PaymentLinkId": "efdcea73b23d40beab6f0033d7374a5d",
+  "QrCode": "00020101021238570010A000000727012700069704480113CAS09769114580208QRIBFTTA53037045405100005802VN62320828CS95S8D0XK8 Nap vi APE 10000630459A6",
+  "ProviderTransactionId": null,
+  "WebhookPayload": null,
+  "FailureReason": "Giao dich het han sau 5 phut va chua duoc PayOS xac nhan.",
+  "IsWalletCredited": false,
+  "ExpiresAt": {
+    "$date": "2026-07-30T17:18:04.000Z"
+  },
+  "PaidAt": null,
+  "ProcessedAt": {
+    "$date": "2026-07-30T19:04:12.241Z"
+  },
+  "LastStatusCheckedAt": {
+    "$date": "2026-07-30T19:04:12.241Z"
+  },
+  "Status": "Failed",
+  "CreatedAt": {
+    "$date": "2026-07-30T17:13:04.575Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-07-30T19:04:12.241Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6ce863f93aea9e1387a0ad"
+  },
+  "UserId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "Provider": "PayOS",
+  "OrderCode": {
+    "$numberLong": "1785522274847285"
+  },
+  "AmountVnd": {
+    "$numberLong": "10000"
+  },
+  "BalanceBeforeVnd": {
+    "$numberLong": "0"
+  },
+  "BalanceAfterVnd": {
+    "$numberLong": "0"
+  },
+  "Description": "Nap vi APE 10,000",
+  "CheckoutUrl": "https://pay.payos.vn/web/26686297181b4eb19ccd5a6bbf3db82e",
+  "PaymentLinkId": "26686297181b4eb19ccd5a6bbf3db82e",
+  "QrCode": "00020101021238570010A000000727012700069704480113CAS09769114580208QRIBFTTA53037045405100005802VN62320828CSI66IX6KP4 Nap vi APE 100006304B43B",
+  "ProviderTransactionId": null,
+  "WebhookPayload": null,
+  "FailureReason": "Giao dich het han sau 5 phut va chua duoc PayOS xac nhan.",
+  "IsWalletCredited": false,
+  "ExpiresAt": {
+    "$date": "2026-07-31T18:29:34.000Z"
+  },
+  "PaidAt": null,
+  "ProcessedAt": {
+    "$date": "2026-07-31T18:29:56.467Z"
+  },
+  "LastStatusCheckedAt": {
+    "$date": "2026-07-31T18:29:56.467Z"
+  },
+  "Status": "Failed",
+  "CreatedAt": {
+    "$date": "2026-07-31T18:24:34.847Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-07-31T18:29:56.467Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6cf483f93aea9e1387a1e4"
+  },
+  "UserId": {
+    "$oid": "6a6ce9faf93aea9e1387a0cd"
+  },
+  "Provider": "PayOS",
+  "OrderCode": {
+    "$numberLong": "1785525379204984"
+  },
+  "AmountVnd": {
+    "$numberLong": "50000"
+  },
+  "BalanceBeforeVnd": {
+    "$numberLong": "0"
+  },
+  "BalanceAfterVnd": {
+    "$numberLong": "0"
+  },
+  "Description": "Nap vi APE 50,000",
+  "CheckoutUrl": "https://pay.payos.vn/web/b3fc1b89c4bf4e8bb1618ce16b42da95",
+  "PaymentLinkId": "b3fc1b89c4bf4e8bb1618ce16b42da95",
+  "QrCode": "00020101021238570010A000000727012700069704480113CAS09769114580208QRIBFTTA53037045405500005802VN62320828CS8P2JK5H91 Nap vi APE 5000063046985",
+  "ProviderTransactionId": null,
+  "WebhookPayload": null,
+  "FailureReason": "Ban da huy giao dich tren PayOS.",
+  "IsWalletCredited": false,
+  "ExpiresAt": {
+    "$date": "2026-07-31T19:21:19.000Z"
+  },
+  "PaidAt": null,
+  "ProcessedAt": {
+    "$date": "2026-07-31T19:16:32.387Z"
+  },
+  "LastStatusCheckedAt": {
+    "$date": "2026-07-31T19:16:32.387Z"
+  },
+  "Status": "Cancelled",
+  "CreatedAt": {
+    "$date": "2026-07-31T19:16:19.204Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-07-31T19:16:32.387Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6cf4dcf93aea9e1387a1e9"
+  },
+  "UserId": {
+    "$oid": "6a6ce9faf93aea9e1387a0cd"
+  },
+  "Provider": "PayOS",
+  "OrderCode": {
+    "$numberLong": "1785525468122477"
+  },
+  "AmountVnd": {
+    "$numberLong": "100000"
+  },
+  "BalanceBeforeVnd": {
+    "$numberLong": "0"
+  },
+  "BalanceAfterVnd": {
+    "$numberLong": "0"
+  },
+  "Description": "Nap vi APE 100,000",
+  "CheckoutUrl": "https://pay.payos.vn/web/6e8d300c714448e2913cbbe11ae2f69f",
+  "PaymentLinkId": "6e8d300c714448e2913cbbe11ae2f69f",
+  "QrCode": "00020101021238570010A000000727012700069704480113CAS09769114580208QRIBFTTA530370454061000005802VN62330829CS5XCT339Z3 Nap vi APE 10000063045D07",
+  "ProviderTransactionId": null,
+  "WebhookPayload": null,
+  "FailureReason": "Ban da huy giao dich tren PayOS.",
+  "IsWalletCredited": false,
+  "ExpiresAt": {
+    "$date": "2026-07-31T19:22:48.000Z"
+  },
+  "PaidAt": null,
+  "ProcessedAt": {
+    "$date": "2026-07-31T19:18:06.018Z"
+  },
+  "LastStatusCheckedAt": {
+    "$date": "2026-07-31T19:18:06.018Z"
+  },
+  "Status": "Cancelled",
+  "CreatedAt": {
+    "$date": "2026-07-31T19:17:48.122Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-07-31T19:18:06.018Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6daae2dd78b01c99cd48fe"
+  },
+  "UserId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "Provider": "PayOS",
+  "OrderCode": {
+    "$numberLong": "1785572065721573"
+  },
+  "AmountVnd": {
+    "$numberLong": "10000"
+  },
+  "BalanceBeforeVnd": {
+    "$numberLong": "0"
+  },
+  "BalanceAfterVnd": {
+    "$numberLong": "0"
+  },
+  "Description": "Nap vi APE 10,000",
+  "CheckoutUrl": "https://pay.payos.vn/web/5736a8d1d2af428b88f88d1040aca822",
+  "PaymentLinkId": "5736a8d1d2af428b88f88d1040aca822",
+  "QrCode": "00020101021238570010A000000727012700069704480113CAS09769114580208QRIBFTTA53037045405100005802VN62320828CSB98J8RWM6 Nap vi APE 100006304099F",
+  "ProviderTransactionId": null,
+  "WebhookPayload": null,
+  "FailureReason": "Giao dich het han sau 5 phut va chua duoc PayOS xac nhan.",
+  "IsWalletCredited": false,
+  "ExpiresAt": {
+    "$date": "2026-08-01T08:19:25.000Z"
+  },
+  "PaidAt": null,
+  "ProcessedAt": {
+    "$date": "2026-08-01T08:19:44.849Z"
+  },
+  "LastStatusCheckedAt": {
+    "$date": "2026-08-01T08:19:44.849Z"
+  },
+  "Status": "Failed",
+  "CreatedAt": {
+    "$date": "2026-08-01T08:14:25.721Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-01T08:19:44.849Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a70d3e6351b3898a4ae81e2"
+  },
+  "UserId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "Provider": "PayOS",
+  "OrderCode": {
+    "$numberLong": "1785779173263555"
+  },
+  "AmountVnd": {
+    "$numberLong": "10000"
+  },
+  "BalanceBeforeVnd": {
+    "$numberLong": "40847"
+  },
+  "BalanceAfterVnd": {
+    "$numberLong": "40847"
+  },
+  "Description": "Nap vi APE 10.000",
+  "CheckoutUrl": "https://pay.payos.vn/web/9e96530cded5493c915bfedc0e982571",
+  "PaymentLinkId": "9e96530cded5493c915bfedc0e982571",
+  "QrCode": "00020101021238570010A000000727012700069704480113CAS09769114580208QRIBFTTA53037045405100005802VN62320828CSIC5ITISP7 Nap vi APE 1000063047E8F",
+  "ProviderTransactionId": null,
+  "WebhookPayload": null,
+  "FailureReason": "Ban da huy giao dich tren PayOS.",
+  "IsWalletCredited": false,
+  "ExpiresAt": {
+    "$date": "2026-08-03T17:51:13.000Z"
+  },
+  "PaidAt": null,
+  "ProcessedAt": {
+    "$date": "2026-08-03T17:47:53.870Z"
+  },
+  "LastStatusCheckedAt": {
+    "$date": "2026-08-03T17:47:53.870Z"
+  },
+  "Status": "Cancelled",
+  "CreatedAt": {
+    "$date": "2026-08-03T17:46:13.263Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-03T17:47:53.870Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a70d566ec3a64c197ac4064"
+  },
+  "UserId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "Provider": "PayOS",
+  "OrderCode": {
+    "$numberLong": "1785779557577222"
+  },
+  "AmountVnd": {
+    "$numberLong": "10000"
+  },
+  "BalanceBeforeVnd": {
+    "$numberLong": "40847"
+  },
+  "BalanceAfterVnd": {
+    "$numberLong": "50847"
+  },
+  "Description": "Nap vi APE 10.000",
+  "CheckoutUrl": "https://pay.payos.vn/web/f23aa02e3aef4c44bf3f91a66038b77d",
+  "PaymentLinkId": "f23aa02e3aef4c44bf3f91a66038b77d",
+  "QrCode": "00020101021238570010A000000727012700069704480113CAS09769114580208QRIBFTTA53037045405100005802VN62320828CSXPV0ZC3G1 Nap vi APE 100006304F49B",
+  "ProviderTransactionId": null,
+  "WebhookPayload": null,
+  "FailureReason": null,
+  "IsWalletCredited": true,
+  "ExpiresAt": {
+    "$date": "2026-08-03T17:57:37.000Z"
+  },
+  "PaidAt": {
+    "$date": "2026-08-03T17:54:44.311Z"
+  },
+  "ProcessedAt": {
+    "$date": "2026-08-03T17:54:44.311Z"
+  },
+  "LastStatusCheckedAt": {
+    "$date": "2026-08-03T17:54:44.281Z"
+  },
+  "Status": "Completed",
+  "CreatedAt": {
+    "$date": "2026-08-03T17:52:37.577Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-03T17:54:44.283Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a70d6a5ec3a64c197ac4099"
+  },
+  "UserId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "Provider": "PayOS",
+  "OrderCode": {
+    "$numberLong": "1785779877279794"
+  },
+  "AmountVnd": {
+    "$numberLong": "10000"
+  },
+  "BalanceBeforeVnd": {
+    "$numberLong": "50847"
+  },
+  "BalanceAfterVnd": {
+    "$numberLong": "50847"
+  },
+  "Description": "Nap vi APE 10.000",
+  "CheckoutUrl": "https://pay.payos.vn/web/cc922c5e87d0425faf3917446dec39cf",
+  "PaymentLinkId": "cc922c5e87d0425faf3917446dec39cf",
+  "QrCode": "00020101021238570010A000000727012700069704480113CAS09769114580208QRIBFTTA53037045405100005802VN62320828CSNBYW5GUX2 Nap vi APE 100006304ECA2",
+  "ProviderTransactionId": null,
+  "WebhookPayload": null,
+  "FailureReason": "Giao dich het han sau 5 phut va chua duoc PayOS xac nhan.",
+  "IsWalletCredited": false,
+  "ExpiresAt": {
+    "$date": "2026-08-03T18:02:57.000Z"
+  },
+  "PaidAt": null,
+  "ProcessedAt": {
+    "$date": "2026-08-03T18:02:57.129Z"
+  },
+  "LastStatusCheckedAt": {
+    "$date": "2026-08-03T18:02:57.129Z"
+  },
+  "Status": "Failed",
+  "CreatedAt": {
+    "$date": "2026-08-03T17:57:57.279Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-03T18:02:57.129Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a70d729ec3a64c197ac4394"
+  },
+  "UserId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "Provider": "PayOS",
+  "OrderCode": {
+    "$numberLong": "1785780009156640"
+  },
+  "AmountVnd": {
+    "$numberLong": "10000"
+  },
+  "BalanceBeforeVnd": {
+    "$numberLong": "50847"
+  },
+  "BalanceAfterVnd": {
+    "$numberLong": "50847"
+  },
+  "Description": "Nap vi APE 10.000",
+  "CheckoutUrl": "https://pay.payos.vn/web/86415e56e4c44941b500a31684d1ba2d",
+  "PaymentLinkId": "86415e56e4c44941b500a31684d1ba2d",
+  "QrCode": "00020101021238570010A000000727012700069704480113CAS09769114580208QRIBFTTA53037045405100005802VN62320828CSFD6X6MMB4 Nap vi APE 100006304DEC6",
+  "ProviderTransactionId": null,
+  "WebhookPayload": null,
+  "FailureReason": "Ban da huy giao dich tren PayOS.",
+  "IsWalletCredited": false,
+  "ExpiresAt": {
+    "$date": "2026-08-03T18:05:09.000Z"
+  },
+  "PaidAt": null,
+  "ProcessedAt": {
+    "$date": "2026-08-03T18:00:12.948Z"
+  },
+  "LastStatusCheckedAt": {
+    "$date": "2026-08-03T18:00:12.948Z"
+  },
+  "Status": "Cancelled",
+  "CreatedAt": {
+    "$date": "2026-08-03T18:00:09.156Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-03T18:00:12.948Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a70d88be97fb11d49cb7752"
+  },
+  "UserId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "Provider": "PayOS",
+  "OrderCode": {
+    "$numberLong": "1785780360815194"
+  },
+  "AmountVnd": {
+    "$numberLong": "10000"
+  },
+  "BalanceBeforeVnd": {
+    "$numberLong": "50847"
+  },
+  "BalanceAfterVnd": {
+    "$numberLong": "50847"
+  },
+  "Description": "Nap vi APE 10.000",
+  "CheckoutUrl": "https://pay.payos.vn/web/c724f960326d4ee89e965dc06c454496",
+  "PaymentLinkId": "c724f960326d4ee89e965dc06c454496",
+  "QrCode": "00020101021238570010A000000727012700069704480113CAS09769114580208QRIBFTTA53037045405100005802VN62320828CSTMB9J9IW7 Nap vi APE 1000063042FF2",
+  "ProviderTransactionId": null,
+  "WebhookPayload": null,
+  "FailureReason": "Giao dich het han sau 5 phut va chua duoc PayOS xac nhan.",
+  "IsWalletCredited": false,
+  "ExpiresAt": {
+    "$date": "2026-08-03T18:11:00.000Z"
+  },
+  "PaidAt": null,
+  "ProcessedAt": {
+    "$date": "2026-08-03T18:11:00.440Z"
+  },
+  "LastStatusCheckedAt": {
+    "$date": "2026-08-03T18:11:00.440Z"
+  },
+  "Status": "Failed",
+  "CreatedAt": {
+    "$date": "2026-08-03T18:06:00.814Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-03T18:11:00.440Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a70dc38f4695770e348d237"
+  },
+  "UserId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "Provider": "PayOS",
+  "OrderCode": {
+    "$numberLong": "1785781303536601"
+  },
+  "AmountVnd": {
+    "$numberLong": "10000"
+  },
+  "BalanceBeforeVnd": {
+    "$numberLong": "50847"
+  },
+  "BalanceAfterVnd": {
+    "$numberLong": "50847"
+  },
+  "Description": "Nap vi APE 10.000",
+  "CheckoutUrl": "https://pay.payos.vn/web/f4f843aa92204827a6e4900ce4d68bae",
+  "PaymentLinkId": "f4f843aa92204827a6e4900ce4d68bae",
+  "QrCode": "00020101021238570010A000000727012700069704480113CAS09769114580208QRIBFTTA53037045405100005802VN62320828CSV2MJ49PG8 Nap vi APE 100006304BF9F",
+  "ProviderTransactionId": null,
+  "WebhookPayload": null,
+  "FailureReason": "Ban da huy giao dich tren PayOS.",
+  "IsWalletCredited": false,
+  "ExpiresAt": {
+    "$date": "2026-08-03T18:26:43.000Z"
+  },
+  "PaidAt": null,
+  "ProcessedAt": {
+    "$date": "2026-08-03T18:22:10.931Z"
+  },
+  "LastStatusCheckedAt": {
+    "$date": "2026-08-03T18:22:10.931Z"
+  },
+  "Status": "Cancelled",
+  "CreatedAt": {
+    "$date": "2026-08-03T18:21:43.535Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-03T18:22:10.931Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a736ef73417e7d94b30ec23"
+  },
+  "UserId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "Provider": "PayOS",
+  "OrderCode": {
+    "$numberLong": "1785949943401885"
+  },
+  "AmountVnd": {
+    "$numberLong": "50000"
+  },
+  "BalanceBeforeVnd": {
+    "$numberLong": "54296"
+  },
+  "BalanceAfterVnd": {
+    "$numberLong": "54296"
+  },
+  "Description": "Nap vi APE 50,000",
+  "CheckoutUrl": "https://pay.payos.vn/web/b6f34448bdc5479f8814adc55a272268",
+  "PaymentLinkId": "b6f34448bdc5479f8814adc55a272268",
+  "QrCode": "00020101021238570010A000000727012700069704480113CAS09769114580208QRIBFTTA53037045405500005802VN62320828CSJA4S3Q2T3 Nap vi APE 5000063044F73",
+  "ProviderTransactionId": null,
+  "WebhookPayload": null,
+  "FailureReason": "Giao dich da het han tren PayOS.",
+  "IsWalletCredited": false,
+  "ExpiresAt": {
+    "$date": "2026-08-05T17:17:23.000Z"
+  },
+  "PaidAt": null,
+  "ProcessedAt": {
+    "$date": "2026-08-05T17:17:24.326Z"
+  },
+  "LastStatusCheckedAt": {
+    "$date": "2026-08-05T17:17:24.326Z"
+  },
+  "Status": "Expired",
+  "CreatedAt": {
+    "$date": "2026-08-05T17:12:23.401Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-05T17:17:24.326Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7372733417e7d94b30f800"
+  },
+  "UserId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "Provider": "PayOS",
+  "OrderCode": {
+    "$numberLong": "1785950835148896"
+  },
+  "AmountVnd": {
+    "$numberLong": "10000"
+  },
+  "BalanceBeforeVnd": {
+    "$numberLong": "54296"
+  },
+  "BalanceAfterVnd": {
+    "$numberLong": "54296"
+  },
+  "Description": "Nap vi APE 10,000",
+  "CheckoutUrl": "https://pay.payos.vn/web/cdfcc5a5f7a547ebafacca5262ed4837",
+  "PaymentLinkId": "cdfcc5a5f7a547ebafacca5262ed4837",
+  "QrCode": "00020101021238570010A000000727012700069704480113CAS09769114580208QRIBFTTA53037045405100005802VN62320828CSLHPWJOD67 Nap vi APE 100006304CDC2",
+  "ProviderTransactionId": null,
+  "WebhookPayload": null,
+  "FailureReason": "Giao dich het han sau 5 phut va chua duoc PayOS xac nhan.",
+  "IsWalletCredited": false,
+  "ExpiresAt": {
+    "$date": "2026-08-05T17:32:15.000Z"
+  },
+  "PaidAt": null,
+  "ProcessedAt": {
+    "$date": "2026-08-05T17:32:17.607Z"
+  },
+  "LastStatusCheckedAt": {
+    "$date": "2026-08-05T17:32:17.607Z"
+  },
+  "Status": "Failed",
+  "CreatedAt": {
+    "$date": "2026-08-05T17:27:15.148Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-05T17:32:17.607Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a737477644c6db7881f1ea3"
+  },
+  "UserId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "Provider": "PayOS",
+  "OrderCode": {
+    "$numberLong": "1785951350987615"
+  },
+  "AmountVnd": {
+    "$numberLong": "50000"
+  },
+  "BalanceBeforeVnd": {
+    "$numberLong": "54296"
+  },
+  "BalanceAfterVnd": {
+    "$numberLong": "54296"
+  },
+  "Description": "Nap vi APE 50,000",
+  "CheckoutUrl": "https://pay.payos.vn/web/c087632374574439a6dff2a184b5d6a9",
+  "PaymentLinkId": "c087632374574439a6dff2a184b5d6a9",
+  "QrCode": "00020101021238570010A000000727012700069704480113CAS09769114580208QRIBFTTA53037045405500005802VN62320828CS89ABLTC17 Nap vi APE 5000063047BE9",
+  "ProviderTransactionId": null,
+  "WebhookPayload": null,
+  "FailureReason": "Giao dich da het han tren PayOS.",
+  "IsWalletCredited": false,
+  "ExpiresAt": {
+    "$date": "2026-08-05T17:40:50.000Z"
+  },
+  "PaidAt": null,
+  "ProcessedAt": {
+    "$date": "2026-08-05T17:40:50.825Z"
+  },
+  "LastStatusCheckedAt": {
+    "$date": "2026-08-05T17:40:50.825Z"
+  },
+  "Status": "Expired",
+  "CreatedAt": {
+    "$date": "2026-08-05T17:35:50.986Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-05T17:40:50.825Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a75e7180b48c5e414789a09"
+  },
+  "UserId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "Provider": "PayOS",
+  "OrderCode": {
+    "$numberLong": "1786111768057478"
+  },
+  "AmountVnd": {
+    "$numberLong": "50000"
+  },
+  "BalanceBeforeVnd": {
+    "$numberLong": "54296"
+  },
+  "BalanceAfterVnd": {
+    "$numberLong": "54296"
+  },
+  "Description": "Nap vi APE 50,000",
+  "CheckoutUrl": "https://pay.payos.vn/web/e34d6aad16d54f3aa164476d6310a39a",
+  "PaymentLinkId": "e34d6aad16d54f3aa164476d6310a39a",
+  "QrCode": "00020101021238570010A000000727012700069704480113CAS09769114580208QRIBFTTA53037045405500005802VN62320828CSQMRMUCPZ5 Nap vi APE 500006304796E",
+  "ProviderTransactionId": null,
+  "WebhookPayload": null,
+  "FailureReason": "Giao dich het han sau 5 phut va chua duoc PayOS xac nhan.",
+  "IsWalletCredited": false,
+  "ExpiresAt": {
+    "$date": "2026-08-07T14:14:28.000Z"
+  },
+  "PaidAt": null,
+  "ProcessedAt": {
+    "$date": "2026-08-07T14:14:36.900Z"
+  },
+  "LastStatusCheckedAt": {
+    "$date": "2026-08-07T14:14:36.900Z"
+  },
+  "Status": "Failed",
+  "CreatedAt": {
+    "$date": "2026-08-07T14:09:28.057Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-07T14:14:36.900Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7b43ad5f2163c217ae180d"
+  },
+  "UserId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "Provider": "PayOS",
+  "OrderCode": {
+    "$numberLong": "1786463148617297"
+  },
+  "AmountVnd": {
+    "$numberLong": "50000"
+  },
+  "BalanceBeforeVnd": {
+    "$numberLong": "24415"
+  },
+  "BalanceAfterVnd": {
+    "$numberLong": "24415"
+  },
+  "Description": "Focus 50K - Nap vi APE 50.000",
+  "PackageId": {
+    "$oid": "6a79fd884c766cdaab811d7a"
+  },
+  "PackageCode": "FOCUS_50K",
+  "PackageName": "Focus 50K",
+  "CheckoutUrl": "https://pay.payos.vn/web/3ad15ab02f204b6eaea6ef336b125307",
+  "PaymentLinkId": "3ad15ab02f204b6eaea6ef336b125307",
+  "QrCode": "00020101021238570010A000000727012700069704480113CAS09769114580208QRIBFTTA53037045405500005802VN62340830CSKTSOS05E0 APE FOCUS50K 5000063049793",
+  "ProviderTransactionId": null,
+  "WebhookPayload": null,
+  "FailureReason": "Ban da huy giao dich tren PayOS.",
+  "IsWalletCredited": false,
+  "ExpiresAt": {
+    "$date": "2026-08-11T15:50:48.000Z"
+  },
+  "PaidAt": null,
+  "ProcessedAt": {
+    "$date": "2026-08-11T15:46:22.685Z"
+  },
+  "LastStatusCheckedAt": {
+    "$date": "2026-08-11T15:46:22.685Z"
+  },
+  "Status": "Cancelled",
+  "CreatedAt": {
+    "$date": "2026-08-11T15:45:48.617Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-11T15:46:22.685Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7bef630617b31272e21156"
+  },
+  "UserId": {
+    "$oid": "6a7ac8940c1685a5a03db38b"
+  },
+  "Provider": "PayOS",
+  "OrderCode": {
+    "$numberLong": "1786507107218441"
+  },
+  "AmountVnd": {
+    "$numberLong": "50000"
+  },
+  "BalanceBeforeVnd": {
+    "$numberLong": "993336"
+  },
+  "BalanceAfterVnd": {
+    "$numberLong": "993336"
+  },
+  "Description": "Focus 50K - Nap vi APE 50.000",
+  "PackageId": {
+    "$oid": "6a79fd884c766cdaab811d7a"
+  },
+  "PackageCode": "FOCUS_50K",
+  "PackageName": "Focus 50K",
+  "CheckoutUrl": "https://pay.payos.vn/web/a0f34f31571942efbc80a665bd4c6219",
+  "PaymentLinkId": "a0f34f31571942efbc80a665bd4c6219",
+  "QrCode": "00020101021238570010A000000727012700069704480113CAS09769114580208QRIBFTTA53037045405500005802VN62340830CSFZM2IDFZ5 APE FOCUS50K 500006304C65C",
+  "ProviderTransactionId": null,
+  "WebhookPayload": null,
+  "FailureReason": "You cancelled this transaction on PayOS.",
+  "IsWalletCredited": false,
+  "ExpiresAt": {
+    "$date": "2026-08-12T04:03:27.000Z"
+  },
+  "PaidAt": null,
+  "ProcessedAt": {
+    "$date": "2026-08-12T03:58:50.787Z"
+  },
+  "LastStatusCheckedAt": {
+    "$date": "2026-08-12T03:58:50.787Z"
+  },
+  "Status": "Cancelled",
+  "CreatedAt": {
+    "$date": "2026-08-12T03:58:27.218Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-12T03:58:50.787Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7c503a0a7a2e6ee5c84e85"
+  },
+  "UserId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "Provider": "PayOS",
+  "OrderCode": {
+    "$numberLong": "1786531898052455"
+  },
+  "AmountVnd": {
+    "$numberLong": "50000"
+  },
+  "BalanceBeforeVnd": {
+    "$numberLong": "34813"
+  },
+  "BalanceAfterVnd": {
+    "$numberLong": "34813"
+  },
+  "Description": "Focus 50K - Nap vi APE 50,000",
+  "PackageId": {
+    "$oid": "6a79fd884c766cdaab811d7a"
+  },
+  "PackageCode": "FOCUS_50K",
+  "PackageName": "Focus 50K",
+  "CheckoutUrl": "https://pay.payos.vn/web/3b77be60fa4043a79e13db7a37313a74",
+  "PaymentLinkId": "3b77be60fa4043a79e13db7a37313a74",
+  "QrCode": "00020101021238570010A000000727012700069704480113CAS09769114580208QRIBFTTA53037045405500005802VN62340830CS6EIIDA6X6 APE FOCUS50K 5000063044893",
+  "ProviderTransactionId": null,
+  "WebhookPayload": null,
+  "FailureReason": "The transaction expired after 5 minutes without PayOS confirmation.",
+  "IsWalletCredited": false,
+  "ExpiresAt": {
+    "$date": "2026-08-12T10:56:38.000Z"
+  },
+  "PaidAt": null,
+  "ProcessedAt": {
+    "$date": "2026-08-12T10:57:03.174Z"
+  },
+  "LastStatusCheckedAt": {
+    "$date": "2026-08-12T10:57:03.174Z"
+  },
+  "Status": "Failed",
+  "CreatedAt": {
+    "$date": "2026-08-12T10:51:38.052Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-12T10:57:03.174Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7c84c9ca5f4aaf295d8bd0"
+  },
+  "UserId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "Provider": "PayOS",
+  "OrderCode": {
+    "$numberLong": "1786545352918514"
+  },
+  "AmountVnd": {
+    "$numberLong": "50000"
+  },
+  "BalanceBeforeVnd": {
+    "$numberLong": "29210"
+  },
+  "BalanceAfterVnd": {
+    "$numberLong": "29210"
+  },
+  "Description": "Focus 50K - Nap vi APE 50,000",
+  "PackageId": {
+    "$oid": "6a79fd884c766cdaab811d7a"
+  },
+  "PackageCode": "FOCUS_50K",
+  "PackageName": "Focus 50K",
+  "CheckoutUrl": "https://pay.payos.vn/web/6eff4132014a423e82c975a5f8fd9206",
+  "PaymentLinkId": "6eff4132014a423e82c975a5f8fd9206",
+  "QrCode": "00020101021238570010A000000727012700069704480113CAS09769114580208QRIBFTTA53037045405500005802VN62340830CS1VIYMH6H0 APE FOCUS50K 500006304CFA0",
+  "ProviderTransactionId": null,
+  "WebhookPayload": null,
+  "FailureReason": "The transaction expired after 5 minutes without PayOS confirmation.",
+  "IsWalletCredited": false,
+  "ExpiresAt": {
+    "$date": "2026-08-12T14:40:52.000Z"
+  },
+  "PaidAt": null,
+  "ProcessedAt": {
+    "$date": "2026-08-12T14:41:11.733Z"
+  },
+  "LastStatusCheckedAt": {
+    "$date": "2026-08-12T14:41:11.733Z"
+  },
+  "Status": "Failed",
+  "CreatedAt": {
+    "$date": "2026-08-12T14:35:52.918Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-12T14:41:11.733Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7c8dbaf44b28562d168b2f"
+  },
+  "UserId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "Provider": "PayOS",
+  "OrderCode": {
+    "$numberLong": "1786547642104698"
+  },
+  "AmountVnd": {
+    "$numberLong": "50000"
+  },
+  "BalanceBeforeVnd": {
+    "$numberLong": "24415"
+  },
+  "BalanceAfterVnd": {
+    "$numberLong": "24415"
+  },
+  "Description": "Focus 50K - Nap vi APE 50.000",
+  "PackageId": {
+    "$oid": "6a79fd884c766cdaab811d7a"
+  },
+  "PackageCode": "FOCUS_50K",
+  "PackageName": "Focus 50K",
+  "CheckoutUrl": "https://pay.payos.vn/web/4496c7533f0d4501a3ea9ed84a87013c",
+  "PaymentLinkId": "4496c7533f0d4501a3ea9ed84a87013c",
+  "QrCode": "00020101021238570010A000000727012700069704480113CAS09769114580208QRIBFTTA53037045405500005802VN62340830CSY2A4S0JP6 APE FOCUS50K 5000063048F06",
+  "ProviderTransactionId": null,
+  "WebhookPayload": null,
+  "FailureReason": "You cancelled this transaction on PayOS.",
+  "IsWalletCredited": false,
+  "ExpiresAt": {
+    "$date": "2026-08-12T15:19:02.000Z"
+  },
+  "PaidAt": null,
+  "ProcessedAt": {
+    "$date": "2026-08-12T15:16:30.429Z"
+  },
+  "LastStatusCheckedAt": {
+    "$date": "2026-08-12T15:16:30.429Z"
+  },
+  "Status": "Cancelled",
+  "CreatedAt": {
+    "$date": "2026-08-12T15:14:02.103Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-12T15:16:30.429Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7c8e57f44b28562d168e1a"
+  },
+  "UserId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "Provider": "PayOS",
+  "OrderCode": {
+    "$numberLong": "1786547798964899"
+  },
+  "AmountVnd": {
+    "$numberLong": "10000"
+  },
+  "BalanceBeforeVnd": {
+    "$numberLong": "34415"
+  },
+  "BalanceAfterVnd": {
+    "$numberLong": "44415"
+  },
+  "Description": "R52 Integration Package Updated - Nap vi APE 10.000",
+  "PackageId": {
+    "$oid": "6a7b11ea0c1685a5a03dccf1"
+  },
+  "PackageCode": "R52PKG01",
+  "PackageName": "R52 Integration Package Updated",
+  "CheckoutUrl": "https://pay.payos.vn/web/ef1cb2a4a7fb4fdaa8d13cc67646942c",
+  "PaymentLinkId": "ef1cb2a4a7fb4fdaa8d13cc67646942c",
+  "QrCode": "00020101021238570010A000000727012700069704480113CAS09769114580208QRIBFTTA53037045405100005802VN62340830CSRN8X41V94 APE R52PKG01 1000063047D48",
+  "ProviderTransactionId": null,
+  "WebhookPayload": null,
+  "FailureReason": null,
+  "IsWalletCredited": true,
+  "ExpiresAt": {
+    "$date": "2026-08-12T15:21:38.000Z"
+  },
+  "PaidAt": {
+    "$date": "2026-08-12T15:18:34.180Z"
+  },
+  "ProcessedAt": {
+    "$date": "2026-08-12T15:18:34.180Z"
+  },
+  "LastStatusCheckedAt": {
+    "$date": "2026-08-12T15:18:34.139Z"
+  },
+  "Status": "Completed",
+  "CreatedAt": {
+    "$date": "2026-08-12T15:16:38.964Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-12T15:18:34.139Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7c8f0ef44b28562d168f34"
+  },
+  "UserId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "Provider": "PayOS",
+  "OrderCode": {
+    "$numberLong": "1786547980991254"
+  },
+  "AmountVnd": {
+    "$numberLong": "10000"
+  },
+  "BalanceBeforeVnd": {
+    "$numberLong": "44415"
+  },
+  "BalanceAfterVnd": {
+    "$numberLong": "44415"
+  },
+  "Description": "R52 Integration Package Updated - Nap vi APE 10.000",
+  "PackageId": {
+    "$oid": "6a7b11ea0c1685a5a03dccf1"
+  },
+  "PackageCode": "R52PKG01",
+  "PackageName": "R52 Integration Package Updated",
+  "CheckoutUrl": "https://pay.payos.vn/web/2858ea50aafb4f8996546949c15a57b2",
+  "PaymentLinkId": "2858ea50aafb4f8996546949c15a57b2",
+  "QrCode": "00020101021238570010A000000727012700069704480113CAS09769114580208QRIBFTTA53037045405100005802VN62340830CSQ60U0SJW9 APE R52PKG01 100006304424A",
+  "ProviderTransactionId": null,
+  "WebhookPayload": null,
+  "FailureReason": "You cancelled this transaction on PayOS.",
+  "IsWalletCredited": false,
+  "ExpiresAt": {
+    "$date": "2026-08-12T15:24:40.000Z"
+  },
+  "PaidAt": null,
+  "ProcessedAt": {
+    "$date": "2026-08-12T15:19:45.081Z"
+  },
+  "LastStatusCheckedAt": {
+    "$date": "2026-08-12T15:19:45.081Z"
+  },
+  "Status": "Cancelled",
+  "CreatedAt": {
+    "$date": "2026-08-12T15:19:40.991Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-12T15:19:45.081Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a88a3e8d207477e31b8c2b6"
+  },
+  "UserId": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "Provider": "PayOS",
+  "OrderCode": {
+    "$numberLong": "1787339752199762"
+  },
+  "AmountVnd": {
+    "$numberLong": "10000"
+  },
+  "BalanceBeforeVnd": {
+    "$numberLong": "24704"
+  },
+  "BalanceAfterVnd": {
+    "$numberLong": "24704"
+  },
+  "Description": "Starter 10K - Nap vi APE 10,000",
+  "PackageId": {
+    "$oid": "6a79fd884c766cdaab811d79"
+  },
+  "PackageCode": "STARTER_10K",
+  "PackageName": "Starter 10K",
+  "CheckoutUrl": "https://pay.payos.vn/web/e8aa5e995f7e405ea2d8aa6dbbdbf782",
+  "PaymentLinkId": "e8aa5e995f7e405ea2d8aa6dbbdbf782",
+  "QrCode": "00020101021238570010A000000727012700069704480113CAS09769114580208QRIBFTTA53037045405100005802VN62360832CS59PE8HRB4 APE STARTER10K 100006304417F",
+  "ProviderTransactionId": null,
+  "WebhookPayload": null,
+  "FailureReason": "The transaction expired after 5 minutes without PayOS confirmation.",
+  "IsWalletCredited": false,
+  "ExpiresAt": {
+    "$date": "2026-08-21T19:20:52.000Z"
+  },
+  "PaidAt": null,
+  "ProcessedAt": {
+    "$date": "2026-08-21T19:21:01.041Z"
+  },
+  "LastStatusCheckedAt": {
+    "$date": "2026-08-21T19:21:01.041Z"
+  },
+  "Status": "Failed",
+  "CreatedAt": {
+    "$date": "2026-08-21T19:15:52.199Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-21T19:21:01.041Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a8e98dd16353d211097325a"
+  },
+  "UserId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "Provider": "PayOS",
+  "OrderCode": {
+    "$numberLong": "1787730140863775"
+  },
+  "AmountVnd": {
+    "$numberLong": "10000"
+  },
+  "BalanceBeforeVnd": {
+    "$numberLong": "28679"
+  },
+  "BalanceAfterVnd": {
+    "$numberLong": "38679"
+  },
+  "Description": "Starter 10K - Nap vi APE 10.000",
+  "PackageId": {
+    "$oid": "6a79fd884c766cdaab811d79"
+  },
+  "PackageCode": "STARTER_10K",
+  "PackageName": "Starter 10K",
+  "CheckoutUrl": "https://pay.payos.vn/web/eea57f19b8ba4807b73349a6c6a23a8b",
+  "PaymentLinkId": "eea57f19b8ba4807b73349a6c6a23a8b",
+  "QrCode": "00020101021238570010A000000727012700069704480113CAS09769114580208QRIBFTTA53037045405100005802VN62360832CSA6XWYVKZ5 APE STARTER10K 100006304EC78",
+  "ProviderTransactionId": null,
+  "WebhookPayload": null,
+  "FailureReason": null,
+  "IsWalletCredited": true,
+  "ExpiresAt": {
+    "$date": "2026-08-26T07:47:20.000Z"
+  },
+  "PaidAt": {
+    "$date": "2026-08-26T07:42:46.361Z"
+  },
+  "ProcessedAt": {
+    "$date": "2026-08-26T07:42:46.361Z"
+  },
+  "LastStatusCheckedAt": {
+    "$date": "2026-08-26T07:42:46.200Z"
+  },
+  "Status": "Completed",
+  "CreatedAt": {
+    "$date": "2026-08-26T07:42:20.862Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-26T07:42:46.203Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a8eb15516353d2110975206"
+  },
+  "UserId": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "Provider": "PayOS",
+  "OrderCode": {
+    "$numberLong": "1787736405131914"
+  },
+  "AmountVnd": {
+    "$numberLong": "10000"
+  },
+  "BalanceBeforeVnd": {
+    "$numberLong": "38204"
+  },
+  "BalanceAfterVnd": {
+    "$numberLong": "38204"
+  },
+  "Description": "Starter 10K - Nap vi APE 10.000",
+  "PackageId": {
+    "$oid": "6a79fd884c766cdaab811d79"
+  },
+  "PackageCode": "STARTER_10K",
+  "PackageName": "Starter 10K",
+  "CheckoutUrl": "https://pay.payos.vn/web/2015d11f581d431d9a1fcb224efc7d4f",
+  "PaymentLinkId": "2015d11f581d431d9a1fcb224efc7d4f",
+  "QrCode": "00020101021238570010A000000727012700069704480113CAS09769114580208QRIBFTTA53037045405100005802VN62360832CSG3BH3TLH1 APE STARTER10K 100006304A737",
+  "ProviderTransactionId": null,
+  "WebhookPayload": null,
+  "FailureReason": "The transaction expired after 5 minutes without PayOS confirmation.",
+  "IsWalletCredited": false,
+  "ExpiresAt": {
+    "$date": "2026-08-26T09:31:45.000Z"
+  },
+  "PaidAt": null,
+  "ProcessedAt": {
+    "$date": "2026-08-26T09:32:13.430Z"
+  },
+  "LastStatusCheckedAt": {
+    "$date": "2026-08-26T09:32:13.430Z"
+  },
+  "Status": "Failed",
+  "CreatedAt": {
+    "$date": "2026-08-26T09:26:45.131Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-26T09:32:13.430Z"
+  }
+}]

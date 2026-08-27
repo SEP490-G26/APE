@@ -1,0 +1,132 @@
+{
+  "dataset_id": "dataset_ingestion_vision_embedding",
+  "description": "Dataset for parse -> vision -> chunk -> embedding evaluation",
+  "pipeline_steps": [
+    "parse_to_markdown",
+    "vision_parse_if_needed",
+    "chunking_500_words",
+    "embedding"
+  ],
+  "cases": [
+    {
+      "case_id": "ING_001",
+      "difficulty": "easy",
+      "input": {
+        "file_type": "docx",
+        "contains_images": false,
+        "doc_profile": "C intro handout, mostly text"
+      },
+      "expected": {
+        "parse_success": true,
+        "min_words_after_parse": 600,
+        "expected_chunk_range": [1, 3],
+        "embedding_required": true,
+        "vision_required": false
+      },
+      "retrieval_probe": [
+        {
+          "query": "What is the purpose of scanf in C?",
+          "expected_chunk_ids": ["ING_001_CH_0"]
+        }
+      ],
+      "tags": ["docx", "text_only", "c_intro"]
+    },
+    {
+      "case_id": "ING_002",
+      "difficulty": "medium",
+      "input": {
+        "file_type": "pdf",
+        "contains_images": true,
+        "doc_profile": "Java OOP lecture with embedded diagrams"
+      },
+      "expected": {
+        "parse_success": true,
+        "min_words_after_parse": 900,
+        "expected_chunk_range": [2, 5],
+        "embedding_required": true,
+        "vision_required": "partial"
+      },
+      "retrieval_probe": [
+        {
+          "query": "Difference between interface and abstract class",
+          "expected_chunk_ids": ["ING_002_CH_1", "ING_002_CH_2"]
+        }
+      ],
+      "tags": ["pdf", "embedded_images", "java_oop"]
+    },
+    {
+      "case_id": "ING_003",
+      "difficulty": "hard",
+      "input": {
+        "file_type": "pptx",
+        "contains_images": true,
+        "doc_profile": "DSA slides with code screenshots"
+      },
+      "expected": {
+        "parse_success": true,
+        "min_words_after_parse": 500,
+        "expected_chunk_range": [1, 4],
+        "embedding_required": true,
+        "vision_required": true
+      },
+      "retrieval_probe": [
+        {
+          "query": "Complexity of BFS on adjacency list",
+          "expected_chunk_ids": ["ING_003_CH_0", "ING_003_CH_1"]
+        }
+      ],
+      "tags": ["pptx", "vision_heavy", "dsa_oop"]
+    },
+    {
+      "case_id": "ING_004",
+      "difficulty": "easy",
+      "input": {
+        "file_type": "png",
+        "contains_images": true,
+        "doc_profile": "scanned C worksheet image"
+      },
+      "expected": {
+        "parse_success": true,
+        "min_words_after_parse": 120,
+        "expected_chunk_range": [1, 2],
+        "embedding_required": true,
+        "vision_required": true
+      },
+      "retrieval_probe": [
+        {
+          "query": "for loop syntax in C",
+          "expected_chunk_ids": ["ING_004_CH_0"]
+        }
+      ],
+      "tags": ["image", "vision_only", "c_intro"]
+    },
+    {
+      "case_id": "ING_005",
+      "difficulty": "medium",
+      "input": {
+        "file_type": "xlsx",
+        "contains_images": false,
+        "doc_profile": "topic matrix for Java OOP exercises"
+      },
+      "expected": {
+        "parse_success": true,
+        "min_words_after_parse": 250,
+        "expected_chunk_range": [1, 2],
+        "embedding_required": true,
+        "vision_required": false
+      },
+      "retrieval_probe": [
+        {
+          "query": "Which sheet tracks polymorphism exercises?",
+          "expected_chunk_ids": ["ING_005_CH_0"]
+        }
+      ],
+      "tags": ["xlsx", "structured", "java_oop"]
+    }
+  ],
+  "benchmark_design_notes": {
+    "separate_step_metrics_required": true,
+    "end_to_end_metric_required": true,
+    "recommendation": "Run both per-step benchmark and end-to-end benchmark in same test suite, but keep logs separated by step_id"
+  }
+}

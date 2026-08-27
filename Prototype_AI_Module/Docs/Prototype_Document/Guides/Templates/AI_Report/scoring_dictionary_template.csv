@@ -1,0 +1,25 @@
+sheet_name,metric_name,metric_definition,score_range,weight,pass_threshold,notes
+Input Quality Benchmark,ocr_text_accuracy_score,Do chinh xac text sau OCR hoặc parsing,0-1,0.20,0.75,
+Input Quality Benchmark,content_cleanliness_score,Muc do loai bo ky tu rac khoang trang va noise,0-1,0.20,0.75,
+Input Quality Benchmark,chunk_boundary_score,Muc do chia dung cum noi dung va khong cat vo nghia,0-1,0.20,0.75,
+Input Quality Benchmark,tag_relevance_score,Tag co bam sat noi dung chunk hay khong,0-1,0.15,0.75,
+Input Quality Benchmark,tag_coverage_score,Muc do bao phu topic quan trong cua tai lieu,0-1,0.10,0.70,
+Input Quality Benchmark,image_description_quality_score,Chat luong mo ta anh neu co vision,0-1,0.05,0.60,
+Input Quality Benchmark,grounding_traceability_score,Co truy vet duoc nguon chunk/page/segment hay khong,0-1,0.10,0.80,
+Question Generation Benchmark,schema_valid_rate,Ty le cau hoi dung schema dich,0-1,0.15,1.00,
+Question Generation Benchmark,grounded_rate,Ty le cau hoi bam sat context nguon,0-1,0.25,0.80,
+Question Generation Benchmark,difficulty_alignment_score,Do khop muc do de kho voi target,0-1,0.15,0.75,
+Question Generation Benchmark,topic_relevance_score,Do bam sat topic duoc yeu cau,0-1,0.15,0.80,
+Question Generation Benchmark,question_clarity_score,Muc do ro rang tu than cua cau hoi,0-1,0.10,0.75,
+Question Generation Benchmark,question_usefulness_score,Muc do co gia tri hoc thuat va su pham,0-1,0.10,0.75,
+Question Generation Benchmark,distractor_quality_score,Chi ap dung FE - chat luong phuong an nhieu lua chon,0-1,0.07,0.70,FE only
+Question Generation Benchmark,testcase_quality_score,Chi ap dung PE - chat luong test case danh gia,0-1,0.09,0.70,PE only
+Question Generation Benchmark,rule_based_pass_rate,Ty le vuot cac luat rule-based reviewer,0-1,0.10,0.80,
+Code Mentor Benchmark,bug_detection_score,Do dung khi phat hien loi sai,0-1,0.20,0.75,
+Code Mentor Benchmark,correctness_feedback_score,Do dung cua nhan xet ve tinh dung sai cua code,0-1,0.20,0.75,
+Code Mentor Benchmark,code_quality_feedback_score,Chat luong nhan xet ve style cau truc va code smell,0-1,0.15,0.70,
+Code Mentor Benchmark,actionability_score,Muc do de xuat sua loi co the lam theo ngay,0-1,0.15,0.75,
+Code Mentor Benchmark,specificity_score,Muc do cu the thay vi nhan xet mo ho,0-1,0.10,0.70,
+Code Mentor Benchmark,hallucination_penalty,Muc phat khi nhan xet sai khong bam vao code,0-1,-1.00,0.00,Subtract from final score
+Code Mentor Benchmark,grounded_to_code_score,Muc do nhan xet bam vao source code va context de bai,0-1,0.10,0.80,
+Code Mentor Benchmark,pedagogical_value_score,Gia tri huong dan hoc tap cho sinh vien,0-1,0.10,0.75,

@@ -1,0 +1,61 @@
+﻿{
+    "snapshot_id":  "QGEN_C_PE:v1:20260716065908000:0fa8f1f938dc",
+    "artifact_type":  "groundtruth",
+    "stable_id":  "QGEN_C_PE",
+    "version":  "v1",
+    "function_name":  "QuestionGenerationReview",
+    "subject_code":  "C",
+    "question_type":  "PE",
+    "language":  "en",
+    "description":  "QGEN_C_PE",
+    "is_active":  true,
+    "source":  "git_backfill",
+    "source_commit":  "511aa50726eca82952abff8f8b29642d20a4d019",
+    "captured_from":  "src-dotnet/Ape.AiModule.Api/App_Data/ai-groundtruth/QGEN_C_PE.json",
+    "captured_at":  "2026-07-16T06:59:08.0000000Z",
+    "content_hash":  "0fa8f1f938dc475359a0caa998d993458222d7d636e5105a3534f3f64b320f25",
+    "change_reason":  "Add AI module prototype, operator UI, and docs",
+    "change_summary":  "Initial snapshot imported from git history.",
+    "content":  {
+                    "dataset_id":  "QGEN_C_PE",
+                    "version":  "v1",
+                    "language":  "en",
+                    "function_name":  "QuestionGenerationReview",
+                    "subject_code":  "C",
+                    "question_type":  "PE",
+                    "institution_context":  {
+                                                "target_students":  "FPT University foundational programming students",
+                                                "course_hint":  "PRF-style practice problems with clear input-output behavior"
+                                            },
+                    "evaluation_cases":  [
+                                             {
+                                                 "case_id":  "c_pe_easy_loop_output",
+                                                 "difficulty":  "Easy",
+                                                 "expected_topic_tags":  [
+                                                                             "loop",
+                                                                             "input_output"
+                                                                         ],
+                                                 "expected_question_shape":  "single-task implementation",
+                                                 "acceptance_focus":  [
+                                                                          "clear statement",
+                                                                          "valid C skeleton",
+                                                                          "visible test case"
+                                                                      ]
+                                             },
+                                             {
+                                                 "case_id":  "c_pe_medium_array_processing",
+                                                 "difficulty":  "Medium",
+                                                 "expected_topic_tags":  [
+                                                                             "array",
+                                                                             "function"
+                                                                         ],
+                                                 "expected_question_shape":  "multi-step beginner implementation",
+                                                 "acceptance_focus":  [
+                                                                          "edge cases",
+                                                                          "coherent tests",
+                                                                          "difficulty alignment"
+                                                                      ]
+                                             }
+                                         ]
+                }
+}

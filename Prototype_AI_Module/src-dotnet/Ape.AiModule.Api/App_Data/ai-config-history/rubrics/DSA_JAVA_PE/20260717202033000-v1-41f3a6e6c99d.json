@@ -1,0 +1,266 @@
+﻿{
+    "snapshot_id":  "DSA_JAVA_PE:v1:20260717202033000:41f3a6e6c99d",
+    "artifact_type":  "rubrics",
+    "stable_id":  "DSA_JAVA_PE",
+    "version":  "v1",
+    "function_name":  "",
+    "subject_code":  "DSA_JAVA",
+    "question_type":  "PE",
+    "language":  "en",
+    "description":  "Data Structures and Algorithms in Java - Practice Exam Rubric",
+    "is_active":  true,
+    "source":  "git_backfill",
+    "source_commit":  "414b1d8e9101455132a26bf6845c0d98b395192c",
+    "captured_from":  "src-dotnet/Ape.AiModule.Api/App_Data/ai-rubrics/DSA_JAVA_PE.json",
+    "captured_at":  "2026-07-17T20:20:33.0000000Z",
+    "content_hash":  "41f3a6e6c99df36829cc89f32b4c03d806900d0cc9c9dccedc7f35ebebd751b5",
+    "change_reason":  "update FE/PE question generation prompt quality",
+    "change_summary":  "Changed fields: few_shot_examples, quality_dimensions, quality_exemplars, quality_red_flags, quality_regeneration_hints",
+    "content":  {
+                    "rubric_id":  "DSA_JAVA_PE",
+                    "version":  "v1",
+                    "language":  "en",
+                    "subject_code":  "DSA_JAVA",
+                    "question_type":  "PE",
+                    "title":  "Data Structures and Algorithms in Java - Practice Exam Rubric",
+                    "institution_context":  {
+                                                "target_students":  "FPT University students studying data structures and algorithms in Java",
+                                                "course_context":  [
+                                                                       "CSD-style practical algorithm and data structure implementation tasks",
+                                                                       "Tasks should stay within undergraduate coursework scope"
+                                                                   ]
+                                            },
+                    "difficulty_definitions":  {
+                                                   "easy":  {
+                                                                "description":  "A direct implementation task using one clear data structure or one simple algorithmic idea.",
+                                                                "expected_skills":  [
+                                                                                        "Implement a straightforward array, loop, or single-structure operation.",
+                                                                                        "Follow direct input/output rules.",
+                                                                                        "Solve without advanced optimization."
+                                                                                    ],
+                                                                "should_avoid":  [
+                                                                                     "Complex state management across multiple structures.",
+                                                                                     "Optimization-heavy algorithm design."
+                                                                                 ]
+                                                            },
+                                                   "medium":  {
+                                                                  "description":  "A task requiring several coherent operations, moderate edge-case handling, or a clear algorithm/data-structure choice.",
+                                                                  "expected_skills":  [
+                                                                                          "Implement and reason about a standard DSA task.",
+                                                                                          "Handle boundary cases explicitly.",
+                                                                                          "Write clean logic with meaningful test coverage."
+                                                                                      ],
+                                                                  "should_avoid":  [
+                                                                                       "Very advanced optimization or proofs.",
+                                                                                       "Large multi-module design."
+                                                                                   ]
+                                                              },
+                                                   "hard":  {
+                                                                "description":  "A substantial DSA task requiring algorithmic decomposition, careful edge-case handling, and stronger hidden-test coverage.",
+                                                                "expected_skills":  [
+                                                                                        "Choose or implement an appropriate algorithm or structure.",
+                                                                                        "Handle multiple important edge cases.",
+                                                                                        "Provide a solution whose tests validate non-trivial behavior."
+                                                                                    ],
+                                                                "should_avoid":  [
+                                                                                     "Research-grade algorithms.",
+                                                                                     "Topics not grounded in the chunks."
+                                                                                 ]
+                                                            }
+                                               },
+                    "review_checks":  [
+                                          "The task must be grounded in the provided chunks.",
+                                          "The task must be genuinely about DSA concepts in Java course scope.",
+                                          "Difficulty must match implementation and reasoning effort.",
+                                          "skeleton_code must be coherent starter Java code.",
+                                          "solution_code must solve the stated problem correctly in principle.",
+                                          "test_cases must include visible validation and meaningful hidden checks."
+                                      ],
+                    "difficulty_mismatch_signals":  {
+                                                        "easy":  [
+                                                                     "Requires non-trivial algorithm selection or many edge cases.",
+                                                                     "Needs deep reasoning about structure invariants.",
+                                                                     "Hidden tests imply much more than a direct practice task."
+                                                                 ],
+                                                        "medium":  [
+                                                                       "Can be solved with one trivial pass and no real reasoning.",
+                                                                       "Requires advanced algorithm design far above normal course level.",
+                                                                       "Depends on unstated assumptions not grounded in the chunks."
+                                                                   ],
+                                                        "hard":  [
+                                                                     "Only asks for a direct loop or one-step operation.",
+                                                                     "Contains weak or overly simple tests.",
+                                                                     "Does not require meaningful algorithmic thinking."
+                                                                 ]
+                                                    },
+                    "quality_dimensions":  {
+                                               "clarity":  [
+                                                               "The statement clearly defines the required operation, expected output, and algorithmic goal.",
+                                                               "The learner should understand the task without needing the original chunk wording."
+                                                           ],
+                                               "pedagogical_value":  [
+                                                                         "The task should check a genuine DSA skill such as traversal, update logic, ordering, counting, or structure behavior.",
+                                                                         "The task should not reduce to a pure syntax rewrite when the chunk supports a more meaningful operation."
+                                                                     ],
+                                               "non_triviality":  [
+                                                                      "Prefer one focused algorithmic behavior with meaningful reasoning over a bare loop-only drill.",
+                                                                      "The task should reflect why the data structure or algorithm matters in the chunk context."
+                                                                  ],
+                                               "test_strength":  [
+                                                                     "Tests should include normal and boundary-style behavior, not only one happy path.",
+                                                                     "Hidden tests should help distinguish correct algorithmic logic from hardcoded output."
+                                                                 ]
+                                           },
+                    "quality_red_flags":  [
+                                              "The task is only a trivial syntax exercise with no real data-structure or algorithmic behavior.",
+                                              "The problem statement does not make the algorithmic requirement explicit.",
+                                              "The tests are too weak to verify the intended logic or edge handling.",
+                                              "The title is generic and does not identify the operation being implemented."
+                                          ],
+                    "quality_regeneration_hints":  [
+                                                       "Make the task target one concrete DSA operation or behavior grounded in the chunk.",
+                                                       "State the expected algorithmic behavior more explicitly.",
+                                                       "Improve test coverage so the solution cannot pass by luck or hardcoding."
+                                                   ],
+                    "quality_exemplars":  [
+                                              {
+                                                  "difficulty":  "Easy",
+                                                  "title_style":  "Count the Number of Even Values in an Array",
+                                                  "good_pattern":  [
+                                                                       "Targets one concrete array-processing behavior.",
+                                                                       "Requires simple but real algorithmic reasoning.",
+                                                                       "Produces clear input/output expectations and testable results."
+                                                                   ],
+                                                  "avoid_pattern":  [
+                                                                        "Only asks to write a loop with no meaningful goal.",
+                                                                        "Frames the task as a generic syntax exercise."
+                                                                    ]
+                                              },
+                                              {
+                                                  "difficulty":  "Medium",
+                                                  "title_style":  "Find the First Repeated Element in a Sequence",
+                                                  "good_pattern":  [
+                                                                       "Requires a clear data-processing goal and ordinary edge handling.",
+                                                                       "Encourages meaningful test variation.",
+                                                                       "Feels like a proper DSA lab problem within undergraduate scope."
+                                                                   ],
+                                                  "avoid_pattern":  [
+                                                                        "Escalates into advanced optimization not grounded in the chunk.",
+                                                                        "Uses weak tests that cannot distinguish correct logic."
+                                                                    ]
+                                              }
+                                          ],
+                    "few_shot_examples":  [
+                                              {
+                                                  "difficulty":  "Easy",
+                                                  "question":  {
+                                                                   "type":  "PE",
+                                                                   "topic_tags":  [
+                                                                                      "array",
+                                                                                      "loop",
+                                                                                      "condition"
+                                                                                  ],
+                                                                   "difficulty":  "Easy",
+                                                                   "title":  "Count Even Numbers in an Array",
+                                                                   "description":  "Write a Java program that reads an integer n, then reads n integers into an array, and prints how many of them are even.\n\nInput: n followed by n integers.\nOutput: one integer representing the count of even values.",
+                                                                   "source_chunk_ids":  [
+                                                                                            "chunk-example-even-count"
+                                                                                        ],
+                                                                   "skeleton_code":  [
+                                                                                         {
+                                                                                             "filename":  "Main.java",
+                                                                                             "content":  "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        int[] arr = new int[n];\n\n        for (int i = 0; i \u003c n; i++) {\n            arr[i] = sc.nextInt();\n        }\n\n    }\n}",
+                                                                                             "is_readonly":  false
+                                                                                         }
+                                                                                     ],
+                                                                   "solution_code":  [
+                                                                                         {
+                                                                                             "filename":  "Main.java",
+                                                                                             "content":  "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        int[] arr = new int[n];\n        int count = 0;\n\n        for (int i = 0; i \u003c n; i++) {\n            arr[i] = sc.nextInt();\n            if (arr[i] % 2 == 0) {\n                count++;\n            }\n        }\n\n        System.out.println(count);\n    }\n}"
+                                                                                         }
+                                                                                     ],
+                                                                   "test_cases":  [
+                                                                                      {
+                                                                                          "input":  "5 1 2 3 4 6",
+                                                                                          "expected_output":  "3",
+                                                                                          "is_hidden":  false
+                                                                                      },
+                                                                                      {
+                                                                                          "input":  "4 1 3 5 7",
+                                                                                          "expected_output":  "0",
+                                                                                          "is_hidden":  true
+                                                                                      },
+                                                                                      {
+                                                                                          "input":  "6 2 2 2 2 2 2",
+                                                                                          "expected_output":  "6",
+                                                                                          "is_hidden":  true
+                                                                                      }
+                                                                                  ],
+                                                                   "options":  null,
+                                                                   "correct_answer":  null,
+                                                                   "explanation":  null
+                                                               }
+                                              },
+                                              {
+                                                  "difficulty":  "Medium",
+                                                  "question":  {
+                                                                   "type":  "PE",
+                                                                   "topic_tags":  [
+                                                                                      "array",
+                                                                                      "loop",
+                                                                                      "search"
+                                                                                  ],
+                                                                   "difficulty":  "Medium",
+                                                                   "title":  "Find the First Repeated Value in a Sequence",
+                                                                   "description":  "Write a Java program that reads an integer n, then reads n integers into an array. Print the first value that appears at least twice when scanning from left to right. If no value is repeated, print -1.\n\nInput: n followed by n integers.\nOutput: the first repeated value, or -1 if no repeated value exists.",
+                                                                   "source_chunk_ids":  [
+                                                                                            "chunk-example-first-repeat"
+                                                                                        ],
+                                                                   "skeleton_code":  [
+                                                                                         {
+                                                                                             "filename":  "Main.java",
+                                                                                             "content":  "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        int[] arr = new int[n];\n\n        for (int i = 0; i \u003c n; i++) {\n            arr[i] = sc.nextInt();\n        }\n\n    }\n}",
+                                                                                             "is_readonly":  false
+                                                                                         }
+                                                                                     ],
+                                                                   "solution_code":  [
+                                                                                         {
+                                                                                             "filename":  "Main.java",
+                                                                                             "content":  "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        int[] arr = new int[n];\n\n        for (int i = 0; i \u003c n; i++) {\n            arr[i] = sc.nextInt();\n        }\n\n        for (int i = 0; i \u003c n; i++) {\n            for (int j = i + 1; j \u003c n; j++) {\n                if (arr[i] == arr[j]) {\n                    System.out.println(arr[i]);\n                    return;\n                }\n            }\n        }\n\n        System.out.println(-1);\n    }\n}"
+                                                                                         }
+                                                                                     ],
+                                                                   "test_cases":  [
+                                                                                      {
+                                                                                          "input":  "6 4 1 3 1 5 3",
+                                                                                          "expected_output":  "1",
+                                                                                          "is_hidden":  false
+                                                                                      },
+                                                                                      {
+                                                                                          "input":  "5 2 7 2 7 8",
+                                                                                          "expected_output":  "2",
+                                                                                          "is_hidden":  true
+                                                                                      },
+                                                                                      {
+                                                                                          "input":  "4 9 8 7 6",
+                                                                                          "expected_output":  "-1",
+                                                                                          "is_hidden":  true
+                                                                                      }
+                                                                                  ],
+                                                                   "options":  null,
+                                                                   "correct_answer":  null,
+                                                                   "explanation":  null
+                                                               }
+                                              }
+                                          ],
+                    "acceptance_rules":  [
+                                             "Accept only if the task, skeleton, solution, and tests are coherent and grounded.",
+                                             "Reject if the solution shape does not match the algorithmic task.",
+                                             "Reject if difficulty is inconsistent with the actual implementation burden."
+                                         ],
+                    "regeneration_hints":  [
+                                               "Keep Easy tasks single-structure and direct.",
+                                               "Use explicit boundary handling for Medium tasks.",
+                                               "Reserve stronger decomposition and hidden coverage for Hard tasks."
+                                           ]
+                }
+}

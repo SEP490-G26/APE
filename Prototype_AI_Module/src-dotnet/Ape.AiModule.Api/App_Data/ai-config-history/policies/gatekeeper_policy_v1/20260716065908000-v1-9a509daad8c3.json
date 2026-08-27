@@ -1,0 +1,79 @@
+﻿{
+    "snapshot_id":  "gatekeeper_policy_v1:v1:20260716065908000:9a509daad8c3",
+    "artifact_type":  "policies",
+    "stable_id":  "gatekeeper_policy_v1",
+    "version":  "v1",
+    "function_name":  "Gatekeeper",
+    "subject_code":  "",
+    "question_type":  "",
+    "language":  "",
+    "description":  "gatekeeper_policy_v1",
+    "is_active":  true,
+    "source":  "git_backfill",
+    "source_commit":  "511aa50726eca82952abff8f8b29642d20a4d019",
+    "captured_from":  "src-dotnet/Ape.AiModule.Api/App_Data/gatekeeper-policy.json",
+    "captured_at":  "2026-07-16T06:59:08.0000000Z",
+    "content_hash":  "9a509daad8c3c88e596cd5ce63833ee9465047f11f91800bad07a85cc556b81b",
+    "change_reason":  "Add AI module prototype, operator UI, and docs",
+    "change_summary":  "Initial snapshot imported from git history.",
+    "content":  {
+                    "policy_id":  "gatekeeper_policy_v1",
+                    "version":  "v1",
+                    "function_name":  "Gatekeeper",
+                    "supported_subjects":  [
+                                               {
+                                                   "code":  "C",
+                                                   "label":  "Programming Fundamentals using C",
+                                                   "topic_examples":  [
+                                                                          "variables",
+                                                                          "conditions",
+                                                                          "loops",
+                                                                          "arrays",
+                                                                          "functions",
+                                                                          "pointers",
+                                                                          "scanf",
+                                                                          "printf"
+                                                                      ]
+                                               },
+                                               {
+                                                   "code":  "JAVA_OOP",
+                                                   "label":  "Java OOP",
+                                                   "topic_examples":  [
+                                                                          "class",
+                                                                          "object",
+                                                                          "constructor",
+                                                                          "encapsulation",
+                                                                          "inheritance",
+                                                                          "polymorphism",
+                                                                          "method",
+                                                                          "interface"
+                                                                      ]
+                                               },
+                                               {
+                                                   "code":  "DSA_JAVA",
+                                                   "label":  "Data Structures and Algorithms in Java",
+                                                   "topic_examples":  [
+                                                                          "array",
+                                                                          "linked list",
+                                                                          "stack",
+                                                                          "queue",
+                                                                          "tree",
+                                                                          "graph",
+                                                                          "sorting",
+                                                                          "searching",
+                                                                          "complexity"
+                                                                      ]
+                                               }
+                                           ],
+                    "verdict_rules":  {
+                                          "supported":  "The document clearly belongs to exactly one supported subject area.",
+                                          "unsupported":  "The document is outside the supported subject whitelist.",
+                                          "ambiguous":  "The document is too short, too noisy, or mixes multiple supported subject areas without a clear primary subject."
+                                      },
+                    "precheck_rules":  {
+                                           "min_word_count":  12,
+                                           "empty_content_rejection_code":  "empty_content",
+                                           "insufficient_content_rejection_code":  "insufficient_content"
+                                       }
+                }
+}

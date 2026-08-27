@@ -1,0 +1,14 @@
+{
+  "policy_id": "code_mentor_policy_v1",
+  "version": "v1",
+  "function_name": "CodeMentor",
+  "supported_languages": ["c", "java"],
+  "issue_categories": ["syntax", "logic", "edge_case", "runtime_risk", "complexity", "style", "partial_solution", "algorithm_choice"],
+  "verdicts": ["correct", "acceptable_with_minor_notes", "needs_fix", "incorrect"],
+  "feedback_rules": {
+    "max_issue_count": 6,
+    "max_suggestion_count": 6,
+    "require_actionable_suggestions": true,
+    "require_failing_scenarios_when_possible": true
+  }
+}

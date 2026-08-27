@@ -1,0 +1,147 @@
+[{
+  "_id": {
+    "$oid": "687b1a010000000000000001"
+  },
+  "AgentRole": "Gatekeeper",
+  "Provider": "DeepSeek",
+  "ModelName": "deepseek-v4-flash",
+  "MaxTokens": 1500,
+  "Temperature": 0.1,
+  "CreditCost": 0,
+  "IsEnabled": true,
+  "FallbackProvider": "OpenAI",
+  "FallbackModelName": "gpt-4o-mini",
+  "UpdatedBy": {
+    "$oid": "6a8e98b016353d21109731bb"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-26T07:41:36.870Z"
+  },
+  "Notes": "Priority order: deepseek-v4-flash -> gpt-4o-mini"
+},
+{
+  "_id": {
+    "$oid": "687b1a010000000000000002"
+  },
+  "AgentRole": "Extraction",
+  "Provider": "OpenAI",
+  "ModelName": "gpt-4o",
+  "MaxTokens": 2500,
+  "Temperature": 0.2,
+  "CreditCost": 0,
+  "IsEnabled": true,
+  "FallbackProvider": "OpenAI",
+  "FallbackModelName": "gpt-5.4-mini",
+  "UpdatedBy": {
+    "$oid": "6a8e98b016353d21109731bb"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-26T07:41:36.870Z"
+  },
+  "Notes": "Priority order: gpt-4o -> gpt-5.4-mini"
+},
+{
+  "_id": {
+    "$oid": "687b1a010000000000000003"
+  },
+  "AgentRole": "Embedding",
+  "Provider": "Cohere",
+  "ModelName": "embed-multilingual-v3.0",
+  "MaxTokens": null,
+  "Temperature": null,
+  "CreditCost": 0,
+  "IsEnabled": true,
+  "FallbackProvider": null,
+  "FallbackModelName": null,
+  "UpdatedBy": {
+    "$oid": "6a8e98b016353d21109731bb"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-26T07:41:36.870Z"
+  },
+  "Notes": "Priority order: embed-multilingual-v3.0"
+},
+{
+  "_id": {
+    "$oid": "687b1a010000000000000004"
+  },
+  "AgentRole": "Tagging",
+  "Provider": "DeepSeek",
+  "ModelName": "deepseek-v4-flash",
+  "MaxTokens": 600,
+  "Temperature": 0.1,
+  "CreditCost": 0,
+  "IsEnabled": true,
+  "FallbackProvider": "OpenAI",
+  "FallbackModelName": "gpt-4o-mini",
+  "UpdatedBy": {
+    "$oid": "6a8e98b016353d21109731bb"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-26T07:41:36.870Z"
+  },
+  "Notes": "Priority order: deepseek-v4-flash -> gpt-4o-mini"
+},
+{
+  "_id": {
+    "$oid": "687b1a010000000000000005"
+  },
+  "AgentRole": "QuestionGenerator",
+  "Provider": "OpenAI",
+  "ModelName": "gpt-5.4",
+  "MaxTokens": 4000,
+  "Temperature": 0.4,
+  "CreditCost": 0,
+  "IsEnabled": true,
+  "FallbackProvider": "OpenAI",
+  "FallbackModelName": "gpt-5.4-mini",
+  "UpdatedBy": {
+    "$oid": "6a8e98b016353d21109731bb"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-26T07:41:36.870Z"
+  },
+  "Notes": "Priority order: gpt-5.4 -> gpt-5.4-mini -> gpt-4o"
+},
+{
+  "_id": {
+    "$oid": "687b1a010000000000000006"
+  },
+  "AgentRole": "Reviewer",
+  "Provider": "OpenAI",
+  "ModelName": "gpt-5.4",
+  "MaxTokens": 2500,
+  "Temperature": 0.2,
+  "CreditCost": 0,
+  "IsEnabled": true,
+  "FallbackProvider": "OpenAI",
+  "FallbackModelName": "gpt-5.4-mini",
+  "UpdatedBy": {
+    "$oid": "6a8e98b016353d21109731bb"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-26T07:41:36.870Z"
+  },
+  "Notes": "Priority order: gpt-5.4 -> gpt-5.4-mini -> gpt-4o"
+},
+{
+  "_id": {
+    "$oid": "687b1a010000000000000007"
+  },
+  "AgentRole": "Mentor",
+  "Provider": "OpenAI",
+  "ModelName": "gpt-5.4",
+  "MaxTokens": 4000,
+  "Temperature": 0.3,
+  "CreditCost": 0,
+  "IsEnabled": true,
+  "FallbackProvider": "OpenAI",
+  "FallbackModelName": "gpt-5.4-mini",
+  "UpdatedBy": {
+    "$oid": "6a8e98b016353d21109731bb"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-26T07:41:36.870Z"
+  },
+  "Notes": "Priority order: gpt-5.4 -> gpt-5.4-mini -> gpt-4o"
+}]

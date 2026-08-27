@@ -1,0 +1,88 @@
+{
+  "rubric_id": "JAVA_OOP_PE",
+  "version": "v1",
+  "language": "en",
+  "subject_code": "JAVA_OOP",
+  "question_type": "PE",
+  "title": "Java OOP - Practice Exam Rubric",
+  "institution_context": {
+    "target_students": "FPT University students studying Java OOP courses",
+    "course_context": [
+      "PRO-style practical OOP exercises",
+      "Tasks should match undergraduate Java class design and behavior practice"
+    ]
+  },
+  "difficulty_definitions": {
+    "easy": {
+      "description": "A short implementation task focused on one core Java or OOP concept with direct expected behavior.",
+      "expected_skills": [
+        "Define a basic class or method.",
+        "Use constructors, fields, or simple methods correctly.",
+        "Follow a provided skeleton with little decomposition."
+      ],
+      "should_avoid": [
+        "Deep inheritance hierarchies.",
+        "Multiple interacting classes with hidden complexity."
+      ]
+    },
+    "medium": {
+      "description": "A task combining multiple Java OOP concepts or requiring several coherent methods and state transitions.",
+      "expected_skills": [
+        "Design a small class with meaningful methods.",
+        "Handle object state and method interactions correctly.",
+        "Cover normal and boundary cases in tests."
+      ],
+      "should_avoid": [
+        "Advanced collections or frameworks unless grounded in the chunks.",
+        "Architecturally large designs."
+      ]
+    },
+    "hard": {
+      "description": "A richer object-oriented implementation task requiring careful class behavior, decomposition, and consistent test coverage.",
+      "expected_skills": [
+        "Coordinate multiple methods or classes coherently.",
+        "Handle important edge cases and object behavior rules.",
+        "Produce a solution whose tests validate both structure and behavior."
+      ],
+      "should_avoid": [
+        "Production framework integration.",
+        "Complex library dependencies outside core Java OOP learning goals."
+      ]
+    }
+  },
+  "review_checks": [
+    "The task must be grounded in the provided chunks.",
+    "The task must reflect Java OOP fundamentals and not drift into unrelated topics.",
+    "Difficulty must match actual implementation and reasoning effort.",
+    "skeleton_code must be valid Java-oriented starter code.",
+    "solution_code must satisfy the statement.",
+    "test_cases must be coherent and cover relevant behavior."
+  ],
+  "difficulty_mismatch_signals": {
+    "easy": [
+      "Requires multiple classes or layered object interactions.",
+      "Needs non-trivial decomposition or several hidden rules.",
+      "Includes difficult edge cases not implied by an easy task."
+    ],
+    "medium": [
+      "Can be solved by filling one trivial method only.",
+      "Requires advanced APIs or design patterns absent from the chunks.",
+      "Has hidden tests far beyond the stated requirements."
+    ],
+    "hard": [
+      "Is only a constructor or getter/setter exercise.",
+      "Contains overly simple tests.",
+      "Does not require meaningful OOP reasoning."
+    ]
+  },
+  "acceptance_rules": [
+    "Accept only if the task, skeleton, solution, and tests are consistent and grounded.",
+    "Reject if the Java code shape does not match the intended OOP task.",
+    "Reject if hidden tests imply unstated requirements."
+  ],
+  "regeneration_hints": [
+    "Keep Easy tasks focused on one concept and one class if possible.",
+    "Use richer state and method interactions for Medium tasks.",
+    "Reserve multi-part object behavior for Hard tasks."
+  ]
+}

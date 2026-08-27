@@ -1,0 +1,36 @@
+﻿{
+  "snapshot_id": "CODE_MENTOR:v1:20260719032318390:4d7fe7c368fa",
+  "artifact_type": "rubrics",
+  "stable_id": "CODE_MENTOR",
+  "version": "v1",
+  "function_name": "CodeMentor",
+  "subject_code": null,
+  "question_type": null,
+  "language": "en",
+  "description": null,
+  "is_active": true,
+  "source": "D:\\1_Tailieuhoctap REAL Reborn\\Ky9  - Final\\Prototype_AI_Module_repo\\src-dotnet\\Ape.AiModule.Api\\App_Data\\ai-rubrics\\CODE_MENTOR.json",
+  "source_commit": null,
+  "captured_from": null,
+  "captured_at": "2026-07-19T03:23:18.39022+00:00",
+  "content_hash": "4d7fe7c368fa8ef105cf1dd38d9b440cba581d34363ddf00b9d5b35029af930a",
+  "change_reason": null,
+  "change_summary": null,
+  "content": {
+    "rubric_id": "CODE_MENTOR",
+    "rubric_name": "Code Mentor Feedback Quality",
+    "function_name": "CodeMentor",
+    "version": "v1",
+    "language": "en",
+    "description": "Lightweight rubric for reviewing whether mentor feedback is technically grounded, actionable, and suitable for beginner programming students.",
+    "quality_checks": [
+      "Feedback should identify concrete technical issues when they exist.",
+      "Feedback should avoid claiming code execution unless execution evidence exists.",
+      "Suggestions should be actionable and map back to the identified issue.",
+      "Complexity comments should be cautious and only stated when inferable.",
+      "Likely failing scenarios should be included when the defect implies a clear failing input."
+    ],
+    "acceptance_rule": "Accept when the feedback is technically grounded, specific, and useful to the student.",
+    "warning_rule": "Warn when the feedback is vague, overly speculative, or disconnected from the code."
+  }
+}

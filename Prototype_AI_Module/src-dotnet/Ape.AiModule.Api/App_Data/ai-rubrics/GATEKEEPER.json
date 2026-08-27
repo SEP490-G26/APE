@@ -1,0 +1,23 @@
+{
+  "rubric_id": "GATEKEEPER",
+  "rubric_name": "Gatekeeper Whitelist Classification",
+  "function_name": "Gatekeeper",
+  "version": "v1",
+  "language": "en",
+  "description": "Lightweight rubric for classifying whether a document belongs to the supported subject whitelist.",
+  "classification_checks": [
+    "Use only the visible extracted content.",
+    "Check whether the material belongs to exactly one supported subject area.",
+    "Reject content that is clearly outside the whitelist.",
+    "Return ambiguous when the content is too short, too noisy, or mixes multiple supported subject areas.",
+    "Do not infer from filename alone if topic evidence is weak."
+  ],
+  "supported_subjects": [
+    "C",
+    "JAVA_OOP",
+    "DSA_JAVA"
+  ],
+  "acceptance_rule": "Return supported only when there is clear evidence for exactly one supported subject.",
+  "ambiguity_rule": "Return ambiguous when evidence is insufficient or mixed.",
+  "rejection_rule": "Return unsupported when the content is outside the supported subject whitelist."
+}

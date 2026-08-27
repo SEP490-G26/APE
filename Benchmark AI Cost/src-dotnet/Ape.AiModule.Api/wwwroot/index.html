@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>APE AI Module Operator</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">AI</div>
+        <div>
+          <h1>APE AI Module</h1>
+          <p>Prototype operator console</p>
+        </div>
+      </div>
+
+      <nav class="nav-list">
+        <button class="nav-link is-active" data-tab-target="overview-tab">Overview</button>
+        <button class="nav-link" data-tab-target="gatekeeper-tab">1. Gatekeeper</button>
+        <button class="nav-link" data-tab-target="extracted-tab">2. Extracted Content</button>
+        <button class="nav-link" data-tab-target="embedding-tab">3. Embedding + Tagging</button>
+        <button class="nav-link" data-tab-target="generation-tab">4-5. Generation + Review</button>
+        <button class="nav-link" data-tab-target="mentor-tab">6. Code Mentor</button>
+        <button class="nav-link" data-tab-target="history-tab">Run History</button>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">AI prototype runtime</p>
+          <h2>Operate the core AI features, inspect source-of-truth config, and review JSON-first outputs.</h2>
+          <p class="hero-copy">This console is intentionally minimal. It focuses on provider state, prompt and policy inspection, direct function execution, and run history review.</p>
+        </div>
+        <div class="hero-actions">
+          <button id="refresh-provider-list" class="secondary">Refresh Providers</button>
+          <button id="reload-provider-config" class="secondary">Reload Provider Config</button>
+          <button id="refresh-prompt-list" class="secondary">Reload Prompts</button>
+        </div>
+      </section>
+
+      <div id="fragment-overview"></div>
+      <div id="fragment-gatekeeper"></div>
+      <div id="fragment-extracted"></div>
+      <div id="fragment-embedding"></div>
+      <div id="fragment-generation"></div>
+      <div id="fragment-mentor"></div>
+      <div id="fragment-history"></div>
+    </main>
+  </div>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

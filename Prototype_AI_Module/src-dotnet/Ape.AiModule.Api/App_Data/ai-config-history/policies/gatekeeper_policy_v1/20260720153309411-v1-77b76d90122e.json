@@ -1,0 +1,79 @@
+﻿{
+  "snapshot_id": "gatekeeper_policy_v1:v1:20260720153309411:77b76d90122e",
+  "artifact_type": "policies",
+  "stable_id": "gatekeeper_policy_v1",
+  "version": "v1",
+  "function_name": "Gatekeeper",
+  "subject_code": null,
+  "question_type": null,
+  "language": null,
+  "description": "Gatekeeper runtime policy",
+  "is_active": true,
+  "source": "D:\\1_Tailieuhoctap REAL Reborn\\Ky9  - Final\\Prototype_AI_Module_repo\\src-dotnet\\Ape.AiModule.Api\\App_Data\\gatekeeper-policy.json",
+  "source_commit": null,
+  "captured_from": null,
+  "captured_at": "2026-07-20T15:33:09.411199+00:00",
+  "content_hash": "77b76d90122e7ae306a774a55cd87566d87fc1ac67b2940710a545ecadd78738",
+  "change_reason": null,
+  "change_summary": null,
+  "content": {
+    "policy_id": "gatekeeper_policy_v1",
+    "version": "v1",
+    "function_name": "Gatekeeper",
+    "supported_subjects": [
+      {
+        "code": "C",
+        "label": "Programming Fundamentals using C",
+        "topic_examples": [
+          "variables",
+          "conditions",
+          "loops",
+          "arrays",
+          "functions",
+          "pointers",
+          "scanf",
+          "printf"
+        ]
+      },
+      {
+        "code": "JAVA_OOP",
+        "label": "Java OOP",
+        "topic_examples": [
+          "class",
+          "object",
+          "constructor",
+          "encapsulation",
+          "inheritance",
+          "polymorphism",
+          "method",
+          "interface"
+        ]
+      },
+      {
+        "code": "DSA_JAVA",
+        "label": "Data Structures and Algorithms in Java",
+        "topic_examples": [
+          "array",
+          "linked list",
+          "stack",
+          "queue",
+          "tree",
+          "graph",
+          "sorting",
+          "searching",
+          "complexity"
+        ]
+      }
+    ],
+    "verdict_rules": {
+      "supported": "The document clearly belongs to exactly one supported subject area.",
+      "unsupported": "The document is outside the supported subject whitelist.",
+      "ambiguous": "The document is too short, too noisy, or mixes multiple supported subject areas without a clear primary subject."
+    },
+    "precheck_rules": {
+      "min_word_count": 12,
+      "empty_content_rejection_code": "empty_content",
+      "insufficient_content_rejection_code": "insufficient_content"
+    }
+  }
+}

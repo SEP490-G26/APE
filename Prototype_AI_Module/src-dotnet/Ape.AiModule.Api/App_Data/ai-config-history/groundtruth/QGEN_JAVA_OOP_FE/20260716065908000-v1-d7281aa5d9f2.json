@@ -1,0 +1,62 @@
+﻿{
+    "snapshot_id":  "QGEN_JAVA_OOP_FE:v1:20260716065908000:d7281aa5d9f2",
+    "artifact_type":  "groundtruth",
+    "stable_id":  "QGEN_JAVA_OOP_FE",
+    "version":  "v1",
+    "function_name":  "QuestionGenerationReview",
+    "subject_code":  "JAVA_OOP",
+    "question_type":  "FE",
+    "language":  "en",
+    "description":  "QGEN_JAVA_OOP_FE",
+    "is_active":  true,
+    "source":  "git_backfill",
+    "source_commit":  "511aa50726eca82952abff8f8b29642d20a4d019",
+    "captured_from":  "src-dotnet/Ape.AiModule.Api/App_Data/ai-groundtruth/QGEN_JAVA_OOP_FE.json",
+    "captured_at":  "2026-07-16T06:59:08.0000000Z",
+    "content_hash":  "d7281aa5d9f23734b370aeff736d33609bbe7487bbb75c2502e51c226724ef7d",
+    "change_reason":  "Add AI module prototype, operator UI, and docs",
+    "change_summary":  "Initial snapshot imported from git history.",
+    "content":  {
+                    "dataset_id":  "QGEN_JAVA_OOP_FE",
+                    "version":  "v1",
+                    "language":  "en",
+                    "function_name":  "QuestionGenerationReview",
+                    "subject_code":  "JAVA_OOP",
+                    "question_type":  "FE",
+                    "institution_context":  {
+                                                "target_students":  "FPT University Java OOP students",
+                                                "course_hint":  "PRO-style object-oriented Java learning outcomes"
+                                            },
+                    "evaluation_cases":  [
+                                             {
+                                                 "case_id":  "java_fe_easy_constructor",
+                                                 "difficulty":  "Easy",
+                                                 "expected_topic_tags":  [
+                                                                             "constructor",
+                                                                             "class",
+                                                                             "object"
+                                                                         ],
+                                                 "expected_question_shape":  "direct OOP concept check",
+                                                 "acceptance_focus":  [
+                                                                          "correct terminology",
+                                                                          "groundedness",
+                                                                          "clear explanation"
+                                                                      ]
+                                             },
+                                             {
+                                                 "case_id":  "java_fe_medium_inheritance_trace",
+                                                 "difficulty":  "Medium",
+                                                 "expected_topic_tags":  [
+                                                                             "inheritance",
+                                                                             "method"
+                                                                         ],
+                                                 "expected_question_shape":  "code-tracing multiple choice",
+                                                 "acceptance_focus":  [
+                                                                          "behavior reasoning",
+                                                                          "difficulty alignment",
+                                                                          "non-trivial distractors"
+                                                                      ]
+                                             }
+                                         ]
+                }
+}

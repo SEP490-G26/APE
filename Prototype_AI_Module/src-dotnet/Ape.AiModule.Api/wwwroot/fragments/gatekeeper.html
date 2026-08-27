@@ -1,0 +1,68 @@
+<section id="gatekeeper-tab" class="tab-panel">
+  <div class="function-layout">
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Function 1</p>
+          <h3>AI Gatekeeper</h3>
+        </div>
+      </div>
+      <form id="gatekeeper-form" class="stack-form">
+        <div class="grid grid--3">
+          <label>User ID
+            <input name="userId" value="prototype-user">
+          </label>
+          <label>Subject
+            <select name="subject">
+              <option value="C">C</option>
+              <option value="JAVA_OOP">JAVA_OOP</option>
+              <option value="DSA_JAVA">DSA_JAVA</option>
+            </select>
+          </label>
+          <label>Language
+            <select name="language">
+              <option value="vi">vi</option>
+              <option value="en">en</option>
+            </select>
+          </label>
+          <label>Provider
+            <select name="provider" data-provider-select data-model-target="gatekeeper-model"></select>
+          </label>
+          <label>Model
+            <select id="gatekeeper-model" name="model"></select>
+          </label>
+          <label>File name
+            <input name="fileName" value="input.txt">
+          </label>
+        </div>
+        <label>Upload file
+          <input id="gatekeeper-upload" type="file" accept=".txt,.md,.json,.pdf,.docx,.pptx,.png,.jpg,.jpeg,.webp">
+        </label>
+        <label>Raw content
+          <textarea name="rawContent" rows="14"></textarea>
+        </label>
+        <div class="action-row">
+          <button type="submit">Run Gatekeeper</button>
+          <button type="button" class="secondary" data-run-debug="gatekeeper">Run Debug</button>
+          <button type="button" class="secondary" data-copy-parsed="gatekeeper">Copy Parsed</button>
+          <button type="button" class="secondary" data-copy-json="gatekeeper">Copy JSON</button>
+          <button type="button" class="secondary" data-export-json="gatekeeper">Export JSON</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel panel--output">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Output</p>
+          <h3>Parsed result</h3>
+        </div>
+      </div>
+      <div id="gatekeeper-result" class="result-card"></div>
+      <details class="details-block">
+        <summary>Raw JSON</summary>
+        <pre id="gatekeeper-json" class="json-view"></pre>
+      </details>
+    </section>
+  </div>
+</section>

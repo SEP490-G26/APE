@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Ape.AiModule.Api/Ape.AiModule.Api.csproj" />
+  <Project Path="Ape.AiModule.Application/Ape.AiModule.Application.csproj" />
+  <Project Path="Ape.AiModule.Domain/Ape.AiModule.Domain.csproj" />
+  <Project Path="Ape.AiModule.Infrastructure/Ape.AiModule.Infrastructure.csproj" />
+</Solution>

@@ -1,0 +1,138 @@
+{
+  "runAt": "2026-06-24T07:59:54.446Z",
+  "timeline": [
+    {
+      "ts": "2026-06-24T07:59:53.447Z",
+      "phase": "upload_received",
+      "details": {
+        "fileName": "Slot_00_Course Introduction.pptx"
+      }
+    },
+    {
+      "ts": "2026-06-24T07:59:53.708Z",
+      "phase": "parse_completed",
+      "details": {
+        "parser": "officeparser_pptx",
+        "latency_ms": 260.41
+      }
+    },
+    {
+      "ts": "2026-06-24T07:59:54.133Z",
+      "phase": "embedding_chunk_completed",
+      "details": {
+        "chunkIndex": 0,
+        "words": 500,
+        "provider": "cohere",
+        "model": "embed-multilingual-v3.0",
+        "inputTokens": 508,
+        "costUsd": 0
+      }
+    },
+    {
+      "ts": "2026-06-24T07:59:54.446Z",
+      "phase": "embedding_chunk_completed",
+      "details": {
+        "chunkIndex": 1,
+        "words": 463,
+        "provider": "cohere",
+        "model": "embed-multilingual-v3.0",
+        "inputTokens": 508,
+        "costUsd": 0
+      }
+    }
+  ],
+  "parsedMarkdown": "---\ntitle: \"PowerPoint Presentation\"\nauthor: \"ADMIN\"\ncreated: 2021-01-25T08:25:31.000Z\nmodified: 2024-12-30T02:14:39.000Z\n---\n\n\n---\n\n# **Programming Fundamentals using C** {#programming-fundamentals-using-c}\n\n\n\n\n---\n\n# **Contents** {#contents}\n\n- Why should you study this course?\n- Prerequisites\n- Course Objectives\n- Course Description and Course Plan\n- Materials/ References/ Tools\n- Course Rules\n- Evaluation Strategy\n- How to study\n- Academic policy\n- Install tools for programming\n2\n\n30/12/2024\n\n\n\n\n---\n\n# **Why should you study this course?** {#why-should-you-study-this-course}\n\n3\n\n- **Foundation of Programming**: C is often considered the “**mother**” of modern programming languages. Many languages, like C++, Java, C# and Python, have roots in C, so learning it provides a solid foundation.** **\n- **Performance**: C is a low-level language that allows for fine control over system resources and memory management, leading to high-performance applications.\n- **System-Level Programming**: C is widely used in system programming, including operating systems and embedded systems.\n30/12/2024\n\n\n\n\n---\n\n# **Why should you study this course?** {#why-should-you-study-this-course}\n\n4\n\n- **Rich Library Support**: C has a vast standard library, providing numerous built-in functions that can simplify development tasks.\n- **Problem-Solving Skills**: Learning C enhances your problem-solving skills as it often requires a deeper understanding of algorithms and data structures.\n- **Community and Resources**: C has a long-standing community, offering a wealth of resources, tutorials, and forums to help you learn and fix bug source code.\n30/12/2024\n\n\n\n\n---\n\n# **Why C is chosen?** {#why-c-is-chosen}\n\n5\n\n- Top ten common programming languages:\n30/12/2024\n\n![Global tech trends](image3.png)\n\n\n---\n\n    - Requires knowledge such as: \n        - English reading comprehension\n        - Basic logical thinking in mathematics\n6\n\n**Prerequisites**\n\n30/12/2024\n\n\n\n\n---\n\n# **Course Objectives ** {#course-objectives}\n\n- Explain the way to solve a real problem using computer.\n- Understand the basic concepts computer system, and software development.\n- Understand the basic concepts of programming, focus on procedure programming, testing and debugging, unit testing.\n- Read and understand the simple C programs.\n- Solve real problems using C.\n- Individual and team work behaviors.\n7\n\n30/12/2024\n\n\n\n\n---\n\n# **Course Description** {#course-description}\n\n1. Introduction to PFC\n2. Basic Computation\n3. Basic Logic constructs\n4. Modules and Functions\n5. Pointers\n6. Libraries\n7. Contiguous Storage using Arrays and Struct\n8. Strings\n9. Working to file: Text and Binary files \n8\n\n30/12/2024\n\n\n\n\n---\n\n# **Course Plan** {#course-plan}\n\n<div style=\"text-align: center\">**See course plan on FLM**</div>\n\n9\n\n30/12/2024\n\n\n\n\n---\n\n# **Materials/ References** {#materials-references}\n\n1. **Foundations of Programming Using C**** **(Hard Copy - FPT University Library)\n<div style=\"text-align: justify\">Author: Evan Weaver</div>\n\n<div style=\"text-align: justify\">Published Date: July, 2006</div>\n\n**2) ****The C Programming Language**\n\nAuthors: Brian W. Kernighan, Dennis M. Ritchie\n\nPublished Date: 1988; Edition: 2<sup>nd</sup> Edtitions\n\n**3) ****MOOC: Introduction to C Course**\n\nLink: [https://intro2c.sdds.ca/](https://intro2c.sdds.ca/)\n\nAuthors: Chris Szalwinsk and Seneca College\n\n10\n\n30/12/2024\n\n\n\n\n---\n\n# **Tools** {#tools}\n\n- Tool (IDE): **Dev-C++ version 6.3  (TDM-GCC 9.2)**\n- Link download: [https://www.embarcadero.com/free-tools/dev-cpp](https://www.embarcadero.com/free-tools/dev-cpp)\n11\n\n30/12/2024\n\n\n\n\n---\n\n# **Course Rules** {#course-rules}\n\n- **How to conduct**\n    - Prepare contents of the next session at home \n    - Following lessons in classroom\n    - Completing chapter assessments in time and Quizzes ([https://exam.fpt.edu.vn](https://exam.fpt.edu.vn/))\n    - ***Write reports*** of all labs and assignments to your notebook\n- **Communication**\n    - Class\n    - Interchange by CMS, EduNext\n    - Discussing actively in your team and classroom\n    - Free to question and answer\n- **Others**\n    - Off phone, no game, no chat in class\n    - Use laptop under teacher’s instruction\n12\n\n30/12/2024\n\n\n\n> **Note:** 17\n\n\n---\n\n# **Evaluation Strategy ** {#evaluation-strategy}\n\n- **Must attend more than 80% of contact hours (if not, not allow to take exam)**\n- **Evaluating**\n    - Maximum score: 10\n    - On-going assessments:\n        - 02 Progress Test (PT, 15%)\n        - 05 Workshops (WS, 10%)\n        - 01 Assignment (AS, 15%)     \n        - 01 Practical Exam (PE, 30%)\n    - Final Exam (FE, 30%)\n    - Total score=0.15*PT + 0.1*WS + 0.15*AS + 0.3*PE + 0.3*FE\n- **Pass: **\n    - Every on-going assessments component >0\n    - Final Exam Score >=4 and  Final Result  >=5 \n- **Final Exam retake only when not passed**\n13\n\n30/12/2024\n\n\n\n\n---\n\n# **How to study** {#how-to-study}\n\n- This course is complex knowledge (however, it’s attractive and exciting), so you need to keep a tight grip on it\n    - **Read**\n<div style=\"text-align: justify\">On the books to get the general concept</div>\n\n<div style=\"text-align: justify\">Reference, study, collection from anywhere else (internet, your classmate, forum …)</div>\n\n    - **Attend lectures**\n<div style=\"text-align: justify\">Listen, understand, then make your notes</div>\n\n<div style=\"text-align: justify\">Give your explanation about some topic in lectures</div>\n\n<div style=\"text-align: justify\">Ask questions</div>\n\n<div style=\"text-align: justify\">Give some examples that do not exist in your book</div>\n\n<div style=\"text-align: justify\">Practice all the exercises, demo to make your sense </div>\n\n    - **After classes**\n<div style=\"text-align: justify\">Discuss your classmate indirectly, on the forum</div>\n\n<div style=\"text-align: justify\">Analyze, design, and implement workshops and assignments. **Write reports **in your notebook</div>\n\n<div style=\"text-align: justify\">Build your team in yourselves to support together in studying</div>\n\n14\n\n30/12/2024\n\n\n\n\n---\n\n# **Academic policy** {#academic-policy}\n\n- Cheating, plagiarism and breach of copyright are serious offenses under this Policy.\n    - **Cheating**\n<div style=\"text-align: justify\">Cheating during a test or exam is construed as talking, peeking at another student’s paper or any other clandestine method of transmitting information.</div>\n\n    - **Plagiarism**\n<div style=\"text-align: justify\">Plagiarism is using the work of others without citing it; that is, holding the work of others out as your own work. </div>\n\n    - **Breach of Copyright**\n<div style=\"text-align: justify\">If you photocopy a textbook without the copyright holder's permission, you violate copyright law. </div>\n\n15\n\n30/12/2024\n\n\n\n\n---\n\n# **Enjoy the Course** {#enjoy-the-course}\n\n- Be enthusiastic about the material because it is interesting, useful and an important part of your training as a software engineer.\n- Our job is to help you learn and enjoy the experience.\n- We will do our best but we need your help. \n- So let’s all have fun together with Programming Fundamentals using C language !!!\n16\n\n30/12/2024\n\n\n\n\n---\n\n# **Install tools for programming** {#install-tools-for-programming}\n\n<div style=\"text-align: center\">Q&A</div>\n\n17\n\n30/12/2024",
+  "chunkedMarkdown": [
+    {
+      "chunkIndex": 0,
+      "words": 500,
+      "text": "--- title: \"PowerPoint Presentation\" author: \"ADMIN\" created: 2021-01-25T08:25:31.000Z modified: 2024-12-30T02:14:39.000Z --- --- # **Programming Fundamentals using C** {#programming-fundamentals-using-c} --- # **Contents** {#contents} - Why should you study this course? - Prerequisites - Course Objectives - Course Description and Course Plan - Materials/ References/ Tools - Course Rules - Evaluation Strategy - How to study - Academic policy - Install tools for programming 2 30/12/2024 --- # **Why should you study this course?** {#why-should-you-study-this-course} 3 - **Foundation of Programming**: C is often considered the “**mother**” of modern programming languages. Many languages, like C++, Java, C# and Python, have roots in C, so learning it provides a solid foundation.** ** - **Performance**: C is a low-level language that allows for fine control over system resources and memory management, leading to high-performance applications. - **System-Level Programming**: C is widely used in system programming, including operating systems and embedded systems. 30/12/2024 --- # **Why should you study this course?** {#why-should-you-study-this-course} 4 - **Rich Library Support**: C has a vast standard library, providing numerous built-in functions that can simplify development tasks. - **Problem-Solving Skills**: Learning C enhances your problem-solving skills as it often requires a deeper understanding of algorithms and data structures. - **Community and Resources**: C has a long-standing community, offering a wealth of resources, tutorials, and forums to help you learn and fix bug source code. 30/12/2024 --- # **Why C is chosen?** {#why-c-is-chosen} 5 - Top ten common programming languages: 30/12/2024 ![Global tech trends](image3.png) --- - Requires knowledge such as: - English reading comprehension - Basic logical thinking in mathematics 6 **Prerequisites** 30/12/2024 --- # **Course Objectives ** {#course-objectives} - Explain the way to solve a real problem using computer. - Understand the basic concepts computer system, and software development. - Understand the basic concepts of programming, focus on procedure programming, testing and debugging, unit testing. - Read and understand the simple C programs. - Solve real problems using C. - Individual and team work behaviors. 7 30/12/2024 --- # **Course Description** {#course-description} 1. Introduction to PFC 2. Basic Computation 3. Basic Logic constructs 4. Modules and Functions 5. Pointers 6. Libraries 7. Contiguous Storage using Arrays and Struct 8. Strings 9. Working to file: Text and Binary files 8 30/12/2024 --- # **Course Plan** {#course-plan} <div style=\"text-align: center\">**See course plan on FLM**</div> 9 30/12/2024 --- # **Materials/ References** {#materials-references} 1. **Foundations of Programming Using C**** **(Hard Copy - FPT University Library) <div style=\"text-align: justify\">Author: Evan Weaver</div> <div style=\"text-align: justify\">Published Date: July, 2006</div> **2) ****The C Programming Language** Authors: Brian W. Kernighan, Dennis M. Ritchie Published Date: 1988; Edition: 2<sup>nd</sup> Edtitions **3) ****MOOC: Introduction to C Course** Link: [https://intro2c.sdds.ca/](https://intro2c.sdds.ca/) Authors: Chris Szalwinsk and Seneca College 10 30/12/2024 --- # **Tools** {#tools} - Tool (IDE): **Dev-C++ version 6.3 (TDM-GCC 9.2)** - Link download: [https://www.embarcadero.com/free-tools/dev-cpp](https://www.embarcadero.com/free-tools/dev-cpp) 11 30/12/2024 --- # **Course Rules** {#course-rules} - **How to conduct** - Prepare contents of the next session at home - Following lessons in classroom - Completing chapter assessments in time and Quizzes ([https://exam.fpt.edu.vn](https://exam.fpt.edu.vn/)) - ***Write reports*** of all"
+    },
+    {
+      "chunkIndex": 1,
+      "words": 463,
+      "text": "labs and assignments to your notebook - **Communication** - Class - Interchange by CMS, EduNext - Discussing actively in your team and classroom - Free to question and answer - **Others** - Off phone, no game, no chat in class - Use laptop under teacher’s instruction 12 30/12/2024 > **Note:** 17 --- # **Evaluation Strategy ** {#evaluation-strategy} - **Must attend more than 80% of contact hours (if not, not allow to take exam)** - **Evaluating** - Maximum score: 10 - On-going assessments: - 02 Progress Test (PT, 15%) - 05 Workshops (WS, 10%) - 01 Assignment (AS, 15%) - 01 Practical Exam (PE, 30%) - Final Exam (FE, 30%) - Total score=0.15*PT + 0.1*WS + 0.15*AS + 0.3*PE + 0.3*FE - **Pass: ** - Every on-going assessments component >0 - Final Exam Score >=4 and Final Result >=5 - **Final Exam retake only when not passed** 13 30/12/2024 --- # **How to study** {#how-to-study} - This course is complex knowledge (however, it’s attractive and exciting), so you need to keep a tight grip on it - **Read** <div style=\"text-align: justify\">On the books to get the general concept</div> <div style=\"text-align: justify\">Reference, study, collection from anywhere else (internet, your classmate, forum …)</div> - **Attend lectures** <div style=\"text-align: justify\">Listen, understand, then make your notes</div> <div style=\"text-align: justify\">Give your explanation about some topic in lectures</div> <div style=\"text-align: justify\">Ask questions</div> <div style=\"text-align: justify\">Give some examples that do not exist in your book</div> <div style=\"text-align: justify\">Practice all the exercises, demo to make your sense </div> - **After classes** <div style=\"text-align: justify\">Discuss your classmate indirectly, on the forum</div> <div style=\"text-align: justify\">Analyze, design, and implement workshops and assignments. **Write reports **in your notebook</div> <div style=\"text-align: justify\">Build your team in yourselves to support together in studying</div> 14 30/12/2024 --- # **Academic policy** {#academic-policy} - Cheating, plagiarism and breach of copyright are serious offenses under this Policy. - **Cheating** <div style=\"text-align: justify\">Cheating during a test or exam is construed as talking, peeking at another student’s paper or any other clandestine method of transmitting information.</div> - **Plagiarism** <div style=\"text-align: justify\">Plagiarism is using the work of others without citing it; that is, holding the work of others out as your own work. </div> - **Breach of Copyright** <div style=\"text-align: justify\">If you photocopy a textbook without the copyright holder's permission, you violate copyright law. </div> 15 30/12/2024 --- # **Enjoy the Course** {#enjoy-the-course} - Be enthusiastic about the material because it is interesting, useful and an important part of your training as a software engineer. - Our job is to help you learn and enjoy the experience. - We will do our best but we need your help. - So let’s all have fun together with Programming Fundamentals using C language !!! 16 30/12/2024 --- # **Install tools for programming** {#install-tools-for-programming} <div style=\"text-align: center\">Q&A</div> 17 30/12/2024"
+    }
+  ],
+  "file": {
+    "name": "Slot_00_Course Introduction.pptx",
+    "mimeType": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+    "sizeBytes": 179025,
+    "sizeMb": 0.1707
+  },
+  "documentStats": {
+    "characters": 7250,
+    "words": 963,
+    "chunks": 2,
+    "chunkSizeWords": 500
+  },
+  "steps": [
+    {
+      "step": "parse_to_markdown",
+      "parser": "officeparser_pptx",
+      "model": "local-parser",
+      "latency_ms": 260.41,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "totalCostUsd": 0,
+      "status": "success"
+    },
+    {
+      "step": "embedding_and_tagging",
+      "model": "embed-multilingual-v3.0",
+      "latency_ms": 737.27,
+      "inputTokens": 1016,
+      "outputTokens": 0,
+      "totalCostUsd": 0,
+      "status": "success",
+      "note": ""
+    }
+  ],
+  "embeddingChunks": [
+    {
+      "chunkIndex": 0,
+      "words": 500,
+      "inputTokens": 508,
+      "costUsd": 0,
+      "embeddingDimensions": 1024,
+      "model": "embed-multilingual-v3.0",
+      "provider": "cohere",
+      "tags": [
+        "learning-content",
+        "chunked-500w"
+      ]
+    },
+    {
+      "chunkIndex": 1,
+      "words": 463,
+      "inputTokens": 508,
+      "costUsd": 0,
+      "embeddingDimensions": 1024,
+      "model": "embed-multilingual-v3.0",
+      "provider": "cohere",
+      "tags": [
+        "learning-content",
+        "chunked-500w"
+      ]
+    }
+  ],
+  "rawFlowLog": {
+    "provider": "cohere",
+    "parse": {
+      "parserType": "officeparser_pptx",
+      "usage": {}
+    },
+    "embedding": {
+      "status": "success",
+      "chunksAttempted": 2
+    }
+  },
+  "totals": {
+    "latency_ms": 998.16,
+    "inputTokens": 1016,
+    "outputTokens": 0,
+    "totalCostUsd": 0
+  },
+  "runId": "run-2026-06-24T07-59-54-446Z-aeda642f",
+  "mode": "benchmark_upload"
+}

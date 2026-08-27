@@ -1,0 +1,126 @@
+<section id="overview-tab" class="tab-panel is-active">
+  <div class="panel-grid panel-grid--overview">
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Connection</p>
+          <h3>Provider status</h3>
+        </div>
+      </div>
+      <div id="provider-cards" class="provider-grid"></div>
+      <details class="details-block">
+        <summary>Raw provider catalog</summary>
+        <pre id="provider-raw" class="json-view"></pre>
+      </details>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Source of truth</p>
+          <h3>Prompt registry</h3>
+        </div>
+      </div>
+      <div id="prompt-list" class="mini-list"></div>
+      <details class="details-block">
+        <summary>Prompt payload</summary>
+        <pre id="prompt-raw" class="json-view"></pre>
+      </details>
+    </section>
+  </div>
+
+  <div class="panel-grid panel-grid--overview">
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Config viewer</p>
+          <h3>Prompt / policy / rubric / ground truth</h3>
+        </div>
+        <div class="action-row">
+          <button id="source-load" type="button">Load</button>
+          <button id="source-copy" type="button" class="secondary">Copy JSON</button>
+        </div>
+      </div>
+      <div class="grid grid--3">
+        <label>Source type
+          <select id="source-kind">
+            <option value="prompt">Prompt</option>
+            <option value="policy">Policy</option>
+            <option value="rubric">Rubric</option>
+            <option value="ground-truth">Ground truth</option>
+          </select>
+        </label>
+        <label>Function
+          <select id="source-function">
+            <option value="gatekeeper">gatekeeper</option>
+            <option value="extracted-content">extracted-content</option>
+            <option value="embedding-tagging">embedding-tagging</option>
+            <option value="question-generation">question-generation</option>
+            <option value="code-mentor">code-mentor</option>
+          </select>
+        </label>
+        <label>Prompt key
+          <select id="source-prompt-key"></select>
+        </label>
+        <label>Subject
+          <select id="source-subject">
+            <option value="C">C</option>
+            <option value="JAVA_OOP">JAVA_OOP</option>
+            <option value="DSA_JAVA">DSA_JAVA</option>
+          </select>
+        </label>
+        <label>Question type
+          <select id="source-question-type">
+            <option value="FE">FE</option>
+            <option value="PE">PE</option>
+          </select>
+        </label>
+      </div>
+      <div id="source-meta" class="result-card"></div>
+      <details class="details-block" open>
+        <summary>Loaded JSON</summary>
+        <pre id="source-json" class="json-view"></pre>
+      </details>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Prompt editor</p>
+          <h3>Prompt Studio</h3>
+        </div>
+        <div class="action-row">
+          <button id="prompt-load" type="button" class="secondary">Load Selected</button>
+          <button id="prompt-save" type="button">Save Prompt</button>
+        </div>
+      </div>
+      <div class="grid grid--3">
+        <label>Prompt key
+          <select id="prompt-editor-key"></select>
+        </label>
+        <label>Version
+          <input id="prompt-version" type="text">
+        </label>
+        <label>Active
+          <select id="prompt-active">
+            <option value="true">true</option>
+            <option value="false">false</option>
+          </select>
+        </label>
+      </div>
+      <label>Description
+        <input id="prompt-description" type="text">
+      </label>
+      <label>System prompt
+        <textarea id="prompt-system" rows="10"></textarea>
+      </label>
+      <label>User prompt
+        <textarea id="prompt-user" rows="12"></textarea>
+      </label>
+      <details class="details-block">
+        <summary>Prompt JSON</summary>
+        <pre id="prompt-editor-json" class="json-view"></pre>
+      </details>
+    </section>
+  </div>
+</section>

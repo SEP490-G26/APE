@@ -1,0 +1,267 @@
+﻿{
+    "snapshot_id":  "JAVA_OOP_PE:v1:20260717202033000:c2d838d539d9",
+    "artifact_type":  "rubrics",
+    "stable_id":  "JAVA_OOP_PE",
+    "version":  "v1",
+    "function_name":  "",
+    "subject_code":  "JAVA_OOP",
+    "question_type":  "PE",
+    "language":  "en",
+    "description":  "Java OOP - Practice Exam Rubric",
+    "is_active":  true,
+    "source":  "git_backfill",
+    "source_commit":  "414b1d8e9101455132a26bf6845c0d98b395192c",
+    "captured_from":  "src-dotnet/Ape.AiModule.Api/App_Data/ai-rubrics/JAVA_OOP_PE.json",
+    "captured_at":  "2026-07-17T20:20:33.0000000Z",
+    "content_hash":  "c2d838d539d92b2ae9dde78bc896dcbf70afbc4533ff155f808dd3987e6e5a23",
+    "change_reason":  "update FE/PE question generation prompt quality",
+    "change_summary":  "Changed fields: few_shot_examples, quality_dimensions, quality_exemplars, quality_red_flags, quality_regeneration_hints",
+    "content":  {
+                    "rubric_id":  "JAVA_OOP_PE",
+                    "version":  "v1",
+                    "language":  "en",
+                    "subject_code":  "JAVA_OOP",
+                    "question_type":  "PE",
+                    "title":  "Java OOP - Practice Exam Rubric",
+                    "institution_context":  {
+                                                "target_students":  "FPT University students studying Java OOP courses",
+                                                "course_context":  [
+                                                                       "PRO-style practical OOP exercises",
+                                                                       "Tasks should match undergraduate Java class design and behavior practice"
+                                                                   ]
+                                            },
+                    "difficulty_definitions":  {
+                                                   "easy":  {
+                                                                "description":  "A short implementation task focused on one core Java or OOP concept with direct expected behavior.",
+                                                                "expected_skills":  [
+                                                                                        "Define a basic class or method.",
+                                                                                        "Use constructors, fields, or simple methods correctly.",
+                                                                                        "Follow a provided skeleton with little decomposition."
+                                                                                    ],
+                                                                "should_avoid":  [
+                                                                                     "Deep inheritance hierarchies.",
+                                                                                     "Multiple interacting classes with hidden complexity."
+                                                                                 ]
+                                                            },
+                                                   "medium":  {
+                                                                  "description":  "A task combining multiple Java OOP concepts or requiring several coherent methods and state transitions.",
+                                                                  "expected_skills":  [
+                                                                                          "Design a small class with meaningful methods.",
+                                                                                          "Handle object state and method interactions correctly.",
+                                                                                          "Cover normal and boundary cases in tests."
+                                                                                      ],
+                                                                  "should_avoid":  [
+                                                                                       "Advanced collections or frameworks unless grounded in the chunks.",
+                                                                                       "Architecturally large designs."
+                                                                                   ]
+                                                              },
+                                                   "hard":  {
+                                                                "description":  "A richer object-oriented implementation task requiring careful class behavior, decomposition, and consistent test coverage.",
+                                                                "expected_skills":  [
+                                                                                        "Coordinate multiple methods or classes coherently.",
+                                                                                        "Handle important edge cases and object behavior rules.",
+                                                                                        "Produce a solution whose tests validate both structure and behavior."
+                                                                                    ],
+                                                                "should_avoid":  [
+                                                                                     "Production framework integration.",
+                                                                                     "Complex library dependencies outside core Java OOP learning goals."
+                                                                                 ]
+                                                            }
+                                               },
+                    "review_checks":  [
+                                          "The task must be grounded in the provided chunks.",
+                                          "The task must reflect Java OOP fundamentals and not drift into unrelated topics.",
+                                          "Difficulty must match actual implementation and reasoning effort.",
+                                          "skeleton_code must be valid Java-oriented starter code.",
+                                          "solution_code must satisfy the statement.",
+                                          "test_cases must be coherent and cover relevant behavior."
+                                      ],
+                    "difficulty_mismatch_signals":  {
+                                                        "easy":  [
+                                                                     "Requires multiple classes or layered object interactions.",
+                                                                     "Needs non-trivial decomposition or several hidden rules.",
+                                                                     "Includes difficult edge cases not implied by an easy task."
+                                                                 ],
+                                                        "medium":  [
+                                                                       "Can be solved by filling one trivial method only.",
+                                                                       "Requires advanced APIs or design patterns absent from the chunks.",
+                                                                       "Has hidden tests far beyond the stated requirements."
+                                                                   ],
+                                                        "hard":  [
+                                                                     "Is only a constructor or getter/setter exercise.",
+                                                                     "Contains overly simple tests.",
+                                                                     "Does not require meaningful OOP reasoning."
+                                                                 ]
+                                                    },
+                    "quality_dimensions":  {
+                                               "clarity":  [
+                                                               "The statement clearly describes the class or object behavior that must be implemented.",
+                                                               "Input/output or method expectations should be understandable without any hidden context."
+                                                           ],
+                                               "pedagogical_value":  [
+                                                                         "The task should exercise actual OOP reasoning such as state, constructor behavior, or method interaction.",
+                                                                         "The task should not collapse into a trivial getter/setter-only drill unless the chunk clearly supports only that scope."
+                                                                     ],
+                                               "non_triviality":  [
+                                                                      "Prefer a meaningful object behavior scenario over a bare class template fill-in.",
+                                                                      "The task should make the learner reason about behavior, not only copy class syntax."
+                                                                  ],
+                                               "test_strength":  [
+                                                                     "Tests should cover normal behavior and at least one variation in object state or method usage.",
+                                                                     "Hidden tests should validate behavior consistency, not just formatting."
+                                                                 ]
+                                           },
+                    "quality_red_flags":  [
+                                              "The task is only a constructor/getter/setter fill exercise with no meaningful behavior.",
+                                              "The problem statement is too abstract and does not tell the learner what behavior to implement.",
+                                              "The tests do not meaningfully check object state transitions or method outcomes.",
+                                              "The title is generic and does not identify the class behavior being assessed."
+                                          ],
+                    "quality_regeneration_hints":  [
+                                                       "Use a small but realistic object behavior scenario grounded in the chunk.",
+                                                       "Make the required class behavior explicit and testable.",
+                                                       "Strengthen tests so they verify meaningful method or state behavior."
+                                                   ],
+                    "quality_exemplars":  [
+                                              {
+                                                  "difficulty":  "Easy",
+                                                  "title_style":  "Create a Rectangle Class and Compute Area",
+                                                  "good_pattern":  [
+                                                                       "Uses one class with one clear behavior goal.",
+                                                                       "Asks for meaningful object behavior instead of only field declarations.",
+                                                                       "Keeps the task readable and directly testable."
+                                                                   ],
+                                                  "avoid_pattern":  [
+                                                                        "Only generates getters/setters with no real behavior.",
+                                                                        "Uses abstract OOP wording without a concrete class task."
+                                                                    ]
+                                              },
+                                              {
+                                                  "difficulty":  "Medium",
+                                                  "title_style":  "Update a Bank Account Balance with Deposit and Withdraw Methods",
+                                                  "good_pattern":  [
+                                                                       "Requires simple state transitions and method interaction.",
+                                                                       "Lets tests verify normal and invalid actions.",
+                                                                       "Feels like a small OOP lab task rather than a syntax exercise."
+                                                                   ],
+                                                  "avoid_pattern":  [
+                                                                        "Introduces too many classes or framework concepts.",
+                                                                        "Leaves the behavior rules vague."
+                                                                    ]
+                                              }
+                                          ],
+                    "few_shot_examples":  [
+                                              {
+                                                  "difficulty":  "Easy",
+                                                  "question":  {
+                                                                   "type":  "PE",
+                                                                   "topic_tags":  [
+                                                                                      "class",
+                                                                                      "method",
+                                                                                      "object"
+                                                                                  ],
+                                                                   "difficulty":  "Easy",
+                                                                   "title":  "Create a Rectangle Class and Compute Area",
+                                                                   "description":  "Complete the Rectangle class so that it stores width and height as integers and provides a method named getArea() that returns the area.\n\nThe provided main method reads width and height, creates a Rectangle object, and prints the result of getArea().",
+                                                                   "source_chunk_ids":  [
+                                                                                            "chunk-example-rectangle"
+                                                                                        ],
+                                                                   "skeleton_code":  [
+                                                                                         {
+                                                                                             "filename":  "Main.java",
+                                                                                             "content":  "import java.util.*;\n\nclass Rectangle {\n    private int width;\n    private int height;\n\n    public Rectangle(int width, int height) {\n        this.width = width;\n        this.height = height;\n    }\n\n    public int getArea() {\n        return 0;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int width = sc.nextInt();\n        int height = sc.nextInt();\n        Rectangle rectangle = new Rectangle(width, height);\n        System.out.println(rectangle.getArea());\n    }\n}",
+                                                                                             "is_readonly":  false
+                                                                                         }
+                                                                                     ],
+                                                                   "solution_code":  [
+                                                                                         {
+                                                                                             "filename":  "Main.java",
+                                                                                             "content":  "import java.util.*;\n\nclass Rectangle {\n    private int width;\n    private int height;\n\n    public Rectangle(int width, int height) {\n        this.width = width;\n        this.height = height;\n    }\n\n    public int getArea() {\n        return width * height;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int width = sc.nextInt();\n        int height = sc.nextInt();\n        Rectangle rectangle = new Rectangle(width, height);\n        System.out.println(rectangle.getArea());\n    }\n}"
+                                                                                         }
+                                                                                     ],
+                                                                   "test_cases":  [
+                                                                                      {
+                                                                                          "input":  "4 5",
+                                                                                          "expected_output":  "20",
+                                                                                          "is_hidden":  false
+                                                                                      },
+                                                                                      {
+                                                                                          "input":  "1 9",
+                                                                                          "expected_output":  "9",
+                                                                                          "is_hidden":  true
+                                                                                      },
+                                                                                      {
+                                                                                          "input":  "7 3",
+                                                                                          "expected_output":  "21",
+                                                                                          "is_hidden":  true
+                                                                                      }
+                                                                                  ],
+                                                                   "options":  null,
+                                                                   "correct_answer":  null,
+                                                                   "explanation":  null
+                                                               }
+                                              },
+                                              {
+                                                  "difficulty":  "Medium",
+                                                  "question":  {
+                                                                   "type":  "PE",
+                                                                   "topic_tags":  [
+                                                                                      "class",
+                                                                                      "method",
+                                                                                      "object",
+                                                                                      "condition"
+                                                                                  ],
+                                                                   "difficulty":  "Medium",
+                                                                   "title":  "Update a Bank Account Balance with Deposit and Withdraw Methods",
+                                                                   "description":  "Complete the BankAccount class with deposit(int amount) and withdraw(int amount) methods. A withdrawal is accepted only when amount is positive and does not exceed the current balance.\n\nThe main method reads the initial balance, then one deposit amount, then one withdraw amount. Print the final balance.",
+                                                                   "source_chunk_ids":  [
+                                                                                            "chunk-example-bank-account"
+                                                                                        ],
+                                                                   "skeleton_code":  [
+                                                                                         {
+                                                                                             "filename":  "Main.java",
+                                                                                             "content":  "import java.util.*;\n\nclass BankAccount {\n    private int balance;\n\n    public BankAccount(int balance) {\n        this.balance = balance;\n    }\n\n    public void deposit(int amount) {\n    }\n\n    public void withdraw(int amount) {\n    }\n\n    public int getBalance() {\n        return balance;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int initialBalance = sc.nextInt();\n        int depositAmount = sc.nextInt();\n        int withdrawAmount = sc.nextInt();\n\n        BankAccount account = new BankAccount(initialBalance);\n        account.deposit(depositAmount);\n        account.withdraw(withdrawAmount);\n        System.out.println(account.getBalance());\n    }\n}",
+                                                                                             "is_readonly":  false
+                                                                                         }
+                                                                                     ],
+                                                                   "solution_code":  [
+                                                                                         {
+                                                                                             "filename":  "Main.java",
+                                                                                             "content":  "import java.util.*;\n\nclass BankAccount {\n    private int balance;\n\n    public BankAccount(int balance) {\n        this.balance = balance;\n    }\n\n    public void deposit(int amount) {\n        if (amount \u003e 0) {\n            balance += amount;\n        }\n    }\n\n    public void withdraw(int amount) {\n        if (amount \u003e 0 \u0026\u0026 amount \u003c= balance) {\n            balance -= amount;\n        }\n    }\n\n    public int getBalance() {\n        return balance;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int initialBalance = sc.nextInt();\n        int depositAmount = sc.nextInt();\n        int withdrawAmount = sc.nextInt();\n\n        BankAccount account = new BankAccount(initialBalance);\n        account.deposit(depositAmount);\n        account.withdraw(withdrawAmount);\n        System.out.println(account.getBalance());\n    }\n}"
+                                                                                         }
+                                                                                     ],
+                                                                   "test_cases":  [
+                                                                                      {
+                                                                                          "input":  "100 30 50",
+                                                                                          "expected_output":  "80",
+                                                                                          "is_hidden":  false
+                                                                                      },
+                                                                                      {
+                                                                                          "input":  "40 0 10",
+                                                                                          "expected_output":  "30",
+                                                                                          "is_hidden":  true
+                                                                                      },
+                                                                                      {
+                                                                                          "input":  "60 15 100",
+                                                                                          "expected_output":  "75",
+                                                                                          "is_hidden":  true
+                                                                                      }
+                                                                                  ],
+                                                                   "options":  null,
+                                                                   "correct_answer":  null,
+                                                                   "explanation":  null
+                                                               }
+                                              }
+                                          ],
+                    "acceptance_rules":  [
+                                             "Accept only if the task, skeleton, solution, and tests are consistent and grounded.",
+                                             "Reject if the Java code shape does not match the intended OOP task.",
+                                             "Reject if hidden tests imply unstated requirements."
+                                         ],
+                    "regeneration_hints":  [
+                                               "Keep Easy tasks focused on one concept and one class if possible.",
+                                               "Use richer state and method interactions for Medium tasks.",
+                                               "Reserve multi-part object behavior for Hard tasks."
+                                           ]
+                }
+}

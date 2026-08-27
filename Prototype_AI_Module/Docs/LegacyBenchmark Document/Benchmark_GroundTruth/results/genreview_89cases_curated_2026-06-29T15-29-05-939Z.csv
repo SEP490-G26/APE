@@ -1,0 +1,90 @@
+test_case_id,generation_label,generation_provider,generation_model,review_label,review_provider,review_model,run_id,status,input_tokens,output_tokens,input_cost_usd,output_cost_usd,total_cost_usd,latency_ms,schema_valid,schema_error_count,error,data_mode,estimate_confidence
+FE_medium,GPT - 4o,openai,gpt-4o,GPT - 4o,openai,gpt-4o,run-2026-06-27T15-52-38-889Z-c7c3ca7b,ok,487,650,0.0012175,0.0065,0.0077175,7304.7,false,39,,measured,1.00
+FE_medium,GPT - 4o,openai,gpt-4o,GPT - 5.4 Mini,openai,gpt-5.4-mini,run-2026-06-27T15-52-47-028Z-a0ccf03a,ok,509,726,0.0004375,0.0029,0.0033375,8119.21,false,39,,measured,1.00
+FE_medium,GPT - 4o,openai,gpt-4o,GPT - 5.4,openai,gpt-5.4,run-2026-06-27T15-52-58-348Z-a2646e7f,ok,499,1088,0.0004375,0.0028,0.0032375,11311.56,false,39,,measured,1.00
+FE_medium,GPT - 4o,openai,gpt-4o,GPT - 5.5,openai,gpt-5.5,run-2026-06-27T15-53-15-433Z-07104262,ok,518,1099,0.0004375,0.00299,0.0034275,17079.15,false,39,,measured,1.00
+FE_medium,GPT - 4o,openai,gpt-4o,Gemini - 2.5 Flash,gemini,gemini-2.5-flash,run-2026-06-27T15-53-25-429Z-fbf6101d,ok,512,448,0.0004375,0.00271,0.0031475,9989.77,false,39,,measured,1.00
+FE_medium,GPT - 4o,openai,gpt-4o,Gemini - 3.5 Flash,gemini,gemini-3.5-flash,run-2026-06-27T15-53-40-970Z-f8825cee,ok,523,483,0.0004636,0.0028803,0.0033439,12078.99,false,39,,measured,1.00
+FE_medium,GPT - 5.4 Mini,openai,gpt-5.4-mini,GPT - 4o,openai,gpt-4o,run-2026-06-27T15-53-46-572Z-8cdbf813,ok,441,605,0.0006675,0.0033,0.0039675,5597.13,false,45,,measured,1.00
+FE_medium,GPT - 5.4 Mini,openai,gpt-5.4-mini,GPT - 5.4 Mini,openai,gpt-5.4-mini,run-2026-06-27T15-53-53-005Z-eaed9162,ok,450,682,0.00027,0.0016368,0.0019068,6427.65,false,45,,measured,1.00
+FE_medium,GPT - 5.4 Mini,openai,gpt-5.4-mini,GPT - 5.4,openai,gpt-5.4,run-2026-06-27T15-54-01-905Z-a46f5831,ok,562,972,0.0006972,0.0042016,0.0048988,8893.26,false,42,,measured,1.00
+FE_medium,GPT - 5.4 Mini,openai,gpt-5.4-mini,GPT - 5.5,openai,gpt-5.5,run-2026-06-27T15-54-13-557Z-ee55d2e3,ok,544,1089,0.0008496,0.0057528,0.0066024,11646.48,false,45,,measured,1.00
+FE_medium,GPT - 5.4 Mini,openai,gpt-5.4-mini,Gemini - 2.5 Flash,gemini,gemini-2.5-flash,run-2026-06-27T15-54-22-095Z-dbb205e0,ok,590,528,0.0002301,0.0009354,0.0011655,8532.19,false,45,,measured,1.00
+FE_medium,GPT - 5.4 Mini,openai,gpt-5.4-mini,Gemini - 3.5 Flash,gemini,gemini-3.5-flash,run-2026-06-27T15-54-32-842Z-f863c4a0,ok,549,497,0.00002812,0.0000396,0.00006772,8495.18,false,45,,measured,1.00
+FE_medium,GPT - 5.4,openai,gpt-5.4,GPT - 4o,openai,gpt-4o,run-2026-06-27T15-54-43-909Z-6bbce45f,ok,564,737,0.000975,0.00324,0.004215,11062.06,false,45,,measured,1.00
+FE_medium,GPT - 5.4,openai,gpt-5.4,GPT - 5.4 Mini,openai,gpt-5.4-mini,run-2026-06-27T15-54-56-345Z-3dd4e866,ok,699,1163,0.0010898,0.0080008,0.0090906,12431.43,false,42,,measured,1.00
+FE_medium,GPT - 5.4,openai,gpt-5.4,GPT - 5.4,openai,gpt-5.4,run-2026-06-27T15-55-18-961Z-9fe4d75f,ok,603,1291,0.0013266,0.0113608,0.0126874,22610.68,false,45,,measured,1.00
+FE_medium,GPT - 5.4,openai,gpt-5.4,GPT - 5.5,openai,gpt-5.5,run-2026-06-27T15-55-33-261Z-215636b3,ok,597,1136,0.0015046,0.011088,0.0125926,14294.71,false,45,,measured,1.00
+FE_medium,GPT - 5.4,openai,gpt-5.4,Gemini - 2.5 Flash,gemini,gemini-2.5-flash,run-2026-06-27T15-55-46-290Z-eba3f3ad,ok,570,503,0.0007695,0.0031429,0.0039124,13025.19,false,45,,measured,1.00
+FE_medium,GPT - 5.4,openai,gpt-5.4,Gemini - 3.5 Flash,gemini,gemini-3.5-flash,run-2026-06-27T15-56-11-086Z-9c1965c4,ok,578,624,0.0000303,0.0000624,0.0000927,15279.46,false,45,,measured,1.00
+FE_medium,GPT - 5.5,openai,gpt-5.5,GPT - 4o,openai,gpt-4o,run-2026-06-27T15-56-25-536Z-cd11503d,ok,593,785,0.0010475,0.00385,0.0048975,14444.51,false,45,,measured,1.00
+FE_medium,GPT - 5.5,openai,gpt-5.5,GPT - 5.4 Mini,openai,gpt-5.4-mini,run-2026-06-27T15-56-37-848Z-5d90f5d4,ok,668,1131,0.0013632,0.0103176,0.0116808,12308.9,false,42,,measured,1.00
+FE_medium,GPT - 5.5,openai,gpt-5.5,GPT - 5.4,openai,gpt-5.4,run-2026-06-27T15-56-50-217Z-8d8e9cc3,ok,474,908,0.00127,0.0100256,0.0112956,12364.39,false,45,,measured,1.00
+FE_medium,GPT - 5.5,openai,gpt-5.5,GPT - 5.5,openai,gpt-5.5,run-2026-06-27T15-57-04-020Z-df785791,ok,595,1138,0.001785,0.013656,0.015441,13799.7,false,45,,measured,1.00
+FE_medium,GPT - 5.5,openai,gpt-5.5,Gemini - 2.5 Flash,gemini,gemini-2.5-flash,run-2026-06-27T15-57-16-279Z-60221df5,ok,598,655,0.00109492,0.0055551,0.00665002,12254.66,false,45,,measured,1.00
+FE_medium,GPT - 5.5,openai,gpt-5.5,Gemini - 3.5 Flash,gemini,gemini-3.5-flash,run-2026-06-27T15-57-38-209Z-159fafa2,ok,650,637,0.0000357,0.0000504,0.0000861,14361.78,false,42,,measured,1.00
+FE_medium,Gemini - 2.5 Flash,gemini,gemini-2.5-flash,GPT - 5.4 Mini,openai,gpt-5.4-mini,run-2026-06-27T15-57-53-040Z-5a55d72d,ok,745,914,0.00021233,0.0008496,0.00106193,14347.08,false,42,,measured,1.00
+FE_medium,Gemini - 2.5 Flash,gemini,gemini-2.5-flash,GPT - 5.4,openai,gpt-5.4,run-2026-06-27T15-58-08-049Z-eae3d563,ok,597,1030,0.00055265,0.0029355,0.00348815,15004.86,false,45,,measured,1.00
+FE_medium,Gemini - 2.5 Flash,gemini,gemini-2.5-flash,GPT - 5.5,openai,gpt-5.5,run-2026-06-27T15-58-23-450Z-d58fe8f5,ok,640,1287,0.0007968,0.0049023,0.0056991,15397.14,false,45,,measured,1.00
+FE_medium,Gemini - 2.5 Flash,gemini,gemini-2.5-flash,Gemini - 2.5 Flash,gemini,gemini-2.5-flash,run-2026-06-27T15-58-36-831Z-4fd38ab8,ok,768,750,0.0000576,0.000225,0.0002826,13376.8,false,42,,measured,1.00
+FE_medium,Gemini - 2.5 Flash,gemini,gemini-2.5-flash,Gemini - 3.5 Flash,gemini,gemini-3.5-flash,run-2026-06-27T15-59-02-632Z-a4c9bde2,ok,719,668,0.00004155,0.0000432,0.00008475,19241.98,false,42,,measured,1.00
+FE_medium,Gemini - 3.5 Flash,gemini,gemini-3.5-flash,GPT - 4o,openai,gpt-4o,run-2026-06-27T15-59-19-222Z-d28f4264,ok,697,822,0.00134237,0.0032924,0.00463477,15930.76,false,42,,measured,1.00
+FE_medium,Gemini - 3.5 Flash,gemini,gemini-3.5-flash,GPT - 5.4 Mini,openai,gpt-5.4-mini,run-2026-06-27T15-59-32-865Z-75b2781c,ok,677,1133,0.00001237,0.0001452,0.00015757,13638.51,false,45,,measured,1.00
+FE_medium,Gemini - 3.5 Flash,gemini,gemini-3.5-flash,GPT - 5.4,openai,gpt-5.4,run-2026-06-27T15-59-52-860Z-62e6e589,ok,657,1239,0.00001237,0.0001395,0.00015187,19991.69,false,45,,measured,1.00
+FE_medium,Gemini - 3.5 Flash,gemini,gemini-3.5-flash,GPT - 5.5,openai,gpt-5.5,run-2026-06-27T16-00-13-629Z-448483a8,ok,726,1630,0.00001237,0.0001602,0.00017257,20765.02,false,45,,measured,1.00
+FE_medium,Gemini - 3.5 Flash,gemini,gemini-3.5-flash,Gemini - 2.5 Flash,gemini,gemini-2.5-flash,run-2026-06-27T16-00-32-081Z-10a34415,ok,844,784,0.00001237,0.0001947,0.00020707,18447.46,false,42,,measured,1.00
+FE_medium,Gemini - 3.5 Flash,gemini,gemini-3.5-flash,Gemini - 3.5 Flash,gemini,gemini-3.5-flash,run-2026-06-27T16-01-08-715Z-3c898cee,ok,674,683,0.00005054,0.0002049,0.00025544,28208.95,false,45,,measured,1.00
+PE_medium,GPT - 4o,openai,gpt-4o,GPT - 4o,openai,gpt-4o,run-2026-06-27T16-01-14-050Z-891ab74d,ok,268,440,0.00067,0.0044,0.00507,5330.22,false,14,,measured,1.00
+PE_medium,GPT - 4o,openai,gpt-4o,GPT - 5.4 Mini,openai,gpt-5.4-mini,run-2026-06-27T16-01-19-572Z-319fa132,ok,263,431,0.000435,0.00045,0.000885,5518.42,false,14,,measured,1.00
+PE_medium,GPT - 4o,openai,gpt-4o,GPT - 5.4,openai,gpt-5.4,run-2026-06-27T16-01-26-442Z-158a25a0,ok,267,556,0.000435,0.00049,0.000925,6864.91,false,14,,measured,1.00
+PE_medium,GPT - 4o,openai,gpt-4o,GPT - 5.5,openai,gpt-5.5,run-2026-06-27T16-01-39-056Z-c0b33604,ok,267,772,0.000435,0.00049,0.000925,12608.7,false,14,,measured,1.00
+PE_medium,GPT - 4o,openai,gpt-4o,Gemini - 2.5 Flash,gemini,gemini-2.5-flash,run-2026-06-27T16-01-45-578Z-1d42afc5,ok,254,174,0.000435,0.00044,0.000875,6518.24,false,16,,measured,1.00
+PE_medium,GPT - 4o,openai,gpt-4o,Gemini - 3.5 Flash,gemini,gemini-3.5-flash,run-2026-06-27T16-01-54-482Z-a01b19f1,ok,259,320,0.00044137,0.0005616,0.00100297,7335.34,false,14,,measured,1.00
+PE_medium,GPT - 5.4 Mini,openai,gpt-5.4-mini,GPT - 4o,openai,gpt-4o,run-2026-06-27T16-02-00-826Z-2e5af53c,ok,266,479,0.0002325,0.00357,0.0038025,6339.12,false,16,,measured,1.00
+PE_medium,GPT - 5.4 Mini,openai,gpt-5.4-mini,GPT - 5.4 Mini,openai,gpt-5.4-mini,run-2026-06-27T16-02-08-147Z-e6b20c45,ok,324,696,0.0001944,0.0016704,0.0018648,7315.76,false,15,,measured,1.00
+PE_medium,GPT - 5.4 Mini,openai,gpt-5.4-mini,GPT - 5.4,openai,gpt-5.4,run-2026-06-27T16-02-15-222Z-c839fa0a,ok,347,714,0.0004306,0.0030832,0.0035138,7069.67,false,16,,measured,1.00
+PE_medium,GPT - 5.4 Mini,openai,gpt-5.4-mini,GPT - 5.5,openai,gpt-5.5,run-2026-06-27T16-02-26-525Z-b60b9efc,ok,350,1072,0.000546,0.005664,0.00621,11296.54,false,16,,measured,1.00
+PE_medium,GPT - 5.4 Mini,openai,gpt-5.4-mini,Gemini - 2.5 Flash,gemini,gemini-2.5-flash,run-2026-06-27T16-02-35-404Z-f6ea0c14,ok,267,303,0.00010403,0.0005361,0.00064013,8867.2,false,15,,measured,1.00
+PE_medium,GPT - 5.4 Mini,openai,gpt-5.4-mini,Gemini - 3.5 Flash,gemini,gemini-3.5-flash,run-2026-06-27T16-02-44-146Z-c0db78a2,ok,265,457,0.0000069,0.0001044,0.0001113,7245.3,false,15,,measured,1.00
+PE_medium,GPT - 5.4,openai,gpt-5.4,GPT - 4o,openai,gpt-4o,run-2026-06-27T16-02-50-594Z-0f8f457a,ok,286,467,0.0002825,0.0034,0.0036825,6439.56,false,14,,measured,1.00
+PE_medium,GPT - 5.4,openai,gpt-5.4,GPT - 5.4 Mini,openai,gpt-5.4-mini,run-2026-06-27T16-02-56-885Z-4d26ae81,ok,349,699,0.0005438,0.0048072,0.005351,6284.46,false,14,,measured,1.00
+PE_medium,GPT - 5.4,openai,gpt-5.4,GPT - 5.4,openai,gpt-5.4,run-2026-06-27T16-03-09-332Z-f54dc89c,ok,368,813,0.0008096,0.0071544,0.007964,12439.58,false,14,,measured,1.00
+PE_medium,GPT - 5.4,openai,gpt-5.4,GPT - 5.5,openai,gpt-5.5,run-2026-06-27T16-03-18-424Z-7692bcd3,ok,381,718,0.0009598,0.0070064,0.0079662,9085.07,false,14,,measured,1.00
+PE_medium,GPT - 5.4,openai,gpt-5.4,Gemini - 2.5 Flash,gemini,gemini-2.5-flash,run-2026-06-27T16-03-26-247Z-2c8bb308,ok,372,245,0.00050177,0.0015358,0.00203757,7813.77,false,14,,measured,1.00
+PE_medium,GPT - 5.5,openai,gpt-5.5,GPT - 4o,openai,gpt-4o,run-2026-06-27T16-03-46-206Z-f2f03bda,ok,375,524,0.000505,0.00321,0.003715,5787.33,false,14,,measured,1.00
+PE_medium,GPT - 5.5,openai,gpt-5.5,GPT - 5.4 Mini,openai,gpt-5.4-mini,run-2026-06-27T16-03-52-672Z-ad59c25b,ok,381,631,0.0007782,0.0057576,0.0065358,6458.41,false,14,,measured,1.00
+PE_medium,GPT - 5.5,openai,gpt-5.5,GPT - 5.4,openai,gpt-5.4,run-2026-06-27T16-04-04-223Z-ee5024a1,ok,373,829,0.0009998,0.0091512,0.010151,11543.35,false,14,,measured,1.00
+PE_medium,GPT - 5.5,openai,gpt-5.5,GPT - 5.5,openai,gpt-5.5,run-2026-06-27T16-04-13-657Z-ef78b839,ok,370,726,0.00111,0.008712,0.009822,9422.37,false,14,,measured,1.00
+PE_medium,GPT - 5.5,openai,gpt-5.5,Gemini - 2.5 Flash,gemini,gemini-2.5-flash,run-2026-06-27T16-04-22-119Z-47e21be7,ok,369,306,0.0006741,0.0025956,0.0032697,8451.11,false,14,,measured,1.00
+PE_medium,GPT - 5.5,openai,gpt-5.5,Gemini - 3.5 Flash,gemini,gemini-3.5-flash,run-2026-06-27T16-04-32-660Z-6c2f947b,ok,374,423,0.00001508,0.0000645,0.00007958,8163.11,false,14,,measured,1.00
+FE_medium,Gemini - 2.5 Flash,gemini,gemini-2.5-flash,GPT - 4o,openai,gpt-4o,est-FE_medium-gemini-2.5-flash-gpt-4o,ok_estimated,595,785,0.00062178,0.002525,0.00314678,14447,false,0,,estimated_from_case_median,0.7
+PE_medium,GPT - 5.4,openai,gpt-5.4,Gemini - 3.5 Flash,gemini,gemini-3.5-flash,est-PE_medium-gpt-5.4-gemini-3.5-flash,ok_estimated,347,524,0.00046802,0.0032767,0.00374472,7901,false,0,,estimated_from_case_median,0.7
+PE_medium,Gemini - 2.5 Flash,gemini,gemini-2.5-flash,GPT - 4o,openai,gpt-4o,est-PE_medium-gemini-2.5-flash-gpt-4o,ok_estimated,347,524,0.0003631,0.0016801,0.0020432,7901,false,0,,estimated_from_case_median,0.7
+PE_medium,Gemini - 2.5 Flash,gemini,gemini-2.5-flash,GPT - 5.4 Mini,openai,gpt-5.4-mini,est-PE_medium-gemini-2.5-flash-gpt-5.4-mini,ok_estimated,347,524,0.000099,0.0004869,0.0005859,7901,false,0,,estimated_from_case_median,0.7
+PE_medium,Gemini - 2.5 Flash,gemini,gemini-2.5-flash,GPT - 5.4,openai,gpt-5.4,est-PE_medium-gemini-2.5-flash-gpt-5.4,ok_estimated,347,524,0.0003214,0.0014917,0.0018131,7901,false,0,,estimated_from_case_median,0.7
+PE_medium,Gemini - 2.5 Flash,gemini,gemini-2.5-flash,GPT - 5.5,openai,gpt-5.5,est-PE_medium-gemini-2.5-flash-gpt-5.5,ok_estimated,347,524,0.0004326,0.0019941,0.0024267,7901,false,0,,estimated_from_case_median,0.7
+PE_medium,Gemini - 2.5 Flash,gemini,gemini-2.5-flash,Gemini - 2.5 Flash,gemini,gemini-2.5-flash,est-PE_medium-gemini-2.5-flash-gemini-2.5-flash,ok_estimated,347,524,0.00002602,0.0001572,0.00018322,7901,false,0,,estimated_from_case_median,0.7
+PE_medium,Gemini - 2.5 Flash,gemini,gemini-2.5-flash,Gemini - 3.1 Flash,gemini,gemini-3.1-flash,est-PE_medium-gemini-2.5-flash-gemini-3.1-flash,ok_estimated,347,524,0.00002602,0.0001572,0.00018322,7901,false,0,,estimated_from_case_median,0.7
+PE_medium,Gemini - 2.5 Flash,gemini,gemini-2.5-flash,Gemini - 3.5 Flash,gemini,gemini-3.5-flash,est-PE_medium-gemini-2.5-flash-gemini-3.5-flash,ok_estimated,347,524,0.00002602,0.0001572,0.00018322,7901,false,0,,estimated_from_case_median,0.7
+PE_medium,Gemini - 3.5 Flash,gemini,gemini-3.5-flash,GPT - 4o,openai,gpt-4o,est-PE_medium-gemini-3.5-flash-gpt-4o,ok_estimated,347,524,0.0003631,0.0016801,0.0020432,7901,false,0,,estimated_from_case_median,0.7
+PE_medium,Gemini - 3.5 Flash,gemini,gemini-3.5-flash,GPT - 5.4 Mini,openai,gpt-5.4-mini,est-PE_medium-gemini-3.5-flash-gpt-5.4-mini,ok_estimated,347,524,0.000099,0.0004869,0.0005859,7901,false,0,,estimated_from_case_median,0.7
+PE_medium,Gemini - 3.5 Flash,gemini,gemini-3.5-flash,GPT - 5.4,openai,gpt-5.4,est-PE_medium-gemini-3.5-flash-gpt-5.4,ok_estimated,347,524,0.0003214,0.0014917,0.0018131,7901,false,0,,estimated_from_case_median,0.7
+PE_medium,Gemini - 3.5 Flash,gemini,gemini-3.5-flash,GPT - 5.5,openai,gpt-5.5,est-PE_medium-gemini-3.5-flash-gpt-5.5,ok_estimated,347,524,0.0004326,0.0019941,0.0024267,7901,false,0,,estimated_from_case_median,0.7
+PE_medium,Gemini - 3.5 Flash,gemini,gemini-3.5-flash,Gemini - 2.5 Flash,gemini,gemini-2.5-flash,est-PE_medium-gemini-3.5-flash-gemini-2.5-flash,ok_estimated,347,524,0.00002602,0.0001572,0.00018322,7901,false,0,,estimated_from_case_median,0.7
+PE_medium,Gemini - 3.5 Flash,gemini,gemini-3.5-flash,Gemini - 3.1 Flash,gemini,gemini-3.1-flash,est-PE_medium-gemini-3.5-flash-gemini-3.1-flash,ok_estimated,347,524,0.00002602,0.0001572,0.00018322,7901,false,0,,estimated_from_case_median,0.7
+PE_medium,Gemini - 3.5 Flash,gemini,gemini-3.5-flash,Gemini - 3.5 Flash,gemini,gemini-3.5-flash,est-PE_medium-gemini-3.5-flash-gemini-3.5-flash,ok_estimated,347,524,0.00002602,0.0001572,0.00018322,7901,false,0,,estimated_from_case_median,0.7
+FE_medium,GPT - 4o,openai,gpt-4o,Gemini - 3.1 Flash,gemini,gemini-3.1-flash,est-FE_medium-gpt-4o-gemini-3.1-flash,ok_estimated,595,785,0.00091035,0.0055708,0.00648115,14447,false,0,,estimated_from_case_median,0.35
+FE_medium,GPT - 5.4 Mini,openai,gpt-5.4-mini,Gemini - 3.1 Flash,gemini,gemini-3.1-flash,est-FE_medium-gpt-5.4-mini-gemini-3.1-flash,ok_estimated,595,785,0.00023205,0.0013908,0.00162285,14447,false,0,,estimated_from_case_median,0.35
+FE_medium,GPT - 5.4,openai,gpt-5.4,Gemini - 3.1 Flash,gemini,gemini-3.1-flash,est-FE_medium-gpt-5.4-gemini-3.1-flash,ok_estimated,595,785,0.00080325,0.0049108,0.00571405,14447,false,0,,estimated_from_case_median,0.35
+FE_medium,GPT - 5.5,openai,gpt-5.5,Gemini - 3.1 Flash,gemini,gemini-3.1-flash,est-FE_medium-gpt-5.5-gemini-3.1-flash,ok_estimated,595,785,0.00108885,0.0066708,0.00775965,14447,false,0,,estimated_from_case_median,0.35
+FE_medium,Gemini - 2.5 Flash,gemini,gemini-2.5-flash,Gemini - 3.1 Flash,gemini,gemini-3.1-flash,est-FE_medium-gemini-2.5-flash-gemini-3.1-flash,ok_estimated,595,785,0.00004463,0.0002358,0.00028043,14447,false,0,,estimated_from_case_median,0.35
+FE_medium,Gemini - 3.1 Flash,gemini,gemini-3.1-flash,GPT - 4o,openai,gpt-4o,est-FE_medium-gemini-3.1-flash-gpt-4o,ok_estimated,595,785,0.00062178,0.002525,0.00314678,14447,false,0,,estimated_from_case_median,0.35
+FE_medium,Gemini - 3.1 Flash,gemini,gemini-3.1-flash,GPT - 5.4 Mini,openai,gpt-5.4-mini,est-FE_medium-gemini-3.1-flash-gpt-5.4-mini,ok_estimated,595,785,0.00016958,0.0007314,0.00090098,14447,false,0,,estimated_from_case_median,0.35
+FE_medium,Gemini - 3.1 Flash,gemini,gemini-3.1-flash,GPT - 5.4,openai,gpt-5.4,est-FE_medium-gemini-3.1-flash-gpt-5.4,ok_estimated,595,785,0.00055038,0.0022418,0.00279218,14447,false,0,,estimated_from_case_median,0.35
+FE_medium,Gemini - 3.1 Flash,gemini,gemini-3.1-flash,GPT - 5.5,openai,gpt-5.5,est-FE_medium-gemini-3.1-flash-gpt-5.5,ok_estimated,595,785,0.00074078,0.002997,0.00373778,14447,false,0,,estimated_from_case_median,0.35
+FE_medium,Gemini - 3.1 Flash,gemini,gemini-3.1-flash,Gemini - 2.5 Flash,gemini,gemini-2.5-flash,est-FE_medium-gemini-3.1-flash-gemini-2.5-flash,ok_estimated,595,785,0.00004463,0.0002358,0.00028043,14447,false,0,,estimated_from_case_median,0.35
+FE_medium,Gemini - 3.1 Flash,gemini,gemini-3.1-flash,Gemini - 3.1 Flash,gemini,gemini-3.1-flash,est-FE_medium-gemini-3.1-flash-gemini-3.1-flash,ok_estimated,595,785,0.00004463,0.0002358,0.00028043,14447,false,0,,estimated_from_case_median,0.35
+FE_medium,Gemini - 3.1 Flash,gemini,gemini-3.1-flash,Gemini - 3.5 Flash,gemini,gemini-3.5-flash,est-FE_medium-gemini-3.1-flash-gemini-3.5-flash,ok_estimated,595,785,0.00004463,0.0002358,0.00028043,14447,false,0,,estimated_from_case_median,0.35
+FE_medium,Gemini - 3.5 Flash,gemini,gemini-3.5-flash,Gemini - 3.1 Flash,gemini,gemini-3.1-flash,est-FE_medium-gemini-3.5-flash-gemini-3.1-flash,ok_estimated,595,785,0.00004463,0.0002358,0.00028043,14447,false,0,,estimated_from_case_median,0.35
+PE_medium,GPT - 4o,openai,gpt-4o,Gemini - 3.1 Flash,gemini,gemini-3.1-flash,est-PE_medium-gpt-4o-gemini-3.1-flash,ok_estimated,347,524,0.00053042,0.0037171,0.00424752,7901,false,0,,estimated_from_case_median,0.35
+PE_medium,GPT - 5.4 Mini,openai,gpt-5.4-mini,Gemini - 3.1 Flash,gemini,gemini-3.1-flash,est-PE_medium-gpt-5.4-mini-gemini-3.1-flash,ok_estimated,347,524,0.00013522,0.0009279,0.00106312,7901,false,0,,estimated_from_case_median,0.35

@@ -1,0 +1,212 @@
+{
+  "rubric_id": "C_PE",
+  "version": "v1",
+  "language": "en",
+  "subject_code": "C",
+  "question_type": "PE",
+  "title": "C Programming Fundamentals - Practice Exam Rubric",
+  "institution_context": {
+    "target_students": "FPT University students in foundational programming courses",
+    "course_context": [
+      "PRF-style introductory practical coding tasks",
+      "Clear input-output format expected in academic lab assessments"
+    ]
+  },
+  "difficulty_definitions": {
+    "easy": {
+      "description": "A short implementation task with straightforward input/output and one main concept.",
+      "expected_skills": [
+        "Implement simple loops, conditions, arrays, or functions.",
+        "Produce correct output for small, direct requirements.",
+        "Follow a skeleton without needing deep debugging."
+      ],
+      "should_avoid": [
+        "Complex pointer-heavy logic.",
+        "Multiple interacting data structures.",
+        "Algorithmic optimization requirements."
+      ]
+    },
+    "medium": {
+      "description": "An implementation task that requires combining multiple beginner concepts or handling several ordinary cases correctly.",
+      "expected_skills": [
+        "Combine loops, arrays, functions, and validation logic.",
+        "Handle normal edge cases such as empty or boundary values.",
+        "Understand problem decomposition."
+      ],
+      "should_avoid": [
+        "Highly tricky pointer arithmetic.",
+        "Advanced memory management tasks outside course scope."
+      ]
+    },
+    "hard": {
+      "description": "A substantial beginner-to-intermediate C task requiring careful decomposition, edge-case coverage, and precise implementation.",
+      "expected_skills": [
+        "Manage multi-step logic cleanly.",
+        "Handle important edge cases explicitly.",
+        "Write a full solution with coherent hidden and visible test coverage."
+      ],
+      "should_avoid": [
+        "System programming content.",
+        "Advanced data structure implementations unless clearly present in the chunks."
+      ]
+    }
+  },
+  "review_checks": [
+    "The task must be grounded in the provided chunks.",
+    "The requested difficulty must match implementation complexity.",
+    "skeleton_code must match C language expectations.",
+    "solution_code must solve the stated task coherently.",
+    "test_cases must cover at least one visible case and should include hidden coverage.",
+    "The task must remain within introductory C scope."
+  ],
+  "difficulty_mismatch_signals": {
+    "easy": [
+      "Requires multiple helper functions or several branching layers.",
+      "Needs tricky pointer manipulation.",
+      "Needs broad edge-case handling beyond a direct introductory task."
+    ],
+    "medium": [
+      "Is only a one-step syntax drill.",
+      "Requires advanced memory or pointer reasoning not supported by the source.",
+      "Has test coverage that implies a much harder hidden requirement than the statement suggests."
+    ],
+    "hard": [
+      "Can be solved by a direct loop with no meaningful edge-case reasoning.",
+      "Has overly trivial visible and hidden tests.",
+      "Does not require decomposition or careful implementation choices."
+    ]
+  },
+  "quality_dimensions": {
+    "clarity": [
+      "The statement clearly says what the learner must read, compute, and print or return.",
+      "The task can be understood without seeing the original document."
+    ],
+    "pedagogical_value": [
+      "The task checks an actual C programming skill, not only a memorized sentence from the chunk.",
+      "The task should help distinguish students who understand the concept from those who only guess."
+    ],
+    "non_triviality": [
+      "Avoid pure copy-from-slide drills unless the chunk itself only supports a very small exercise.",
+      "Prefer a small but meaningful transformation, validation, or decision over a bare one-operator rewrite."
+    ],
+    "test_strength": [
+      "Visible and hidden tests should check both the main behavior and at least one ordinary variation.",
+      "Tests should not all be near-duplicates with the same output pattern."
+    ]
+  },
+  "quality_red_flags": [
+    "The statement is only a one-line syntax drill with no learner-facing context or behavioral framing.",
+    "The task simply paraphrases an example from the chunk without adding assessment value.",
+    "The tests are too weak to distinguish correct logic from lucky hardcoded output.",
+    "The title is generic and does not name the behavior being implemented."
+  ],
+  "quality_regeneration_hints": [
+    "Make the PE task feel like a small lab exercise rather than a copied slide bullet.",
+    "Add a clearer behavior statement, a tiny realistic context, or a concrete requirement that still stays chunk-grounded.",
+    "Strengthen tests so they validate the intended logic instead of one lucky sample."
+  ],
+  "quality_exemplars": [
+    {
+      "difficulty": "Easy",
+      "title_style": "Check Whether a Student Score Is Pass or Fail",
+      "good_pattern": [
+        "Uses a tiny real-world academic context.",
+        "Tests one main concept such as conditionals and input/output.",
+        "Makes the required output behavior explicit."
+      ],
+      "avoid_pattern": [
+        "Only asks to use an operator without a learner-facing task.",
+        "Looks like a copied syntax bullet from lecture slides."
+      ]
+    },
+    {
+      "difficulty": "Medium",
+      "title_style": "Compute the Largest of Three Integers",
+      "good_pattern": [
+        "Combines direct input handling with short reasoning across multiple values.",
+        "Has tests that cover ordinary variation, not only one sample.",
+        "Still remains fully within beginner C scope."
+      ],
+      "avoid_pattern": [
+        "Turns into a long multi-function design problem.",
+        "Adds hidden requirements not stated in the task."
+      ]
+    }
+  ],
+  "few_shot_examples": [
+    {
+      "difficulty": "Easy",
+      "question": {
+        "type": "PE",
+        "topic_tags": ["condition", "input_output"],
+        "difficulty": "Easy",
+        "title": "Check Whether a Student Score Is Pass or Fail",
+        "description": "Write a C program that reads one integer score. If the score is at least 50, print PASS. Otherwise, print FAIL.\n\nInput: one integer.\nOutput: PASS or FAIL on a single line.",
+        "source_chunk_ids": ["chunk-example-condition"],
+        "skeleton_code": [
+          {
+            "filename": "main.c",
+            "content": "#include <stdio.h>\n\nint main(void) {\n    int score;\n    scanf(\"%d\", &score);\n\n    return 0;\n}",
+            "is_readonly": false
+          }
+        ],
+        "solution_code": [
+          {
+            "filename": "main.c",
+            "content": "#include <stdio.h>\n\nint main(void) {\n    int score;\n    scanf(\"%d\", &score);\n\n    if (score >= 50) {\n        printf(\"PASS\\n\");\n    } else {\n        printf(\"FAIL\\n\");\n    }\n\n    return 0;\n}"
+          }
+        ],
+        "test_cases": [
+          { "input": "75", "expected_output": "PASS", "is_hidden": false },
+          { "input": "50", "expected_output": "PASS", "is_hidden": true },
+          { "input": "32", "expected_output": "FAIL", "is_hidden": true }
+        ],
+        "options": null,
+        "correct_answer": null,
+        "explanation": null
+      }
+    },
+    {
+      "difficulty": "Medium",
+      "question": {
+        "type": "PE",
+        "topic_tags": ["condition", "function", "input_output"],
+        "difficulty": "Medium",
+        "title": "Print the Largest of Three Integers",
+        "description": "Write a C program that reads three integers a, b, and c, then prints the largest value among them.\n\nInput: three integers separated by spaces.\nOutput: the largest integer on a single line.",
+        "source_chunk_ids": ["chunk-example-max"],
+        "skeleton_code": [
+          {
+            "filename": "main.c",
+            "content": "#include <stdio.h>\n\nint main(void) {\n    int a, b, c;\n    scanf(\"%d %d %d\", &a, &b, &c);\n\n    return 0;\n}",
+            "is_readonly": false
+          }
+        ],
+        "solution_code": [
+          {
+            "filename": "main.c",
+            "content": "#include <stdio.h>\n\nint main(void) {\n    int a, b, c;\n    int max;\n    scanf(\"%d %d %d\", &a, &b, &c);\n\n    max = a;\n    if (b > max) {\n        max = b;\n    }\n    if (c > max) {\n        max = c;\n    }\n\n    printf(\"%d\\n\", max);\n    return 0;\n}"
+          }
+        ],
+        "test_cases": [
+          { "input": "4 7 2", "expected_output": "7", "is_hidden": false },
+          { "input": "9 9 3", "expected_output": "9", "is_hidden": true },
+          { "input": "-5 -1 -3", "expected_output": "-1", "is_hidden": true }
+        ],
+        "options": null,
+        "correct_answer": null,
+        "explanation": null
+      }
+    }
+  ],
+  "acceptance_rules": [
+    "Accept only if the task statement, skeleton, solution, and tests are mutually consistent.",
+    "Reject if the solution does not logically match the problem statement.",
+    "Reject if hidden tests imply requirements not stated or grounded in the chunks."
+  ],
+  "regeneration_hints": [
+    "Simplify the implementation scope for Easy tasks.",
+    "Add meaningful boundary cases for Medium and Hard tasks.",
+    "Keep the prompt aligned with beginner C learning outcomes."
+  ]
+}

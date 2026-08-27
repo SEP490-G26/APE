@@ -1,0 +1,83 @@
+{
+  "ranAt": "2026-06-24T15:56:22.226Z",
+  "totalTasks": 7,
+  "totalCostUsd": 0.00067785,
+  "results": [
+    {
+      "taskName": "AI_Gatekeeper",
+      "model": "gemini-3.5-flash",
+      "latency_ms": 12872.56,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "totalCostUsd": 0,
+      "status": "failed",
+      "error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
+    },
+    {
+      "taskName": "AI_Vision_Parse",
+      "model": "gemini-3.5-flash",
+      "latency_ms": 3737.07,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "totalCostUsd": 0,
+      "status": "failed",
+      "error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
+    },
+    {
+      "taskName": "AI_Embedding",
+      "model": "embed-multilingual-v3.0",
+      "latency_ms": 449.74,
+      "inputTokens": 508,
+      "outputTokens": 0,
+      "totalCostUsd": 0,
+      "status": "success",
+      "raw": {
+        "embeddingDimensions": 1024,
+        "provider": "cohere"
+      }
+    },
+    {
+      "taskName": "AI_Question_Gen",
+      "model": "gemini-3.5-flash",
+      "latency_ms": 3832.08,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "totalCostUsd": 0,
+      "status": "failed",
+      "error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
+    },
+    {
+      "taskName": "AI_Review_Agent",
+      "model": "gpt-4o-mini",
+      "latency_ms": 3861.64,
+      "inputTokens": 1303,
+      "outputTokens": 125,
+      "totalCostUsd": 0.00027045,
+      "status": "success",
+      "raw": "```json\n{\n  \"overallScore\": 2,\n  \"issues\": [\n    \"The question about CAP is not relevant to the context provided, which focuses on operating systems, process scheduling, memory management, and concurrency.\",\n    \"The options provided do not relate to the context of operating systems and their components.\"\n  ],\n  \"suggestions\": [\n    \"Generate questions that specifically address topics related to operating systems, such as process scheduling algorithms, memory management techniques, or concurrency control mechanisms.\",\n    \"Ensure that the questions and options are directly relevant to the context to maintain coherence and relevance.\"\n  ]\n}\n```"
+    },
+    {
+      "taskName": "AI_Code_Mentor",
+      "model": "gpt-4o-mini",
+      "latency_ms": 13210.47,
+      "inputTokens": 124,
+      "outputTokens": 648,
+      "totalCostUsd": 0.0004074,
+      "status": "success",
+      "raw": "Let's analyze the provided Java code for the binary search algorithm and the reported test case failures.\n\n### Code Analysis\n\nThe binary search algorithm is designed to find the index of a target value in a sorted array. The provided code is as follows:\n\n```java\npublic int binarySearch(int[] a, int target) {\n    int l = 0, r = a.length - 1;\n    while (l < r) {\n        int m = (l + r) / 2;\n        if (a[m] == target) return m;\n        if (a[m] < target) l = m; // Potential bug here\n        else r = m - 1;\n    }\n    return -1;\n}\n```\n\n### Identifying the Bugs\n\n1. **Target at Last Index Not Found**:\n   - The condition in the `while` loop is `l < r`. This means that when `l` equals `r`, the loop will terminate without checking the last element. If the target is at the last index, it will not be found because the loop exits before checking that index.\n   - **Fix**: Change the condition to `while (l <= r)` to ensure that the last element is also checked.\n\n2. **Infinite Loop for Some Two-Element Arrays**:\n   - The issue arises from the way the pointers `l` and `r` are updated. When `a[m] < target`, the line `l = m;` does not move `l` forward correctly. If `m` is the last index where `a[m] < target`, then `l` will not change, leading to an infinite loop.\n   - **Fix**: Change `l = m;` to `l = m + 1;` to ensure that `l` moves past the middle index.\n\n### Corrected Code\n\nHere’s the corrected version of the binary search function:\n\n```java\npublic int binarySearch(int[] a, int target) {\n    int l = 0, r = a.length - 1;\n    while (l <= r) { // Change to l <= r\n        int m = (l + r) / 2;\n        if (a[m] == target) return m;\n        if (a[m] < target) l = m + 1; // Change to l = m + 1\n        else r = m - 1;\n    }\n    return -1;\n}\n```\n\n### Time Complexity\n\nThe time complexity of the binary search algorithm is \\(O(\\log n)\\), where \\(n\\) is the number of elements in the array. This is because the search space is halved with each iteration of the loop, leading to logarithmic growth in the number of iterations relative to the size of the input.\n\n### Summary\n\n- The original code had two bugs: it did not check the last index and could enter an infinite loop for certain two-element arrays.\n- The fixes involve changing the loop condition to `l <= r` and adjusting the update of `l` to `l = m + 1`.\n- The time complexity remains \\(O(\\log n)\\)."
+    },
+    {
+      "taskName": "AI_Summary_Analyzer",
+      "model": "gemini-3.5-flash",
+      "latency_ms": 1128.6,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "totalCostUsd": 0,
+      "status": "failed",
+      "error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
+    }
+  ],
+  "runId": "run-2026-06-24T15-56-22-226Z-7899730f",
+  "mode": "estimated_cost",
+  "estimatedCostFor1000UsersMonth": 20.3355
+}

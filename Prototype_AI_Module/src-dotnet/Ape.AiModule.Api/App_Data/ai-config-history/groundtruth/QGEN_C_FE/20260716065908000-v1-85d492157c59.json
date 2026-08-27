@@ -1,0 +1,61 @@
+﻿{
+    "snapshot_id":  "QGEN_C_FE:v1:20260716065908000:85d492157c59",
+    "artifact_type":  "groundtruth",
+    "stable_id":  "QGEN_C_FE",
+    "version":  "v1",
+    "function_name":  "QuestionGenerationReview",
+    "subject_code":  "C",
+    "question_type":  "FE",
+    "language":  "en",
+    "description":  "QGEN_C_FE",
+    "is_active":  true,
+    "source":  "git_backfill",
+    "source_commit":  "511aa50726eca82952abff8f8b29642d20a4d019",
+    "captured_from":  "src-dotnet/Ape.AiModule.Api/App_Data/ai-groundtruth/QGEN_C_FE.json",
+    "captured_at":  "2026-07-16T06:59:08.0000000Z",
+    "content_hash":  "85d492157c597f4fa27cbb318e94fdfd6efce6a3bcac0dcea95e7038e8b08d81",
+    "change_reason":  "Add AI module prototype, operator UI, and docs",
+    "change_summary":  "Initial snapshot imported from git history.",
+    "content":  {
+                    "dataset_id":  "QGEN_C_FE",
+                    "version":  "v1",
+                    "language":  "en",
+                    "function_name":  "QuestionGenerationReview",
+                    "subject_code":  "C",
+                    "question_type":  "FE",
+                    "institution_context":  {
+                                                "target_students":  "FPT University foundational programming students",
+                                                "course_hint":  "PRF-style introductory C/pseudocode foundations"
+                                            },
+                    "evaluation_cases":  [
+                                             {
+                                                 "case_id":  "c_fe_easy_array_basics",
+                                                 "difficulty":  "Easy",
+                                                 "expected_topic_tags":  [
+                                                                             "array",
+                                                                             "loop"
+                                                                         ],
+                                                 "expected_question_shape":  "single-concept multiple choice",
+                                                 "acceptance_focus":  [
+                                                                          "groundedness",
+                                                                          "simple reasoning",
+                                                                          "clear distractors"
+                                                                      ]
+                                             },
+                                             {
+                                                 "case_id":  "c_fe_medium_pointer_trace",
+                                                 "difficulty":  "Medium",
+                                                 "expected_topic_tags":  [
+                                                                             "pointer",
+                                                                             "function"
+                                                                         ],
+                                                 "expected_question_shape":  "short code tracing multiple choice",
+                                                 "acceptance_focus":  [
+                                                                          "trace accuracy",
+                                                                          "no excessive trickery",
+                                                                          "difficulty alignment"
+                                                                      ]
+                                             }
+                                         ]
+                }
+}

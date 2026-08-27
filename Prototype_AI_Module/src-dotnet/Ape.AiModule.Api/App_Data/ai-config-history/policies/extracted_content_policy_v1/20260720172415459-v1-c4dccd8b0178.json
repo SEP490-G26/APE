@@ -1,0 +1,43 @@
+﻿{
+  "snapshot_id": "extracted_content_policy_v1:v1:20260720172415459:c4dccd8b0178",
+  "artifact_type": "policies",
+  "stable_id": "extracted_content_policy_v1",
+  "version": "v1",
+  "function_name": "ExtractedContent",
+  "subject_code": null,
+  "question_type": null,
+  "language": null,
+  "description": "Extracted content runtime policy",
+  "is_active": true,
+  "source": "D:\\TEST AI\\Prototype_AI_Module\\src-dotnet\\Ape.AiModule.Api\\App_Data\\extracted-content-policy.json",
+  "source_commit": null,
+  "captured_from": null,
+  "captured_at": "2026-07-20T17:24:15.4595815+00:00",
+  "content_hash": "c4dccd8b01789da56f03c6f05532aa736a3392e82dc4c25f2236bf325fb876b6",
+  "change_reason": null,
+  "change_summary": null,
+  "content": {
+    "policy_id": "extracted_content_policy_v1",
+    "version": "v1",
+    "function_name": "ExtractedContent",
+    "supported_modes": [
+      "TextOnly",
+      "FullMultimodalPage"
+    ],
+    "image_markers": [
+      "image",
+      "img",
+      "figure"
+    ],
+    "normalization_rules": {
+      "collapse_spaces": true,
+      "collapse_blank_lines": true,
+      "prepend_markdown_header": true
+    },
+    "warning_rules": {
+      "warn_if_empty_content": true,
+      "warn_if_images_present_without_vision_model": true,
+      "warn_if_no_text_after_normalization": true
+    }
+  }
+}

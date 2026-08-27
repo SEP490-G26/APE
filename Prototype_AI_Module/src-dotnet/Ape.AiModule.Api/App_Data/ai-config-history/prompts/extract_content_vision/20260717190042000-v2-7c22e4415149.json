@@ -1,0 +1,28 @@
+﻿{
+    "snapshot_id":  "extract_content_vision:v2:20260717190042000:7c22e4415149",
+    "artifact_type":  "prompts",
+    "stable_id":  "extract_content_vision",
+    "version":  "v2",
+    "function_name":  "ExtractedContent",
+    "subject_code":  "",
+    "question_type":  "",
+    "language":  "en",
+    "description":  "Vision extraction for images",
+    "is_active":  true,
+    "source":  "git_backfill",
+    "source_commit":  "f79e31c968a9e91132d26175ec5fddd520c6cafb",
+    "captured_from":  "src-dotnet/Ape.AiModule.Api/App_Data/ai-prompts.json",
+    "captured_at":  "2026-07-17T19:00:42.0000000Z",
+    "content_hash":  "7c22e441514978080fd71985552ea218345526a43a49ce7884ad890a1071a2ff",
+    "change_reason":  "fix ai module",
+    "change_summary":  "No content change relative to previous snapshot.",
+    "content":  {
+                    "description":  "Vision extraction for images",
+                    "is_active":  true,
+                    "key":  "extract_content_vision",
+                    "system_prompt":  "You are an educational document extraction assistant. Your job is to read a single image from a document page and convert its visible educational content into clean markdown. Be faithful to the source. Do not invent text that is not visible.",
+                    "updated_at":  "2026-07-15T15:55:03.0476879+00:00",
+                    "user_prompt":  "ImageRef: {{image_ref}}\n\nExtract the content into markdown.\nRules:\n- Preserve visible headings, bullet points, labels, tables, and code snippets if present.\n- If the image contains a diagram, summarize the diagram meaning in concise markdown.\n- If the image is low quality or partially unreadable, state the uncertainty briefly.\n- Do not wrap the output in markdown code fences.\n- Return markdown only.",
+                    "version":  "v2"
+                }
+}

@@ -1,0 +1,28 @@
+﻿{
+    "snapshot_id":  "question_review:v7:20260717202033000:2888728ef063",
+    "artifact_type":  "prompts",
+    "stable_id":  "question_review",
+    "version":  "v7",
+    "function_name":  "QuestionReview",
+    "subject_code":  "",
+    "question_type":  "",
+    "language":  "en",
+    "description":  "Question review",
+    "is_active":  true,
+    "source":  "git_backfill",
+    "source_commit":  "414b1d8e9101455132a26bf6845c0d98b395192c",
+    "captured_from":  "src-dotnet/Ape.AiModule.Api/App_Data/ai-prompts.json",
+    "captured_at":  "2026-07-17T20:20:33.0000000Z",
+    "content_hash":  "2888728ef063487d473f53590b0ad11a54e5fdea007a4ce26712b72ca095288b",
+    "change_reason":  "update FE/PE question generation prompt quality",
+    "change_summary":  "Changed fields: SystemPrompt, UpdatedAt, UserPrompt, Version",
+    "content":  {
+                    "description":  "Question review",
+                    "is_active":  true,
+                    "key":  "question_review",
+                    "system_prompt":  "You review generated questions for schema validity, grounding quality, academic usefulness, rubric alignment, and subject-scope discipline. Return strict JSON only. Reject generic, weak, unsupported, off-scope, or meta-source-dependent questions.",
+                    "updated_at":  "2026-07-15T22:55:03.0476882+07:00",
+                    "user_prompt":  "Subject: {{subject}}\nQuestionType: {{question_type}}\nSubject-specific focus:\n{{subject_focus}}\nRubric:\n{{rubric_json}}\nSource chunks:\n{{chunks_json}}\nQuestions:\n{{questions_json}}\n\nReturn strict JSON only:\n{\n  \"reviewStatus\": \"accepted|needs_revision\",\n  \"issues\": [\"...\"],\n  \"suggestions\": [\"...\"],\n  \"score\": 0.0,\n  \"schemaValid\": true,\n  \"contentGrounded\": true,\n  \"needsRevision\": false\n}\n\nReview rules:\n- reviewStatus must be \"accepted\" only if the set is schema-valid, chunk-grounded, non-generic, instructionally useful, self-contained for the learner, and consistent with the rubric.\n- schemaValid must be false if any required field is missing, malformed, mislabeled, or inconsistent with the requested question type.\n- contentGrounded must be false if any claim, answer, code requirement, or explanation is not supported by the cited chunks.\n- needsRevision must be true whenever there is any serious issue.\n- score must reflect overall quality from 0.0 to 1.0.\n\nReject the set if any of these problems appear:\n- generic titles like \"FE Question 1\" or broad titles disconnected from the actual chunk lesson\n- vague descriptions like \"Based on the chunk content...\"\n- meta-source wording like \"according to the slides\", \"from the page\", \"in the document\", \"in the chunk\", or similar references that require the learner to know the source container\n- fake distractors such as \"Distractor option 1\"\n- correct_answer contains full option text instead of labels for FE\n- options are trivial, duplicated, or not plausible misconceptions\n- source_chunk_ids reference missing chunks or chunks that do not actually support the item\n- the question drifts outside the course scope defined by the chunks and rubric\n- PE description, skeleton_code, solution_code, and test_cases do not align with each other\n- PE test cases do not verify the stated behavior`n- PE is technically valid but too trivial, too copied from the chunk wording, or too weak to be a meaningful assessment item`n- PE lacks a clear learner-facing task frame, explicit behavior, or useful test coverage`n- PE falls below the quality level implied by the rubric exemplars in clarity, pedagogical value, or test strength\n- repeated questions that test the same fact with only superficial wording changes\n- the requested difficulty does not match the actual reasoning or implementation burden\n\nBe strict. If uncertain, prefer needs_revision.",
+                    "version":  "v7"
+                }
+}

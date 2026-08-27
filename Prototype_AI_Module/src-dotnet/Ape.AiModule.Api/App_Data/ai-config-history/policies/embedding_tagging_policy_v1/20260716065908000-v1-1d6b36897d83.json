@@ -1,0 +1,67 @@
+﻿{
+    "snapshot_id":  "embedding_tagging_policy_v1:v1:20260716065908000:1d6b36897d83",
+    "artifact_type":  "policies",
+    "stable_id":  "embedding_tagging_policy_v1",
+    "version":  "v1",
+    "function_name":  "EmbeddingTagging",
+    "subject_code":  "",
+    "question_type":  "",
+    "language":  "",
+    "description":  "embedding_tagging_policy_v1",
+    "is_active":  true,
+    "source":  "git_backfill",
+    "source_commit":  "511aa50726eca82952abff8f8b29642d20a4d019",
+    "captured_from":  "src-dotnet/Ape.AiModule.Api/App_Data/embedding-tagging-policy.json",
+    "captured_at":  "2026-07-16T06:59:08.0000000Z",
+    "content_hash":  "1d6b36897d83a69d4477d882c8223a346d435a26429743ae6ee6c186ed052dda",
+    "change_reason":  "Add AI module prototype, operator UI, and docs",
+    "change_summary":  "Initial snapshot imported from git history.",
+    "content":  {
+                    "policy_id":  "embedding_tagging_policy_v1",
+                    "version":  "v1",
+                    "function_name":  "EmbeddingTagging",
+                    "chunk_defaults":  {
+                                           "chunking_strategy_text_only":  "logical_block",
+                                           "chunking_strategy_multimodal":  "page_block",
+                                           "retrieval_enabled":  true,
+                                           "default_status":  "active"
+                                       },
+                    "tagging_rules":  {
+                                          "max_tags_per_chunk":  5,
+                                          "fallback_chunk_type":  "paragraph",
+                                          "fallback_section_title":  "Untitled Section"
+                                      },
+                    "subject_taxonomy":  {
+                                             "C_BASIC":  [
+                                                             "variables",
+                                                             "conditions",
+                                                             "loops",
+                                                             "arrays",
+                                                             "functions",
+                                                             "pointers",
+                                                             "stdio"
+                                                         ],
+                                             "JAVA_OOP":  [
+                                                              "class",
+                                                              "object",
+                                                              "constructor",
+                                                              "encapsulation",
+                                                              "inheritance",
+                                                              "polymorphism",
+                                                              "interface",
+                                                              "method"
+                                                          ],
+                                             "DSA_OOP":  [
+                                                             "array",
+                                                             "linked_list",
+                                                             "stack",
+                                                             "queue",
+                                                             "tree",
+                                                             "graph",
+                                                             "sorting",
+                                                             "searching",
+                                                             "complexity"
+                                                         ]
+                                         }
+                }
+}

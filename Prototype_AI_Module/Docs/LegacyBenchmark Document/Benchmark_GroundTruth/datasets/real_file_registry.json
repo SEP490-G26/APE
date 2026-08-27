@@ -1,0 +1,82 @@
+{
+  "dataset_version": "dataset_v1",
+  "description": "Map benchmark case IDs to real local files for Gatekeeper/Ingestion tests",
+  "base_folder_hint": "D:/1_Tailieuhoctap REAL Reborn/Ky9  - Final/Benchmark AI Cost/Docs/RealFiles",
+  "entries": [
+    {
+      "case_id": "GK_001",
+      "file_path": "Docs/RealFiles/gatekeeper/positive/c_intro_handout.docx",
+      "file_type": "docx",
+      "domain_expected": "C",
+      "is_supported_expected": true,
+      "status": "todo"
+    },
+    {
+      "case_id": "GK_002",
+      "file_path": "Docs/RealFiles/gatekeeper/positive/java_oop_notes.pdf",
+      "file_type": "pdf",
+      "domain_expected": "Java_OOP",
+      "is_supported_expected": true,
+      "status": "todo"
+    },
+    {
+      "case_id": "GK_003",
+      "file_path": "Docs/RealFiles/gatekeeper/positive/dsa_oop_slides.pptx",
+      "file_type": "pptx",
+      "domain_expected": "DSA_OOP",
+      "is_supported_expected": true,
+      "status": "todo"
+    },
+    {
+      "case_id": "GK_004",
+      "file_path": "Docs/RealFiles/gatekeeper/negative/philosophy_notes.txt",
+      "file_type": "txt",
+      "domain_expected": "None",
+      "is_supported_expected": false,
+      "status": "todo"
+    },
+    {
+      "case_id": "GK_005",
+      "file_path": "Docs/RealFiles/gatekeeper/negative/sensitive_image_01.jpg",
+      "file_type": "jpg",
+      "domain_expected": "None",
+      "is_supported_expected": false,
+      "status": "todo"
+    },
+    {
+      "case_id": "ING_001",
+      "file_path": "Docs/RealFiles/ingestion/c_intro_textbook.docx",
+      "file_type": "docx",
+      "pipeline_expected": ["parse", "chunk", "embedding"],
+      "status": "todo"
+    },
+    {
+      "case_id": "ING_002",
+      "file_path": "Docs/RealFiles/ingestion/java_oop_with_images.pdf",
+      "file_type": "pdf",
+      "pipeline_expected": ["parse", "vision_partial", "chunk", "embedding"],
+      "status": "todo"
+    },
+    {
+      "case_id": "ING_003",
+      "file_path": "Docs/RealFiles/ingestion/dsa_graph_slides.pptx",
+      "file_type": "pptx",
+      "pipeline_expected": ["parse", "vision", "chunk", "embedding"],
+      "status": "todo"
+    },
+    {
+      "case_id": "ING_004",
+      "file_path": "Docs/RealFiles/ingestion/scanned_c_sheet.png",
+      "file_type": "png",
+      "pipeline_expected": ["vision", "chunk", "embedding"],
+      "status": "todo"
+    },
+    {
+      "case_id": "ING_005",
+      "file_path": "Docs/RealFiles/ingestion/java_oop_matrix.xlsx",
+      "file_type": "xlsx",
+      "pipeline_expected": ["parse", "chunk", "embedding"],
+      "status": "todo"
+    }
+  ]
+}

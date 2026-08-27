@@ -1,0 +1,28 @@
+{
+  "dataset_id": "QGEN_DSA_JAVA_FE",
+  "version": "v1",
+  "language": "en",
+  "function_name": "QuestionGenerationReview",
+  "subject_code": "DSA_JAVA",
+  "question_type": "FE",
+  "institution_context": {
+    "target_students": "FPT University data structure and algorithm students",
+    "course_hint": "CSD-style data structure and algorithm concept checks"
+  },
+  "evaluation_cases": [
+    {
+      "case_id": "dsa_fe_easy_stack_queue",
+      "difficulty": "Easy",
+      "expected_topic_tags": ["stack", "queue"],
+      "expected_question_shape": "single-concept comparison question",
+      "acceptance_focus": ["basic property correctness", "clear distractors"]
+    },
+    {
+      "case_id": "dsa_fe_medium_sorting_choice",
+      "difficulty": "Medium",
+      "expected_topic_tags": ["sorting", "complexity"],
+      "expected_question_shape": "reasoning-based multiple choice",
+      "acceptance_focus": ["algorithmic reasoning", "difficulty alignment", "groundedness"]
+    }
+  ]
+}

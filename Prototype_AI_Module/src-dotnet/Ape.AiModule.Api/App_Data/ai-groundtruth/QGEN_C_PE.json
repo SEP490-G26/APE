@@ -1,0 +1,28 @@
+{
+  "dataset_id": "QGEN_C_PE",
+  "version": "v1",
+  "language": "en",
+  "function_name": "QuestionGenerationReview",
+  "subject_code": "C",
+  "question_type": "PE",
+  "institution_context": {
+    "target_students": "FPT University foundational programming students",
+    "course_hint": "PRF-style practice problems with clear input-output behavior"
+  },
+  "evaluation_cases": [
+    {
+      "case_id": "c_pe_easy_loop_output",
+      "difficulty": "Easy",
+      "expected_topic_tags": ["loop", "input_output"],
+      "expected_question_shape": "single-task implementation",
+      "acceptance_focus": ["clear statement", "valid C skeleton", "visible test case"]
+    },
+    {
+      "case_id": "c_pe_medium_array_processing",
+      "difficulty": "Medium",
+      "expected_topic_tags": ["array", "function"],
+      "expected_question_shape": "multi-step beginner implementation",
+      "acceptance_focus": ["edge cases", "coherent tests", "difficulty alignment"]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+<section id="mentor-tab" class="tab-panel">
+  <div class="function-layout">
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Function 6</p>
+          <h3>AI Code Mentor</h3>
+        </div>
+      </div>
+      <form id="mentor-form" class="stack-form">
+        <div class="grid grid--3">
+          <label>Submission ID
+            <input name="submissionId" value="submission-demo">
+          </label>
+          <label>User ID
+            <input name="userId" value="prototype-user">
+          </label>
+          <label>Subject
+            <select name="subject">
+              <option value="C">C</option>
+              <option value="JAVA_OOP">JAVA_OOP</option>
+              <option value="DSA_JAVA">DSA_JAVA</option>
+            </select>
+          </label>
+          <label>Language
+            <select name="language">
+              <option value="c">c</option>
+              <option value="java">java</option>
+            </select>
+          </label>
+          <label>Provider
+            <select name="provider" data-provider-select data-model-target="mentor-model"></select>
+          </label>
+          <label>Mentor model
+            <select id="mentor-model" name="mentorModel"></select>
+          </label>
+        </div>
+        <label>Problem statement
+          <textarea name="problem" rows="7"></textarea>
+        </label>
+        <label>Combined code
+          <textarea name="code" rows="12"></textarea>
+        </label>
+        <label>Source files JSON
+          <textarea name="sourceFiles" rows="10">[]</textarea>
+        </label>
+        <div class="action-row">
+          <button type="submit">Run Code Mentor</button>
+          <button type="button" class="secondary" data-run-debug="mentor">Run Debug</button>
+          <button type="button" class="secondary" data-copy-parsed="mentor">Copy Parsed</button>
+          <button type="button" class="secondary" data-copy-json="mentor">Copy JSON</button>
+          <button type="button" class="secondary" data-export-json="mentor">Export JSON</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel panel--output">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Output</p>
+          <h3>Parsed result</h3>
+        </div>
+      </div>
+      <div id="mentor-result" class="result-card"></div>
+      <details class="details-block">
+        <summary>Raw JSON</summary>
+        <pre id="mentor-json" class="json-view"></pre>
+      </details>
+    </section>
+  </div>
+</section>

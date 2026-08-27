@@ -1,0 +1,288 @@
+{
+  "runAt": "2026-06-24T15:28:45.577Z",
+  "timeline": [
+    {
+      "ts": "2026-06-24T15:28:43.012Z",
+      "phase": "upload_received",
+      "details": {
+        "fileName": "Slot_02_03_04_Basic_Computation.pptx"
+      }
+    },
+    {
+      "ts": "2026-06-24T15:28:43.481Z",
+      "phase": "parse_completed",
+      "details": {
+        "parser": "officeparser_pptx",
+        "latency_ms": 469.15
+      }
+    },
+    {
+      "ts": "2026-06-24T15:28:43.901Z",
+      "phase": "embedding_chunk_completed",
+      "details": {
+        "chunkIndex": 0,
+        "words": 500,
+        "provider": "cohere",
+        "model": "embed-multilingual-v3.0",
+        "inputTokens": 508,
+        "costUsd": 0
+      }
+    },
+    {
+      "ts": "2026-06-24T15:28:44.179Z",
+      "phase": "embedding_chunk_completed",
+      "details": {
+        "chunkIndex": 1,
+        "words": 500,
+        "provider": "cohere",
+        "model": "embed-multilingual-v3.0",
+        "inputTokens": 508,
+        "costUsd": 0
+      }
+    },
+    {
+      "ts": "2026-06-24T15:28:44.457Z",
+      "phase": "embedding_chunk_completed",
+      "details": {
+        "chunkIndex": 2,
+        "words": 500,
+        "provider": "cohere",
+        "model": "embed-multilingual-v3.0",
+        "inputTokens": 508,
+        "costUsd": 0
+      }
+    },
+    {
+      "ts": "2026-06-24T15:28:44.723Z",
+      "phase": "embedding_chunk_completed",
+      "details": {
+        "chunkIndex": 3,
+        "words": 500,
+        "provider": "cohere",
+        "model": "embed-multilingual-v3.0",
+        "inputTokens": 508,
+        "costUsd": 0
+      }
+    },
+    {
+      "ts": "2026-06-24T15:28:44.994Z",
+      "phase": "embedding_chunk_completed",
+      "details": {
+        "chunkIndex": 4,
+        "words": 500,
+        "provider": "cohere",
+        "model": "embed-multilingual-v3.0",
+        "inputTokens": 508,
+        "costUsd": 0
+      }
+    },
+    {
+      "ts": "2026-06-24T15:28:45.285Z",
+      "phase": "embedding_chunk_completed",
+      "details": {
+        "chunkIndex": 5,
+        "words": 500,
+        "provider": "cohere",
+        "model": "embed-multilingual-v3.0",
+        "inputTokens": 508,
+        "costUsd": 0
+      }
+    },
+    {
+      "ts": "2026-06-24T15:28:45.577Z",
+      "phase": "embedding_chunk_completed",
+      "details": {
+        "chunkIndex": 6,
+        "words": 280,
+        "provider": "cohere",
+        "model": "embed-multilingual-v3.0",
+        "inputTokens": 508,
+        "costUsd": 0
+      }
+    }
+  ],
+  "parsedMarkdown": "---\ntitle: \"PowerPoint Presentation\"\nauthor: \"ADMIN\"\ncreated: 2021-01-25T08:25:31.000Z\nmodified: 2024-12-30T02:15:56.000Z\n---\n\n\n---\n\n# **Basic Computation** {#basic-computation}\n\n\n\n\n---\n\n# **Objectives** {#objectives}\n\n<div style=\"text-align: justify\">After studying this section, you should be able to:</div>\n\n- Understand what is a data type\n- Declare constants and variables of a program\n- Express operations on data\n2\n\n30/12/2024\n\n\n\n\n---\n\n# **Contents** {#contents}\n\n- **Variables and Data types**\n    - Data Types\n    - Integral Types\n    - Floating-Point Types\n    - Declarations\n- **Basic Memory Operations**\n    - Literals\n    - Constants\n    - Assignment Operator\n    - Output\n    - Input\n3\n\n30/12/2024\n\n**Expressions**\n\n    - Arithmetic, \n    - Relational, \n    - Logical\n    - Bit Operators\n    - Shorthand Assignment Operators\n    - Mixing Data Types\n    - Casting\n    - Precedence\n\n\n> **Note:** 4\n\n\n---\n\n# **Variables and Data types** {#variables-and-data-types}\n\n\n\n> **Note:** 22\n\n\n---\n\n# **Introduction** {#introduction}\n\n5\n\n- Instruction: A task that hardware must perform on data.\n- Data can be: **constants**, **variables**.\n- **Constants**: Fixed values that can not be changed when the program executes.\n- **Variables**: Values can be changed when the program execute.\n- Data must be stored in the main memory (RAM).\n- 2 basic operations on data are **READ** and **WRITE**.\n- Numerical data can participate in expressions.\n30/12/2024\n\n\n\n> **Note:** 24\n\n\n---\n\n# Variables {#variables}\n\nA variable is a <u>name</u> referencing to a memory location (address)\n\nHolds binary <u>data</u>\n\nTwo basic operations: set value, get value.\n\nWhen the program is compiled, the compiler will determine the position where the variable is allocated.\n\nQuestions:\n\nWhere is it?  It’s <u>Address</u>\n\nHow many bytes does it occupy?  **Data type**\n\n6\n\n30/12/2024\n\n<div style=\"text-align: center\">Memory</div>\n\n\n\n> **Note:** **Rules for Valid Variable Names in C**\n\n1. Variable names must begin with a letter (A-Z, a-z) or an underscore (_).\n2. After the first character, the name can include letters, digits (0-9), or underscores (_).\n3. Variable names are **case-sensitive**.\n4. Reserved keywords (like int, float, return, etc.) cannot be used as variable names.\n5. Avoid names that start with an underscore followed by a capital letter or are entirely in uppercase, as they are often reserved for system use.\nSolution: C Program\n\n#include <stdio.h>\n\nint main() {\n\n    // Declare variables with valid and meaningful names\n\n    float length;        // Length of the rectangle\n\n    float width;         // Width of the rectangle\n\n    float area;          // Area of the rectangle\n\n    float perimeter;     // Perimeter of the rectangle\n\n    // Prompt user for input\n\n    printf(\"Enter the length of the rectangle: \");\n\n    scanf(\"%f\", &length);\n\n    printf(\"Enter the width of the rectangle: \");\n\n    scanf(\"%f\", &width);\n\n    // Calculate area and perimeter\n\n    area = length * width;\n\n    perimeter = 2 * (length + width);\n\n    // Display the results\n\n    printf(\"The area of the rectangle is: %.2f\\n\", area);\n\n    printf(\"The perimeter of the rectangle is: %.2f\\n\", perimeter);\n\n    return 0;\n\n}\n\n26\n\n\n---\n\n# Data Types {#data-types}\n\nThe C language associates a data type with each variable. Each data type occupies a compiler-defined number of bytes.\n\nA data type defines: \n\nHow the values are stored and \n\nHow the operations on those values are performed. \n\nTyped languages defined some primitive data types.\n\n7\n\n30/12/2024\n\n\n\n> **Note:** 31\n\n\n---\n\n# Arithmetic Types {#arithmetic-types}\n\nThe four most common types of the C language for performing arithmetic calculations are: **char**, **int**, **float**, **double**\n\n8\n\n30/12/2024\n\n![image](image3.png)**char: **Occupies one byte and can store a small integer value, a single character or a single symbol:\n\n![image](image4.png)**int:** occupies one word and can store an integer value. In a 32-bit environment, an **int** occupies 4 bytes:\n\n\n\n> **Note:** 46\n\n\n---\n\n# Arithmetic Types (cont.) {#arithmetic-types-cont}\n\n**float**: typically occupies 4 bytes and can store a single-precision, floating-point number:\n\n9\n\n30/12/2024\n\n![image](image5.png)**double**: typically occupies 8 bytes and can store a double-precision, floating-point number:\n\n![image](image6.png)\n\n\n---\n\n# int Type Size Specifiers {#int-type-size-specifiers}\n\nSpecifying the size of an int ensures that the type contains a minimum number of bits. The three specifiers are:\n\n**short**: at least 16 bits\n\n**long**: at least 32 bits\n\n**long long**: at least 64 bits\n\n*Standard C does not specify that a long double must occupy a minimum number of bits, only that it occupies no fewer bits than a double.*\n\n10\n\n30/12/2024\n\n\n\n\n---\n\n# double Type Size Specifier {#double-type-size-specifier}\n\nThe size of a **long double** depends on the environment and is typically at least 64 bits:\n\n***long double**** type only ensures that it contains at least as many bits as a double*\n\n11\n\n30/12/2024\n\n![image](image7.png)\n\n\n---\n\n# const Qualifier {#const-qualifier}\n\nAny type can hold a constant value.\n\nA constant value cannot be changed.\n\nTo qualify a type as holding a constant value we use the keyword **const**\n\nA type qualified as **const** is unmodifiable.\n\nIf a program instruction attempts to modify a const qualified type, the compiler will report an error.\n\n12\n\n30/12/2024\n\n\n\n\n---\n\n# Representing Values {#representing-values}\n\nHardware manufacturers distinguish **integral **types from **floating-point** types and represent **integral** data and **floating-point** data differently.\n\nIntegral types: char, int\n\nFloating-point types: float, double\n\n13\n\n30/12/2024\n\n\n\n\n---\n\n# Representation of Integral Values {#representation-of-integral-values}\n\nC stores integral values in equivalent binary form. \n\nNon-Negative Values:\n\n**Intel** uses this <u>little-endian ordering</u>.  \n\n**Motorola** uses <u>big-endian ordering</u>.\n\n14\n\n30/12/2024\n\n<div style=\"text-align: center\">**Value is stored:**</div>\n\n<div style=\"text-align: center\">**09F5E103**</div>\n\n<div style=\"text-align: center\">Least significant is stored in lowest byte</div>\n\n<div style=\"text-align: center\">Most significant is stored in lowest byte</div>\n\n<div style=\"text-align: center\">Each CPU family has it’s own way to store data . So, compilers must have a suitable way for copying data from this variable to other. And  due to this reason also, each compiler can run well only on a specific family of CPU  only. A supplier may supply some versions of their compiler for some CPU families.</div>\n\n![image](image8.png)![image](image9.png)\n\n\n---\n\n# Exercise 1:  {#exercise-1}\n\nConvert the following decimal **integers** to **binary**: \n\n\t\t63 _________________________________________________ \n\n\t\t219 ________________________________________________\n\nConvert the following **binary** notation to **decimal**: \n\n\t0111 0101 ___________________________________________\n\n\t0011 1011 ___________________________________________\n\n15\n\n30/12/2024\n\n0011 1111\n\n1101 1011\n\n117\n\n59\n\n\n\n\n---\n\n# Negative and Positive Values {#negative-and-positive-values}\n\nComputers store negative integers using encoding schemes:\n\nTwo's complement notation, \n\nOne's complement notation, and \n\nSign magnitude notation.\n\nAll of these schemes represent non-negative integers identically.  \n\nThe most popular scheme is two's complement. \n\nTo obtain the two's complement of an integer, we:\n\nFlip the bits (1-complement)\n\nAdd one  2-complement\n\n16\n\n30/12/2024\n\n\n\n\n---\n\n# Two's complement notation {#twos-complement-notation}\n\nTo obtain the two's complement of an integer, we \n\nFlip the bits\n\nAdd one\n\nFor example, we represent the integer **-92** by **10100100**<sub>**2**</sub>\n\n17\n\n30/12/2024\n\n![image](image10.png)\n\n\n---\n\n# Exercise 2: Use signed 1-byte integral number {#exercise-2-use-signed-1-byte-integral-number}\n\nWhat is the two's complement notation of \n\n\t-63_______________________________________________ \n\n\t-219______________________________________________\n\nConvert the following binary notation to decimal: \n\n\t1111 0101_________________________________________ \n\n\t1011 1011_________________________________________\n\n18\n\n30/12/2024\n\n1100 0001\n\n0010 0101\n\n-11\n\n-69\n\n\n\n\n---\n\n# Unsigned Integers {#unsigned-integers}\n\nWe can use all of the bits available to store the value of a variable.\n\nWith unsigned variables, there is no need for a negative-value encoding scheme.\n\n19\n\n30/12/2024\n\n![image](image11.png)\n\n\n---\n\n# Cultural Symbols (characters) {#cultural-symbols-characters}\n\nWe store cultural symbols using an integral data type.\n\nWe store a symbol by storing the integer associated with the symbol.\n\nOver 60 encoding sequences have already been defined.\n\n20\n\n30/12/2024\n\n![image](image12.png)<div style=\"text-align: center\">*We use the ASCII encoding sequence throughout this course *</div>\n\n\n\n\n---\n\n<div style=\"text-align: center\">\n\n# ASCII table for characters {#ascii-table-for-characters}\n\n</div>\n\n21\n\n30/12/2024\n\n![alpharithms printable ascii table chart](image13.jpeg)\n\n\n---\n\n# Exercise 3: {#exercise-3}\n\n22\n\n30/12/2024\n\nYou are tasked to write a program to manage a small library system. Choose the most suitable **data type** for each variable based on the information provided.\n\nThe library needs to store the following information:\n\n*Total number of books in the library (e.g., 10,000).*\n\n*Average price of books in dollars (e.g., 15.75).*\n\n*A single character indicates the book's genre ('F' for Fiction, 'N' for Non-fiction, etc.).*\n\n*The unique ID of a book (e.g., 2345678901).*\n\n*Whether a book is available or not (1 for available, 0 for not available).*\n\n*Number of pages in a book (e.g., 500).*\n\n**Tasks:**\n\nChoose an appropriate data type for each variable and explain your choice.\n\nDeclare variables using the chosen data types and initialize them with sample values.\n\nPrint all the values along with their data types.\n\n\n\n\n---\n\n# **The range of values of data types** {#the-range-of-values-of-data-types}\n\n23\n\n30/12/2024\n\n![image](image14.png)\n\n\n---\n\n# Declaring (Creating) Variables {#declaring-creating-variables}\n\nTo create a variable, specify the **data type** and assign it a **value**:\n\n**Syntax:**\n\nFor example:\n\n\tchar section\n\n\tint numberOfClasses;\n\n\tdouble cashFare = 2.25;\n\nRules** **for naming variables are:\n\nNames can contain letters, digits and underscores.\n\nNames must begin with a letter or an underscore (_)\n\nNames are case-sensitive (**myVar** and **myvar** are different variables)\n\nNames cannot contain whitespaces or special characters like !, #, %, etc.\n\nMust not be a C reserved word\n\n24\n\n30/12/2024\n\n<div style=\"text-align: center\">***data_type***** ****identifier**** ****[= initial *****value*****]****;**</div>\n\n\n\n\n---\n\n# Reserved words {#reserved-words}\n\n25\n\n30/12/2024\n\n![image](image15.png)\n\n\n---\n\n# Exercise 4: {#exercise-4}\n\nYou are tasked to create a C program that calculates the area and perimeter of a rectangle. As part of this exercise, ensure that all variable names:\n\n    1. Follow the **rules for valid naming** in C.\n    2. Are **descriptive and meaningful** to improve readability.\n    3. Follow common **naming conventions** (e.g., camelCase or snake_case).\n**Tasks:**\n\n    1. Identify the rules for valid variable names in C and apply them.\n    2. Choose appropriate and meaningful variable names for the program.\n    3. Write the program using the chosen names.\n26\n\n30/12/2024\n\n\n\n\n---\n\n# Some operations on variables: {#some-operations-on-variables}\n\nAssign a constant value to a variable, \n\nAssign the value of another variable to a variable, \n\nOutput the value of a variable, \n\nInput a fresh value into a variable's memory location. \n\n27\n\n30/12/2024\n\n![image](image16.png)\n\n\n---\n\n28\n\n30/12/2024\n\n# Example 1: Variable & Data Types {#example-1-variable-data-types}\n\n![image](image17.png)![image](image18.png)<div style=\"text-align: center\">**Output:**</div>\n\n\n\n\n---\n\n# Example 2: Variable & Data Types {#example-2-variable-data-types}\n\n29\n\n30/12/2024\n\n<div style=\"text-align: justify\">***Where are variables stored and how many bytes do they occupy?***</div>\n\nThe operator  **&** will get the address of  a variable or code.\n\nThe operator  **sizeof(var/type)**** **return the  size (number of byte) occupied by a variable/type \n\n![image](image19.png)![image](image20.png)<div style=\"text-align: center\">Conversion Specifiers</div>\n\n<div style=\"text-align: center\">& String format</div>\n\n\n\n\n---\n\n# Questions as Summary {#questions-as-summary}\n\nWhat is a variable?\n\nWhat is a data type?\n\nCharacteristics of a data type are ……  and …\n\nThe size of the int data type is …. Bytes.\n\nChoose the wrong declarations:\n\n\t**int  n = 10;**\n\n**\tchar c1, c2 = ‘A’;**\n\n**\tint m = 19; k = 2;**\n\n**\tchar c3; int t;**\n\n**\tFloat f1; f2 = 5.1;**\n\nExplain little-endian ordering and big-endian ordering.\n\n30\n\n30/12/2024\n\n\n\n\n---\n\n# **Basic Memory Operations** {#basic-memory-operations}\n\n\n\n\n---\n\n# 1. Literals {#1-literals}\n\nConstant values are specified directly in the source code.\n\nThey can be\n\nCharacter literals (constant characters)\n\nString literals(constant strings)\n\nNumber literals (constant numbers)\n\n32\n\n30/12/2024\n\n![image](image21.png)\n\n\n---\n\n# Literals: Characters, Strings {#literals-characters-strings}\n\n4 ways for representing a character literal:\n\nEnclose  the character single quotes\t\t ‘A’\n\nDecimal ASCII code of the character\t \t 65 for ‘A’\n\nOctal ASCII code of the character \t\t\t 0101 for ‘A’, \n\nHexadecimal ASCII code of the character   \t 0x41 for ‘A’,\n\n33\n\n30/12/2024\n\n![image](image22.png)<div style=\"text-align: center\">Assign value to a variable:</div>\n\n<div style=\"text-align: center\">The operator  **=**</div>\n\n\n\n\n---\n\n# Literals: Escape Sequences {#literals-escape-sequences}\n\nPre-defined literals for special actions:\n\n34\n\n30/12/2024\n\n![image](image23.png)\n\n\n---\n\n# Literals: Escape Sequences (cont.) {#literals-escape-sequences-cont}\n\n35\n\n30/12/2024\n\n![image](image24.png)![image](image25.png)<div style=\"text-align: center\">Error! Why?</div>\n\n<div style=\"text-align: center\">Modify then run it</div>\n\n<div style=\"text-align: center\">Change  \\ to \\\\ then run it</div>\n\n\n\n\n---\n\n# Literals: Numbers {#literals-numbers}\n\n***The compiler will convert directly numeric literals (constants) to binary numbers and put them in the executable file. *** How long of binary constants?  They depend on their data types specified by programmers.\n\nDefault: Integral value  **int**,  real number  **double**\n\nSpecifying data type of constants: **Suffixes after numbers.**\n\n36\n\n30/12/2024\n\n![image](image26.png)\n\n\n---\n\n# 2. Named Constants {#2-named-constants}\n\nUse **const** keyword\n\n     Syntax:\n\nFor example:\n\n37\n\n30/12/2024\n\n<div style=\"text-align: center\">***const****** data_type***** ****constant_name**** ****= *****value*****;**</div>\n\n![image](image27.png)![image](image28.png)Output:\n\n\n\n\n---\n\n# 2. Named Constants (cont.) {#2-named-constants-cont}\n\nUse the pre-processor (pre-compiled directive) **#define**\n\n     Syntax:\n\nFor example:\n\n38\n\n30/12/2024\n\n<div style=\"text-align: center\">***#define****** *****constant_name**** *****value***</div>\n\nOutput:\n\n![image](image29.png)![image](image30.png)\n\n\n---\n\n# 2. Named Constants (cont.) {#2-named-constants-cont}\n\nAttention when the directive #define is used:\n\nThe compiler will not allocate memory block for values but all pre-defined names in the source code will be replaced by their values before the translation performs (The MACRO REPLACEMENT)\n\nA name is call as a MACRO.\n\n39\n\n30/12/2024\n\n![image](image31.png)![image](image32.png)<div style=\"text-align: center\">replace</div>\n\n\n\n\n---\n\n# 3. Input/ Output variables {#3-input-output-variables}\n\n40\n\n30/12/2024\n\n\n\n\n---\n\n# Conversion Specifiers {#conversion-specifiers}\n\n41\n\n30/12/2024\n\n![image](image34.png)\n\n\n---\n\n# Example 1: {#example-1}\n\n42\n\n30/12/2024\n\n![image](image35.png)![image](image36.png)<div style=\"text-align: center\">4210784</div>\n\n<div style=\"text-align: center\">n</div>\n\n<div style=\"text-align: center\">2293620</div>\n\n<div style=\"text-align: center\">m</div>\n\n<div style=\"text-align: center\">4199056</div>\n\n<div style=\"text-align: center\">main</div>\n\nscanf( “%d%d”, &n, &m) \n\nscanf( “%d%d”, 4210784, 2293620)  means that get keys pressed then change them to decimal integers and store them to memory locations 4210784, 2293620.\n\n<div style=\"text-align: center\">Format string</div>\n\n\n\n\n---\n\n# Example 2: {#example-2}\n\n43\n\n30/12/2024\n\n**Input a value to a variable:  **\n\n**scanf (“input format”, &var1,  &var2,…)**\n\n**Output the value of a variable:  **\n\n**printf (“output format”, var1,  var2,…)**\n\n\n\n\n---\n\n# Question {#question}\n\nExplain means of parameters of the **scanf(…)** and the **printf(…) **functions.\n\nUse words “left” and “right”.  The assignment x=y; will copy the value in the ….. side to the ….. side.\n\n44\n\n30/12/2024\n\n\n\n\n---\n\n# Exercise 5: {#exercise-5}\n\nDevelop a C program in which 2 integers, 2 float numbers and 2 double numbers are declared. Ask user for values of them then print out values and addresses of them. Write down the memory map of the program.\n\nRun the following program:\n\n45\n\n30/12/2024\n\n![image](image40.png)<div style=\"text-align: center\">Why user do not have a chance to stroke the ENTER key before the program terminate?</div>\n\nModify and re-run:\n\ngetchar();\n\n\n\n\n---\n\n# **Expressions** {#expressions}\n\n\n\n\n---\n\n# Expressions {#expressions}\n\n**Expression is a valid association of constants, variables, operators and functions and returns an only result. **\n\nExamples:\n\n32-x+y/6\t\t\t16.5 + 4/sqrt(15) * 17 – 8\n\n45 > 5*x\t\t\ty = 17 + 6*5/9 –z*z\n\nHardware for calculating expressions: ALU\n\nOperations that can be supported by ALU: Arithmetic, relational and logic operations.\n\n47\n\n30/12/2024\n\n\n\n\n---\n\n# 1. Arithmetic Operators {#1-arithmetic-operators}\n\n48\n\n30/12/2024\n\n\n| Op. | Syntax | Description | Example |\n|  ---  |  ---  |  ---  |  ---  |\n| + | +x | leaves the variable, constant or expression unchanged | y = +x ;       y = x; |\n| - | -x | reverses the sign of the variable | y= -x; |\n| +   - | x+y       x-y | Add/substract values of two operands | z= x+y;  t = x-y; |\n| * / | x*y   x/y | Multiplies values of two operands<br>Get the quotient of a division | z= x-y;<br>z = 10/3;  3<br>z  = 10.0/3;  3.3333333 |\n| % | x%y | Get remainder of a integral division | 17%3  2<br>15.0 % 3  ERROR |\n| ++<br>-- | ++x      --x<br>x++      x-- | Increase/decrease the value of a variable (prefix/postfix operators) | Demo in the next slide. |\n\n\n\n\n---\n\n# 1. Arithmetic Operators - Example 1 {#1-arithmetic-operators-example-1}\n\n49\n\n30/12/2024\n\n![image](image41.png)![image](image42.png)\n\n\n---\n\n# 1. Arithmetic Operators - Example 2 {#1-arithmetic-operators-example-2}\n\n50\n\n30/12/2024\n\n<div style=\"text-align: center\">Explain yourself  the output</div>\n\n![image](image43.png)![image](image44.png)<div style=\"text-align: center\">?</div>\n\n<u>**Statistic:**</u>\n\n- Multiply > Division\n- Integral operations > floating-point ones.\n\n\n\n---\n\n# 2. Relational Operators {#2-relational-operators}\n\nFor comparisional operators.\n\n<   <=  ==  >=    >   !=\n\nReturn 1: true/ 0: false\n\n51\n\n30/12/2024\n\n![image](image45.png)\n\n\n---\n\n# 3. Logical Operators {#3-logical-operators}\n\nOperator for association of conditions\n\n&& (and), || (or) ,  ! (not)\n\nReturn 1: true, 0: false\n\n52\n\n30/12/2024\n\n![image](image46.png)\n\n\n---\n\n# 4. Bitwise Operators {#4-bitwise-operators}\n\n**&** (and), **|** (or) , **^** (xor): Will act on a pair of bits at the same position in 2 operands.\n\n**<< ****  **Left shift bits of the operand (operands unchanged)\n\n**>>**** ** Right shift bits of the operand (operands unchanged, the sign is preserved.)\n\n**~** : Inverse bits of the operand.\n\n53\n\n30/12/2024\n\n![image](image47.png)n=12:   0000 0000 0000 1100\n\nm= 8:   0000 0000 0000 1000\n\n**n&m**\n\n0000 0000 0000 1100\n\n<u>0000 0000 0000 1000</u>\n\n0000 0000 0000 1000  8\n\n**n|m**\n\n0000 0000 0000 1100\n\n<u>0000 0000 0000 1000</u>\n\n0000 0000 0000 1100  12\n\n**n^m**\n\n0000 0000 0000 1100\n\n<u>0000 0000 0000 1000</u>\n\n0000 0000 0000 0100  4\n\n\n\n\n---\n\n# 4. Bitwise Operators (cont.) {#4-bitwise-operators-cont}\n\n54\n\n30/12/2024\n\nn=12:    0000 0000 0000 1100\n\nn>>1:\n\nSign: **0**\n\n0000 0000 0000 1100\n\n  0000 0000 0000 110\n\nAdd the sign to the left”\n\n **0**000 0000 0000 110  6\n\nk=-1:\n\n1:    0000 0000 0000 0001\n\n-1:  1111  1111 1111 1111 (2-complement)\n\nSign: **1**\n\n1.   1111  1111  1111\n  111  1111 1 111  1111\n\nAdd the sign to the left:\n\n**1**111  1111  1111  1111   (-1<sub>10</sub>)\n\nn=12:    0000 0000 0000 1100\n\n**n<<1**:\n\n 0000 0000 0000  1100\n\n 0000 0000 0001  100   0\n\n 0000 0000 0001  1000 (24<sub>10</sub>)\n\n Left shift 1 bit: multiply by 2\n\n\n\n\n---\n\n# 5. Assignments Operators {#5-assignments-operators}\n\nVariable = expression\n\nShorthand assignments:\n\n55\n\n30/12/2024\n\n![image](image48.png)\n\n\n---\n\n# 6. Mixing Data Types {#6-mixing-data-types}\n\nAlthough the ALU does not perform operations on operands of differing data type directly, C compilers can interpret expressions that contain operands of differing data type.  \n\nIf a binary expression contains operands of differing type, a C compiler changes the data type of one of the operands to match the other. \n\nData type hierarchy:  **double**, **float**, **long**, **int** , **char** .\n\n56\n\n30/12/2024\n\n\n\n\n---\n\n# 6. Mixing Data Types (cont.) {#6-mixing-data-types-cont}\n\n57\n\n30/12/2024\n\n![image](image49.png)Casting Data Type: **x = y;**\n\n\n\n\n---\n\n# 6. Mixing Data Types (cont.) {#6-mixing-data-types-cont}\n\n**Implicit Casting for the assignment**\n\nIf the data type of the variable on the left side of an assignment operator differs from the data type of the right side operand, the compiler:\n\nPromotes the right operand to the data type of the left operand if the left operand is of a higher data type than the right operand, \n\nTruncates the right operand to the data type of the left operand if the left operand is of a lower data type than the right operand.\n\n58\n\n30/12/2024\n\n<div style=\"text-align: center\">0100 0001</div>\n\n<div style=\"text-align: center\">0000 0000</div>\n\n<div style=\"text-align: center\">0000 0000</div>\n\n<div style=\"text-align: center\">0000 0000</div>\n\n<div style=\"text-align: center\">0100 0001</div>\n\n<div style=\"text-align: center\">0001 1001</div>\n\n<div style=\"text-align: center\">0000 0000</div>\n\n<div style=\"text-align: center\">0000 0000</div>\n\n<div style=\"text-align: center\">0000 0000</div>\n\n<div style=\"text-align: center\">0001 1001</div>\n\n\n\n\n---\n\n# 6. Mixing Data Types (cont.) {#6-mixing-data-types-cont}\n\n**Implicit Casting for arithmetic and relational expressions**\n\nIf the operands in an arithmetic or relational expression differ in data type, the compiler promotes the value of lower data type to a value of higher data type before implementing the operation.\n\n59\n\n30/12/2024\n\n**int n=3; long t=123; double x=5.3;**\n\n**3*n      +           620*t         – 3*x**\n\n**(**<u>**int*int**</u>**) +     (**<u>**int*long**</u>**)   -  (**<u>**int*double**</u>**)**\n\n**  **<u>** int**</u><u>**      +         **</u><u>**long**</u><u>** **</u>**         -   ****double**\n\n**           **<u>**long                      -  **</u><u>**double**</u>\n\n**                        ****double**\n\n![image](image50.png)\n\n\n---\n\n# 6. Mixing Data Types (cont.) {#6-mixing-data-types-cont}\n\n**Explicit Casting**\n\nWe may temporarily change the data type of any operand in any expression to obtain a result of a certain data type.\n\n60\n\n30/12/2024\n\n![image](image51.png)![image](image52.png)<div style=\"text-align: center\">00000000</div>\n\n<div style=\"text-align: center\">00000000</div>\n\n<div style=\"text-align: center\">00000000</div>\n\n<div style=\"text-align: center\">00000001</div>\n\n<div style=\"text-align: center\">00000000</div>\n\n<div style=\"text-align: center\">c</div>\n\n<div style=\"text-align: center\">n</div>\n\n\n\n\n---\n\n# 7. Operator Precedence {#7-operator-precedence}\n\nIn a expression containing some more than one operator. Which operator will perform first?  Pre-defined Precedence.\n\nWe can use ( ) to instruct the compiler to evaluate the expression within the parentheses first\n\n61\n\n30/12/2024\n\n![image](image53.png)**int m=3, k=2, n=4;**\n\n**What is the results?**\n\n** ****m<n**\n\n**k<m<n **\n\n**k>m>n **\n\n**m<n>k**\n\n**m&& k<n**\n\n\n\n\n---\n\n# Summary {#summary}\n\n**Variable is  ……**\n\n**Basic memory operations are…..**\n\n**Expression is ……….**\n\nWhich of the following operators will change value of a variable?  +   -   *   /   %   ++ \n\nWhich of the following operators can accept only one operand?  +   -   *   /   %   -- \n\n13 & 7 = ?\n\n62 | 53 = ?\n\n17 ^ 21 = ?\n\n12 >> 2 = ?\n\n65 << 3 = ?\n\n62\n\n30/12/2024\n\n\n\n\n---\n\n# Summary (cont.) {#summary-cont}\n\n**Expressions**\n\nArithmetic operators\n\nRelational operators\n\nLogical operators\n\nBit operators\n\nShorthand Assignment Operators \n\nCasting \n\nPrecedence\n\n63\n\n30/12/2024",
+  "chunkedMarkdown": [
+    {
+      "chunkIndex": 0,
+      "words": 500,
+      "text": "--- title: \"PowerPoint Presentation\" author: \"ADMIN\" created: 2021-01-25T08:25:31.000Z modified: 2024-12-30T02:15:56.000Z --- --- # **Basic Computation** {#basic-computation} --- # **Objectives** {#objectives} <div style=\"text-align: justify\">After studying this section, you should be able to:</div> - Understand what is a data type - Declare constants and variables of a program - Express operations on data 2 30/12/2024 --- # **Contents** {#contents} - **Variables and Data types** - Data Types - Integral Types - Floating-Point Types - Declarations - **Basic Memory Operations** - Literals - Constants - Assignment Operator - Output - Input 3 30/12/2024 **Expressions** - Arithmetic, - Relational, - Logical - Bit Operators - Shorthand Assignment Operators - Mixing Data Types - Casting - Precedence > **Note:** 4 --- # **Variables and Data types** {#variables-and-data-types} > **Note:** 22 --- # **Introduction** {#introduction} 5 - Instruction: A task that hardware must perform on data. - Data can be: **constants**, **variables**. - **Constants**: Fixed values that can not be changed when the program executes. - **Variables**: Values can be changed when the program execute. - Data must be stored in the main memory (RAM). - 2 basic operations on data are **READ** and **WRITE**. - Numerical data can participate in expressions. 30/12/2024 > **Note:** 24 --- # Variables {#variables} A variable is a <u>name</u> referencing to a memory location (address) Holds binary <u>data</u> Two basic operations: set value, get value. When the program is compiled, the compiler will determine the position where the variable is allocated. Questions: Where is it?  It’s <u>Address</u> How many bytes does it occupy?  **Data type** 6 30/12/2024 <div style=\"text-align: center\">Memory</div> > **Note:** **Rules for Valid Variable Names in C** 1. Variable names must begin with a letter (A-Z, a-z) or an underscore (_). 2. After the first character, the name can include letters, digits (0-9), or underscores (_). 3. Variable names are **case-sensitive**. 4. Reserved keywords (like int, float, return, etc.) cannot be used as variable names. 5. Avoid names that start with an underscore followed by a capital letter or are entirely in uppercase, as they are often reserved for system use. Solution: C Program #include <stdio.h> int main() { // Declare variables with valid and meaningful names float length; // Length of the rectangle float width; // Width of the rectangle float area; // Area of the rectangle float perimeter; // Perimeter of the rectangle // Prompt user for input printf(\"Enter the length of the rectangle: \"); scanf(\"%f\", &length); printf(\"Enter the width of the rectangle: \"); scanf(\"%f\", &width); // Calculate area and perimeter area = length * width; perimeter = 2 * (length + width); // Display the results printf(\"The area of the rectangle is: %.2f\\n\", area); printf(\"The perimeter of the rectangle is: %.2f\\n\", perimeter); return 0; } 26 --- # Data Types {#data-types} The C language associates a data type with each variable. Each data type occupies a compiler-defined number of bytes. A data type defines: How the values are stored and How the operations on those values are performed. Typed languages defined some primitive"
+    },
+    {
+      "chunkIndex": 1,
+      "words": 500,
+      "text": "data types. 7 30/12/2024 > **Note:** 31 --- # Arithmetic Types {#arithmetic-types} The four most common types of the C language for performing arithmetic calculations are: **char**, **int**, **float**, **double** 8 30/12/2024 ![image](image3.png)**char: **Occupies one byte and can store a small integer value, a single character or a single symbol: ![image](image4.png)**int:** occupies one word and can store an integer value. In a 32-bit environment, an **int** occupies 4 bytes: > **Note:** 46 --- # Arithmetic Types (cont.) {#arithmetic-types-cont} **float**: typically occupies 4 bytes and can store a single-precision, floating-point number: 9 30/12/2024 ![image](image5.png)**double**: typically occupies 8 bytes and can store a double-precision, floating-point number: ![image](image6.png) --- # int Type Size Specifiers {#int-type-size-specifiers} Specifying the size of an int ensures that the type contains a minimum number of bits. The three specifiers are: **short**: at least 16 bits **long**: at least 32 bits **long long**: at least 64 bits *Standard C does not specify that a long double must occupy a minimum number of bits, only that it occupies no fewer bits than a double.* 10 30/12/2024 --- # double Type Size Specifier {#double-type-size-specifier} The size of a **long double** depends on the environment and is typically at least 64 bits: ***long double**** type only ensures that it contains at least as many bits as a double* 11 30/12/2024 ![image](image7.png) --- # const Qualifier {#const-qualifier} Any type can hold a constant value. A constant value cannot be changed. To qualify a type as holding a constant value we use the keyword **const** A type qualified as **const** is unmodifiable. If a program instruction attempts to modify a const qualified type, the compiler will report an error. 12 30/12/2024 --- # Representing Values {#representing-values} Hardware manufacturers distinguish **integral **types from **floating-point** types and represent **integral** data and **floating-point** data differently. Integral types: char, int Floating-point types: float, double 13 30/12/2024 --- # Representation of Integral Values {#representation-of-integral-values} C stores integral values in equivalent binary form. Non-Negative Values: **Intel** uses this <u>little-endian ordering</u>. **Motorola** uses <u>big-endian ordering</u>. 14 30/12/2024 <div style=\"text-align: center\">**Value is stored:**</div> <div style=\"text-align: center\">**09F5E103**</div> <div style=\"text-align: center\">Least significant is stored in lowest byte</div> <div style=\"text-align: center\">Most significant is stored in lowest byte</div> <div style=\"text-align: center\">Each CPU family has it’s own way to store data . So, compilers must have a suitable way for copying data from this variable to other. And due to this reason also, each compiler can run well only on a specific family of CPU only. A supplier may supply some versions of their compiler for some CPU families.</div> ![image](image8.png)![image](image9.png) --- # Exercise 1: {#exercise-1} Convert the following decimal **integers** to **binary**: 63 _________________________________________________ 219 ________________________________________________ Convert the following **binary** notation to **decimal**: 0111 0101 ___________________________________________ 0011 1011 ___________________________________________ 15 30/12/2024 0011 1111 1101 1011 117 59 --- # Negative and Positive Values {#negative-and-positive-values} Computers store negative integers using encoding schemes: Two's complement notation, One's complement notation, and Sign magnitude notation. All of these schemes represent non-negative integers identically. The most popular scheme is two's complement. To"
+    },
+    {
+      "chunkIndex": 2,
+      "words": 500,
+      "text": "obtain the two's complement of an integer, we: Flip the bits (1-complement) Add one  2-complement 16 30/12/2024 --- # Two's complement notation {#twos-complement-notation} To obtain the two's complement of an integer, we Flip the bits Add one For example, we represent the integer **-92** by **10100100**<sub>**2**</sub> 17 30/12/2024 ![image](image10.png) --- # Exercise 2: Use signed 1-byte integral number {#exercise-2-use-signed-1-byte-integral-number} What is the two's complement notation of -63_______________________________________________ -219______________________________________________ Convert the following binary notation to decimal: 1111 0101_________________________________________ 1011 1011_________________________________________ 18 30/12/2024 1100 0001 0010 0101 -11 -69 --- # Unsigned Integers {#unsigned-integers} We can use all of the bits available to store the value of a variable. With unsigned variables, there is no need for a negative-value encoding scheme. 19 30/12/2024 ![image](image11.png) --- # Cultural Symbols (characters) {#cultural-symbols-characters} We store cultural symbols using an integral data type. We store a symbol by storing the integer associated with the symbol. Over 60 encoding sequences have already been defined. 20 30/12/2024 ![image](image12.png)<div style=\"text-align: center\">*We use the ASCII encoding sequence throughout this course *</div> --- <div style=\"text-align: center\"> # ASCII table for characters {#ascii-table-for-characters} </div> 21 30/12/2024 ![alpharithms printable ascii table chart](image13.jpeg) --- # Exercise 3: {#exercise-3} 22 30/12/2024 You are tasked to write a program to manage a small library system. Choose the most suitable **data type** for each variable based on the information provided. The library needs to store the following information: *Total number of books in the library (e.g., 10,000).* *Average price of books in dollars (e.g., 15.75).* *A single character indicates the book's genre ('F' for Fiction, 'N' for Non-fiction, etc.).* *The unique ID of a book (e.g., 2345678901).* *Whether a book is available or not (1 for available, 0 for not available).* *Number of pages in a book (e.g., 500).* **Tasks:** Choose an appropriate data type for each variable and explain your choice. Declare variables using the chosen data types and initialize them with sample values. Print all the values along with their data types. --- # **The range of values of data types** {#the-range-of-values-of-data-types} 23 30/12/2024 ![image](image14.png) --- # Declaring (Creating) Variables {#declaring-creating-variables} To create a variable, specify the **data type** and assign it a **value**: **Syntax:** For example: char section int numberOfClasses; double cashFare = 2.25; Rules** **for naming variables are: Names can contain letters, digits and underscores. Names must begin with a letter or an underscore (_) Names are case-sensitive (**myVar** and **myvar** are different variables) Names cannot contain whitespaces or special characters like !, #, %, etc. Must not be a C reserved word 24 30/12/2024 <div style=\"text-align: center\">***data_type***** ****identifier**** ****[= initial *****value*****]****;**</div> --- # Reserved words {#reserved-words} 25 30/12/2024 ![image](image15.png) --- # Exercise 4: {#exercise-4} You are tasked to create a C program that calculates the area and perimeter of a rectangle. As part of this exercise, ensure that all variable names: 1. Follow the **rules for valid naming** in C. 2. Are **descriptive and meaningful** to improve readability. 3. Follow common **naming conventions** (e.g., camelCase or snake_case). **Tasks:** 1. Identify the"
+    },
+    {
+      "chunkIndex": 3,
+      "words": 500,
+      "text": "rules for valid variable names in C and apply them. 2. Choose appropriate and meaningful variable names for the program. 3. Write the program using the chosen names. 26 30/12/2024 --- # Some operations on variables: {#some-operations-on-variables} Assign a constant value to a variable, Assign the value of another variable to a variable, Output the value of a variable, Input a fresh value into a variable's memory location. 27 30/12/2024 ![image](image16.png) --- 28 30/12/2024 # Example 1: Variable & Data Types {#example-1-variable-data-types} ![image](image17.png)![image](image18.png)<div style=\"text-align: center\">**Output:**</div> --- # Example 2: Variable & Data Types {#example-2-variable-data-types} 29 30/12/2024 <div style=\"text-align: justify\">***Where are variables stored and how many bytes do they occupy?***</div> The operator **&** will get the address of a variable or code. The operator **sizeof(var/type)**** **return the size (number of byte) occupied by a variable/type ![image](image19.png)![image](image20.png)<div style=\"text-align: center\">Conversion Specifiers</div> <div style=\"text-align: center\">& String format</div> --- # Questions as Summary {#questions-as-summary} What is a variable? What is a data type? Characteristics of a data type are …… and … The size of the int data type is …. Bytes. Choose the wrong declarations: **int n = 10;** ** char c1, c2 = ‘A’;** ** int m = 19; k = 2;** ** char c3; int t;** ** Float f1; f2 = 5.1;** Explain little-endian ordering and big-endian ordering. 30 30/12/2024 --- # **Basic Memory Operations** {#basic-memory-operations} --- # 1. Literals {#1-literals} Constant values are specified directly in the source code. They can be Character literals (constant characters) String literals(constant strings) Number literals (constant numbers) 32 30/12/2024 ![image](image21.png) --- # Literals: Characters, Strings {#literals-characters-strings} 4 ways for representing a character literal: Enclose the character single quotes ‘A’ Decimal ASCII code of the character 65 for ‘A’ Octal ASCII code of the character 0101 for ‘A’, Hexadecimal ASCII code of the character 0x41 for ‘A’, 33 30/12/2024 ![image](image22.png)<div style=\"text-align: center\">Assign value to a variable:</div> <div style=\"text-align: center\">The operator **=**</div> --- # Literals: Escape Sequences {#literals-escape-sequences} Pre-defined literals for special actions: 34 30/12/2024 ![image](image23.png) --- # Literals: Escape Sequences (cont.) {#literals-escape-sequences-cont} 35 30/12/2024 ![image](image24.png)![image](image25.png)<div style=\"text-align: center\">Error! Why?</div> <div style=\"text-align: center\">Modify then run it</div> <div style=\"text-align: center\">Change \\ to \\\\ then run it</div> --- # Literals: Numbers {#literals-numbers} ***The compiler will convert directly numeric literals (constants) to binary numbers and put them in the executable file. *** How long of binary constants?  They depend on their data types specified by programmers. Default: Integral value  **int**, real number  **double** Specifying data type of constants: **Suffixes after numbers.** 36 30/12/2024 ![image](image26.png) --- # 2. Named Constants {#2-named-constants} Use **const** keyword Syntax: For example: 37 30/12/2024 <div style=\"text-align: center\">***const****** data_type***** ****constant_name**** ****= *****value*****;**</div> ![image](image27.png)![image](image28.png)Output: --- # 2. Named Constants (cont.) {#2-named-constants-cont} Use the pre-processor (pre-compiled directive) **#define** Syntax: For example: 38 30/12/2024 <div style=\"text-align: center\">***#define****** *****constant_name**** *****value***</div> Output: ![image](image29.png)![image](image30.png) --- # 2. Named Constants (cont.) {#2-named-constants-cont} Attention when the directive #define is used: The compiler will not allocate memory block for values but all pre-defined names in the source code will be replaced by their values"
+    },
+    {
+      "chunkIndex": 4,
+      "words": 500,
+      "text": "before the translation performs (The MACRO REPLACEMENT) A name is call as a MACRO. 39 30/12/2024 ![image](image31.png)![image](image32.png)<div style=\"text-align: center\">replace</div> --- # 3. Input/ Output variables {#3-input-output-variables} 40 30/12/2024 --- # Conversion Specifiers {#conversion-specifiers} 41 30/12/2024 ![image](image34.png) --- # Example 1: {#example-1} 42 30/12/2024 ![image](image35.png)![image](image36.png)<div style=\"text-align: center\">4210784</div> <div style=\"text-align: center\">n</div> <div style=\"text-align: center\">2293620</div> <div style=\"text-align: center\">m</div> <div style=\"text-align: center\">4199056</div> <div style=\"text-align: center\">main</div> scanf( “%d%d”, &n, &m)  scanf( “%d%d”, 4210784, 2293620) means that get keys pressed then change them to decimal integers and store them to memory locations 4210784, 2293620. <div style=\"text-align: center\">Format string</div> --- # Example 2: {#example-2} 43 30/12/2024 **Input a value to a variable: ** **scanf (“input format”, &var1, &var2,…)** **Output the value of a variable: ** **printf (“output format”, var1, var2,…)** --- # Question {#question} Explain means of parameters of the **scanf(…)** and the **printf(…) **functions. Use words “left” and “right”. The assignment x=y; will copy the value in the ….. side to the ….. side. 44 30/12/2024 --- # Exercise 5: {#exercise-5} Develop a C program in which 2 integers, 2 float numbers and 2 double numbers are declared. Ask user for values of them then print out values and addresses of them. Write down the memory map of the program. Run the following program: 45 30/12/2024 ![image](image40.png)<div style=\"text-align: center\">Why user do not have a chance to stroke the ENTER key before the program terminate?</div> Modify and re-run: getchar(); --- # **Expressions** {#expressions} --- # Expressions {#expressions} **Expression is a valid association of constants, variables, operators and functions and returns an only result. ** Examples: 32-x+y/6 16.5 + 4/sqrt(15) * 17 – 8 45 > 5*x y = 17 + 6*5/9 –z*z Hardware for calculating expressions: ALU Operations that can be supported by ALU: Arithmetic, relational and logic operations. 47 30/12/2024 --- # 1. Arithmetic Operators {#1-arithmetic-operators} 48 30/12/2024 | Op. | Syntax | Description | Example | | --- | --- | --- | --- | | + | +x | leaves the variable, constant or expression unchanged | y = +x ;  y = x; | | - | -x | reverses the sign of the variable | y= -x; | | + - | x+y x-y | Add/substract values of two operands | z= x+y; t = x-y; | | * / | x*y x/y | Multiplies values of two operands<br>Get the quotient of a division | z= x-y;<br>z = 10/3;  3<br>z = 10.0/3;  3.3333333 | | % | x%y | Get remainder of a integral division | 17%3  2<br>15.0 % 3  ERROR | | ++<br>-- | ++x --x<br>x++ x-- | Increase/decrease the value of a variable (prefix/postfix operators) | Demo in the next slide. | --- # 1. Arithmetic Operators - Example 1 {#1-arithmetic-operators-example-1} 49 30/12/2024 ![image](image41.png)![image](image42.png) --- # 1. Arithmetic Operators - Example 2 {#1-arithmetic-operators-example-2} 50 30/12/2024 <div style=\"text-align: center\">Explain yourself the output</div> ![image](image43.png)![image](image44.png)<div style=\"text-align: center\">?</div> <u>**Statistic:**</u> - Multiply > Division - Integral operations > floating-point ones. --- # 2. Relational Operators {#2-relational-operators} For comparisional operators."
+    },
+    {
+      "chunkIndex": 5,
+      "words": 500,
+      "text": "< <= == >= > != Return 1: true/ 0: false 51 30/12/2024 ![image](image45.png) --- # 3. Logical Operators {#3-logical-operators} Operator for association of conditions && (and), || (or) , ! (not) Return 1: true, 0: false 52 30/12/2024 ![image](image46.png) --- # 4. Bitwise Operators {#4-bitwise-operators} **&** (and), **|** (or) , **^** (xor): Will act on a pair of bits at the same position in 2 operands. **<< **** **Left shift bits of the operand (operands unchanged) **>>**** ** Right shift bits of the operand (operands unchanged, the sign is preserved.) **~** : Inverse bits of the operand. 53 30/12/2024 ![image](image47.png)n=12: 0000 0000 0000 1100 m= 8: 0000 0000 0000 1000 **n&m** 0000 0000 0000 1100 <u>0000 0000 0000 1000</u> 0000 0000 0000 1000  8 **n|m** 0000 0000 0000 1100 <u>0000 0000 0000 1000</u> 0000 0000 0000 1100  12 **n^m** 0000 0000 0000 1100 <u>0000 0000 0000 1000</u> 0000 0000 0000 0100  4 --- # 4. Bitwise Operators (cont.) {#4-bitwise-operators-cont} 54 30/12/2024 n=12: 0000 0000 0000 1100 n>>1: Sign: **0** 0000 0000 0000 1100 0000 0000 0000 110 Add the sign to the left” **0**000 0000 0000 110  6 k=-1: 1: 0000 0000 0000 0001 -1: 1111 1111 1111 1111 (2-complement) Sign: **1** 1. 1111 1111 1111 111 1111 1 111 1111 Add the sign to the left: **1**111 1111 1111 1111  (-1<sub>10</sub>) n=12: 0000 0000 0000 1100 **n<<1**: 0000 0000 0000 1100 0000 0000 0001 100  0 0000 0000 0001 1000 (24<sub>10</sub>) Left shift 1 bit: multiply by 2 --- # 5. Assignments Operators {#5-assignments-operators} Variable = expression Shorthand assignments: 55 30/12/2024 ![image](image48.png) --- # 6. Mixing Data Types {#6-mixing-data-types} Although the ALU does not perform operations on operands of differing data type directly, C compilers can interpret expressions that contain operands of differing data type. If a binary expression contains operands of differing type, a C compiler changes the data type of one of the operands to match the other. Data type hierarchy: **double**, **float**, **long**, **int** , **char** . 56 30/12/2024 --- # 6. Mixing Data Types (cont.) {#6-mixing-data-types-cont} 57 30/12/2024 ![image](image49.png)Casting Data Type: **x = y;** --- # 6. Mixing Data Types (cont.) {#6-mixing-data-types-cont} **Implicit Casting for the assignment** If the data type of the variable on the left side of an assignment operator differs from the data type of the right side operand, the compiler: Promotes the right operand to the data type of the left operand if the left operand is of a higher data type than the right operand, Truncates the right operand to the data type of the left operand if the left operand is of a lower data type than the right operand. 58 30/12/2024 <div style=\"text-align: center\">0100 0001</div> <div style=\"text-align: center\">0000 0000</div> <div style=\"text-align: center\">0000 0000</div> <div style=\"text-align: center\">0000 0000</div> <div style=\"text-align: center\">0100 0001</div> <div style=\"text-align: center\">0001 1001</div> <div style=\"text-align: center\">0000 0000</div> <div style=\"text-align: center\">0000 0000</div> <div style=\"text-align: center\">0000 0000</div> <div style=\"text-align: center\">0001 1001</div> --- # 6. Mixing Data Types (cont.) {#6-mixing-data-types-cont} **Implicit Casting"
+    },
+    {
+      "chunkIndex": 6,
+      "words": 280,
+      "text": "for arithmetic and relational expressions** If the operands in an arithmetic or relational expression differ in data type, the compiler promotes the value of lower data type to a value of higher data type before implementing the operation. 59 30/12/2024 **int n=3; long t=123; double x=5.3;** **3*n + 620*t – 3*x** **(**<u>**int*int**</u>**) + (**<u>**int*long**</u>**) - (**<u>**int*double**</u>**)** ** **<u>** int**</u><u>** + **</u><u>**long**</u><u>** **</u>** - ****double** ** **<u>**long - **</u><u>**double**</u> ** ****double** ![image](image50.png) --- # 6. Mixing Data Types (cont.) {#6-mixing-data-types-cont} **Explicit Casting** We may temporarily change the data type of any operand in any expression to obtain a result of a certain data type. 60 30/12/2024 ![image](image51.png)![image](image52.png)<div style=\"text-align: center\">00000000</div> <div style=\"text-align: center\">00000000</div> <div style=\"text-align: center\">00000000</div> <div style=\"text-align: center\">00000001</div> <div style=\"text-align: center\">00000000</div> <div style=\"text-align: center\">c</div> <div style=\"text-align: center\">n</div> --- # 7. Operator Precedence {#7-operator-precedence} In a expression containing some more than one operator. Which operator will perform first?  Pre-defined Precedence. We can use ( ) to instruct the compiler to evaluate the expression within the parentheses first 61 30/12/2024 ![image](image53.png)**int m=3, k=2, n=4;** **What is the results?** ** ****m<n** **k<m<n ** **k>m>n ** **m<n>k** **m&& k<n** --- # Summary {#summary} **Variable is ……** **Basic memory operations are…..** **Expression is ……….** Which of the following operators will change value of a variable? + - * / % ++ Which of the following operators can accept only one operand? + - * / % -- 13 & 7 = ? 62 | 53 = ? 17 ^ 21 = ? 12 >> 2 = ? 65 << 3 = ? 62 30/12/2024 --- # Summary (cont.) {#summary-cont} **Expressions** Arithmetic operators Relational operators Logical operators Bit operators Shorthand Assignment Operators Casting Precedence 63 30/12/2024"
+    }
+  ],
+  "file": {
+    "name": "Slot_02_03_04_Basic_Computation.pptx",
+    "mimeType": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+    "sizeBytes": 1608111,
+    "sizeMb": 1.5336
+  },
+  "documentStats": {
+    "characters": 24724,
+    "words": 3280,
+    "chunks": 7,
+    "chunkSizeWords": 500
+  },
+  "steps": [
+    {
+      "step": "parse_to_markdown",
+      "parser": "officeparser_pptx",
+      "model": "local-parser",
+      "latency_ms": 469.15,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "totalCostUsd": 0,
+      "status": "success"
+    },
+    {
+      "step": "embedding_and_tagging",
+      "model": "embed-multilingual-v3.0",
+      "latency_ms": 2095.43,
+      "inputTokens": 3556,
+      "outputTokens": 0,
+      "totalCostUsd": 0,
+      "status": "success",
+      "note": ""
+    }
+  ],
+  "embeddingChunks": [
+    {
+      "chunkIndex": 0,
+      "words": 500,
+      "inputTokens": 508,
+      "costUsd": 0,
+      "embeddingDimensions": 1024,
+      "model": "embed-multilingual-v3.0",
+      "provider": "cohere",
+      "tags": [
+        "learning-content",
+        "chunked-500w"
+      ]
+    },
+    {
+      "chunkIndex": 1,
+      "words": 500,
+      "inputTokens": 508,
+      "costUsd": 0,
+      "embeddingDimensions": 1024,
+      "model": "embed-multilingual-v3.0",
+      "provider": "cohere",
+      "tags": [
+        "learning-content",
+        "chunked-500w"
+      ]
+    },
+    {
+      "chunkIndex": 2,
+      "words": 500,
+      "inputTokens": 508,
+      "costUsd": 0,
+      "embeddingDimensions": 1024,
+      "model": "embed-multilingual-v3.0",
+      "provider": "cohere",
+      "tags": [
+        "learning-content",
+        "chunked-500w"
+      ]
+    },
+    {
+      "chunkIndex": 3,
+      "words": 500,
+      "inputTokens": 508,
+      "costUsd": 0,
+      "embeddingDimensions": 1024,
+      "model": "embed-multilingual-v3.0",
+      "provider": "cohere",
+      "tags": [
+        "learning-content",
+        "chunked-500w"
+      ]
+    },
+    {
+      "chunkIndex": 4,
+      "words": 500,
+      "inputTokens": 508,
+      "costUsd": 0,
+      "embeddingDimensions": 1024,
+      "model": "embed-multilingual-v3.0",
+      "provider": "cohere",
+      "tags": [
+        "learning-content",
+        "chunked-500w"
+      ]
+    },
+    {
+      "chunkIndex": 5,
+      "words": 500,
+      "inputTokens": 508,
+      "costUsd": 0,
+      "embeddingDimensions": 1024,
+      "model": "embed-multilingual-v3.0",
+      "provider": "cohere",
+      "tags": [
+        "learning-content",
+        "chunked-500w"
+      ]
+    },
+    {
+      "chunkIndex": 6,
+      "words": 280,
+      "inputTokens": 508,
+      "costUsd": 0,
+      "embeddingDimensions": 1024,
+      "model": "embed-multilingual-v3.0",
+      "provider": "cohere",
+      "tags": [
+        "learning-content",
+        "chunked-500w"
+      ]
+    }
+  ],
+  "rawFlowLog": {
+    "provider": "cohere",
+    "parse": {
+      "parserType": "officeparser_pptx",
+      "usage": {}
+    },
+    "embedding": {
+      "status": "success",
+      "chunksAttempted": 7
+    }
+  },
+  "totals": {
+    "latency_ms": 2565.58,
+    "inputTokens": 3556,
+    "outputTokens": 0,
+    "totalCostUsd": 0
+  },
+  "runId": "run-2026-06-24T15-28-45-578Z-cab073b4",
+  "mode": "benchmark_upload"
+}

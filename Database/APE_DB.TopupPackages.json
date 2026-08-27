@@ -1,0 +1,80 @@
+[{
+  "_id": {
+    "$oid": "6a79fd884c766cdaab811d79"
+  },
+  "Code": "STARTER_10K",
+  "Name": "Starter 10K",
+  "Description": "Quick refill for a few AI study sessions.",
+  "AmountVnd": {
+    "$numberLong": "10000"
+  },
+  "SortOrder": 1,
+  "IsActive": true,
+  "IsFeatured": false,
+  "CreatedAt": {
+    "$date": "2026-08-10T16:34:16.711Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-17T17:05:18.454Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a79fd884c766cdaab811d7a"
+  },
+  "Code": "FOCUS_50K",
+  "Name": "Focus 50K",
+  "Description": "Balanced package for regular generation and mentor usage.",
+  "AmountVnd": {
+    "$numberLong": "50000"
+  },
+  "SortOrder": 2,
+  "IsActive": true,
+  "IsFeatured": true,
+  "CreatedAt": {
+    "$date": "2026-08-10T16:34:16.711Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-10T16:34:16.711Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a79fd884c766cdaab811d7b"
+  },
+  "Code": "INTENSIVE_100K",
+  "Name": "Intensive 100K",
+  "Description": "For students working across multiple AI-heavy workflows.",
+  "AmountVnd": {
+    "$numberLong": "100000"
+  },
+  "SortOrder": 3,
+  "IsActive": true,
+  "IsFeatured": true,
+  "CreatedAt": {
+    "$date": "2026-08-10T16:34:16.711Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-10T16:34:16.711Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7c6a9c0a7a2e6ee5c87164"
+  },
+  "Code": "TEST_200K",
+  "Name": "Test",
+  "Description": "alooo",
+  "AmountVnd": {
+    "$numberLong": "200000"
+  },
+  "SortOrder": 5,
+  "IsActive": false,
+  "IsFeatured": false,
+  "CreatedAt": {
+    "$date": "2026-08-12T12:44:12.230Z"
+  },
+  "UpdatedAt": {
+    "$date": "2026-08-17T17:05:14.445Z"
+  }
+}]

@@ -1,0 +1,17 @@
+{
+  "rubric_id": "CODE_MENTOR",
+  "rubric_name": "Code Mentor Feedback Quality",
+  "function_name": "CodeMentor",
+  "version": "v1",
+  "language": "en",
+  "description": "Lightweight rubric for reviewing whether mentor feedback is technically grounded, actionable, and suitable for beginner programming students.",
+  "quality_checks": [
+    "Feedback should identify concrete technical issues when they exist.",
+    "Feedback should avoid claiming code execution unless execution evidence exists.",
+    "Suggestions should be actionable and map back to the identified issue.",
+    "Complexity comments should be cautious and only stated when inferable.",
+    "Likely failing scenarios should be included when the defect implies a clear failing input."
+  ],
+  "acceptance_rule": "Accept when the feedback is technically grounded, specific, and useful to the student.",
+  "warning_rule": "Warn when the feedback is vague, overly speculative, or disconnected from the code."
+}

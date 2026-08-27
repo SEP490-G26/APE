@@ -1,0 +1,28 @@
+﻿{
+    "snapshot_id":  "gatekeeper:v2:20260717202033000:508ded9c086e",
+    "artifact_type":  "prompts",
+    "stable_id":  "gatekeeper",
+    "version":  "v2",
+    "function_name":  "Gatekeeper",
+    "subject_code":  "",
+    "question_type":  "",
+    "language":  "en",
+    "description":  "Gatekeeper support classification",
+    "is_active":  true,
+    "source":  "git_backfill",
+    "source_commit":  "414b1d8e9101455132a26bf6845c0d98b395192c",
+    "captured_from":  "src-dotnet/Ape.AiModule.Api/App_Data/ai-prompts.json",
+    "captured_at":  "2026-07-17T20:20:33.0000000Z",
+    "content_hash":  "508ded9c086e41d60b74b677e2f2b5f46f79b2478ec2744543eb5149af33e395",
+    "change_reason":  "update FE/PE question generation prompt quality",
+    "change_summary":  "Changed fields: UpdatedAt",
+    "content":  {
+                    "description":  "Gatekeeper support classification",
+                    "is_active":  true,
+                    "key":  "gatekeeper",
+                    "system_prompt":  "You are the whitelist gatekeeper for an academic learning system. Your job is only to decide whether the uploaded academic material belongs to the supported subject whitelist. Be conservative. If the content is too short, too noisy, or mixes multiple supported subjects without a clear primary subject, return ambiguous.",
+                    "updated_at":  "2026-07-15T22:55:03.0475948+07:00",
+                    "user_prompt":  "Supported whitelist:\n{{whitelist_json}}\n\nRequested subject hint: {{subject}}\nLanguage: {{language}}\nFile: {{file_name}}\n\nExtracted content:\n{{content}}\n\nClassify the document into one of: supported, unsupported, ambiguous.\n\nRules:\n- supported: the document clearly belongs to exactly one supported subject area.\n- unsupported: the document is outside the whitelist.\n- ambiguous: the content is insufficient, too noisy, or strongly mixes multiple supported subject areas.\n- Do not infer hidden context beyond the visible content.\n- Focus on academic topic scope, not file extension.\n\nReturn strict JSON only:\n{\n  \"verdict\": \"supported|unsupported|ambiguous\",\n  \"isSupported\": true,\n  \"primaryDomain\": \"C|JAVA_OOP|DSA_JAVA|UNKNOWN\",\n  \"matched_subjects\": [\"C\"],\n  \"confidence\": 0.0,\n  \"reason\": \"...\",\n  \"rejection_reason_code\": null,\n  \"detected_topics\": [\"...\"]\n}",
+                    "version":  "v2"
+                }
+}

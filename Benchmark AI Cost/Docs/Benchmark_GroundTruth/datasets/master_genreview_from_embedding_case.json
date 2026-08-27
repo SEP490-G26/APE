@@ -1,0 +1,54 @@
+{
+  "description": "Master case mẫu lấy từ output embedding chunks để chạy Generation + Review",
+  "usage": "Import file này hoặc copy contextChunks vào tab Generation + Review",
+  "case_id": "GR-MASTER-001",
+  "scenario_group": "FE_easy",
+  "questionType": "FE",
+  "domain": "Java_OOP",
+  "language": "vi",
+  "count": 3,
+  "groundTruth": "Câu hỏi đúng chủ đề, độ khó Easy, rõ ràng, đúng schema QuestionsBank FE.",
+  "contextChunks": [
+    "[topic_tags: oop, class, object] Lập trình hướng đối tượng xoay quanh class và object. Class định nghĩa thuộc tính và phương thức; object là thể hiện cụ thể của class.",
+    "[topic_tags: encapsulation, access_modifier] Encapsulation giúp che giấu dữ liệu bằng private/protected/public và cung cấp getter/setter để kiểm soát truy cập.",
+    "[topic_tags: inheritance, polymorphism] Inheritance cho phép lớp con tái sử dụng lớp cha. Polymorphism cho phép ghi đè phương thức để xử lý theo ngữ cảnh đối tượng thực tế."
+  ],
+  "expected": {
+    "schema_required": true,
+    "type": "FE",
+    "required_fields": [
+      "type",
+      "topic_tags",
+      "difficulty",
+      "title",
+      "description",
+      "skeleton_code",
+      "solution_code",
+      "test_cases",
+      "options",
+      "explanation"
+    ],
+    "nullability_rules": {
+      "FE": {
+        "skeleton_code": null,
+        "solution_code": null,
+        "test_cases": null,
+        "options": "Array[String], có đánh dấu đáp án đúng"
+      }
+    }
+  },
+  "model_pairs_core_example": [
+    {
+      "generation_model": "gpt-4o",
+      "review_model": "gpt-4o"
+    },
+    {
+      "generation_model": "gemini-3.5-flash",
+      "review_model": "gpt-4o"
+    },
+    {
+      "generation_model": "gpt-5.4-mini",
+      "review_model": "gemini-3.1-flash-lite"
+    }
+  ]
+}

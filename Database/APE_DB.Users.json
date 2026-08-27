@@ -1,0 +1,1278 @@
+[{
+  "_id": {
+    "$oid": "6a6b85b19f08fc1059092d5d"
+  },
+  "GoogleId": "106430365512184538808",
+  "Email": "sang07626@gmail.com",
+  "Status": "Active",
+  "FullName": "Sang Còi",
+  "AvatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocLFkzPc-ejLLe_D2pd7iWf0l6LG8QGUgb77flDkFenpE1fOSjhE=s96-c",
+  "Role": "Student",
+  "ExpPoints": 0,
+  "AiWalletBalanceVnd": {
+    "$numberLong": "38204"
+  },
+  "CurrentStreak": 2,
+  "HighestStreak": 18,
+  "LastLoginDate": {
+    "$date": "2026-08-26T11:42:05.654Z"
+  },
+  "LastPracticeDate": null,
+  "Badges": [],
+  "RefreshTokens": [
+    {
+      "Token": "Ub/qvIsqN+gaeNznxo4NFHTY+C4Vfh6jucCxgwc0xGsHfmB9jQvBXF9hcpER/PRS4LOt7wB2lCZP/vcdqCyVCA==",
+      "Expires": {
+        "$date": "2026-08-27T18:30:35.681Z"
+      },
+      "Created": {
+        "$date": "2026-08-20T18:30:35.681Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "2mFkNWvUd6i4Bt2qLCmPQ4QzwUya8XAmF2fUqVMz1vwSsMmmt6ARLQmyRHYGFOC9JDEU+pwBS9ZinicrL2jgWg==",
+      "Expires": {
+        "$date": "2026-08-27T19:13:38.324Z"
+      },
+      "Created": {
+        "$date": "2026-08-20T19:13:38.324Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "oGv/RYTYHY7e/UftlLo1uKKXYur2J9wUdGaHusPng3rqmUSRyheIyHW27U63Lx0qMRhK4tFPTHC1CZd0ZcOQJw==",
+      "Expires": {
+        "$date": "2026-08-28T21:37:45.450Z"
+      },
+      "Created": {
+        "$date": "2026-08-21T21:37:45.450Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "ah8gRYTbNLRAPfqC0Wa8Um+qdCPulC62ksjfrOiF3gpv33bxVQcmwKyehuIw2GeTpi/UFvPgXWfTBVHeQnQDGw==",
+      "Expires": {
+        "$date": "2026-08-29T19:18:07.517Z"
+      },
+      "Created": {
+        "$date": "2026-08-22T19:18:07.517Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "Uzbh2BQZIP+vy0ooU6X32+EQGfbu2jj2cPuTG6Jcjo/4H4nZhUQawGJIceVdKqsRwbtVsWYGOAuO+IoK00BPkw==",
+      "Expires": {
+        "$date": "2026-09-01T09:54:30.786Z"
+      },
+      "Created": {
+        "$date": "2026-08-25T09:54:30.786Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "qDajDj4So3h5T2kSU9pFCTpQv5n1ij9UsUkcOSw0LP4kwxOoIQLrTkPM8nh4sjOUO1YElIENJNLIGZeh0i0GKA==",
+      "Expires": {
+        "$date": "2026-09-01T14:35:28.995Z"
+      },
+      "Created": {
+        "$date": "2026-08-25T14:35:28.995Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "HQ/P754HLmv15ZExWHjDvd/9OaJjJHLsauvN5nSP5+Ju3KWua7YSVUk35EULUCPXa0XX3hgvFpCRvkO3AZ/oWg==",
+      "Expires": {
+        "$date": "2026-09-02T05:37:05.513Z"
+      },
+      "Created": {
+        "$date": "2026-08-26T05:37:05.514Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "yAJCVc4YeBxREvPB0NMLX9k7b9ZuPvrC5LX4V+Sz46WrruDjrs4NLCOHDMWVcnITawZk8sZCOnWjy9QkArMp4A==",
+      "Expires": {
+        "$date": "2026-09-02T08:57:38.651Z"
+      },
+      "Created": {
+        "$date": "2026-08-26T08:57:38.651Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "ZayLyM+95jgMRZMlVP9J01LWHNgaQKHHskjhq1IoNtZMg31UCCZdz/pnluEechVtlixZIOFQRhu+vvIXVYvtCA==",
+      "Expires": {
+        "$date": "2026-09-02T11:42:05.182Z"
+      },
+      "Created": {
+        "$date": "2026-08-26T11:42:05.182Z"
+      },
+      "CreatedByIp": "::1"
+    }
+  ],
+  "CreatedAt": {
+    "$date": "2026-07-31T09:51:00.799Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6ce809f93aea9e1387a0a8"
+  },
+  "GoogleId": "102643965167475184710",
+  "Email": "phanhunghlt@gmail.com",
+  "Status": "Active",
+  "FullName": "Hưng Phan",
+  "AvatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocKf3WuWwwnO6Up1dKdCR5R5ytSFEgKEKq2X3CqH6LpmMLFDZQ=s96-c",
+  "Role": "Student",
+  "ExpPoints": 0,
+  "AiWalletBalanceVnd": {
+    "$numberLong": "22229"
+  },
+  "CurrentStreak": 1,
+  "HighestStreak": 7,
+  "LastLoginDate": {
+    "$date": "2026-08-25T08:46:05.003Z"
+  },
+  "LastPracticeDate": null,
+  "Badges": [],
+  "RefreshTokens": [
+    {
+      "Token": "4y+WMBhw/kL54NBctDGYDKtzpngqkgE4dnxAJZLQ16zu44D3wg7d9jfn+lfyH02ClS50XW2LYp5Jm62hFxs/GQ==",
+      "Expires": {
+        "$date": "2026-08-25T16:25:57.784Z"
+      },
+      "Created": {
+        "$date": "2026-08-18T16:25:57.784Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "XpK20Vag9xgIPEzhIUrocZb0W5rf9oTQWC9hmZG7EgVe5rHWdaNXMjhAJDjz8/3l7lYU8FHAvBovFlrKjzjZEQ==",
+      "Expires": {
+        "$date": "2026-08-27T18:55:09.700Z"
+      },
+      "Created": {
+        "$date": "2026-08-20T18:55:09.700Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "1rJlkINB6E+Q80Tlub1gd/1JjpK5xkR0sa9m/AlKJGals7oNvzcazdMf3IvickzlGpskYT+pha7cY3zOz7asUA==",
+      "Expires": {
+        "$date": "2026-08-28T16:40:01.024Z"
+      },
+      "Created": {
+        "$date": "2026-08-21T16:40:01.024Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "SqRkvhluhw5kkvVE+eJlipwtOr4IaEDHcMQDJBpvoZQjKcQFaCbaJH5sK7ivvQ65Be/8LEMIfxSP8Lxln5Q5sg==",
+      "Expires": {
+        "$date": "2026-08-28T18:18:51.544Z"
+      },
+      "Created": {
+        "$date": "2026-08-21T18:18:51.544Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "8xUTP2qxRLBI9iTTxq2A2JMnmz5r8ijEdLgNzhiOC5DJgTQ35mlJJ6bWF1V4KYTcqvS6wZYWhLuEt9my2laAyg==",
+      "Expires": {
+        "$date": "2026-08-28T18:38:30.922Z"
+      },
+      "Created": {
+        "$date": "2026-08-21T18:38:30.922Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "isMB0YVFTG1+p8r+F+GYvjY0zBICE522Bvz9LPpnRObyQtUpsAI5GKHweWWM7iOy3e3esmNAT6qfT597fB6+gg==",
+      "Expires": {
+        "$date": "2026-08-28T18:47:00.248Z"
+      },
+      "Created": {
+        "$date": "2026-08-21T18:47:00.248Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "u0B+0/ofejN6IVVyXzYzy8v2haS2TCSXN72QM19aNj9ckX0BAWMIzLxofq87924FCjb03yf8Rugse/jmsIpPkw==",
+      "Expires": {
+        "$date": "2026-08-28T18:47:51.627Z"
+      },
+      "Created": {
+        "$date": "2026-08-21T18:47:51.627Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "Zklyp15GqWoIabuxdYFw3e5EP+wf/DNVCH45FBCYRcmhYvzhzE2T1l5D/RD4am9taihD9XH1UmOfoIsX0A+SUA==",
+      "Expires": {
+        "$date": "2026-08-28T19:22:01.130Z"
+      },
+      "Created": {
+        "$date": "2026-08-21T19:22:01.130Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "hjDR64c2dHqggP/SRB1JFKygmcfvApf8zVEqcIqwreNdT5AzircNqkU6lZnOz1Ni7EbS8bYFrp7Xhdls7qmtsg==",
+      "Expires": {
+        "$date": "2026-08-28T20:52:55.174Z"
+      },
+      "Created": {
+        "$date": "2026-08-21T20:52:55.174Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "dFNq2yp82bKlSJBK3UehSKGTIh5iCVfkoy8BBYVgt3t2C6OQmrS0kd4hQGChM8I+hgXzbUR9Ekvno7QjTe1MZA==",
+      "Expires": {
+        "$date": "2026-08-29T15:09:39.389Z"
+      },
+      "Created": {
+        "$date": "2026-08-22T15:09:39.389Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "TgLwdBptltoDc17KBQPXfrfqs8DNtZvPLS9szPjkR5iZ7Qz+BiLEVXRAjD8sfjm2jlwqp3Tnd7Q6zE238/E7Kw==",
+      "Expires": {
+        "$date": "2026-08-29T16:16:27.110Z"
+      },
+      "Created": {
+        "$date": "2026-08-22T16:16:27.110Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "u2d5g/4AckIr75IDkpGZMHkWkHlnoj/MuHmv9YNS3h93oVHdhv46FkLREMrwEHkUDVgm3l66+/ncYNFgJi3G/g==",
+      "Expires": {
+        "$date": "2026-08-29T16:26:46.409Z"
+      },
+      "Created": {
+        "$date": "2026-08-22T16:26:46.409Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "tISZj8jp/kDNwiVKtITyVnUzH8TDlqfle75S2gAjZznemyHScZvowVXqEH+YSaqzK7hTcmCK+hRVEFwFG2tSOw==",
+      "Expires": {
+        "$date": "2026-08-29T16:31:43.194Z"
+      },
+      "Created": {
+        "$date": "2026-08-22T16:31:43.194Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "RCWj4u8fCSOai8EJxFa8Mjx8hIYEVyWahaH1nTtOigEcvYc7TC57jiBqRW159K/WAMwNwT9ZkRr89l2HkYJvaQ==",
+      "Expires": {
+        "$date": "2026-08-29T16:32:42.674Z"
+      },
+      "Created": {
+        "$date": "2026-08-22T16:32:42.674Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "H/EfQ3IILhDyJQPZ+cFOTo09I+Sno6JYJQ4x6AwVHEZXNo8m8gXQ8qTCpXb6Dute8gp82Ja63vLkHYDyACRWpA==",
+      "Expires": {
+        "$date": "2026-08-29T17:21:34.519Z"
+      },
+      "Created": {
+        "$date": "2026-08-22T17:21:34.519Z"
+      },
+      "CreatedByIp": "127.0.0.1"
+    },
+    {
+      "Token": "b22K/dcr4UCB1jxn2EWi/qG8eNPlLFke0XsUnupzTyhd5XvQigsednvF4n2Gx5wEW2i42jgA9uRAVsrvwXthdw==",
+      "Expires": {
+        "$date": "2026-08-29T17:47:59.487Z"
+      },
+      "Created": {
+        "$date": "2026-08-22T17:47:59.487Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "j7jJoEgdfCU1NaHU8fgAd7k70v1vR1lBTfoAVBxs24UC7quuTVYCda6ywM6VzlkBpi3LNgJ66pKX7/CgdT4Ovg==",
+      "Expires": {
+        "$date": "2026-09-01T08:34:15.032Z"
+      },
+      "Created": {
+        "$date": "2026-08-25T08:34:15.032Z"
+      },
+      "CreatedByIp": "127.0.0.1"
+    },
+    {
+      "Token": "aGubnNiexCcFczzXDOQhvd6AWOMRbDIUahkSARK5aN7YspsOEx19G4OqjJLunJTyr8Ws6+D1RVxrc6W0oWDDOw==",
+      "Expires": {
+        "$date": "2026-09-01T08:46:04.665Z"
+      },
+      "Created": {
+        "$date": "2026-08-25T08:46:04.665Z"
+      },
+      "CreatedByIp": "::1"
+    }
+  ],
+  "CreatedAt": {
+    "$date": "2026-07-31T18:23:05.290Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6ce9faf93aea9e1387a0cd"
+  },
+  "GoogleId": "104409936950623983098",
+  "Email": "phanduyhungdev03@gmail.com",
+  "Status": "Active",
+  "FullName": "Phan Hung",
+  "AvatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocL43qGyrthK1L8M6-nwIUnZX48PI8SIDirhO-2akY0nVkkdEg=s96-c",
+  "Role": "Student",
+  "ExpPoints": 0,
+  "AiWalletBalanceVnd": {
+    "$numberLong": "35793"
+  },
+  "CurrentStreak": 1,
+  "HighestStreak": 2,
+  "LastLoginDate": {
+    "$date": "2026-08-16T17:39:11.004Z"
+  },
+  "LastPracticeDate": null,
+  "Badges": [],
+  "RefreshTokens": [
+    {
+      "Token": "B4QqUfFzUEDbpxWGPWNdEE5h5z0mk12Xvp+tpHE9Hrj0mWLclRBGNBLrOJ3x9nSN6o6zxOSU6jXelrINI0v1aQ==",
+      "Expires": {
+        "$date": "2026-08-19T10:57:16.835Z"
+      },
+      "Created": {
+        "$date": "2026-08-12T10:57:16.835Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "Tnr5Tx8s4pyJVUcgLyIc8d9aoWA+CMgRzbov/RqkoLGCKd9ZE9pT7XcZvC9QUhxJdMWOXOc/32bqaUg4atKJow==",
+      "Expires": {
+        "$date": "2026-08-19T11:18:40.345Z"
+      },
+      "Created": {
+        "$date": "2026-08-12T11:18:40.345Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "Fl7KvctkyljD2bYM/5eMrG8YMDmmICpsSsncfY9EpP8XQPxj9muLF13+Iy9cczC0GtNrgpMFkWpZKIFFRDgL9A==",
+      "Expires": {
+        "$date": "2026-08-19T12:23:50.385Z"
+      },
+      "Created": {
+        "$date": "2026-08-12T12:23:50.385Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "uyP3Gj5+plEaixzxaDF1W4vazJYCv+eLxA0N/RhMaiDNuSZCT+sdI1eSGCR30WGQldmpYNAkt1IVKbuvQKSESg==",
+      "Expires": {
+        "$date": "2026-08-23T17:39:10.945Z"
+      },
+      "Created": {
+        "$date": "2026-08-16T17:39:10.945Z"
+      },
+      "CreatedByIp": "::1"
+    }
+  ],
+  "CreatedAt": {
+    "$date": "2026-07-31T18:31:22.215Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6dadffdd78b01c99cd494d"
+  },
+  "GoogleId": "111502742084190134249",
+  "Email": "hungpdhe173329@fpt.edu.vn",
+  "Status": "Active",
+  "FullName": "Phan Duy Hưng",
+  "AvatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocKnfMUYrBCU4kC7hKAAptvTDntFGeYhG-cJYpLSBNUuu-0GIw=s96-c",
+  "Role": "Admin",
+  "ExpPoints": 0,
+  "AiWalletBalanceVnd": {
+    "$numberLong": "0"
+  },
+  "CurrentStreak": 1,
+  "HighestStreak": 4,
+  "LastLoginDate": {
+    "$date": "2026-08-25T08:44:30.029Z"
+  },
+  "LastPracticeDate": null,
+  "Badges": [],
+  "RefreshTokens": [
+    {
+      "Token": "0LHBEeau6qcUd+l2/dhvASgazlCCjtKjj93JxkheCojPdyAAf58tNdO+4HK9Qv6WEeTIVpBSu+Ec8LpTu+8qDA==",
+      "Expires": {
+        "$date": "2026-08-25T16:12:53.310Z"
+      },
+      "Created": {
+        "$date": "2026-08-18T16:12:53.310Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "y+oJ0pS4oyeigvZTc+m0I3QQ8X7zDxP4bTVmDrb/853s8LscAfhJ8Lfy2LsmmQtRZQ35Dp0pwr9OA45VhzmnhQ==",
+      "Expires": {
+        "$date": "2026-08-27T18:50:42.733Z"
+      },
+      "Created": {
+        "$date": "2026-08-20T18:50:42.733Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "SXpM2e0Tq0jTftZRldIzbrNkFNNH/P5aqpeOj10j5hM+1q/N6FefhLDRX16yx2DRjjnMjHBLlomDTX2CQr7eVg==",
+      "Expires": {
+        "$date": "2026-08-27T18:57:53.604Z"
+      },
+      "Created": {
+        "$date": "2026-08-20T18:57:53.604Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "rIkD4Zek93H0frlZGEWSb07VfCFQBwplfpxsNJNaOQrHC8CWy/gw+cHllG1bO6tzw5hzbIso32jVNipiFRHjIQ==",
+      "Expires": {
+        "$date": "2026-08-27T19:21:13.286Z"
+      },
+      "Created": {
+        "$date": "2026-08-20T19:21:13.286Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "KJleq2I0zGoSjak/ifjpFuJ364Mc5fPReF1oFQmtm83tRL//2AH8+VEvarS7v9Z5Z2fDIzr8BdrOCLXS4NyPZA==",
+      "Expires": {
+        "$date": "2026-08-28T16:55:42.379Z"
+      },
+      "Created": {
+        "$date": "2026-08-21T16:55:42.379Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "qwVEhrKXwuZ/bafCjALfXGM/+wu8GU3KcM8LXGpdy6wkHIIAcPQyhkqQNcBkzIwOk54FAzHm0xsdjpKmVKMhZw==",
+      "Expires": {
+        "$date": "2026-08-28T17:23:29.850Z"
+      },
+      "Created": {
+        "$date": "2026-08-21T17:23:29.850Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "/lJvA46tqLnrZs6jWSdDY7yi99hpIstpUiyPI+0ZFcW92ab8TdrnbyKplLho6rCk5ENfVT+GsCmOeKeVgzoT/g==",
+      "Expires": {
+        "$date": "2026-08-28T18:35:44.354Z"
+      },
+      "Created": {
+        "$date": "2026-08-21T18:35:44.354Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "81Iea7bJb+iarC8uujv99K/I1O+lGz1rvYIaPixzQPCTYHdbISGF9nNkUXQZ+DXlGcR2twIKQDQNnXxq7qo9KQ==",
+      "Expires": {
+        "$date": "2026-08-28T18:39:58.372Z"
+      },
+      "Created": {
+        "$date": "2026-08-21T18:39:58.372Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "ulXLhF1SM14Efs/HHPI4pvnsCPXcWKL25iKfAraH7TnKyLQdTTUI2NvKG4gDFM6kO8oRLaypGvssef/VL4Vlpw==",
+      "Expires": {
+        "$date": "2026-08-28T18:51:39.398Z"
+      },
+      "Created": {
+        "$date": "2026-08-21T18:51:39.398Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "Hn60F1Oq8Qn0K6ntH/XChxyoWn40scn8XyS1m9iq8rUBA/Q8WqR2pyo18J8N7bGuM4n7mf8mmryJmS8+VUOfwQ==",
+      "Expires": {
+        "$date": "2026-08-28T19:03:33.233Z"
+      },
+      "Created": {
+        "$date": "2026-08-21T19:03:33.233Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "dz0LK4HN4ch+LrcMbhSMoBUOaSOQW3YoQUBML0TkJpkjTL9KCQRlT7DMe3EIH+ZUuv2L8qFHLfSXzLyDUI/ylA==",
+      "Expires": {
+        "$date": "2026-08-28T19:28:28.335Z"
+      },
+      "Created": {
+        "$date": "2026-08-21T19:28:28.335Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "/eEP5iJb+YU19xvsV4Y+gR1SIdZuQoHVmtDU2KvKPAZL7Dr/k6LOEVz6kRwu4AR1U6W2oVFHDheExRczsbg6tA==",
+      "Expires": {
+        "$date": "2026-08-29T16:20:08.482Z"
+      },
+      "Created": {
+        "$date": "2026-08-22T16:20:08.482Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "W12PcaxMRY6oJ7hEZDVCC9vw/OVNu2i8/QXrP61N7athZZ9wYpmlrLRoOSoLVknP8v2cL0bPbuJm/quYRxO2OA==",
+      "Expires": {
+        "$date": "2026-08-29T16:26:57.882Z"
+      },
+      "Created": {
+        "$date": "2026-08-22T16:26:57.882Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "ih7hzA8XNpIJHvV2/0aRvIDqupEoydDg1FI4NVH3rcmgfUdyxYnhAMUTvR0QpLywfO3kpui7UaJ+By+o2xJR1g==",
+      "Expires": {
+        "$date": "2026-08-29T17:38:16.871Z"
+      },
+      "Created": {
+        "$date": "2026-08-22T17:38:16.871Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "a7Uxcj6poFJ6K+P/BoZR0G86/SYRxa4Rvw1GttXYpztn5ZYttoBI/YMUxtlugdyWTHURhuO44hNMslLUAVvKcg==",
+      "Expires": {
+        "$date": "2026-08-29T18:43:36.120Z"
+      },
+      "Created": {
+        "$date": "2026-08-22T18:43:36.120Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "5l6GAt98IwhO4lvnx1G7b24JG3S/+QcDmvJazHb5GonUApNilZc3FYPgAn/4TGoqvV5w0TJ+9zHSbI1oXBbQcg==",
+      "Expires": {
+        "$date": "2026-09-01T08:37:44.860Z"
+      },
+      "Created": {
+        "$date": "2026-08-25T08:37:44.860Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "5Gt2WMt5HD4Xt4Hc0mtvRCXsmQMy3NEK8dc6/WRvNDjIvE+C67mCpW+ilxN0JRb/paagFpu4P4ya93oR3z6eSw==",
+      "Expires": {
+        "$date": "2026-09-01T08:39:46.357Z"
+      },
+      "Created": {
+        "$date": "2026-08-25T08:39:46.357Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "f6Tvw5txUcoj7N0xXYNbcasMPz1VQHnKJ27O2AgQwhFG4nCX7+1FNnCf8EwjtFRVjP7FFPeT7zUo+sLlmVn/DA==",
+      "Expires": {
+        "$date": "2026-09-01T08:44:29.834Z"
+      },
+      "Created": {
+        "$date": "2026-08-25T08:44:29.834Z"
+      },
+      "CreatedByIp": "::1"
+    }
+  ],
+  "CreatedAt": {
+    "$date": "2026-08-01T08:27:43.697Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6db124b7141534795b1be6"
+  },
+  "GoogleId": "101529511910192433652",
+  "Email": "pepe19092003@gmail.com",
+  "Status": "Active",
+  "FullName": "Minh Phạm",
+  "AvatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocJaApovZu_LbvkFkb_SsZH09CE9JsgrDmXIQ3DUOuTwvcPSwg=s96-c",
+  "Role": "Student",
+  "ExpPoints": 0,
+  "AiWalletBalanceVnd": {
+    "$numberLong": "99999993111"
+  },
+  "CurrentStreak": 0,
+  "HighestStreak": 0,
+  "LastPracticeDate": null,
+  "Badges": [],
+  "RefreshTokens": [],
+  "CreatedAt": {
+    "$date": "2026-08-01T08:41:08.438Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6dee92ef49b29db4dca73c"
+  },
+  "GoogleId": "112365279762898496896",
+  "Email": "minhpqhe172395@fpt.edu.vn",
+  "Status": "Banned",
+  "FullName": "Pham Quoc Minh K17_HL",
+  "AvatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocLbynVdkrBxXVlnHf2T2aebGli6AKGjBl7J8P3X3Zt-bLKnhAqU=s96-c",
+  "Role": "Student",
+  "ExpPoints": 0,
+  "AiWalletBalanceVnd": {
+    "$numberLong": "99990"
+  },
+  "CurrentStreak": 0,
+  "HighestStreak": 0,
+  "LastPracticeDate": null,
+  "Badges": [],
+  "RefreshTokens": [],
+  "CreatedAt": {
+    "$date": "2026-08-01T13:03:14.491Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6df8015e4846b4576a246f"
+  },
+  "GoogleId": "101356394566535801071",
+  "Email": "mihpham1909@gmail.com",
+  "Status": "Banned",
+  "FullName": "Mih Pham",
+  "AvatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocJ3LB0s5Tc0fOeeMQolm2BF1_Uwm19fi3Z4UzhhXM4hKhFfMAg=s96-c",
+  "Role": "Student",
+  "ExpPoints": 0,
+  "AiWalletBalanceVnd": {
+    "$numberLong": "49680"
+  },
+  "CurrentStreak": 0,
+  "HighestStreak": 0,
+  "LastLoginDate": null,
+  "LastPracticeDate": null,
+  "Badges": [],
+  "RefreshTokens": [],
+  "CreatedAt": {
+    "$date": "2026-08-01T13:43:29.291Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7613048f3e66d09abba5e2"
+  },
+  "GoogleId": "110141687172239761396",
+  "Email": "sangnvhe172569@fpt.edu.vn",
+  "Status": "Active",
+  "FullName": "Nguyen Viet Sang K17HL",
+  "AvatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocIfAyjOVstyKw_Gey688mwpAQvKPrXwAg9bQHaBVigWchJXuGvb=s96-c",
+  "Role": "Admin",
+  "ExpPoints": 0,
+  "AiWalletBalanceVnd": {
+    "$numberLong": "0"
+  },
+  "CurrentStreak": 2,
+  "HighestStreak": 4,
+  "LastLoginDate": {
+    "$date": "2026-08-26T11:41:46.575Z"
+  },
+  "LastPracticeDate": null,
+  "Badges": [],
+  "RefreshTokens": [
+    {
+      "Token": "lubLaHNDUU5vfgZRmiqSiKq34AXS9avsS1HvGW3KHAYknNoi9p7m03G/gTDDu1iMJEWXmSDi400yuLgO210gpA==",
+      "Expires": {
+        "$date": "2026-08-28T10:33:07.705Z"
+      },
+      "Created": {
+        "$date": "2026-08-21T10:33:07.705Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "iYpD9gZKD0wxX29hrc8mNoMDsWtwFfkBiNfqaz7uDaX06cGIMCqnmWPBdr7UesQJjr1SKtm3wWqCxfXQNMcB6Q==",
+      "Expires": {
+        "$date": "2026-09-01T09:53:57.619Z"
+      },
+      "Created": {
+        "$date": "2026-08-25T09:53:57.619Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "nq3b7KqnfnEpL0SCHeWa27CTtUChlcr1eXRX/PmAKdAbAdN+5WqQW3G5UzkcUiRdbyz9vLiGJty4cOuBNqHERQ==",
+      "Expires": {
+        "$date": "2026-09-01T14:41:32.358Z"
+      },
+      "Created": {
+        "$date": "2026-08-25T14:41:32.358Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "7ZFBfgG/vS9isobbA2YWvMSRHbTC5UPJ9URFvT+u94mgfznj2fIgVTyCWzpjdFDko9cMhkD+cysuSEzgw1jDnQ==",
+      "Expires": {
+        "$date": "2026-09-02T11:41:46.485Z"
+      },
+      "Created": {
+        "$date": "2026-08-26T11:41:46.485Z"
+      },
+      "CreatedByIp": "::1"
+    }
+  ],
+  "CreatedAt": {
+    "$date": "2026-08-07T17:16:52.961Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7ac8940c1685a5a03db38b"
+  },
+  "GoogleId": "114670325975833079290",
+  "Email": "anhvhhe172381@fpt.edu.vn",
+  "Status": "Active",
+  "FullName": "AnhVH IT_R1",
+  "AvatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocKPttm6TPMXb2Zim6YeXmxQsT9IF7Bzg5Smro76OJh3SCk1JA=s96-c",
+  "Role": "Student",
+  "ExpPoints": 0,
+  "AiWalletBalanceVnd": {
+    "$numberLong": "990079"
+  },
+  "CurrentStreak": 1,
+  "HighestStreak": 2,
+  "LastLoginDate": {
+    "$date": "2026-08-15T16:29:09.437Z"
+  },
+  "LastPracticeDate": null,
+  "Badges": [],
+  "RefreshTokens": [
+    {
+      "Token": "OzXu37ObpxBTjomwa2+cCFf9AqLxg8rsxZ14zeKKJBfGon92AY177ADryYblym40P3aSgt6N6jEFEnHXXT+4Ig==",
+      "Expires": {
+        "$date": "2026-08-18T13:10:57.051Z"
+      },
+      "Created": {
+        "$date": "2026-08-11T13:10:57.051Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "jWSFBGT2T7pakDLmqI0hlkaWtiFTtnxN2m4gMT7mdQyCgDCQgFpBEUAdpg2aCMB/F2iagx1kQWfiTJWO92u3Og==",
+      "Expires": {
+        "$date": "2026-08-18T13:45:23.312Z"
+      },
+      "Created": {
+        "$date": "2026-08-11T13:45:23.312Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "54mx55192qU8GRYfb8jBnc8EkfKRwlRoNN1H5pwsrSlroe2tEfS5mXT2ebin0ZtP3+GoEjeXrqTB69l03VDxVA==",
+      "Expires": {
+        "$date": "2026-08-18T14:01:45.150Z"
+      },
+      "Created": {
+        "$date": "2026-08-11T14:01:45.150Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "0BfNi18SAgKl1TK+LltdEFsVeQaKXls/rBC4rue64xQRulpWc6NcSTLe88C1ALCSJ9LPZaDrhVo1cxv8HdMp/w==",
+      "Expires": {
+        "$date": "2026-08-18T15:37:20.471Z"
+      },
+      "Created": {
+        "$date": "2026-08-11T15:37:20.471Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "0BhBAGp2F/mvlIP1R+G/Jmpz7bRAPi1t6DLgvhScGxl3EyQJ64mww1EDh8eI6pKBW8TxLX1KFSJXbnx0JJyIwA==",
+      "Expires": {
+        "$date": "2026-08-19T05:44:19.956Z"
+      },
+      "Created": {
+        "$date": "2026-08-12T05:44:19.956Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "dYA95cCtSUSy3Z1LzG+4L5eh2Val2r8XIR5h7FhR52L+EReY9AK1M6XCnpfDcfMAncyL2vAil2GxOzB7BrKpIA==",
+      "Expires": {
+        "$date": "2026-08-22T16:29:09.264Z"
+      },
+      "Created": {
+        "$date": "2026-08-15T16:29:09.264Z"
+      },
+      "CreatedByIp": "::1"
+    }
+  ],
+  "CreatedAt": {
+    "$date": "2026-08-11T07:00:36.145Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7ac9170c1685a5a03db407"
+  },
+  "GoogleId": "114678826746579874680",
+  "Email": "vuhoanganh230603@gmail.com",
+  "Status": "Active",
+  "FullName": "Hoàng Anh Vũ",
+  "AvatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocLfs4yUixOxiCEUaHPgCJy5e_a1N1txETcqS0DcuwpOjCRYWw=s96-c",
+  "Role": "Admin",
+  "ExpPoints": 0,
+  "AiWalletBalanceVnd": {
+    "$numberLong": "1000000"
+  },
+  "CurrentStreak": 1,
+  "HighestStreak": 2,
+  "LastLoginDate": {
+    "$date": "2026-08-15T16:55:10.018Z"
+  },
+  "LastPracticeDate": null,
+  "Badges": [],
+  "RefreshTokens": [
+    {
+      "Token": "4hu1Jvqb+R+N01INmxw5EHCsa2t09mek8jU6r3GnQ0lRXHC7ggYvpzCDIz2QR5+4ToROLF4/yRHUeXF8ZsfOAg==",
+      "Expires": {
+        "$date": "2026-08-22T16:54:56.952Z"
+      },
+      "Created": {
+        "$date": "2026-08-15T16:54:56.952Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "13iEBPcvpnGxUHrp6Wq1h8STIIyDnoz5M2sloZrUqsxaXxw2igUoivkTReaM9twPwTEZyaee8AAEEmlPgaj2Mw==",
+      "Expires": {
+        "$date": "2026-08-22T16:55:09.946Z"
+      },
+      "Created": {
+        "$date": "2026-08-15T16:55:09.946Z"
+      },
+      "CreatedByIp": "::1"
+    }
+  ],
+  "CreatedAt": {
+    "$date": "2026-08-11T07:02:47.504Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7bd4094014986ea49566ea"
+  },
+  "GoogleId": "110288384229324559257",
+  "Email": "he172569nguyenvietsang@gmail.com",
+  "Status": "Active",
+  "FullName": "coi (Còi)",
+  "AvatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocJ71gzZThpQJer3xd06Gg41WcSwD10NssK5HSMeMqMr78HjpQ=s96-c",
+  "Role": "Student",
+  "ExpPoints": 0,
+  "AiWalletBalanceVnd": {
+    "$numberLong": "0"
+  },
+  "CurrentStreak": 1,
+  "HighestStreak": 1,
+  "LastLoginDate": {
+    "$date": "2026-08-12T02:01:47.254Z"
+  },
+  "LastPracticeDate": null,
+  "Badges": [],
+  "RefreshTokens": [],
+  "CreatedAt": {
+    "$date": "2026-08-12T02:01:45.416Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a82798e29303d1ef8c2384e"
+  },
+  "GoogleId": "probe-e8ecf757c1ae4cf983effcfaff3f0bd7",
+  "Email": "ai-probe-pe-queue-20260817j@local.test",
+  "Status": "Active",
+  "FullName": "AI Probe Runner",
+  "AvatarUrl": null,
+  "Role": "Student",
+  "ExpPoints": 0,
+  "AiWalletBalanceVnd": {
+    "$numberLong": "48834"
+  },
+  "CurrentStreak": 0,
+  "HighestStreak": 0,
+  "LastLoginDate": null,
+  "LastPracticeDate": null,
+  "Badges": [],
+  "RefreshTokens": [],
+  "CreatedAt": {
+    "$date": "2026-08-17T03:01:34.686Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a827b7e2a404c0977887c74"
+  },
+  "GoogleId": "probe-b8fe132938f24603832b3474413f9f2b",
+  "Email": "ai-probe-pe-queue-20260817k@local.test",
+  "Status": "Active",
+  "FullName": "AI Probe Runner",
+  "AvatarUrl": null,
+  "Role": "Student",
+  "ExpPoints": 0,
+  "AiWalletBalanceVnd": {
+    "$numberLong": "48916"
+  },
+  "CurrentStreak": 0,
+  "HighestStreak": 0,
+  "LastLoginDate": null,
+  "LastPracticeDate": null,
+  "Badges": [],
+  "RefreshTokens": [],
+  "CreatedAt": {
+    "$date": "2026-08-17T03:09:50.977Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a827fcf45379b16936f5bb7"
+  },
+  "GoogleId": "probe-faa3e23c76324a10ba838c0bb355dc5f",
+  "Email": "ai-probe-pe-queue-20260817p@local.test",
+  "Status": "Active",
+  "FullName": "AI Probe Runner",
+  "AvatarUrl": null,
+  "Role": "Student",
+  "ExpPoints": 0,
+  "AiWalletBalanceVnd": {
+    "$numberLong": "49116"
+  },
+  "CurrentStreak": 0,
+  "HighestStreak": 0,
+  "LastLoginDate": null,
+  "LastPracticeDate": null,
+  "Badges": [],
+  "RefreshTokens": [],
+  "CreatedAt": {
+    "$date": "2026-08-17T03:28:15.613Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a875ed2f6552306690f5ff9"
+  },
+  "GoogleId": "108727659056804623961",
+  "Email": "nguyenvietduc170802@gmail.com",
+  "Status": "Active",
+  "FullName": "Đức Nguyễn Việt",
+  "AvatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocKvzMblY8cB44pIT5BOUBpCagbmGTQzaI8upVrW-RNmWM3CtA=s96-c",
+  "Role": "Admin",
+  "ExpPoints": 0,
+  "AiWalletBalanceVnd": {
+    "$numberLong": "0"
+  },
+  "CurrentStreak": 2,
+  "HighestStreak": 2,
+  "LastLoginDate": {
+    "$date": "2026-08-22T16:17:38.803Z"
+  },
+  "LastPracticeDate": null,
+  "Badges": [],
+  "RefreshTokens": [
+    {
+      "Token": "+FBiLuvP2lxFysSHA9WrnSoz+/25YJSs4/seSHfvcwh33SIfOr+E/UxblxD2vK61VQ8m+ByZ84/Q2Z8orS8Y6A==",
+      "Expires": {
+        "$date": "2026-08-27T20:12:57.846Z"
+      },
+      "Created": {
+        "$date": "2026-08-20T20:12:57.846Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "5IsngbF2uuQ0YJ7bY7vEgdEboPgRwglsZHuShOEwT56RV1wMYZGhxwjT+9fpksV0RcWO7mrQlTIhrc77VMOf9Q==",
+      "Expires": {
+        "$date": "2026-08-27T22:07:39.980Z"
+      },
+      "Created": {
+        "$date": "2026-08-20T22:07:39.980Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "kwM7jKKN/zY1OQ1MtvVTXc025vVD7biS+5DCtx0GggArpJ/fwkPz+CeT5j57JsPCtS0nBn/66AsWmNoDUMkGjQ==",
+      "Expires": {
+        "$date": "2026-08-28T09:06:27.723Z"
+      },
+      "Created": {
+        "$date": "2026-08-21T09:06:27.723Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "m8rAM8AFQmMhkqwUDQSrI1jbRUvTkDbsO/NT3DUPxCOTZ0c8GoVjYdobWoRk3NB2X/we2RGT396WQdKCa5INEQ==",
+      "Expires": {
+        "$date": "2026-08-28T09:20:29.757Z"
+      },
+      "Created": {
+        "$date": "2026-08-21T09:20:29.757Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "WLuVhLobubkhSTBAJvUrjdtSoTsk+QtvGk6HVFaGp6t/V/JERF+1RQ3C0F2aUy5UhmLlvbK7LmUUjkq/6u0OOg==",
+      "Expires": {
+        "$date": "2026-08-29T06:24:16.656Z"
+      },
+      "Created": {
+        "$date": "2026-08-22T06:24:16.656Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "dg1UVrkBSQeVkkcLTueav3IOxSt0Kz9A9lFRR2VIkqmohTRv/euT4gzVQBwZ85xxCg3NKcAJfPNu9qjl4AvQpQ==",
+      "Expires": {
+        "$date": "2026-08-29T14:57:34.632Z"
+      },
+      "Created": {
+        "$date": "2026-08-22T14:57:34.632Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "7bJFG19pM2FTME35auYm/4T9mDnpfmzGVXiQ+Rv723JWZvE2B+yHeXIb+7KPM0TDhJbwCcikj7UrvmYssIVT4w==",
+      "Expires": {
+        "$date": "2026-08-29T15:10:12.752Z"
+      },
+      "Created": {
+        "$date": "2026-08-22T15:10:12.752Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "WKLPKLA4uZSFLS3R+bbbrZEc9/65aFZP++er43dPfhLK7VmQ82ue79d0nlvNnTuinzYhDeh0jkcTq/dkbawv5w==",
+      "Expires": {
+        "$date": "2026-08-29T16:17:38.705Z"
+      },
+      "Created": {
+        "$date": "2026-08-22T16:17:38.705Z"
+      },
+      "CreatedByIp": "::1"
+    }
+  ],
+  "CreatedAt": {
+    "$date": "2026-08-20T20:08:50.977Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a875fd7f6552306690f7514"
+  },
+  "GoogleId": "104970401607116940476",
+  "Email": "concacbo2002@gmail.com",
+  "Status": "Active",
+  "FullName": "Việt Đức Nguyễn",
+  "AvatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocL-4S0ETHrxEQG2LSnB8jp6bT64itZRPdzBCYIMn_5pUWOjTQ=s96-c",
+  "Role": "Student",
+  "ExpPoints": 0,
+  "AiWalletBalanceVnd": {
+    "$numberLong": "94132"
+  },
+  "CurrentStreak": 2,
+  "HighestStreak": 2,
+  "LastLoginDate": {
+    "$date": "2026-08-22T16:59:04.479Z"
+  },
+  "LastPracticeDate": null,
+  "Badges": [],
+  "RefreshTokens": [
+    {
+      "Token": "jeVpTMWnmsGb/fqgMlAFfWLL+sjMIpMK5CGcAGKg7tq90Att3fusu5Buvhq034VN2r6kzLZJQnvUdMjVU4LXtw==",
+      "Expires": {
+        "$date": "2026-08-27T21:54:41.456Z"
+      },
+      "Created": {
+        "$date": "2026-08-20T21:54:41.456Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "vko9gxI9PgT4Rq978vx0ZjNJD5E/3cYUaTOtkeZjvkbeOPbrEDYMam7ZNpexZ9fdZFunUwwjAj/wMuS6B6hMhA==",
+      "Expires": {
+        "$date": "2026-08-27T22:09:50.533Z"
+      },
+      "Created": {
+        "$date": "2026-08-20T22:09:50.533Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "Euj2Q4f+sxKyxBK/FzRsHKrCUfU8wBl7pTh2cZ2/n/MC9sriusCPxkj8NWhmscxwWzKogzBEGXkY/3M50bJY5g==",
+      "Expires": {
+        "$date": "2026-08-28T09:11:44.776Z"
+      },
+      "Created": {
+        "$date": "2026-08-21T09:11:44.776Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "ZX0+3ylAK0mSCdxL7whfxXop3S5zYiw+BUP8IhfU9DGLmSVT0MSeZQ7UaZOD0nZWD5/SqQgAuBM11D86DiyHmg==",
+      "Expires": {
+        "$date": "2026-08-29T06:17:46.278Z"
+      },
+      "Created": {
+        "$date": "2026-08-22T06:17:46.278Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "zI0khAV/YhKJQ111uqg0eegW+8RKz+g9aGiQGU/ZIYBdoxYsyXMn1lpvz2X+UZqvzxBe7dI24B7Eeuy57HQmNw==",
+      "Expires": {
+        "$date": "2026-08-29T08:34:25.713Z"
+      },
+      "Created": {
+        "$date": "2026-08-22T08:34:25.713Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "x5xddzlssYKSl8YYUNqYzAno5WVjT7ohCDHbAhVLANrleU/uETVaYLpfi1N9GY7ywRWORUX8D40rgM1lH/jiUQ==",
+      "Expires": {
+        "$date": "2026-08-29T14:58:17.062Z"
+      },
+      "Created": {
+        "$date": "2026-08-22T14:58:17.062Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "7z1h3S8fG6UqBtc1h1M9zHX3yqjhHUrhxbsg1C5K9zpS+ZfxXM+XH/D9pFUyEG/cHyhtmdNvgHI23Ce0ntv/fQ==",
+      "Expires": {
+        "$date": "2026-08-29T15:10:04.632Z"
+      },
+      "Created": {
+        "$date": "2026-08-22T15:10:04.632Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "FPKtSIZmgy0Ha7N5Syx9OrM0qdLjCCKFrI0iuRlNTjKR/DzOdqUaRchPTHLoMOeyzupv61jnW4vJxpMcVniePA==",
+      "Expires": {
+        "$date": "2026-08-29T15:29:27.726Z"
+      },
+      "Created": {
+        "$date": "2026-08-22T15:29:27.726Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "RyYCq76+Sh2du84PQIDUpya6rDbTn1uHAGAOVM9sBzxpWE3KXwP/u9ww5NZBTCDTAu3RLd3RcWVv4rIFW7wydQ==",
+      "Expires": {
+        "$date": "2026-08-29T16:59:04.406Z"
+      },
+      "Created": {
+        "$date": "2026-08-22T16:59:04.406Z"
+      },
+      "CreatedByIp": "::1"
+    }
+  ],
+  "CreatedAt": {
+    "$date": "2026-08-20T20:13:11.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a8d56012424df65457aaf36"
+  },
+  "GoogleId": "108914345399574012896",
+  "Email": "phaminh1909@gmail.com",
+  "Status": "Active",
+  "FullName": "Minh Pham",
+  "AvatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocKd--vFy8-0rr_yPkvB2EtlRPeDyb7FN52QNNEhqdfjuILh3Uo=s96-c",
+  "Role": "Student",
+  "ExpPoints": 0,
+  "AiWalletBalanceVnd": {
+    "$numberLong": "9493"
+  },
+  "CurrentStreak": 1,
+  "HighestStreak": 1,
+  "LastLoginDate": {
+    "$date": "2026-08-25T10:12:40.456Z"
+  },
+  "LastPracticeDate": null,
+  "Badges": [],
+  "RefreshTokens": [
+    {
+      "Token": "HCip+08T68y4CMd4nGXtAQpYlwSInI/mHMnhX76Q0aTYbh9Z/L4xQN6Oqh3rSGn0zQUOi4lqr7I7xYM4Q9kr7Q==",
+      "Expires": {
+        "$date": "2026-09-01T09:01:39.609Z"
+      },
+      "Created": {
+        "$date": "2026-08-25T09:01:39.609Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "3d157AjR95Bstq2B2olgCe+di/XBUE5UE6l6PjF8iHmlV69WcqhSOWHdDqhyEaIlFUopdbhxBep3pPo8tYQ3yg==",
+      "Expires": {
+        "$date": "2026-09-01T09:04:25.768Z"
+      },
+      "Created": {
+        "$date": "2026-08-25T09:04:25.768Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "lxqvE8t4rDeIRQRTUztwQJoPjZsDy8qCzvC4LlgSrjBvG+SRD7uYxaV2qTOIHCB1qMS/CpGlG1jDEohnNBAToQ==",
+      "Expires": {
+        "$date": "2026-09-01T09:24:11.710Z"
+      },
+      "Created": {
+        "$date": "2026-08-25T09:24:11.710Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "K9qUa5zILw9naN5glODnfmp6a64IUNkxKsKK0MfZ9wvyo+ccaBxX+5uixEmqt1pq/QfukoUy7nq/TGxwEQoliA==",
+      "Expires": {
+        "$date": "2026-09-01T09:29:04.951Z"
+      },
+      "Created": {
+        "$date": "2026-08-25T09:29:04.951Z"
+      },
+      "CreatedByIp": "127.0.0.1"
+    },
+    {
+      "Token": "cQuFzqtX9coS+EQLyrMV+RjUctc4gGkHiZvTrizY/TnGg35zvU8Yf/IxwNMM1kv4R/weku3TmWbuvWbe0cZpPA==",
+      "Expires": {
+        "$date": "2026-09-01T09:47:59.878Z"
+      },
+      "Created": {
+        "$date": "2026-08-25T09:47:59.878Z"
+      },
+      "CreatedByIp": "::1"
+    },
+    {
+      "Token": "JZQd3iTCn3AwiM+EBrB1xBxtBtHb8g+E2XkcK9iHTSt7e+2Bwe7F6wwjZLDhGX0ZiJGkOcK3Sei6qA4u9z8rqw==",
+      "Expires": {
+        "$date": "2026-09-01T10:12:40.666Z"
+      },
+      "Created": {
+        "$date": "2026-08-25T10:12:40.666Z"
+      },
+      "CreatedByIp": "::1"
+    }
+  ],
+  "CreatedAt": {
+    "$date": "2026-08-25T08:44:49.186Z"
+  }
+}]

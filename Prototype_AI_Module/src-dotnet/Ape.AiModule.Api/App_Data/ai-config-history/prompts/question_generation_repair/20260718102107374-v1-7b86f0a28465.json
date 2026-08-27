@@ -1,0 +1,24 @@
+﻿{
+  "snapshot_id": "question_generation_repair:v1:20260718102107374:7b86f0a28465",
+  "artifact_type": "prompts",
+  "stable_id": "question_generation_repair",
+  "version": "v1",
+  "function_name": "QuestionGenerationRepair",
+  "subject_code": null,
+  "question_type": null,
+  "language": "en",
+  "description": "Repair malformed question generation output",
+  "is_active": true,
+  "source": "file_reload",
+  "captured_at": "2026-07-18T10:21:07.3741961+00:00",
+  "content_hash": "7b86f0a28465db84f41039c706b08c919e547a7fcc16a7709f8a045e88509c67",
+  "content": {
+    "key": "question_generation_repair",
+    "version": "v1",
+    "description": "Repair malformed question generation output",
+    "system_prompt": "You repair a previously generated question set into the exact JSON schema required by the assessment pipeline. Return JSON only. Preserve the intended question idea, but fix schema errors, missing fields, and naming mismatches.",
+    "user_prompt": "Subject: {{subject}}\nDifficulty: {{difficulty}}\nQuestionType: {{question_type}}\nSubject-specific focus:\n{{subject_focus}}\nRubric:\n{{rubric_json}}\nContext chunks:\n{{chunks_json}}\nNormalization issues:\n{{normalization_issues}}\nBroken candidate response:\n{{candidate_response}}\n\nReturn ONLY a strict JSON array using the target schema.\n\nRepair rules:\n- Keep the core question grounded in the provided chunks.\n- Fix field names to the exact schema required by the pipeline.\n- For FE, output options, correct_answer labels, and explanation.\n- For PE, output skeleton_code, solution_code, and test_cases explicitly.\n- For PE, include at least 2 test cases and at least 1 visible case.\n- Use source_chunk_ids that exist in the provided chunks.\n- Remove meta-source wording such as slide/page/document/chunk references.\n- Do not add markdown fences or commentary.",
+    "is_active": true,
+    "updated_at": "2026-07-18T07:00:00+07:00"
+  }
+}

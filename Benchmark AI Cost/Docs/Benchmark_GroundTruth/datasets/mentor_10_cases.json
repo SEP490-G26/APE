@@ -1,0 +1,85 @@
+{
+  "description": "10 case code mentor (C + Java) bao phủ 10 nhóm tình huống",
+  "cases": [
+    {
+      "case_id": "MEN-001",
+      "scenario_group": "correct_code",
+      "language": "java",
+      "problem": "Viết hàm kiểm tra mảng đã sắp xếp tăng dần hay chưa.",
+      "code": "public class CheckSorted {\n  public static boolean isSorted(int[] a){\n    for(int i=1;i<a.length;i++){\n      if(a[i] < a[i-1]) return false;\n    }\n    return true;\n  }\n}",
+      "expected_result": "Xác nhận đúng, góp ý tối ưu nhẹ, không bịa lỗi."
+    },
+    {
+      "case_id": "MEN-002",
+      "scenario_group": "syntax_error",
+      "language": "java",
+      "problem": "Tính tổng 1..n.",
+      "code": "public class SumN {\n  public static int sum(int n){\n    int s = 0\n    for(int i=1;i<=n;i++) s += i;\n    return s;\n  }\n}",
+      "expected_result": "Phát hiện lỗi thiếu dấu ; và gợi ý fix cụ thể."
+    },
+    {
+      "case_id": "MEN-003",
+      "scenario_group": "logic_error",
+      "language": "c",
+      "problem": "Tính giai thừa n (n>=0).",
+      "code": "#include <stdio.h>\nlong long fact(int n){\n  long long f = 0;\n  for(int i=1;i<=n;i++) f *= i;\n  return f;\n}",
+      "expected_result": "Chỉ ra logic sai khởi tạo f=0, cần f=1."
+    },
+    {
+      "case_id": "MEN-004",
+      "scenario_group": "edge_case_miss",
+      "language": "c",
+      "problem": "Trả về phần tử lớn nhất trong mảng.",
+      "code": "#include <limits.h>\nint maxArr(int a[], int n){\n  int mx = a[0];\n  for(int i=1;i<n;i++) if(a[i]>mx) mx=a[i];\n  return mx;\n}",
+      "expected_result": "Nêu thiếu xử lý n<=0 và đề xuất cách xử lý an toàn."
+    },
+    {
+      "case_id": "MEN-005",
+      "scenario_group": "complexity_issue",
+      "language": "java",
+      "problem": "Kiểm tra phần tử x có trong mảng đã sắp xếp tăng dần.",
+      "code": "public static boolean contains(int[] a, int x){\n  for(int i=0;i<a.length;i++){\n    for(int j=0;j<a.length;j++){\n      if(a[j]==x) return true;\n    }\n  }\n  return false;\n}",
+      "expected_result": "Nhận xét complexity tệ, đề xuất binary search O(log n)."
+    },
+    {
+      "case_id": "MEN-006",
+      "scenario_group": "runtime_error",
+      "language": "java",
+      "problem": "Lấy phần tử đầu tiên của mảng.",
+      "code": "public static int first(int[] a){\n  return a[0];\n}",
+      "expected_result": "Chỉ ra nguy cơ NullPointer/ArrayIndexOutOfBounds và cách guard."
+    },
+    {
+      "case_id": "MEN-007",
+      "scenario_group": "style_issue",
+      "language": "c",
+      "problem": "In ra các số chẵn từ 1..n.",
+      "code": "#include<stdio.h>\nvoid f(int n){int i;for(i=1;i<=n;i++){if(i%2==0){printf(\"%d \",i);}}}",
+      "expected_result": "Nhận xét style/readability và đề xuất format dễ đọc hơn."
+    },
+    {
+      "case_id": "MEN-008",
+      "scenario_group": "partial_solution",
+      "language": "java",
+      "problem": "Đảo ngược chuỗi.",
+      "code": "public static String rev(String s){\n  StringBuilder sb = new StringBuilder();\n  for(int i=s.length()-1;i>0;i--) sb.append(s.charAt(i));\n  return sb.toString();\n}",
+      "expected_result": "Phát hiện thiếu ký tự đầu (i>0), đề xuất i>=0."
+    },
+    {
+      "case_id": "MEN-009",
+      "scenario_group": "wrong_algorithm",
+      "language": "c",
+      "problem": "Sắp xếp mảng tăng dần.",
+      "code": "#include <stdio.h>\nvoid sort(int a[], int n){\n  // chỉ in mảng, không sort\n  for(int i=0;i<n;i++) printf(\"%d \", a[i]);\n}",
+      "expected_result": "Chỉ ra sai thuật toán, đề xuất bubble/selection/quick sort."
+    },
+    {
+      "case_id": "MEN-010",
+      "scenario_group": "testcase_fail",
+      "language": "java",
+      "problem": "Tính tổng các số chẵn trong mảng.",
+      "code": "public static int sumEven(int[] a){\n  int s=0;\n  for(int x: a){\n    if(x%2!=0) s += x;\n  }\n  return s;\n}",
+      "expected_result": "Phát hiện cộng nhầm số lẻ, nêu testcase fail và cách sửa."
+    }
+  ]
+}

@@ -1,0 +1,32346 @@
+const allSheetsData = {
+  "1": [
+    {
+      "id": "F01",
+      "method": "AuthService.GoogleLoginAsync",
+      "module": "Authentication & Account",
+      "requirement": "Verify Google OAuth token verification, account retrieval/creation, status validation (Active/Disabled/Banned), token generation, and expired token cleanup.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D26:L26, \"P\")",
+        "passedVal": 9,
+        "failedFormula": "=COUNTIF(D26:L26, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D26:L26, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D25:L25, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D25:L25, \"A\")",
+        "aVal": 5,
+        "bFormula": "=COUNTIF(D25:L25, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 9
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06",
+        "UTCID07",
+        "UTCID08",
+        "UTCID09"
+      ],
+      "utcs": 9,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Precondition",
+          "value": "Google ID Token Signature Valid",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Google ID Token Signature Invalid",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "User Exists with GoogleId",
+          "values": [
+            "O",
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "User Exists with Email only",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "User Does Not Exist in DB",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Account Status = \"Active\"",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Account Status = \"Disabled\"",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Account Status = \"Inactive\"",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Account Status = \"Banned\"",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Stored Tokens Include Expired",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "idToken",
+          "value": "Valid Token String",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Malformed / Expired Token",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "ipAddress",
+          "value": "\"10.0.0.1\"",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "AuthResponseDto (Tokens + User)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "User Entity",
+          "value": "Existing Record Maintained",
+          "values": [
+            "O",
+            "O",
+            "",
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "New Student User Inserted",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "GoogleId Linked to User",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Tokens",
+          "value": "Refresh Token Saved to DB",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "Expired Tokens Cleaned Up",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ForbiddenException",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "UnauthorizedException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "InvalidOperationException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Log message",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Your account has been disabled.\"",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Invalid Google ID Token.\"",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"User persistence failed.\"",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~AuthServiceGoogleLoginTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 9, Skipped: 0, Total: 9, Duration: 114 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F02",
+      "method": "AuthService.RefreshTokenAsync",
+      "module": "Authentication & Account",
+      "requirement": "Verify token rotation mechanism, revoking old refresh tokens, validating token expiration/revocation, and enforcing user account status.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D25:M25, \"P\")",
+        "passedVal": 10,
+        "failedFormula": "=COUNTIF(D25:M25, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D25:M25, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D24:M24, \"N\")",
+        "nVal": 1,
+        "aFormula": "=COUNTIF(D24:M24, \"A\")",
+        "aVal": 8,
+        "bFormula": "=COUNTIF(D24:M24, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 10
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06",
+        "UTCID07",
+        "UTCID08",
+        "UTCID09",
+        "UTCID10"
+      ],
+      "utcs": 10,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Precondition",
+          "value": "User Exists & Status = \"Active\"",
+          "values": [
+            "O",
+            "",
+            "",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "User Exists & Status = \"Disabled\"",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "User Exists & Status = \"Inactive\"",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "User Exists & Status = \"Banned\"",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "User Record Not in DB",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "refreshToken",
+          "value": "Valid Active Token in DB",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Null or Empty String",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Token Not Found in DB",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Expired Token (ExpiresAt < Now)",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Revoked Token (IsRevoked = true)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Exact Boundary (ExpiresAt == Now)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "ipAddress",
+          "value": "\"10.0.0.1\"",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "AuthResponseDto (Rotated Pair)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Token DB",
+          "value": "Old Token Marked Revoked",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "New Refresh Token Appended",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "UnauthorizedException",
+          "values": [
+            "",
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ForbiddenException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Log message",
+          "value": "None",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Invalid or expired refresh token.\"",
+          "values": [
+            "",
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Your account has been disabled.\"",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "A",
+            "A",
+            "A",
+            "A",
+            "A",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~AuthServiceRefreshTokenTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 10, Skipped: 0, Total: 10, Duration: 124 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F03",
+      "method": "AuthService.RevokeTokenAsync",
+      "module": "Authentication & Account",
+      "requirement": "Verify user logout token invalidation, ensuring target token is marked revoked and multi-token isolation is preserved.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D22:J22, \"P\")",
+        "passedVal": 7,
+        "failedFormula": "=COUNTIF(D22:J22, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D22:J22, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D21:J21, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D21:J21, \"A\")",
+        "aVal": 4,
+        "bFormula": "=COUNTIF(D21:J21, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 7
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06",
+        "UTCID07"
+      ],
+      "utcs": 7,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Precondition",
+          "value": "User Exists with 1 Active Token",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "User Exists with 3 Active Tokens",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "User Exists with Already Revoked Token",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "User Record Does Not Exist",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "refreshToken",
+          "value": "Valid Existing Active Token",
+          "values": [
+            "O",
+            "O (1 target)",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Null or Empty String",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Token Not Found in DB",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Already Revoked Token",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Token Belonging to Non-existent User",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Valid Token with Leading/Trailing Spaces",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "`true`",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "`false`",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Token DB",
+          "value": "Target Token IsRevoked = true",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "Unchanged",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "Other User Tokens Unchanged",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Log message",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Token is null or empty\"",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Token not found\"",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"User not found\"",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~AuthServiceLogoutTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 7, Skipped: 0, Total: 7, Duration: 78 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F04",
+      "method": "UserService.GetProfileAsync",
+      "module": "Authentication & Account",
+      "requirement": "Verify fetching user profile information by MongoDB ID, checking role permissions, status mapping, and handling missing IDs.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D22:K22, \"P\")",
+        "passedVal": 8,
+        "failedFormula": "=COUNTIF(D22:K22, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D22:K22, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D21:K21, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D21:K21, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D21:K21, \"B\")",
+        "bVal": 2,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 8
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06",
+        "UTCID07",
+        "UTCID08"
+      ],
+      "utcs": 8,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Precondition",
+          "value": "User Exists in DB (Role = Student)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "User Exists in DB (Role = Admin)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "User Exists in DB (Role = Teacher)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "User Does Not Exist in DB",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "userId",
+          "value": "Valid 24-char Hex ID (\"507f1f77b...\")",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent ID String",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Null or Empty String",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Invalid ID Format (\"invalid-hex\")",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Valid ID with Null Bio & Avatar",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Valid ID with Whitespaces (\" 507f... \")",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "UserProfileDto Instance",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Dto Mapping",
+          "value": "Role & Profile Fields Correct",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O (Defaults)",
+            "O (Trimmed)"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "NotFoundException",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "BadRequestException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Log message",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"User not found.\"",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"User ID is required.\"",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Invalid user ID format.\"",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "B",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~UserServiceGetProfileTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 8, Skipped: 0, Total: 8, Duration: 89 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F05",
+      "method": "UserController.GetUsers",
+      "module": "Authentication & Account",
+      "requirement": "Verify administrative user listing endpoint, keyword search filtering, role/status filtering, and pagination boundary normalization.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D22:J22, \"P\")",
+        "passedVal": 7,
+        "failedFormula": "=COUNTIF(D22:J22, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D22:J22, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D21:J21, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D21:J21, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D21:J21, \"B\")",
+        "bVal": 2,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 7
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06",
+        "UTCID07"
+      ],
+      "utcs": 7,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller Role",
+          "value": "Admin (Authorized)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "search",
+          "value": "\"student\"",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"nonexistent-user\"",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "O",
+            "O",
+            "O",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "role",
+          "value": "null",
+          "values": [
+            "O",
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"Student\"",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"Admin\"",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "status",
+          "value": "\"Active\"",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"Disabled\"",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "null",
+          "values": [
+            "O",
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "page / limit",
+          "value": "Default (1 / 20)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Custom Valid (2 / 10)",
+          "values": [
+            "",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Invalid Lower Bound (0 / 0)",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Upper Bound (1 / 500)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "500 InternalServerError",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Items Count",
+          "value": "> 0 items",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "0 items",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Paging Meta",
+          "value": "Page=1, Limit=20 (Default)",
+          "values": [
+            "O",
+            "",
+            "",
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "Page=2, Limit=10",
+          "values": [
+            "",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "Limit clamped to 100 (Max)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "B",
+            "A",
+            "B",
+            "A"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~UserControllerGetProfileTests&Name~GetUsers\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 7, Skipped: 0, Total: 7, Duration: 82 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F06",
+      "method": "UserController.GetUserById",
+      "module": "Authentication & Account",
+      "requirement": "Verify administrative single user detail endpoint, role response payload structure, 404 for missing IDs, and 400 for malformed parameters.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller Role",
+          "value": "Admin (Authorized)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "userId",
+          "value": "Valid Existing Student ID",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Valid Existing Admin ID",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent User ID",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Null / Empty String",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Malformed Format (\"abc-123\")",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Valid ID (DB Failure Trigger)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "404 NotFound",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "400 BadRequest",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "500 InternalServerError",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "UserDto (Role = Student)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "UserDto (Role = Admin)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Message",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"User not found\"",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"User ID is required\"",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Invalid ID format\"",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Database query failed\"",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~UserControllerGetProfileTests&Name~GetUserById\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 74 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F07",
+      "method": "UserController.UpdateUserStatus",
+      "module": "Authentication & Account",
+      "requirement": "Verify moderating user account status (Active/Disabled), revoking all refresh tokens upon banning, preventing self-ban, and input casing normalization.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D22:J22, \"P\")",
+        "passedVal": 7,
+        "failedFormula": "=COUNTIF(D22:J22, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D22:J22, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D21:J21, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D21:J21, \"A\")",
+        "aVal": 4,
+        "bFormula": "=COUNTIF(D21:J21, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 7
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06",
+        "UTCID07"
+      ],
+      "utcs": 7,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Admin (\"admin-1\")",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Target User",
+          "value": "Existing Active Student",
+          "values": [
+            "O",
+            "",
+            "",
+            "O",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Existing Disabled Student",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent User ID",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Caller Admin (\"admin-1\")",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "New Status",
+          "value": "\"Disabled\"",
+          "values": [
+            "O",
+            "",
+            "O",
+            "",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"Active\"",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"UnknownStatus\" (Invalid)",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"disabled\" (lowercase)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "404 NotFound",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "400 BadRequest",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "500 InternalServerError",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "DB Status",
+          "value": "Updated to \"Disabled\"",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "Updated to \"Active\"",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "Unchanged",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Tokens",
+          "value": "All Refresh Tokens Cleared",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "Refresh Tokens Retained",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Message",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"User not found\"",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Invalid status value\"",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Cannot ban your own account\"",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Database write failed\"",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "B",
+            "A"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~UserControllerGetProfileTests&Name~UpdateUserStatus\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 7, Skipped: 0, Total: 7, Duration: 76 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F08",
+      "method": "WalletTopupService.GetConstraints",
+      "module": "AI Wallet & Payment",
+      "requirement": "Verify retrieval of top-up constraint parameters (MinAmount, MaxAmount, StepAmount, Currency, supported payment providers) and fallback resilience.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:H20, \"P\")",
+        "passedVal": 5,
+        "failedFormula": "=COUNTIF(D20:H20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:H20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:H19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:H19, \"A\")",
+        "aVal": 1,
+        "bFormula": "=COUNTIF(D19:H19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 5
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05"
+      ],
+      "utcs": 5,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "App Config State",
+          "value": "Standard Defaults (10k - 5M)",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Multi-Provider Active Config",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Custom Bounds Config (50k - 10M)",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Missing / Corrupted Keys",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "TopupConstraintsDto Instance",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "MinAmount",
+          "value": "10000 VND",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O (Fallback)"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "50000 VND",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "MaxAmount",
+          "value": "5000000 VND",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O (Fallback)"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "10000000 VND",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "StepAmount",
+          "value": "1000 VND",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O (Fallback)"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "10000 VND",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Currency",
+          "value": "\"VND\"",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Providers",
+          "value": "[\"PayOS\"]",
+          "values": [
+            "O",
+            "O",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "[\"PayOS\", \"VNPay\"]",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "B",
+            "A"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~WalletTopupServiceGetConstraintsTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 5, Skipped: 0, Total: 5, Duration: 62 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F09",
+      "method": "WalletTopupService.GetPackagesAsync",
+      "module": "AI Wallet & Payment",
+      "requirement": "Verify active top-up package listing, ascending sort order by amount, bonus credit calculation, inactive tier filtering, and empty catalog handling.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "DB Packages State",
+          "value": "3 Active Tiers (50k, 100k, 200k)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "5 Active Tiers with Bonus Credits",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "2 Active Tiers, 2 Inactive Tiers",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Empty Package Table (0 rows)",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Single Active Base Tier (No Bonus)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "DB Connection / Query Failure",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "List<TopupPackageDto>",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Items Count",
+          "value": "3",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "5",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "2 (Active only)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "0 (Empty List)",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "1",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Ordering",
+          "value": "Ascending by Amount",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Bonus Credits",
+          "value": "Correctly Calculated",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O (0 Bonus)",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "InvalidOperationException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "A",
+            "B",
+            "A"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~WalletTopupServiceCreateTopupTests&Name~GetPackages\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 71 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F10",
+      "method": "WalletTopupService.CreateTopupAsync",
+      "module": "AI Wallet & Payment",
+      "requirement": "Verify student top-up order creation, custom amount vs package ID handling, constraint boundary validation (Min/Max/Step), and PayOS gateway URL generation.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D25:K25, \"P\")",
+        "passedVal": 8,
+        "failedFormula": "=COUNTIF(D25:K25, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D25:K25, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D24:K24, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D24:K24, \"A\")",
+        "aVal": 4,
+        "bFormula": "=COUNTIF(D24:K24, \"B\")",
+        "bVal": 2,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 8
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06",
+        "UTCID07",
+        "UTCID08"
+      ],
+      "utcs": 8,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "User Account",
+          "value": "Active Student User",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Disabled Student User",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Input Mode",
+          "value": "Custom Amount",
+          "values": [
+            "O",
+            "",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Package ID (\"pkg-100k\")",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Amount",
+          "value": "50,000 VND",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Resolved from Package (100k)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "5,000 VND (< Min 10,000 VND)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "6,000,000 VND (> Max 5,000,000)",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "15,500 VND (Not multiple of step)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "10,000 VND (Exact Min Boundary)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "PayOS API",
+          "value": "Gateway Returns Checkout URL",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Gateway Throws Exception",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "CreateTopupResponseDto",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Payment DB",
+          "value": "Record Created with Status PENDING",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "Record Created with Status FAILED",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "BadRequestException",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ForbiddenException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "PaymentGatewayException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Log message",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Amount must be at least 10,000 VND.\"",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Amount cannot exceed 5,000,000 VND.\"",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Amount must be a multiple of 1,000 VND.\"",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"User account is disabled.\"",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Failed to create PayOS payment link.\"",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~WalletTopupServiceCreateTopupTests&Name~CreateTopup\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 8, Skipped: 0, Total: 8, Duration: 87 ms - BE_UnitTests.dll (net8.0)"
+      }
+    }
+  ],
+  "2": [
+    {
+      "id": "F11",
+      "method": "WalletTopupService.GetHistoryAsync",
+      "module": "AI Wallet & Payment",
+      "requirement": "Verify student top-up payment history retrieval, status filtering (PENDING/PAID/CANCELLED/FAILED), pagination, and descending order by creation date.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D22:I22, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D22:I22, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D22:I22, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D21:I21, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D21:I21, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D21:I21, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "userId",
+          "value": "Valid Student ID (\"student-1\")",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Null or Empty String",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "statusFilter",
+          "value": "null (All statuses)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"PAID\"",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"CANCELLED\"",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"INVALID_STATUS\"",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "page / limit",
+          "value": "Default (1 / 20)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Custom (0 / 0 - Invalid bounds)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "PagedResult<PaymentDto>",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Items Count",
+          "value": "Full list matching user",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "Filtered count (PAID only)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "Filtered count (CANCELLED only)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "Normalized Page=1, Limit=20",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "BadRequestException",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Log message",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Invalid status filter.\"",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"User ID is required.\"",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~WalletTopupServiceGetHistoryTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 72 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F12",
+      "method": "WalletTopupService.GetByIdAsync",
+      "module": "AI Wallet & Payment",
+      "requirement": "Verify student top-up order detail query by orderCode / paymentId, enforcing ownership check and handling non-existent orders.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:H20, \"P\")",
+        "passedVal": 5,
+        "failedFormula": "=COUNTIF(D20:H20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:H20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:H19, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D19:H19, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D19:H19, \"B\")",
+        "bVal": 0,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 5
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05"
+      ],
+      "utcs": 5,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "userId",
+          "value": "Student Owner (\"student-1\")",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Different Student (\"student-2\")",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "orderCode",
+          "value": "Valid Existing OrderCode (123456)",
+          "values": [
+            "O",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Valid Existing PaymentId (\"pay-1\")",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent OrderCode (999999)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Negative OrderCode (-1)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "PaymentDetailDto",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "NotFoundException",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "BadRequestException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Log message",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Payment order not found.\"",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"You are not authorized to view this payment.\"",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Invalid order code.\"",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~WalletTopupServiceGetByIdTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 5, Skipped: 0, Total: 5, Duration: 68 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F13",
+      "method": "WalletTopupService.CancelTopupAsync",
+      "module": "AI Wallet & Payment",
+      "requirement": "Verify student payment cancellation flow, ensuring only PENDING orders can be cancelled, updating status to CANCELLED, and notifying PayOS.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D21:I21, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D21:I21, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D21:I21, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D20:I20, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D20:I20, \"A\")",
+        "aVal": 4,
+        "bFormula": "=COUNTIF(D20:I20, \"B\")",
+        "bVal": 0,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "userId",
+          "value": "Student Owner (\"student-1\")",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Different Student (\"student-2\")",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Current Status",
+          "value": "PENDING (Without reason)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "PENDING (With custom reason)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "PAID (Already Completed)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "CANCELLED (Already Cancelled)",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent Order Code",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "`true` (Cancelled successfully)",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "`false`",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "DB Status",
+          "value": "Status Updated to CANCELLED",
+          "values": [
+            "O",
+            "O",
+            "Unchanged",
+            "Unchanged",
+            "None",
+            "Unchanged"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "CancellationReason",
+          "value": "\"User cancelled\" (Default)",
+          "values": [
+            "O",
+            "",
+            "None",
+            "None",
+            "None",
+            "None"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"User selected wrong package\"",
+          "values": [
+            "",
+            "O",
+            "None",
+            "None",
+            "None",
+            "None"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "BadRequestException",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "NotFoundException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Log message",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Only pending payments can be cancelled.\"",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Payment order not found.\"",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "A"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~WalletTopupServiceCancelTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 65 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F14",
+      "method": "WalletTopupService.HandlePayOSWebhookAsync",
+      "module": "AI Wallet & Payment",
+      "requirement": "Verify processing of PayOS IPN webhook, webhook signature verification, wallet balance increment upon payment success, and idempotency.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D23:J23, \"P\")",
+        "passedVal": 7,
+        "failedFormula": "=COUNTIF(D23:J23, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D23:J23, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D22:J22, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D22:J22, \"A\")",
+        "aVal": 4,
+        "bFormula": "=COUNTIF(D22:J22, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 7
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06",
+        "UTCID07"
+      ],
+      "utcs": 7,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Signature",
+          "value": "Valid PayOS Webhook Signature",
+          "values": [
+            "O",
+            "O",
+            "",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Invalid Signature / Tampered Payload",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Payment In DB",
+          "value": "Exists with Status PENDING",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Exists with Status PAID (Duplicate)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent Order Code",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Webhook Code",
+          "value": "\"00\" (Success)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"01\" (Payment Failed)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"02\" (Cancelled by Gateway)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "User Wallet",
+          "value": "Active User in DB",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "User Not Found in DB",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "WebhookResultDto (Success = true)",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "WebhookResultDto (Success = false)",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "DB Payment",
+          "value": "Status Updated to PAID",
+          "values": [
+            "O",
+            "Unchanged",
+            "Unchanged",
+            "None",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "Status Updated to FAILED",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "Status Updated to CANCELLED",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Wallet Credit",
+          "value": "Balance Incremented (+Amount)",
+          "values": [
+            "O",
+            "No (+0)",
+            "No (+0)",
+            "No (+0)",
+            "No (+0)",
+            "No (+0)",
+            "No (+0)"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "None",
+            "None",
+            "O",
+            "O",
+            "None"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Log message",
+          "value": "None",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Payment already processed.\"",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Invalid webhook signature.\"",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Payment order not found.\"",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"User not found for wallet credit.\"",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "B",
+            "A",
+            "A",
+            "A",
+            "A",
+            "A"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~WalletTopupServiceHandleWebhookTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 7, Skipped: 0, Total: 7, Duration: 84 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F15",
+      "method": "PaymentWebhookController.ReceiveWebhook",
+      "module": "AI Wallet & Payment",
+      "requirement": "Verify webhook endpoint receiving PayOS HTTP POST callbacks, returning 200 OK for valid IPN and 400 Bad Request for malformed payloads.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D19:G19, \"P\")",
+        "passedVal": 4,
+        "failedFormula": "=COUNTIF(D19:G19, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D19:G19, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D18:G18, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D18:G18, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D18:G18, \"B\")",
+        "bVal": 0,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 4
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04"
+      ],
+      "utcs": 4,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Request Body",
+          "value": "Valid PayOS Webhook Body",
+          "values": [
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Valid PayOS Test Webhook Body",
+          "values": [
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Null / Empty Request Body",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Invalid Signature / Data Format",
+          "values": [
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "400 BadRequest",
+          "values": [
+            "",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Service Invocation",
+          "value": "HandlePayOSWebhookAsync Called",
+          "values": [
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Response Body",
+          "value": "ApiResponse.Ok",
+          "values": [
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~PaymentWebhookControllerReceiveWebhookTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 4, Skipped: 0, Total: 4, Duration: 58 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F16",
+      "method": "StudentWalletController.GetHistory",
+      "module": "AI Wallet & Payment",
+      "requirement": "Verify student top-up transaction history HTTP endpoint, claim extraction, query validation, and pagination.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:H20, \"P\")",
+        "passedVal": 5,
+        "failedFormula": "=COUNTIF(D20:H20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:H20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:H19, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D19:H19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:H19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 5
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05"
+      ],
+      "utcs": 5,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Claims Principal",
+          "value": "Authenticated Student (\"student-1\")",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated / Missing Claim",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Query status",
+          "value": "null (All)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"PAID\"",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"INVALID\"",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Query page/limit",
+          "value": "1 / 20",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "0 / 0 (Invalid boundary)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "400 BadRequest",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "PagedResult<PaymentDto>",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "O (Normalized)"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~StudentWalletControllerGetHistoryTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 5, Skipped: 0, Total: 5, Duration: 64 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F17",
+      "method": "StudentWalletController.GetDetail",
+      "module": "AI Wallet & Payment",
+      "requirement": "Verify student top-up transaction detail HTTP endpoint by orderCode / paymentId, and authorization checks.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D19:H19, \"P\")",
+        "passedVal": 5,
+        "failedFormula": "=COUNTIF(D19:H19, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D19:H19, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D18:H18, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D18:H18, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D18:H18, \"B\")",
+        "bVal": 0,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 5
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05"
+      ],
+      "utcs": 5,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Claims Principal",
+          "value": "Authenticated Student (\"student-1\")",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated / No Token",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "orderCode",
+          "value": "Valid Existing OrderCode (123456)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Valid Existing PaymentId (\"pay-1\")",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent OrderCode (999999)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Order Owned by Different Student",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "404 NotFound",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "PaymentDetailDto",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~StudentWalletControllerGetDetailTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 5, Skipped: 0, Total: 5, Duration: 62 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F18",
+      "method": "StudentWalletController.Cancel",
+      "module": "AI Wallet & Payment",
+      "requirement": "Verify student top-up order cancellation HTTP POST endpoint, validation of cancel reasons, and error mapping.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:H20, \"P\")",
+        "passedVal": 5,
+        "failedFormula": "=COUNTIF(D20:H20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:H20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:H19, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D19:H19, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D19:H19, \"B\")",
+        "bVal": 0,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 5
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05"
+      ],
+      "utcs": 5,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Claims Principal",
+          "value": "Authenticated Student (\"student-1\")",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated / No Token",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "orderCode",
+          "value": "Valid Existing PENDING Order",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent Order Code",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Already PAID Order",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Cancel Reason",
+          "value": "null (Default reason)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"User requested cancellation\"",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "404 NotFound",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "400 BadRequest",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ApiResponse.Ok (Cancelled = true)",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~StudentWalletControllerCancelTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 5, Skipped: 0, Total: 5, Duration: 60 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F19",
+      "method": "StudentWalletController.GetAiTransactions",
+      "module": "AI Wallet & Payment",
+      "requirement": "Verify student AI consumption billing transaction history endpoint, feature filter (CodeMentor/QGen), and date range filtering.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D21:J21, \"P\")",
+        "passedVal": 7,
+        "failedFormula": "=COUNTIF(D21:J21, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D21:J21, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D20:J20, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D20:J20, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D20:J20, \"B\")",
+        "bVal": 2,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 7
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06",
+        "UTCID07"
+      ],
+      "utcs": 7,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Claims Principal",
+          "value": "Authenticated Student (\"student-1\")",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated / No Token",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Feature Filter",
+          "value": "null (All AI features)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"CodeMentor\"",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"QuestionGeneration\"",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"InvalidFeature\"",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Date Range",
+          "value": "null (All time)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Valid Range (From <= To)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Invalid Range (From > To)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "400 BadRequest",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "PagedResult<AIBillingTxnDto>",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "A",
+            "B",
+            "B",
+            "A"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~StudentWalletControllerGetAiTransactionsTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 7, Skipped: 0, Total: 7, Duration: 81 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F20",
+      "method": "DocumentService.UploadDocumentAsync",
+      "module": "Knowledge Base & Document",
+      "requirement": "Verify student/teacher syllabus and document upload, file format validation (PDF, DOCX, TXT), size limit enforcement (max 20MB), and text extraction initiation.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D23:K23, \"P\")",
+        "passedVal": 8,
+        "failedFormula": "=COUNTIF(D23:K23, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D23:K23, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D22:K22, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D22:K22, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D22:K22, \"B\")",
+        "bVal": 2,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 8
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06",
+        "UTCID07",
+        "UTCID08"
+      ],
+      "utcs": 8,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "User Role",
+          "value": "Student / Teacher (Authorized)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated User",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "File Format",
+          "value": "PDF (\".pdf\")",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "DOCX (\".docx\")",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "TXT (\".txt\")",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "EXE / Disallowed (\".exe\")",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "File Size",
+          "value": "2 MB (Normal valid)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "0 KB (Empty file)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "25 MB (> 20 MB Limit)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "20 MB (Exact Max Boundary)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "UploadDocumentResponseDto",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "DB Document",
+          "value": "Record Inserted with Status PENDING",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "BadRequestException / Validation",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "UnauthorizedException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Log message",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Unsupported file format.\"",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Uploaded file cannot be empty.\"",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"File size exceeds 20MB limit.\"",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Authentication required.\"",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "B",
+            "A"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~DocumentServiceUploadTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 8, Skipped: 0, Total: 8, Duration: 112 ms - BE_UnitTests.dll (net8.0)"
+      }
+    }
+  ],
+  "3": [
+    {
+      "id": "F21",
+      "method": "DocumentService.GetExtractionDraftAsync",
+      "module": "Knowledge Base & Document",
+      "requirement": "Verify retrieval of document text extraction draft, checking processing status (PENDING/COMPLETED/FAILED), and ownership validation.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D19:G19, \"P\")",
+        "passedVal": 4,
+        "failedFormula": "=COUNTIF(D19:G19, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D19:G19, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D18:G18, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D18:G18, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D18:G18, \"B\")",
+        "bVal": 0,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 4
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04"
+      ],
+      "utcs": 4,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "userId",
+          "value": "Document Owner (\"student-1\")",
+          "values": [
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthorized User (\"student-2\")",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "documentId",
+          "value": "Valid COMPLETED Document ID",
+          "values": [
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Valid PENDING Document ID",
+          "values": [
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Valid Document ID (Not Owner)",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent Document ID",
+          "values": [
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "ExtractionDraftDto (Text Content)",
+          "values": [
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ExtractionDraftDto (Status: PENDING)",
+          "values": [
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ForbiddenException",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "NotFoundException",
+          "values": [
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Log message",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"You are not authorized to view this document.\"",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Document not found.\"",
+          "values": [
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~DocumentServiceGetExtractionDraftTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 4, Skipped: 0, Total: 4, Duration: 155 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F22",
+      "method": "DocumentService.ListByUserAsync",
+      "module": "Knowledge Base & Document",
+      "requirement": "Verify student/teacher uploaded documents listing, courseId filtering, pagination, and descending sort order by creation date.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:H20, \"P\")",
+        "passedVal": 5,
+        "failedFormula": "=COUNTIF(D20:H20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:H20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:H19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:H19, \"A\")",
+        "aVal": 1,
+        "bFormula": "=COUNTIF(D19:H19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 5
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05"
+      ],
+      "utcs": 5,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "userId",
+          "value": "Valid User ID (\"user-1\")",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Null / Empty User ID",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "courseId",
+          "value": "null (All courses)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"course-dsa\" (Filtered)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"course-empty\" (No docs)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "page / limit",
+          "value": "Default (1 / 20)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Custom Boundary (0 / 0)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "PagedResult<DocumentSummaryDto>",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Items Count",
+          "value": "Full list matching user",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "Filtered count (DSA only)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "0 items",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "Normalized Page=1, Limit=20",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "BadRequestException",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Log message",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"User ID is required.\"",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~DocumentServiceListByUserTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 5, Skipped: 0, Total: 5, Duration: 74 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F23",
+      "method": "DocumentController.Download",
+      "module": "Knowledge Base & Document",
+      "requirement": "Verify document binary stream download endpoint, content type determination, file existence, and ownership check.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D19:G19, \"P\")",
+        "passedVal": 4,
+        "failedFormula": "=COUNTIF(D19:G19, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D19:G19, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D18:G18, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D18:G18, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D18:G18, \"B\")",
+        "bVal": 0,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 4
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04"
+      ],
+      "utcs": 4,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Authenticated Owner (\"student-1\")",
+          "values": [
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Different Student (\"student-2\")",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "File Storage",
+          "value": "File Exists in Local/S3 Storage (PDF)",
+          "values": [
+            "O",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "File Exists in Local/S3 Storage (DOCX)",
+          "values": [
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "File Missing on Disk / Storage",
+          "values": [
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK (FileStreamResult)",
+          "values": [
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "403 Forbidden",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "404 NotFound",
+          "values": [
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "ContentType",
+          "value": "\"application/pdf\"",
+          "values": [
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"application/vnd.openxmlformats...\"",
+          "values": [
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "Binary Stream",
+          "values": [
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~DocumentControllerDownloadTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 4, Skipped: 0, Total: 4, Duration: 67 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F24",
+      "method": "DocumentController.GetExtractionDraft",
+      "module": "Knowledge Base & Document",
+      "requirement": "Verify HTTP GET endpoint for extracted document draft text, claim validation, 404 for missing docs, and 403 for unauthorized users.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D19:G19, \"P\")",
+        "passedVal": 4,
+        "failedFormula": "=COUNTIF(D19:G19, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D19:G19, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D18:G18, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D18:G18, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D18:G18, \"B\")",
+        "bVal": 0,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 4
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04"
+      ],
+      "utcs": 4,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Authenticated Owner (\"student-1\")",
+          "values": [
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated / Unauthorized User",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "documentId",
+          "value": "Valid Completed Extraction Doc",
+          "values": [
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Valid In-Progress Extraction Doc",
+          "values": [
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Valid Doc ID (Different User)",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent Document ID",
+          "values": [
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "403 Forbidden",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "404 NotFound",
+          "values": [
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Payload",
+          "value": "ExtractionDraftDto (Completed)",
+          "values": [
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ExtractionDraftDto (PENDING)",
+          "values": [
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~DocumentControllerGetExtractionDraftTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 4, Skipped: 0, Total: 4, Duration: 65 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F25",
+      "method": "FileExtractionService.ExtractTextAsync",
+      "module": "Knowledge Base & Document",
+      "requirement": "Verify text extraction parsing engine for PDF, DOCX, and TXT files, chunking, character cleanup, and corrupted file handling.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:H20, \"P\")",
+        "passedVal": 5,
+        "failedFormula": "=COUNTIF(D20:H20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:H20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:H19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:H19, \"A\")",
+        "aVal": 1,
+        "bFormula": "=COUNTIF(D19:H19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 5
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05"
+      ],
+      "utcs": 5,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "File Stream",
+          "value": "Valid Text-based PDF Stream",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Valid OpenXML DOCX Stream",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Valid UTF-8 TXT Stream",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Corrupted / Invalid Binary Stream",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Empty 0-byte Stream",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "ExtractedTextResult (Length > 0)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ExtractedTextResult (Length = 0)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "DocumentParsingException",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Log message",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Failed to parse document stream.\"",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~FileExtractionServiceTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 5, Skipped: 0, Total: 5, Duration: 95 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F26",
+      "method": "CourseService.CreateCourseAsync",
+      "module": "Course & Syllabus Management",
+      "requirement": "Verify course creation, course code uniqueness validation, required field checking (Code, Name, Subject), and trimming.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D22:I22, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D22:I22, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D22:I22, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D21:I21, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D21:I21, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D21:I21, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Precondition",
+          "value": "Course Code Does Not Exist in DB",
+          "values": [
+            "O",
+            "O",
+            "",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Course Code Already Exists in DB",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Code",
+          "value": "\"CSD201\" (Valid)",
+          "values": [
+            "O",
+            "",
+            "O",
+            "",
+            "\"CSD201\"",
+            "\" csd201 \""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Null / Empty Code",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Name",
+          "value": "\"Data Structures & Algorithms\"",
+          "values": [
+            "O",
+            "\"Java Programming\"",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Subject",
+          "value": "\"Computer Science\"",
+          "values": [
+            "O",
+            "\"Software\"",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "CourseDto (Id != null)",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "DB Course",
+          "value": "Inserted with Uppercase Code",
+          "values": [
+            "O",
+            "O",
+            "Unchanged",
+            "Unchanged",
+            "Unchanged",
+            "O (Trimmed)"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ConflictException",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ValidationException / BadRequest",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Log message",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Course code already exists.\"",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Course code is required.\"",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Course name is required.\"",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~CourseServiceMutationTests&Name~CreateCourse\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 80 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F27",
+      "method": "CourseService.UpdateCourseAsync",
+      "module": "Course & Syllabus Management",
+      "requirement": "Verify course update flow, modifying name/description/subject, preventing duplicate code conflict with other courses, and missing course check.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D22:I22, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D22:I22, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D22:I22, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D21:I21, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D21:I21, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D21:I21, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Precondition",
+          "value": "Target Course Exists in DB",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Target Course Not in DB",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "New Code Conflict with Other Course",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "courseId",
+          "value": "Valid Course ID (\"course-1\")",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent Course ID",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Name",
+          "value": "\"Updated DSA Course Name\"",
+          "values": [
+            "O",
+            "\"New Name\"",
+            "\"Name\"",
+            "\"Name\"",
+            "\"\" (Empty)",
+            "\" Trimmed Name \""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Code",
+          "value": "\"CSD201\" (Same Code)",
+          "values": [
+            "O",
+            "\"CSD202\" (New Available)",
+            "\"PRO192\" (Taken)",
+            "\"CSD201\"",
+            "\"CSD201\"",
+            "\"CSD201\""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "CourseDto (Updated fields)",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "DB Course",
+          "value": "Record Fields Modified in DB",
+          "values": [
+            "O",
+            "O",
+            "Unchanged",
+            "None",
+            "Unchanged",
+            "O (Trimmed)"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ConflictException",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "NotFoundException",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ValidationException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Log message",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Course code is already used by another course.\"",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Course not found.\"",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Course name cannot be empty.\"",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~CourseServiceMutationTests&Name~UpdateCourse\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 79 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F28",
+      "method": "CourseService.DeleteCourseAsync",
+      "module": "Course & Syllabus Management",
+      "requirement": "Verify course deletion, preventing deletion if questions/exams are attached to the course, and handling non-existent course ID.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D21:H21, \"P\")",
+        "passedVal": 5,
+        "failedFormula": "=COUNTIF(D21:H21, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D21:H21, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D20:H20, \"N\")",
+        "nVal": 1,
+        "aFormula": "=COUNTIF(D20:H20, \"A\")",
+        "aVal": 4,
+        "bFormula": "=COUNTIF(D20:H20, \"B\")",
+        "bVal": 0,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 5
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05"
+      ],
+      "utcs": 5,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Precondition",
+          "value": "Course Exists with 0 Questions/Exams",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Course Exists with Active Questions",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Course Exists with Active Exams",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Course Record Not in DB",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "courseId",
+          "value": "Valid Course ID (\"course-1\")",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent Course ID (\"non-existent\")",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Null or Empty String",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "`true` (Deleted successfully)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "`false`",
+          "values": [
+            "",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "DB Course",
+          "value": "Record Removed from DB",
+          "values": [
+            "O",
+            "Unchanged",
+            "Unchanged",
+            "None",
+            "None"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ConflictException",
+          "values": [
+            "",
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "NotFoundException",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "BadRequestException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Log message",
+          "value": "None",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Cannot delete course with associated questions.\"",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Cannot delete course with associated exams.\"",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Course not found.\"",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Course ID is required.\"",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "A",
+            "A",
+            "A",
+            "A"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~CourseServiceDeleteTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 5, Skipped: 0, Total: 5, Duration: 71 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F29",
+      "method": "CourseService.GetPagedAsync",
+      "module": "Course & Syllabus Management",
+      "requirement": "Verify course catalog pagination, search filter by code or name, semester filter, and boundary page index handling.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:H20, \"P\")",
+        "passedVal": 5,
+        "failedFormula": "=COUNTIF(D20:H20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:H20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:H19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:H19, \"A\")",
+        "aVal": 1,
+        "bFormula": "=COUNTIF(D19:H19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 5
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05"
+      ],
+      "utcs": 5,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "search",
+          "value": "null (All courses)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"CSD\" (Matches Code)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"Java\" (Matches Name)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"NonExistentTerm\"",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "page / limit",
+          "value": "Default (1 / 20)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Custom Boundary (0 / 0)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "PagedResult<CourseDto>",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Items Count",
+          "value": "Total courses in DB",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "Filtered count (CSD only)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "Filtered count (Java only)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "0 items",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "Normalized Page=1, Limit=20",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~CourseServiceGetPagedTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 5, Skipped: 0, Total: 5, Duration: 73 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F30",
+      "method": "CourseController.GetList",
+      "module": "Course & Syllabus Management",
+      "requirement": "Verify HTTP GET course listing endpoint, query parameter binding, 200 OK response format, and error handling.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:H20, \"P\")",
+        "passedVal": 5,
+        "failedFormula": "=COUNTIF(D20:H20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:H20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:H19, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D19:H19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:H19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 5
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05"
+      ],
+      "utcs": 5,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Authenticated User",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated User",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Query search",
+          "value": "null",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"CSD201\" (Keyword)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"UnknownCourse\"",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Query page/limit",
+          "value": "1 / 20",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "0 / 0 (Invalid boundary)",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ApiResponse.Ok (Paged Courses)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Paging Info",
+          "value": "Normalized Page=1, Limit=20",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "None"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "B",
+            "A"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~CourseControllerGetListTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 5, Skipped: 0, Total: 5, Duration: 69 ms - BE_UnitTests.dll (net8.0)"
+      }
+    }
+  ],
+  "4": [
+    {
+      "id": "F31",
+      "method": "CourseController.Create",
+      "module": "Course Administration",
+      "requirement": "Verify administrative course creation endpoint, DTO forwarding, actor ID extraction, conflict error mapping, and Admin role authorization.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D19:G19, \"P\")",
+        "passedVal": 4,
+        "failedFormula": "=COUNTIF(D19:G19, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D19:G19, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D18:G18, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D18:G18, \"A\")",
+        "aVal": 1,
+        "bFormula": "=COUNTIF(D18:G18, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 4
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04"
+      ],
+      "utcs": 4,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller Role",
+          "value": "Admin with NameIdentifier (\"507f...\")",
+          "values": [
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Admin without NameIdentifier (Null actor)",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "CreateCourseDto",
+          "value": "Valid DTO (Code: \"swp391\", Name: \"Project\")",
+          "values": [
+            "O",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Duplicate Course Code (\"SWP391\")",
+          "values": [
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "400 BadRequest",
+          "values": [
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ApiResponse.Ok (CourseDto)",
+          "values": [
+            "O",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Service Invocation",
+          "value": "CreateCourseAsync Called with Actor ID",
+          "values": [
+            "O",
+            "O",
+            "O (Null Actor)",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Routing & Auth",
+          "value": "Route = \"api/admin/courses\", Role = Admin",
+          "values": [
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "A",
+            "B",
+            "N"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~CourseControllerMutationTests&Name~Create\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 4, Skipped: 0, Total: 4, Duration: 64 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F32",
+      "method": "CourseController.Update",
+      "module": "Course Administration",
+      "requirement": "Verify administrative course update endpoint, ID & DTO forwarding, 404 for non-existent courses, 400 for business rule failures, and Admin role enforcement.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D19:G19, \"P\")",
+        "passedVal": 4,
+        "failedFormula": "=COUNTIF(D19:G19, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D19:G19, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D18:G18, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D18:G18, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D18:G18, \"B\")",
+        "bVal": 0,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 4
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04"
+      ],
+      "utcs": 4,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller Role",
+          "value": "Admin (Authorized)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "courseId",
+          "value": "Valid Existing Course ID (\"c-1\")",
+          "values": [
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent Course ID (\"c-missing\")",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "UpdateCourseDto",
+          "value": "Valid DTO (Name: \"Programming Foundations\")",
+          "values": [
+            "O",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Conflict / Invalid Operation DTO",
+          "values": [
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "400 BadRequest",
+          "values": [
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "404 NotFound",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ApiResponse.Ok (Updated CourseDto)",
+          "values": [
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Routing & Auth",
+          "value": "Route = \"{id}\", Role = Admin",
+          "values": [
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "A",
+            "A",
+            "N"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~CourseControllerMutationTests&Name~Update\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 4, Skipped: 0, Total: 4, Duration: 62 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F33",
+      "method": "CourseController.Delete",
+      "module": "Course Administration",
+      "requirement": "Verify administrative course deletion endpoint, 204 NoContent upon success, 404 for missing courses, null actor handling, and Admin role enforcement.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D19:G19, \"P\")",
+        "passedVal": 4,
+        "failedFormula": "=COUNTIF(D19:G19, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D19:G19, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D18:G18, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D18:G18, \"A\")",
+        "aVal": 1,
+        "bFormula": "=COUNTIF(D18:G18, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 4
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04"
+      ],
+      "utcs": 4,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller Role",
+          "value": "Admin with NameIdentifier (\"507f...\")",
+          "values": [
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Admin without NameIdentifier (Null actor)",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "courseId",
+          "value": "Valid Existing Course ID (\"course-1\")",
+          "values": [
+            "O",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent Course ID (\"missing-course\")",
+          "values": [
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "204 NoContent",
+          "values": [
+            "O",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "404 NotFound",
+          "values": [
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "Empty Body",
+          "values": [
+            "O",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail (\"Course not found...\")",
+          "values": [
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Routing & Auth",
+          "value": "Route = \"{id}\", Produces 204, Role = Admin",
+          "values": [
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "A",
+            "B",
+            "N"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~CourseControllerDeleteTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 4, Skipped: 0, Total: 4, Duration: 59 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F34",
+      "method": "StudentCourseController.List",
+      "module": "Student Course Catalog",
+      "requirement": "Verify student-facing course catalog listing endpoint, filtering only Active status courses, pagination normalization (0,0 -> 1,20), and safe DTO field mapping.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D19:G19, \"P\")",
+        "passedVal": 4,
+        "failedFormula": "=COUNTIF(D19:G19, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D19:G19, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D18:G18, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D18:G18, \"A\")",
+        "aVal": 1,
+        "bFormula": "=COUNTIF(D18:G18, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 4
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04"
+      ],
+      "utcs": 4,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "DB Courses State",
+          "value": "Mix of Active and Inactive Courses",
+          "values": [
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Active Course with Audit Fields",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Repository Failure / Exception",
+          "values": [
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "page / limit",
+          "value": "Valid Page (1 / 20)",
+          "values": [
+            "O",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Invalid Boundary (0 / 0)",
+          "values": [
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "400 BadRequest",
+          "values": [
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Status Filter",
+          "value": "Automatically Enforced Status = \"Active\"",
+          "values": [
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Items Count",
+          "value": "Only Active Courses (Inactive excluded)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "0"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Paging Meta",
+          "value": "Normalized to Page=1, Limit=20",
+          "values": [
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "DTO Privacy",
+          "value": "CreatedBy & LastModifiedBy Stripped (null)",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "B",
+            "N",
+            "A"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~StudentCourseControllerListTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 4, Skipped: 0, Total: 4, Duration: 61 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F35",
+      "method": "StudentDocumentController.List",
+      "module": "Student Document",
+      "requirement": "Verify student uploaded documents listing endpoint, claim extraction, 401 for unauthenticated calls, query pagination forwarding, and error handling.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D19:G19, \"P\")",
+        "passedVal": 4,
+        "failedFormula": "=COUNTIF(D19:G19, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D19:G19, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D18:G18, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D18:G18, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D18:G18, \"B\")",
+        "bVal": 0,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 4
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04"
+      ],
+      "utcs": 4,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Authenticated Student (\"507f...\")",
+          "values": [
+            "O",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated / Missing Claims",
+          "values": [
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Service State",
+          "value": "Normal Repository Response",
+          "values": [
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Repository Throws Exception",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "page / limit",
+          "value": "Default (1 / 20)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Custom Query Values (3 / 7)",
+          "values": [
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "400 BadRequest",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "PaginatedResult<DocumentListItemDto>",
+          "values": [
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Forwarded Args",
+          "value": "Page=3, Limit=7 Passed to Repo",
+          "values": [
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "A",
+            "A",
+            "N"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~StudentDocumentControllerListTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 4, Skipped: 0, Total: 4, Duration: 58 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F36",
+      "method": "StudentDocumentController.GetExtractionDraft",
+      "module": "Student Document",
+      "requirement": "Verify student extraction draft detail endpoint, claim extraction, ownership security check (401 for non-owners), and 404 for missing drafts.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D19:G19, \"P\")",
+        "passedVal": 4,
+        "failedFormula": "=COUNTIF(D19:G19, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D19:G19, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D18:G18, \"N\")",
+        "nVal": 1,
+        "aFormula": "=COUNTIF(D18:G18, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D18:G18, \"B\")",
+        "bVal": 0,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 4
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04"
+      ],
+      "utcs": 4,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Authenticated Document Owner (\"owner-1\")",
+          "values": [
+            "",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Authenticated Non-Owner (\"other-user\")",
+          "values": [
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated / No Token",
+          "values": [
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "documentId",
+          "value": "Valid Document with Active Draft",
+          "values": [
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Valid Document without Draft (Draft = null)",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "404 NotFound",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ExtractionDraftDto (DraftId matches)",
+          "values": [
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail (\"Unauthorized\")",
+          "values": [
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail (\"No permission...\")",
+          "values": [
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail (\"Draft not found\")",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "A",
+            "A",
+            "A",
+            "N"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~StudentDocumentControllerGetExtractionDraftTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 4, Skipped: 0, Total: 4, Duration: 60 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F37",
+      "method": "PracticeService.StartSessionAsync & GetSessionAsync",
+      "module": "MCQ & Practice Session",
+      "requirement": "Verify student practice session lifecycle, resuming active in-progress sessions, creating new MCQ/PE coding sessions, ownership authorization, and draft code restoration.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D23:K23, \"P\")",
+        "passedVal": 8,
+        "failedFormula": "=COUNTIF(D23:K23, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D23:K23, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D22:K22, \"N\")",
+        "nVal": 4,
+        "aFormula": "=COUNTIF(D22:K22, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D22:K22, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 8
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06",
+        "UTCID07",
+        "UTCID08"
+      ],
+      "utcs": 8,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Session State",
+          "value": "Existing InProgress Session",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "No Active Session (Create New)",
+          "values": [
+            "",
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent Session ID",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "User Account",
+          "value": "Existing Student (\"student-1\")",
+          "values": [
+            "O",
+            "",
+            "O",
+            "O",
+            "O",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent User",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Foreign Student (\"student-2\")",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Exam Type",
+          "value": "MCQ Practice Exam (FE Questions)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Coding Practice Exam (PE Questions)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Service Result",
+          "value": "Success = true",
+          "values": [
+            "O",
+            "",
+            "",
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "Success = false",
+          "values": [
+            "",
+            "O",
+            "O",
+            "",
+            "",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Session Payload",
+          "value": "Resumed SessionId & StartTime",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "Newly Created InProgress Session",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "Mapped FE & PE Question Counts",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "O (Drafts)"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Error Message",
+          "value": "None",
+          "values": [
+            "O",
+            "",
+            "",
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"User not found\"",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Exam not found\"",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"You do not have permission...\"",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Session not found\"",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "A",
+            "A",
+            "N",
+            "N",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~PracticeServiceMcqPracticeTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 8, Skipped: 0, Total: 8, Duration: 86 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F38",
+      "method": "PracticeController.Start & GetSession",
+      "module": "MCQ & Practice Session",
+      "requirement": "Verify student practice session HTTP endpoints, start session forwarding, session detail retrieval, 404 for foreign sessions, and routing attributes.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D21:K21, \"P\")",
+        "passedVal": 8,
+        "failedFormula": "=COUNTIF(D21:K21, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D21:K21, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D20:K20, \"N\")",
+        "nVal": 4,
+        "aFormula": "=COUNTIF(D20:K20, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D20:K20, \"B\")",
+        "bVal": 2,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 8
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06",
+        "UTCID07",
+        "UTCID08"
+      ],
+      "utcs": 8,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Endpoint",
+          "value": "POST api/student/practice/start",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "GET api/student/practice/sessions/{id}",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Authenticated Session Owner",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Foreign Student Caller",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Exam / Session",
+          "value": "Valid MCQ Exam / Active Session",
+          "values": [
+            "O",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Missing Exam (Service Failure)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Valid PE Coding Exam / Session",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "400 BadRequest",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "404 NotFound",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "StartSessionResultDto (SessionId)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "PracticeSessionDto (Questions/Drafts)",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Routing",
+          "value": "Route & Authorize Attributes Valid",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "A",
+            "N",
+            "N",
+            "A",
+            "N",
+            "B",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~PracticeControllerMcqPracticeTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 8, Skipped: 0, Total: 8, Duration: 82 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F39",
+      "method": "FESubmissionService.CreateAndEvaluateAsync",
+      "module": "MCQ & Practice Session",
+      "requirement": "Verify multiple-choice answer evaluation engine, case-insensitive and whitespace trimming, multi-select answer comparison, ownership check, and submitted session rejection.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D23:K23, \"P\")",
+        "passedVal": 8,
+        "failedFormula": "=COUNTIF(D23:K23, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D23:K23, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D22:K22, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D22:K22, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D22:K22, \"B\")",
+        "bVal": 2,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 8
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06",
+        "UTCID07",
+        "UTCID08"
+      ],
+      "utcs": 8,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Session Ownership",
+          "value": "Owned Active Session (\"student-1\")",
+          "values": [
+            "O",
+            "",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Foreign Session (\"student-2\")",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Session Status",
+          "value": "InProgress",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Submitted (Completed Session)",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Question Exam",
+          "value": "Question Belongs to Active Exam",
+          "values": [
+            "O",
+            "O",
+            "",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Question Outside Exam",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "User Answer",
+          "value": "Exact Match with Trim/Case (\" c \", \"a\")",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Incorrect Choice (\"B\")",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Partial Choice on Multi-Select (\"A\")",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Empty Answer Array ([])",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Duplicate Options in Array ([\"A\", \"A\"])",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Service Result",
+          "value": "Success = true",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "Success = false",
+          "values": [
+            "",
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Evaluation",
+          "value": "IsCorrect = true",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "IsCorrect = false",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "DB Submission",
+          "value": "Record Saved with Evaluation Result",
+          "values": [
+            "O",
+            "None",
+            "None",
+            "None",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Error Message",
+          "value": "None",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"You do not have permission...\"",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Question does not belong to exam\"",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Session already submitted\"",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "A",
+            "A",
+            "A",
+            "N",
+            "B",
+            "B",
+            "N"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~FESubmissionServiceMcqPracticeTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 8, Skipped: 0, Total: 8, Duration: 88 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F40",
+      "method": "SubmissionController.SubmitFE & GetSessionSubmissions",
+      "module": "MCQ & Practice Session",
+      "requirement": "Verify student answer submission HTTP POST and session submission review HTTP GET endpoints, claim extraction, 401 for unauthenticated calls, combined FE & PE submission aggregations, and routing.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D23:N23, \"P\")",
+        "passedVal": 11,
+        "failedFormula": "=COUNTIF(D23:N23, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D23:N23, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D22:N22, \"N\")",
+        "nVal": 5,
+        "aFormula": "=COUNTIF(D22:N22, \"A\")",
+        "aVal": 4,
+        "bFormula": "=COUNTIF(D22:N22, \"B\")",
+        "bVal": 2,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 11
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06",
+        "UTCID07",
+        "UTCID08",
+        "UTCID09",
+        "UTCID10",
+        "UTCID11"
+      ],
+      "utcs": 11,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Endpoint",
+          "value": "POST api/student/submissions/fe",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "GET api/student/submissions/session/{id}",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Authenticated Student (\"student-1\")",
+          "values": [
+            "O",
+            "",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated / No Token",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Session State",
+          "value": "Active Owned Session",
+          "values": [
+            "O",
+            "O",
+            "",
+            "O",
+            "",
+            "",
+            "O",
+            "O",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Foreign / Unauthorized Session",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Empty Submissions (0 items)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Combined FE + PE Submissions",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "O",
+            "O",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "404 NotFound",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "FESubmissionResultDto (IsCorrect)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "SubmissionSessionResultDto",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Counts",
+          "value": "FE Count = 1, PE Count = 1 (Total = 2)",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "Total Count = 0",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Routing",
+          "value": "Route & Authorize Attributes Valid",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "A",
+            "N",
+            "N",
+            "A",
+            "N",
+            "B",
+            "N",
+            "A",
+            "B",
+            "N"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~SubmissionControllerMcqPracticeTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 11, Skipped: 0, Total: 11, Duration: 94 ms - BE_UnitTests.dll (net8.0)"
+      }
+    }
+  ],
+  "5": [
+    {
+      "id": "F41",
+      "method": "ExamService.CreatePracticeExamAsync",
+      "module": "Exam Setup",
+      "requirement": "Verify practice exam creation, validating question list presence, exam mode assignment (Practice), and course association.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D21:I21, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D21:I21, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D21:I21, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D20:I20, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D20:I20, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D20:I20, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Precondition",
+          "value": "Course Exists in DB (\"CSD201\")",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Course Not Found in DB",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Exam Questions",
+          "value": "Valid FE Question IDs (10 items)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Valid PE Question IDs (3 items)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Empty Question Lists (0 items)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Question Count (1 item)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Whitespace in Title (\" Exam 1 \")",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "ExamDto (Id != null)",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "DB Exam",
+          "value": "Mode = ExamMode.Practice",
+          "values": [
+            "O",
+            "O",
+            "None",
+            "None",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ValidationException",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "NotFoundException",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Log message",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Exam must contain at least 1 question.\"",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"Course not found.\"",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "B",
+            "N"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~ExamServicePracticeSetupTests&Name~CreatePracticeExam\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 74 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F42",
+      "method": "ExamService.GetExamDetailAsync",
+      "module": "Exam Setup",
+      "requirement": "Verify exam detail retrieval, question hydration, point total calculations, and 404 handling for non-existent exams.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "examId",
+          "value": "Valid Existing MCQ Exam ID",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Valid Existing Coding Exam ID",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Valid Mixed Exam ID (FE + PE)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent Exam ID",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Null or Empty String",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Valid ID with Leading/Trailing Spaces",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "ExamDetailDto",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Hydration",
+          "value": "Full Question Metadata Populated",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "None",
+            "None",
+            "O (Trimmed)"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "NotFoundException",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "BadRequestException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~ExamServicePracticeSetupTests&Name~GetExamDetail\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 71 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F43",
+      "method": "ExamController.CreatePracticeExam",
+      "module": "Exam Setup",
+      "requirement": "Verify teacher/student exam generation HTTP POST endpoint, payload validation, and role authorization.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Authenticated Teacher / Student",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated Caller",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Request Body",
+          "value": "Valid CreatePracticeExamDto (MCQ)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Valid CreatePracticeExamDto (PE)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Invalid / Empty DTO",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent Course ID in DTO",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Max Questions Count",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "400 BadRequest",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ApiResponse.Ok (ExamDto)",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~ExamControllerPracticeSetupTests&Name~CreatePracticeExam\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 77 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F44",
+      "method": "ExamController.GetDetail",
+      "module": "Exam Setup",
+      "requirement": "Verify HTTP GET exam detail endpoint, response mapping, 404 for non-existent exams, and 401 for unauthorized calls.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D19:H19, \"P\")",
+        "passedVal": 5,
+        "failedFormula": "=COUNTIF(D19:H19, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D19:H19, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D18:H18, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D18:H18, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D18:H18, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 5
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05"
+      ],
+      "utcs": 5,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Authenticated User",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated Caller",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "examId",
+          "value": "Valid Existing Exam ID",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent Exam ID",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Whitespace ID (\" exam-1 \")",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "404 NotFound",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ApiResponse.Ok (ExamDetailDto)",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~ExamControllerPracticeSetupTests&Name~GetDetail\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 5, Skipped: 0, Total: 5, Duration: 68 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F45",
+      "method": "PESubmissionService.SubmitCodingAsync",
+      "module": "Coding Practice & Submissions",
+      "requirement": "Verify student PE coding solution submission, sandbox compilation & test execution, scoring calculation, hidden test evaluation, and attempt incrementation.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D24:L24, \"P\")",
+        "passedVal": 9,
+        "failedFormula": "=COUNTIF(D24:L24, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D24:L24, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D23:L23, \"N\")",
+        "nVal": 4,
+        "aFormula": "=COUNTIF(D23:L23, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D23:L23, \"B\")",
+        "bVal": 2,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 9
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06",
+        "UTCID07",
+        "UTCID08",
+        "UTCID09"
+      ],
+      "utcs": 9,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Session State",
+          "value": "Owned Active InProgress Session",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Foreign / Unauthorized Session",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Code Quality",
+          "value": "All Visible + Hidden Tests Pass",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Visible Tests Pass, Hidden Fail",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Compiler Error / Syntax Bug",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Runtime Error (Zero Division)",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Time Limit Exceeded (TLE)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Empty Code File (0 bytes)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Exact Max Score Boundary",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Multi-File Solution Package",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "PESubmissionResultDto",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Status",
+          "value": "Passed (Full score)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "Partial (Reduced score)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "Failed (0 score)",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            "",
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Attempt Count",
+          "value": "Incremented (+1)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "None",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ForbiddenException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "N",
+            "A",
+            "A",
+            "B",
+            "B",
+            "N"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~PESubmissionServiceCodingPracticeTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 9, Skipped: 0, Total: 9, Duration: 98 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F46",
+      "method": "PECodeRunService.ExecuteDryRunAsync",
+      "module": "Code Execution",
+      "requirement": "Verify student dry run execution with custom test cases or sample test cases without persisting permanent submission records or deducting quota.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D22:J22, \"P\")",
+        "passedVal": 7,
+        "failedFormula": "=COUNTIF(D22:J22, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D22:J22, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D21:J21, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D21:J21, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D21:J21, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 7
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06",
+        "UTCID07"
+      ],
+      "utcs": 7,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Test Input",
+          "value": "Custom Stdin Input (\"5 10\")",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Sample Test Cases from Question",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Compilation Error in Dry Run",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Infinite Loop / Timeout",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Missing Code Payload",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated Caller",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Large Output (100KB)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "CodeRunResultDto",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Output",
+          "value": "Expected Stdout Stream",
+          "values": [
+            "O",
+            "O",
+            "Error",
+            "Timeout",
+            "None",
+            "None",
+            "Truncated"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "DB Side-effects",
+          "value": "0 Submissions Created (Isolated)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "None",
+            "None",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ValidationException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "UnauthorizedException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~PECodeRunServiceTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 7, Skipped: 0, Total: 7, Duration: 84 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F47",
+      "method": "SubmissionController.SubmitPE",
+      "module": "Coding Practice & Submissions",
+      "requirement": "Verify student PE submission HTTP POST endpoint, claim extraction, 401 for unauthenticated calls, payload validation, and service delegating.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Authenticated Student (\"student-1\")",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated / Missing Claim",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Request Body",
+          "value": "Valid PESubmissionInputDto",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "O (Boundary)"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent Session ID",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Empty Code Files Array",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "404 NotFound",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "400 BadRequest",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ApiResponse.Ok (PESubmissionResultDto)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "O",
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "A",
+            "A",
+            "A",
+            "N",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~SubmissionControllerCodingPracticeTests&Name~SubmitPE\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 73 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F48",
+      "method": "SubmissionController.RunCode",
+      "module": "Code Execution",
+      "requirement": "Verify student dry run execution HTTP POST endpoint, validation of code snippets, execution result return, and error mapping.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:H20, \"P\")",
+        "passedVal": 5,
+        "failedFormula": "=COUNTIF(D20:H20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:H20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:H19, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D19:H19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:H19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 5
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05"
+      ],
+      "utcs": 5,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Authenticated Student",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated Caller",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Request Body",
+          "value": "Valid RunCodeDto with Custom Stdin",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Valid RunCodeDto with Question TestCases",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Empty Code String",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Large Code Payload",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "400 BadRequest",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ApiResponse.Ok (CodeRunResultDto)",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~SubmissionControllerCodingPracticeTests&Name~RunCode\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 5, Skipped: 0, Total: 5, Duration: 69 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F49",
+      "method": "ExecutionFeedbackDiagnosticParser.Parse",
+      "module": "Code Execution & Diagnostics",
+      "requirement": "Verify diagnostic parsing of Java/C++ compiler and runtime errors, extracting error line numbers, error types (Syntax, NPE, OutOfBounds), and cleaning raw compiler logs.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D21:I21, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D21:I21, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D21:I21, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D20:I20, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D20:I20, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D20:I20, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Raw Log Format",
+          "value": "Java javac Compilation Error",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Java NullPointerException StackTrace",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "C++ g++ Compilation Error",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Null or Empty Error String",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Malformed Unrecognized Error Log",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Extremely Long StackTrace (50KB)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "DiagnosticReport (Line, Message, Type)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Extracted Line",
+          "value": "Positive Line Number (e.g. 15)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "null",
+            "null",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Error Category",
+          "value": "\"CompilationError\"",
+          "values": [
+            "O",
+            "",
+            "O",
+            "\"Unknown\"",
+            "\"Unknown\"",
+            "\"RuntimeError\""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"RuntimeError\"",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~ExecutionFeedbackDiagnosticParserTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 65 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F50",
+      "method": "CodeMentorService.GetHintAsync",
+      "module": "AI Code Mentor",
+      "requirement": "Verify AI Code Mentor hint generation, Socratic hint level progression (Level 1: General, Level 2: Specific, Level 3: Code direction), balance deduction check, and rate limiting.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D23:J23, \"P\")",
+        "passedVal": 7,
+        "failedFormula": "=COUNTIF(D23:J23, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D23:J23, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D22:J22, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D22:J22, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D22:J22, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 7
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06",
+        "UTCID07"
+      ],
+      "utcs": 7,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "User Balance",
+          "value": "Sufficient AI Balance (> 500 VND)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Insufficient AI Balance (< 500 VND)",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Hint Level",
+          "value": "Level 1 (Conceptual Hint)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Level 2 (Algorithm Direction)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Level 3 (Specific Fix Hint)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Invalid Level (Level 5)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Rate Limit Exceeded (5 req/min)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Balance (Exact 500 VND)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "CodeMentorHintDto",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Wallet",
+          "value": "Fee Deducted from AI Wallet",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "No",
+            "No",
+            "No",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "InsufficientBalanceException",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ValidationException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "RateLimitExceededException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~CodeMentorServiceTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 7, Skipped: 0, Total: 7, Duration: 91 ms - BE_UnitTests.dll (net8.0)"
+      }
+    }
+  ],
+  "6": [
+    {
+      "id": "F51",
+      "method": "SubmissionController.GetMentorHint",
+      "module": "AI Code Mentor",
+      "requirement": "Verify student AI Code Mentor HTTP POST endpoint, claim extraction, 401 for unauthenticated calls, 402 for payment/balance failure, and hint response delivery.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Authenticated Student (\"student-1\")",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated / No Token",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Request Body",
+          "value": "Valid GetMentorHintDto (Level 1)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Valid GetMentorHintDto (Level 3)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Insufficient Balance Trigger",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent Session ID",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Max Prompt Length",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "402 PaymentRequired / 400 BadReq",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "404 NotFound",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ApiResponse.Ok (CodeMentorHintDto)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "O",
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "A",
+            "A",
+            "A",
+            "N",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~SubmissionControllerMentorTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 76 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F52",
+      "method": "GamificationService.RecordPracticeActivityAsync",
+      "module": "Gamification & Analytics",
+      "requirement": "Verify student daily practice streak tracking, consecutive day incrementation, streak reset on skipped days, same-day idempotency, and EXP point rewards.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D22:I22, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D22:I22, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D22:I22, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D21:I21, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D21:I21, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D21:I21, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Last Activity",
+          "value": "Yesterday (Consecutive day)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Today (Same calendar day)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "3 Days Ago (Streak broken)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "First Time Ever (No prior history)",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Invalid User ID",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Midnight Boundary (23:59:59 -> 00:00:01)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "GamificationStatsDto",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Streak Count",
+          "value": "Incremented (+1)",
+          "values": [
+            "O",
+            "Unchanged",
+            "Reset to 1",
+            "Initialized (1)",
+            "None",
+            "Incremented (+1)"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "EXP Points",
+          "value": "Awarded (+50 EXP)",
+          "values": [
+            "O",
+            "No (+0)",
+            "Awarded (+50)",
+            "Awarded (+50)",
+            "None",
+            "Awarded (+50)"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "NotFoundException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~GamificationServiceTests&Name~RecordPracticeActivity\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 82 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F53",
+      "method": "GamificationService.GetStudentStatsAsync",
+      "module": "Gamification & Analytics",
+      "requirement": "Verify student analytics overview query, total submissions count, accuracy rate, current streak, badge achievements, and non-existent student fallback.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:H20, \"P\")",
+        "passedVal": 5,
+        "failedFormula": "=COUNTIF(D20:H20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:H20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:H19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:H19, \"A\")",
+        "aVal": 1,
+        "bFormula": "=COUNTIF(D19:H19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 5
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05"
+      ],
+      "utcs": 5,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "User State",
+          "value": "Active Student with Submissions & Badges",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "New Student with 0 Submissions (0% rate)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Top Rank Student (Leaderboard #1)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent Student ID",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Valid ID with Leading/Trailing Spaces",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "StudentStatsDto",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Stats Accuracy",
+          "value": "Calculated Correctly (e.g. 85.5%)",
+          "values": [
+            "O",
+            "0.0%",
+            "100.0%",
+            "None",
+            "Calculated"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "NotFoundException",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~GamificationServiceTests&Name~GetStudentStats\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 5, Skipped: 0, Total: 5, Duration: 70 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F54",
+      "method": "StudentAnalyticsGamificationController.GetStats",
+      "module": "Gamification & Analytics",
+      "requirement": "Verify student analytics & stats HTTP GET endpoint, claim extraction, 401 for unauthenticated calls, and DTO payload delivery.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D19:G19, \"P\")",
+        "passedVal": 4,
+        "failedFormula": "=COUNTIF(D19:G19, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D19:G19, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D18:G18, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D18:G18, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D18:G18, \"B\")",
+        "bVal": 0,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 4
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04"
+      ],
+      "utcs": 4,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Authenticated Student (\"student-1\")",
+          "values": [
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated / No Token",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Service State",
+          "value": "Normal Stats Return",
+          "values": [
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Student Profile Not Found",
+          "values": [
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "404 NotFound",
+          "values": [
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ApiResponse.Ok (StudentStatsDto)",
+          "values": [
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "A",
+            "A",
+            "N"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~StudentAnalyticsGamificationControllerTests&Name~GetStats\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 4, Skipped: 0, Total: 4, Duration: 62 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F55",
+      "method": "StudentAnalyticsGamificationController.GetLeaderboard",
+      "module": "Gamification & Analytics",
+      "requirement": "Verify student leaderboard ranking HTTP GET endpoint, pagination parameters, sorting by points/streak descending, and 401 handling.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D19:G19, \"P\")",
+        "passedVal": 4,
+        "failedFormula": "=COUNTIF(D19:G19, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D19:G19, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D18:G18, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D18:G18, \"A\")",
+        "aVal": 1,
+        "bFormula": "=COUNTIF(D18:G18, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 4
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04"
+      ],
+      "utcs": 4,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Authenticated User",
+          "values": [
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated Caller",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Query page/limit",
+          "value": "Default (1 / 10)",
+          "values": [
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Custom Valid (2 / 5)",
+          "values": [
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Invalid Lower Bound (0 / 0)",
+          "values": [
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ApiResponse.Ok (LeaderboardDto)",
+          "values": [
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Ordering",
+          "value": "Sorted Descending by Score/Points",
+          "values": [
+            "O",
+            "O",
+            "None",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~StudentAnalyticsGamificationControllerTests&Name~GetLeaderboard\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 4, Skipped: 0, Total: 4, Duration: 60 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F56",
+      "method": "QuestionService.ListQuestionsAsync",
+      "module": "Question Bank Management",
+      "requirement": "Verify teacher/admin question bank query, filtering by CourseId, Type (MCQ/Coding), Difficulty, Tags, and Pagination.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D21:I21, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D21:I21, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D21:I21, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D20:I20, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D20:I20, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D20:I20, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Filter courseId",
+          "value": "null (All courses)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"CSD201\" (DSA course)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Filter type",
+          "value": "\"MCQ\"",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"Coding\"",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Filter tag",
+          "value": "\"tree\"",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "page / limit",
+          "value": "Default (1 / 20)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Custom Bounds (0 / 0)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "PagedResult<QuestionDto>",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Items Count",
+          "value": "Matches filter condition",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~QuestionControllerQuestionBankManagementTests&Name~List\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 79 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F57",
+      "method": "QuestionController.ListQuestions",
+      "module": "Question Bank Management",
+      "requirement": "Verify teacher/admin question bank listing HTTP GET endpoint, query param binding, role authorization, and response formatting.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Authenticated Teacher / Admin",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated Caller",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Query courseId",
+          "value": "null",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"CSD201\"",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Query type",
+          "value": "\"PE\"",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Query search",
+          "value": "\"Binary Search\"",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ApiResponse.Ok (PagedQuestions)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "N",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~QuestionControllerQuestionBankManagementTests&Name~GetList\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 75 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F58",
+      "method": "QuestionController.CreateQuestion",
+      "module": "Question Bank Management",
+      "requirement": "Verify teacher question creation HTTP POST endpoint, payload validation (title, options, correct answer, test cases), and Teacher/Admin authorization.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D21:I21, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D21:I21, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D21:I21, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D20:I20, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D20:I20, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D20:I20, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Authenticated Teacher",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated Caller",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Question Type",
+          "value": "Valid MCQ Question DTO",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Valid PE Coding Question DTO",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Missing Correct Answer in MCQ",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Missing Test Cases in PE",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary 100 Options Count",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "400 BadRequest",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ApiResponse.Ok (QuestionDto)",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~QuestionControllerQuestionBankManagementTests&Name~Create\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 77 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F59",
+      "method": "QuestionGenerationReviewService.GenerateQuestionsAsync",
+      "module": "AI Question Generation",
+      "requirement": "Verify AI syllabus-to-question generator, Bloom taxonomy distribution, difficulty balance, draft creation, and teacher review workflow states.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D23:J23, \"P\")",
+        "passedVal": 7,
+        "failedFormula": "=COUNTIF(D23:J23, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D23:J23, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D22:J22, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D22:J22, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D22:J22, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 7
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06",
+        "UTCID07"
+      ],
+      "utcs": 7,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Source Document",
+          "value": "Valid Extracted Document ID",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent Document ID",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Target Type",
+          "value": "MCQ Questions (5 items)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "PE Coding Questions (2 items)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Mixed Questions (MCQ + PE)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "AI Provider",
+          "value": "Provider Healthy (JSON valid)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Provider Returns Malformed JSON",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Teacher Balance Insufficient",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Count Bounds",
+          "value": "Maximum Allowed Count (20 items)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "QuestionGenerationDraftDto",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Draft Status",
+          "value": "\"needs_revision\" / \"pending_review\"",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "None",
+            "None",
+            "None",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "NotFoundException",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "AIProviderException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "InsufficientBalanceException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~QuestionGenerationReviewServiceTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 7, Skipped: 0, Total: 7, Duration: 96 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F60",
+      "method": "AIQuestionGenerationController.GenerateDraft",
+      "module": "AI Question Generation",
+      "requirement": "Verify teacher AI question generation initiation HTTP POST endpoint, document ID validation, generation prompt forwarding, and Teacher authorization.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Authenticated Teacher",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated Caller",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Request Body",
+          "value": "Valid GenerateQuestionsDto (MCQ)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Valid GenerateQuestionsDto (PE)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Missing Document ID",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Generation Count <= 0 (Invalid)",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Max Count (20 items)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "400 BadRequest",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ApiResponse.Ok (DraftDto)",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~AIQuestionGenerationControllerTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 84 ms - BE_UnitTests.dll (net8.0)"
+      }
+    }
+  ],
+  "7": [
+    {
+      "id": "F61",
+      "method": "AIRetrievalController.SearchDocuments",
+      "module": "AI RAG Retrieval",
+      "requirement": "Verify AI RAG semantic search endpoint, query forwarding, topK result limits, threshold filtering, and Teacher/Admin authorization.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D19:G19, \"P\")",
+        "passedVal": 4,
+        "failedFormula": "=COUNTIF(D19:G19, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D19:G19, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D18:G18, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D18:G18, \"A\")",
+        "aVal": 1,
+        "bFormula": "=COUNTIF(D18:G18, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 4
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04"
+      ],
+      "utcs": 4,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Authenticated Teacher",
+          "values": [
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated Caller",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Query search",
+          "value": "Valid Query (\"Binary Search Tree\")",
+          "values": [
+            "O",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Empty Search Query (\"\")",
+          "values": [
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "topK / threshold",
+          "value": "Standard Valid (5 / 0.7)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Max topK (50 items)",
+          "values": [
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "400 BadRequest",
+          "values": [
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ApiResponse.Ok (List<RetrievedChunkDto>)",
+          "values": [
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~AIRetrievalControllerBrowsingTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 4, Skipped: 0, Total: 4, Duration: 62 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F62",
+      "method": "AIRetrievalController.GetSystemDocuments",
+      "module": "AI RAG Retrieval",
+      "requirement": "Verify retrieval of curated system documents and global knowledge base chunks used for default RAG context.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D19:G19, \"P\")",
+        "passedVal": 4,
+        "failedFormula": "=COUNTIF(D19:G19, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D19:G19, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D18:G18, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D18:G18, \"A\")",
+        "aVal": 1,
+        "bFormula": "=COUNTIF(D18:G18, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 4
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04"
+      ],
+      "utcs": 4,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Authenticated User",
+          "values": [
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated Caller",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "courseId",
+          "value": "null (Global system docs)",
+          "values": [
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"CSD201\" (Course-scoped system docs)",
+          "values": [
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Empty CourseId (\"\")",
+          "values": [
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ApiResponse.Ok (List<SystemDocDto>)",
+          "values": [
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~AIRetrievalControllerSystemDocumentsTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 4, Skipped: 0, Total: 4, Duration: 58 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F63",
+      "method": "RetrievalPlannerService.SearchAsync",
+      "module": "AI RAG Retrieval",
+      "requirement": "Verify semantic embedding search, cosine similarity ranking, threshold filtering (>= 0.7), and chunk assembling.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Vector DB",
+          "value": "Chunks with High Similarity (> 0.85)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Chunks with Moderate Similarity (0.75)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Chunks below Threshold (< 0.7)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Vector DB Connection Timeout",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Empty Search Query String",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Exact Threshold Boundary (0.7000)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "List<RetrievedChunkDto>",
+          "values": [
+            "O",
+            "O",
+            "O (0 items)",
+            "",
+            "",
+            "O (1 item)"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Ordering",
+          "value": "Sorted by Similarity Descending",
+          "values": [
+            "O",
+            "O",
+            "None",
+            "None",
+            "None",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "VectorDbException",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ValidationException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~RetrievalPlannerServiceBrowsingTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 76 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F64",
+      "method": "RetrievalPlannerService.GetSystemDocumentsAsync",
+      "module": "AI RAG Retrieval",
+      "requirement": "Verify system documents query by courseId, active status filtering, and fallback to global documents if course has none.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D19:G19, \"P\")",
+        "passedVal": 4,
+        "failedFormula": "=COUNTIF(D19:G19, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D19:G19, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D18:G18, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D18:G18, \"A\")",
+        "aVal": 1,
+        "bFormula": "=COUNTIF(D18:G18, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 4
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04"
+      ],
+      "utcs": 4,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "courseId",
+          "value": "Course with Active System Docs",
+          "values": [
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Course with 0 System Docs (Global fallback)",
+          "values": [
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "DB Connection Failure",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "null (Global Docs Query)",
+          "values": [
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "List<SystemDocDto>",
+          "values": [
+            "O",
+            "O (Global)",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "DatabaseException",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~RetrievalPlannerServiceSystemDocumentsTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 4, Skipped: 0, Total: 4, Duration: 60 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F65",
+      "method": "RetrievalPlannerService.GetCachedContextAsync",
+      "module": "AI RAG Retrieval",
+      "requirement": "Verify in-memory/Redis caching of RAG context vectors, cache hit retrieval, cache miss calculation, and TTL expiration.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:H20, \"P\")",
+        "passedVal": 5,
+        "failedFormula": "=COUNTIF(D20:H20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:H20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:H19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:H19, \"A\")",
+        "aVal": 1,
+        "bFormula": "=COUNTIF(D19:H19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 5
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05"
+      ],
+      "utcs": 5,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Cache State",
+          "value": "Key Exists (Cache Hit)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Key Missing (Cache Miss)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Cache Key Expired (TTL reached)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Redis Server Offline",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Large Context (250KB)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "CachedContextDto",
+          "values": [
+            "O",
+            "O (Calculated)",
+            "O (Recalculated)",
+            "O (Fallback)",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Execution",
+          "value": "Vector DB Queried",
+          "values": [
+            "No",
+            "Yes",
+            "Yes",
+            "Yes",
+            "Yes"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~RetrievalPlannerServiceCachingTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 5, Skipped: 0, Total: 5, Duration: 64 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F66",
+      "method": "StudentDocumentController.BrowsePublicDocuments",
+      "module": "Knowledge Base & Document",
+      "requirement": "Verify student public syllabus document browsing endpoint, course filtering, pagination, and claim validation.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:H20, \"P\")",
+        "passedVal": 5,
+        "failedFormula": "=COUNTIF(D20:H20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:H20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:H19, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D19:H19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:H19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 5
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05"
+      ],
+      "utcs": 5,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Authenticated Student",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated Caller",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "courseId",
+          "value": "null (All courses)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"CSD201\" (DSA Course)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"NonExistentCourse\"",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "page / limit",
+          "value": "Default (1 / 20)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Invalid Lower Bounds (0 / 0)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ApiResponse.Ok (PagedPublicDocs)",
+          "values": [
+            "O",
+            "O",
+            "O (0 items)",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~StudentDocumentControllerBrowsingTests&Name~Browse\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 5, Skipped: 0, Total: 5, Duration: 69 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F67",
+      "method": "StudentDocumentController.Search",
+      "module": "Knowledge Base & Document",
+      "requirement": "Verify student keyword/title document search endpoint, course scoping, and 401 unauthorized handling.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:H20, \"P\")",
+        "passedVal": 5,
+        "failedFormula": "=COUNTIF(D20:H20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:H20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:H19, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D19:H19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:H19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 5
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05"
+      ],
+      "utcs": 5,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Authenticated Student",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated Caller",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "keyword",
+          "value": "\"Syllabus\" (Matching title)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"Exam Guide\" (Matching course doc)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"UnknownDoc\" (0 matches)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Whitespace (\" syllabus \")",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ApiResponse.Ok (List<DocumentDto>)",
+          "values": [
+            "O",
+            "O",
+            "O (0 items)",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~StudentDocumentControllerBrowsingTests&Name~Search\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 5, Skipped: 0, Total: 5, Duration: 67 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F68",
+      "method": "AIVndBillingService.GetRatesAsync",
+      "module": "AI Billing (VND)",
+      "requirement": "Verify conversion rates retrieval for AI prompt and completion tokens to VND per model, and fallback default pricing.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D19:G19, \"P\")",
+        "passedVal": 4,
+        "failedFormula": "=COUNTIF(D19:G19, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D19:G19, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D18:G18, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D18:G18, \"A\")",
+        "aVal": 1,
+        "bFormula": "=COUNTIF(D18:G18, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 4
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04"
+      ],
+      "utcs": 4,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "modelName",
+          "value": "\"gpt-4o-mini\" (Configured model)",
+          "values": [
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"claude-3-5-sonnet\" (Custom pricing)",
+          "values": [
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"unconfigured-model\" (Fallback trigger)",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Whitespace (\" gpt-4o-mini \")",
+          "values": [
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "TokenPricingRateDto",
+          "values": [
+            "O",
+            "O",
+            "O (Default)",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "PromptRate",
+          "value": "Rate per 1k input tokens (e.g. 3.5 VND)",
+          "values": [
+            "O",
+            "O",
+            "Default",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "CompletionRate",
+          "value": "Rate per 1k output tokens (e.g. 14 VND)",
+          "values": [
+            "O",
+            "O",
+            "Default",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~AIVndBillingServiceConfigurationTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 4, Skipped: 0, Total: 4, Duration: 58 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F69",
+      "method": "AIVndBillingService.EnsureMinimumBalanceAsync",
+      "module": "AI Billing (VND)",
+      "requirement": "Verify student wallet pre-flight check before initiating AI generation or mentor hints, requiring minimum balance threshold (e.g. 500 VND).",
+      "summary": {
+        "passedFormula": "=COUNTIF(D19:G19, \"P\")",
+        "passedVal": 4,
+        "failedFormula": "=COUNTIF(D19:G19, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D19:G19, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D18:G18, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D18:G18, \"A\")",
+        "aVal": 1,
+        "bFormula": "=COUNTIF(D18:G18, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 4
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04"
+      ],
+      "utcs": 4,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Wallet Balance",
+          "value": "Balance >= 500 VND (e.g. 10,000 VND)",
+          "values": [
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Balance < 500 VND (e.g. 200 VND)",
+          "values": [
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Exact Minimum Boundary (500 VND)",
+          "values": [
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "User Record",
+          "value": "User Record Missing in DB",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "`true` (Allowed to proceed)",
+          "values": [
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "`false`",
+          "values": [
+            "",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "InsufficientBalanceException",
+          "values": [
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "NotFoundException",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~AIVndBillingServiceEnsureMinimumBalanceTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 4, Skipped: 0, Total: 4, Duration: 59 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F70",
+      "method": "AIVndBillingService.ChargeTokensAsync",
+      "module": "AI Billing (VND)",
+      "requirement": "Verify token-to-VND conversion calculation, wallet balance deduction, transaction logging with feature tagging (QGen/CodeMentor), and atomicity.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D21:H21, \"P\")",
+        "passedVal": 5,
+        "failedFormula": "=COUNTIF(D21:H21, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D21:H21, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D20:H20, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D20:H20, \"A\")",
+        "aVal": 1,
+        "bFormula": "=COUNTIF(D20:H20, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 5
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05"
+      ],
+      "utcs": 5,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Feature Tag",
+          "value": "Feature: CodeMentor",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Feature: QuestionGeneration",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Token Count",
+          "value": "Standard (500 prompt, 200 comp)",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "High Volume (10,000 prompt tokens)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Balance Less Than Charge Amount",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Zero Tokens (0 prompt, 0 comp)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "BillingReceiptDto (AmountVnd)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O (0 VND)"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Wallet DB",
+          "value": "Balance Decremented Exactly",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "Unchanged",
+            "Unchanged"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Audit Log",
+          "value": "AIBillingTransaction Record Inserted",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "None",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "InsufficientBalanceException",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "B",
+            "A",
+            "N"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~AIVndBillingServiceChargeTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 5, Skipped: 0, Total: 5, Duration: 68 ms - BE_UnitTests.dll (net8.0)"
+      }
+    }
+  ],
+  "8": [
+    {
+      "id": "F71",
+      "method": "AIFeatureRoutingAndPromptService.ResolveRouteAsync",
+      "module": "AI Gateway & Routing",
+      "requirement": "Verify AI model resolution by feature (QGen vs CodeMentor), primary model selection, fallback model fallback when primary is unavailable, and temperature/token configurations.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:H20, \"P\")",
+        "passedVal": 5,
+        "failedFormula": "=COUNTIF(D20:H20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:H20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:H19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:H19, \"A\")",
+        "aVal": 1,
+        "bFormula": "=COUNTIF(D19:H19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 5
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05"
+      ],
+      "utcs": 5,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Feature Key",
+          "value": "\"QuestionGeneration\"",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"CodeMentor\"",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Primary Model",
+          "value": "Healthy / Active (\"gpt-4o\")",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Inactive / Degraded Provider",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unknown Feature Key",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Fallback Model",
+          "value": "Healthy / Active (\"claude-3-5-sonnet\")",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "ResolvedAIRouteDto",
+          "values": [
+            "O",
+            "O",
+            "O (Fallback)",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Selected Model",
+          "value": "\"gpt-4o\"",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "\"gpt-4o\""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "\"claude-3-5-sonnet\"",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ArgumentException",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "B",
+            "A",
+            "N"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~AIFeatureRoutingAndPromptServiceTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 5, Skipped: 0, Total: 5, Duration: 64 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F72",
+      "method": "AIGatekeeperService.CheckAccessAndThrottleAsync",
+      "module": "AI Gateway & Rate Limiting",
+      "requirement": "Verify rate limiting per student (RPM/TPM limits), sliding window enforcement, circuit breaker trip on error rate spikes, and quota replenishment.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D21:H21, \"P\")",
+        "passedVal": 5,
+        "failedFormula": "=COUNTIF(D21:H21, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D21:H21, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D20:H20, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D20:H20, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D20:H20, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 5
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05"
+      ],
+      "utcs": 5,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Request Count",
+          "value": "Within Limit (< 10 req/min)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Exceeded Limit (> 10 req/min)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Exact Boundary Limit (10 req/min)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Circuit Breaker",
+          "value": "Normal / Closed State",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Tripped / Open State (High Error Rate)",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "User Account",
+          "value": "Banned / Disabled User",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "GatekeeperResult (Allowed = true)",
+          "values": [
+            "O",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "GatekeeperResult (Allowed = false)",
+          "values": [
+            "",
+            "O",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "RateLimitExceededException",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ServiceUnavailableException",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ForbiddenException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "A",
+            "B",
+            "A",
+            "A"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~AIGatekeeperServiceTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 5, Skipped: 0, Total: 5, Duration: 62 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F73",
+      "method": "AIProviderModelCatalogService.GetActiveModelsAsync",
+      "module": "AI Provider Catalog",
+      "requirement": "Verify multi-provider model catalog query (OpenAI, Anthropic, DeepSeek, Local LLM), health state checking, and enabled model filtering.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:H20, \"P\")",
+        "passedVal": 5,
+        "failedFormula": "=COUNTIF(D20:H20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:H20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:H19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:H19, \"A\")",
+        "aVal": 1,
+        "bFormula": "=COUNTIF(D19:H19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 5
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05"
+      ],
+      "utcs": 5,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Catalog State",
+          "value": "3 Enabled Providers (OpenAI, Anthropic)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "1 Provider Disabled / Degraded",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Empty Catalog (0 providers configured)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Single Provider Active",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "DB Connection",
+          "value": "Database Unreachable",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "List<AIModelCatalogDto>",
+          "values": [
+            "O",
+            "O",
+            "O (0 items)",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Items Count",
+          "value": "3",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "2 (Active only)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "DatabaseException",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~AIProviderModelCatalogServiceTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 5, Skipped: 0, Total: 5, Duration: 60 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F74",
+      "method": "AdminAIController.GetCatalog",
+      "module": "Admin AI Governance",
+      "requirement": "Verify administrative AI model catalog management endpoint, listing providers, model versions, and Admin authorization.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller Role",
+          "value": "Admin (Authorized)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-Admin / Student Caller",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Catalog State",
+          "value": "Multiple Active Providers",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Filter by Provider (\"openai\")",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Empty Filter Match",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Service Failure / Exception",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Large Provider List",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "403 Forbidden / 401 Unauth",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "500 InternalServerError",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ApiResponse.Ok (CatalogList)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~AdminAIControllerTests&Name~GetCatalog\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 74 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F75",
+      "method": "AdminAIController.UpdateModelConfig",
+      "module": "Admin AI Governance",
+      "requirement": "Verify administrative model configuration updates (Enable/Disable, MaxTokens, Temperature, ApiKey reference), payload validation, and Admin authorization.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Admin (Authorized)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated Caller",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "modelId",
+          "value": "Valid Existing Model (\"gpt-4o\")",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent Model ID",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Config DTO",
+          "value": "Valid Params (Temp: 0.7, MaxTok: 4096)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Enable/Disable Toggle (IsEnabled = false)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Invalid Bounds (Temp: 2.5, MaxTok: -1)",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Max Tokens (128,000)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "404 NotFound",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "400 BadRequest",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ApiResponse.Ok (UpdatedModelDto)",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~AdminAIControllerTests&Name~UpdateModelConfig\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 76 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F76",
+      "method": "AdminAIController.GetPricing",
+      "module": "Admin AI Governance",
+      "requirement": "Verify administrative token pricing rates endpoint, model pricing table query, and Admin role authorization.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D19:I19, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D19:I19, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D19:I19, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D18:I18, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D18:I18, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D18:I18, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Admin (Authorized)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated Caller",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Model Filter",
+          "value": "null (All model pricing)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"gpt-4o-mini\" (Single model pricing)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"unconfigured-model\"",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "DB Query Error",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Whitespace (\" gpt-4o \")",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "500 InternalServerError",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ApiResponse.Ok (PricingTableDto)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~AdminAIControllerTests&Name~GetPricing\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 73 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F77",
+      "method": "AdminAIController.UpdatePricing",
+      "module": "Admin AI Governance",
+      "requirement": "Verify administrative token price adjustment HTTP PUT endpoint, rates validation (positive values), and Admin role authorization.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Admin (Authorized)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated Caller",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "modelName",
+          "value": "\"gpt-4o\" (Valid model)",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent Model Name",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Pricing Rates",
+          "value": "Valid Rates (Prompt: 5 VND, Comp: 20)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Negative Rates (Prompt: -1 VND)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Decimal Micro Rates (Prompt: 0.005)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "400 BadRequest",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "404 NotFound",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ApiResponse.Ok (UpdatedPricingDto)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "O",
+            "O",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "A",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~AdminAIControllerTests&Name~UpdatePricing\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 71 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F78",
+      "method": "AdminAIController.GetUsageStats",
+      "module": "Admin AI Governance",
+      "requirement": "Verify administrative AI consumption statistics endpoint, date range filtering, breakdown by feature/model/student, and total VND cost calculations.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D21:K21, \"P\")",
+        "passedVal": 8,
+        "failedFormula": "=COUNTIF(D21:K21, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D21:K21, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D20:K20, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D20:K20, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D20:K20, \"B\")",
+        "bVal": 2,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 8
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06",
+        "UTCID07",
+        "UTCID08"
+      ],
+      "utcs": 8,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Admin (Authorized)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated Caller",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Date Range",
+          "value": "null (All time usage)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Valid Range (Last 7 Days)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Invalid Range (From > To)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Filter Feature",
+          "value": "\"CodeMentor\"",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"QuestionGeneration\"",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Single Day (From == To)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "High Volume Aggregation (1M Tokens)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "",
+            "O",
+            "O",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "400 BadRequest",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ApiResponse.Ok (AIUsageStatsDto)",
+          "values": [
+            "O",
+            "O",
+            "",
+            "O",
+            "O",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "N",
+            "N",
+            "A",
+            "B",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~AdminAIControllerTests&Name~GetUsageStats\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 8, Skipped: 0, Total: 8, Duration: 82 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F79",
+      "method": "AdminAIController.GetRoutingRules",
+      "module": "Admin AI Governance",
+      "requirement": "Verify administrative AI routing rules query endpoint, mapping feature keys to primary & fallback models.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D19:I19, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D19:I19, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D19:I19, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D18:I18, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D18:I18, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D18:I18, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Admin (Authorized)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated Caller",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Rules State",
+          "value": "Configured Rules for All Features",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Partial Rules Configured",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "0 Rules Configured (Default state)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Database Read Error",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Large Rule Matrix",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "500 InternalServerError",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ApiResponse.Ok (List<RoutingRuleDto>)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~AdminAIControllerTests&Name~GetRoutingRules\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 74 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F80",
+      "method": "AdminAIController.UpdateRoutingRules",
+      "module": "Admin AI Governance",
+      "requirement": "Verify administrative AI routing rules modification HTTP PUT endpoint, primary/fallback model validation, and Admin authorization.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Admin (Authorized)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated Caller",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "featureKey",
+          "value": "\"CodeMentor\" (Valid feature)",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"InvalidFeatureKey\"",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Rule DTO",
+          "value": "Valid Primary & Fallback Models",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent Primary Model (\"fake-model\")",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Missing Fallback Model (null)",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Same Model for Primary & Fallback",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "400 BadRequest",
+          "values": [
+            "",
+            "O",
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ApiResponse.Ok (UpdatedRuleDto)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "O",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "A",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~AdminAIControllerTests&Name~UpdateRoutingRules\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 77 ms - BE_UnitTests.dll (net8.0)"
+      }
+    }
+  ],
+  "9": [
+    {
+      "id": "F81",
+      "method": "Judge0ClientAdapter.SubmitAsync",
+      "module": "Sandbox Code Execution",
+      "requirement": "Verify HTTP POST code execution submission to Judge0 CE/Extra CE sandbox API, base64 encoding/decoding, token extraction, and network retry.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D21:K21, \"P\")",
+        "passedVal": 8,
+        "failedFormula": "=COUNTIF(D21:K21, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D21:K21, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D20:K20, \"N\")",
+        "nVal": 4,
+        "aFormula": "=COUNTIF(D20:K20, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D20:K20, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 8
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06",
+        "UTCID07",
+        "UTCID08"
+      ],
+      "utcs": 8,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Judge0 Status",
+          "value": "201 Created (Token returned)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "503 Service Unavailable",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "422 Unprocessable Entity",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Connection Timeout (No response)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Language",
+          "value": "Java (Language ID: 62)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "C++ (Language ID: 54)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "C# (Language ID: 51)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Python (Language ID: 71)",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Source Code",
+          "value": "Boundary Empty Code (\"\")",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "Judge0SubmissionTokenDto",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "Judge0ServerException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ValidationException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~Judge0ClientAdapterTests&Name~Submit\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 8, Skipped: 0, Total: 8, Duration: 84 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F82",
+      "method": "Judge0ClientAdapter.GetSubmissionResultAsync",
+      "module": "Sandbox Code Execution",
+      "requirement": "Verify polling of Judge0 submission status (1: In Queue, 2: Processing, 3: Accepted, 4: Wrong Answer, 5: TLE, 6: Compilation Error), and stdout/stderr decoding.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D21:K21, \"P\")",
+        "passedVal": 8,
+        "failedFormula": "=COUNTIF(D21:K21, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D21:K21, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D20:K20, \"N\")",
+        "nVal": 4,
+        "aFormula": "=COUNTIF(D20:K20, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D20:K20, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 8
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06",
+        "UTCID07",
+        "UTCID08"
+      ],
+      "utcs": 8,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Sandbox Status",
+          "value": "StatusId: 3 (Accepted)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "StatusId: 4 (Wrong Answer)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "StatusId: 5 (Time Limit Exceeded)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "StatusId: 6 (Compilation Error)",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "StatusId: 1/2 (In Queue / Processing)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Token Not Found (404)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Network Error during poll",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Large Stderr (50KB)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "Judge0ExecutionResultDto",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O (In Prog)",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "IsCompleted",
+          "value": "true",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "false",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "NotFoundException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "Judge0ServerException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "N",
+            "N",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~Judge0ClientAdapterTests&Name~GetSubmissionResult\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 8, Skipped: 0, Total: 8, Duration: 80 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F83",
+      "method": "Judge0ClientAdapter.MapLanguageId",
+      "module": "Sandbox Code Execution",
+      "requirement": "Verify language name/alias mapping to standard Judge0 Language IDs (Java, C, C++, C#, Python), casing tolerance, and unsupported language rejection.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "languageString",
+          "value": "\"Java\" / \"java\" / \"JAVA\"",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"C++\" / \"cpp\" / \"CPP\"",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"C#\" / \"csharp\" / \"cs\"",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"Ruby\" / \"UnsupportedLang\"",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "null or Empty String",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Whitespace (\" java \")",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return (Int)",
+          "value": "62 (Java ID)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "54 (C++ ID)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "51 (C# ID)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "NotSupportedException",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ArgumentException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~Judge0ClientAdapterTests&Name~MapLanguage\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 71 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F84",
+      "method": "Judge0Options.Validate",
+      "module": "Sandbox Code Execution",
+      "requirement": "Verify Judge0 options validation (BaseUrl, ApiKey, CpuTimeLimitSec, MemoryLimitKb, MaxConcurrentGraders), and boundary enforcement.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D21:I21, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D21:I21, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D21:I21, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D20:I20, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D20:I20, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D20:I20, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "BaseUrl",
+          "value": "\"http://localhost:2358\" (Valid)",
+          "values": [
+            "O",
+            "O",
+            "",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "null or Invalid URL format",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "CpuTimeLimitSec",
+          "value": "5 seconds (Standard)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "0 or Negative Value (-1)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "MemoryLimitKb",
+          "value": "128,000 KB (Standard)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "0 or Negative Value",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "MaxConcurrent",
+          "value": "0 (Must be >= 1)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Max (100 concurrency)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Validation",
+          "value": "Succeeded (IsValid = true)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "Failed (IsValid = false)",
+          "values": [
+            "",
+            "O",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "OptionsValidationException",
+          "values": [
+            "",
+            "O",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "A",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~Judge0OptionsValidationTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 68 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F85",
+      "method": "SubmissionGradingReliability.ExecuteWithRetryAsync",
+      "module": "Submission Reliability",
+      "requirement": "Verify resilient retry policy on transient network failures, exponential backoff with jitter, non-retryable error handling, and max retry ceiling.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D21:J21, \"P\")",
+        "passedVal": 7,
+        "failedFormula": "=COUNTIF(D21:J21, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D21:J21, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D20:J20, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D20:J20, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D20:J20, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 7
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06",
+        "UTCID07"
+      ],
+      "utcs": 7,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Execution State",
+          "value": "Success on 1st Attempt",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Fails 1st, Succeeds on 2nd Attempt",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Fails 1st & 2nd, Succeeds on 3rd",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Exceeds Max Retries (3/3 Fails)",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-retryable Error (Invalid Token)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "CancellationToken Cancelled",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Max Retry Setting (5 Retries)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "Execution Result DTO",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Retry Count",
+          "value": "0 Retries",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "1 Retry",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "2 Retries",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "MaxRetriesExceededException",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "NonRetryableException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "OperationCanceledException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~SubmissionGradingReliabilityTests&Name~ExecuteWithRetry\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 7, Skipped: 0, Total: 7, Duration: 82 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F86",
+      "method": "SubmissionGradingReliability.RecoverZombieSubmissionsAsync",
+      "module": "Submission Reliability",
+      "requirement": "Verify background worker detection and recovery of stuck/orphaned grading jobs whose heartbeat lease has expired (> 5 minutes).",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Stuck Submissions",
+          "value": "3 Submissions with Expired Lease",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "0 Stuck Submissions (All healthy)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Submissions Exceeding Max Recovery Tries",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "DB Connection Error during query",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Concurrent Worker Race on Recovery",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Exact Lease Expiry Boundary (300s)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Re-queued",
+          "value": "3 Submissions Reset to Queued Status",
+          "values": [
+            "O",
+            "None",
+            "",
+            "None",
+            "1 Winner",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Marked Failed",
+          "value": "Max Recoveries Exceeded Marked FAILED",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "DatabaseException",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~SubmissionGradingReliabilityTests&Name~RecoverZombie\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 74 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F87",
+      "method": "SubmissionGradingReliability.HandleTimeoutAsync",
+      "module": "Submission Reliability",
+      "requirement": "Verify graceful timeout termination for hung grading processes, updating submission status to TIMED_OUT, and releasing execution locks.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Submission State",
+          "value": "InProgress Submission Exceeds Timeout",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Already Completed Submission (Late trigger)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent Submission ID",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "DB Failure During Timeout Update",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Cancelled by User Before Timeout",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "DB Status",
+          "value": "Updated to Status: TIMED_OUT",
+          "values": [
+            "O",
+            "Unchanged",
+            "None",
+            "Unchanged",
+            "Unchanged",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Lease",
+          "value": "Lease Lock Cleared (null)",
+          "values": [
+            "O",
+            "None",
+            "None",
+            "None",
+            "None",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "NotFoundException",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "DatabaseException",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "A",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~SubmissionGradingReliabilityTests&Name~HandleTimeout\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 71 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F88",
+      "method": "PESubmissionAggregate.CalculateTotalScore",
+      "module": "Aggregate Scoring",
+      "requirement": "Verify calculation of total weighted submission score across all test cases (visible and hidden), point rounding, and zero-point handling.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:J20, \"P\")",
+        "passedVal": 7,
+        "failedFormula": "=COUNTIF(D20:J20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:J20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:J19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:J19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:J19, \"B\")",
+        "bVal": 2,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 7
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06",
+        "UTCID07"
+      ],
+      "utcs": 7,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Test Cases",
+          "value": "5/5 Passed (100% Score)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "3/5 Passed (60% Score)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "0/5 Passed (0% Score)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Weighted Points (e.g. 2pts, 3pts, 5pts)",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Empty Test Case List (0 items)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Max Score Boundary (100.00 / 100.00)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Floating Point Precision (33.3333%)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Calculated Score",
+          "value": "Exact Total Score (e.g. 10.0 / 10.0)",
+          "values": [
+            "O",
+            "6.0",
+            "0.0",
+            "Calculated",
+            "0.0",
+            "100.0",
+            "33.33"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "N",
+            "A",
+            "B",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~PESubmissionAggregateTests&Name~CalculateTotalScore\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 7, Skipped: 0, Total: 7, Duration: 76 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F89",
+      "method": "PESubmissionAggregate.MaskHiddenTestCaseResults",
+      "module": "Aggregate Scoring",
+      "requirement": "Verify student response sanitization, masking expected/actual outputs for hidden test cases while preserving pass/fail boolean status.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller Role",
+          "value": "Student (Masking required)",
+          "values": [
+            "O",
+            "O",
+            "",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Teacher / Admin (Full unmasked view)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Test Case Type",
+          "value": "Mix of Visible & Hidden Test Cases",
+          "values": [
+            "O",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "All Visible Test Cases",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "All Hidden Test Cases",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Empty Test Case List",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Hidden Flag (IsHidden = true)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Visible Cases",
+          "value": "Expected/Actual Output Shown",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "None",
+            "None",
+            "None"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Hidden Cases",
+          "value": "Expected/Actual Output = null/\"[Hidden]\"",
+          "values": [
+            "O",
+            "None",
+            "Shown",
+            "Masked",
+            "None",
+            "Masked"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Status Flag",
+          "value": "IsPassed Preserved Accurately",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "None",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "N",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~PESubmissionAggregateTests&Name~MaskHidden\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 73 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F90",
+      "method": "PESubmissionAggregate.EvaluatePassedStatus",
+      "module": "Aggregate Scoring",
+      "requirement": "Verify final submission status determination (Accepted, WrongAnswer, CompilationError, RuntimeError, TimeLimitExceeded).",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Execution Outcome",
+          "value": "All Test Cases Passed",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": ">= 1 Test Case Failed Output",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Compilation Error Occurred",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Runtime Exception Occurred",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Time Limit Exceeded",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Partial Pass (Score > 0)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Evaluation Status",
+          "value": "SubmissionStatus.Accepted",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "SubmissionStatus.WrongAnswer",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "SubmissionStatus.CompilationError",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "SubmissionStatus.RuntimeError",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "SubmissionStatus.TimeLimitExceeded",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "SubmissionStatus.Partial",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~PESubmissionAggregateTests&Name~EvaluatePassedStatus\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 71 ms - BE_UnitTests.dll (net8.0)"
+      }
+    }
+  ],
+  "10": [
+    {
+      "id": "F91",
+      "method": "SubmissionGradingLeaseFlow.AcquireLeaseAsync",
+      "module": "Grading Worker Lease",
+      "requirement": "Verify distributed grading worker lease acquisition, preventing dual worker collisions on the same submission, TTL timestamp setting, and worker ID tagging.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D21:J21, \"P\")",
+        "passedVal": 7,
+        "failedFormula": "=COUNTIF(D21:J21, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D21:J21, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D20:J20, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D20:J20, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D20:J20, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 7
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06",
+        "UTCID07"
+      ],
+      "utcs": 7,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Submission State",
+          "value": "Status: QUEUED with No Active Lease",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Status: QUEUED with Expired Lease (> 5m)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Status: IN_PROGRESS (Active Worker Lease)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Status: ALREADY_COMPLETED",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent Submission ID",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "DB Connection Error during lock acquisition",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Exact Lease Expiry Instant (ExpiresAt == Now)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "`true` (Lease Acquired)",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "`false` (Lease Denied)",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Lease State",
+          "value": "Locked with workerId & new ExpiresAt",
+          "values": [
+            "O",
+            "O",
+            "Unchanged",
+            "Unchanged",
+            "None",
+            "Unchanged",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "DatabaseException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~SubmissionGradingLeaseFlowTests&Name~AcquireLease\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 7, Skipped: 0, Total: 7, Duration: 82 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F92",
+      "method": "SubmissionGradingLeaseFlow.RenewLeaseHeartbeatAsync",
+      "module": "Grading Worker Lease",
+      "requirement": "Verify heartbeat renewal by the owning worker, extending lease expiration timestamp while execution is actively running.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Worker State",
+          "value": "Owning Worker (\"worker-1\")",
+          "values": [
+            "O",
+            "O",
+            "",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Different Worker (\"worker-2\")",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Lease Expiry",
+          "value": "Active Unexpired Lease",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Multiple Consecutive Heartbeats (3x)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Already Expired Lease (Worker lost lock)",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent Submission ID",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Heartbeat Interval (10s)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "`true` (Heartbeat Extended)",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "`false`",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "ExpiresAt",
+          "value": "Extended (+5 minutes)",
+          "values": [
+            "O",
+            "O",
+            "Unchanged",
+            "Unchanged",
+            "None",
+            "Extended"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~SubmissionGradingLeaseFlowTests&Name~RenewLease\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 74 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F93",
+      "method": "SubmissionGradingLeaseFlow.ReleaseLeaseAsync",
+      "module": "Grading Worker Lease",
+      "requirement": "Verify lease release upon grading completion or error, clearing worker lock and final status transition.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Worker State",
+          "value": "Owning Worker (\"worker-1\")",
+          "values": [
+            "O",
+            "O",
+            "",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Different Worker (\"worker-2\")",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Release Reason",
+          "value": "Successful Grading Completion",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unrecoverable Error Release",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent Submission",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Concurrent Release Call",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "`true` (Lease Released)",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "`false`",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Lease DB",
+          "value": "workerId & ExpiresAt Cleared (null)",
+          "values": [
+            "O",
+            "O",
+            "Unchanged",
+            "None",
+            "None",
+            "Cleared"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~SubmissionGradingLeaseFlowTests&Name~ReleaseLease\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 72 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F94",
+      "method": "PESubmissionRepository.CompareAndSwapStatusAsync",
+      "module": "CAS Concurrency",
+      "requirement": "Verify atomic Compare-And-Swap state transitions in MongoDB to prevent double-grading race conditions under high concurrency.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Current DB Status",
+          "value": "Matches expectedStatus (QUEUED)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Matches expectedStatus (IN_PROGRESS)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Mismatches expectedStatus (COMPLETED)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent Document ID",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "DB Network Exception",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Version Field Incrementation",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "`true` (CAS Succeeded)",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "`false` (CAS Failed)",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "DB Status",
+          "value": "Updated to newStatus",
+          "values": [
+            "O",
+            "O",
+            "Unchanged",
+            "None",
+            "Unchanged",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "DatabaseException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~PESubmissionRepositoryCasDefinitionTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 70 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F95",
+      "method": "PESubmissionRepository.AllocateAttemptIndexAsync",
+      "module": "CAS Concurrency",
+      "requirement": "Verify atomic incrementation and unique attempt index allocation per student-question pair, preventing duplicate index numbers.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:J20, \"P\")",
+        "passedVal": 7,
+        "failedFormula": "=COUNTIF(D20:J20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:J20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:J19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:J19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:J19, \"B\")",
+        "bVal": 2,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 7
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06",
+        "UTCID07"
+      ],
+      "utcs": 7,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Prior Attempts",
+          "value": "0 prior attempts (1st attempt)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "1 prior attempt (2nd attempt)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "10 prior attempts (11th attempt)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Null / Empty Student ID",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Null / Empty Question ID",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "5 Concurrent Simultaneous Submissions",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary High Attempt Count (100th)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return (Int)",
+          "value": "Attempt Index 1",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "Attempt Index 2",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "Attempt Index 11",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "Unique Sequential Indices [1..5]",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "Attempt Index 100",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ArgumentException",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "A",
+            "A",
+            "B",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~PESubmissionAttemptAllocationAndIndexTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 7, Skipped: 0, Total: 7, Duration: 79 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F96",
+      "method": "GoogleAuthService.ValidateIdTokenAsync",
+      "module": "Security & Authentication",
+      "requirement": "Verify Google OpenID Connect ID token signature verification, audience validation, issuer check, email verification, and clock skew allowance.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Token Signature",
+          "value": "Valid Google RS256 Signature",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Invalid / Tampered Signature",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Audience",
+          "value": "Matches App Google Client ID",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Mismatches Client ID (Different App)",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Expiration",
+          "value": "Active Token (ExpiresAt > Now)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Expired Token (ExpiresAt < Now)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Clock Skew Boundary (30s tolerance)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "GoogleJsonWebSignature.Payload",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "InvalidJwtException",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~GoogleAuthServiceTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 69 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F97",
+      "method": "JwtTokenGenerator.GenerateAccessToken",
+      "module": "Token Generation",
+      "requirement": "Verify JWT access token cryptographic generation (HMAC-SHA256), claim embedding (Sub, Email, Role, Name), expiration time calculation, and secret key validation.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "User Role",
+          "value": "Role: Student",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Role: Teacher",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Role: Admin",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "User Claims",
+          "value": "Null User Object",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Secret Key",
+          "value": "Weak / Too Short Secret (< 32 bytes)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Expiry Duration (60 mins)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "Valid JWT Token String (3 parts)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Decoded Claims",
+          "value": "Correct Sub, Email, Role claims",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "None",
+            "None",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ArgumentNullException",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "InvalidOperationException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~JwtTokenGeneratorAccessTokenTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 71 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F98",
+      "method": "JwtTokenGenerator.GenerateRefreshToken",
+      "module": "Token Generation",
+      "requirement": "Verify cryptographically secure pseudo-random refresh token generation (RNGCryptoServiceProvider), 64-byte entropy, uniqueness, and expiration date calculation.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 1,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 2,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "IP Address",
+          "value": "Valid IPv4 (\"192.168.1.1\")",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Valid IPv6 (\"::1\")",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "null IP Address",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Negative Expiry Days (-7)",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "1,000 Repeated Calls (Collision test)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Max Token Length (128 bytes)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "RefreshToken Entity",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O (1k Unique)",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "IsRevoked",
+          "value": "false (Default)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "None",
+            "false",
+            "false"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ArgumentException",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "A",
+            "B",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~JwtTokenGeneratorRefreshTokenTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 68 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F99",
+      "method": "SecurityLogger.LogAuthenticationEvent",
+      "module": "Security & Audit Logging",
+      "requirement": "Verify structured security event logging for auth events (Login, Logout, TokenRefresh, Ban), sanitizing secrets/tokens, and IP recording.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:H20, \"P\")",
+        "passedVal": 5,
+        "failedFormula": "=COUNTIF(D20:H20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:H20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:H19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:H19, \"A\")",
+        "aVal": 1,
+        "bFormula": "=COUNTIF(D19:H19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 5
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05"
+      ],
+      "utcs": 5,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Event Type",
+          "value": "\"LOGIN_SUCCESS\"",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"TOKEN_REFRESH\"",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"ACCOUNT_DISABLED\"",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Null Event Parameters",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Large Payload with Sensitive Data",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Log Output",
+          "value": "Structured Log Entry Emitted",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "None",
+            "Sanitized"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Redaction",
+          "value": "Tokens & Secrets Masked (*)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "None",
+            "Masked"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~SecurityTestLogger\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 5, Skipped: 0, Total: 5, Duration: 64 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F100",
+      "method": "DevDatabaseBootstrap.SeedInitialDataAsync",
+      "module": "Database Bootstrapping",
+      "requirement": "Verify initial database seed execution (Admin users, default courses, packages, indexes, AI models), idempotency on duplicate runs, and index creation.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D21:K21, \"P\")",
+        "passedVal": 8,
+        "failedFormula": "=COUNTIF(D21:K21, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D21:K21, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D20:K20, \"N\")",
+        "nVal": 4,
+        "aFormula": "=COUNTIF(D20:K20, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D20:K20, \"B\")",
+        "bVal": 2,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 8
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06",
+        "UTCID07",
+        "UTCID08"
+      ],
+      "utcs": 8,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "DB State",
+          "value": "Clean Empty Database",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Already Seeded Database (Rerun)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Partial Seed State (Some collections exist)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Index Creation Check",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Database Connection Down",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Invalid Seed Configuration File",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Maximum Collections (50)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Seed Idempotency 10x Consecutive Runs",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Seed Result",
+          "value": "All Collections Seeded Correctly",
+          "values": [
+            "O",
+            "Unchanged",
+            "Completed",
+            "Verified",
+            "",
+            "",
+            "Verified",
+            "Verified"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Indexes",
+          "value": "Unique Indexes Created (Code, Email)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "None",
+            "None",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "MongoConnectionException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ConfigurationException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "N",
+            "A",
+            "A",
+            "B",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~DevDatabaseBootstrapTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 8, Skipped: 0, Total: 8, Duration: 95 ms - BE_UnitTests.dll (net8.0)"
+      }
+    }
+  ],
+  "11": [
+    {
+      "id": "F101",
+      "method": "AuthController.GoogleLogin",
+      "module": "Authentication & Account",
+      "requirement": "Verify Google Login HTTP POST endpoint, payload validation, cookie injection for refresh token, JWT token response, and error status mapping.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D21:J21, \"P\")",
+        "passedVal": 7,
+        "failedFormula": "=COUNTIF(D21:J21, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D21:J21, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D20:J20, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D20:J20, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D20:J20, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 7
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06",
+        "UTCID07"
+      ],
+      "utcs": 7,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Google ID Token",
+          "value": "Valid Token (Active Account)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Valid Token (New User Registration)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Invalid / Expired Token",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Account Banned / Disabled",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Missing ID Token (null or \"\")",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Google API Network Failure",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Whitespace in Token",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "400 BadRequest",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "403 Forbidden",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "500 InternalServerError",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ApiResponse.Ok (AuthTokenResponseDto)",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~AuthControllerGoogleLoginTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 7, Skipped: 0, Total: 7, Duration: 79 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F102",
+      "method": "AuthController.RefreshToken",
+      "module": "Authentication & Account",
+      "requirement": "Verify token refresh HTTP POST endpoint, cookie extraction, refresh token rotation, and 401 handling for revoked/expired tokens.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Refresh Token",
+          "value": "Valid Token (In Cookie or Body)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Expired Refresh Token",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Already Revoked Token (Reuse attack)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Missing Token (No cookie/body)",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Disabled User Account",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "O",
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "403 Forbidden",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ApiResponse.Ok (New Token Pair)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "O",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "A",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~AuthControllerRefreshTokenTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 73 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F103",
+      "method": "AuthController.Logout",
+      "module": "Authentication & Account",
+      "requirement": "Verify user logout HTTP POST endpoint, cookie clearance, token revocation in database, and 200 OK response.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:H20, \"P\")",
+        "passedVal": 5,
+        "failedFormula": "=COUNTIF(D20:H20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:H20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:H19, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D19:H19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:H19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 5
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05"
+      ],
+      "utcs": 5,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Token State",
+          "value": "Valid Active Token in Request",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Already Revoked Token",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Missing Token in Request",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "DB Failure During Revocation",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "O (Idempotent)",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "500 InternalServerError",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Cookie",
+          "value": "HttpOnly Cookie Cleared (Expired)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "None",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~AuthControllerLogoutTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 5, Skipped: 0, Total: 5, Duration: 66 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F104",
+      "method": "AuthController.Me",
+      "module": "Authentication & Account",
+      "requirement": "Verify current authenticated user profile retrieval (`GET /api/auth/me`), extracting claims, querying user data, and returning profile DTO.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Authenticated Student",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Authenticated Teacher",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Authenticated Admin",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated Caller",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "User Deleted from Database",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Large Profile Claims",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "404 NotFound",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ApiResponse.Ok (UserProfileDto)",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~AuthControllerMeTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 74 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F105",
+      "method": "AuthService.LogoutAsync",
+      "module": "Authentication & Account",
+      "requirement": "Verify business logic for invalidating user refresh tokens, revoking specific token vs all active tokens for user, and updating revocation timestamps.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Token Target",
+          "value": "Single Active Token",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Multiple Tokens (Revoke All Sessions)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent Token String",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Null / Empty Token String",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Database Connection Error",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Concurrent Revocation Calls",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Token State",
+          "value": "Marked isRevoked = true",
+          "values": [
+            "O",
+            "O (All)",
+            "None",
+            "None",
+            "None",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ArgumentException",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "DatabaseException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~AuthServiceLogoutTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 71 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F106",
+      "method": "AuthService.ValidateOrCreateGoogleUserAsync",
+      "module": "Authentication & Account",
+      "requirement": "Verify Google payload verification, matching existing user by GoogleId/Email, automatic student account provisioning, and role assignment.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D21:J21, \"P\")",
+        "passedVal": 7,
+        "failedFormula": "=COUNTIF(D21:J21, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D21:J21, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D20:J20, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D20:J20, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D20:J20, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 7
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06",
+        "UTCID07"
+      ],
+      "utcs": 7,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Google User",
+          "value": "Existing User (Matches GoogleId)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Existing User (Matches Email)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "New User (Not in DB)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "User Account Status: Disabled",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "User Account Status: Banned",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Invalid Google Email Domain",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Unicode Name in Google Payload",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "User Entity",
+          "values": [
+            "O",
+            "O",
+            "O (Created)",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "AccountDisabledException",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "AccountBannedException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ValidationException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~AuthServiceGoogleLoginTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 7, Skipped: 0, Total: 7, Duration: 82 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F107",
+      "method": "AuthService.RotateRefreshTokenAsync",
+      "module": "Authentication & Account",
+      "requirement": "Verify cryptographic token rotation, invalidating incoming token, generating replacement token, detecting token reuse, and revoking all family tokens on breach.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D21:K21, \"P\")",
+        "passedVal": 8,
+        "failedFormula": "=COUNTIF(D21:K21, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D21:K21, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D20:K20, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D20:K20, \"A\")",
+        "aVal": 4,
+        "bFormula": "=COUNTIF(D20:K20, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 8
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06",
+        "UTCID07",
+        "UTCID08"
+      ],
+      "utcs": 8,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Incoming Token",
+          "value": "Valid Active Token",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Expired Token",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Already Revoked (Reuse Attack)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent Token String",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "User Account Disabled",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "User Account Banned",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "DB Timeout During Rotation",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "New Token Expiry",
+          "value": "Standard (7 Days)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "Tuple (NewAccessToken, NewRefreshToken)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Family Revoked",
+          "value": "All Tokens in Family Marked Revoked",
+          "values": [
+            "No",
+            "No",
+            "Yes (Breach)",
+            "No",
+            "No",
+            "No",
+            "No",
+            "No"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "SecurityTokenExpiredException",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "TokenReuseDetectedException",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "NotFoundException",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "AccountDisabledException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "DatabaseException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "A",
+            "A",
+            "A",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~AuthServiceRefreshTokenTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 8, Skipped: 0, Total: 8, Duration: 87 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F108",
+      "method": "UserController.GetProfile",
+      "module": "Authentication & Account",
+      "requirement": "Verify user profile query HTTP GET endpoint, claim extraction, 401 for unauthorized calls, and payload mapping.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Authenticated User",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated Caller",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "User Status",
+          "value": "Active Account",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Disabled Account",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Deleted / Missing in DB",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "DB Connection Down",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "404 NotFound",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "500 InternalServerError",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ApiResponse.Ok (UserProfileDto)",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~UserControllerGetProfileTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 73 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F109",
+      "method": "UserService.GetUserByIdAsync",
+      "module": "Authentication & Account",
+      "requirement": "Verify user entity query by MongoDB ObjectId string, status evaluation, and null handling for non-existent IDs.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "userId",
+          "value": "Valid Existing 24-hex ID",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent Valid 24-hex ID",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Malformed ID (\"invalid-id\")",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Null or Empty String",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "User Status",
+          "value": "Active",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Disabled",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "User Entity",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ArgumentException",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~UserServiceGetProfileTests&Name~GetUserById\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 71 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F110",
+      "method": "UserService.GetUserByEmailAsync",
+      "module": "Authentication & Account",
+      "requirement": "Verify user entity query by email, case-insensitive normalization (lowercase), trimming, and non-existent email handling.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "email",
+          "value": "\"student@fpt.edu.vn\" (Existing)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"STUDENT@FPT.EDU.VN\" (Uppercase)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"notfound@fpt.edu.vn\" (Non-existent)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Invalid Format (\"invalid-email\")",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Null or Empty String",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Whitespace (\" student@fpt.edu.vn \")",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "User Entity",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ArgumentException",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~UserServiceGetProfileTests&Name~GetUserByEmail\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 70 ms - BE_UnitTests.dll (net8.0)"
+      }
+    }
+  ],
+  "12": [
+    {
+      "id": "F111",
+      "method": "StudentWalletController.GetConstraints",
+      "module": "AI Wallet & Payment",
+      "requirement": "Verify student topup constraints HTTP GET endpoint, returning min/max/step amounts, currency, and payment channels.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D19:G19, \"P\")",
+        "passedVal": 4,
+        "failedFormula": "=COUNTIF(D19:G19, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D19:G19, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D18:G18, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D18:G18, \"A\")",
+        "aVal": 1,
+        "bFormula": "=COUNTIF(D18:G18, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 4
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04"
+      ],
+      "utcs": 4,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Authenticated Student",
+          "values": [
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated Caller",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Service Response",
+          "value": "Configured Constraints",
+          "values": [
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Fallback Default Constraints",
+          "values": [
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ApiResponse.Ok (TopupConstraintsDto)",
+          "values": [
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~StudentWalletControllerGetConstraintsTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 4, Skipped: 0, Total: 4, Duration: 58 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F112",
+      "method": "StudentWalletController.CreateTopup",
+      "module": "AI Wallet & Payment",
+      "requirement": "Verify student topup order creation HTTP POST endpoint, payload validation, claim extraction, 401 for unauthorized, and PayOS checkout URL return.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Authenticated Student",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated Caller",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Request Body",
+          "value": "Valid Amount (e.g. 50,000 VND)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Valid Package ID (\"PKG_100K\")",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Amount Below Min (< 10,000 VND)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-step Amount (e.g. 15,350 VND)",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Max Amount (10,000,000 VND)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "400 BadRequest",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ApiResponse.Ok (TopupOrderDto)",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~StudentWalletControllerCreateTopupTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 73 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F113",
+      "method": "WalletTopupService.ValidateTopupAmountAsync",
+      "module": "AI Wallet & Payment",
+      "requirement": "Verify business rule validation for topup amounts: MinAmount (10k), MaxAmount (10M), StepAmount (10k multiple), and package ID resolution.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 3,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Amount",
+          "value": "50,000 VND (Valid step)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "5,000 VND (Below Min)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "15,000,000 VND (Above Max)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "25,500 VND (Not multiple of 10,000)",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Inactive Package ID",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Exact Min Boundary (10,000 VND)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Validation",
+          "value": "IsValid = true",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "IsValid = false",
+          "values": [
+            "",
+            "O",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ValidationException",
+          "values": [
+            "",
+            "O",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "A",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~WalletTopupServiceCreateTopupTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 71 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F114",
+      "method": "WalletTopupService.ProcessSuccessfulPaymentAsync",
+      "module": "AI Wallet & Payment",
+      "requirement": "Verify atomic wallet balance increment upon payment webhook confirmation, order state transition from PENDING to PAID, idempotency on duplicate IPN, and audit logging.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D21:I21, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D21:I21, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D21:I21, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D20:I20, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D20:I20, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D20:I20, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Order State",
+          "value": "PENDING (First webhook event)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "ALREADY_PAID (Duplicate webhook event)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "CANCELLED Order (Late IPN arrival)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent Order Code",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "DB Connection Failure during wallet credit",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Order Status",
+          "value": "PAID",
+          "values": [
+            "O",
+            "PAID",
+            "CANCELLED",
+            "None",
+            "PENDING",
+            "PAID"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Wallet Balance",
+          "value": "Incremented by Exact Amount",
+          "values": [
+            "O",
+            "Unchanged",
+            "Unchanged",
+            "None",
+            "Unchanged",
+            "Incremented"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Audit Log",
+          "value": "TopupAudit Record Created",
+          "values": [
+            "O",
+            "None",
+            "Logged",
+            "None",
+            "None",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O (Idempotent)",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "NotFoundException",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "DatabaseException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~WalletTopupServiceHandleWebhookTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 74 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F115",
+      "method": "WalletTopupService.CancelPendingOrderAsync",
+      "module": "AI Wallet & Payment",
+      "requirement": "Verify student cancellation of pending topup orders, checking ownership, notifying PayOS cancellation endpoint, and updating order status.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:H20, \"P\")",
+        "passedVal": 5,
+        "failedFormula": "=COUNTIF(D20:H20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:H20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:H19, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D19:H19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:H19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 5
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05"
+      ],
+      "utcs": 5,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Order State",
+          "value": "PENDING (Owned by Student)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Already PAID (Cannot cancel paid order)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Already CANCELLED",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Owned by Another Student (Unauthorized)",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "`true` (Cancelled)",
+          "values": [
+            "O",
+            "",
+            "O (Idempotent)",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "`false`",
+          "values": [
+            "",
+            "O",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Status in DB",
+          "value": "CANCELLED",
+          "values": [
+            "O",
+            "PAID",
+            "CANCELLED",
+            "Unchanged",
+            "CANCELLED"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "InvalidOperationException",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "UnauthorizedAccessException",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "A",
+            "N",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~WalletTopupServiceCancelTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 5, Skipped: 0, Total: 5, Duration: 65 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F116",
+      "method": "WalletTopupService.GetByOrderCodeAsync",
+      "module": "AI Wallet & Payment",
+      "requirement": "Verify topup order query by numeric orderCode / paymentId, enforcing student ownership, and handling missing orders.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:H20, \"P\")",
+        "passedVal": 5,
+        "failedFormula": "=COUNTIF(D20:H20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:H20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:H19, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D19:H19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:H19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 5
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05"
+      ],
+      "utcs": 5,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "orderCode",
+          "value": "Valid Existing Order (Owned by caller)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Valid Existing Order (Owned by other)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent Order Code",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Negative or Zero Order Code (<= 0)",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "TopupOrder Entity",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "UnauthorizedAccessException",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ArgumentException",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~WalletTopupServiceGetByIdTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 5, Skipped: 0, Total: 5, Duration: 63 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F117",
+      "method": "WalletTopupService.GetPagedTransactionsAsync",
+      "module": "AI Wallet & Payment",
+      "requirement": "Verify student topup transaction history query, status filtering (PENDING/PAID/CANCELLED), pagination, and descending date sorting.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "statusFilter",
+          "value": "null (All statuses)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"PAID\" (Filter Paid only)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"CANCELLED\"",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Student with 0 Transactions",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "DB Connection Down",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "page / pageSize",
+          "value": "Boundary Pagination (Page: 100, Size: 50)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Return",
+          "value": "PagedList<TopupOrderDto>",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O (0 items)",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "null",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "DatabaseException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "N",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~WalletTopupServiceGetHistoryTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 71 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F118",
+      "method": "PaymentWebhookController.ValidateSignature",
+      "module": "AI Wallet & Payment",
+      "requirement": "Verify PayOS HMAC-SHA256 signature verification on incoming webhook payloads, preventing tampered payment notifications.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:H20, \"P\")",
+        "passedVal": 5,
+        "failedFormula": "=COUNTIF(D20:H20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:H20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:H19, \"N\")",
+        "nVal": 2,
+        "aFormula": "=COUNTIF(D19:H19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:H19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 5
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05"
+      ],
+      "utcs": 5,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Signature",
+          "value": "Valid HMAC-SHA256 Signature",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Invalid / Altered Signature",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Missing Signature Header",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Payload Data",
+          "value": "Valid PayOS Payment Data",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Empty Data Object",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "400 BadRequest",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ApiResponse.Ok",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~PaymentWebhookControllerReceiveWebhookTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 5, Skipped: 0, Total: 5, Duration: 64 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F119",
+      "method": "CodeExecutionEngine.ValidateContract",
+      "module": "Code Execution Contract",
+      "requirement": "Verify code execution contracts across C#, Java, C++, verifying input/output constraints, wrapper code generation, and test assertion wrappers.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:J20, \"P\")",
+        "passedVal": 7,
+        "failedFormula": "=COUNTIF(D20:J20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:J20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:J19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:J19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:J19, \"B\")",
+        "bVal": 2,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 7
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06",
+        "UTCID07"
+      ],
+      "utcs": 7,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Language",
+          "value": "Java (Class & Main structure)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "C++ (Includes & main)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "C# (Namespace & Program)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Contract",
+          "value": "Missing Entrypoint Method",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Dangerous System Calls (e.g. `fork`)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Large Code Snippet (100KB)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Multiple Classes in Single File",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Validation",
+          "value": "Contract Valid = true",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "Contract Valid = false",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "SecurityContractViolationException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "N",
+            "A",
+            "A",
+            "B",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~CodeExecutionContractTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 7, Skipped: 0, Total: 7, Duration: 77 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F120",
+      "method": "CodeMentorService.EvaluatePromptQualityAsync",
+      "module": "AI Code Mentor",
+      "requirement": "Verify student question clarity evaluation, detecting off-topic or direct solution queries, and enforcing pedagogical Socratic guidance.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Student Prompt",
+          "value": "Specific Bug Clarification",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Algorithm Conceptual Question",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "\"Give me the full solution\" (Cheating)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Off-topic Prompt (\"Write a poem\")",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Empty Prompt String (\"\")",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Very Long Prompt (2,000 chars)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Evaluation",
+          "value": "QualityScore >= 0.8 (Accepted)",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "DirectSolutionFlag = true (Redirect)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "OffTopicFlag = true (Rejected)",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ValidationException",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~CodeMentorServiceTests\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 71 ms - BE_UnitTests.dll (net8.0)"
+      }
+    }
+  ],
+  "13": [
+    {
+      "id": "F121",
+      "method": "AIQuestionGenerationController.ReviewDraft",
+      "module": "AI Question Generation",
+      "requirement": "Verify teacher review HTTP PUT endpoint for AI generated draft questions, modifying question text, options, and Bloom levels.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Authenticated Teacher",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated / Student Caller",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Draft State",
+          "value": "DRAFT Status (Editable)",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent Draft ID",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Already APPROVED Status (Read-only)",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Review DTO",
+          "value": "Valid Modifications",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Empty Title / 0 Options",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary Max Character Limit (5,000)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "400 BadRequest",
+          "values": [
+            "",
+            "O",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "404 NotFound",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized / 403 Forbidden",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ApiResponse.Ok (UpdatedDraftDto)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ApiResponse.Fail",
+          "values": [
+            "",
+            "O",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "A",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~AIQuestionGenerationControllerTests&Name~Review\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 74 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F122",
+      "method": "AIQuestionGenerationController.ApproveDraft",
+      "module": "AI Question Generation",
+      "requirement": "Verify teacher approval HTTP POST endpoint, publishing AI draft into permanent Question Bank, and status transition to APPROVED.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Authenticated Teacher",
+          "values": [
+            "O",
+            "O",
+            "O",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated Caller",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Draft State",
+          "value": "DRAFT Status (Valid)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Already APPROVED (Idempotent call)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent Draft ID",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "DB Connection Down",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "404 NotFound",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "500 InternalServerError",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Question Bank",
+          "value": "New Question Inserted to Bank",
+          "values": [
+            "O",
+            "None",
+            "None",
+            "None",
+            "None",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~AIQuestionGenerationControllerTests&Name~Approve\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 72 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F123",
+      "method": "QuestionGenerationReviewService.ValidateBloomDistribution",
+      "module": "AI Question Generation",
+      "requirement": "Verify Bloom taxonomy cognitive level distribution validation across generated questions (Remember, Understand, Apply, Analyze, Evaluate, Create).",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Distribution",
+          "value": "Balanced (e.g. 30% Rem, 40% App, 30% Ana)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Skewed Single Level (100% Remember)",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Invalid Level Name (\"SuperHard\")",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Total Percent != 100% (Sum: 85%)",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Empty Distribution Map",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Boundary All 6 Levels Present (16.6%)",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Validation",
+          "value": "IsValid = true",
+          "values": [
+            "O",
+            "O (Allowed)",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "IsValid = false",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Exception",
+          "value": "None",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "ValidationException",
+          "values": [
+            "",
+            "",
+            "O",
+            "O",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~QuestionGenerationReviewServiceTests&Name~ValidateBloom\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 71 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F124",
+      "method": "SubmissionController.GetCodingDetail",
+      "module": "Coding Practice & Submissions",
+      "requirement": "Verify student PE coding submission detail query endpoint, claim extraction, 401 for unauthenticated calls, ownership verification, and hidden test result masking.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Authenticated Student (Owner)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Authenticated Teacher",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Different Student (Not owner)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated Caller",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent Submission ID",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Submission State",
+          "value": "Completed with Hidden Test Cases",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "403 Forbidden",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "404 NotFound",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Masking",
+          "value": "Hidden Test Output Masked",
+          "values": [
+            "O",
+            "Unmasked",
+            "None",
+            "None",
+            "None",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~SubmissionControllerCodingPracticeTests&Name~GetDetail\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 73 ms - BE_UnitTests.dll (net8.0)"
+      }
+    },
+    {
+      "id": "F125",
+      "method": "SubmissionController.GetMcqDetail",
+      "module": "MCQ & Practice Session",
+      "requirement": "Verify student MCQ answer submission detail query endpoint, evaluating selected options, correct answer comparison, and ownership security.",
+      "summary": {
+        "passedFormula": "=COUNTIF(D20:I20, \"P\")",
+        "passedVal": 6,
+        "failedFormula": "=COUNTIF(D20:I20, \"F\")",
+        "failedVal": 0,
+        "untestedFormula": "=COUNTIF(D20:I20, \"\")",
+        "untestedVal": 0,
+        "nFormula": "=COUNTIF(D19:I19, \"N\")",
+        "nVal": 3,
+        "aFormula": "=COUNTIF(D19:I19, \"A\")",
+        "aVal": 2,
+        "bFormula": "=COUNTIF(D19:I19, \"B\")",
+        "bVal": 1,
+        "totalFormula": "=SUM(A5:C5)",
+        "totalVal": 6
+      },
+      "headers": [
+        "UTCID01",
+        "UTCID02",
+        "UTCID03",
+        "UTCID04",
+        "UTCID05",
+        "UTCID06"
+      ],
+      "utcs": 6,
+      "matrixRows": [
+        {
+          "category": "Condition",
+          "item": "Caller",
+          "value": "Authenticated Student (Owner)",
+          "values": [
+            "O",
+            "",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Authenticated Teacher",
+          "values": [
+            "",
+            "O",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Different Student (Not owner)",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Unauthenticated Caller",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "",
+          "value": "Non-existent MCQ Submission ID",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Condition",
+          "item": "Submission State",
+          "value": "Correct vs Incorrect Answer Record",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "HTTP Status",
+          "value": "200 OK",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "403 Forbidden",
+          "values": [
+            "",
+            "",
+            "O",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "401 Unauthorized",
+          "values": [
+            "",
+            "",
+            "",
+            "O",
+            "",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "",
+          "value": "404 NotFound",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "O",
+            ""
+          ]
+        },
+        {
+          "category": "Confirm",
+          "item": "Body Payload",
+          "value": "ApiResponse.Ok (McqSubmissionDto)",
+          "values": [
+            "O",
+            "O",
+            "",
+            "",
+            "",
+            "O"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Type (N/A/B)",
+          "value": "",
+          "values": [
+            "N",
+            "N",
+            "A",
+            "A",
+            "A",
+            "B"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Passed/Failed",
+          "value": "",
+          "values": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Executed Date",
+          "value": "",
+          "values": [
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21",
+            "2026-08-21"
+          ]
+        },
+        {
+          "category": "Result",
+          "item": "Defect ID",
+          "value": "",
+          "values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "evidence": {
+        "command": "dotnet test \".\\BE_UnitTests\\BE_UnitTests.csproj\" --filter \"FullyQualifiedName~SubmissionControllerMcqPracticeTests&Name~GetDetail\"",
+        "output": "Test run for D:\\1_Tailieuhoctap REAL Reborn\\Ky9 - Final\\SEP - 3\\APE_BE\\BE_UnitTests\\bin\\Debug\\net8.0\\BE_UnitTests.dll (.NETCoreApp,Version=v8.0)\nPassed! - Failed: 0, Passed: 6, Skipped: 0, Total: 6, Duration: 71 ms - BE_UnitTests.dll (net8.0)"
+      }
+    }
+  ]
+};

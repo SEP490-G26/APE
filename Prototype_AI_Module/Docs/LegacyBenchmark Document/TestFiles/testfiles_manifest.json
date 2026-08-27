@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-06-27T14:52:25",
+  "note": "Replace placeholder files with real content, keep file names unchanged",
+  "gatekeeper": [
+    "GK_SUP_C_intro_pdf.pdf",
+    "GK_SUP_Java_OOP_docx.docx",
+    "GK_SUP_DSA_OOP_pptx.pptx",
+    "GK_SUP_Java_array_txt.txt",
+    "GK_SUP_C_pointer_xlsx.xlsx",
+    "GK_SUP_DSA_graph_image.jpg",
+    "GK_UNSUP_marketing_docx.docx",
+    "GK_UNSUP_medical_pdf.pdf",
+    "GK_UNSUP_history_txt.txt",
+    "GK_UNSUP_finance_xlsx.xlsx",
+    "GK_NOISE_prompt_injection_pdf.pdf",
+    "GK_NOISE_hidden_instruction_txt.txt",
+    "GK_AMBIG_mixed_topic_png.png",
+    "GK_AMBIG_short_note_txt.txt"
+  ],
+  "extracted_content": [
+    "EXT_CONTENT_pdf_textbook.pdf",
+    "EXT_CONTENT_docx_notes.docx",
+    "EXT_CONTENT_pptx_lecture.pptx",
+    "EXT_IMG_ONLY_scan_page_1.jpg",
+    "EXT_IMG_ONLY_scan_page_2.png",
+    "EXT_MIXED_pdf_table_image.pdf",
+    "EXT_MIXED_pptx_code_chart.pptx",
+    "EXT_NOCONTENT_blank_pdf.pdf",
+    "EXT_NOCONTENT_low_quality_image.jpg"
+  ]
+}

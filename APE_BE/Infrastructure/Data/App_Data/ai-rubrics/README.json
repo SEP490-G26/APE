@@ -1,0 +1,43 @@
+{
+  "version": "v1",
+  "language": "en",
+  "description": "Rubric catalog for question generation and review in the AI module.",
+  "rubrics": [
+    {
+      "rubric_id": "C_FE",
+      "subject_code": "C",
+      "question_type": "FE",
+      "file": "C_FE.json"
+    },
+    {
+      "rubric_id": "C_PE",
+      "subject_code": "C",
+      "question_type": "PE",
+      "file": "C_PE.json"
+    },
+    {
+      "rubric_id": "JAVA_OOP_FE",
+      "subject_code": "JAVA_OOP",
+      "question_type": "FE",
+      "file": "JAVA_OOP_FE.json"
+    },
+    {
+      "rubric_id": "JAVA_OOP_PE",
+      "subject_code": "JAVA_OOP",
+      "question_type": "PE",
+      "file": "JAVA_OOP_PE.json"
+    },
+    {
+      "rubric_id": "DSA_JAVA_FE",
+      "subject_code": "DSA_JAVA",
+      "question_type": "FE",
+      "file": "DSA_JAVA_FE.json"
+    },
+    {
+      "rubric_id": "DSA_JAVA_PE",
+      "subject_code": "DSA_JAVA",
+      "question_type": "PE",
+      "file": "DSA_JAVA_PE.json"
+    }
+  ]
+}

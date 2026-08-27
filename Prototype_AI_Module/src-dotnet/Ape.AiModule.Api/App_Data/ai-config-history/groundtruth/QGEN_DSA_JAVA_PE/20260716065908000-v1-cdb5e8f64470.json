@@ -1,0 +1,62 @@
+﻿{
+    "snapshot_id":  "QGEN_DSA_JAVA_PE:v1:20260716065908000:cdb5e8f64470",
+    "artifact_type":  "groundtruth",
+    "stable_id":  "QGEN_DSA_JAVA_PE",
+    "version":  "v1",
+    "function_name":  "QuestionGenerationReview",
+    "subject_code":  "DSA_JAVA",
+    "question_type":  "PE",
+    "language":  "en",
+    "description":  "QGEN_DSA_JAVA_PE",
+    "is_active":  true,
+    "source":  "git_backfill",
+    "source_commit":  "511aa50726eca82952abff8f8b29642d20a4d019",
+    "captured_from":  "src-dotnet/Ape.AiModule.Api/App_Data/ai-groundtruth/QGEN_DSA_JAVA_PE.json",
+    "captured_at":  "2026-07-16T06:59:08.0000000Z",
+    "content_hash":  "cdb5e8f64470fcd7c3dfc83e8a7e6d008f3b59ecf368640dbb0067f473ef46d8",
+    "change_reason":  "Add AI module prototype, operator UI, and docs",
+    "change_summary":  "Initial snapshot imported from git history.",
+    "content":  {
+                    "dataset_id":  "QGEN_DSA_JAVA_PE",
+                    "version":  "v1",
+                    "language":  "en",
+                    "function_name":  "QuestionGenerationReview",
+                    "subject_code":  "DSA_JAVA",
+                    "question_type":  "PE",
+                    "institution_context":  {
+                                                "target_students":  "FPT University data structure and algorithm students",
+                                                "course_hint":  "CSD-style practical DSA implementation tasks"
+                                            },
+                    "evaluation_cases":  [
+                                             {
+                                                 "case_id":  "dsa_pe_easy_array_scan",
+                                                 "difficulty":  "Easy",
+                                                 "expected_topic_tags":  [
+                                                                             "array",
+                                                                             "search"
+                                                                         ],
+                                                 "expected_question_shape":  "direct implementation task",
+                                                 "acceptance_focus":  [
+                                                                          "clear statement",
+                                                                          "basic tests",
+                                                                          "no unnecessary complexity"
+                                                                      ]
+                                             },
+                                             {
+                                                 "case_id":  "dsa_pe_medium_stack_or_queue_ops",
+                                                 "difficulty":  "Medium",
+                                                 "expected_topic_tags":  [
+                                                                             "stack",
+                                                                             "queue",
+                                                                             "operation_trace"
+                                                                         ],
+                                                 "expected_question_shape":  "standard DSA practice task",
+                                                 "acceptance_focus":  [
+                                                                          "coherent operations",
+                                                                          "edge cases",
+                                                                          "difficulty alignment"
+                                                                      ]
+                                             }
+                                         ]
+                }
+}

@@ -1,0 +1,57 @@
+﻿{
+    "snapshot_id":  "EXTRACTED_CONTENT_CORE:v1:20260716065908000:b027873c390d",
+    "artifact_type":  "groundtruth",
+    "stable_id":  "EXTRACTED_CONTENT_CORE",
+    "version":  "v1",
+    "function_name":  "ExtractedContent",
+    "subject_code":  "",
+    "question_type":  "",
+    "language":  "mixed",
+    "description":  "Core regression cases for text-only, image-only, and mixed extraction scenarios.",
+    "is_active":  true,
+    "source":  "git_backfill",
+    "source_commit":  "511aa50726eca82952abff8f8b29642d20a4d019",
+    "captured_from":  "src-dotnet/Ape.AiModule.Api/App_Data/ai-groundtruth/EXTRACTED_CONTENT_CORE.json",
+    "captured_at":  "2026-07-16T06:59:08.0000000Z",
+    "content_hash":  "b027873c390d32790dd46a28d399e2be20bb40a3061bab672569e0b45c588a27",
+    "change_reason":  "Add AI module prototype, operator UI, and docs",
+    "change_summary":  "Initial snapshot imported from git history.",
+    "content":  {
+                    "dataset_id":  "EXTRACTED_CONTENT_CORE",
+                    "dataset_name":  "Extracted Content Core Regression Set",
+                    "function_name":  "ExtractedContent",
+                    "version":  "v1",
+                    "language":  "mixed",
+                    "description":  "Core regression cases for text-only, image-only, and mixed extraction scenarios.",
+                    "evaluation_cases":  [
+                                             {
+                                                 "case_id":  "EXT_CORE_01",
+                                                 "scenario_group":  "text_only",
+                                                 "expected_parser_mode":  "text_only",
+                                                 "expected_warning_count":  0,
+                                                 "notes":  "Plain academic text with no image markers."
+                                             },
+                                             {
+                                                 "case_id":  "EXT_CORE_02",
+                                                 "scenario_group":  "mixed_with_vision",
+                                                 "expected_parser_mode":  "full_multimodal_page",
+                                                 "expected_warning_count":  0,
+                                                 "notes":  "Text mixed with image placeholders and a vision model is available."
+                                             },
+                                             {
+                                                 "case_id":  "EXT_CORE_03",
+                                                 "scenario_group":  "mixed_without_vision",
+                                                 "expected_parser_mode":  "text_only",
+                                                 "expected_warning_count":  1,
+                                                 "notes":  "Image placeholders exist but no vision model is provided."
+                                             },
+                                             {
+                                                 "case_id":  "EXT_CORE_04",
+                                                 "scenario_group":  "empty_input",
+                                                 "expected_parser_mode":  "text_only",
+                                                 "expected_warning_count":  1,
+                                                 "notes":  "Input is empty or nearly empty."
+                                             }
+                                         ]
+                }
+}

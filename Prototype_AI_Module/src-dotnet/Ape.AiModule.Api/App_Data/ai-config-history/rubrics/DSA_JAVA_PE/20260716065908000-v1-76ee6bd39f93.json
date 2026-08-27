@@ -1,0 +1,107 @@
+﻿{
+    "snapshot_id":  "DSA_JAVA_PE:v1:20260716065908000:76ee6bd39f93",
+    "artifact_type":  "rubrics",
+    "stable_id":  "DSA_JAVA_PE",
+    "version":  "v1",
+    "function_name":  "",
+    "subject_code":  "DSA_JAVA",
+    "question_type":  "PE",
+    "language":  "en",
+    "description":  "Data Structures and Algorithms in Java - Practice Exam Rubric",
+    "is_active":  true,
+    "source":  "git_backfill",
+    "source_commit":  "511aa50726eca82952abff8f8b29642d20a4d019",
+    "captured_from":  "src-dotnet/Ape.AiModule.Api/App_Data/ai-rubrics/DSA_JAVA_PE.json",
+    "captured_at":  "2026-07-16T06:59:08.0000000Z",
+    "content_hash":  "76ee6bd39f93131abb8bbccb1f2229328381b69128255f65917e1125c9c639e4",
+    "change_reason":  "Add AI module prototype, operator UI, and docs",
+    "change_summary":  "Initial snapshot imported from git history.",
+    "content":  {
+                    "rubric_id":  "DSA_JAVA_PE",
+                    "version":  "v1",
+                    "language":  "en",
+                    "subject_code":  "DSA_JAVA",
+                    "question_type":  "PE",
+                    "title":  "Data Structures and Algorithms in Java - Practice Exam Rubric",
+                    "institution_context":  {
+                                                "target_students":  "FPT University students studying data structures and algorithms in Java",
+                                                "course_context":  [
+                                                                       "CSD-style practical algorithm and data structure implementation tasks",
+                                                                       "Tasks should stay within undergraduate coursework scope"
+                                                                   ]
+                                            },
+                    "difficulty_definitions":  {
+                                                   "easy":  {
+                                                                "description":  "A direct implementation task using one clear data structure or one simple algorithmic idea.",
+                                                                "expected_skills":  [
+                                                                                        "Implement a straightforward array, loop, or single-structure operation.",
+                                                                                        "Follow direct input/output rules.",
+                                                                                        "Solve without advanced optimization."
+                                                                                    ],
+                                                                "should_avoid":  [
+                                                                                     "Complex state management across multiple structures.",
+                                                                                     "Optimization-heavy algorithm design."
+                                                                                 ]
+                                                            },
+                                                   "medium":  {
+                                                                  "description":  "A task requiring several coherent operations, moderate edge-case handling, or a clear algorithm/data-structure choice.",
+                                                                  "expected_skills":  [
+                                                                                          "Implement and reason about a standard DSA task.",
+                                                                                          "Handle boundary cases explicitly.",
+                                                                                          "Write clean logic with meaningful test coverage."
+                                                                                      ],
+                                                                  "should_avoid":  [
+                                                                                       "Very advanced optimization or proofs.",
+                                                                                       "Large multi-module design."
+                                                                                   ]
+                                                              },
+                                                   "hard":  {
+                                                                "description":  "A substantial DSA task requiring algorithmic decomposition, careful edge-case handling, and stronger hidden-test coverage.",
+                                                                "expected_skills":  [
+                                                                                        "Choose or implement an appropriate algorithm or structure.",
+                                                                                        "Handle multiple important edge cases.",
+                                                                                        "Provide a solution whose tests validate non-trivial behavior."
+                                                                                    ],
+                                                                "should_avoid":  [
+                                                                                     "Research-grade algorithms.",
+                                                                                     "Topics not grounded in the chunks."
+                                                                                 ]
+                                                            }
+                                               },
+                    "review_checks":  [
+                                          "The task must be grounded in the provided chunks.",
+                                          "The task must be genuinely about DSA concepts in Java course scope.",
+                                          "Difficulty must match implementation and reasoning effort.",
+                                          "skeleton_code must be coherent starter Java code.",
+                                          "solution_code must solve the stated problem correctly in principle.",
+                                          "test_cases must include visible validation and meaningful hidden checks."
+                                      ],
+                    "difficulty_mismatch_signals":  {
+                                                        "easy":  [
+                                                                     "Requires non-trivial algorithm selection or many edge cases.",
+                                                                     "Needs deep reasoning about structure invariants.",
+                                                                     "Hidden tests imply much more than a direct practice task."
+                                                                 ],
+                                                        "medium":  [
+                                                                       "Can be solved with one trivial pass and no real reasoning.",
+                                                                       "Requires advanced algorithm design far above normal course level.",
+                                                                       "Depends on unstated assumptions not grounded in the chunks."
+                                                                   ],
+                                                        "hard":  [
+                                                                     "Only asks for a direct loop or one-step operation.",
+                                                                     "Contains weak or overly simple tests.",
+                                                                     "Does not require meaningful algorithmic thinking."
+                                                                 ]
+                                                    },
+                    "acceptance_rules":  [
+                                             "Accept only if the task, skeleton, solution, and tests are coherent and grounded.",
+                                             "Reject if the solution shape does not match the algorithmic task.",
+                                             "Reject if difficulty is inconsistent with the actual implementation burden."
+                                         ],
+                    "regeneration_hints":  [
+                                               "Keep Easy tasks single-structure and direct.",
+                                               "Use explicit boundary handling for Medium tasks.",
+                                               "Reserve stronger decomposition and hidden coverage for Hard tasks."
+                                           ]
+                }
+}

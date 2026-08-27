@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotNetEnv" Version="3.1.1" />
+    <PackageReference Include="PdfPig" Version="0.1.15" />
+    <ProjectReference Include="..\Ape.AiModule.Application\Ape.AiModule.Application.csproj" />
+    <ProjectReference Include="..\Ape.AiModule.Infrastructure\Ape.AiModule.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

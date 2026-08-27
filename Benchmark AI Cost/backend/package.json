@@ -1,0 +1,29 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "bench:genreview:98": "node scripts/run_genreview_98cases.mjs",
+    "bench:report:estimated": "node scripts/build_estimated_report_sets.mjs"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.22.0",
+    "better-sqlite3": "^12.11.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jszip": "^3.10.1",
+    "mammoth": "^1.12.0",
+    "multer": "^2.2.0",
+    "officeparser": "^7.2.1",
+    "openai": "^4.52.7",
+    "pdf-parse": "^2.4.5",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

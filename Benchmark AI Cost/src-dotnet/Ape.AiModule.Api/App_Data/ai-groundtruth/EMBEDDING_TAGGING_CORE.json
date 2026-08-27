@@ -1,0 +1,38 @@
+{
+  "dataset_id": "EMBEDDING_TAGGING_CORE",
+  "dataset_name": "Embedding and Auto Tagging Core Regression Set",
+  "function_name": "EmbeddingTagging",
+  "version": "v1",
+  "language": "mixed",
+  "description": "Core regression samples for validating chunk metadata structure and expected topic tagging.",
+  "evaluation_cases": [
+    {
+      "case_id": "ET_CORE_01",
+      "subject_code": "C_BASIC",
+      "chunk_type": "concept",
+      "expected_tags": ["arrays", "loops"],
+      "notes": "Introductory C content about arrays and loops."
+    },
+    {
+      "case_id": "ET_CORE_02",
+      "subject_code": "JAVA_OOP",
+      "chunk_type": "concept",
+      "expected_tags": ["class", "object", "constructor"],
+      "notes": "Java OOP opening chapter with classes and constructors."
+    },
+    {
+      "case_id": "ET_CORE_03",
+      "subject_code": "DSA_OOP",
+      "chunk_type": "concept",
+      "expected_tags": ["tree", "searching"],
+      "notes": "Data structure content about tree traversal or search."
+    },
+    {
+      "case_id": "ET_CORE_04",
+      "subject_code": "JAVA_OOP",
+      "chunk_type": "code",
+      "expected_tags": ["method", "class"],
+      "notes": "Chunk contains Java code snippet with class and methods."
+    }
+  ]
+}

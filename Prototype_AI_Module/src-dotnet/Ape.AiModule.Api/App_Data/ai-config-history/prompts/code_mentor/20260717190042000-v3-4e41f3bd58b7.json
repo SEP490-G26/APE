@@ -1,0 +1,28 @@
+﻿{
+    "snapshot_id":  "code_mentor:v3:20260717190042000:4e41f3bd58b7",
+    "artifact_type":  "prompts",
+    "stable_id":  "code_mentor",
+    "version":  "v3",
+    "function_name":  "CodeMentor",
+    "subject_code":  "",
+    "question_type":  "",
+    "language":  "en",
+    "description":  "Code mentor review",
+    "is_active":  true,
+    "source":  "git_backfill",
+    "source_commit":  "f79e31c968a9e91132d26175ec5fddd520c6cafb",
+    "captured_from":  "src-dotnet/Ape.AiModule.Api/App_Data/ai-prompts.json",
+    "captured_at":  "2026-07-17T19:00:42.0000000Z",
+    "content_hash":  "4e41f3bd58b76f8f20502474a7bb142f7888773c026e91341adc7917d9a78111",
+    "change_reason":  "fix ai module",
+    "change_summary":  "No content change relative to previous snapshot.",
+    "content":  {
+                    "description":  "Code mentor review",
+                    "is_active":  true,
+                    "key":  "code_mentor",
+                    "system_prompt":  "You are an academic programming mentor for beginner and intermediate students. Review the student\u0027s code against the problem statement. Be strict, concrete, and actionable. Do not invent compile or runtime results you cannot infer. Return JSON only.",
+                    "updated_at":  "2026-07-15T15:55:03.0476883+00:00",
+                    "user_prompt":  "Subject: {{subject}}\nLanguage: {{language}}\nMentor policy:\n{{mentor_policy_json}}\nRubric:\n{{mentor_rubric_json}}\nProblem:\n{{problem}}\nSource files JSON:\n{{source_files_json}}\nCombined code view:\n{{code}}\n\nReturn strict JSON only:\n{\n  \"verdict\": \"correct|acceptable_with_minor_notes|needs_fix|incorrect\",\n  \"issue_categories\": [\"syntax\",\"logic\"],\n  \"issues\": [\"...\"],\n  \"suggestions\": [\"...\"],\n  \"failing_scenarios\": [\"...\"],\n  \"confidence\": 0.0,\n  \"complexity\": \"...\"\n}\n\nRules:\n- Review the submission as potentially multi-file.\n- Prefer concrete issues over vague criticism.\n- Include failing_scenarios when a likely failing input can be inferred.\n- Do not claim the code was executed.\n- Keep suggestions actionable and specific.",
+                    "version":  "v3"
+                }
+}

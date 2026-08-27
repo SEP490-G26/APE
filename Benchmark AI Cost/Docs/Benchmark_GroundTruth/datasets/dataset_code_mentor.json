@@ -1,0 +1,118 @@
+{
+  "dataset_id": "dataset_code_mentor",
+  "description": "Code mentor dataset with representative student error patterns",
+  "output_schema": {
+    "verdict": "correct|partially_correct|incorrect",
+    "issues": [
+      {
+        "type": "string",
+        "location": "string",
+        "explanation": "string"
+      }
+    ],
+    "fix_guidance": ["string"],
+    "complexity": {
+      "time": "string",
+      "space": "string"
+    }
+  },
+  "cases": [
+    {
+      "case_id": "MENT_001",
+      "difficulty": "easy",
+      "input": {
+        "language": "C",
+        "problem": "Sum two integers",
+        "student_code": "int add(int a,int b){return a+b;}"
+      },
+      "expected": {
+        "verdict": "correct",
+        "must_detect_issue_count": 0,
+        "expected_time": "O(1)",
+        "expected_space": "O(1)"
+      },
+      "tags": ["correct_solution", "c_intro"]
+    },
+    {
+      "case_id": "MENT_002",
+      "difficulty": "easy",
+      "input": {
+        "language": "C",
+        "problem": "Find max in array",
+        "student_code": "for(int i=0;i<n-1;i++){ if(a[i]>mx) mx=a[i]; }"
+      },
+      "expected": {
+        "verdict": "incorrect",
+        "must_include_issue_types": ["off_by_one"],
+        "expected_time": "O(n)",
+        "expected_space": "O(1)"
+      },
+      "tags": ["off_by_one", "logic_error"]
+    },
+    {
+      "case_id": "MENT_003",
+      "difficulty": "medium",
+      "input": {
+        "language": "Java",
+        "problem": "Implement class hierarchy with overriding",
+        "student_code": "class B extends A { public void print(int x){} }"
+      },
+      "expected": {
+        "verdict": "incorrect",
+        "must_include_issue_types": ["override_mismatch"],
+        "must_include_fix_anchor": ["@Override", "signature alignment"]
+      },
+      "tags": ["java_oop", "override"]
+    },
+    {
+      "case_id": "MENT_004",
+      "difficulty": "hard",
+      "input": {
+        "language": "Java",
+        "problem": "BFS traversal",
+        "student_code": "for(Node n : graph){ if(n.id==target) return true; } // claims O(log n)"
+      },
+      "expected": {
+        "verdict": "partially_correct",
+        "must_include_issue_types": ["wrong_complexity_claim"],
+        "expected_time": "O(n)",
+        "expected_space": "O(1)"
+      },
+      "tags": ["dsa_oop", "complexity_analysis"]
+    },
+    {
+      "case_id": "MENT_005",
+      "difficulty": "hard",
+      "input": {
+        "language": "Java",
+        "problem": "Reverse linked list",
+        "student_code": "while(curr!=null){ curr=curr.next; prev=curr; }"
+      },
+      "expected": {
+        "verdict": "incorrect",
+        "must_include_issue_types": ["pointer_update_order"],
+        "must_include_fix_anchor": ["store next pointer", "relink before move"],
+        "expected_time": "O(n)",
+        "expected_space": "O(1)"
+      },
+      "tags": ["dsa_oop", "linked_list", "runtime_logic"]
+    },
+    {
+      "case_id": "MENT_006",
+      "difficulty": "medium",
+      "input": {
+        "language": "C",
+        "problem": "Count vowels in string",
+        "student_code": "int c; while(s[i]){ if(isVowel(s[i])) c++; i++; }"
+      },
+      "expected": {
+        "verdict": "incorrect",
+        "must_include_issue_types": ["uninitialized_variable"],
+        "must_include_fix_anchor": ["initialize counter before loop"],
+        "expected_time": "O(n)",
+        "expected_space": "O(1)"
+      },
+      "tags": ["c_intro", "common_student_bug"]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+﻿{
+    "snapshot_id":  "EMBEDDING_TAGGING_CORE:v1:20260716065908000:2ca5f16a4431",
+    "artifact_type":  "groundtruth",
+    "stable_id":  "EMBEDDING_TAGGING_CORE",
+    "version":  "v1",
+    "function_name":  "EmbeddingTagging",
+    "subject_code":  "",
+    "question_type":  "",
+    "language":  "mixed",
+    "description":  "Core regression samples for validating chunk metadata structure and expected topic tagging.",
+    "is_active":  true,
+    "source":  "git_backfill",
+    "source_commit":  "511aa50726eca82952abff8f8b29642d20a4d019",
+    "captured_from":  "src-dotnet/Ape.AiModule.Api/App_Data/ai-groundtruth/EMBEDDING_TAGGING_CORE.json",
+    "captured_at":  "2026-07-16T06:59:08.0000000Z",
+    "content_hash":  "2ca5f16a443142af90f09ad074c19b3954311e5deb417100294a3aff65c613f4",
+    "change_reason":  "Add AI module prototype, operator UI, and docs",
+    "change_summary":  "Initial snapshot imported from git history.",
+    "content":  {
+                    "dataset_id":  "EMBEDDING_TAGGING_CORE",
+                    "dataset_name":  "Embedding and Auto Tagging Core Regression Set",
+                    "function_name":  "EmbeddingTagging",
+                    "version":  "v1",
+                    "language":  "mixed",
+                    "description":  "Core regression samples for validating chunk metadata structure and expected topic tagging.",
+                    "evaluation_cases":  [
+                                             {
+                                                 "case_id":  "ET_CORE_01",
+                                                 "subject_code":  "C_BASIC",
+                                                 "chunk_type":  "concept",
+                                                 "expected_tags":  [
+                                                                       "arrays",
+                                                                       "loops"
+                                                                   ],
+                                                 "notes":  "Introductory C content about arrays and loops."
+                                             },
+                                             {
+                                                 "case_id":  "ET_CORE_02",
+                                                 "subject_code":  "JAVA_OOP",
+                                                 "chunk_type":  "concept",
+                                                 "expected_tags":  [
+                                                                       "class",
+                                                                       "object",
+                                                                       "constructor"
+                                                                   ],
+                                                 "notes":  "Java OOP opening chapter with classes and constructors."
+                                             },
+                                             {
+                                                 "case_id":  "ET_CORE_03",
+                                                 "subject_code":  "DSA_OOP",
+                                                 "chunk_type":  "concept",
+                                                 "expected_tags":  [
+                                                                       "tree",
+                                                                       "searching"
+                                                                   ],
+                                                 "notes":  "Data structure content about tree traversal or search."
+                                             },
+                                             {
+                                                 "case_id":  "ET_CORE_04",
+                                                 "subject_code":  "JAVA_OOP",
+                                                 "chunk_type":  "code",
+                                                 "expected_tags":  [
+                                                                       "method",
+                                                                       "class"
+                                                                   ],
+                                                 "notes":  "Chunk contains Java code snippet with class and methods."
+                                             }
+                                         ]
+                }
+}

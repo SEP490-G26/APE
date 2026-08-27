@@ -1,0 +1,67 @@
+﻿{
+  "snapshot_id": "embedding_tagging_policy_v1:v1:20260720173355959:73200049c0e0",
+  "artifact_type": "policies",
+  "stable_id": "embedding_tagging_policy_v1",
+  "version": "v1",
+  "function_name": "EmbeddingTagging",
+  "subject_code": null,
+  "question_type": null,
+  "language": null,
+  "description": "Embedding and tagging runtime policy",
+  "is_active": true,
+  "source": "D:\\TEST AI\\Prototype_AI_Module\\src-dotnet\\Ape.AiModule.Api\\App_Data\\embedding-tagging-policy.json",
+  "source_commit": null,
+  "captured_from": null,
+  "captured_at": "2026-07-20T17:33:55.9598336+00:00",
+  "content_hash": "73200049c0e0e456c36ad764ebae4e8cb00a80dfa38f9bda9ab461f746baad31",
+  "change_reason": null,
+  "change_summary": null,
+  "content": {
+    "policy_id": "embedding_tagging_policy_v1",
+    "version": "v1",
+    "function_name": "EmbeddingTagging",
+    "chunk_defaults": {
+      "chunking_strategy_text_only": "logical_block",
+      "chunking_strategy_multimodal": "page_block",
+      "retrieval_enabled": true,
+      "default_status": "active"
+    },
+    "tagging_rules": {
+      "max_tags_per_chunk": 5,
+      "fallback_chunk_type": "paragraph",
+      "fallback_section_title": "Untitled Section"
+    },
+    "subject_taxonomy": {
+      "C_BASIC": [
+        "variables",
+        "conditions",
+        "loops",
+        "arrays",
+        "functions",
+        "pointers",
+        "stdio"
+      ],
+      "JAVA_OOP": [
+        "class",
+        "object",
+        "constructor",
+        "encapsulation",
+        "inheritance",
+        "polymorphism",
+        "interface",
+        "method"
+      ],
+      "DSA_OOP": [
+        "array",
+        "linked_list",
+        "stack",
+        "queue",
+        "tree",
+        "graph",
+        "sorting",
+        "searching",
+        "complexity"
+      ]
+    }
+  }
+}

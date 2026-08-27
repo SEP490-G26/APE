@@ -1,0 +1,17 @@
+{
+  "rubric_id": "EMBEDDING_TAGGING",
+  "rubric_name": "Embedding and Auto Tagging Core Checks",
+  "function_name": "EmbeddingTagging",
+  "version": "v1",
+  "language": "en",
+  "description": "Lightweight rubric for checking whether chunk records are structurally useful and whether topic tags are aligned with the chunk content.",
+  "quality_checks": [
+    "Each chunk should include enough metadata to trace back to the document source.",
+    "The normalized text should be suitable for embedding and retrieval.",
+    "The markdown text should preserve useful structural cues for debugging.",
+    "Topic tags should come from the allowed taxonomy and should match the chunk semantics.",
+    "The embedding metadata should clearly record provider, model, and vector dimension."
+  ],
+  "acceptance_rule": "Accept when the chunk record is DB-ready and topic tags are semantically grounded in the chunk.",
+  "warning_rule": "Warn when tags are too generic, too many, or not aligned with the subject taxonomy."
+}

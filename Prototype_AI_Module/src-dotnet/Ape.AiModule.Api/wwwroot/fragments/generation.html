@@ -1,0 +1,154 @@
+<section id="generation-tab" class="tab-panel">
+  <div class="function-layout">
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Function 4-5</p>
+          <h3>Question Generation + Review</h3>
+          <p class="text-note">Luồng khuyến nghị: `Extraction -> Embedding -> Retrieval Plan -> Context Pack -> Generation + Review`.</p>
+        </div>
+      </div>
+      <form id="generation-form" class="stack-form">
+        <div class="grid grid--3">
+          <label>User ID
+            <input name="userId" value="prototype-user">
+          </label>
+          <label>Course ID
+            <input name="courseId" value="course-demo">
+          </label>
+          <label>Document ID
+            <input name="documentId" value="document-demo">
+          </label>
+          <label>Subject
+            <select name="subject">
+              <option value="C">C</option>
+              <option value="JAVA_OOP">JAVA_OOP</option>
+              <option value="DSA_JAVA">DSA_JAVA</option>
+            </select>
+          </label>
+          <label>Difficulty
+            <select name="difficulty">
+              <option value="Easy">Easy</option>
+              <option value="Medium" selected>Medium</option>
+              <option value="Hard">Hard</option>
+            </select>
+          </label>
+          <label>Question type
+            <select name="questionType">
+              <option value="FE">FE</option>
+              <option value="PE">PE</option>
+            </select>
+          </label>
+          <label>Count
+            <input name="count" type="number" min="1" max="10" value="1">
+          </label>
+          <label>Mode
+            <select name="mode" id="generation-mode">
+              <option value="SingleAgent">SingleAgent</option>
+              <option value="SameModelDualRole" selected>SameModelDualRole</option>
+              <option value="DualAgent">DualAgent</option>
+            </select>
+          </label>
+          <label>Max attempts
+            <input name="maxAttempts" type="number" min="1" max="3" value="2">
+          </label>
+          <label>Generator provider
+            <select name="generatorProvider" data-provider-select data-model-target="generation-generator-model"></select>
+          </label>
+          <label>Generator model
+            <select id="generation-generator-model" name="generatorModel"></select>
+          </label>
+          <label>Reviewer provider
+            <select name="reviewerProvider" data-provider-select data-model-target="generation-reviewer-model"></select>
+          </label>
+          <label>Reviewer model
+            <select id="generation-reviewer-model" name="reviewerModel"></select>
+          </label>
+          <label>Is public
+            <select name="isPublic">
+              <option value="false">false</option>
+              <option value="true">true</option>
+            </select>
+          </label>
+        </div>
+        <div class="grid grid--3">
+          <label>Input strategy
+            <select name="inputStrategy" id="generation-input-strategy">
+              <option value="chunks" selected>Chunks JSON</option>
+              <option value="contextPack">Context Pack ID</option>
+              <option value="retrieval">Retrieval Planner</option>
+            </select>
+          </label>
+          <label>Context pack ID
+            <input name="contextPackId" id="generation-context-pack-id" placeholder="pack-java-oop-constructor-medium-001">
+          </label>
+          <label>Target topics
+            <input name="targetTopics" id="generation-target-topics" placeholder="constructor, class, object">
+          </label>
+          <label>Source scope
+            <select name="sourceScope" id="generation-source-scope">
+              <option value="HYBRID" selected>HYBRID</option>
+              <option value="SYSTEM_CORE">SYSTEM_CORE</option>
+              <option value="BYOS">BYOS</option>
+            </select>
+          </label>
+          <label>Use cached pack
+            <select name="useCachedPack" id="generation-use-cached-pack">
+              <option value="true" selected>true</option>
+              <option value="false">false</option>
+            </select>
+          </label>
+          <label>Force rebuild pack
+            <select name="forceRebuildPack" id="generation-force-rebuild-pack">
+              <option value="false" selected>false</option>
+              <option value="true">true</option>
+            </select>
+          </label>
+          <label>Max candidate count
+            <input name="maxCandidateCount" id="generation-max-candidate-count" type="number" min="1" max="200" value="40">
+          </label>
+          <label>Max packed tokens
+            <input name="maxPackedTokens" id="generation-max-packed-tokens" type="number" min="256" max="50000" value="7000">
+          </label>
+          <label>Preferred chapter IDs
+            <input name="preferredChapterIds" id="generation-preferred-chapter-ids" placeholder="chapter-01, chapter-02">
+          </label>
+        </div>
+        <label>Retrieval query
+          <textarea name="retrievalQuery" id="generation-retrieval-query" rows="3" placeholder="Create one medium PE question about constructors and object initialization"></textarea>
+        </label>
+        <div id="generation-flow-note" class="text-note"></div>
+        <label>Import chunks JSON
+          <input id="generation-import" type="file" accept=".json">
+        </label>
+        <label>Chunks JSON
+          <textarea name="chunks" rows="18"></textarea>
+        </label>
+        <div class="action-row">
+          <button type="submit">Run Generation + Review</button>
+          <button type="button" class="secondary" id="generation-plan-retrieval">Plan Retrieval Pack</button>
+          <button type="button" class="secondary" id="generation-use-last-pack">Use Last Context Pack</button>
+          <button type="button" class="secondary" id="generation-use-last-embedding">Use Last Embedding Result</button>
+          <button type="button" class="secondary" data-run-export="generation">Export Review Package</button>
+          <button type="button" class="secondary" data-copy-parsed="generation">Copy Parsed</button>
+          <button type="button" class="secondary" data-copy-json="generation">Copy JSON</button>
+          <button type="button" class="secondary" data-export-json="generation">Export JSON</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel panel--output">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">Output</p>
+          <h3>Parsed result</h3>
+        </div>
+      </div>
+      <div id="generation-result" class="result-card"></div>
+      <details class="details-block">
+        <summary>Raw JSON</summary>
+        <pre id="generation-json" class="json-view"></pre>
+      </details>
+    </section>
+  </div>
+</section>

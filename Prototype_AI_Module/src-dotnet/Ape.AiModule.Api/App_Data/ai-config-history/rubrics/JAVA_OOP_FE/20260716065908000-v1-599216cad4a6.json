@@ -1,0 +1,107 @@
+﻿{
+    "snapshot_id":  "JAVA_OOP_FE:v1:20260716065908000:599216cad4a6",
+    "artifact_type":  "rubrics",
+    "stable_id":  "JAVA_OOP_FE",
+    "version":  "v1",
+    "function_name":  "",
+    "subject_code":  "JAVA_OOP",
+    "question_type":  "FE",
+    "language":  "en",
+    "description":  "Java OOP - Multiple Choice Rubric",
+    "is_active":  true,
+    "source":  "git_backfill",
+    "source_commit":  "511aa50726eca82952abff8f8b29642d20a4d019",
+    "captured_from":  "src-dotnet/Ape.AiModule.Api/App_Data/ai-rubrics/JAVA_OOP_FE.json",
+    "captured_at":  "2026-07-16T06:59:08.0000000Z",
+    "content_hash":  "599216cad4a6f861478f92cf54bde63f29ccf1803a957aea8a0530c8de3ffb34",
+    "change_reason":  "Add AI module prototype, operator UI, and docs",
+    "change_summary":  "Initial snapshot imported from git history.",
+    "content":  {
+                    "rubric_id":  "JAVA_OOP_FE",
+                    "version":  "v1",
+                    "language":  "en",
+                    "subject_code":  "JAVA_OOP",
+                    "question_type":  "FE",
+                    "title":  "Java OOP - Multiple Choice Rubric",
+                    "institution_context":  {
+                                                "target_students":  "FPT University students studying Java OOP courses",
+                                                "course_context":  [
+                                                                       "PRO-style object-oriented programming progression",
+                                                                       "Assessment should fit undergraduate Java OOP learning outcomes"
+                                                                   ]
+                                            },
+                    "difficulty_definitions":  {
+                                                   "easy":  {
+                                                                "description":  "Single-concept questions about Java class-based basics or direct OOP terminology.",
+                                                                "expected_skills":  [
+                                                                                        "Identify class, object, constructor, field, method, or access modifier roles.",
+                                                                                        "Recognize simple array or object usage if grounded in the chunks.",
+                                                                                        "Answer from direct understanding rather than layered reasoning."
+                                                                                    ],
+                                                                "should_avoid":  [
+                                                                                     "Polymorphism subtleties requiring long reasoning chains.",
+                                                                                     "Inheritance corner cases outside beginner scope."
+                                                                                 ]
+                                                            },
+                                                   "medium":  {
+                                                                  "description":  "Questions requiring code tracing or reasoning about object state, method calls, constructors, or inheritance basics.",
+                                                                  "expected_skills":  [
+                                                                                          "Trace short object interactions.",
+                                                                                          "Differentiate encapsulation and inheritance behavior.",
+                                                                                          "Reason about method calls and output in short snippets."
+                                                                                      ],
+                                                                  "should_avoid":  [
+                                                                                       "Framework-specific Java knowledge.",
+                                                                                       "Highly nuanced JVM behavior."
+                                                                                   ]
+                                                              },
+                                                   "hard":  {
+                                                                "description":  "Questions requiring careful reasoning about multiple OOP concepts, method dispatch, class relationships, or subtle code behavior.",
+                                                                "expected_skills":  [
+                                                                                        "Track interactions between classes and objects.",
+                                                                                        "Reason about method overriding, inheritance, and visibility if supported by the chunks.",
+                                                                                        "Choose between close conceptual distractors."
+                                                                                    ],
+                                                                "should_avoid":  [
+                                                                                     "Enterprise Java APIs.",
+                                                                                     "Advanced concurrency or reflection topics."
+                                                                                 ]
+                                                            }
+                                               },
+                    "review_checks":  [
+                                          "The question must be grounded in the provided chunks.",
+                                          "The question must target Java OOP concepts, not unrelated framework trivia.",
+                                          "Difficulty must match the actual reasoning demand.",
+                                          "Options must be plausible and clearly distinct.",
+                                          "correct_answer must match valid option labels.",
+                                          "Explanation must justify the answer with Java OOP reasoning."
+                                      ],
+                    "difficulty_mismatch_signals":  {
+                                                        "easy":  [
+                                                                     "Requires tracing class interactions across many steps.",
+                                                                     "Depends on subtle overriding or inheritance behavior.",
+                                                                     "Uses distractors that are too conceptually close for a basic recall item."
+                                                                 ],
+                                                        "medium":  [
+                                                                       "Can be answered by recalling a single definition only.",
+                                                                       "Requires expert Java behavior outside OOP fundamentals.",
+                                                                       "Depends on unsupported code semantics not present in the chunks."
+                                                                   ],
+                                                        "hard":  [
+                                                                     "Only tests vocabulary recall.",
+                                                                     "Does not require meaningful OOP reasoning.",
+                                                                     "Has trivial distractors."
+                                                                 ]
+                                                    },
+                    "acceptance_rules":  [
+                                             "Accept only if the item is grounded, schema-valid, and aligned with Java OOP course scope.",
+                                             "Reject if explanation or answer conflicts with standard Java OOP behavior.",
+                                             "Reject if difficulty is overstated or understated relative to the code reasoning required."
+                                         ],
+                    "regeneration_hints":  [
+                                               "Use direct concept checks for Easy items.",
+                                               "Add code-tracing or object interaction for Medium items.",
+                                               "Reserve multi-concept reasoning for Hard items."
+                                           ]
+                }
+}

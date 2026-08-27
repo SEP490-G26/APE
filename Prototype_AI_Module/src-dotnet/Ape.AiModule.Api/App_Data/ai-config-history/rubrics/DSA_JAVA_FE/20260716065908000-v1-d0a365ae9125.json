@@ -1,0 +1,107 @@
+﻿{
+    "snapshot_id":  "DSA_JAVA_FE:v1:20260716065908000:d0a365ae9125",
+    "artifact_type":  "rubrics",
+    "stable_id":  "DSA_JAVA_FE",
+    "version":  "v1",
+    "function_name":  "",
+    "subject_code":  "DSA_JAVA",
+    "question_type":  "FE",
+    "language":  "en",
+    "description":  "Data Structures and Algorithms in Java - Multiple Choice Rubric",
+    "is_active":  true,
+    "source":  "git_backfill",
+    "source_commit":  "511aa50726eca82952abff8f8b29642d20a4d019",
+    "captured_from":  "src-dotnet/Ape.AiModule.Api/App_Data/ai-rubrics/DSA_JAVA_FE.json",
+    "captured_at":  "2026-07-16T06:59:08.0000000Z",
+    "content_hash":  "d0a365ae9125a7818553f44a39500a516336390366faed820c245dc4437a3458",
+    "change_reason":  "Add AI module prototype, operator UI, and docs",
+    "change_summary":  "Initial snapshot imported from git history.",
+    "content":  {
+                    "rubric_id":  "DSA_JAVA_FE",
+                    "version":  "v1",
+                    "language":  "en",
+                    "subject_code":  "DSA_JAVA",
+                    "question_type":  "FE",
+                    "title":  "Data Structures and Algorithms in Java - Multiple Choice Rubric",
+                    "institution_context":  {
+                                                "target_students":  "FPT University students studying data structures and algorithms in Java",
+                                                "course_context":  [
+                                                                       "CSD-style algorithmic reasoning and data structure understanding",
+                                                                       "Assessment should emphasize concept understanding before advanced theory"
+                                                                   ]
+                                            },
+                    "difficulty_definitions":  {
+                                                   "easy":  {
+                                                                "description":  "Concept-level questions about one data structure or algorithm idea with direct reasoning.",
+                                                                "expected_skills":  [
+                                                                                        "Recognize array, stack, queue, linked list, tree, graph, sorting, or searching basics.",
+                                                                                        "Identify core properties or direct use cases.",
+                                                                                        "Answer without long algorithm tracing."
+                                                                                    ],
+                                                                "should_avoid":  [
+                                                                                     "Complex asymptotic trade-off analysis.",
+                                                                                     "Multi-step trace of large structures."
+                                                                                 ]
+                                                            },
+                                                   "medium":  {
+                                                                  "description":  "Questions requiring moderate reasoning about algorithm behavior, data structure operations, or time-complexity implications.",
+                                                                  "expected_skills":  [
+                                                                                          "Trace short operations on a structure.",
+                                                                                          "Compare two plausible algorithmic choices.",
+                                                                                          "Reason about ordinary edge cases or operation sequences."
+                                                                                      ],
+                                                                  "should_avoid":  [
+                                                                                       "Research-level proofs.",
+                                                                                       "Deep advanced optimizations outside course scope."
+                                                                                   ]
+                                                              },
+                                                   "hard":  {
+                                                                "description":  "Questions requiring careful algorithmic reasoning, close comparison of operations, or understanding of subtle data-structure behavior.",
+                                                                "expected_skills":  [
+                                                                                        "Trace non-trivial state changes or operation sequences.",
+                                                                                        "Differentiate between close complexity or structure-behavior options.",
+                                                                                        "Use chunk-grounded algorithmic reasoning rather than simple recall."
+                                                                                    ],
+                                                                "should_avoid":  [
+                                                                                     "Topics not covered by the provided chunks.",
+                                                                                     "Advanced theorem-heavy material outside standard coursework."
+                                                                                 ]
+                                                            }
+                                               },
+                    "review_checks":  [
+                                          "The question must be grounded in the provided chunks.",
+                                          "The item must target DSA concepts in Java course scope.",
+                                          "Difficulty must match the actual reasoning depth.",
+                                          "Options must be technically meaningful and non-trivial.",
+                                          "correct_answer must match valid option labels.",
+                                          "Explanation must justify the answer with algorithm or structure reasoning."
+                                      ],
+                    "difficulty_mismatch_signals":  {
+                                                        "easy":  [
+                                                                     "Requires tracing many operations or states.",
+                                                                     "Requires subtle complexity comparison.",
+                                                                     "Depends on hidden implementation details not present in the chunks."
+                                                                 ],
+                                                        "medium":  [
+                                                                       "Only asks for a direct textbook definition.",
+                                                                       "Requires proof-level reasoning well above standard course scope.",
+                                                                       "Uses highly advanced optimizations absent from the material."
+                                                                   ],
+                                                        "hard":  [
+                                                                     "Can be answered by a single-property recall.",
+                                                                     "Has obvious distractors with no meaningful trade-off.",
+                                                                     "Does not require algorithmic or operational reasoning."
+                                                                 ]
+                                                    },
+                    "acceptance_rules":  [
+                                             "Accept only if the item is chunk-grounded and DSA-relevant.",
+                                             "Reject if complexity claims or structure behavior are incorrect.",
+                                             "Reject if the stated difficulty does not match the reasoning load."
+                                         ],
+                    "regeneration_hints":  [
+                                               "Use direct property checks for Easy items.",
+                                               "Use short traces or operation comparisons for Medium items.",
+                                               "Use nuanced algorithmic reasoning for Hard items."
+                                           ]
+                }
+}

@@ -1,0 +1,89 @@
+{
+  "rubric_id": "C_FE",
+  "version": "v1",
+  "language": "en",
+  "subject_code": "C",
+  "question_type": "FE",
+  "title": "C Programming Fundamentals - Multiple Choice Rubric",
+  "institution_context": {
+    "target_students": "FPT University students in foundational programming courses",
+    "course_context": [
+      "PRF-style introductory programming progression",
+      "Beginner-friendly assessment tone with academic rigor"
+    ]
+  },
+  "difficulty_definitions": {
+    "easy": {
+      "description": "Single-concept recall or direct interpretation questions about basic C syntax or semantics.",
+      "expected_skills": [
+        "Identify variable, data type, operator, or control-flow behavior.",
+        "Recognize simple array, loop, function, or pointer basics.",
+        "Answer without multi-step tracing or deep debugging."
+      ],
+      "should_avoid": [
+        "Nested pointer reasoning.",
+        "Multi-function execution tracing.",
+        "Algorithmic optimization discussions."
+      ]
+    },
+    "medium": {
+      "description": "Questions requiring short reasoning chains, code tracing, or understanding of common mistakes in beginner C programs.",
+      "expected_skills": [
+        "Trace loops, arrays, or function calls.",
+        "Reason about pointer usage at a basic to intermediate level.",
+        "Detect common semantic mistakes or output behavior."
+      ],
+      "should_avoid": [
+        "Complex memory-layout puzzles.",
+        "Advanced undefined behavior traps that are not grounded in the source material."
+      ]
+    },
+    "hard": {
+      "description": "Questions requiring careful code tracing, deeper semantic understanding, or subtle reasoning about pointers, arrays, functions, or memory behavior.",
+      "expected_skills": [
+        "Resolve multi-step execution paths.",
+        "Differentiate close distractors based on true C semantics.",
+        "Reason about non-trivial pointer or array behavior if grounded in the chunks."
+      ],
+      "should_avoid": [
+        "Expert-level compiler internals.",
+        "Topics not present in introductory C course material."
+      ]
+    }
+  },
+  "review_checks": [
+    "The question must be grounded in the provided chunks.",
+    "The requested difficulty must match the actual reasoning demand.",
+    "Options must be plausible, non-duplicate, and clearly distinguishable.",
+    "correct_answer must match valid option labels.",
+    "Explanation must justify the correct answer using C fundamentals.",
+    "The question must stay within introductory C scope."
+  ],
+  "difficulty_mismatch_signals": {
+    "easy": [
+      "Requires multi-step tracing across several statements or functions.",
+      "Uses tricky pointer semantics that exceed beginner recall.",
+      "Includes distractors that require advanced edge-case knowledge."
+    ],
+    "medium": [
+      "Can be answered by direct definition recall only.",
+      "Requires expert-level undefined behavior reasoning.",
+      "Depends on content absent from the chunks."
+    ],
+    "hard": [
+      "Only tests a single factual definition.",
+      "Has trivial elimination between choices.",
+      "Does not require meaningful reasoning beyond beginner recall."
+    ]
+  },
+  "acceptance_rules": [
+    "Accept only if schema is valid, content is grounded, and difficulty is aligned.",
+    "Reject if the question exceeds introductory C scope without chunk support.",
+    "Reject if explanation contradicts the selected answer."
+  ],
+  "regeneration_hints": [
+    "Reduce pointer complexity if the requested level is Easy.",
+    "Increase reasoning depth and distractor quality if the requested level is Hard.",
+    "Keep terminology consistent with introductory C teaching material."
+  ]
+}

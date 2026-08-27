@@ -1,0 +1,108 @@
+{
+  "runAt": "2026-06-24T07:51:20.376Z",
+  "timeline": [
+    {
+      "ts": "2026-06-24T07:51:19.826Z",
+      "phase": "upload_received",
+      "details": {
+        "fileName": "Má» Rá»ng á»¨ng Dá»¥ng SystemSettings.docx"
+      }
+    },
+    {
+      "ts": "2026-06-24T07:51:19.904Z",
+      "phase": "parse_completed",
+      "details": {
+        "parser": "mammoth_docx",
+        "latency_ms": 77.14
+      }
+    },
+    {
+      "ts": "2026-06-24T07:51:20.376Z",
+      "phase": "embedding_chunk_completed",
+      "details": {
+        "chunkIndex": 0,
+        "words": 499,
+        "provider": "cohere",
+        "model": "embed-multilingual-v3.0",
+        "inputTokens": 508,
+        "costUsd": 0
+      }
+    }
+  ],
+  "parsedMarkdown": "# TÀI LIỆU 27: MỞ RỘNG ỨNG DỤNG THỰC THỂ SystemSettings \\(GLOBAL CONFIGURATIONS\\)\n\nThực thể SystemSettings trong MongoDB thường được thiết kế theo dạng __Key\\-Value Store__ hoặc __Singleton Documents__\\. Tức là mỗi bản ghi \\(Document\\) sẽ đại diện cho một cụm cấu hình \\(Config Group\\) duy nhất\\.\n\nDưới đây là 5 nhóm cấu hình cực kỳ giá trị mà hệ thống FPT ExamHub nên lưu vào bảng này:\n\n## 1\\. Cụm cấu hình AI & Chi phí \\(AI\\_Config\\)\n\n*Kiểm soát van xả Token và bật/tắt tính năng AI khẩn cấp\\.*\n\n\\{  \n  \"\\_id\": \"CONFIG\\_AI\\_LIMITS\",  \n  \"daily\\_free\\_credits\": 50,           // Số Credit cấp miễn phí mỗi ngày \\(Admin có thể tăng lên 100 vào dịp thi\\)  \n  \"enable\\_ai\\_mentor\": true,           // Nút \"Kill Switch\"\\. Nếu OpenAI sập, Admin đổi thành \\`false\\` để tắt nút Hỏi AI trên UI ngay lập tức\\.  \n  \"max\\_document\\_size\\_mb\": 10,         // Giới hạn dung lượng file PDF sinh viên được phép upload \\(BYOS\\)  \n  \"ai\\_fallback\\_model\": \"gpt\\-4o\\-mini\"  // Model dự phòng nếu model chính bị quá tải  \n\\}  \n\n\n## 2\\. Cụm cấu hình Máy chấm \\(Judge0\\_Config\\)\n\n*Cấu hình các giới hạn vật lý để bảo vệ Server không bị sinh viên viết code vòng lặp vô hạn \\(Infinite Loop\\) làm treo máy\\.*\n\n\\{  \n  \"\\_id\": \"CONFIG\\_AUTO\\_GRADER\",  \n  \"default\\_cpu\\_time\\_limit\": 2\\.0,      // Code chạy quá 2 giây \\-> Timeout \\(TLE\\)  \n  \"default\\_memory\\_limit\\_kb\": 128000,  // Code ngốn quá 128MB RAM \\-> Memory Limit Exceeded \\(MLE\\)  \n  \"enable\\_java\\_submissions\": true     // Bật/tắt ngôn ngữ lập trình theo đợt  \n\\}  \n\n\n## 3\\. Cụm cấu hình Giao diện & Trải nghiệm \\(UI\\_UX\\_Config\\)\n\n*Như bạn đã đề xuất, đây là nơi Admin quản lý Banners và thông báo hệ thống\\.*\n\n\\{  \n  \"\\_id\": \"CONFIG\\_UI\\_UX\",  \n  \"maintenance\\_mode\": false,          // Đổi thành True thì toàn bộ web hiện màn hình \"Đang bảo trì\"  \n  \"announcement\\_banner\": \\{  \n    \"is\\_active\": true,  \n    \"text\": \"🔥 Chào mừng tân sinh viên K20\\! Nạp ngay gói VIP giảm giá 50% 🔥\",  \n    \"link\\_url\": \"/pricing\"  \n  \\},  \n  \"default\\_theme\": \"dark\"  \n\\}  \n\n\n## 4\\. Cụm cấu hình Tài chính \\(Payment\\_Config\\)\n\n*Định hình quy tắc quy đổi tiền tệ và các gói khuyến mãi chung\\.*\n\n\\{  \n  \"\\_id\": \"CONFIG\\_PAYMENT\",  \n  \"exchange\\_rate\\_vnd\\_to\\_credit\": 10,  // 1\\.000 VNĐ = 10 Credit  \n  \"min\\_deposit\\_vnd\": 20000,           // Nạp tối thiểu 20k  \n  \"global\\_tax\\_percent\": 10            // Thuế VAT nếu có  \n\\}  \n\n\n## 5\\. Cụm cấu hình Gamification \\(EXP\\_Rules\\)\n\n*Chính là phần chúng ta đã thảo luận ở Tài liệu 22\\.*\n\n\\{  \n  \"\\_id\": \"CONFIG\\_GAMIFICATION\",  \n  \"daily\\_login\": 10,  \n  \"pe\\_question\\_medium\": 50,  \n  \"event\\_multiplier\": 1\\.0  \n\\}  \n\n\n### 🚀 Lời Khuyên Triển Khai \\(Dành cho Dev\\): \"Feature Flags Pattern\"\n\nCách thiết kế này trong ngành phần mềm gọi là __Feature Flags__ \\(Cờ tính năng\\)\\. Khi Backend API khởi động \\(Boot up\\), nó sẽ Query bảng SystemSettings một lần duy nhất và lưu vào __RAM \\(Redis/In\\-Memory Cache\\)__\\. Bất cứ khi nào người dùng tương tác, Backend chỉ check dữ liệu trên RAM nên tốc độ là __0ms__ \\(Không hề gây gánh nặng cho MongoDB\\)\\. Khi Admin sửa cấu hình trên UI, nó sẽ bắn một sự kiện \\(Event\\) để Backend xóa RAM đi và nạp lại cục JSON mới\\. Đây là kiến trúc tiêu chuẩn của các công ty công nghệ lớn\\!\n\n",
+  "chunkedMarkdown": [
+    {
+      "chunkIndex": 0,
+      "words": 499,
+      "text": "# TÀI LIỆU 27: MỞ RỘNG ỨNG DỤNG THỰC THỂ SystemSettings \\(GLOBAL CONFIGURATIONS\\) Thực thể SystemSettings trong MongoDB thường được thiết kế theo dạng __Key\\-Value Store__ hoặc __Singleton Documents__\\. Tức là mỗi bản ghi \\(Document\\) sẽ đại diện cho một cụm cấu hình \\(Config Group\\) duy nhất\\. Dưới đây là 5 nhóm cấu hình cực kỳ giá trị mà hệ thống FPT ExamHub nên lưu vào bảng này: ## 1\\. Cụm cấu hình AI & Chi phí \\(AI\\_Config\\) *Kiểm soát van xả Token và bật/tắt tính năng AI khẩn cấp\\.* \\{ \"\\_id\": \"CONFIG\\_AI\\_LIMITS\", \"daily\\_free\\_credits\": 50, // Số Credit cấp miễn phí mỗi ngày \\(Admin có thể tăng lên 100 vào dịp thi\\) \"enable\\_ai\\_mentor\": true, // Nút \"Kill Switch\"\\. Nếu OpenAI sập, Admin đổi thành \\`false\\` để tắt nút Hỏi AI trên UI ngay lập tức\\. \"max\\_document\\_size\\_mb\": 10, // Giới hạn dung lượng file PDF sinh viên được phép upload \\(BYOS\\) \"ai\\_fallback\\_model\": \"gpt\\-4o\\-mini\" // Model dự phòng nếu model chính bị quá tải \\} ## 2\\. Cụm cấu hình Máy chấm \\(Judge0\\_Config\\) *Cấu hình các giới hạn vật lý để bảo vệ Server không bị sinh viên viết code vòng lặp vô hạn \\(Infinite Loop\\) làm treo máy\\.* \\{ \"\\_id\": \"CONFIG\\_AUTO\\_GRADER\", \"default\\_cpu\\_time\\_limit\": 2\\.0, // Code chạy quá 2 giây \\-> Timeout \\(TLE\\) \"default\\_memory\\_limit\\_kb\": 128000, // Code ngốn quá 128MB RAM \\-> Memory Limit Exceeded \\(MLE\\) \"enable\\_java\\_submissions\": true // Bật/tắt ngôn ngữ lập trình theo đợt \\} ## 3\\. Cụm cấu hình Giao diện & Trải nghiệm \\(UI\\_UX\\_Config\\) *Như bạn đã đề xuất, đây là nơi Admin quản lý Banners và thông báo hệ thống\\.* \\{ \"\\_id\": \"CONFIG\\_UI\\_UX\", \"maintenance\\_mode\": false, // Đổi thành True thì toàn bộ web hiện màn hình \"Đang bảo trì\" \"announcement\\_banner\": \\{ \"is\\_active\": true, \"text\": \"🔥 Chào mừng tân sinh viên K20\\! Nạp ngay gói VIP giảm giá 50% 🔥\", \"link\\_url\": \"/pricing\" \\}, \"default\\_theme\": \"dark\" \\} ## 4\\. Cụm cấu hình Tài chính \\(Payment\\_Config\\) *Định hình quy tắc quy đổi tiền tệ và các gói khuyến mãi chung\\.* \\{ \"\\_id\": \"CONFIG\\_PAYMENT\", \"exchange\\_rate\\_vnd\\_to\\_credit\": 10, // 1\\.000 VNĐ = 10 Credit \"min\\_deposit\\_vnd\": 20000, // Nạp tối thiểu 20k \"global\\_tax\\_percent\": 10 // Thuế VAT nếu có \\} ## 5\\. Cụm cấu hình Gamification \\(EXP\\_Rules\\) *Chính là phần chúng ta đã thảo luận ở Tài liệu 22\\.* \\{ \"\\_id\": \"CONFIG\\_GAMIFICATION\", \"daily\\_login\": 10, \"pe\\_question\\_medium\": 50, \"event\\_multiplier\": 1\\.0 \\} ### 🚀 Lời Khuyên Triển Khai \\(Dành cho Dev\\): \"Feature Flags Pattern\" Cách thiết kế này trong ngành phần mềm gọi là __Feature Flags__ \\(Cờ tính năng\\)\\. Khi Backend API khởi động \\(Boot up\\), nó sẽ Query bảng SystemSettings một lần duy nhất và lưu vào __RAM \\(Redis/In\\-Memory Cache\\)__\\. Bất cứ khi nào người dùng tương tác, Backend chỉ check dữ liệu trên RAM nên tốc độ là __0ms__ \\(Không hề gây gánh nặng cho MongoDB\\)\\. Khi Admin sửa cấu hình trên UI, nó sẽ bắn một sự kiện \\(Event\\) để Backend xóa RAM đi và nạp lại cục JSON mới\\. Đây là kiến trúc tiêu chuẩn của các công ty công nghệ lớn\\!"
+    }
+  ],
+  "file": {
+    "name": "Má» Rá»ng á»¨ng Dá»¥ng SystemSettings.docx",
+    "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "sizeBytes": 2969471,
+    "sizeMb": 2.8319
+  },
+  "documentStats": {
+    "characters": 3197,
+    "words": 499,
+    "chunks": 1,
+    "chunkSizeWords": 500
+  },
+  "steps": [
+    {
+      "step": "parse_to_markdown",
+      "parser": "mammoth_docx",
+      "model": "local-parser",
+      "latency_ms": 77.14,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "totalCostUsd": 0,
+      "status": "success"
+    },
+    {
+      "step": "embedding_and_tagging",
+      "model": "embed-multilingual-v3.0",
+      "latency_ms": 471.89,
+      "inputTokens": 508,
+      "outputTokens": 0,
+      "totalCostUsd": 0,
+      "status": "success",
+      "note": ""
+    }
+  ],
+  "embeddingChunks": [
+    {
+      "chunkIndex": 0,
+      "words": 499,
+      "inputTokens": 508,
+      "costUsd": 0,
+      "embeddingDimensions": 1024,
+      "model": "embed-multilingual-v3.0",
+      "provider": "cohere",
+      "tags": [
+        "learning-content",
+        "chunked-500w"
+      ]
+    }
+  ],
+  "rawFlowLog": {
+    "provider": "cohere",
+    "parse": {
+      "parserType": "mammoth_docx",
+      "usage": {}
+    },
+    "embedding": {
+      "status": "success",
+      "chunksAttempted": 1
+    }
+  },
+  "totals": {
+    "latency_ms": 549.47,
+    "inputTokens": 508,
+    "outputTokens": 0,
+    "totalCostUsd": 0
+  },
+  "runId": "run-2026-06-24T07-51-20-376Z-45eb8c5d",
+  "mode": "benchmark_upload"
+}

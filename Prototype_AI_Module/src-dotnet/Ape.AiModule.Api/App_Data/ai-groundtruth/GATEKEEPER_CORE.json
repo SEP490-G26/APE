@@ -1,0 +1,58 @@
+{
+  "dataset_id": "GATEKEEPER_CORE",
+  "dataset_name": "Gatekeeper Core Regression Set",
+  "function_name": "Gatekeeper",
+  "version": "v1",
+  "language": "mixed",
+  "description": "Core regression cases for whitelist classification of supported academic documents.",
+  "evaluation_cases": [
+    {
+      "case_id": "GK_CORE_01",
+      "scenario_group": "supported",
+      "expected_verdict": "supported",
+      "expected_subjects": ["C"],
+      "expected_rejection_reason_code": null,
+      "notes": "Clear introductory C programming material."
+    },
+    {
+      "case_id": "GK_CORE_02",
+      "scenario_group": "supported",
+      "expected_verdict": "supported",
+      "expected_subjects": ["JAVA_OOP"],
+      "expected_rejection_reason_code": null,
+      "notes": "Clear Java OOP material with class/object terminology."
+    },
+    {
+      "case_id": "GK_CORE_03",
+      "scenario_group": "supported",
+      "expected_verdict": "supported",
+      "expected_subjects": ["DSA_JAVA"],
+      "expected_rejection_reason_code": null,
+      "notes": "Clear data structures and algorithms material."
+    },
+    {
+      "case_id": "GK_CORE_04",
+      "scenario_group": "unsupported",
+      "expected_verdict": "unsupported",
+      "expected_subjects": [],
+      "expected_rejection_reason_code": "out_of_whitelist_scope",
+      "notes": "Humanities or non-programming educational material."
+    },
+    {
+      "case_id": "GK_CORE_05",
+      "scenario_group": "ambiguous",
+      "expected_verdict": "ambiguous",
+      "expected_subjects": [],
+      "expected_rejection_reason_code": "insufficient_content",
+      "notes": "Text too short to classify confidently."
+    },
+    {
+      "case_id": "GK_CORE_06",
+      "scenario_group": "ambiguous",
+      "expected_verdict": "ambiguous",
+      "expected_subjects": ["JAVA_OOP", "DSA_JAVA"],
+      "expected_rejection_reason_code": "mixed_supported_signals",
+      "notes": "Material strongly mixes OOP and DSA signals without a clear primary subject."
+    }
+  ]
+}

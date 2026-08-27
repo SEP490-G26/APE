@@ -1,0 +1,119 @@
+{
+  "dataset_id": "dataset_multiagent_gen_review",
+  "description": "Dataset for FE/PE generation and reviewer agent validation",
+  "questionbank_schema_reference": {
+    "required_fields": [
+      "course_id",
+      "type",
+      "topic_tags",
+      "difficulty",
+      "title",
+      "description",
+      "options",
+      "correct_answer",
+      "explanation",
+      "test_cases",
+      "skeleton_code",
+      "solution_code"
+    ]
+  },
+  "cases": [
+    {
+      "case_id": "MAG_001",
+      "difficulty": "easy",
+      "input": {
+        "mode": "FE",
+        "domain": "C",
+        "topic": "loops",
+        "retrieved_chunk_ids": ["C_CH_12", "C_CH_13"],
+        "request": "Generate 3 multiple-choice questions"
+      },
+      "expected_generator": {
+        "type": "FE",
+        "count": 3,
+        "difficulty": "Easy",
+        "must_follow_schema": true,
+        "single_correct_option": true,
+        "factual_anchor": ["loop condition", "iteration behavior"]
+      },
+      "expected_reviewer": {
+        "review_status": "approved",
+        "max_major_issues": 0,
+        "must_check": ["schema", "factuality", "difficulty_alignment"]
+      },
+      "tags": ["fe", "c_intro", "easy"]
+    },
+    {
+      "case_id": "MAG_002",
+      "difficulty": "medium",
+      "input": {
+        "mode": "PE",
+        "domain": "Java_OOP",
+        "topic": "inheritance_polymorphism",
+        "retrieved_chunk_ids": ["J_CH_21", "J_CH_25"],
+        "request": "Generate 1 practice coding problem"
+      },
+      "expected_generator": {
+        "type": "PE",
+        "count": 1,
+        "difficulty": "Medium",
+        "must_follow_schema": true,
+        "must_include": ["skeleton_code", "test_cases", "explanation"],
+        "factual_anchor": ["override", "dynamic dispatch"]
+      },
+      "expected_reviewer": {
+        "review_status": "approved",
+        "max_major_issues": 0,
+        "must_check": ["test_case_consistency", "difficulty_alignment", "schema"]
+      },
+      "tags": ["pe", "java_oop", "medium"]
+    },
+    {
+      "case_id": "MAG_003",
+      "difficulty": "hard",
+      "input": {
+        "mode": "PE",
+        "domain": "DSA_OOP",
+        "topic": "graph_bfs",
+        "retrieved_chunk_ids": ["D_CH_31", "D_CH_33", "D_CH_34"],
+        "request": "Generate 2 coding problems with hidden tests"
+      },
+      "expected_generator": {
+        "type": "PE",
+        "count": 2,
+        "difficulty": "Hard",
+        "must_follow_schema": true,
+        "must_include": ["hidden_test_cases", "constraints"],
+        "factual_anchor": ["BFS complexity", "adjacency list"]
+      },
+      "expected_reviewer": {
+        "review_status": "needs_regenerate",
+        "trigger_if_any": ["wrong_complexity", "invalid_test_case_logic", "schema_break"],
+        "must_output_regenerate_hint": true
+      },
+      "tags": ["pe", "dsa_oop", "hard", "regen_expected"]
+    },
+    {
+      "case_id": "MAG_004",
+      "difficulty": "medium",
+      "input": {
+        "mode": "FE",
+        "domain": "Java_OOP",
+        "topic": "encapsulation",
+        "retrieved_chunk_ids": ["J_CH_05"],
+        "request": "Generate 2 MCQs but one candidate draft has schema issue"
+      },
+      "expected_generator": {
+        "type": "FE",
+        "count": 2,
+        "must_follow_schema": true
+      },
+      "expected_reviewer": {
+        "review_status": "needs_regenerate",
+        "trigger_if_any": ["schema_break"],
+        "must_output_regenerate_hint": true
+      },
+      "tags": ["fe", "java_oop", "schema_validation"]
+    }
+  ]
+}

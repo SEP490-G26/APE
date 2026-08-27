@@ -1,0 +1,28 @@
+{
+  "dataset_id": "QGEN_DSA_JAVA_PE",
+  "version": "v1",
+  "language": "en",
+  "function_name": "QuestionGenerationReview",
+  "subject_code": "DSA_JAVA",
+  "question_type": "PE",
+  "institution_context": {
+    "target_students": "FPT University data structure and algorithm students",
+    "course_hint": "CSD-style practical DSA implementation tasks"
+  },
+  "evaluation_cases": [
+    {
+      "case_id": "dsa_pe_easy_array_scan",
+      "difficulty": "Easy",
+      "expected_topic_tags": ["array", "search"],
+      "expected_question_shape": "direct implementation task",
+      "acceptance_focus": ["clear statement", "basic tests", "no unnecessary complexity"]
+    },
+    {
+      "case_id": "dsa_pe_medium_stack_or_queue_ops",
+      "difficulty": "Medium",
+      "expected_topic_tags": ["stack", "queue", "operation_trace"],
+      "expected_question_shape": "standard DSA practice task",
+      "acceptance_focus": ["coherent operations", "edge cases", "difficulty alignment"]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "note": "Expanded datasets created. Fill code/context payload fields before production benchmark.",
+  "files": [
+    "dataset_manifest.json",
+    "dataset_gatekeeper.json",
+    "dataset_ingestion_vision_embedding.json",
+    "dataset_multiagent_gen_review.json",
+    "dataset_code_mentor.json",
+    "real_file_registry.json",
+    "dataset_embedding_seed_expanded.json",
+    "dataset_multiagent_seed_expanded.json",
+    "dataset_code_mentor_seed_expanded.json"
+  ],
+  "next_step": "Implement benchmark runner to execute all cases and persist run logs"
+}

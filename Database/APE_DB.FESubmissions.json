@@ -1,0 +1,2142 @@
+[{
+  "_id": {
+    "$oid": "6a6f86573108d263107af3e7"
+  },
+  "FeQuestionId": {
+    "$oid": "6a6f853e3108d263107af26b"
+  },
+  "SessionId": {
+    "$oid": "6a6f86423108d263107af3d8"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "B. An abstract class must override all methods in its subclass."
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-02T18:03:03.609Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6f86573108d263107af3eb"
+  },
+  "FeQuestionId": {
+    "$oid": "6a6f85493108d263107af275"
+  },
+  "SessionId": {
+    "$oid": "6a6f86423108d263107af3d8"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "B. The code does not compile because abstract classes cannot be instantiated, and Dog must override the inherited abstract method sound()."
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-02T18:03:03.740Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6f86573108d263107af3ef"
+  },
+  "FeQuestionId": {
+    "$oid": "6a6f855e3108d263107af281"
+  },
+  "SessionId": {
+    "$oid": "6a6f86423108d263107af3d8"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "B. `Circle` inherits the abstract method `draw()`, and to provide a concrete implementation it must override `draw()`."
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-02T18:03:03.847Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6f8d2b5e02d5d1e8c8981a"
+  },
+  "FeQuestionId": {
+    "$oid": "6a6f853e3108d263107af26b"
+  },
+  "SessionId": {
+    "$oid": "6a6f8d205e02d5d1e8c8980b"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "C. A subclass derived from an abstract class does not inherit abstract methods."
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-02T18:32:11.237Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6f8d2b5e02d5d1e8c8981e"
+  },
+  "FeQuestionId": {
+    "$oid": "6a6f85493108d263107af275"
+  },
+  "SessionId": {
+    "$oid": "6a6f8d205e02d5d1e8c8980b"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "C. The code does not compile only because Dog cannot extend an abstract class."
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-02T18:32:11.363Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6f8d2b5e02d5d1e8c89822"
+  },
+  "FeQuestionId": {
+    "$oid": "6a6f855e3108d263107af281"
+  },
+  "SessionId": {
+    "$oid": "6a6f8d205e02d5d1e8c8980b"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "C. Because `Shape` is abstract, `Circle` does not inherit any methods from it."
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-02T18:32:11.482Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6f8d6e5e02d5d1e8c8987d"
+  },
+  "FeQuestionId": {
+    "$oid": "6a6f853e3108d263107af26b"
+  },
+  "SessionId": {
+    "$oid": "6a6f8d625e02d5d1e8c8986e"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "A. An abstract class cannot be instantiated."
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-02T18:33:18.822Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6f8d6e5e02d5d1e8c89881"
+  },
+  "FeQuestionId": {
+    "$oid": "6a6f85493108d263107af275"
+  },
+  "SessionId": {
+    "$oid": "6a6f8d625e02d5d1e8c8986e"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "B. The code does not compile because abstract classes cannot be instantiated, and Dog must override the inherited abstract method sound()."
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-02T18:33:18.931Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6f8d6f5e02d5d1e8c89885"
+  },
+  "FeQuestionId": {
+    "$oid": "6a6f855e3108d263107af281"
+  },
+  "SessionId": {
+    "$oid": "6a6f8d625e02d5d1e8c8986e"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "D. Overriding `draw()` is optional because inheritance already gives `Circle` a concrete version."
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-02T18:33:19.040Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6f8d974929d653e505f45c"
+  },
+  "FeQuestionId": {
+    "$oid": "6a6f853e3108d263107af26b"
+  },
+  "SessionId": {
+    "$oid": "6a6f8d8c4929d653e505f44d"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "A. An abstract class cannot be instantiated."
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-02T18:33:59.488Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6f8d974929d653e505f460"
+  },
+  "FeQuestionId": {
+    "$oid": "6a6f85493108d263107af275"
+  },
+  "SessionId": {
+    "$oid": "6a6f8d8c4929d653e505f44d"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "B. The code does not compile because abstract classes cannot be instantiated, and Dog must override the inherited abstract method sound()."
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-02T18:33:59.628Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6f8d974929d653e505f464"
+  },
+  "FeQuestionId": {
+    "$oid": "6a6f855e3108d263107af281"
+  },
+  "SessionId": {
+    "$oid": "6a6f8d8c4929d653e505f44d"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "D. Overriding `draw()` is optional because inheritance already gives `Circle` a concrete version."
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-02T18:33:59.750Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6f8ed5e541266283d9253d"
+  },
+  "FeQuestionId": {
+    "$oid": "6a6f853e3108d263107af26b"
+  },
+  "SessionId": {
+    "$oid": "6a6f8ecce541266283d9252e"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "A. An abstract class cannot be instantiated."
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-02T18:39:17.487Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6f8ed5e541266283d92541"
+  },
+  "FeQuestionId": {
+    "$oid": "6a6f85493108d263107af275"
+  },
+  "SessionId": {
+    "$oid": "6a6f8ecce541266283d9252e"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "B. The code does not compile because abstract classes cannot be instantiated, and Dog must override the inherited abstract method sound()."
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-02T18:39:17.631Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6f8ed5e541266283d92545"
+  },
+  "FeQuestionId": {
+    "$oid": "6a6f855e3108d263107af281"
+  },
+  "SessionId": {
+    "$oid": "6a6f8ecce541266283d9252e"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "D. Overriding `draw()` is optional because inheritance already gives `Circle` a concrete version."
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-02T18:39:17.762Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6f9213412f8f33455e804e"
+  },
+  "FeQuestionId": {
+    "$oid": "6a6f853e3108d263107af26b"
+  },
+  "SessionId": {
+    "$oid": "6a6f9209412f8f33455e803f"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "A. An abstract class cannot be instantiated."
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-02T18:53:07.129Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6f9213412f8f33455e8052"
+  },
+  "FeQuestionId": {
+    "$oid": "6a6f85493108d263107af275"
+  },
+  "SessionId": {
+    "$oid": "6a6f9209412f8f33455e803f"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "B. The code does not compile because abstract classes cannot be instantiated, and Dog must override the inherited abstract method sound()."
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-02T18:53:07.291Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6f9213412f8f33455e8056"
+  },
+  "FeQuestionId": {
+    "$oid": "6a6f855e3108d263107af281"
+  },
+  "SessionId": {
+    "$oid": "6a6f9209412f8f33455e803f"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "D. Overriding `draw()` is optional because inheritance already gives `Circle` a concrete version."
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-02T18:53:07.429Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6f9385686083a954906b9e"
+  },
+  "FeQuestionId": {
+    "$oid": "6a6f853e3108d263107af26b"
+  },
+  "SessionId": {
+    "$oid": "6a6f937e686083a954906b8f"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "A. An abstract class cannot be instantiated."
+  ],
+  "IsCorrect": true,
+  "SubmittedAt": {
+    "$date": "2026-08-02T18:59:17.587Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6f9385686083a954906ba2"
+  },
+  "FeQuestionId": {
+    "$oid": "6a6f85493108d263107af275"
+  },
+  "SessionId": {
+    "$oid": "6a6f937e686083a954906b8f"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "B. The code does not compile because abstract classes cannot be instantiated, and Dog must override the inherited abstract method sound()."
+  ],
+  "IsCorrect": true,
+  "SubmittedAt": {
+    "$date": "2026-08-02T18:59:17.744Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6f9385686083a954906ba6"
+  },
+  "FeQuestionId": {
+    "$oid": "6a6f855e3108d263107af281"
+  },
+  "SessionId": {
+    "$oid": "6a6f937e686083a954906b8f"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "D. Overriding `draw()` is optional because inheritance already gives `Circle` a concrete version."
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-02T18:59:17.910Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a70e699f4695770e348d893"
+  },
+  "FeQuestionId": {
+    "$oid": "6a6f853e3108d263107af26b"
+  },
+  "SessionId": {
+    "$oid": "6a70e5e4f4695770e348d884"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "A. An abstract class cannot be instantiated."
+  ],
+  "IsCorrect": true,
+  "SubmittedAt": {
+    "$date": "2026-08-03T19:06:01.769Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a70e69af4695770e348d897"
+  },
+  "FeQuestionId": {
+    "$oid": "6a6f85493108d263107af275"
+  },
+  "SessionId": {
+    "$oid": "6a70e5e4f4695770e348d884"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "B. The code does not compile because abstract classes cannot be instantiated, and Dog must override the inherited abstract method sound()."
+  ],
+  "IsCorrect": true,
+  "SubmittedAt": {
+    "$date": "2026-08-03T19:06:02.032Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a70e69af4695770e348d89b"
+  },
+  "FeQuestionId": {
+    "$oid": "6a6f855e3108d263107af281"
+  },
+  "SessionId": {
+    "$oid": "6a70e5e4f4695770e348d884"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "D. Overriding `draw()` is optional because inheritance already gives `Circle` a concrete version."
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-03T19:06:02.325Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a78a119b20bb196f0c1dfee"
+  },
+  "FeQuestionId": {
+    "$oid": "6a732def1d249756aa383492"
+  },
+  "SessionId": {
+    "$oid": "6a78a0fbb20bb196f0c1dfc1"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "A. Reusability of coding structure"
+  ],
+  "IsCorrect": true,
+  "SubmittedAt": {
+    "$date": "2026-08-09T15:47:37.907Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a78a11ab20bb196f0c1dff2"
+  },
+  "FeQuestionId": {
+    "$oid": "6a732def1d249756aa383493"
+  },
+  "SessionId": {
+    "$oid": "6a78a0fbb20bb196f0c1dfc1"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "C. Super class"
+  ],
+  "IsCorrect": true,
+  "SubmittedAt": {
+    "$date": "2026-08-09T15:47:38.100Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a78a11ab20bb196f0c1dff6"
+  },
+  "FeQuestionId": {
+    "$oid": "6a732def1d249756aa383494"
+  },
+  "SessionId": {
+    "$oid": "6a78a0fbb20bb196f0c1dfc1"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "B. Base class"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-09T15:47:38.277Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a78a11ab20bb196f0c1dffa"
+  },
+  "FeQuestionId": {
+    "$oid": "6a732def1d249756aa383495"
+  },
+  "SessionId": {
+    "$oid": "6a78a0fbb20bb196f0c1dfc1"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "A. A Student is a Person"
+  ],
+  "IsCorrect": true,
+  "SubmittedAt": {
+    "$date": "2026-08-09T15:47:38.459Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a78a11ab20bb196f0c1dffe"
+  },
+  "FeQuestionId": {
+    "$oid": "6a732def1d249756aa383496"
+  },
+  "SessionId": {
+    "$oid": "6a78a0fbb20bb196f0c1dfc1"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "D. A constructor is inherited by a subclass"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-09T15:47:38.634Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a78a11ab20bb196f0c1e002"
+  },
+  "FeQuestionId": {
+    "$oid": "6a732def1d249756aa383499"
+  },
+  "SessionId": {
+    "$oid": "6a78a0fbb20bb196f0c1dfc1"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "B. Constructors are not inherited"
+  ],
+  "IsCorrect": true,
+  "SubmittedAt": {
+    "$date": "2026-08-09T15:47:38.822Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a78a11bb20bb196f0c1e006"
+  },
+  "FeQuestionId": {
+    "$oid": "6a732df01d249756aa38349a"
+  },
+  "SessionId": {
+    "$oid": "6a78a0fbb20bb196f0c1dfc1"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "C. Anywhere inside the subclass constructor"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-09T15:47:39.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a78a11bb20bb196f0c1e00a"
+  },
+  "FeQuestionId": {
+    "$oid": "6a732df01d249756aa38349b"
+  },
+  "SessionId": {
+    "$oid": "6a78a0fbb20bb196f0c1dfc1"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "C. A call to the subclass no-argument constructor"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-09T15:47:39.175Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a78a11bb20bb196f0c1e00e"
+  },
+  "FeQuestionId": {
+    "$oid": "6a743bee1a57a209cb666d23"
+  },
+  "SessionId": {
+    "$oid": "6a78a0fbb20bb196f0c1dfc1"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "D. \"A product can be contained in some invoices\""
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-09T15:47:39.346Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a78a11bb20bb196f0c1e012"
+  },
+  "FeQuestionId": {
+    "$oid": "6a743bef1a57a209cb666d26"
+  },
+  "SessionId": {
+    "$oid": "6a78a0fbb20bb196f0c1dfc1"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "B. A subclass automatically inherits all constructors from its superclass"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-09T15:47:39.521Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a78a11bb20bb196f0c1e016"
+  },
+  "FeQuestionId": {
+    "$oid": "6a743cf61a57a209cb666d40"
+  },
+  "SessionId": {
+    "$oid": "6a78a0fbb20bb196f0c1dfc1"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "D. Higher-level class is a method, and lower-level class is a field"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-09T15:47:39.693Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a78a11bb20bb196f0c1e01a"
+  },
+  "FeQuestionId": {
+    "$oid": "6a743cf61a57a209cb666d41"
+  },
+  "SessionId": {
+    "$oid": "6a78a0fbb20bb196f0c1dfc1"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "D. A family is a house"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-09T15:47:39.879Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a78a11cb20bb196f0c1e01e"
+  },
+  "FeQuestionId": {
+    "$oid": "6a743cf61a57a209cb666d44"
+  },
+  "SessionId": {
+    "$oid": "6a78a0fbb20bb196f0c1dfc1"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "D. Outside the constructor body"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-09T15:47:40.059Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7b13270c1685a5a03dcd46"
+  },
+  "FeQuestionId": {
+    "$oid": "6a7b0fd90c1685a5a03dccb7"
+  },
+  "SessionId": {
+    "$oid": "6a7b128d0c1685a5a03dcd3c"
+  },
+  "CourseId": {
+    "$oid": "6a6c5b039e56179d5bee8cf0"
+  },
+  "UserAnswer": [
+    "4"
+  ],
+  "IsCorrect": true,
+  "SubmittedAt": {
+    "$date": "2026-08-11T12:18:47.988Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7b23d5c75a9d0417a149be"
+  },
+  "FeQuestionId": {
+    "$oid": "6a7b0fd90c1685a5a03dccb7"
+  },
+  "SessionId": {
+    "$oid": "6a7b23cdc75a9d0417a149b4"
+  },
+  "CourseId": {
+    "$oid": "6a6c5b039e56179d5bee8cf0"
+  },
+  "UserAnswer": [
+    "4"
+  ],
+  "IsCorrect": true,
+  "SubmittedAt": {
+    "$date": "2026-08-11T13:29:57.240Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7b739b44019084ffe946d8"
+  },
+  "FeQuestionId": {
+    "$oid": "6a6f853e3108d263107af26b"
+  },
+  "SessionId": {
+    "$oid": "6a7b738e44019084ffe946c9"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "B. An abstract class must override all methods in its subclass."
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-11T19:10:19.718Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7b739b44019084ffe946dc"
+  },
+  "FeQuestionId": {
+    "$oid": "6a6f85493108d263107af275"
+  },
+  "SessionId": {
+    "$oid": "6a7b738e44019084ffe946c9"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "A. The code compiles because Dog inherits the abstract method sound() from Animal."
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-11T19:10:19.837Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7b739b44019084ffe946e0"
+  },
+  "FeQuestionId": {
+    "$oid": "6a6f855e3108d263107af281"
+  },
+  "SessionId": {
+    "$oid": "6a7b738e44019084ffe946c9"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "D. Overriding `draw()` is optional because inheritance already gives `Circle` a concrete version."
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-11T19:10:19.949Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7c375d0a7a2e6ee5c841a8"
+  },
+  "FeQuestionId": {
+    "$oid": "6a6f853e3108d263107af26b"
+  },
+  "SessionId": {
+    "$oid": "6a7c373d0a7a2e6ee5c84199"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "A. An abstract class cannot be instantiated."
+  ],
+  "IsCorrect": true,
+  "SubmittedAt": {
+    "$date": "2026-08-12T09:05:33.426Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7c375d0a7a2e6ee5c841ac"
+  },
+  "FeQuestionId": {
+    "$oid": "6a6f85493108d263107af275"
+  },
+  "SessionId": {
+    "$oid": "6a7c373d0a7a2e6ee5c84199"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "B. The code does not compile because abstract classes cannot be instantiated, and Dog must override the inherited abstract method sound()."
+  ],
+  "IsCorrect": true,
+  "SubmittedAt": {
+    "$date": "2026-08-12T09:05:33.538Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7c375d0a7a2e6ee5c841b0"
+  },
+  "FeQuestionId": {
+    "$oid": "6a6f855e3108d263107af281"
+  },
+  "SessionId": {
+    "$oid": "6a7c373d0a7a2e6ee5c84199"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "C. Because `Shape` is abstract, `Circle` does not inherit any methods from it."
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-12T09:05:33.648Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7d3c07a94581a1c941f5ca"
+  },
+  "FeQuestionId": {
+    "$oid": "6a7b0fd90c1685a5a03dccb7"
+  },
+  "SessionId": {
+    "$oid": "6a7d3befa94581a1c941f5c1"
+  },
+  "CourseId": {
+    "$oid": "6a6c5b039e56179d5bee8cf0"
+  },
+  "UserAnswer": [
+    "4"
+  ],
+  "IsCorrect": true,
+  "SubmittedAt": {
+    "$date": "2026-08-13T03:37:43.523Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7d3e7ca94581a1c941f986"
+  },
+  "FeQuestionId": {
+    "$oid": "6a7d3d76a94581a1c941f833"
+  },
+  "SessionId": {
+    "$oid": "6a7d3e59a94581a1c941f977"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "B. The equals and hashCode methods are no longer well defined"
+  ],
+  "IsCorrect": true,
+  "SubmittedAt": {
+    "$date": "2026-08-13T03:48:12.051Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7d3e7ca94581a1c941f98a"
+  },
+  "FeQuestionId": {
+    "$oid": "6a7d3d77a94581a1c941f835"
+  },
+  "SessionId": {
+    "$oid": "6a7d3e59a94581a1c941f977"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "A. Two methods to efficiently insert and remove multiple elements"
+  ],
+  "IsCorrect": true,
+  "SubmittedAt": {
+    "$date": "2026-08-13T03:48:12.482Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7d3e7ca94581a1c941f98e"
+  },
+  "FeQuestionId": {
+    "$oid": "6a7d3d77a94581a1c941f836"
+  },
+  "SessionId": {
+    "$oid": "6a7d3e59a94581a1c941f977"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "C. Positions start at -1 for the first element"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-13T03:48:12.886Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7d3ec5a94581a1c941fa50"
+  },
+  "FeQuestionId": {
+    "$oid": "6a7d3d76a94581a1c941f833"
+  },
+  "SessionId": {
+    "$oid": "6a7d3ebaa94581a1c941fa41"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "A. The list becomes read-only automatically"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-13T03:49:25.467Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7d3ec5a94581a1c941fa54"
+  },
+  "FeQuestionId": {
+    "$oid": "6a7d3d77a94581a1c941f835"
+  },
+  "SessionId": {
+    "$oid": "6a7d3ebaa94581a1c941fa41"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "B. One method to sort all elements automatically"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-13T03:49:25.901Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a7d3ec6a94581a1c941fa58"
+  },
+  "FeQuestionId": {
+    "$oid": "6a7d3d77a94581a1c941f836"
+  },
+  "SessionId": {
+    "$oid": "6a7d3ebaa94581a1c941fa41"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "B. Positions start at 0, like Java arrays"
+  ],
+  "IsCorrect": true,
+  "SubmittedAt": {
+    "$date": "2026-08-13T03:49:26.308Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a802e906b075af21f751f22"
+  },
+  "FeQuestionId": {
+    "$oid": "6a802cff6b075af21f7518db"
+  },
+  "SessionId": {
+    "$oid": "6a802e846b075af21f751f0d"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "A. A constructor for the interface"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-15T09:17:04.260Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a802e906b075af21f751f26"
+  },
+  "FeQuestionId": {
+    "$oid": "6a802cff6b075af21f7518dc"
+  },
+  "SessionId": {
+    "$oid": "6a802e846b075af21f751f0d"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "A. The reference `obj` is made to refer to a `Son` object"
+  ],
+  "IsCorrect": true,
+  "SubmittedAt": {
+    "$date": "2026-08-15T09:17:04.651Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a802e916b075af21f751f2a"
+  },
+  "FeQuestionId": {
+    "$oid": "6a802cff6b075af21f7518dd"
+  },
+  "SessionId": {
+    "$oid": "6a802e846b075af21f751f0d"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "C. `Son()` constructor from `Father`"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-15T09:17:05.041Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a802e916b075af21f751f2e"
+  },
+  "FeQuestionId": {
+    "$oid": "6a802d006b075af21f7518de"
+  },
+  "SessionId": {
+    "$oid": "6a802e846b075af21f751f0d"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "D. `abstract class`"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-15T09:17:05.425Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a802e916b075af21f751f32"
+  },
+  "FeQuestionId": {
+    "$oid": "6a802d006b075af21f7518df"
+  },
+  "SessionId": {
+    "$oid": "6a802e846b075af21f751f0d"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "A. Overloading and Overriding, Interface, Abstract class"
+  ],
+  "IsCorrect": true,
+  "SubmittedAt": {
+    "$date": "2026-08-15T09:17:05.811Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a8091ef8d232f5cef831455"
+  },
+  "FeQuestionId": {
+    "$oid": "6a7b0fd90c1685a5a03dccb7"
+  },
+  "SessionId": {
+    "$oid": "6a8091e98d232f5cef83144b"
+  },
+  "CourseId": {
+    "$oid": "6a6c5b039e56179d5bee8cf0"
+  },
+  "UserAnswer": [
+    "4"
+  ],
+  "IsCorrect": true,
+  "SubmittedAt": {
+    "$date": "2026-08-15T16:21:03.960Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a834bdaf41991a5e1c4b79f"
+  },
+  "FeQuestionId": {
+    "$oid": "6a7d3d76a94581a1c941f833"
+  },
+  "SessionId": {
+    "$oid": "6a834bd4f41991a5e1c4b78f"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "A. The list becomes read-only automatically"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-17T17:58:50.369Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a834bdaf41991a5e1c4b7a4"
+  },
+  "FeQuestionId": {
+    "$oid": "6a7d3d77a94581a1c941f835"
+  },
+  "SessionId": {
+    "$oid": "6a834bd4f41991a5e1c4b78f"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "B. One method to sort all elements automatically"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-17T17:58:50.552Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a834bdaf41991a5e1c4b7a9"
+  },
+  "FeQuestionId": {
+    "$oid": "6a7d3d77a94581a1c941f836"
+  },
+  "SessionId": {
+    "$oid": "6a834bd4f41991a5e1c4b78f"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "D. Positions depend on the List implementation"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-17T17:58:50.729Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a834c30f41991a5e1c4bcea"
+  },
+  "FeQuestionId": {
+    "$oid": "6a732def1d249756aa383492"
+  },
+  "SessionId": {
+    "$oid": "6a834bfff41991a5e1c4bc57"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "A. Reusability of coding structure"
+  ],
+  "IsCorrect": true,
+  "SubmittedAt": {
+    "$date": "2026-08-17T18:00:16.114Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a834c30f41991a5e1c4bcef"
+  },
+  "FeQuestionId": {
+    "$oid": "6a732def1d249756aa383496"
+  },
+  "SessionId": {
+    "$oid": "6a834bfff41991a5e1c4bc57"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "B. A home has a family and a pet"
+  ],
+  "IsCorrect": true,
+  "SubmittedAt": {
+    "$date": "2026-08-17T18:00:16.269Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a834c30f41991a5e1c4bcf4"
+  },
+  "FeQuestionId": {
+    "$oid": "6a743cf61a57a209cb666d44"
+  },
+  "SessionId": {
+    "$oid": "6a834bfff41991a5e1c4bc57"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "C. Anywhere inside the constructor body"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-17T18:00:16.431Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a874b9d754542560e366d86"
+  },
+  "FeQuestionId": {
+    "$oid": "6a732def1d249756aa383492"
+  },
+  "SessionId": {
+    "$oid": "6a874b99754542560e366d4e"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "A. Reusability of coding structure"
+  ],
+  "IsCorrect": true,
+  "SubmittedAt": {
+    "$date": "2026-08-20T18:46:53.893Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a874b9e754542560e366d8b"
+  },
+  "FeQuestionId": {
+    "$oid": "6a732def1d249756aa383496"
+  },
+  "SessionId": {
+    "$oid": "6a874b99754542560e366d4e"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "B. A home has a family and a pet"
+  ],
+  "IsCorrect": true,
+  "SubmittedAt": {
+    "$date": "2026-08-20T18:46:54.196Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a874b9e754542560e366d90"
+  },
+  "FeQuestionId": {
+    "$oid": "6a743cf61a57a209cb666d44"
+  },
+  "SessionId": {
+    "$oid": "6a874b99754542560e366d4e"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "C. Anywhere inside the constructor body"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-20T18:46:54.477Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a888ed2286750807732ec33"
+  },
+  "FeQuestionId": {
+    "$oid": "6a8888a9286750807732e8dd"
+  },
+  "SessionId": {
+    "$oid": "6a888ec3286750807732ec19"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "C. `new`"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-21T17:45:54.188Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a888ed2286750807732ec38"
+  },
+  "FeQuestionId": {
+    "$oid": "6a8888a9286750807732e8df"
+  },
+  "SessionId": {
+    "$oid": "6a888ec3286750807732ec19"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "B. Access from any package without restriction"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-21T17:45:54.376Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a888ed2286750807732ec3d"
+  },
+  "FeQuestionId": {
+    "$oid": "6a8888a9286750807732e8e1"
+  },
+  "SessionId": {
+    "$oid": "6a888ec3286750807732ec19"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "A. Private"
+  ],
+  "IsCorrect": true,
+  "SubmittedAt": {
+    "$date": "2026-08-21T17:45:54.541Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a888ed2286750807732ec42"
+  },
+  "FeQuestionId": {
+    "$oid": "6a8888a9286750807732e8e3"
+  },
+  "SessionId": {
+    "$oid": "6a888ec3286750807732ec19"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "C. Overriding and overloading both require different class names"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-21T17:45:54.716Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a888ed2286750807732ec47"
+  },
+  "FeQuestionId": {
+    "$oid": "6a8888aa286750807732e8e5"
+  },
+  "SessionId": {
+    "$oid": "6a888ec3286750807732ec19"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "A. static, final, abstract, synchronized"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-21T17:45:54.886Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a8890d3286750807732ee02"
+  },
+  "FeQuestionId": {
+    "$oid": "6a8888a9286750807732e8dd"
+  },
+  "SessionId": {
+    "$oid": "6a8890bb286750807732edd4"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "A. `Person`"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-21T17:54:27.272Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a8890d3286750807732ee07"
+  },
+  "FeQuestionId": {
+    "$oid": "6a8888a9286750807732e8df"
+  },
+  "SessionId": {
+    "$oid": "6a8890bb286750807732edd4"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "B. Access from any package without restriction"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-21T17:54:27.436Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a8890d3286750807732ee0c"
+  },
+  "FeQuestionId": {
+    "$oid": "6a8888a9286750807732e8e1"
+  },
+  "SessionId": {
+    "$oid": "6a8890bb286750807732edd4"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "C. Default"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-21T17:54:27.607Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a8890d3286750807732ee11"
+  },
+  "FeQuestionId": {
+    "$oid": "6a8888a9286750807732e8e3"
+  },
+  "SessionId": {
+    "$oid": "6a8890bb286750807732edd4"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "C. Overriding and overloading both require different class names"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-21T17:54:27.787Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a8890d3286750807732ee16"
+  },
+  "FeQuestionId": {
+    "$oid": "6a8888aa286750807732e8e5"
+  },
+  "SessionId": {
+    "$oid": "6a8890bb286750807732edd4"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "A. static, final, abstract, synchronized"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-21T17:54:27.948Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a889238286750807732efa9"
+  },
+  "FeQuestionId": {
+    "$oid": "6a8888a9286750807732e8dd"
+  },
+  "SessionId": {
+    "$oid": "6a889230286750807732ef8f"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "A. `Person`"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-21T18:00:24.232Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a889238286750807732efae"
+  },
+  "FeQuestionId": {
+    "$oid": "6a8888a9286750807732e8df"
+  },
+  "SessionId": {
+    "$oid": "6a889230286750807732ef8f"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "B. Access from any package without restriction"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-21T18:00:24.390Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a889238286750807732efb3"
+  },
+  "FeQuestionId": {
+    "$oid": "6a8888a9286750807732e8e1"
+  },
+  "SessionId": {
+    "$oid": "6a889230286750807732ef8f"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "C. Default"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-21T18:00:24.559Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a889238286750807732efb8"
+  },
+  "FeQuestionId": {
+    "$oid": "6a8888a9286750807732e8e3"
+  },
+  "SessionId": {
+    "$oid": "6a889230286750807732ef8f"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "D. Overloading means deleting a parent method completely"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-21T18:00:24.721Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a889238286750807732efbd"
+  },
+  "FeQuestionId": {
+    "$oid": "6a8888aa286750807732e8e5"
+  },
+  "SessionId": {
+    "$oid": "6a889230286750807732ef8f"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000012"
+  },
+  "UserAnswer": [
+    "B. private, protected, default, public"
+  ],
+  "IsCorrect": true,
+  "SubmittedAt": {
+    "$date": "2026-08-21T18:00:24.879Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a8e7eced06b933c15cc2870"
+  },
+  "FeQuestionId": {
+    "$oid": "6a7f5acd322d629a3f21431f"
+  },
+  "SessionId": {
+    "$oid": "6a8e7ea9d06b933c15cc2847"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000011"
+  },
+  "UserAnswer": [
+    "A. It prints the first 10 characters, right-justified in a field of 20"
+  ],
+  "IsCorrect": true,
+  "SubmittedAt": {
+    "$date": "2026-08-26T05:51:10.172Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a8e7eced06b933c15cc2875"
+  },
+  "FeQuestionId": {
+    "$oid": "6a7f5ace322d629a3f214323"
+  },
+  "SessionId": {
+    "$oid": "6a8e7ea9d06b933c15cc2847"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000011"
+  },
+  "UserAnswer": [
+    "A. It stores 31 names, each up to 5 characters"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-26T05:51:10.407Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a8e7eced06b933c15cc287a"
+  },
+  "FeQuestionId": {
+    "$oid": "6a7f5ace322d629a3f214325"
+  },
+  "SessionId": {
+    "$oid": "6a8e7ea9d06b933c15cc2847"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000011"
+  },
+  "UserAnswer": [
+    "C. It prints nothing because the string has fewer than 10 characters"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-26T05:51:10.653Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a8e7eced06b933c15cc287f"
+  },
+  "FeQuestionId": {
+    "$oid": "6a7f5b02322d629a3f21433f"
+  },
+  "SessionId": {
+    "$oid": "6a8e7ea9d06b933c15cc2847"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000011"
+  },
+  "UserAnswer": [
+    "B. At the first null terminator already in memory"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-26T05:51:10.884Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a8e7ecfd06b933c15cc2884"
+  },
+  "FeQuestionId": {
+    "$oid": "6a7f5b03322d629a3f214345"
+  },
+  "SessionId": {
+    "$oid": "6a8e7ea9d06b933c15cc2847"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000011"
+  },
+  "UserAnswer": [
+    "C. The length of the string that scanf should print"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-26T05:51:11.118Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a8e7ecfd06b933c15cc2889"
+  },
+  "FeQuestionId": {
+    "$oid": "6a7f63bb322d629a3f214cfe"
+  },
+  "SessionId": {
+    "$oid": "6a8e7ea9d06b933c15cc2847"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000011"
+  },
+  "UserAnswer": [
+    "A. `char names[5][31];`"
+  ],
+  "IsCorrect": true,
+  "SubmittedAt": {
+    "$date": "2026-08-26T05:51:11.350Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a8e7ecfd06b933c15cc288e"
+  },
+  "FeQuestionId": {
+    "$oid": "6a7f63fa322d629a3f214d35"
+  },
+  "SessionId": {
+    "$oid": "6a8e7ea9d06b933c15cc2847"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000011"
+  },
+  "UserAnswer": [
+    "B. char names[5][30];"
+  ],
+  "IsCorrect": true,
+  "SubmittedAt": {
+    "$date": "2026-08-26T05:51:11.577Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a8e7ecfd06b933c15cc2893"
+  },
+  "FeQuestionId": {
+    "$oid": "6a7f6443322d629a3f214d5d"
+  },
+  "SessionId": {
+    "$oid": "6a8e7ea9d06b933c15cc2847"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000011"
+  },
+  "UserAnswer": [
+    "D. `gets(str)` always refuses empty input, but `scanf(\"%s\", str)` accepts it as an empty string"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-26T05:51:11.813Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a8e7ed0d06b933c15cc2898"
+  },
+  "FeQuestionId": {
+    "$oid": "6a7f6443322d629a3f214d5e"
+  },
+  "SessionId": {
+    "$oid": "6a8e7ea9d06b933c15cc2847"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000011"
+  },
+  "UserAnswer": [
+    "B. It prints Arnold Smith left-justified in a field of 10"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-26T05:51:12.041Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a8e7ed0d06b933c15cc289d"
+  },
+  "FeQuestionId": {
+    "$oid": "6a7f682755020127b6c41dac"
+  },
+  "SessionId": {
+    "$oid": "6a8e7ea9d06b933c15cc2847"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000011"
+  },
+  "UserAnswer": [
+    "A. |          My name is|"
+  ],
+  "IsCorrect": true,
+  "SubmittedAt": {
+    "$date": "2026-08-26T05:51:12.280Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a8eb02c16353d2110974e23"
+  },
+  "FeQuestionId": {
+    "$oid": "6a8eac5016353d211097476e"
+  },
+  "SessionId": {
+    "$oid": "6a8eb01716353d2110974dfa"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000011"
+  },
+  "UserAnswer": [
+    "A. A binary digit"
+  ],
+  "IsCorrect": true,
+  "SubmittedAt": {
+    "$date": "2026-08-26T09:21:48.175Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a8eb02c16353d2110974e28"
+  },
+  "FeQuestionId": {
+    "$oid": "6a8eac5016353d211097476f"
+  },
+  "SessionId": {
+    "$oid": "6a8eb01716353d2110974dfa"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000011"
+  },
+  "UserAnswer": [
+    "B. 4 bits"
+  ],
+  "IsCorrect": true,
+  "SubmittedAt": {
+    "$date": "2026-08-26T09:21:48.993Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a8eb02d16353d2110974e2d"
+  },
+  "FeQuestionId": {
+    "$oid": "6a8eac5016353d2110974770"
+  },
+  "SessionId": {
+    "$oid": "6a8eb01716353d2110974dfa"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000011"
+  },
+  "UserAnswer": [
+    "B. A byte is 4 bits"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-26T09:21:49.812Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a8eb02e16353d2110974e32"
+  },
+  "FeQuestionId": {
+    "$oid": "6a8eac5116353d2110974771"
+  },
+  "SessionId": {
+    "$oid": "6a8eb01716353d2110974dfa"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000011"
+  },
+  "UserAnswer": [
+    "B. 2 nibbles"
+  ],
+  "IsCorrect": true,
+  "SubmittedAt": {
+    "$date": "2026-08-26T09:21:50.563Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a8eb02f16353d2110974e37"
+  },
+  "FeQuestionId": {
+    "$oid": "6a8eac5116353d2110974772"
+  },
+  "SessionId": {
+    "$oid": "6a8eb01716353d2110974dfa"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000011"
+  },
+  "UserAnswer": [
+    "B. Nibble"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-26T09:21:51.349Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a8eb03016353d2110974e3c"
+  },
+  "FeQuestionId": {
+    "$oid": "6a8eac5216353d2110974773"
+  },
+  "SessionId": {
+    "$oid": "6a8eb01716353d2110974dfa"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000011"
+  },
+  "UserAnswer": [
+    "B. Puts the memory address on the address bus"
+  ],
+  "IsCorrect": true,
+  "SubmittedAt": {
+    "$date": "2026-08-26T09:21:52.101Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a8eb03016353d2110974e41"
+  },
+  "FeQuestionId": {
+    "$oid": "6a8eac5216353d2110974774"
+  },
+  "SessionId": {
+    "$oid": "6a8eb01716353d2110974dfa"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000011"
+  },
+  "UserAnswer": [
+    "B. Stop-signal"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-26T09:21:52.884Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a8eb03116353d2110974e46"
+  },
+  "FeQuestionId": {
+    "$oid": "6a8eac5316353d2110974775"
+  },
+  "SessionId": {
+    "$oid": "6a8eb01716353d2110974dfa"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000011"
+  },
+  "UserAnswer": [
+    "B. To the keyboard buffer"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-26T09:21:53.704Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a8eb03216353d2110974e4b"
+  },
+  "FeQuestionId": {
+    "$oid": "6a8eac5316353d2110974776"
+  },
+  "SessionId": {
+    "$oid": "6a8eb01716353d2110974dfa"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000011"
+  },
+  "UserAnswer": [
+    "B. C uses compiling, translating the whole program before execution"
+  ],
+  "IsCorrect": true,
+  "SubmittedAt": {
+    "$date": "2026-08-26T09:21:54.450Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a8eb03316353d2110974e50"
+  },
+  "FeQuestionId": {
+    "$oid": "6a8eac5316353d2110974777"
+  },
+  "SessionId": {
+    "$oid": "6a8eb01716353d2110974dfa"
+  },
+  "CourseId": {
+    "$oid": "64b100000000000000000011"
+  },
+  "UserAnswer": [
+    "B. Because C programs must first be stored as decimal digits instead of binary"
+  ],
+  "IsCorrect": false,
+  "SubmittedAt": {
+    "$date": "2026-08-26T09:21:55.240Z"
+  }
+}]

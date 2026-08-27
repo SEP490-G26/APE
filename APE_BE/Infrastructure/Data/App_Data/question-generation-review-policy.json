@@ -1,0 +1,356 @@
+{
+  "policy_id": "question_generation_review_policy_v1",
+  "version": "v2",
+  "description": "Runtime review policy for question generation, deterministic PE guards, and stricter FE explanation grounding.",
+  "short_circuit_rules": [
+    {
+      "rule_id": "java_oop_polymorphism_source_poor_short_circuit",
+      "subject": "JAVA_OOP",
+      "question_type": "PE",
+      "required_topics_any": ["polymorphism"],
+      "required_topic_signals_any": ["polymorphism"],
+      "required_topic_signals_all_groups": [
+        ["overriding", "method overriding"]
+      ],
+      "max_chunk_count": 4,
+      "thin_chunk_token_threshold": 130,
+      "min_thin_chunk_count": 2,
+      "max_chapter_spread": 4,
+      "behavior_rich_signal_regex": "\\b(calculate|compute|evaluate|process|status|total|balance|classify|validate)\\b",
+      "demo_phrase_groups": [
+        ["rectangle", "box", "setvalue"]
+      ],
+      "theory_section_titles": [
+        "Polymorphism",
+        "Overloading",
+        "Overriding"
+      ],
+      "theory_section_contains": [
+        "How Can Overridden Method be Determined"
+      ],
+      "excluded_text_terms": [
+        "abstract class",
+        "interface",
+        "constructor"
+      ],
+      "review_status": "needs_revision",
+      "score": 0.25,
+      "issues": [
+        "Generation was skipped because the retrieved context is too source-poor for a production-quality PE.",
+        "The current chunk set is dominated by thin lecture/demo evidence and does not provide enough grounded behavior depth for a strong PE assessment item."
+      ],
+      "suggestions": [
+        "Retrieve a richer chapter or supporting chunks before generating a PE for this topic.",
+        "Prefer chapter content that contains clearer state-based behavior, method interaction, or stronger grounded behavior evidence instead of thin lecture/demo snippets."
+      ]
+    }
+  ],
+  "retry_guidance_rules": [
+    {
+      "rule_id": "c_input_output_or_variables",
+      "subject": "C",
+      "question_type": "PE",
+      "topic_match_mode": "any",
+      "topic_patterns": ["input/output", "variables"],
+      "messages": [
+        "Retry target for C PE: build a small lab task around reading two or more values and printing a derived result, comparison result, or short formatted summary. Avoid parity-only, even/odd, or single-threshold pass/fail drills unless the chunks explicitly center that exact behavior."
+      ]
+    },
+    {
+      "rule_id": "c_relational",
+      "subject": "C",
+      "question_type": "PE",
+      "topic_match_mode": "any",
+      "topic_patterns": ["relational"],
+      "messages": [
+        "Retry target for C PE: prefer a comparison task grounded in relational operators, such as LESS/EQUAL/GREATER for two integers or the larger of a small set of integers. Do not reuse the generic PASS/FAIL threshold pattern."
+      ]
+    },
+    {
+      "rule_id": "c_arithmetic_or_precedence",
+      "subject": "C",
+      "question_type": "PE",
+      "topic_match_mode": "any",
+      "topic_patterns": ["arithmetic", "precedence"],
+      "messages": [
+        "Retry target for C PE: use arithmetic in a learner-facing task with at least one meaningful behavior rule, derived value, or small decision. Avoid quotient/remainder exactness wrappers and direct lecture-formula replays."
+      ]
+    },
+    {
+      "rule_id": "java_oop_abstract_classes",
+      "subject": "JAVA_OOP",
+      "question_type": "PE",
+      "topic_match_mode": "any",
+      "topic_patterns": ["abstract class", "abstract classes", "abstraction"],
+      "messages": [
+        "Retry target for Java OOP PE on abstract classes: avoid thin template tasks where an abstract base only forces one trivial label/message override. Prefer a learner-facing task where the abstract parent keeps shared state or a shared concrete helper, and each subclass must contribute one meaningful behavior rule that changes the final result in a visible way. Keep the task concept-near and grounded in inherited behavior, validation, status evaluation, summary building, or another chunk-supported purpose. Do not drift into invented business pricing/payment stories, and do not use anonymous-class demos unless the chunks clearly support them."
+      ]
+    },
+    {
+      "rule_id": "java_oop_polymorphism",
+      "subject": "JAVA_OOP",
+      "question_type": "PE",
+      "topic_match_mode": "any",
+      "topic_patterns": ["polymorphism"],
+      "messages": [
+        "Retry target for Java OOP PE: avoid invented fee/payment/balance/shipping business stories, avoid one-line arithmetic override differences, and avoid toString-only tasks where subclasses merely reformat the same fields. Prefer parent-reference dispatch with inherited state plus a clearer behavior difference, such as different computed summaries, status evaluation, or another chunk-grounded behavior beyond simple string rearrangement. If the chunks are too thin, generate fewer but cleaner items.",
+        "Retry target for Java OOP PE on polymorphism: produce a distinct learner-facing scenario where inherited state and overridden behavior both matter. Prefer one shared parent helper or summary method plus a subclass-specific rule that changes the final result in a visible way.",
+        "Do not copy lecture-demo nouns, method names, or output patterns from the cited chunks even if they are grounded. Ground the behavior, not the exact example family."
+      ]
+    },
+    {
+      "rule_id": "dsa_java_queue_array",
+      "subject": "DSA_JAVA",
+      "question_type": "PE",
+      "topic_match_mode": "all",
+      "topic_patterns": ["queue", "array"],
+      "messages": [
+        "Retry target for DSA Java PE on queue/array topics: do not regenerate the full lecture API clone with enqueue/front/dequeue/isEmpty under lightly renamed commands. That is too close to the cited queue example.",
+        "Prefer one narrower learner-facing behavior grounded in the chunks, such as circular reuse after removals, counting failed insertions, reporting final queue state, validating wrap-around behavior, or tracking size/empty transitions after a command sequence.",
+        "If fixed capacity is required, say explicitly that this assessment uses a non-growing circular array queue and that full arrivals are rejected. Do not silently contradict grow() from the source chunks.",
+        "Avoid service-desk wrappers when they only rename the queue operations. The new task must add a clearer behavior goal beyond basic API simulation."
+      ]
+    }
+  ],
+  "generation_guidance_rules": [
+    {
+      "rule_id": "c_foundation_pe_guardrails",
+      "subject": "C",
+      "question_type": "PE",
+      "topic_match_mode": "any",
+      "topic_patterns": ["variables", "input/output", "arithmetic", "precedence", "relational", "conditions"],
+      "messages": [
+        "For C PE, keep the task small and learner-facing, but do not collapse it into parity-only, pass/fail-only, or a direct formula replay unless the cited chunks explicitly center that exact behavior.",
+        "For C PE, prefer chunk-supported derived results, comparisons, small classifications, or short formatted summaries over generic threshold wrappers.",
+        "Do not invent file I/O, advanced libraries, structs, pointers, or other APIs unless the cited chunks explicitly support them."
+      ]
+    },
+    {
+      "rule_id": "c_variables_generation_guardrails",
+      "subject": "C",
+      "question_type": "PE",
+      "topic_match_mode": "any",
+      "topic_patterns": ["variables", "input/output"],
+      "messages": [
+        "For C PE on variables or input/output, do not generate a pure read-and-echo exercise that only scans values and prints them back with labels.",
+        "Prefer a small learner-facing task where variables are assigned, reused, compared, or combined into one short derived result or short labeled summary that still stays in beginner C scope.",
+        "If the source mainly supports variable declaration and basic memory operations, avoid overfitting to a long real-world story unless the cited chunks clearly provide that scenario."
+      ]
+    },
+    {
+      "rule_id": "c_arithmetic_generation_guardrails",
+      "subject": "C",
+      "question_type": "PE",
+      "topic_match_mode": "any",
+      "topic_patterns": ["arithmetic operators", "arithmetic", "precedence"],
+      "messages": [
+        "For C PE on arithmetic operators, stay close to the grounded arithmetic behavior and avoid adding an extra multi-branch classification layer unless relational logic is clearly supported by the cited chunks.",
+        "Do not create learner-facing outputs like GREATER/EQUAL/SMALLER or similar status labels unless the task also has grounded comparison support and test coverage for every required branch.",
+        "Prefer small numeric-result tasks, short comparisons already evidenced by the source, or one simple derived behavior rather than stacking multiple invented requirements."
+      ]
+    },
+    {
+      "rule_id": "java_oop_polymorphism_generation_guardrails",
+      "subject": "JAVA_OOP",
+      "question_type": "PE",
+      "topic_match_mode": "any",
+      "topic_patterns": ["polymorphism"],
+      "messages": [
+        "For Java OOP PE on polymorphism, avoid invented business pricing/payment/shipping stories when the chunks mainly support simpler inherited behavior or code-dispatch patterns.",
+        "Do not generate thin subclass tasks where each subclass only changes a fixed label, message, formatting string, or one-line arithmetic return.",
+        "Prefer inherited state plus one meaningful overridden behavior that changes the final result in a visible, chunk-grounded way."
+      ]
+    },
+    {
+      "rule_id": "java_oop_abstract_class_generation_guardrails",
+      "subject": "JAVA_OOP",
+      "question_type": "PE",
+      "topic_match_mode": "any",
+      "topic_patterns": ["abstract class", "abstract classes", "abstraction"],
+      "messages": [
+        "For Java OOP PE on abstract classes, do not generate a thin template where the abstract parent only forces one cosmetic label/message override.",
+        "Prefer an abstract parent with shared state or shared helper behavior, and make each subclass contribute one visible chunk-grounded rule.",
+        "Do not drift into anonymous-class or one-off subclass demos unless the cited chunks clearly support that subtopic."
+      ]
+    },
+    {
+      "rule_id": "dsa_java_priority_queue_pe_guardrails",
+      "subject": "DSA_JAVA",
+      "question_type": "PE",
+      "topic_match_mode": "any",
+      "topic_patterns": ["priority queue", "priority queues"],
+      "messages": [
+        "For DSA Java PE on priority queues, do not invent a new sorting rule, tie-break rule, min-vs-max convention, or output ordering contract unless the cited chunks clearly support it.",
+        "Do not silently switch the source behavior from grow-on-full to fixed-capacity rejection unless the description explicitly states that the assessment intentionally uses a non-growing variant and the cited chunks support that simplification.",
+        "Prefer a task centered on chunk-supported priority-queue behavior such as dequeue/front semantics, priority-based removal, or a small array-backed implementation behavior that stays close to the cited operations and constraints."
+      ]
+    },
+    {
+      "rule_id": "dsa_java_queue_array_pe_guardrails",
+      "subject": "DSA_JAVA",
+      "question_type": "PE",
+      "topic_match_mode": "all",
+      "topic_patterns": ["queue", "array"],
+      "messages": [
+        "For DSA Java PE on queue/array topics, do not regenerate a broad lecture API clone unless the task adds a clearly stated learner-facing behavior goal beyond simple enqueue/dequeue simulation.",
+        "Avoid pulling deque behavior, round-robin scheduling, or unrelated queue applications into the task unless those concepts are truly part of the selected topic support."
+      ]
+    }
+  ],
+  "source_risk_guidance_rules": [
+    {
+      "rule_id": "java_oop_polymorphism_rectangle_box",
+      "subject": "JAVA_OOP",
+      "question_type": "PE",
+      "topic_match_mode": "any",
+      "topic_patterns": ["polymorphism"],
+      "chunk_term_groups": [
+        ["rectangle", "box"]
+      ],
+      "messages": [
+        "Observed source-risk: the retrieved context contains a rectangle/box overriding demo. Retry must not reuse the same demo family or the same chained display pattern."
+      ]
+    },
+    {
+      "rule_id": "java_oop_polymorphism_shape_circle_rectangle",
+      "subject": "JAVA_OOP",
+      "question_type": "PE",
+      "topic_match_mode": "any",
+      "topic_patterns": ["polymorphism", "abstract class", "abstract classes", "abstraction"],
+      "chunk_term_groups": [
+        ["shape", "circle", "rectangle"]
+      ],
+      "messages": [
+        "Observed source-risk: the retrieved context contains a shape/circle/rectangle demo. Retry must not reuse the same demo family or direct geometry-formula subclass exercise."
+      ]
+    },
+    {
+      "rule_id": "java_oop_polymorphism_animal_dog_cat",
+      "subject": "JAVA_OOP",
+      "question_type": "PE",
+      "topic_match_mode": "any",
+      "topic_patterns": ["polymorphism"],
+      "chunk_term_groups": [
+        ["animal", "dog", "cat"]
+      ],
+      "messages": [
+        "Observed source-risk: the retrieved context contains an animal/dog/cat demo. Retry must not reuse the same demo family or fixed-label subclass outputs."
+      ]
+    }
+  ],
+  "subject_focus_rules": [
+    {
+      "subject": "C",
+      "question_type": "FE",
+      "message": "Introductory C concepts for FPT students: variables, operators, conditions, loops, arrays, functions, pointers at beginner scope."
+    },
+    {
+      "subject": "C",
+      "question_type": "PE",
+      "message": "Introductory C practical tasks for FPT students with clear input/output and beginner-friendly coding requirements."
+    },
+    {
+      "subject": "JAVA_OOP",
+      "question_type": "FE",
+      "message": "Java OOP concepts for FPT students: class, object, constructor, encapsulation, inheritance, polymorphism, interface."
+    },
+    {
+      "subject": "JAVA_OOP",
+      "question_type": "PE",
+      "message": "Java OOP practical coding tasks for FPT students with class design, method behavior, and simple object interactions."
+    },
+    {
+      "subject": "DSA_JAVA",
+      "question_type": "FE",
+      "message": "Data structures and algorithms in Java for FPT students: arrays, linked lists, stacks, queues, trees, graphs, sorting, searching."
+    },
+    {
+      "subject": "DSA_JAVA",
+      "question_type": "PE",
+      "message": "Java DSA practical tasks for FPT students focusing on algorithmic behavior, small implementations, and edge-case handling."
+    }
+  ],
+  "fe_rules": {
+    "option_count": 4,
+    "correct_answer_count": 1,
+    "correct_answer_label_regex": "^[A-D]$",
+    "minimum_option_length": 3,
+    "minimum_stem_length": 18,
+    "require_question_mark_in_stem": true,
+    "require_explanation": true,
+    "maximum_explanation_sentence_count": 3,
+    "minimum_explanation_source_overlap_ratio": 0.08,
+    "minimum_grounded_option_count": 2,
+    "minimum_grounded_option_overlap_ratio": 0.08,
+    "forbidden_option_terms": ["all of the above", "none of the above"],
+    "issue_messages": {
+      "duplicate_options": "FE options contain duplicates or near-duplicates.",
+      "forbidden_meta_option": "FE uses a forbidden meta option pattern such as 'All of the above' or 'None of the above'.",
+      "missing_question_mark": "FE stem should read as a clear question.",
+      "missing_explanation": "FE explanation is required by policy."
+    }
+  },
+  "pe_low_value_rules": {
+    "weak_override_method_names": ["toString", "getMessage", "getLabel", "getInfo", "describe"],
+    "weak_behavior_description_terms": ["print", "return", "returns", "format", "formats", "message", "label", "text format", "toString"],
+    "weak_behavior_method_names": ["toString", "getSummary", "getInfo", "describe"],
+    "strong_behavior_description_terms": ["validate", "evaluate", "classify", "calculate", "compute", "check", "compare", "decide", "build", "format summary", "summarize"],
+    "ordering_behavior_terms": ["lexicographical", "alphabetical", "sorted", "ascending", "descending", "ordered"],
+    "ordering_api_terms": ["compareTo", "Collections.sort", "Arrays.sort"],
+    "polymorphism_template_terms": ["abstract class", "subclass", "base class", "shipment type", "payment type", "employee type", "shape type"],
+    "formula_demo_description_terms": ["operator precedence", "use integer division", "use the remainder operator", "use the formula", "multiplication is done before addition"],
+    "binary_status_outputs": ["COMPLETE", "INCOMPLETE", "DONE", "NOT DONE", "SUCCESS", "FAIL", "ACTIVE", "INACTIVE", "YES", "NO", "TRUE", "FALSE", "VALID", "INVALID"],
+    "binary_status_method_names": ["isComplete", "isValid", "isApproved", "isPassed", "getResult", "getStatus"],
+    "non_domain_binary_status_exclusion_terms": ["queue", "stack", "tree", "graph", "sort", "search", "shape", "area", "ticket", "membership", "discount", "payment"],
+    "comparison_status_outputs": ["GREATER", "EQUAL", "SMALLER", "LESS"],
+    "comparison_description_terms": ["greater", "equal", "smaller", "less"],
+    "queue_api_clone_command_terms": ["ARRIVE", "SERVE", "NEXT", "EMPTY"],
+    "queue_description_terms": ["enqueue", "dequeue", "front", "empty"],
+    "queue_api_surface_methods": ["enqueue", "dequeue", "front", "isEmpty", "isFull"],
+    "queue_capacity_explicit_justification_terms": ["do not resize", "non-growing", "fixed capacity", "circular reuse", "reuse freed positions"],
+    "abstract_weak_method_names": ["getMessage", "getLabel", "getInfo", "describe", "getSummary", "toString"],
+    "issue_messages": {
+      "near_copy_lecture_demo": "PE shape is too close to a lecture-example pattern and only renames the original demo with cosmetic changes.",
+      "message_only_subclass": "PE polymorphism shape is too weak because subclasses differ mainly by fixed labels or message strings.",
+      "to_string_only_weak_task": "PE polymorphism shape is still too weak because the learner mainly overrides one formatting/display method and does not implement richer object behavior.",
+      "invented_ordering_behavior": "PE introduces a new ordering or sorting rule that is not supported by the cited chunks, so the grounding is too weak.",
+      "trivial_polymorphism_arithmetic": "PE polymorphism shape is too template-like: abstract base plus two subclasses with one-line arithmetic overrides is not yet a strong learner-facing assessment task.",
+      "formula_only_demo": "PE shape is still a formula-demo exercise that mirrors lecture syntax too directly and lacks enough learner-facing assessment value.",
+      "parity_drill": "PE shape is only an even/odd parity drill, which is too weak and too generic for the current source-backed PE quality target.",
+      "exact_not_exact_drill": "PE shape is only an exact/not-exact remainder wrapper around a lecture-style arithmetic example and does not add enough assessment value.",
+      "uncovered_comparison_branch": "PE introduces comparison-classification output such as GREATER/EQUAL/SMALLER but the tests do not cover all required branches.",
+      "pass_fail_threshold_copy": "PE shape is too close to a generic PASS/FAIL threshold exemplar and is not clearly grounded in the selected source topic.",
+      "binary_threshold_status_template": "PE shape is still too generic: a binary threshold-based status wrapper like COMPLETE/INCOMPLETE or YES/NO does not create enough OOP-specific assessment value for this grounded PE flow.",
+      "queue_api_clone": "PE queue/array shape is too close to the cited lecture queue API and only wraps enqueue/front/dequeue/isEmpty with lightly renamed commands such as ARRIVE/NEXT/SERVE.",
+      "queue_capacity_drift": "PE queue/array shape changes the source behavior from grow-on-full to fixed-capacity rejection without clearly stating that the assessment intentionally uses a non-growing circular queue variant.",
+      "thin_abstract_template": "PE abstract-class shape is too weak: the abstract parent and subclasses only support a thin label/message template instead of a meaningful inherited behavior task.",
+      "abstract_formatting_clone": "PE abstract-class shape is still too template-like because the learner mainly overrides one formatting or summary method with cosmetic subclass differences.",
+      "anonymous_or_one_off_subclass": "PE abstract-class shape drifts into an anonymous or one-off subclass demo that is too code-shape-driven and not a strong learner-facing assessment item.",
+      "abstract_single_subclass_rule_wrapper": "PE abstract-class shape is still too thin: one abstract parent plus one concrete subclass wrapping a simple conditional rule does not create enough abstract-class-specific assessment value."
+    },
+    "demo_families": [
+      {
+        "family_id": "rectangle_box",
+        "required_class_terms": ["Rectangle", "Box"],
+        "method_terms": ["setValue", "set", "toString"],
+        "family_issue": "PE reuses a source-demo class family too directly. Do not reuse the same learner-facing demo family from the source material.",
+        "method_issue": "PE reuses a source-demo method surface too directly instead of building a distinct grounded scenario."
+      },
+      {
+        "family_id": "shape_circle_rectangle",
+        "required_class_terms": ["Shape", "Circle", "Rectangle"],
+        "requires_abstract_base": true,
+        "method_terms": ["area"],
+        "family_issue": "PE reuses a source-demo class family too directly. Do not reuse the same learner-facing demo family from the source material.",
+        "method_issue": "PE reuses a source-demo method surface too directly instead of building a distinct grounded scenario."
+      },
+      {
+        "family_id": "animal_dog_cat",
+        "required_class_terms": ["Animal", "Dog", "Cat"],
+        "method_terms": ["sound"],
+        "family_issue": "PE reuses a source-demo class family too directly. Do not reuse the same learner-facing demo family from the source material.",
+        "method_issue": "PE reuses a source-demo method surface too directly instead of building a distinct grounded scenario."
+      }
+    ]
+  }
+}

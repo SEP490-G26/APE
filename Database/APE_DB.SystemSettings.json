@@ -1,0 +1,47 @@
+[{
+  "_id": "SETTING_AI_PROVIDER_CREDENTIALS",
+  "SettingName": "AI_PROVIDER_CREDENTIALS",
+  "SettingData": {
+    "_t": "MongoDB.Bson.BsonDocument, MongoDB.Bson",
+    "_v": {
+      "OpenAI": {
+        "Enabled": true,
+        "ApiKey": "enc::CfDJ8HB6yRvXra9JraH6Rppsgt68hJgcnC7Tgq28wRmEA6MsPL2i4lrrpOrkmYv5XRZ0a_M6sX7DHgKWLhMHIPado3kGLA-zvAkUw2qICAgvGZOIsp_4Ua7ZdZi-qzb-aTpt1CgOQsfkNjrhIv8ozebrTC9tMzqBX3DzCejLEzsvJO2JIloRKP3IyOMML_8Tnv2n86GYqSCdghDj6CcBZ9Grc7X9gbRarYPEgfdDwQYdnjjnqOuf2_mhHK3RLYdrhuN4Mhq1OOhicJDNJGf1A-IwSCrpqqyu3ROuYVZatLaTdL_a6FaMDF701FOqHhlKee0FQMKa9QWhZ8Fvi5rxRXBL4Sc",
+        "BaseUrl": "https://api.openai.com/v1",
+        "ApiVersion": "v1",
+        "TimeoutSeconds": 60,
+        "Headers": {}
+      },
+      "DeepSeek": {
+        "Enabled": true,
+        "ApiKey": "enc::CfDJ8HB6yRvXra9JraH6Rppsgt4zBNGTvgjwDWOdeehOjg6xFXioo2i83bu-EcmlOVt9iYG7mFLgYLEmEzTVm9-spr3EUQVr3xDoW-BJ5W597J5GniDfhIroWHBsxe54FBbNM3z1rJdVSChE228H8NpP3A064meYUILg9KBDK6SjkofR",
+        "BaseUrl": "https://api.deepseek.com",
+        "ApiVersion": "v1",
+        "TimeoutSeconds": 60,
+        "Headers": {}
+      },
+      "Gemini": {
+        "Enabled": true,
+        "ApiKey": "enc::CfDJ8HB6yRvXra9JraH6Rppsgt5Brra4clTzcaS-lxGSGFTAafpDs1AIUdDyuEb3HNgEkTTbwF4Ti7Nf63m6wzvBiP0NbkO0EBfuArHaoQJ0UPcVY6XFwO9-VY1geH4uVgZy30Z2LE8HYhSi4FPDJvjAo-4QMrYUMCtP2TdzRPUeqMUamRdjiTdjDHB_KpOtBYbUsQ",
+        "BaseUrl": "https://generativelanguage.googleapis.com/",
+        "ApiVersion": "v1beta",
+        "TimeoutSeconds": 60,
+        "Headers": {}
+      },
+      "Cohere": {
+        "Enabled": true,
+        "ApiKey": "enc::CfDJ8HB6yRvXra9JraH6Rppsgt45Xx7J1KgieqIb0WEj82hP0tvWh_9ot_ts0ONLQajFjRg2g4TnSrs4Lyyq1Oe4WmUcmRm73WrOFAZEle3xbAMQPl9dYVKweCFiYQafhbfw3tjYVKqFeX-lf0RLu1cMP2b_d8hyC_M6NV-DTzcWZUG4wjGWod__5M7rplOqP2l_TQ",
+        "BaseUrl": "https://api.cohere.com/",
+        "ApiVersion": "v1",
+        "TimeoutSeconds": 60,
+        "Headers": {}
+      }
+    }
+  },
+  "UpdatedBy": {
+    "$oid": "6a8e98b016353d21109731ba"
+  },
+  "LastUpdated": {
+    "$date": "2026-08-26T07:41:36.491Z"
+  }
+}]

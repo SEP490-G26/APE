@@ -1,0 +1,39 @@
+{
+  "dataset_id": "dataset_multiagent_seed_expanded",
+  "description": "Expanded generation/review benchmark",
+  "cases": [
+    { "case_id": "MAG_001", "mode": "FE", "domain": "C", "difficulty": "easy", "topic": "loops", "expected_review_status": "approved" },
+    { "case_id": "MAG_002", "mode": "FE", "domain": "C", "difficulty": "medium", "topic": "pointers", "expected_review_status": "approved" },
+    { "case_id": "MAG_003", "mode": "FE", "domain": "C", "difficulty": "hard", "topic": "memory_management", "expected_review_status": "needs_regenerate" },
+    { "case_id": "MAG_004", "mode": "PE", "domain": "C", "difficulty": "medium", "topic": "array_processing", "expected_review_status": "approved" },
+    { "case_id": "MAG_005", "mode": "PE", "domain": "C", "difficulty": "hard", "topic": "linked_list", "expected_review_status": "needs_regenerate" },
+
+    { "case_id": "MAG_006", "mode": "FE", "domain": "Java_OOP", "difficulty": "easy", "topic": "encapsulation", "expected_review_status": "approved" },
+    { "case_id": "MAG_007", "mode": "FE", "domain": "Java_OOP", "difficulty": "medium", "topic": "inheritance", "expected_review_status": "approved" },
+    { "case_id": "MAG_008", "mode": "FE", "domain": "Java_OOP", "difficulty": "hard", "topic": "polymorphism", "expected_review_status": "needs_regenerate" },
+    { "case_id": "MAG_009", "mode": "PE", "domain": "Java_OOP", "difficulty": "medium", "topic": "interface_vs_abstract", "expected_review_status": "approved" },
+    { "case_id": "MAG_010", "mode": "PE", "domain": "Java_OOP", "difficulty": "hard", "topic": "design_patterns_basics", "expected_review_status": "needs_regenerate" },
+
+    { "case_id": "MAG_011", "mode": "FE", "domain": "DSA_OOP", "difficulty": "easy", "topic": "stack_queue", "expected_review_status": "approved" },
+    { "case_id": "MAG_012", "mode": "FE", "domain": "DSA_OOP", "difficulty": "medium", "topic": "binary_search", "expected_review_status": "approved" },
+    { "case_id": "MAG_013", "mode": "FE", "domain": "DSA_OOP", "difficulty": "hard", "topic": "graph_complexity", "expected_review_status": "needs_regenerate" },
+    { "case_id": "MAG_014", "mode": "PE", "domain": "DSA_OOP", "difficulty": "medium", "topic": "bfs", "expected_review_status": "approved" },
+    { "case_id": "MAG_015", "mode": "PE", "domain": "DSA_OOP", "difficulty": "hard", "topic": "dijkstra", "expected_review_status": "needs_regenerate" },
+
+    { "case_id": "MAG_016", "mode": "FE", "domain": "C", "difficulty": "easy", "topic": "conditionals", "expected_review_status": "approved" },
+    { "case_id": "MAG_017", "mode": "FE", "domain": "C", "difficulty": "medium", "topic": "functions", "expected_review_status": "approved" },
+    { "case_id": "MAG_018", "mode": "PE", "domain": "C", "difficulty": "hard", "topic": "pointer_arithmetic", "expected_review_status": "needs_regenerate" },
+    { "case_id": "MAG_019", "mode": "FE", "domain": "Java_OOP", "difficulty": "easy", "topic": "class_object", "expected_review_status": "approved" },
+    { "case_id": "MAG_020", "mode": "FE", "domain": "Java_OOP", "difficulty": "medium", "topic": "constructor", "expected_review_status": "approved" },
+    { "case_id": "MAG_021", "mode": "PE", "domain": "Java_OOP", "difficulty": "hard", "topic": "override_dispatch", "expected_review_status": "needs_regenerate" },
+    { "case_id": "MAG_022", "mode": "FE", "domain": "DSA_OOP", "difficulty": "easy", "topic": "arrays", "expected_review_status": "approved" },
+    { "case_id": "MAG_023", "mode": "FE", "domain": "DSA_OOP", "difficulty": "medium", "topic": "linked_list", "expected_review_status": "approved" },
+    { "case_id": "MAG_024", "mode": "PE", "domain": "DSA_OOP", "difficulty": "hard", "topic": "union_find", "expected_review_status": "needs_regenerate" },
+    { "case_id": "MAG_025", "mode": "PE", "domain": "C", "difficulty": "medium", "topic": "string_processing", "expected_review_status": "approved" },
+    { "case_id": "MAG_026", "mode": "PE", "domain": "Java_OOP", "difficulty": "medium", "topic": "exception_handling", "expected_review_status": "approved" },
+    { "case_id": "MAG_027", "mode": "PE", "domain": "DSA_OOP", "difficulty": "medium", "topic": "heap", "expected_review_status": "approved" },
+    { "case_id": "MAG_028", "mode": "FE", "domain": "C", "difficulty": "hard", "topic": "undefined_behavior", "expected_review_status": "needs_regenerate" },
+    { "case_id": "MAG_029", "mode": "FE", "domain": "Java_OOP", "difficulty": "hard", "topic": "solid_principles", "expected_review_status": "needs_regenerate" },
+    { "case_id": "MAG_030", "mode": "FE", "domain": "DSA_OOP", "difficulty": "hard", "topic": "amortized_analysis", "expected_review_status": "needs_regenerate" }
+  ]
+}

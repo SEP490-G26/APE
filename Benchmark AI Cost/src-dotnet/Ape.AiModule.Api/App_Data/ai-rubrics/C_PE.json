@@ -1,0 +1,89 @@
+{
+  "rubric_id": "C_PE",
+  "version": "v1",
+  "language": "en",
+  "subject_code": "C",
+  "question_type": "PE",
+  "title": "C Programming Fundamentals - Practice Exam Rubric",
+  "institution_context": {
+    "target_students": "FPT University students in foundational programming courses",
+    "course_context": [
+      "PRF-style introductory practical coding tasks",
+      "Clear input-output format expected in academic lab assessments"
+    ]
+  },
+  "difficulty_definitions": {
+    "easy": {
+      "description": "A short implementation task with straightforward input/output and one main concept.",
+      "expected_skills": [
+        "Implement simple loops, conditions, arrays, or functions.",
+        "Produce correct output for small, direct requirements.",
+        "Follow a skeleton without needing deep debugging."
+      ],
+      "should_avoid": [
+        "Complex pointer-heavy logic.",
+        "Multiple interacting data structures.",
+        "Algorithmic optimization requirements."
+      ]
+    },
+    "medium": {
+      "description": "An implementation task that requires combining multiple beginner concepts or handling several ordinary cases correctly.",
+      "expected_skills": [
+        "Combine loops, arrays, functions, and validation logic.",
+        "Handle normal edge cases such as empty or boundary values.",
+        "Understand problem decomposition."
+      ],
+      "should_avoid": [
+        "Highly tricky pointer arithmetic.",
+        "Advanced memory management tasks outside course scope."
+      ]
+    },
+    "hard": {
+      "description": "A substantial beginner-to-intermediate C task requiring careful decomposition, edge-case coverage, and precise implementation.",
+      "expected_skills": [
+        "Manage multi-step logic cleanly.",
+        "Handle important edge cases explicitly.",
+        "Write a full solution with coherent hidden and visible test coverage."
+      ],
+      "should_avoid": [
+        "System programming content.",
+        "Advanced data structure implementations unless clearly present in the chunks."
+      ]
+    }
+  },
+  "review_checks": [
+    "The task must be grounded in the provided chunks.",
+    "The requested difficulty must match implementation complexity.",
+    "skeleton_code must match C language expectations.",
+    "solution_code must solve the stated task coherently.",
+    "test_cases must cover at least one visible case and should include hidden coverage.",
+    "The task must remain within introductory C scope."
+  ],
+  "difficulty_mismatch_signals": {
+    "easy": [
+      "Requires multiple helper functions or several branching layers.",
+      "Needs tricky pointer manipulation.",
+      "Needs broad edge-case handling beyond a direct introductory task."
+    ],
+    "medium": [
+      "Is only a one-step syntax drill.",
+      "Requires advanced memory or pointer reasoning not supported by the source.",
+      "Has test coverage that implies a much harder hidden requirement than the statement suggests."
+    ],
+    "hard": [
+      "Can be solved by a direct loop with no meaningful edge-case reasoning.",
+      "Has overly trivial visible and hidden tests.",
+      "Does not require decomposition or careful implementation choices."
+    ]
+  },
+  "acceptance_rules": [
+    "Accept only if the task statement, skeleton, solution, and tests are mutually consistent.",
+    "Reject if the solution does not logically match the problem statement.",
+    "Reject if hidden tests imply requirements not stated or grounded in the chunks."
+  ],
+  "regeneration_hints": [
+    "Simplify the implementation scope for Easy tasks.",
+    "Add meaningful boundary cases for Medium and Hard tasks.",
+    "Keep the prompt aligned with beginner C learning outcomes."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "policy_id": "extracted_content_policy_v1",
+  "version": "v1",
+  "function_name": "ExtractedContent",
+  "supported_modes": ["TextOnly", "FullMultimodalPage"],
+  "image_markers": ["image", "img", "figure"],
+  "normalization_rules": {
+    "collapse_spaces": true,
+    "collapse_blank_lines": true,
+    "prepend_markdown_header": true
+  },
+  "warning_rules": {
+    "warn_if_empty_content": true,
+    "warn_if_images_present_without_vision_model": true,
+    "warn_if_no_text_after_normalization": true
+  },
+  "structure_detection_rules": {
+    "enabled": true,
+    "prefer_scope_blocks_when_formal_chapters_are_missing": true,
+    "minimum_content_lines_per_unit": 3,
+    "reject_generic_titles": [
+      "untitled chapter",
+      "textbook",
+      "content",
+      "section"
+    ]
+  }
+}

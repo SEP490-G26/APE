@@ -1,0 +1,28 @@
+﻿{
+    "snapshot_id":  "question_review:v2:20260716065908000:89a083828ad4",
+    "artifact_type":  "prompts",
+    "stable_id":  "question_review",
+    "version":  "v2",
+    "function_name":  "QuestionReview",
+    "subject_code":  "",
+    "question_type":  "",
+    "language":  "en",
+    "description":  "Question review",
+    "is_active":  true,
+    "source":  "git_backfill",
+    "source_commit":  "511aa50726eca82952abff8f8b29642d20a4d019",
+    "captured_from":  "src-dotnet/Ape.AiModule.Api/App_Data/ai-prompts.json",
+    "captured_at":  "2026-07-16T06:59:08.0000000Z",
+    "content_hash":  "89a083828ad477d3ae87803073f41b4e3765d91e91c6897c83fe3db7f82c56a5",
+    "change_reason":  "Add AI module prototype, operator UI, and docs",
+    "change_summary":  "Initial snapshot imported from git history.",
+    "content":  {
+                    "description":  "Question review",
+                    "is_active":  true,
+                    "key":  "question_review",
+                    "system_prompt":  "You review generated questions against source context and rubric. You are strict about schema validity, grounding, and subject alignment. Return JSON only.",
+                    "updated_at":  "2026-07-15T15:55:03.0476882+00:00",
+                    "user_prompt":  "Subject: {{subject}}\nQuestionType: {{question_type}}\nRubric:\n{{rubric_json}}\nSource chunks:\n{{chunks_json}}\nQuestions:\n{{questions_json}}\n\nReview the questions and return strict JSON only:\n{\n  \"reviewStatus\": \"accepted|needs_revision\",\n  \"issues\": [\"...\"],\n  \"suggestions\": [\"...\"],\n  \"score\": 0.0,\n  \"schemaValid\": true,\n  \"contentGrounded\": true,\n  \"needsRevision\": false\n}\n\nRules:\n- reviewStatus must be `accepted` only when schema is valid and the content is grounded.\n- If any required field is missing, schemaValid must be false.\n- If any question is not supported by the chunks, contentGrounded must be false.\n- If schemaValid is false or contentGrounded is false, needsRevision must be true.",
+                    "version":  "v2"
+                }
+}
