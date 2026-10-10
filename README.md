@@ -126,8 +126,6 @@ flowchart LR
 5. **Step 5 — Socratic Code Mentor:** Parses compiler errors and test outputs from Judge0, formulating guided diagnostic hints without disclosing direct code solutions.
 6. **Multi-Provider Routing & Circuit Breaker Fallback:** Client try/catch failover between primary (**OpenAI**) and secondary (**DeepSeek**) providers to prevent service interruption during upstream rate limits or outages.
 
-> 📄 *For a comprehensive personal portfolio report detailing the AI subsystem design, benchmark results, and engineering decisions, see [AI Core Contributions](docs/AI_CORE_CONTRIBUTIONS.md).*
-
 ---
 
 ## 🛠️ 5. Technology Stack Summary
@@ -150,7 +148,7 @@ flowchart LR
 
 ## 👥 6. Team Structure & Contribution Attribution
 
-The APE platform was developed by a 5-member capstone team. The following matrix outlines the confirmed allocation of responsibilities across the project:
+The APE platform was developed by a 5-member capstone engineering team (Group `SEP490_G26`, FPT University Hanoi). The following matrix outlines the confirmed allocation of responsibilities across the project:
 
 | Member | Project Role | Primary Focus Area | Key Deliverables & Responsibilities |
 |---|---|---|---|
@@ -160,13 +158,12 @@ The APE platform was developed by a 5-member capstone team. The following matrix
 | **Nguyễn Viết Sang** | Fullstack Development & Core Integration | Core Application Backend & System Integration | Core Web API services and MongoDB repositories; system authentication & RBAC; wallet & PayOS webhook transaction handling; fullstack system integration and debugging; collaboration on frontend integration; and end-to-end integration of AI modules into the main system. |
 | **Phan Duy Hưng** | Frontend Development & UI Engineering | Web Client Experience & Interface Design | React 18 SPA architecture; Monaco Code Editor integration; student exam workspace; administrative governance dashboards; responsive UI components; state management; and integration of frontend features with backend APIs. |
 
-### 6.1 Personal Contribution Spotlight: Phạm Quốc Minh (AI Core & Prototype)
-- **AI Processing Pipeline Design:** Architected the multi-stage pipeline spanning Safety Gatekeeper, Document OCR extraction, Chapter detection, semantic chunking, and Cohere 1,024-dim vector embedding.
-- **Prompt Engineering & Quality Control:** Formulated system prompt templates, pedagogical rubrics, Bloom taxonomy alignment rules, and automated self-repair generation loops.
-- **AI Prototype Subsystem (`Prototype_AI_Module`):** Engineered the dedicated .NET 10/8 research and testing harness to benchmark provider latencies, evaluate token efficiency, and empirically compare OpenAI, DeepSeek, and Gemini models.
-- **System Integration & Debugging:** Integrated AI services into the ASP.NET Core backend, resolving token budget constraints, JSON serialization edge cases, and provider fallback logic.
-- **Testing & Benchmarking:** Conducted empirical token usage and cost analysis, while contributing to test scenarios for AI controllers and routing logic.
-- *Methodology Note: The AI Core implementation was conducted leveraging modern AI-assisted pair-programming tools. The contributor focused on system analysis, prompt engineering, architecture coordination, integration debugging, and empirical benchmarking rather than manual authoring of the entire backend codebase.*
+### 6.1 Detailed Team Contributions
+APE is the collaborative result of cross-functional engineering spanning business analysis, fullstack web development, sandboxed code execution, frontend user experience, and artificial intelligence. 
+
+Each member led critical subsystems while collaborating closely across API contracts, security reviews, and integration milestones:
+- For comprehensive individual contribution records, technical deliverables, architectural challenges, and cross-team workflows for all five members, see **[Team Contributions & Responsibilities](docs/TEAM_CONTRIBUTIONS.md)**.
+- For an in-depth technical case study specifically analyzing the AI processing subsystem, RAG architecture, and empirical token benchmarks, see **[AI Core Subsystem Case Study](docs/AI_CORE_CONTRIBUTIONS.md)**.
 
 ---
 
@@ -216,7 +213,7 @@ APE/
 ├── 🗄️ Database/               # Complete MongoDB Dump (20 Collections) & 1-Click Import Scripts
 ├── 📑 Document/               # Official Academic Deliverables (Reports 1 to 7, Defense PPTX, User Guides)
 ├── 📈 Benchmark AI Cost/      # Historical AI Token Cost Analysis & Experimental Benchmarks
-├── 📚 docs/                   # In-depth Technical Documentation (AI Core Portfolio Report)
+├── 📚 docs/                   # Detailed Technical Documentation & Team Contribution Records
 ├── 🛡️ .gitignore              # Monorepo secret and build artifact exclusion rules
 └── 📄 README.md               # Master Project Documentation (This file)
 ```
