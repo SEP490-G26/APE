@@ -22,7 +22,7 @@ In contemporary computer science education, computerized assessment and programm
 3. **Static, Uninformative Code Feedback:** Traditional automated grading platforms return binary pass/fail verdicts or raw compiler traces without guiding students toward understanding *why* their algorithm failed, often leading to frustration rather than learning.
 
 ### 1.2 The APE Solution
-**APE (AI-Powered Examination and Programming Practice Platform)** is a full-stack educational ecosystem engineered to automate curriculum-aligned assessment and adaptive programming practice:
+**APE (AI-Powered Examination and Programming Practice Platform)** is an academic automated assessment and programming practice platform engineered to automate curriculum-aligned assessment and adaptive programming practice:
 - **BYOS (Bring Your Own Source) Ingestion:** Ingests syllabi, textbooks, and presentation slides (`.pdf`, `.docx`, `.pptx`), transcribing embedded architecture diagrams via multimodal vision OCR.
 - **5-Stage Multi-Agent AI Pipeline:** Synthesizes Multiple-Choice Questions (FE) with pedagogical rationales and Practical Coding Challenges (PE) with automated test cases.
 - **Sandboxed Execution & Hidden Test Masking:** Executes student code securely via **Judge0 CE** with strict protection against answer leaks.
@@ -39,7 +39,7 @@ In contemporary computer science education, computerized assessment and programm
 | **5-Stage AI Pipeline** | Prompt-injection safety gatekeeping; Vision OCR document parsing; semantic boundary chunking; Cohere 1,024-dim vector retrieval; 3-tier pedagogical review and self-repair loops. |
 | **Socratic Code Mentor** | Diagnostic parsing of Judge0 execution traces; Socratic debugging hints; anti-leakage guards preventing direct code disclosure. |
 | **AI Wallet & Billing** | Automated balance top-up via **PayOS VietQR**; transparent post-pay micro-billing calculated directly from token usage; minimum balance protection gates (`AI balance >= 1,000 VND`). |
-| **Governance & Admin** | Super Admin dashboard; curriculum syllabus management; AI model catalog and prompt configuration with zero application downtime. |
+| **Governance & Admin** | Super Admin dashboard; curriculum syllabus management; AI model catalog and dynamic database-first prompt configuration. |
 
 ---
 
@@ -82,7 +82,7 @@ flowchart LR
 ### Clean Architecture Layers:
 - **Domain Layer (`Domain/`):** Pure enterprise entities, value objects, domain exceptions, and system constants without external dependencies.
 - **Application Layer (`Application/`):** Core business workflows, service contracts (`Interfaces/`), DTOs, FluentValidation business rules, and AI orchestration pipelines.
-- **Infrastructure Layer (`Infrastructure/`):** External integrations including MongoDB repositories, Judge0 client adapters, PayOS payment client, and HTTP LLM provider gateways.
+- **Infrastructure Layer (`Infrastructure/`):** External integrations including MongoDB repositories, Judge0 client adapters, PayOS payment client, and HTTP LLM provider gateways in `Services/`.
 - **Presentation Layer (`API/`):** 27 REST API controllers, JWT authentication middlewares, rate limiting, and asynchronous background worker services.
 
 ---
@@ -124,7 +124,7 @@ flowchart LR
    - **Tier 2 (LLM Reviewer `gpt-5.4-mini` / `deepseek-v4-flash`):** Scores distractor plausibility and edge-case test coverage against quantitative rubrics.
    - **Tier 3 (Self-Repair Loop):** Bounded retry cycle (up to 3 attempts) feeding reviewer feedback back into the generator for automated correction.
 5. **Step 5 — Socratic Code Mentor:** Parses compiler errors and test outputs from Judge0, formulating guided diagnostic hints without disclosing direct code solutions.
-6. **Multi-Provider Routing & Circuit Breaker Fallback:** Client try/catch failover between primary (**OpenAI**) and secondary (**DeepSeek**) providers to prevent service interruption during upstream rate limits or outages.
+6. **Multi-Provider Routing & Failover Fallback:** Client try/catch failover between primary (**OpenAI**) and secondary (**DeepSeek**) providers to prevent service interruption during upstream rate limits or outages.
 
 ---
 
@@ -152,11 +152,11 @@ The APE platform was developed by a 5-member capstone engineering team (Group `S
 
 | Member | Project Role | Primary Focus Area | Key Deliverables & Responsibilities |
 |---|---|---|---|
-| **Nguyễn Việt Đức** | Business Analyst & Documentation | Academic Deliverables & Requirements Engineering | Authored official Capstone reports (Reports 1 to 7); business requirements analysis; software requirement specifications (SRS/SDS); use case and activity modeling; academic milestone coordination. |
-| **Phạm Quốc Minh** | AI Core & Prototype Developer | AI Pipeline Architecture, RAG & Benchmarking | Requirements analysis and workflow design for the AI processing subsystem; prompt engineering, pedagogical rubrics, and evaluation rules; document extraction, chunking, and Cohere vector embedding integration; development of the `Prototype_AI_Module` benchmark environment; AI provider integration and fallback logic; empirical token/cost analysis; and participation in backend integration testing. *(Implementation was conducted leveraging modern AI-assisted coding tools).* |
-| **Vũ Hoàng Anh** | Code Execution & Judge Specialist | Sandboxed Grading Integration | Integration of the Judge0 code execution engine; compilation and runtime client adapters; test case verification workflows; hidden test masking; worker lease polling mechanisms; and code execution evaluation. |
-| **Nguyễn Viết Sang** | Fullstack Development & Core Integration | Core Application Backend & System Integration | Core Web API services and MongoDB repositories; system authentication & RBAC; wallet & PayOS webhook transaction handling; fullstack system integration and debugging; collaboration on frontend integration; and end-to-end integration of AI modules into the main system. |
-| **Phan Duy Hưng** | Frontend Development & UI Engineering | Web Client Experience & Interface Design | React 18 SPA architecture; Monaco Code Editor integration; student exam workspace; administrative governance dashboards; responsive UI components; state management; and integration of frontend features with backend APIs. |
+| **Nguyễn Việt Đức**<br/>`(HE176246)` | Business Analyst & Documentation | Academic Deliverables & Requirements Engineering | Authored official Capstone reports (Reports 1 to 7); business requirements analysis; software requirement specifications (SRS/SDS); use case and activity modeling; academic milestone coordination. |
+| **Phạm Quốc Minh**<br/>`(HE172395)` | AI Core & Prototype Developer | AI Pipeline Architecture, RAG & Benchmarking | Requirements analysis and workflow design for the AI processing subsystem; prompt engineering, pedagogical rubrics, and evaluation rules; document extraction, chunking, and Cohere vector embedding integration; development of the `Prototype_AI_Module` benchmark environment; AI provider integration and fallback logic; empirical token/cost analysis; and participation in backend integration testing. *(Implementation was conducted leveraging modern AI-assisted coding tools).* |
+| **Vũ Hoàng Anh**<br/>`(HE172381)` | Code Execution & Judge Specialist | Sandboxed Grading Integration | Integration of the Judge0 code execution engine; compilation and runtime client adapters; test case verification workflows; hidden test masking; worker lease polling mechanisms; and code execution evaluation. |
+| **Nguyễn Viết Sang**<br/>`(HE172569)` | Fullstack Development & Core Integration | Core Application Backend & System Integration | Core Web API services and MongoDB repositories; system authentication & RBAC; wallet & PayOS webhook transaction handling; fullstack system integration and debugging; collaboration on frontend integration; and end-to-end integration of AI modules into the main system. |
+| **Phan Duy Hưng**<br/>`(HE173329)` | Frontend Development & UI Engineering | Web Client Experience & Interface Design | React 18 SPA architecture; Monaco Code Editor integration; student exam workspace; administrative governance dashboards; responsive UI components; state management; and integration of frontend features with backend APIs. |
 
 ### 6.1 Detailed Team Contributions
 APE is the collaborative result of cross-functional engineering spanning business analysis, fullstack web development, sandboxed code execution, frontend user experience, and artificial intelligence. 
@@ -175,18 +175,18 @@ Each member led critical subsystems while collaborating closely across API contr
 |---|:---:|:---:|---|
 | **Authentication & RBAC** | Implemented | Tested | Google OAuth SSO, JWT access/refresh token rotation verified. |
 | **Course & Question Bank CRUD** | Implemented | Tested | Full curriculum management and question bank approval workflows operational. |
-| **Judge0 Sandboxed Grading** | Implemented | Tested | Client adapter and background worker active; supports single and multi-file submissions. |
+| **Judge0 Sandboxed Grading** | Implemented | Partially Verified | Client adapter and background worker active; supports single and multi-file submissions; subject to external provider rate limits. |
 | **Hidden Test Case Masking** | Implemented | Tested | Private test inputs/outputs sanitized in API responses to prevent leakage. |
 | **5-Stage AI Pipeline** | Implemented | Tested | Document extraction, chunking, RAG generation, and review operational in production routes. |
-| **AI Provider Fallback** | Implemented | Tested | Circuit breaker failover between OpenAI and DeepSeek active in configuration services. |
-| **Socratic AI Code Mentor** | Implemented | Tested | Diagnostic parsing operational; guides student debugging without disclosing solutions. |
+| **AI Provider Fallback** | Implemented | Tested | Client-level try/catch failover between OpenAI and DeepSeek active in configuration services. |
+| **Socratic AI Code Mentor** | Implemented | Partially Verified | Diagnostic trace parsing operational; guides student debugging without disclosing solutions; tested against sample error datasets. |
 | **PayOS Wallet Micro-Billing** | Implemented | Tested | Dynamic VietQR checkout and token-to-VND deduction operational; minimum balance check active. |
-| **Async AI Background Queue** | Planned / Deferred | Architectural Target | Documented in `docs/plan/03-ai-async-job-orchestration-performance-plan.md`; deferred to prioritize business logic stability. |
+| **Async AI Background Queue** | Planned / Deferred | Architectural Target | Documented in `APE_BE/docs/plan/03-ai-async-job-orchestration-performance-plan.md`; deferred to prioritize business logic stability. |
 
 ### 7.2 Unit Testing Suite & Methodology
 The backend maintains an extensive unit test workbook conforming to FPT University Capstone and MTCA (Management and Testing of Computer Applications) software standards:
 - **Test Methodology:** Test cases are categorized into **Normal (N)** valid business flows, **Abnormal (A)** error and security validations, and **Boundary (B)** edge cases.
-- **Documented Test Cases:** **863 MSTest Unit Test Cases** designed across 125 backend functions (F01–F125), cataloged in `UnitTests_Report/` and the interactive standalone viewer `UnitTest_Viewer.html`.
+- **Documented Test Cases:** **863 MSTest Unit Test Cases** designed across 125 backend functions (F01–F125), cataloged in `APE_BE/UnitTests_Report/` and the interactive standalone viewer `UnitTest_Viewer.html`.
 - *Status Note:* Test cases represent the validated academic specification; specific test runner harnesses in `BE_UnitTests` require synchronization following later controller consolidations.
 
 ---
@@ -196,7 +196,7 @@ The backend maintains an extensive unit test workbook conforming to FPT Universi
 1. **Pipeline Latency & Synchronous HTTP Request Execution:**
    - *Observation:* Multi-stage AI generation (retrieval $\rightarrow$ generation $\rightarrow$ 3-tier review $\rightarrow$ self-repair) involves multiple sequential LLM inference calls, resulting in response durations between 15 to 45 seconds.
    - *Current Design:* AI endpoints currently execute synchronously within the HTTP request lifecycle.
-   - *Architecture Plan:* An asynchronous job queue model (persisting requests to MongoDB, returning an immediate `jobId`, and processing via background workers) was drafted (`docs/plan/03-ai-async-job-orchestration-performance-plan.md`) and deferred as a post-stabilization enhancement.
+   - *Architecture Plan:* An asynchronous job queue model (persisting requests to MongoDB, returning an immediate `jobId`, and processing via background workers) was drafted (`APE_BE/docs/plan/03-ai-async-job-orchestration-performance-plan.md`) and deferred as a post-stabilization enhancement.
 2. **Token Economics & Model Inference Costs:**
    - *Observation:* Complex RAG context packs and Vision OCR for multi-page slide decks incur noticeable token consumption.
    - *Mitigation:* The system enforces strict token budgeting during chunk assembly (`ai_context_packs`) and requires a minimum wallet threshold (`AI balance >= 1,000 VND`) before initiating generation.
@@ -276,11 +276,11 @@ npm run dev
 
 ## 🎓 11. Capstone & Academic Information
 
-- **Project Title:** AI-Powered Examination and Programming Practice Platform — APE
+- **Project Title:** AI-Powered Examination and Programming Practice Platform for FPT University — APE
 - **Capstone Group:** `SEP490_G26`
 - **Institution:** FPT University Hanoi — Department of Computer Science & Software Engineering
 - **Course:** SEP490 / Capstone Project (Fall 2026)
-- **Academic Advisor:** MSc. Nguyen Manh Hien
+- **Academic Advisor:** Dr. Nguyen Manh Hien
 - **Final Evaluation:** **Official Graduation Defense Passed on First Attempt with Excellence ✅**
 
 ---

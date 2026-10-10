@@ -1,9 +1,10 @@
 # 🧠 AI Core Subsystem & Engineering Contributions
 
 **Project:** APE — AI-Powered Examination and Programming Practice Platform  
-**Contributor:** Phạm Quốc Minh  
+**Contributor:** Phạm Quốc Minh (HE172395)  
 **Role:** AI Core & Prototype Developer  
 **Capstone Group:** SEP490_G26 — FPT University Hanoi  
+**Academic Advisor:** Dr. Nguyen Manh Hien  
 
 ---
 
@@ -105,9 +106,9 @@ Prior to production backend integration, an independent prototype and test harne
 - AI models, prompt templates, temperature parameters, and token ceilings are stored in MongoDB (`system_settings` and `ai_agents`).
 - Enables dynamic switching of active models and prompt adjustments without redeploying backend binaries.
 
-### 4.2 Multi-Provider Routing & Circuit Breaker Fallback
+### 4.2 Multi-Provider Routing & Failover Fallback
 - Implemented client-level try/catch failover between primary (OpenAI) and secondary (DeepSeek) providers.
-- Safeguards the application against transient HTTP timeouts, network partition issues, or upstream provider outages.
+- Safeguards the application against transient HTTP timeouts, network partition issues, or upstream provider outages without requiring third-party circuit breaker dependencies.
 
 ### 4.3 Token Economics & Fair Micro-Billing
 - Implemented real-time token tracking mapped to VND debit transactions.
@@ -123,7 +124,7 @@ During development and evaluation, several key engineering trade-offs were docum
 ### 1. Pipeline Latency & Synchronous HTTP Request Execution
 - **Observation:** Multi-stage generation (RAG retrieval $\rightarrow$ LLM generation $\rightarrow$ multi-tier review $\rightarrow$ self-repair) can take between 15 to 45 seconds depending on upstream model response times.
 - **Current State:** AI requests are processed **synchronously within the HTTP request lifecycle**.
-- **Deferred Solution:** An asynchronous job queue architecture (persisting jobs to MongoDB, returning a `jobId`, and polling via background workers) was designed (`docs/plan/03-ai-async-job-orchestration-performance-plan.md`) but intentionally deferred to prioritize stabilizing core business logic and pedagogical output quality before graduation defense.
+- **Deferred Solution:** An asynchronous job queue architecture (persisting jobs to MongoDB, returning a `jobId`, and polling via background workers) was designed (`APE_BE/docs/plan/03-ai-async-job-orchestration-performance-plan.md`) but intentionally deferred to prioritize stabilizing core business logic and pedagogical output quality before graduation defense.
 
 ### 2. Token Costs vs. Context Comprehensiveness
 - **Observation:** Ingesting large slide decks with multiple embedded architectural diagrams leads to high token consumption during Vision OCR and embedding phases.

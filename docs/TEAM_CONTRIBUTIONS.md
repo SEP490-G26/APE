@@ -1,9 +1,9 @@
 # 👥 APE — Team Contributions & Responsibilities
 
-**Project:** APE — AI-Powered Examination and Programming Practice Platform  
+**Project:** AI-Powered Examination and Programming Practice Platform for FPT University (APE)  
 **Capstone Group:** SEP490_G26 — FPT University Hanoi  
 **Academic Term:** Fall 2026  
-**Academic Advisor:** MSc. Nguyen Manh Hien  
+**Academic Advisor:** Dr. Nguyen Manh Hien  
 
 ---
 
@@ -11,27 +11,13 @@
 
 The **APE (AI-Powered Examination and Programming Practice Platform)** was designed, implemented, and delivered through the collaborative effort of five software engineering students. 
 
-To build an enterprise-grade computerized assessment platform combining curriculum ingestion, multi-model AI synthesis, sandboxed multi-language code compilation, and automated payment gateways, the team established a cross-functional workflow. Each member assumed primary ownership over specific technical and academic domains while actively collaborating across interface boundaries, integration testing, and project defense milestones.
+To build an automated assessment platform combining curriculum ingestion, multi-model AI synthesis, sandboxed multi-language code compilation, and automated payment gateways, the team established a cross-functional workflow. Each member assumed primary ownership over specific technical and academic domains while actively collaborating across interface boundaries, integration testing, and project defense milestones.
 
 ---
 
 ## 2. Individual Contributions & Deliverables
 
-```
-┌────────────────────────────────────────────────────────────────────────┐
-│                      SEP490_G26 CAPSTONE TEAM                          │
-├──────────────────┬──────────────────┬──────────────────┬───────────────┤
-│  Nguyễn Việt Đức │  Phạm Quốc Minh  │   Vũ Hoàng Anh   │Nguyễn ViếtSang│
-│(BA & Docs Lead)  │  (AI Core & Proto│ (Judge Specialist│(Fullstack/Int)│
-├──────────────────┴──────────────────┴──────────────────┴───────────────┤
-│                             Phan Duy Hưng                              │
-│                      (Frontend & UI Engineering)                       │
-└────────────────────────────────────────────────────────────────────────┘
-```
-
----
-
-### 1. Nguyễn Việt Đức — Business Analyst & Documentation
+### 1. Nguyễn Việt Đức (HE176246) — Business Analyst & Documentation
 
 **Primary Responsibilities**
 - End-to-end business requirements engineering, user persona modeling, and academic documentation management.
@@ -45,7 +31,7 @@ To build an enterprise-grade computerized assessment platform combining curricul
 - **Milestone & Defense Coordination:** Coordinated project tracking documentation, weekly status reports, and the final thesis defense presentation (`CAPSTONE PROJECT DEFENSE - G26.pptx`).
 
 **Technical Deliverables**
-- `Document/Report1_Project Introduction.docx` to `Document/Report7_Final Project Report.docx`.
+- `Document/Report1_Project Introduction.docx` to `Document/Copy of Report7_Final Project Report.docx`.
 - `Document/Report3_Software Requirement Specification.docx` & `Report4_Software Design Specification.docx`.
 - `Document/Report6_Software User Guides.docx`.
 - `Document/Project_Weekly_Report_Group_26_W7_W12_Professional_v2.xlsx`.
@@ -64,7 +50,7 @@ To build an enterprise-grade computerized assessment platform combining curricul
 
 ---
 
-### 2. Phạm Quốc Minh — AI Core & Prototype Developer
+### 2. Phạm Quốc Minh (HE172395) — AI Core & Prototype Developer
 
 **Primary Responsibilities**
 - Requirements analysis, architectural design, and workflow orchestration for the AI processing subsystem.
@@ -79,12 +65,12 @@ To build an enterprise-grade computerized assessment platform combining curricul
 - **Prompt Engineering & Quality Control:** Formulated structured prompt templates, Bloom taxonomy specifications, and the 3-tier review and self-repair loop for Multiple-Choice (FE) and Practical Coding (PE) items.
 - **AI Prototype Subsystem (`Prototype_AI_Module`):** Engineered the standalone .NET research testbed and operator UI to empirically compare candidate models across OpenAI, DeepSeek, and Google Gemini.
 - **RAG & Vector Retrieval Integration:** Integrated Cohere `embed-multilingual-v3.0` (1,024 dimensions) for cross-lingual academic retrieval with strict token budget enforcement.
-- **Reliability & Multi-Provider Fallback:** Implemented client-level try/catch circuit-breaker failover between OpenAI and DeepSeek to safeguard against upstream outages.
+- **Reliability & Multi-Provider Fallback:** Implemented client-level try/catch failover between OpenAI and DeepSeek to safeguard against upstream outages.
 
 **Technical Deliverables**
 - `Prototype_AI_Module/` (standalone .NET 10/8 research harness, operator UI, and prompt/rubric catalogs).
 - `APE_BE/Application/Services/AIExtractedContentService.cs`, `QuestionGenerationReviewService.cs`, and `CodeMentorService.cs`.
-- `APE_BE/Infrastructure/AI/` (LLM provider HTTP gateways and failover policies).
+- `APE_BE/Infrastructure/Services/` (LLM provider HTTP gateways and failover policies).
 - Subsystem documentation in `docs/AI_CORE_CONTRIBUTIONS.md` and `APE_BE/docs/ai/`.
 
 **Collaboration & Integration**
@@ -103,7 +89,7 @@ To build an enterprise-grade computerized assessment platform combining curricul
 
 ---
 
-### 3. Vũ Hoàng Anh — Code Execution & Judge Specialist
+### 3. Vũ Hoàng Anh (HE172381) — Code Execution & Judge Specialist
 
 **Primary Responsibilities**
 - Design and integration of the automated code compilation and execution engine for Practical Exams (PE).
@@ -140,7 +126,7 @@ To build an enterprise-grade computerized assessment platform combining curricul
 
 ---
 
-### 4. Nguyễn Viết Sang — Fullstack Development & Core Integration
+### 4. Nguyễn Viết Sang (HE172569) — Fullstack Development & Core Integration
 
 **Primary Responsibilities**
 - Architectural design and maintenance of the core ASP.NET Core Clean Architecture backend solution (`APE_Core.sln`).
@@ -179,7 +165,7 @@ To build an enterprise-grade computerized assessment platform combining curricul
 
 ---
 
-### 5. Phan Duy Hưng — Frontend Development & UI Engineering
+### 5. Phan Duy Hưng (HE173329) — Frontend Development & UI Engineering
 
 **Primary Responsibilities**
 - Client-side Single Page Application (SPA) architecture and user interface engineering.
@@ -224,11 +210,11 @@ The delivery of APE relied on tight cross-discipline integration across the five
 
 ```mermaid
 flowchart TD
-    BA["Nguyễn Việt Đức<br/><b>Business Requirements & SRS</b>"]
-    FE["Phan Duy Hưng<br/><b>React 18 & Monaco Editor</b>"]
-    FS["Nguyễn Viết Sang<br/><b>Core Web API & MongoDB</b>"]
-    AI["Phạm Quốc Minh<br/><b>AI Pipeline & RAG Prototype</b>"]
-    JD["Vũ Hoàng Anh<br/><b>Judge0 Sandboxed Execution</b>"]
+    BA["Nguyễn Việt Đức (HE176246)<br/><b>Business Requirements & SRS</b>"]
+    FE["Phan Duy Hưng (HE173329)<br/><b>React 18 & Monaco Editor</b>"]
+    FS["Nguyễn Viết Sang (HE172569)<br/><b>Core Web API & MongoDB</b>"]
+    AI["Phạm Quốc Minh (HE172395)<br/><b>AI Pipeline & RAG Prototype</b>"]
+    JD["Vũ Hoàng Anh (HE172381)<br/><b>Judge0 Sandboxed Execution</b>"]
 
     BA -->|Use Cases & Rules| FS & FE
     FE <-->|REST APIs & JWT| FS
